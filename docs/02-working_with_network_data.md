@@ -44,6 +44,8 @@ Si bien no hay requisitos mínimos de hardware, el rendimiento es una función d
 
 ### Inicie Gephi
 
+
+
 ### Vista General
 
 Esta es la ventana que utilizará más a menudo. Aquí podrá tomar diferentes acciones parea manipular sus gráficos. La característica más obvia de esta ventana es el gráfico prominente en el centro; sin embargo, hay varias ventanillas relevantes; aquí, las cubriremos en orden alfabético:
@@ -77,7 +79,39 @@ Es normal que los usuarios de software se encuentren con problemas conocidos. Es
 
 # Tipos de Datos de Redes Sociales
 
-(agregar texto aquí)
+Tradicionalmente los analistas de redes sociales trabajan con tres tipos de datos: modo-uno, modo-dos, y atributos [@Everton2012]. En esta sección exploraremos estos tipos de datos en más detalle. El objetivo es definir y compararlos antes de empezar a recopilar y manipular estos datos.
+
+## Datos de Modo-Uno
+
+Estos son aquellos que consisten en un solo conjunto de actores o nodos. Por ejemplo, en una red de amistad las personas están unidas a través de lazos de amistad, una red de negocios une diferentes empresas por medio de transacciones financieras, o una red diplomática une naciones con base a lazos diplomáticos. Los tres ejemplos propuestos representan relaciones de modo-uno puesto que los actores que forman parte de estas relaciones constan de un conjunto único de actores. 
+
+Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguientes secciones diferenciaremos entre tipos de relaciones modo-uno con base a la simetría o asimetría de la relación. 
+
+### Modo-uno: Simétrico
+
+Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura ## representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
+
+<img src="02-working_with_network_data_files/figure-html/unnamed-chunk-1-1.png" width="70%" style="display: block; margin: auto;" />
+
+@Everton2012 nos presenta ejemplos de vínculos modo-uno simétricos en el primer apéndice de *Disrupting Dark Network*: 
+
+| Vínculo | Tipo de Actor | Definición |
+|---------|---------------|------------|
+| Amistad | Persona | Definido como vínculos estrechos a través del afecto de la estima entre dos personas. Los lazos de amistad no son únicamente basados en reuniones y/o vínculos escolares. | 
+| Compañeros de clase | Persona | Definido como individuos que reciben educación formal, sirven como empleados (maestro, miembro administrativo, etc.) y/o participan en instrucción educativa [...] simultáneamente en la misma institución. |
+| Parentesco familiar | Persona | Definido como cualquier conexión familiar, como un hermano, un cuñado, un sobrino, etc. El parentesco incluye matrimonios actuales y matrimonios pasados debido a divorcios y/o muertes. |
+
+:::: {.infobox .note data-latex="note"}
+Los vínculos modo-uno simétricos se utilizan a menudo cuando es difícil o imposible determinar qué actor inició o envió el enlace y quién lo recibió [@Cunningham2016]. En los tres ejemplos previos podemos asumir mutualidad entre actores.
+::::
+
+
+
+### Modo-uno: Asimétrico
+
+## Datos de Modo-Dos
+
+## Datos de Atributos
 
 # Grabación y Recopilación 
 
@@ -100,28 +134,28 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_1_Matrix_Excel.png" alt="Hoja de cálculo de Excel que muestra la matriz de datos en Koschade" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-1)Hoja de cálculo de Excel que muestra la matriz de datos en Koschade</p>
+<p class="caption">(\#fig:unnamed-chunk-2)Hoja de cálculo de Excel que muestra la matriz de datos en Koschade</p>
 </div>
 
   2. Abra Gephi y seleccione la opción *Nuevo proyecto* en la pantalla de “Bienvenido a Gephi” (no se muestra en este documento). Asegúrese de estar en la ventana “Vista general” en la esquina superior izquierda de la interfaz (consulte la Figura ##). Una vez allí, su interfaz deberá parecerse a la Figura ##. 
 
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_2_General_View.png" alt="Ventana 'Vista general' en Gephi" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-2)Ventana 'Vista general' en Gephi</p>
+<p class="caption">(\#fig:unnamed-chunk-3)Ventana 'Vista general' en Gephi</p>
 </div>
 
   3. Primero debemos importar los datos de recopilados en el primer paso a Gephi. Para hacer esto, use el comando *Archivo>Abrir…* Esto abrirá un cuadro de dialogo (no mostrado) desde el cual puede ubicar y seleccionar el archivo de Excel que creo anteriormente. Una vez que haya hecho esto, haga clic en *Abrir* y aparecerá un nuevo cuadro de dialogo, similar a la Figura ##. Tenga en cuenta que, en la esquina superior derecha, tiene la opción de importa la hoja de cálculo en varios formatos. Como registramos los datos en matriz, utilizaremos la opción *Matriz*. Haga clic en *Siguiente*, en el siguiente cuadro de dialogo, haga clic en *Terminar* (puesto que no tenemos información de tiempo asociada con estos datos).
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_3_Importing_Gephi.png" alt="Ventana de Importación en Gephi" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-3)Ventana de Importación en Gephi</p>
+<p class="caption">(\#fig:unnamed-chunk-4)Ventana de Importación en Gephi</p>
 </div>
 
   4. Gephi produce un *Informe de importación* (ver Figura ##), que proporciona varios tipos de información, por ejemplo, si ocurrió algún error durante la importación, numero de nodos (actores) en la red, la cantidad de bordes (aristas), y así sucesivamente. Ahora, necesitamos decirle a Gephi que esta es una red no dirigida utilizando el menú desplegable *Tipo de grafico* (el tipo predeterminado es *Mixto*). A continuación, haga clic en el enlace *Mas opciones…*, y luego en el menú desplegable *Estrategia para combinar aristas* seleccione *Mínimo*. Este último paso asegura que los pesos de los bordes no se dupliquen. Ahora, haga clic en *Aceptar*.
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_4_Importing_Report.png" alt="Reporte de Importación Gephi" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-4)Reporte de Importación Gephi</p>
+<p class="caption">(\#fig:unnamed-chunk-5)Reporte de Importación Gephi</p>
 </div>
 
   5. Su red ahora deberá estar cargada, pero probablemente no se vea bien. Comencemos cambiando el color de los nodos. En la esquina superior izquierda de la interfaz vera un pestana *Apariencia* (consulte la Figura ##). Allí, seleccione la pestaña *Nodos* y el icono de paleta de color (que es el icono más a la izquierda). Debajo de la pestaña *Nodos* vera un rango de opciones, si no está seleccionada la pestaña *Único*, haga clic en esta. Debajo de esta opción, note un cuadro gris (a la izquierda de `#c0c0c0`); clic manténgalo presionado para seleccionar un nuevo color, luego seleccione *Aplicar*). 
@@ -135,7 +169,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
 
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_6_Layout.png" alt="Pestaña de Diseño" width="50%" />
-<p class="caption">(\#fig:unnamed-chunk-6)Pestaña de Diseño</p>
+<p class="caption">(\#fig:unnamed-chunk-7)Pestaña de Diseño</p>
 </div>
 
   7. Estas manipulaciones deben crear un gráfico similar a la Figura ## (similar pues usted ha elegido el color de los nodos). Ahora, note lo diferentes botones al costado de la ventana del *Grafo* (ver Figura ##), estos nos permiten hacer algunos ajustes rápidos al grafo. Por ejemplo, el botón 1 centra el grafico, el 2 activa y desactiva las etiquetas, o puede controlar el tamaño de las etiquetas con la barra deslizante demarcada con el número 5. El botón 3 alterna el color de los nodos. Por último, note la flecha pequeña en la esquina inferior derecha (numero 6), en el siguiente paso y otros laboratorios utilizaremos esta opción.
@@ -170,7 +204,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_10_Patek_Ego.png" alt="Red con Patek Resaltado" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-11)Red con Patek Resaltado</p>
+<p class="caption">(\#fig:unnamed-chunk-12)Red con Patek Resaltado</p>
 </div>
 
 
@@ -178,7 +212,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_11_Gephi_Edge_List.png" alt="Lista de Aristas en la Table de Datos" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-12)Lista de Aristas en la Table de Datos</p>
+<p class="caption">(\#fig:unnamed-chunk-13)Lista de Aristas en la Table de Datos</p>
 </div>
 
   13.	Ahora, haga clic en la pestaña *Aristas* y obtendrá una lista de todos los vínculos entre todos los actores (Figura ##). Tenga en cuenta que esta información no se presenta en formato de matriz. En cambio, este formato llamaremos lista de bordes o lista de aristas. Estas enumeran un nodo de `Origen` (actor) y un nodo de `Destino` (actor), independientemente de si el enlace es dirigido o no. 
@@ -327,8 +361,8 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 
   5. Regrese al espacio previo de trabajo donde generó la red de modo-uno. En la ventanilla de *Filtros* seleccione *Auto aplicar* (al hacer esto el botón cambiará y dirá *Fitrar*). Regrese a la pestaña *MultiMode Networks Projection*, modifique los menús desplegables *Left matrix* y *Right matrix* de la siguiente manera, luego de clic en *Run*.
 
-<!--html_preserve--><div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"filter":"none","data":[["Left Matrix","Right Matrix"],["Event - Person","Person - Event"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-e5c8c404fe174e4c81bd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e5c8c404fe174e4c81bd">{"x":{"filter":"none","data":[["Left Matrix","Right Matrix"],["Event - Person","Person - Event"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
   6.	Una vez más vera nuevos enlaces en el gráfico. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos “Eventos”. Seleccione la pestaña “Filtros”, abra la carpeta “Atributos” y localice la opción “type” dentro de la carpeta de “Partición”. Arrastre el filtro de “type” a la sección de “Consultas”. En respuesta a esta acción vera una nueva ventanilla al fondo de este panel (titulada “Partición (type) Configuración”), selecciones la opción “Event” y de clic en el botón “Fitrar”. Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón “Exportar el grafo filtrado en un nevo espacio de trabajo”.
 

@@ -1,9 +1,8 @@
 bookdown::gitbook:
-  css: style.css
+  css: arso.css
   split_by: chapter
   config:
     sharing: null
-    css: arso.css
     toc:
       collapse: section
       scroll_highlight: yes

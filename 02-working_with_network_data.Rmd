@@ -47,6 +47,8 @@ Si bien no hay requisitos mínimos de hardware, el rendimiento es una función d
 
 ### Inicie Gephi
 
+
+
 ### Vista General
 
 Esta es la ventana que utilizará más a menudo. Aquí podrá tomar diferentes acciones parea manipular sus gráficos. La característica más obvia de esta ventana es el gráfico prominente en el centro; sin embargo, hay varias ventanillas relevantes; aquí, las cubriremos en orden alfabético:
@@ -80,7 +82,42 @@ Es normal que los usuarios de software se encuentren con problemas conocidos. Es
 
 # Tipos de Datos de Redes Sociales
 
-(agregar texto aquí)
+Tradicionalmente los analistas de redes sociales trabajan con tres tipos de datos: modo-uno, modo-dos, y atributos [@Everton2012]. En esta sección exploraremos estos tipos de datos en más detalle. El objetivo es definir y compararlos antes de empezar a recopilar y manipular estos datos.
+
+## Datos de Modo-Uno
+
+Estos son aquellos que consisten en un solo conjunto de actores o nodos. Por ejemplo, en una red de amistad las personas están unidas a través de lazos de amistad, una red de negocios une diferentes empresas por medio de transacciones financieras, o una red diplomática une naciones con base a lazos diplomáticos. Los tres ejemplos propuestos representan relaciones de modo-uno puesto que los actores que forman parte de estas relaciones constan de un conjunto único de actores. 
+
+Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguientes secciones diferenciaremos entre tipos de relaciones modo-uno con base a la simetría o asimetría de la relación. 
+
+### Modo-uno: Simétrico
+
+Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura ## representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
+
+```{r, echo = FALSE}
+igraph::graph_from_literal(A-B, B-C, C-D, D-B, A-E, E-F, F-A) %>%
+  my_igraph()
+```
+
+@Everton2012 nos presenta ejemplos de vínculos modo-uno simétricos en el primer apéndice de *Disrupting Dark Network*: 
+
+| Vínculo | Tipo de Actor | Definición |
+|---------|---------------|------------|
+| Amistad | Persona | Definido como vínculos estrechos a través del afecto de la estima entre dos personas. Los lazos de amistad no son únicamente basados en reuniones y/o vínculos escolares. | 
+| Compañeros de clase | Persona | Definido como individuos que reciben educación formal, sirven como empleados (maestro, miembro administrativo, etc.) y/o participan en instrucción educativa [...] simultáneamente en la misma institución. |
+| Parentesco familiar | Persona | Definido como cualquier conexión familiar, como un hermano, un cuñado, un sobrino, etc. El parentesco incluye matrimonios actuales y matrimonios pasados debido a divorcios y/o muertes. |
+
+:::: {.infobox .note data-latex="note"}
+Los vínculos modo-uno simétricos se utilizan a menudo cuando es difícil o imposible determinar qué actor inició o envió el enlace y quién lo recibió [@Cunningham2016]. En los tres ejemplos previos podemos asumir mutualidad entre actores.
+::::
+
+
+
+### Modo-uno: Asimétrico
+
+## Datos de Modo-Dos
+
+## Datos de Atributos
 
 # Grabación y Recopilación 
 

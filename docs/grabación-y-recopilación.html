@@ -63,7 +63,7 @@
 
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="arso.css" type="text/css" />
 </head>
 
 <body>
@@ -107,7 +107,14 @@
 <li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a></li>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétrico"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétrico</a></li>
+<li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétrico"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétrico</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
+<li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
 <li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.1</b> Ejercicio Práctico</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.1.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
@@ -166,7 +173,7 @@
 <ol style="list-style-type: decimal">
 <li>Primero, localice el artículo de Stuart Koschade. La única versión disponible es en inglés, por consiguiente, no es requerido que lea el texto. Utilizando Excel (u otro programa con hojas de cálculo) registre los datos de redes sociales que figuran en la Tabla 2 en el artículo de Koschade. Su matriz debe ser similar a la Figura ## a continuación.</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-1"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
 <img src="images/02-Fig_1_Matrix_Excel.png" alt="Hoja de cálculo de Excel que muestra la matriz de datos en Koschade" width="75%" />
 <p class="caption">
 Figure 4.1: Hoja de cálculo de Excel que muestra la matriz de datos en Koschade
@@ -175,7 +182,7 @@ Figure 4.1: Hoja de cálculo de Excel que muestra la matriz de datos en Koschade
 <ol start="2" style="list-style-type: decimal">
 <li>Abra Gephi y seleccione la opción <em>Nuevo proyecto</em> en la pantalla de “Bienvenido a Gephi” (no se muestra en este documento). Asegúrese de estar en la ventana “Vista general” en la esquina superior izquierda de la interfaz (consulte la Figura ##). Una vez allí, su interfaz deberá parecerse a la Figura ##.</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
 <img src="images/02-Fig_2_General_View.png" alt="Ventana 'Vista general' en Gephi" width="75%" />
 <p class="caption">
 Figure 4.2: Ventana ‘Vista general’ en Gephi
@@ -184,7 +191,7 @@ Figure 4.2: Ventana ‘Vista general’ en Gephi
 <ol start="3" style="list-style-type: decimal">
 <li>Primero debemos importar los datos de recopilados en el primer paso a Gephi. Para hacer esto, use el comando <em>Archivo&gt;Abrir…</em> Esto abrirá un cuadro de dialogo (no mostrado) desde el cual puede ubicar y seleccionar el archivo de Excel que creo anteriormente. Una vez que haya hecho esto, haga clic en <em>Abrir</em> y aparecerá un nuevo cuadro de dialogo, similar a la Figura ##. Tenga en cuenta que, en la esquina superior derecha, tiene la opción de importa la hoja de cálculo en varios formatos. Como registramos los datos en matriz, utilizaremos la opción <em>Matriz</em>. Haga clic en <em>Siguiente</em>, en el siguiente cuadro de dialogo, haga clic en <em>Terminar</em> (puesto que no tenemos información de tiempo asociada con estos datos).</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
 <img src="images/02-Fig_3_Importing_Gephi.png" alt="Ventana de Importación en Gephi" width="75%" />
 <p class="caption">
 Figure 4.3: Ventana de Importación en Gephi
@@ -193,7 +200,7 @@ Figure 4.3: Ventana de Importación en Gephi
 <ol start="4" style="list-style-type: decimal">
 <li>Gephi produce un <em>Informe de importación</em> (ver Figura ##), que proporciona varios tipos de información, por ejemplo, si ocurrió algún error durante la importación, numero de nodos (actores) en la red, la cantidad de bordes (aristas), y así sucesivamente. Ahora, necesitamos decirle a Gephi que esta es una red no dirigida utilizando el menú desplegable <em>Tipo de grafico</em> (el tipo predeterminado es <em>Mixto</em>). A continuación, haga clic en el enlace <em>Mas opciones…</em>, y luego en el menú desplegable <em>Estrategia para combinar aristas</em> seleccione <em>Mínimo</em>. Este último paso asegura que los pesos de los bordes no se dupliquen. Ahora, haga clic en <em>Aceptar</em>.</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
 <img src="images/02-Fig_4_Importing_Report.png" alt="Reporte de Importación Gephi" width="75%" />
 <p class="caption">
 Figure 4.4: Reporte de Importación Gephi
@@ -206,7 +213,7 @@ Figure 4.4: Reporte de Importación Gephi
 <ol start="6" style="list-style-type: decimal">
 <li>Justo debajo de la pestaña <em>Apariencia</em> encontraraá otra de nombre <em>Distribución</em> (consulte la Figura ##). Gephi ofrece varias opciones de distribución de nodos, sobre las cuales poder aprender en la página de tutoriales de <a href="https://gephi.org/users/tutorial-layouts/">Gephi</a>. En esta actividad solo exploraremos unos pocos. Utilizando el menú desplegable, primero seleccione el algoritmo de nombre <em>Fruchterman Reigold</em> y haga clic en el botón <em>Ejecutar</em>. Dependiendo de la red, es posible que este algoritmo no sea el adecuado. Pruebe otros, por ejemplo <em>Force Atlas</em>. Al principio parecerá que los nodos han colapsado unos sobre otros, pero esto es engañoso. Para ver porque, elija la opción <em>Expansion</em> y haga clic repetidamente en el botón <em>Ejecutar</em> hasta que el grafico sea los suficientemente grande para poder distinguir las conexiones entre nodos. Finalmente. Pruebe el algoritmo <em>Yifan Hu</em>, el cual, al menos con la red de Koschade, produce el grafico más adecuado. Es decir, los subgrupos son fáciles de detectar y los nodos no se encuentran apilados unos sobre los otros.</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
 <img src="images/02-Fig_6_Layout.png" alt="Pestaña de Diseño" width="50%" />
 <p class="caption">
 Figure 4.5: Pestaña de Diseño
@@ -229,7 +236,7 @@ Figure 4.5: Pestaña de Diseño
 <li><p>Limpiemos el gráfico. Para esto, seleccione la pestaña de <em>Distribución</em> y seleccione la opción <em>Ajuste de etiquetas</em> y haga clic en <em>Ejecutar</em>. Este algoritmo de diseño moverá los nodos ligeramente para que las etiquetas no se superpongan. Ahora, seleccione la opción <em>Noverlap</em>, y nuevamente de clic en <em>Ejecutar</em>. Vera que nuevamente los nodos deberán moverse, creando una distancia entre ellos para que sean más fáciles de discernir. Ahora, observe el grafo. <strong>¿Surge patrones? ¿Hay algún grupo distinto? Si es así, ¿alguna persona actúa como intermediario entre los distintos grupos? ¿Alguno de los individuos parece estas más aislado socialmente que otros? ¿Cómo se comparan los dibujos con la Figura 1 en el artículo de Koschade?</strong></p></li>
 <li><p>Ahora, desplace el cursor sobre uno de los nodos, al hacer esto Gephi debe resaltar un nodo a la vez y los enlaces a otros nodos. En la Figura 10, presentamos el nodo de Patek resaltado, este tiene vínculos con varias personas dentro de su propia esfera de influencia, además algunos de estos nodos vecinos están conectados entre ellos. Sin embargo, note que los vecinos de Patek no están enlazados con Samudra. Utilizando esta herramienta (resaltar nodos) en su propio gráfico, <strong>¿saltan patrones que no haya notado antes?</strong> Finalmente, tome una captura de pantalla de su grafico dando clic en el icono de la cámara en la esquina inferior de la ventanilla del gráfico.</p></li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
 <img src="images/02-Fig_10_Patek_Ego.png" alt="Red con Patek Resaltado" width="75%" />
 <p class="caption">
 Figure 4.6: Red con Patek Resaltado
@@ -238,7 +245,7 @@ Figure 4.6: Red con Patek Resaltado
 <ol start="12" style="list-style-type: decimal">
 <li>Echemos un vistazo a los datos de la red. Para esto, seleccione el botón <em>Laboratorio de datos</em>. Notará que en la esquina superior izquierda hay una pestaña <em>Tabla de datos</em> con dos subpestañas , <em>Nodos</em> y <em>Aristas</em>. Haga clic primero en la pestaña <em>Nodos</em> y deberá ver una lista de los identificadores (<code>Id</code>) y etiquetas de los nodos (actores) en la red.</li>
 </ol>
-<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-12"></span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-13"></span>
 <img src="images/02-Fig_11_Gephi_Edge_List.png" alt="Lista de Aristas en la Table de Datos" width="75%" />
 <p class="caption">
 Figure 4.7: Lista de Aristas en la Table de Datos
@@ -335,7 +342,6 @@ gitbook.start({
 "collapse": "section",
 "scroll_highlight": true
 },
-"css": "arso.css",
 "toolbar": {
 "position": "fixed"
 },

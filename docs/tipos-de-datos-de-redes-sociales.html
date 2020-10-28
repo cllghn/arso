@@ -63,7 +63,7 @@
 
 
 
-<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="arso.css" type="text/css" />
 </head>
 
 <body>
@@ -107,7 +107,14 @@
 <li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a></li>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétrico"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétrico</a></li>
+<li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétrico"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétrico</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
+<li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
 <li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.1</b> Ejercicio Práctico</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.1.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
@@ -151,7 +158,70 @@
             <section class="normal" id="section-">
 <div id="tipos-de-datos-de-redes-sociales" class="section level1">
 <h1><span class="header-section-number">3</span> Tipos de Datos de Redes Sociales</h1>
-<p>(agregar texto aquí)</p>
+<p>Tradicionalmente los analistas de redes sociales trabajan con tres tipos de datos: modo-uno, modo-dos, y atributos <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span>. En esta sección exploraremos estos tipos de datos en más detalle. El objetivo es definir y compararlos antes de empezar a recopilar y manipular estos datos.</p>
+<div id="datos-de-modo-uno" class="section level2">
+<h2><span class="header-section-number">3.1</span> Datos de Modo-Uno</h2>
+<p>Estos son aquellos que consisten en un solo conjunto de actores o nodos. Por ejemplo, en una red de amistad las personas están unidas a través de lazos de amistad, una red de negocios une diferentes empresas por medio de transacciones financieras, o una red diplomática une naciones con base a lazos diplomáticos. Los tres ejemplos propuestos representan relaciones de modo-uno puesto que los actores que forman parte de estas relaciones constan de un conjunto único de actores.</p>
+<p>Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguientes secciones diferenciaremos entre tipos de relaciones modo-uno con base a la simetría o asimetría de la relación.</p>
+<div id="modo-uno-simétrico" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Modo-uno: Simétrico</h3>
+<p>Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura ## representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.</p>
+<p><img src="02-working_with_network_data_files/figure-html/unnamed-chunk-1-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p><span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span> nos presenta ejemplos de vínculos modo-uno simétricos en el primer apéndice de <em>Disrupting Dark Network</em>:</p>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="41%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Vínculo</th>
+<th>Tipo de Actor</th>
+<th>Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Amistad</td>
+<td>Persona</td>
+<td>Definido como vínculos estrechos a través del afecto de la estima entre dos personas. Los lazos de amistad no son únicamente basados en reuniones y/o vínculos escolares.</td>
+</tr>
+<tr class="even">
+<td>Compañeros de clase</td>
+<td>Persona</td>
+<td>Definido como individuos que reciben educación formal, sirven como empleados (maestro, miembro administrativo, etc.) y/o participan en instrucción educativa […] simultáneamente en la misma institución.</td>
+</tr>
+<tr class="odd">
+<td>Parentesco familiar</td>
+<td>Persona</td>
+<td>Definido como cualquier conexión familiar, como un hermano, un cuñado, un sobrino, etc. El parentesco incluye matrimonios actuales y matrimonios pasados debido a divorcios y/o muertes.</td>
+</tr>
+</tbody>
+</table>
+<div class="infobox note">
+<p>Los vínculos modo-uno simétricos se utilizan a menudo cuando es difícil o imposible determinar qué actor inició o envió el enlace y quién lo recibió <span class="citation">(Cunningham, Everton, and Murphy <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. En los tres ejemplos previos podemos asumir mutualidad entre actores.</p>
+</div>
+</div>
+<div id="modo-uno-asimétrico" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Modo-uno: Asimétrico</h3>
+</div>
+</div>
+<div id="datos-de-modo-dos" class="section level2">
+<h2><span class="header-section-number">3.2</span> Datos de Modo-Dos</h2>
+</div>
+<div id="datos-de-atributos" class="section level2">
+<h2><span class="header-section-number">3.3</span> Datos de Atributos</h2>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Cunningham2016">
+<p>Cunningham, Daniel, Sean F. Everton, and Philip Murphy. 2016. <em>Understanding Dark Networks: A Strategic Framework for the Use of Social Network Analysis</em>. Rowman; Littlefield.</p>
+</div>
+<div id="ref-Everton2012">
+<p>Everton, Sean F. 2012. <em>Disrupting Dark Networks</em>. Cambridge.</p>
+</div>
 </div>
             </section>
 
@@ -197,7 +267,6 @@ gitbook.start({
 "collapse": "section",
 "scroll_highlight": true
 },
-"css": "arso.css",
 "toolbar": {
 "position": "fixed"
 },

@@ -18,3 +18,19 @@ options(dplyr.print_min = 6, dplyr.print_max = 6)
 
 # Supress crayon output
 options(crayon.enabled = FALSE)
+
+library(igraph)
+my_igraph <- function(g, .layout = "layout_with_kk", ...) {
+  stopifnot("Must be igraph" = igraph::is.igraph(g))
+  stopifnot("Must be character" = is.character(.layout))
+  igraph::plot.igraph(g,
+                      # Feel:
+                      layout       = eval(as.name(.layout)),
+                      # Vertex:
+                      vertex.color = "lightblue",
+                      # Edges:
+                      edges.color  = "grey",
+                      # Catch all
+                      ...
+                      )
+}

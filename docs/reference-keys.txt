@@ -1,10 +1,11 @@
-fig:unnamed-chunk-1
 fig:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
-fig:unnamed-chunk-6
-fig:unnamed-chunk-11
+fig:unnamed-chunk-5
+fig:unnamed-chunk-7
 fig:unnamed-chunk-12
+fig:unnamed-chunk-13
+fig:unnamed-chunk-1
 editores
 colaboradores-1
 introduction
@@ -30,6 +31,11 @@ laboratorio-de-datos
 previsualización
 errores-comunes
 tipos-de-datos-de-redes-sociales
+datos-de-modo-uno
+modo-uno-simétrico
+modo-uno-asimétrico
+datos-de-modo-dos
+datos-de-atributos
 grabación-y-recopilación
 ejercicio-práctico
 preparar-y-visualizar-redes-de-modo-uno-en-gephi
@@ -47,3 +53,6 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
+fig:unnamed-chunk-6
+fig:unnamed-chunk-8
+fig:unnamed-chunk-14
