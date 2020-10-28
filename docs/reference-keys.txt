@@ -53,6 +53,3 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
-fig:unnamed-chunk-6
-fig:unnamed-chunk-8
-fig:unnamed-chunk-14

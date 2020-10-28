@@ -5,7 +5,6 @@ output: html_document
 
 # Glosario de Términos
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, fig.height = 3, fig.align = 'center')
 library(igraph)

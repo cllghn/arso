@@ -8,7 +8,6 @@ output: html_document
 
 
 
-
 **Actores** (*Actors*): Se refiere a todo tipo de entidatedes incluidas en la red, tales como: individuos, grupos, etc. Sinónimos incluyen *nodos* or *vértices*.
 
 <div class="figure" style="text-align: center">
