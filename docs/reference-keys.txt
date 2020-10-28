@@ -30,7 +30,6 @@ laboratorio-de-datos
 previsualización
 errores-comunes
 tipos-de-datos-de-redes-sociales
-tipos-de-datos-de-redes-sociales-1
 grabación-y-recopilación
 ejercicio-práctico
 preparar-y-visualizar-redes-de-modo-uno-en-gephi
