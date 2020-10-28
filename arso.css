@@ -1,0 +1,31 @@
+.book .book-header h1 {
+  opacity: 1;
+  text-align: left;
+}
+
+#header .title {
+  margin-bottom: 0em;
+}
+
+.column-left-50 {
+  float: left;
+  width: 50%;
+}
+
+.column-right-50 {
+  float: right;
+  width: 50%;
+}
+
+.column-left-instructions {
+  float: left;
+  width: 20%;
+  text-align: left;
+}
+
+
+.column-right-instructions {
+  float: right;
+  width: 80%;
+  text-align: right;
+}

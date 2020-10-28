@@ -1,0 +1,13 @@
+new_session: yes
+output_dir: docs
+
+rmd_files: ["index.Rmd", 
+            "01-introduction.Rmd",
+            "02-working_with_network_data.Rmd",
+            "03-measures.Rmd",
+            "04-applications.Rmd",
+            "05-glossary.Rmd"
+            ]
+
+delete_merged_file: true
+before_chapter_script: "_common.R"

@@ -1,0 +1,29 @@
+---
+output: html_document
+---
+
+# (PART) Introducción {-}
+
+# Análisis de Redes Sociales: Una (Breve) Introducción {#introduction}
+
+(agregar texto aquí)
+
+## Introducción
+
+(agregar texto aquí)
+
+## Conceptos Erróneos y Diferencias
+
+(agregar texto aquí)
+
+## Términos y Conceptos Básicos
+
+(agregar texto aquí)
+
+## Suposiciones
+
+(agregar texto aquí)
+
+## Resumen y Conclusiones
+
+(agregar texto aquí)
