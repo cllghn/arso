@@ -64,6 +64,7 @@
 
 
 <link rel="stylesheet" href="arso.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 
 <body>
@@ -109,8 +110,8 @@
 </ul></li>
 <li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
 <li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétrico"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétrico</a></li>
-<li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétrico"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétrico</a></li>
+<li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
+<li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
 <li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
@@ -209,7 +210,7 @@ Figure 4.4: Reporte de Importación Gephi
 <ol start="5" style="list-style-type: decimal">
 <li>Su red ahora deberá estar cargada, pero probablemente no se vea bien. Comencemos cambiando el color de los nodos. En la esquina superior izquierda de la interfaz vera un pestana <em>Apariencia</em> (consulte la Figura ##). Allí, seleccione la pestaña <em>Nodos</em> y el icono de paleta de color (que es el icono más a la izquierda). Debajo de la pestaña <em>Nodos</em> vera un rango de opciones, si no está seleccionada la pestaña <em>Único</em>, haga clic en esta. Debajo de esta opción, note un cuadro gris (a la izquierda de <code>#c0c0c0</code>); clic manténgalo presionado para seleccionar un nuevo color, luego seleccione <em>Aplicar</em>).</li>
 </ol>
-<pre><code>#&gt; [1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
 <ol start="6" style="list-style-type: decimal">
 <li>Justo debajo de la pestaña <em>Apariencia</em> encontraraá otra de nombre <em>Distribución</em> (consulte la Figura ##). Gephi ofrece varias opciones de distribución de nodos, sobre las cuales poder aprender en la página de tutoriales de <a href="https://gephi.org/users/tutorial-layouts/">Gephi</a>. En esta actividad solo exploraremos unos pocos. Utilizando el menú desplegable, primero seleccione el algoritmo de nombre <em>Fruchterman Reigold</em> y haga clic en el botón <em>Ejecutar</em>. Dependiendo de la red, es posible que este algoritmo no sea el adecuado. Pruebe otros, por ejemplo <em>Force Atlas</em>. Al principio parecerá que los nodos han colapsado unos sobre otros, pero esto es engañoso. Para ver porque, elija la opción <em>Expansion</em> y haga clic repetidamente en el botón <em>Ejecutar</em> hasta que el grafico sea los suficientemente grande para poder distinguir las conexiones entre nodos. Finalmente. Pruebe el algoritmo <em>Yifan Hu</em>, el cual, al menos con la red de Koschade, produce el grafico más adecuado. Es decir, los subgrupos son fáciles de detectar y los nodos no se encuentran apilados unos sobre los otros.</li>
 </ol>
@@ -222,16 +223,16 @@ Figure 4.5: Pestaña de Diseño
 <ol start="7" style="list-style-type: decimal">
 <li>Estas manipulaciones deben crear un gráfico similar a la Figura ## (similar pues usted ha elegido el color de los nodos). Ahora, note lo diferentes botones al costado de la ventana del <em>Grafo</em> (ver Figura ##), estos nos permiten hacer algunos ajustes rápidos al grafo. Por ejemplo, el botón 1 centra el grafico, el 2 activa y desactiva las etiquetas, o puede controlar el tamaño de las etiquetas con la barra deslizante demarcada con el número 5. El botón 3 alterna el color de los nodos. Por último, note la flecha pequeña en la esquina inferior derecha (numero 6), en el siguiente paso y otros laboratorios utilizaremos esta opción.</li>
 </ol>
-<pre><code>#&gt; [1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
 <ol start="8" style="list-style-type: decimal">
 <li>Al darle clic a la pequeña flecha (número 6 en la Figura ##), se debe levantar un panel con controles adicionales para manipular la red. El menú que debe es el de controles <em>Globales</em> (Figura ##). En este, quizás el control más útil es la barra deslizante de zoom (etiqueta 2), que controla el tamaño del gráfico. En la imagen de abajo he aumentado el tamaño de la red y he centrado la imagen presionando el botón derecho del ratón y arrastrando el gráfico hacia el centro de la ventana. Además de modificar la dimensión del gráfico, puede cambiar el fondo dando clic en el cuadro en la esquina inferior izquierda (etiqueta 1).</li>
 </ol>
-<pre><code>#&gt; [1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
-<pre><code>#&gt; [1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li>En la Figura ## he seleccionado el panel de control de aristas, proceda haciendo lo mismo. Ahora, cambie el color de las aristas a gris (vea etiqueta 1 en la Figura ##) y use la barra deslizante (etiqueta 2) para reducir el ancho de cada línea. Finalmente, en la Figura 10 a continuación, seleccione la pestaña de etiquetas en el panel de control. Aquí, haga clic en el cuadro a un lado de <em>Nodos</em> (etiqueta 1 en la Figura 10) para activar las etiquetas de los nodos en el gráfico. Como verá estas serán inicialmente un poco grandes. Para ajustar estas cambie el tamaño estas utilizando la barra deslizante (etiqueta 3 en Figura 10). En Gephi siempre hay un par de maneras de hacer lo mismo. Por ejemplo, si selecciona el botón a un lado de “Fuentes” (etiqueta 2) note que puede cambiar múltiples propiedades de las etiquetas de cada nodo. El análisis de redes depende de gráficos claros y concisos. Tomo un par de minutos para modificar estas etiquetas a su gusto y cuando termine cierre el panel dando clic a la flecha (etiqueta 4) a mano derecha (ahora apuntando hacia abajo).</li>
 </ol>
-<pre><code>#&gt; [1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
 <ol start="10" style="list-style-type: decimal">
 <li><p>Limpiemos el gráfico. Para esto, seleccione la pestaña de <em>Distribución</em> y seleccione la opción <em>Ajuste de etiquetas</em> y haga clic en <em>Ejecutar</em>. Este algoritmo de diseño moverá los nodos ligeramente para que las etiquetas no se superpongan. Ahora, seleccione la opción <em>Noverlap</em>, y nuevamente de clic en <em>Ejecutar</em>. Vera que nuevamente los nodos deberán moverse, creando una distancia entre ellos para que sean más fáciles de discernir. Ahora, observe el grafo. <strong>¿Surge patrones? ¿Hay algún grupo distinto? Si es así, ¿alguna persona actúa como intermediario entre los distintos grupos? ¿Alguno de los individuos parece estas más aislado socialmente que otros? ¿Cómo se comparan los dibujos con la Figura 1 en el artículo de Koschade?</strong></p></li>
 <li><p>Ahora, desplace el cursor sobre uno de los nodos, al hacer esto Gephi debe resaltar un nodo a la vez y los enlaces a otros nodos. En la Figura 10, presentamos el nodo de Patek resaltado, este tiene vínculos con varias personas dentro de su propia esfera de influencia, además algunos de estos nodos vecinos están conectados entre ellos. Sin embargo, note que los vecinos de Patek no están enlazados con Samudra. Utilizando esta herramienta (resaltar nodos) en su propio gráfico, <strong>¿saltan patrones que no haya notado antes?</strong> Finalmente, tome una captura de pantalla de su grafico dando clic en el icono de la cámara en la esquina inferior de la ventanilla del gráfico.</p></li>
@@ -260,13 +261,13 @@ Figure 4.7: Lista de Aristas en la Table de Datos
 <ol style="list-style-type: decimal">
 <li>Ahora, veamos como guardar nuestro grafico de red. Para esto haga clic en el botón <em>Previsualización</em> para cambiar de espacio en Gephi. Al principio no ha de ver nada relevante, así que haga clic en el botón <em>Refrescar</em> en la parte inferior de la ventana. Esto resultara en un gráfico de red similar a la Figura ##.</li>
 </ol>
-<pre><code>#&gt; [1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Definitivamente debemos hacer algunos ajustes en el panel izquierdo de la ventana. Comencemos seleccionando primero la opción <em>Mostrar etiquetas</em> y deseleccionar la opción <em>Tamaño proporcional</em> (esta reducirá el tamaño de las etiquetas) en la subsección “Etiquetas de nodo”. Una vez más haga clic en <em>Refrescar</em> para ver el efecto de los cambios. Si cree que las etiquetas siguen siendo demasiado grandes, haga clic en la opción <em>Fuente</em> (en la misma subsección) y podrá reducir el tamaño de la fuente. Nuevamente, deberá hacer clic en <em>Refrescar</em> para ver el efecto de los cambios.</p></li>
 <li><p>Ahora cambiemos las propiedades de las aristas. Haga clic en la opción <em>Mostrar aristas</em> (si no está autoseleccionada) en la subsección de <em>Aristas</em>. Además, seleccione la opción <em>Reescalar pesos</em>, esto reducirá el grosor de los enlaces. Tenga en cuenta que justo debajo de la opción <em>Reescalar pesos</em> están los valores predeterminado para la escalación de pesos. Si desea, puede modificar estos valores para el mínimo sea 0.2 y el máximo 2.0. Una vez más, seleccione <em>Refrescar</em>.</p></li>
 <li><p>Por último, haga clic en el cuadro de opción de <em>Color</em> en la subsección de <em>Aristas</em>. Esto abrirá un cuadro de dialogo que permite elegir el color de los bordes. Elija la opción de color <em>Especifico</em> que abierta una paleta de colores de la cual usted puede elegir su propio color al gusto. Una vez que haya seleccionado un color, no olvide darle clic a <em>Refrescar</em>.</p></li>
 </ol>
-<pre><code>#&gt; [1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
 <ol start="5" style="list-style-type: decimal">
 <li>Ahora, guardemos nuestro gráfico. Gephi ofrece tres opciones de formato: SVG, PDF, y PNG. En la ventana de <em>Previsualización</em> de clic en el botón <em>SVG/PDF/PNG</em> a un lado de la etiqueta <em>Exportar</em> en la parte inferior izquierda de la ventana. Por ahora, exporte su grafico en <code>PNG</code>. Para hacer esto, elija <em>Archivos PNG (</em>.png)* en el menú desplegable. Adicionalmente, haga clic en el botón de “Opciones” en la parte inferior derecha. Esta opción abre otro cuadro de dialogo que permite aumentar el número de pixeles y la calidad de la imagen en el archivo producido. Seleccione <em>OK</em> sin cambiar las dimensiones de la imagen, cambie el nombre el archivo a producir, y guárdelo en su escritorio. Antes de pasar al siguiente paso guarde su trabajo con el comando <em>Archivo &gt; Guardar como</em>.</li>
 </ol>
@@ -276,7 +277,7 @@ Figure 4.7: Lista de Aristas en la Table de Datos
 <ol style="list-style-type: decimal">
 <li>Ahora, veamos como importar una lista de aristas. Hemos preparado una para este ejercicio (<strong>PLEASE PUT LINK TO DATA HERE</strong>). Ábrala en Excel y examínela. Para importar vamos a repetir algunos pasos anteriores, use el comando <strong>Archivo&gt;Abrir</strong> para abrir un cuadro de dialogo desde el cual puede importar el archivo de csv. Haga clic en <em>Abrir</em> y aparecerá un nuevo cuadro de dialogo, similar a la Figura ##. Tenga en cuenta que, una vez más, tenemos la opción de importar varias estructuras de datos, pero Gephi ha auto detectado que el archivo es una lista de aristas, de clic en <em>Siguiente</em>. En la siguiente venta, Gephi ofrece opciones para indicar que tipo de datos se incluirán, por ejemplo, la columna <code>Peso</code>. Ya que los valores predeterminados son adecuados, haga clic en <em>Finalizar</em>.</li>
 </ol>
-<pre><code>#&gt; [1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
 <ol start="2" style="list-style-type: decimal">
 <li><p>Ahora, deberá ver un cuadro de informe de importación de Gephi (parecido a la Figura 4). Dígale a Gephi que la red no es dirigida, seleccione la estrategia <em>Mínima</em> de combinación de aristas y haga clic en <em>Aceptar</em>. Ahora que hemos terminado de importar, cambie la ventana a <em>Laboratorio de datos</em> y haga clic en <em>Tabla de datos&gt;Nodos</em>. Tenga en cuenta que no hasta ahora no hay etiquetas adjuntas a los nodos, solo identificadores (<code>Id</code>).</p></li>
 <li><p>Para agregar etiquetas a estos nodos vamos a copiar los identificadores de cada nodo a la columna de etiquetas (<code>Label</code>). Seleccione la función <em>Copiar datos a otra columna</em> (botón ubicado en la parte inferior de la ventana) y seleccione <code>Id</code>. En el cuadro de dialogo que aparecerá, seleccione <code>Label</code> y haga clic en <em>Ok</em>.</p></li>
@@ -294,7 +295,7 @@ Figure 4.7: Lista de Aristas en la Table de Datos
 <li><p>Cambie a la ventana de <em>Vista general</em> y modifique el grafico como lo hizo anteriormente. Esta vez coloree los nodos según los nodos de los actores. Para hacer esto, primero seleccione <em>Nodos&gt;Partición&gt;Color</em> en la ventanilla de <em>Apariencia</em>. Utilizando el menú desplegable <em>Elija un atributo</em>, seleccione <code>rol</code> y haga clic en <em>Aplicar</em> (consulte la Figura ##). De forma predeterminada, el color de los arcos reflejara el color del actor de origen. Noten que puede cambiar el color de todas las aristas en el menú de <em>Aristas</em> a un lado de <em>Nodos</em>.</p></li>
 <li><p>Antes de pasar a la última parte de este ejercicio, guarde su trabajo utilizando los comandos <em>Archivo&gt;Guardar como…</em>, y luego expórtelo como un archivo Pajek con <em>Archivo&gt;Exportar&gt;Archivo de grafo…</em> (en la siguiente ventana asegúrese de guardar el archivo como tipo <em>Archivos NET (Pajek) (.net)</em>). En esta clase no vamos a utilizar el software Pajek, pero el formato <code>.net</code> es un estándar en ARSo y es comúnmente utilizado por diferentes herramientas de software. Por esto, utilizaremos este tipo de archivo como un método conveniente para mover datos entre programas.</p></li>
 </ol>
-<pre><code>#&gt; [1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
 </div>
 </div>
 </div>
@@ -342,6 +343,7 @@ gitbook.start({
 "collapse": "section",
 "scroll_highlight": true
 },
+"css": "arso.css",
 "toolbar": {
 "position": "fixed"
 },
@@ -354,6 +356,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

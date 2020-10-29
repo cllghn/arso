@@ -1,7 +1,7 @@
 set.seed(1014)
 
 knitr::opts_chunk$set(
-  comment = "#>",
+  comment = "",
   collapse = TRUE,
   cache = TRUE,
   echo = FALSE,

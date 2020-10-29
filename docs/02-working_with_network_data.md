@@ -87,7 +87,7 @@ Estos son aquellos que consisten en un solo conjunto de actores o nodos. Por eje
 
 Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguientes secciones diferenciaremos entre tipos de relaciones modo-uno con base a la simetría o asimetría de la relación. 
 
-### Modo-uno: Simétrico
+### Modo-uno: Simétricos
 
 Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura ## representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
 
@@ -105,9 +105,22 @@ Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo 
 Los vínculos modo-uno simétricos se utilizan a menudo cuando es difícil o imposible determinar qué actor inició o envió el enlace y quién lo recibió [@Cunningham2016]. En los tres ejemplos previos podemos asumir mutualidad entre actores.
 ::::
 
+Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La Figura ## es una representación en matriz de los datos de los vínculos familiares en la Figura ##. 
+
+$$
+\begin{matrix}
+  & A & B & C & D & E & F \\
+A & - & 1 & 1 & 0 & 0 & 0 \\
+B & 1 & - & 1 & 0 & 0 & 0 \\
+C & 1 & 1 & - & 1 & 0 & 0 \\
+D & 0 & 0 & 1 & - & 1 & 1 \\
+E & 0 & 0 & 0 & 1 & - & 1 \\
+F & 0 & 0 & 0 & 1 & 1 & - \\
+\end{matrix}
+$$
 
 
-### Modo-uno: Asimétrico
+### Modo-uno: Asimétricos
 
 ## Datos de Modo-Dos
 
@@ -162,7 +175,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   6. Justo debajo de la pestaña *Apariencia* encontraraá otra de nombre *Distribución* (consulte la Figura ##). Gephi ofrece varias opciones de distribución de nodos, sobre las cuales poder aprender en la página de tutoriales de [Gephi](https://gephi.org/users/tutorial-layouts/).  En esta actividad solo exploraremos unos pocos. Utilizando el menú desplegable, primero seleccione el algoritmo de nombre *Fruchterman Reigold* y haga clic en el botón *Ejecutar*.   Dependiendo de la red, es posible que este algoritmo no sea el adecuado. Pruebe otros, por ejemplo *Force Atlas*. Al principio parecerá que los nodos han colapsado unos sobre otros, pero esto es engañoso. Para ver porque, elija la opción *Expansion* y haga clic repetidamente en el botón *Ejecutar* hasta que el grafico sea los suficientemente grande para poder distinguir las conexiones entre nodos. Finalmente. Pruebe el algoritmo *Yifan Hu*, el cual, al menos con la red de Koschade, produce el grafico más adecuado. Es decir, los subgrupos son fáciles de detectar y los nodos no se encuentran apilados unos sobre los otros. 
@@ -176,26 +189,26 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   8.	Al darle clic a la pequeña flecha (número 6 en la Figura ##), se debe levantar un panel con controles adicionales para manipular la red. El menú que debe es el de controles *Globales* (Figura ##). En este, quizás el control más útil es la barra deslizante de zoom (etiqueta 2), que controla el tamaño del gráfico. En la imagen de abajo he aumentado el tamaño de la red y he centrado la imagen presionando el botón derecho del ratón y arrastrando el gráfico hacia el centro de la ventana. Además de modificar la dimensión del gráfico, puede cambiar el fondo dando clic en el cuadro en la esquina inferior izquierda (etiqueta 1).
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   9.	En la Figura ## he seleccionado el panel de control de aristas, proceda haciendo lo mismo. Ahora, cambie el color de las aristas a gris (vea etiqueta 1 en la Figura ##) y use la barra deslizante (etiqueta 2) para reducir el ancho de cada línea. Finalmente, en la Figura 10 a continuación, seleccione la pestaña de etiquetas en el panel de control. Aquí, haga clic en el cuadro a un lado de *Nodos* (etiqueta 1 en la Figura 10) para activar las etiquetas de los nodos en el gráfico. Como verá estas serán inicialmente un poco grandes. Para ajustar estas cambie el tamaño estas utilizando la barra deslizante (etiqueta 3 en Figura 10). En Gephi siempre hay un par de maneras de hacer lo mismo. Por ejemplo, si selecciona el botón a un lado de “Fuentes” (etiqueta 2) note que puede cambiar múltiples propiedades de las etiquetas de cada nodo. El análisis de redes depende de gráficos claros y concisos. Tomo un par de minutos para modificar estas etiquetas a su gusto y cuando termine cierre el panel dando clic a la flecha (etiqueta 4) a mano derecha (ahora apuntando hacia abajo). 
 
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   10.	Limpiemos el gráfico. Para esto, seleccione la pestaña de *Distribución* y seleccione la opción *Ajuste de etiquetas* y haga clic en *Ejecutar*. Este algoritmo de diseño moverá los nodos ligeramente para que las etiquetas no se superpongan. Ahora, seleccione la opción *Noverlap*, y nuevamente de clic en *Ejecutar*. Vera que nuevamente los nodos deberán moverse, creando una distancia entre ellos para que sean más fáciles de discernir. Ahora, observe el grafo. **¿Surge patrones? ¿Hay algún grupo distinto? Si es así, ¿alguna persona actúa como intermediario entre los distintos grupos? ¿Alguno de los individuos parece estas más aislado socialmente que otros? ¿Cómo se comparan los dibujos con la Figura 1 en el artículo de Koschade?**
@@ -224,7 +237,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
 
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   2. Definitivamente debemos hacer algunos ajustes en el panel izquierdo de la ventana. Comencemos seleccionando primero la opción *Mostrar etiquetas* y deseleccionar la opción *Tamaño proporcional* (esta reducirá el tamaño de las etiquetas) en la subsección “Etiquetas de nodo”. Una vez más haga clic en *Refrescar* para ver el efecto de los cambios. Si cree que las etiquetas siguen siendo demasiado grandes, haga clic en la opción *Fuente* (en la misma subsección) y podrá reducir el tamaño de la fuente. Nuevamente, deberá hacer clic en *Refrescar* para ver el efecto de los cambios.  
@@ -235,7 +248,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
 
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   5. Ahora, guardemos nuestro gráfico. Gephi ofrece tres opciones de formato: SVG, PDF, y PNG. En la ventana de *Previsualización* de clic en el botón *SVG/PDF/PNG* a un lado de la etiqueta *Exportar* en la parte inferior izquierda de la ventana. Por ahora, exporte su grafico en `PNG`. Para hacer esto, elija *Archivos PNG (*.png)* en el menú desplegable. Adicionalmente, haga clic en el botón de “Opciones” en la parte inferior derecha. Esta opción abre otro cuadro de dialogo que permite aumentar el número de pixeles y la calidad de la imagen en el archivo producido. Seleccione *OK* sin cambiar las dimensiones de la imagen, cambie el nombre el archivo a producir, y guárdelo en su escritorio. Antes de pasar al siguiente paso guarde su trabajo con el comando *Archivo > Guardar como*.
@@ -247,7 +260,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
   
   2.	Ahora, deberá ver un cuadro de informe de importación de Gephi (parecido a la Figura 4). Dígale a Gephi que la red no es dirigida, seleccione la estrategia *Mínima* de combinación de aristas y haga clic en *Aceptar*. Ahora que hemos terminado de importar, cambie la ventana a *Laboratorio de datos* y haga clic en *Tabla de datos>Nodos*. Tenga en cuenta que no hasta ahora no hay etiquetas adjuntas a los nodos, solo identificadores (`Id`). 
@@ -270,7 +283,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
 
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
 # Derivando Datos Modo-Uno de Modo-Dos
@@ -290,14 +303,14 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   2.	Si no lo ha instalado previamente, haga clic en la pestaña *Plugins disponibles*, desplácese hacia abajo y localice el módulo requerido (Figura ##). Marque la casilla a la izquierda de la opción y haga clic en *Instalar*. Siga las instrucciones. Para que estos cambios tomen efecto deberá reiniciar Gephi.
 
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   3.	Después de reiniciar Gephi, asegúrese que el nuevo módulo está instalado correctamente. Para activarlo, use los comandos *Ventana>Multimode Projections*. Esta acción abrirá una nueva ventanilla (Figura ##). Ahora está listo para comenzar con el resto del ejercicio.
@@ -308,14 +321,14 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
   
   2. Primero debemos importar la lista de nodos. Utilice los comandos *Archivo>Abrir* y luego localice y abra `davisnode.csv`. En el cuadro de diálogo (Figura ##) dígale a Gephi que el archivo es una tabla de nodos y asegure que el separador entre valores sea una coma. Haga clic en *Siguiente* y luego en el siguiente cuadro de diálogo seleccione *Terminar*. Como siempre, esto abrirá el informe de importación (Figura ##). Por favor indique que el tipo de grafo es *No dirigido*, la estrategia para combinar las aristas es *Mínimo*,  y que desea agregar estos datos en un nuevo espacio de trabajo. Ahora, haga clic en *Aceptar*. 
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   3. Observe los datos que ha importado en la tabla de nodos en la ventana *Laboratorio de datos*. Si cambia a la ventana *Vista general* verá nodos, pero no aristas (lo cual es correcto puesto que no hemos importado los enlaces).
@@ -324,14 +337,14 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   5.	Puesto que la tabla de nodos incluye un atributo (`type`) que indica si un nodo es `persona` o `evento`, no necesitamos la herramienta *MultiMode Networks Projection* que descargamos para diferenciar entre clases de nodos.  
 
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   6.	Cambie a la ventana *Vista general* y, en la pestaña *Apariencia*, seleccione *Nodos > Color > Partición* y, a continuación, con el menú desplegable *--Elija un atributo*, seleccione *type*. Antes de presionar *Aplicar*, haga clic en el enlace *Paleta…* justo arriba del botón *Aplicar* y elija la paleta roja / azul. Ahora presione *Aplicar*. Una vez que haya terminado, guarde sus datos, pero no cierre Gephi. En la siguiente parte, exploraremos cómo "plegar" una red de modo-dos para crear dos redes de modo-uno.
@@ -349,14 +362,14 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   4. En el espacio de trabajo recién creado, modifique la visualización de la red usando las herramientas de diseño en Gephi. La Figura ## es un ejemplo (diseño, etiquetas y el tamaño de nodos editados). Observando esta esta red conteste las siguientes interrogantes. **¿Qué mujeres parecen estar socialmente cerca entre sí? ¿Algunas son más centrales? ¿Qué mujeres parecen ser las más distantes del grupo?**
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
   5. Regrese al espacio previo de trabajo donde generó la red de modo-uno. En la ventanilla de *Filtros* seleccione *Auto aplicar* (al hacer esto el botón cambiará y dirá *Fitrar*). Regrese a la pestaña *MultiMode Networks Projection*, modifique los menús desplegables *Left matrix* y *Right matrix* de la siguiente manera, luego de clic en *Run*.
@@ -370,7 +383,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
   
 
 ```
-#> [1] "DO NOT FORGET TO ADD FIGURE HERE"
+[1] "DO NOT FORGET TO ADD FIGURE HERE"
 ```
 
 

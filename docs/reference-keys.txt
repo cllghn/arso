@@ -32,8 +32,8 @@ previsualización
 errores-comunes
 tipos-de-datos-de-redes-sociales
 datos-de-modo-uno
-modo-uno-simétrico
-modo-uno-asimétrico
+modo-uno-simétricos
+modo-uno-asimétricos
 datos-de-modo-dos
 datos-de-atributos
 grabación-y-recopilación

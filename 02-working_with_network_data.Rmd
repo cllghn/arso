@@ -90,12 +90,12 @@ Estos son aquellos que consisten en un solo conjunto de actores o nodos. Por eje
 
 Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguientes secciones diferenciaremos entre tipos de relaciones modo-uno con base a la simetría o asimetría de la relación. 
 
-### Modo-uno: Simétrico
+### Modo-uno: Simétricos
 
 Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura ## representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
 
 ```{r, echo = FALSE}
-igraph::graph_from_literal(A-B, B-C, C-D, D-B, A-E, E-F, F-A) %>%
+igraph::graph_from_literal(A-B, B-C, A-C, C-D, D-E, E-F, F-D) %>%
   my_igraph()
 ```
 
@@ -111,9 +111,22 @@ igraph::graph_from_literal(A-B, B-C, C-D, D-B, A-E, E-F, F-A) %>%
 Los vínculos modo-uno simétricos se utilizan a menudo cuando es difícil o imposible determinar qué actor inició o envió el enlace y quién lo recibió [@Cunningham2016]. En los tres ejemplos previos podemos asumir mutualidad entre actores.
 ::::
 
+Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La Figura ## es una representación en matriz de los datos de los vínculos familiares en la Figura ##. 
+
+$$
+\begin{matrix}
+  & A & B & C & D & E & F \\
+A & - & 1 & 1 & 0 & 0 & 0 \\
+B & 1 & - & 1 & 0 & 0 & 0 \\
+C & 1 & 1 & - & 1 & 0 & 0 \\
+D & 0 & 0 & 1 & - & 1 & 1 \\
+E & 0 & 0 & 0 & 1 & - & 1 \\
+F & 0 & 0 & 0 & 1 & 1 & - \\
+\end{matrix}
+$$
 
 
-### Modo-uno: Asimétrico
+### Modo-uno: Asimétricos
 
 ## Datos de Modo-Dos
 
