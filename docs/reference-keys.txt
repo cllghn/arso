@@ -1,3 +1,6 @@
+fig:undirected
+eq:symmatrix
+fig:unnamed-chunk-1
 fig:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
@@ -5,7 +8,6 @@ fig:unnamed-chunk-5
 fig:unnamed-chunk-7
 fig:unnamed-chunk-12
 fig:unnamed-chunk-13
-fig:unnamed-chunk-1
 editores
 colaboradores-1
 introduction
@@ -53,3 +55,7 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
+fig:directed
+eq:asymmatrix
+fig:unnamed-chunk-6
+fig:unnamed-chunk-11

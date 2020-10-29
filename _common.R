@@ -28,6 +28,7 @@ my_igraph <- function(g, .layout = "layout_with_kk", ...) {
                       layout       = eval(as.name(.layout)),
                       # Vertex:
                       vertex.color = "lightblue",
+                      vertex.size   = 30,
                       # Edges:
                       edges.color  = "grey",
                       # Catch all

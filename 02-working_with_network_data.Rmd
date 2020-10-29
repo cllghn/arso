@@ -92,9 +92,9 @@ Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguie
 
 ### Modo-uno: Simétricos
 
-Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura ## representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
+Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura \@ref(fig:undirected) representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
 
-```{r, echo = FALSE}
+```{r undirected, echo = FALSE, fig.cap = "Gráfico no dirigido"}
 igraph::graph_from_literal(A-B, B-C, A-C, C-D, D-E, E-F, F-D) %>%
   my_igraph()
 ```
@@ -111,7 +111,7 @@ igraph::graph_from_literal(A-B, B-C, A-C, C-D, D-E, E-F, F-D) %>%
 Los vínculos modo-uno simétricos se utilizan a menudo cuando es difícil o imposible determinar qué actor inició o envió el enlace y quién lo recibió [@Cunningham2016]. En los tres ejemplos previos podemos asumir mutualidad entre actores.
 ::::
 
-Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La Figura ## es una representación en matriz de los datos de los vínculos familiares en la Figura ##. 
+Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La matiz \@ref(eq:symmatrix) es una reprecentación de los vínculos familiares de la Figura \@ref(fig:undirected). El primer paso en generar una matriz de adyacencia es listar todos los nodos relevantes, {A, B, C, D, E, F}, como filas y columnas en la matriz. Representamos la presencia o ausencia de un vínculo con un valor, aquí se usan 0's y 1's para indicar que un nodo tiene una relación con otro. De lo contrario, se coloca un 0. Además, eliminamos la diagonal, ya que no es relevante que un nodo tenga un vínculo simétrico consigo mismo.
 
 $$
 \begin{matrix}
@@ -122,11 +122,36 @@ C & 1 & 1 & - & 1 & 0 & 0 \\
 D & 0 & 0 & 1 & - & 1 & 1 \\
 E & 0 & 0 & 0 & 1 & - & 1 \\
 F & 0 & 0 & 0 & 1 & 1 & - \\
+(\#eq:symmatrix)
 \end{matrix}
 $$
 
+Se estará preguntando, ¿cómo leemos la matriz? Centrémonos en un nodo a la vez. Por ejemplo, el nodo A, la primera letra de la columna más a la izquierda, está conectado con los nodos B y C, pero no con los demas {D, E, F}. Recuerde que la relación en cuestión es simétrica. Como tal, los dos lados de la matriz se reflejarán entre sí. En términos prácticos, significa que B y C también están vinculados a A.
+
 
 ### Modo-uno: Asimétricos
+
+También son relaciones entre un solo conjunto de actores; sin embargo, las redes asimétricas de modo-uno generalmente se refieren a bordes que van de un nodo a otro, pero que no siempre son recíprocos [@Borgatti2018; @Everton2012]. Por ejemplo, considere la Figura \@ref(fig:directed). Inicialmente notará que los vínculos tienen dirección, representada por una flecha. Observe que algunos de los vínculos no son recíprocos (por ejemplo, A envía un enlace no reciproco a C), mientras que otros son correspondidos (por ejemplo, A envía un enlace a B y este lo retorna).
+
+```{r directed, echo = FALSE, fig.cap = "Gráfico dirigido"}
+igraph::graph_from_literal(A++B, B-+C, A-+C, C-+D, D+-E, E-+F, F+-D) %>%
+  my_igraph()
+```
+
+@Cunningham2016 sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz \@ref(eq:asymmatrix) representa los datos de la Figura \@ref(fig:directed). Como la matriz toda sociomatriz comenzamos por listar todos los nodos posibles como filas y columnas. Igualmente, esta matriz se lee de izquierda a derecha. Igualmente, esta matriz se lee de izquierda a derecha.  Comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. Fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo reciben.
+
+$$
+\begin{matrix}
+  & A & B & C & D & E & F \\
+A & - & 1 & 1 & 0 & 0 & 0 \\
+B & 1 & - & 1 & 0 & 0 & 0 \\
+C & 0 & 0 & - & 1 & 0 & 0 \\
+D & 0 & 0 & 0 & - & 0 & 1 \\
+E & 0 & 0 & 0 & 1 & - & 1 \\
+F & 0 & 0 & 0 & 0 & 0 & - \\
+(\#eq:asymmatrix)
+\end{matrix}
+$$
 
 ## Datos de Modo-Dos
 

@@ -89,9 +89,12 @@ Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguie
 
 ### Modo-uno: Simétricos
 
-Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura ## representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
+Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura \@ref(fig:undirected) representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
 
-<img src="02-working_with_network_data_files/figure-html/unnamed-chunk-1-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="02-working_with_network_data_files/figure-html/undirected-1.png" alt="Gráfico no dirigido" width="70%" />
+<p class="caption">(\#fig:undirected)Gráfico no dirigido</p>
+</div>
 
 @Everton2012 nos presenta ejemplos de vínculos modo-uno simétricos en el primer apéndice de *Disrupting Dark Network*: 
 
@@ -105,7 +108,7 @@ Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo 
 Los vínculos modo-uno simétricos se utilizan a menudo cuando es difícil o imposible determinar qué actor inició o envió el enlace y quién lo recibió [@Cunningham2016]. En los tres ejemplos previos podemos asumir mutualidad entre actores.
 ::::
 
-Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La Figura ## es una representación en matriz de los datos de los vínculos familiares en la Figura ##. 
+Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La matiz \@ref(eq:symmatrix) es una reprecentación de los vínculos familiares de la Figura \@ref(fig:undirected). El primer paso en generar una matriz de adyacencia es listar todos los nodos relevantes, {A, B, C, D, E, F}, como filas y columnas en la matriz. Representamos la presencia o ausencia de un vínculo con un valor, aquí se usan 0's y 1's para indicar que un nodo tiene una relación con otro. De lo contrario, se coloca un 0. Además, eliminamos la diagonal, ya que no es relevante que un nodo tenga un vínculo simétrico consigo mismo.
 
 $$
 \begin{matrix}
@@ -116,11 +119,36 @@ C & 1 & 1 & - & 1 & 0 & 0 \\
 D & 0 & 0 & 1 & - & 1 & 1 \\
 E & 0 & 0 & 0 & 1 & - & 1 \\
 F & 0 & 0 & 0 & 1 & 1 & - \\
+(\#eq:symmatrix)
 \end{matrix}
 $$
 
+Se estará preguntando, ¿cómo leemos la matriz? Centrémonos en un nodo a la vez. Por ejemplo, el nodo A, la primera letra de la columna más a la izquierda, está conectado con los nodos B y C, pero no con los demas {D, E, F}. Recuerde que la relación en cuestión es simétrica. Como tal, los dos lados de la matriz se reflejarán entre sí. En términos prácticos, significa que B y C también están vinculados a A.
+
 
 ### Modo-uno: Asimétricos
+
+También son relaciones entre un solo conjunto de actores; sin embargo, las redes asimétricas de modo-uno generalmente se refieren a bordes que van de un nodo a otro, pero que no siempre son recíprocos [@Borgatti2018; @Everton2012]. Por ejemplo, considere la Figura \@ref(fig:directed). Inicialmente notará que los vínculos tienen dirección, representada por una flecha. Observe que algunos de los vínculos no son recíprocos (por ejemplo, A envía un enlace no reciproco a C), mientras que otros son correspondidos (por ejemplo, A envía un enlace a B y este lo retorna).
+
+<div class="figure" style="text-align: center">
+<img src="02-working_with_network_data_files/figure-html/directed-1.png" alt="Gráfico dirigido" width="70%" />
+<p class="caption">(\#fig:directed)Gráfico dirigido</p>
+</div>
+
+@Cunningham2016 sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz \@ref(eq:asymmatrix) representa los datos de la Figura \@ref(fig:directed). Como la matriz toda sociomatriz comenzamos por listar todos los nodos posibles como filas y columnas. Igualmente, esta matriz se lee de izquierda a derecha. Igualmente, esta matriz se lee de izquierda a derecha.  Comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. Fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo reciben.
+
+$$
+\begin{matrix}
+  & A & B & C & D & E & F \\
+A & - & 1 & 1 & 0 & 0 & 0 \\
+B & 1 & - & 1 & 0 & 0 & 0 \\
+C & 0 & 0 & - & 1 & 0 & 0 \\
+D & 0 & 0 & 0 & - & 0 & 1 \\
+E & 0 & 0 & 0 & 1 & - & 1 \\
+F & 0 & 0 & 0 & 0 & 0 & - \\
+(\#eq:asymmatrix)
+\end{matrix}
+$$
 
 ## Datos de Modo-Dos
 
@@ -147,28 +175,28 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_1_Matrix_Excel.png" alt="Hoja de cálculo de Excel que muestra la matriz de datos en Koschade" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-2)Hoja de cálculo de Excel que muestra la matriz de datos en Koschade</p>
+<p class="caption">(\#fig:unnamed-chunk-1)Hoja de cálculo de Excel que muestra la matriz de datos en Koschade</p>
 </div>
 
   2. Abra Gephi y seleccione la opción *Nuevo proyecto* en la pantalla de “Bienvenido a Gephi” (no se muestra en este documento). Asegúrese de estar en la ventana “Vista general” en la esquina superior izquierda de la interfaz (consulte la Figura ##). Una vez allí, su interfaz deberá parecerse a la Figura ##. 
 
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_2_General_View.png" alt="Ventana 'Vista general' en Gephi" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-3)Ventana 'Vista general' en Gephi</p>
+<p class="caption">(\#fig:unnamed-chunk-2)Ventana 'Vista general' en Gephi</p>
 </div>
 
   3. Primero debemos importar los datos de recopilados en el primer paso a Gephi. Para hacer esto, use el comando *Archivo>Abrir…* Esto abrirá un cuadro de dialogo (no mostrado) desde el cual puede ubicar y seleccionar el archivo de Excel que creo anteriormente. Una vez que haya hecho esto, haga clic en *Abrir* y aparecerá un nuevo cuadro de dialogo, similar a la Figura ##. Tenga en cuenta que, en la esquina superior derecha, tiene la opción de importa la hoja de cálculo en varios formatos. Como registramos los datos en matriz, utilizaremos la opción *Matriz*. Haga clic en *Siguiente*, en el siguiente cuadro de dialogo, haga clic en *Terminar* (puesto que no tenemos información de tiempo asociada con estos datos).
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_3_Importing_Gephi.png" alt="Ventana de Importación en Gephi" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-4)Ventana de Importación en Gephi</p>
+<p class="caption">(\#fig:unnamed-chunk-3)Ventana de Importación en Gephi</p>
 </div>
 
   4. Gephi produce un *Informe de importación* (ver Figura ##), que proporciona varios tipos de información, por ejemplo, si ocurrió algún error durante la importación, numero de nodos (actores) en la red, la cantidad de bordes (aristas), y así sucesivamente. Ahora, necesitamos decirle a Gephi que esta es una red no dirigida utilizando el menú desplegable *Tipo de grafico* (el tipo predeterminado es *Mixto*). A continuación, haga clic en el enlace *Mas opciones…*, y luego en el menú desplegable *Estrategia para combinar aristas* seleccione *Mínimo*. Este último paso asegura que los pesos de los bordes no se dupliquen. Ahora, haga clic en *Aceptar*.
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_4_Importing_Report.png" alt="Reporte de Importación Gephi" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-5)Reporte de Importación Gephi</p>
+<p class="caption">(\#fig:unnamed-chunk-4)Reporte de Importación Gephi</p>
 </div>
 
   5. Su red ahora deberá estar cargada, pero probablemente no se vea bien. Comencemos cambiando el color de los nodos. En la esquina superior izquierda de la interfaz vera un pestana *Apariencia* (consulte la Figura ##). Allí, seleccione la pestaña *Nodos* y el icono de paleta de color (que es el icono más a la izquierda). Debajo de la pestaña *Nodos* vera un rango de opciones, si no está seleccionada la pestaña *Único*, haga clic en esta. Debajo de esta opción, note un cuadro gris (a la izquierda de `#c0c0c0`); clic manténgalo presionado para seleccionar un nuevo color, luego seleccione *Aplicar*). 
@@ -182,7 +210,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
 
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_6_Layout.png" alt="Pestaña de Diseño" width="50%" />
-<p class="caption">(\#fig:unnamed-chunk-7)Pestaña de Diseño</p>
+<p class="caption">(\#fig:unnamed-chunk-6)Pestaña de Diseño</p>
 </div>
 
   7. Estas manipulaciones deben crear un gráfico similar a la Figura ## (similar pues usted ha elegido el color de los nodos). Ahora, note lo diferentes botones al costado de la ventana del *Grafo* (ver Figura ##), estos nos permiten hacer algunos ajustes rápidos al grafo. Por ejemplo, el botón 1 centra el grafico, el 2 activa y desactiva las etiquetas, o puede controlar el tamaño de las etiquetas con la barra deslizante demarcada con el número 5. El botón 3 alterna el color de los nodos. Por último, note la flecha pequeña en la esquina inferior derecha (numero 6), en el siguiente paso y otros laboratorios utilizaremos esta opción.
@@ -217,7 +245,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_10_Patek_Ego.png" alt="Red con Patek Resaltado" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-12)Red con Patek Resaltado</p>
+<p class="caption">(\#fig:unnamed-chunk-11)Red con Patek Resaltado</p>
 </div>
 
 
@@ -225,7 +253,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
   
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_11_Gephi_Edge_List.png" alt="Lista de Aristas en la Table de Datos" width="75%" />
-<p class="caption">(\#fig:unnamed-chunk-13)Lista de Aristas en la Table de Datos</p>
+<p class="caption">(\#fig:unnamed-chunk-12)Lista de Aristas en la Table de Datos</p>
 </div>
 
   13.	Ahora, haga clic en la pestaña *Aristas* y obtendrá una lista de todos los vínculos entre todos los actores (Figura ##). Tenga en cuenta que esta información no se presenta en formato de matriz. En cambio, este formato llamaremos lista de bordes o lista de aristas. Estas enumeran un nodo de `Origen` (actor) y un nodo de `Destino` (actor), independientemente de si el enlace es dirigido o no. 

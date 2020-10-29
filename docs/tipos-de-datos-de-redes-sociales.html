@@ -166,8 +166,13 @@
 <p>Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguientes secciones diferenciaremos entre tipos de relaciones modo-uno con base a la simetría o asimetría de la relación.</p>
 <div id="modo-uno-simétricos" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Modo-uno: Simétricos</h3>
-<p>Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura ## representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.</p>
-<p><img src="02-working_with_network_data_files/figure-html/unnamed-chunk-1-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<p>Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:undirected">3.1</a> representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.</p>
+<div class="figure" style="text-align: center"><span id="fig:undirected"></span>
+<img src="02-working_with_network_data_files/figure-html/undirected-1.png" alt="Gráfico no dirigido" width="70%" />
+<p class="caption">
+Figure 3.1: Gráfico no dirigido
+</p>
+</div>
 <p><span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span> nos presenta ejemplos de vínculos modo-uno simétricos en el primer apéndice de <em>Disrupting Dark Network</em>:</p>
 <table>
 <colgroup>
@@ -203,8 +208,8 @@
 <div class="infobox note">
 <p>Los vínculos modo-uno simétricos se utilizan a menudo cuando es difícil o imposible determinar qué actor inició o envió el enlace y quién lo recibió <span class="citation">(Cunningham, Everton, and Murphy <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. En los tres ejemplos previos podemos asumir mutualidad entre actores.</p>
 </div>
-<p>Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La Figura ## es una representación en matriz de los datos de los vínculos familiares en la Figura ##.</p>
-<p><span class="math display">\[
+<p>Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La matiz <a href="tipos-de-datos-de-redes-sociales.html#eq:symmatrix">(3.1)</a> es una reprecentación de los vínculos familiares de la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:undirected">3.1</a>. El primer paso en generar una matriz de adyacencia es listar todos los nodos relevantes, {A, B, C, D, E, F}, como filas y columnas en la matriz. Representamos la presencia o ausencia de un vínculo con un valor, aquí se usan 0’s y 1’s para indicar que un nodo tiene una relación con otro. De lo contrario, se coloca un 0. Además, eliminamos la diagonal, ya que no es relevante que un nodo tenga un vínculo simétrico consigo mismo.</p>
+<p><span class="math display" id="eq:symmatrix">\[
 \begin{matrix}
   &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
 A &amp; - &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
@@ -213,11 +218,33 @@ C &amp; 1 &amp; 1 &amp; - &amp; 1 &amp; 0 &amp; 0 \\
 D &amp; 0 &amp; 0 &amp; 1 &amp; - &amp; 1 &amp; 1 \\
 E &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; - &amp; 1 \\
 F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
+\tag{3.1}
 \end{matrix}
 \]</span></p>
+<p>Se estará preguntando, ¿cómo leemos la matriz? Centrémonos en un nodo a la vez. Por ejemplo, el nodo A, la primera letra de la columna más a la izquierda, está conectado con los nodos B y C, pero no con los demas {D, E, F}. Recuerde que la relación en cuestión es simétrica. Como tal, los dos lados de la matriz se reflejarán entre sí. En términos prácticos, significa que B y C también están vinculados a A.</p>
 </div>
 <div id="modo-uno-asimétricos" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Modo-uno: Asimétricos</h3>
+<p>También son relaciones entre un solo conjunto de actores; sin embargo, las redes asimétricas de modo-uno generalmente se refieren a bordes que van de un nodo a otro, pero que no siempre son recíprocos <span class="citation">(Borgatti, Everett, and Johnson <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>; Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span>. Por ejemplo, considere la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a>. Inicialmente notará que los vínculos tienen dirección, representada por una flecha. Observe que algunos de los vínculos no son recíprocos (por ejemplo, A envía un enlace no reciproco a C), mientras que otros son correspondidos (por ejemplo, A envía un enlace a B y este lo retorna).</p>
+<div class="figure" style="text-align: center"><span id="fig:directed"></span>
+<img src="02-working_with_network_data_files/figure-html/directed-1.png" alt="Gráfico dirigido" width="70%" />
+<p class="caption">
+Figure 3.2: Gráfico dirigido
+</p>
+</div>
+<p><span class="citation">Cunningham, Everton, and Murphy (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz <a href="tipos-de-datos-de-redes-sociales.html#eq:asymmatrix">(3.2)</a> representa los datos de la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a>. Como la matriz toda sociomatriz comenzamos por listar todos los nodos posibles como filas y columnas. Igualmente, esta matriz se lee de izquierda a derecha. Igualmente, esta matriz se lee de izquierda a derecha. Comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. Fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo reciben.</p>
+<p><span class="math display" id="eq:asymmatrix">\[
+\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
+A &amp; - &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+B &amp; 1 &amp; - &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+C &amp; 0 &amp; 0 &amp; - &amp; 1 &amp; 0 &amp; 0 \\
+D &amp; 0 &amp; 0 &amp; 0 &amp; - &amp; 0 &amp; 1 \\
+E &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; - &amp; 1 \\
+F &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; - \\
+\tag{3.2}
+\end{matrix}
+\]</span></p>
 </div>
 </div>
 <div id="datos-de-modo-dos" class="section level2">
@@ -229,6 +256,9 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
+<div id="ref-Borgatti2018">
+<p>Borgatti, Stephen p., Martin G. Everett, and Jeffrey C. Johnson. 2018. <em>Analyzing Social Networks</em>. Sage.</p>
+</div>
 <div id="ref-Cunningham2016">
 <p>Cunningham, Daniel, Sean F. Everton, and Philip Murphy. 2016. <em>Understanding Dark Networks: A Strategic Framework for the Use of Social Network Analysis</em>. Rowman; Littlefield.</p>
 </div>
