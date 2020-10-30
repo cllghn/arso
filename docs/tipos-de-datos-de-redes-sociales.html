@@ -173,7 +173,7 @@
 Figure 3.1: Gráfico no dirigido
 </p>
 </div>
-<p><span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span> nos presenta ejemplos de vínculos modo-uno simétricos en el primer apéndice de <em>Disrupting Dark Network</em>:</p>
+<p><span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span> nos presenta ejemplos de vínculos modo-uno simétricos utilizados para mapear la red terrorista Jemaah Islamiyah en el primer apéndice de <em>Disrupting Dark Network</em>:</p>
 <table>
 <colgroup>
 <col width="25%" />
@@ -232,7 +232,7 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
 Figure 3.2: Gráfico dirigido
 </p>
 </div>
-<p><span class="citation">Cunningham, Everton, and Murphy (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz <a href="tipos-de-datos-de-redes-sociales.html#eq:asymmatrix">(3.2)</a> representa los datos de la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a>. Como la matriz toda sociomatriz comenzamos por listar todos los nodos posibles como filas y columnas. Igualmente, esta matriz se lee de izquierda a derecha. Igualmente, esta matriz se lee de izquierda a derecha. Comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. Fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo reciben.</p>
+<p><span class="citation">Cunningham, Everton, and Murphy (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz <a href="tipos-de-datos-de-redes-sociales.html#eq:asymmatrix">(3.2)</a> representa los datos de la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a>. Como con toda sociomatriz, comenzamos por listar todos los nodos posibles como filas y columnas {A, B, C, D, E, F}. Igualmente, matriz la leemos de izquierda a derecha. Por ejemplo, comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. En este caso, el actor a recibe un enlace de B pero no de C. Ahora, fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo recibe.</p>
 <p><span class="math display" id="eq:asymmatrix">\[
 \begin{matrix}
   &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
@@ -245,10 +245,47 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; - \\
 \tag{3.2}
 \end{matrix}
 \]</span></p>
+<p>Para ver ejemplos de datos de red asimétricos de un modo, podemos volver a <span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span> y algunos de los ejemplos proporcionados en <em>Disrupting Dark Network</em> utilizados para mapear la red terrorista Jemaah Islamiyah:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Vínculo</th>
+<th>Tipo de Actor</th>
+<th>Definición</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Persona</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="datos-de-modo-dos" class="section level2">
 <h2><span class="header-section-number">3.2</span> Datos de Modo-Dos</h2>
+<p>Las relaciones modo-dos son aquellas, que a diferencia de las modo-uno, consisten en vínculos en entre dos clases de actores. Para entender datos de modo-dos, utilicemos la premisa de uno de los conjuntos de datos modo-dos más populares, Davis’s Southern Women <span class="citation">(Davies, Gardner, and Gardner <a href="#ref-Davis1941" role="doc-biblioref">1941</a>)</span>. En este ejemplo tenemos dos conjuntos de actores. El primero representa personas {A, B, C, D, E, F}, el segundo representa eventos (E) sociales {E1, E2, E3}. En este ejemplo, no tenemos vínculos entre personas sino vínculos de asistencia entre una persona y un evento. Podemos codificar estos datos utilizando una sociomatriz en la cual las filas representan personas y las columnas eventos, ver figura <a href="tipos-de-datos-de-redes-sociales.html#eq:bip">(3.3)</a>. La asistencia se representa de manera binaria con un 1, mientras que la ausencia con un 0.</p>
+<p><span class="math display" id="eq:bip">\[
+\begin{matrix}
+  &amp; E1 &amp; E2 &amp; E3 &amp; E4 \\
+A &amp; 1 &amp; 0 &amp; 0 &amp; 0  \\
+B &amp; 1 &amp; 0 &amp; 0 &amp; 0  \\
+C &amp; 1 &amp; 1 &amp; 0 &amp; 0  \\
+D &amp; 0 &amp; 1 &amp; 1 &amp; 1  \\
+E &amp; 0 &amp; 0 &amp; 1 &amp; 0  \\
+F &amp; 0 &amp; 0 &amp; 0 &amp; 1  \\
+\tag{3.3}
+\end{matrix}
+\]</span></p>
+<p>¿Qué patrones puede ver en la matriz previa <a href="tipos-de-datos-de-redes-sociales.html#eq:bip">(3.3)</a>? Si sumamos las columnas, vemos que D a asistido a la mayor cantidad de eventos (3). Al sumar las filas notamos que el evento mas asistido (3) es el primer evento (E1). Otra manera de representar esta información es atreves de un sociograma, como la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:bip">3.3</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:bip"></span>
+<img src="02-working_with_network_data_files/figure-html/bip-1.png" alt="Gráfico Bipartita" width="70%" />
+<p class="caption">
+Figure 3.3: Gráfico Bipartita
+</p>
+</div>
 </div>
 <div id="datos-de-atributos" class="section level2">
 <h2><span class="header-section-number">3.3</span> Datos de Atributos</h2>
@@ -261,6 +298,9 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; - \\
 </div>
 <div id="ref-Cunningham2016">
 <p>Cunningham, Daniel, Sean F. Everton, and Philip Murphy. 2016. <em>Understanding Dark Networks: A Strategic Framework for the Use of Social Network Analysis</em>. Rowman; Littlefield.</p>
+</div>
+<div id="ref-Davis1941">
+<p>Davies, Allison, Burleigh B. Gardner, and Mary R. Gardner. 1941. <em>Deep South: A Social-Anthropological Study of Caste and Class</em>. University of Chicago Press.</p>
 </div>
 <div id="ref-Everton2012">
 <p>Everton, Sean F. 2012. <em>Disrupting Dark Networks</em>. Cambridge.</p>

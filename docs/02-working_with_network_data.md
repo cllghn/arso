@@ -96,7 +96,7 @@ Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo 
 <p class="caption">(\#fig:undirected)Gráfico no dirigido</p>
 </div>
 
-@Everton2012 nos presenta ejemplos de vínculos modo-uno simétricos en el primer apéndice de *Disrupting Dark Network*: 
+@Everton2012 nos presenta ejemplos de vínculos modo-uno simétricos utilizados para mapear la red terrorista Jemaah Islamiyah en el primer apéndice de *Disrupting Dark Network*: 
 
 | Vínculo | Tipo de Actor | Definición |
 |---------|---------------|------------|
@@ -135,7 +135,7 @@ También son relaciones entre un solo conjunto de actores; sin embargo, las rede
 <p class="caption">(\#fig:directed)Gráfico dirigido</p>
 </div>
 
-@Cunningham2016 sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz \@ref(eq:asymmatrix) representa los datos de la Figura \@ref(fig:directed). Como la matriz toda sociomatriz comenzamos por listar todos los nodos posibles como filas y columnas. Igualmente, esta matriz se lee de izquierda a derecha. Igualmente, esta matriz se lee de izquierda a derecha.  Comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. Fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo reciben.
+@Cunningham2016 sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz \@ref(eq:asymmatrix) representa los datos de la Figura \@ref(fig:directed). Como con toda sociomatriz, comenzamos por listar todos los nodos posibles como filas y columnas {A, B, C, D, E, F}. Igualmente, matriz la leemos de izquierda a derecha. Por ejemplo, comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. En este caso, el actor a recibe un enlace de B pero no de C. Ahora, fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo recibe.
 
 $$
 \begin{matrix}
@@ -150,7 +150,37 @@ F & 0 & 0 & 0 & 0 & 0 & - \\
 \end{matrix}
 $$
 
+Para ver ejemplos de datos de red asimétricos de un modo, podemos volver a @Everton2012 y algunos de los ejemplos proporcionados en *Disrupting Dark Network* utilizados para mapear la red terrorista Jemaah Islamiyah: 
+
+| Vínculo | Tipo de Actor | Definición |
+|---------|---------------|------------|
+|  | Persona |  | 
+
 ## Datos de Modo-Dos
+
+Las relaciones modo-dos son aquellas, que a diferencia de las modo-uno, consisten en vínculos en entre dos clases de actores. Para entender datos de modo-dos, utilicemos la premisa de uno de los conjuntos de datos modo-dos más populares, Davis’s Southern Women [@Davis1941]. En este ejemplo tenemos dos conjuntos de actores. El primero representa personas {A, B, C, D, E, F}, el segundo representa eventos (E) sociales {E1, E2, E3}. En este ejemplo, no tenemos vínculos entre personas sino vínculos de asistencia entre una persona y un evento. Podemos codificar estos datos utilizando una sociomatriz en la cual las filas representan personas y las columnas eventos, ver figura \@ref(eq:bip). La asistencia se representa de manera binaria con un 1, mientras que la ausencia con un 0.
+
+$$
+\begin{matrix}
+  & E1 & E2 & E3 & E4 \\
+A & 1 & 0 & 0 & 0  \\
+B & 1 & 0 & 0 & 0  \\
+C & 1 & 1 & 0 & 0  \\
+D & 0 & 1 & 1 & 1  \\
+E & 0 & 0 & 1 & 0  \\
+F & 0 & 0 & 0 & 1  \\
+(\#eq:bip)
+\end{matrix}
+$$
+
+¿Qué patrones puede ver en la matriz previa \@ref(eq:bip)? Si sumamos las columnas, vemos que D a asistido a la mayor cantidad de eventos (3). Al sumar las filas notamos que el evento mas asistido (3) es el primer evento (E1). Otra manera de representar esta información es atreves de un sociograma, como la Figura \@ref(fig:bip). 
+
+<div class="figure" style="text-align: center">
+<img src="02-working_with_network_data_files/figure-html/bip-1.png" alt="Gráfico Bipartita" width="70%" />
+<p class="caption">(\#fig:bip)Gráfico Bipartita</p>
+</div>
+
+
 
 ## Datos de Atributos
 

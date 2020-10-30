@@ -94,12 +94,12 @@ Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguie
 
 Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura \@ref(fig:undirected) representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
 
-```{r undirected, echo = FALSE, fig.cap = "Gráfico no dirigido"}
-igraph::graph_from_literal(A-B, B-C, A-C, C-D, D-E, E-F, F-D) %>%
+```{r undirected, fig.cap = "Gráfico no dirigido"}
+igraph::graph_from_literal(A-B, B-C, A-C, C-D, D-E, E-F, F-D) %>% 
   my_igraph()
 ```
 
-@Everton2012 nos presenta ejemplos de vínculos modo-uno simétricos en el primer apéndice de *Disrupting Dark Network*: 
+@Everton2012 nos presenta ejemplos de vínculos modo-uno simétricos utilizados para mapear la red terrorista Jemaah Islamiyah en el primer apéndice de *Disrupting Dark Network*: 
 
 | Vínculo | Tipo de Actor | Definición |
 |---------|---------------|------------|
@@ -138,7 +138,7 @@ igraph::graph_from_literal(A++B, B-+C, A-+C, C-+D, D+-E, E-+F, F+-D) %>%
   my_igraph()
 ```
 
-@Cunningham2016 sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz \@ref(eq:asymmatrix) representa los datos de la Figura \@ref(fig:directed). Como la matriz toda sociomatriz comenzamos por listar todos los nodos posibles como filas y columnas. Igualmente, esta matriz se lee de izquierda a derecha. Igualmente, esta matriz se lee de izquierda a derecha.  Comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. Fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo reciben.
+@Cunningham2016 sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz \@ref(eq:asymmatrix) representa los datos de la Figura \@ref(fig:directed). Como con toda sociomatriz, comenzamos por listar todos los nodos posibles como filas y columnas {A, B, C, D, E, F}. Igualmente, matriz la leemos de izquierda a derecha. Por ejemplo, comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. En este caso, el actor a recibe un enlace de B pero no de C. Ahora, fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo recibe.
 
 $$
 \begin{matrix}
@@ -153,7 +153,39 @@ F & 0 & 0 & 0 & 0 & 0 & - \\
 \end{matrix}
 $$
 
+Para ver ejemplos de datos de red asimétricos de un modo, podemos volver a @Everton2012 y algunos de los ejemplos proporcionados en *Disrupting Dark Network* utilizados para mapear la red terrorista Jemaah Islamiyah: 
+
+| Vínculo | Tipo de Actor | Definición |
+|---------|---------------|------------|
+|  | Persona |  | 
+
 ## Datos de Modo-Dos
+
+Las relaciones modo-dos son aquellas, que a diferencia de las modo-uno, consisten en vínculos en entre dos clases de actores. Para entender datos de modo-dos, utilicemos la premisa de uno de los conjuntos de datos modo-dos más populares, Davis’s Southern Women [@Davis1941]. En este ejemplo tenemos dos conjuntos de actores. El primero representa personas {A, B, C, D, E, F}, el segundo representa eventos (E) sociales {E1, E2, E3}. En este ejemplo, no tenemos vínculos entre personas sino vínculos de asistencia entre una persona y un evento. Podemos codificar estos datos utilizando una sociomatriz en la cual las filas representan personas y las columnas eventos, ver figura \@ref(eq:bip). La asistencia se representa de manera binaria con un 1, mientras que la ausencia con un 0.
+
+$$
+\begin{matrix}
+  & E1 & E2 & E3 & E4 \\
+A & 1 & 0 & 0 & 0  \\
+B & 1 & 0 & 0 & 0  \\
+C & 1 & 1 & 0 & 0  \\
+D & 0 & 1 & 1 & 1  \\
+E & 0 & 0 & 1 & 0  \\
+F & 0 & 0 & 0 & 1  \\
+(\#eq:bip)
+\end{matrix}
+$$
+
+¿Qué patrones puede ver en la matriz previa \@ref(eq:bip)? Si sumamos las columnas, vemos que D a asistido a la mayor cantidad de eventos (3). Al sumar las filas notamos que el evento mas asistido (3) es el primer evento (E1). Otra manera de representar esta información es atreves de un sociograma, como la Figura \@ref(fig:bip). 
+
+```{r bip, fig.cap = "Gráfico Bipartita"}
+igraph::graph_from_literal(A-E1, B-E1, C-E1, C-E2, D-E2, D-E3, E-E3, D-E4, D-E4) %>%
+  igraph::set_vertex_attr(., name = "type",
+                          value = igraph::bipartite_mapping(.)[["type"]]) %>%
+  my_bigraph()
+```
+
+
 
 ## Datos de Atributos
 

@@ -35,3 +35,19 @@ my_igraph <- function(g, .layout = "layout_with_kk", ...) {
                       ...
                       )
 }
+my_bigraph <- function(g, .layout = "layout_as_bipartite", ...) {
+  stopifnot("Must be igraph" = igraph::is.igraph(g))
+  stopifnot("Must be character" = is.character(.layout))
+  igraph::plot.igraph(g,
+                      # Feel:
+                      layout       = eval(as.name(.layout)),
+                      # Vertex:
+                      vertex.color = ifelse(igraph::get.vertex.attribute(g, name = "type"), "red", "lightblue"),
+                      vertex.shape = ifelse(igraph::get.vertex.attribute(g, name = "type"), "square", "circle"),
+                      vertex.size  = ifelse(igraph::get.vertex.attribute(g, name = "type"), 40, 30),
+                      # Edges:
+                      edges.color  = "grey",
+                      # Catch all
+                      ...
+                      )
+}
