@@ -65,3 +65,8 @@ eq:bip3
 eq:small-matrix
 eq:attribute-matrix
 fig:attrs
+matrices
+lista-de-aristas
+lista-de-nodos
+fig:bienvenida
+fig:les-mis

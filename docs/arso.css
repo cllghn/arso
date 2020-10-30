@@ -49,3 +49,13 @@
   float: right;
   width: 50%;
 }
+
+.lcolumn-20 {
+  float: left;
+  width: 20%;
+}
+
+.rcolumn-80 {
+  float: right;
+  width: 80%;
+}

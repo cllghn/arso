@@ -47,7 +47,17 @@ Si bien no hay requisitos mínimos de hardware, el rendimiento es una función d
 
 ### Inicie Gephi
 
+Empiece por localizar y abrir el programa. Lo primero que vera es una ventanilla de Bienvenida, vea la Figura \@ref(fig:bienvenida). 
 
+```{r bienvenida, out.width="100%", fig.cap = "Menú de Bienvenida en Gephi"}
+knitr::include_graphics("images/01-gephi.png")
+```
+
+Para esta breve instrucción al software, vamos a usar uno de los conjuntos de datos proporcionados por el software, `Les Misrables.gexf` [@Knuth1993]. Localice este con que puedo localizar en la parte inferior derecha de la ventanilla de bienvenida. Al seleccionar esta opción aparecerá una nueva ventanilla, en el futuro explicaremos más acerca de la opción en este espacio, por ahora seleccione el botón *Aceptar*. ¡Listo! Con el conjunto de datos cargado (Figura Figura \@ref(fig:les-mis)), podemos empezar a explorar Gephi.
+
+```{r les-mis, out.width="100%", fig.cap = "Datos Les Misrables Cargados"}
+knitr::include_graphics("images/01-lesmis.png")
+```
 
 ### Vista General
 
@@ -252,6 +262,16 @@ Al recopilar atributos, solo es necesario tener una entrada por nodo. Además, s
 
 
 # Grabación y Recopilación 
+
+## Matrices
+
+(agregar texto aquí)
+
+## Lista de Aristas
+
+(agregar texto aquí)
+
+## Lista de Nodos
 
 (agregar texto aquí)
 
