@@ -92,7 +92,7 @@ Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguie
 
 ### Modo-uno: Simétricos
 
-Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura \@ref(fig:undirected) representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
+Las **relaciones simétricas de modo-uno** son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura \@ref(fig:undirected) representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.
 
 ```{r undirected, fig.cap = "Gráfico no dirigido"}
 igraph::graph_from_literal(A-B, B-C, A-C, C-D, D-E, E-F, F-D) %>% 
@@ -131,7 +131,7 @@ Se estará preguntando, ¿cómo leemos la matriz? Centrémonos en un nodo a la v
 
 ### Modo-uno: Asimétricos
 
-También son relaciones entre un solo conjunto de actores; sin embargo, las redes asimétricas de modo-uno generalmente se refieren a bordes que van de un nodo a otro, pero que no siempre son recíprocos [@Borgatti2018; @Everton2012]. Por ejemplo, considere la Figura \@ref(fig:directed). Inicialmente notará que los vínculos tienen dirección, representada por una flecha. Observe que algunos de los vínculos no son recíprocos (por ejemplo, A envía un enlace no reciproco a C), mientras que otros son correspondidos (por ejemplo, A envía un enlace a B y este lo retorna).
+También son relaciones entre un solo conjunto de actores; sin embargo, las **redes asimétricas de modo-uno** generalmente se refieren a bordes que van de un nodo a otro, pero que no siempre son recíprocos [@Borgatti2018; @Everton2012]. Por ejemplo, considere la Figura \@ref(fig:directed). Inicialmente notará que los vínculos tienen dirección, representada por una flecha. Observe que algunos de los vínculos no son recíprocos (por ejemplo, A envía un enlace no reciproco a C), mientras que otros son correspondidos (por ejemplo, A envía un enlace a B y este lo retorna).
 
 ```{r directed, echo = FALSE, fig.cap = "Gráfico dirigido"}
 igraph::graph_from_literal(A++B, B-+C, A-+C, C-+D, D+-E, E-+F, F+-D) %>%
@@ -161,22 +161,26 @@ Para ver ejemplos de datos de red asimétricos de un modo, podemos volver a @Eve
 
 ## Datos de Modo-Dos
 
-Las relaciones modo-dos son aquellas, que a diferencia de las modo-uno, consisten en vínculos en entre dos clases de actores. Para entender datos de modo-dos, utilicemos la premisa de uno de los conjuntos de datos modo-dos más populares, Davis’s Southern Women [@Davis1941]. En este ejemplo tenemos dos conjuntos de actores. El primero representa personas {A, B, C, D, E, F}, el segundo representa eventos (E) sociales {E1, E2, E3}. En este ejemplo, no tenemos vínculos entre personas sino vínculos de asistencia entre una persona y un evento. Podemos codificar estos datos utilizando una sociomatriz en la cual las filas representan personas y las columnas eventos, ver figura \@ref(eq:bip). La asistencia se representa de manera binaria con un 1, mientras que la ausencia con un 0.
+Las relaciones **modo-dos** son aquellas, que a diferencia de las modo-uno, consisten en vínculos en entre dos clases de actores. Para entender datos de modo-dos, utilicemos la premisa de uno de los conjuntos de datos modo-dos más populares, Davis’s Southern Women [@Davis1941]. En este ejemplo tenemos dos conjuntos de actores. El primero representa personas {A, B, C, D, E, F}, el segundo representa eventos (E) sociales {E1, E2, E3}. En este ejemplo, no tenemos vínculos entre personas sino vínculos de asistencia entre una persona y un evento. Podemos codificar estos datos utilizando una sociomatriz, listando todos los nodos {A, B, C, D, E, F, E1, E2, E3, E4} en las filas y columnas, ver figura \@ref(eq:bip). La asistencia se representa de manera binaria con un 1, mientras que la ausencia con un 0.
 
 $$
 \begin{matrix}
-  & E1 & E2 & E3 & E4 \\
-A & 1 & 0 & 0 & 0  \\
-B & 1 & 0 & 0 & 0  \\
-C & 1 & 1 & 0 & 0  \\
-D & 0 & 1 & 1 & 1  \\
-E & 0 & 0 & 1 & 0  \\
-F & 0 & 0 & 0 & 1  \\
-(\#eq:bip)
+   & A & B & C & D & E & F & E1 & E2 & E3 & E4 \\
+A  & - & 0 & 0 & 0 & 0 & 0 & 1  & 0  & 0  & 0  \\
+B  & 0 & - & 0 & 0 & 0 & 0 & 1  & 0  & 0  & 0  \\
+C  & 0 & 0 & - & 0 & 0 & 0 & 1  & 1  & 0  & 0  \\
+D  & 0 & 0 & 0 & - & 0 & 0 & 0  & 1  & 1  & 1  \\
+E  & 0 & 0 & 0 & 0 & - & 0 & 0  & 0  & 1  & 0  \\
+F  & 0 & 0 & 0 & 0 & 0 & - & 0  & 0  & 0  & 1  \\
+E1 & 1 & 1 & 1 & 0 & 0 & 0 & -  & 0  & 0  & 0  \\
+E2 & 0 & 0 & 1 & 1 & 0 & 0 & 0  & -  & 0  & 0  \\
+E3 & 0 & 0 & 0 & 1 & 1 & 0 & 0  & 0  & -  & 0  \\
+E4 & 0 & 0 & 0 & 1 & 0 & 1 & 0  & 0  & 0  & -  \\
 \end{matrix}
+(\#eq:bip)
 $$
 
-¿Qué patrones puede ver en la matriz previa \@ref(eq:bip)? Si sumamos las columnas, vemos que D a asistido a la mayor cantidad de eventos (3). Al sumar las filas notamos que el evento mas asistido (3) es el primer evento (E1). Otra manera de representar esta información es atreves de un sociograma, como la Figura \@ref(fig:bip). 
+¿Qué patrones puede ver en la matriz previa \@ref(eq:bip)? Primero, note la simetría de la matriz, es decir que los datos son simétricos.  Al sumar las filas o columnas, notamos que el evento mas asistido es el primer evento (E1) con tres personas. Adicionalmente, la persona con mayor asistencia a eventos es el actor D (3 eventos). La Figura \@ref(fig:bip) es un sociograma de estos datos, en este las personas y eventos han sido dibujados con dos diferentes tipos de iconos para diferenciar entre las clases de nodos, sin embargo, esta diferenciación es puramente cosmetica.
 
 ```{r bip, fig.cap = "Gráfico Bipartita"}
 igraph::graph_from_literal(A-E1, B-E1, C-E1, C-E2, D-E2, D-E3, E-E3, D-E4, D-E4) %>%
@@ -185,7 +189,17 @@ igraph::graph_from_literal(A-E1, B-E1, C-E1, C-E2, D-E2, D-E3, E-E3, D-E4, D-E4)
   my_bigraph()
 ```
 
+Probablemente el patrón mas importante que podemos observar en la matriz y el sociograma de modo-dos es que los nodos solo están conectados *entre* clases. En este ejemplo, las personas solo pueden estar vinculadas con eventos y viceversa. Esta es la regla mas importante de las redes modo-dos, solo se permiten conexiones entre nodos de diferentes conjuntos o particiones. Es por ello, que a menudo verán el termino **bipartita** que refiere a redes modo-dos.
 
+Una suposición clave que subyace al uso de redes de modo-dos es que las personas tienden a unirse o participar en una organización común y/o eventos a menudo tienen una razón compartida para hacerlo, por ejemplo, ideología, interés, etc [@Everton2012]. Como tal, es más probable que dos miembros de un grupo interactúen entre sí y compartan una conexión que dos personas al azar en una población. Mas adelante generaremos datos modo-uno empezando con modo-dos. Por el momento, es importante entender por qué utilizamos este tipo de información en nuestro análisis.
+
+Una vez más, veamos algunos ejemplos de redes modo-dos utilizadas para mapear Jemaah Islamiyah en @Everton2012:
+
+| Vínculo | Tipo(s) de Actor(es) | Definición |
+|---------|----------------------|------------|
+| Afiliación educativa | Persona y Organización | Las relaciones educativas se definen como escuelas donde las personas reciben educación formal, sirven como empleados (maestro, miembro administrativo, etc.) o participan en instrucción educativa o religiosa adicional en la institución. |
+| Afiliación Organizacional  | Persona y Evento | Una organización terrorista / insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas / insurgentes, que consiste en miembros reclamantes voluntariamente afiliados.  | 
+| Eventos de Formación | Persona y Evento | Participación en cualquier actividad específicamente designada que enseñe el conocimiento, las habilidades y las competencias del terrorismo y la insurgencia. La capacitación no incluye la participación en un acto patrocinado por terroristas [...] |
 
 ## Datos de Atributos
 

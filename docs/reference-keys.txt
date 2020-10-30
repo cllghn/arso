@@ -61,3 +61,4 @@ fig:unnamed-chunk-5
 fig:unnamed-chunk-7
 fig:unnamed-chunk-13
 fig:bip
+eq:bip3
