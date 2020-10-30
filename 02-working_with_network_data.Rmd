@@ -199,9 +199,57 @@ Una vez más, veamos algunos ejemplos de redes modo-dos utilizadas para mapear J
 |---------|----------------------|------------|
 | Afiliación educativa | Persona y Organización | Las relaciones educativas se definen como escuelas donde las personas reciben educación formal, sirven como empleados (maestro, miembro administrativo, etc.) o participan en instrucción educativa o religiosa adicional en la institución. |
 | Afiliación Organizacional  | Persona y Evento | Una organización terrorista / insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas / insurgentes, que consiste en miembros reclamantes voluntariamente afiliados.  | 
-| Eventos de Formación | Persona y Evento | Participación en cualquier actividad específicamente designada que enseñe el conocimiento, las habilidades y las competencias del terrorismo y la insurgencia. La capacitación no incluye la participación en un acto patrocinado por terroristas [...] |
+| Eventos de Formación | Persona y Evento | Participación en cualquier actividad específicamente designada que enseñe el conocimiento, las habilidades y las competencias del terrorismo y la insurgencia. La capacitación no incluye la participación en un acto patrocinado por terroristas [...]. |
 
 ## Datos de Atributos
+
+Aunque no son el enfoque principal de ARSo, los datos de atributo se utilizan a menudo para acompañar el análisis de la red. Como se discutió anteriormente, a nivel de nodo, los atributos son características no relacionales de los nodos en un gráfico [@Cunningham2016]. Estos se recopilan por separado de las relaciones. Por ejemplo, considere las dos matrices siguientes \@ref(eq:small-matrix) \@ref(eq:attribute-matrix).
+
+:::: {.lcolumn-50}
+
+\begin{matrix}
+  & A & B & C & D & E & F \\
+A & - & 1 & 1 & 0 & 0 & 0 \\
+B & 1 & - & 1 & 0 & 0 & 0 \\
+C & 1 & 1 & - & 1 & 0 & 0 \\
+D & 0 & 0 & 1 & - & 1 & 1 \\
+E & 0 & 0 & 0 & 1 & - & 1 \\
+F & 0 & 0 & 0 & 1 & 1 & - \\
+(\#eq:small-matrix)
+\end{matrix}
+
+::::
+
+:::: {.rcolumn-50}
+\begin{matrix}
+  & Género    & Edad \\
+A & Masculino & 20 \\
+B & Femenino  & 20 \\
+C & Femenino  & 20 \\
+D & Masculino & 29 \\
+E & Masculino & 20 \\
+F & Masculino & 25 \\
+(\#eq:attribute-matrix)
+\end{matrix}
+::::
+
+La matriz de la izquierda es una sociomatriz simétrica de modo-uno, que contiene todas las relaciones entre el conjunto de nodos {A, B, C, D, E, F}. La matriz de la derecha contiene los atributos para el conjunto de nodos, específicamente, género y edad. La Figura \@ref(fig:attrs) combina estos datos, donde los nodos están coloreados por el atributo categórico (género) y dimensionados por las variables continuas (edad).
+
+```{r attrs, fig.cap = "Gráfico no dirigido, con atributos"}
+igraph::graph_from_literal(A-B, B-C, A-C, C-D, D-E, E-F, F-D) %>% 
+  igraph::plot.igraph(
+    layout       = igraph::layout_with_kk,
+    vertex.color = ifelse(igraph::get.vertex.attribute(., "name") %in% c("A", "D", "E", "F"), "lightblue", "red"),
+    vertex.size  = ifelse(igraph::get.vertex.attribute(., "name") %in% c("A", "D", "C", "E"), 20,
+                          ifelse(igraph::get.vertex.attribute(., "name") %in% c("D"), 29, 25)),
+    edges.color  = "grey"
+  )
+```
+
+:::: {.infobox .note data-latex="note"}
+Al recopilar atributos, solo es necesario tener una entrada por nodo. Además, si se trabaja con redes multimodales (por ejemplo, bipartitas), se pueden recopilar atributos para todas las categorías de nodos.
+::::
+
 
 # Grabación y Recopilación 
 

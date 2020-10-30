@@ -62,3 +62,6 @@ fig:unnamed-chunk-7
 fig:unnamed-chunk-13
 fig:bip
 eq:bip3
+eq:small-matrix
+eq:attribute-matrix
+fig:attrs

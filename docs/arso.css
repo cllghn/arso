@@ -39,3 +39,13 @@
 .note {
   background-image: url("images/note.png");
 }
+
+.lcolumn-50 {
+  float: left;
+  width: 50%;
+}
+
+.rcolumn-50 {
+  float: right;
+  width: 50%;
+}

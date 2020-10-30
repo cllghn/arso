@@ -320,19 +320,54 @@ Figure 3.3: Gráfico Bipartita
 <tr class="odd">
 <td>Eventos de Formación</td>
 <td>Persona y Evento</td>
-<td>Participación en cualquier actividad específicamente designada que enseñe el conocimiento, las habilidades y las competencias del terrorismo y la insurgencia. La capacitación no incluye la participación en un acto patrocinado por terroristas […]</td>
+<td>Participación en cualquier actividad específicamente designada que enseñe el conocimiento, las habilidades y las competencias del terrorismo y la insurgencia. La capacitación no incluye la participación en un acto patrocinado por terroristas […].</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div id="datos-de-atributos" class="section level2">
 <h2><span class="header-section-number">3.3</span> Datos de Atributos</h2>
+<p>Aunque no son el enfoque principal de ARSo, los datos de atributo se utilizan a menudo para acompañar el análisis de la red. Como se discutió anteriormente, a nivel de nodo, los atributos son características no relacionales de los nodos en un gráfico <span class="citation">(Cunningham, Everton, and Murphy <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. Estos se recopilan por separado de las relaciones. Por ejemplo, considere las dos matrices siguientes <a href="tipos-de-datos-de-redes-sociales.html#eq:small-matrix">(3.4)</a> <a href="tipos-de-datos-de-redes-sociales.html#eq:attribute-matrix">(3.5)</a>.</p>
+<div class="lcolumn-50">
+<span class="math display" id="eq:small-matrix">\[\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
+A &amp; - &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+B &amp; 1 &amp; - &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+C &amp; 1 &amp; 1 &amp; - &amp; 1 &amp; 0 &amp; 0 \\
+D &amp; 0 &amp; 0 &amp; 1 &amp; - &amp; 1 &amp; 1 \\
+E &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; - &amp; 1 \\
+F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
+\tag{3.4}
+\end{matrix}\]</span>
+</div>
+<div class="rcolumn-50">
+<span class="math display" id="eq:attribute-matrix">\[\begin{matrix}
+  &amp; Género    &amp; Edad \\
+A &amp; Masculino &amp; 20 \\
+B &amp; Femenino  &amp; 20 \\
+C &amp; Femenino  &amp; 20 \\
+D &amp; Masculino &amp; 29 \\
+E &amp; Masculino &amp; 20 \\
+F &amp; Masculino &amp; 25 \\
+\tag{3.5}
+\end{matrix}\]</span>
+</div>
+<p>La matriz de la izquierda es una sociomatriz simétrica de modo-uno, que contiene todas las relaciones entre el conjunto de nodos {A, B, C, D, E, F}. La matriz de la derecha contiene los atributos para el conjunto de nodos, específicamente, género y edad. La Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:attrs">3.4</a> combina estos datos, donde los nodos están coloreados por el atributo categórico (género) y dimensionados por las variables continuas (edad).</p>
+<div class="figure" style="text-align: center"><span id="fig:attrs"></span>
+<img src="02-working_with_network_data_files/figure-html/attrs-1.png" alt="Gráfico no dirigido, con atributos" width="70%" />
+<p class="caption">
+Figure 3.4: Gráfico no dirigido, con atributos
+</p>
+</div>
+<div class="infobox note">
+<p>Al recopilar atributos, solo es necesario tener una entrada por nodo. Además, si se trabaja con redes multimodales (por ejemplo, bipartitas), se pueden recopilar atributos para todas las categorías de nodos.</p>
+</div>
 </div>
 </div>
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-Borgatti2018">
-<p>Borgatti, Stephen p., Martin G. Everett, and Jeffrey C. Johnson. 2018. <em>Analyzing Social Networks</em>. Sage.</p>
+<p>Borgatti, Stephen P., Martin G. Everett, and Jeffrey C. Johnson. 2018. <em>Analyzing Social Networks</em>. Sage.</p>
 </div>
 <div id="ref-Cunningham2016">
 <p>Cunningham, Daniel, Sean F. Everton, and Philip Murphy. 2016. <em>Understanding Dark Networks: A Strategic Framework for the Use of Social Network Analysis</em>. Rowman; Littlefield.</p>
