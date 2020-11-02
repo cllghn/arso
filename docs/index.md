@@ -18,12 +18,13 @@ El contenido de este documento fue diseñado conjuntamente entre el [Ambiente Co
 
 <br />
 
-<img src="images/nps-core-esge.png" width="75%" style="display: block; margin: auto;" />
+<img src="images/core-esge.png" width="75%" style="display: block; margin: auto;" />
 
 
 ## Patrocinio {-}
 
 El desarrollo de este libro fue posible gracias al patrocinio del [Programa de Becas de Defensa Regional (RDFP, pos sus siglas en inglés)](https://dsca.mil/programs/combating-terrorism-and-irregular-warfare-fellowship-program-ctiwfp) de la [Agencia de Cooperación para la Seguridad de la Defensa (DSCA, por sus siglas en inglés)](https://dsca.mil/) con el propósito de apoyar el plan de estudios de ESGE-EPG.
+
 
 ## Colaboradores {-}
 

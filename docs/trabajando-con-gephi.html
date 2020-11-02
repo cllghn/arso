@@ -210,9 +210,96 @@ Figure 2.2: Datos Les Misrables Cargados
 </div>
 <div id="vista-general" class="section level3">
 <h3><span class="header-section-number">2.3.3</span> Vista General</h3>
-<p>Esta es la ventana que utilizará más a menudo. Aquí podrá tomar diferentes acciones parea manipular sus gráficos. La característica más obvia de esta ventana es el gráfico prominente en el centro; sin embargo, hay varias ventanillas relevantes; aquí, las cubriremos en orden alfabético:</p>
+<p>Esta es la ventana que utilizará más a menudo, ver Figura <a href="trabajando-con-gephi.html#fig:overview">2.3</a>. Aquí podrá tomar diferentes acciones para manipular la aparencia sus gráficos, filtrar información y calcular medidas de red, arista, o nodo.</p>
+<div class="figure" style="text-align: center"><span id="fig:overview"></span>
+<img src="images/01-overview.PNG" alt="Gephi: Vista General" width="100%" />
+<p class="caption">
+Figure 2.3: Gephi: Vista General
+</p>
+</div>
+<p>La característica más obvia de esta ventana es el gráfico prominente en el centro; sin embargo, hay varias ventanillas relevantes; aquí, las cubriremos en orden alfabético.</p>
 <div id="apariencia" class="section level4">
 <h4><span class="header-section-number">2.3.3.1</span> Apariencia</h4>
+<p>El cuadro de apariencia le permite cambiar las características visuales de los nodos, aristas y etiquetas <span class="citation">(Ognyavanova <a href="#ref-kateto2016" role="doc-biblioref">2016</a>)</span>. Las opciones se bifurcan para trabajar en la apariencia de nodos aristas, accesibles a través de las pestañas correspondientes (<em>Nodos</em> y <em>Aristas</em>). Para editar nodos o aristas se le presenta una serie de opcionesen el lado derecho de este cuadro, divididas de tal manera (ver Figura <a href="trabajando-con-gephi.html#fig:apariencia">2.4</a>):</p>
+<ul>
+<li><em>Nodos</em>:
+<ul>
+<li><em>Color</em> (1): Modificar el color de los nodos</li>
+<li><em>Tamaño</em> (2): Modificar el tamaño de cada nodo</li>
+<li><em>Color de etiqueta</em> (3): Modificar el color de las etiquetas de los nodos</li>
+<li><em>Tamaño de etiqueta</em> (4): Modificar el color de las etiquetas de los nodos</li>
+</ul></li>
+<li><em>Aristas</em>:
+<ul>
+<li><em>Color</em> (5): Modificar el color de los nodo</li>
+<li><em>Color de etiqueta</em> (6): Modificar el color de las etiquetas de los aristas</li>
+<li><em>Tamaño de etiqueta</em> (7): Modificar el tamaño de las etiquetas de los aristas</li>
+</ul></li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:apariencia"></span>
+<img src="images/01-apariencia.png" alt="Gephi: Apariencia" width="100%" />
+<p class="caption">
+Figure 2.4: Gephi: Apariencia
+</p>
+</div>
+<p>Cada sección contendrá de dos a tres pestañas: <em>Único</em>, <em>Partición</em> y <em>Ranking</em>. Veamos como funcionan con utilizando el software:</p>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Nodos &gt; Color &gt; Único &gt; Clic sostenido sobre el cuadro de color &gt; Seleccionar color &gt; Aplicar</em></p>
+<p><em>Aristas &gt; Color &gt; Único &gt; Clic sostenido sobre el cuadro de color &gt; Seleccionar color &gt; Aplicar</em></p>
+</div>
+<div class="rcolumn-80">
+<p><em>Único</em> cambia los elementos de manera uniforme por color o tamaño seleccionado. Por consiguiente, para modificar el tamaño color de los nodos en gráfico, proceda a seleccionar <em>Nodos &gt; Color &gt; Único &gt; Clic sostenido sobre el cuadro de color &gt; Seleccionar color &gt; Aplicar</em>. Si desea modificar el color de las aristas para que reflejen un valor único, seleccione <em>Nodos &gt; Color &gt; Único &gt; Clic sostenido sobre el cuadro de color &gt; Seleccionar color &gt; Aplicar</em>. En la Figura <a href="trabajando-con-gephi.html#fig:color-unique">2.5</a> los nodos han sido coloreados de negro (<code>#000000</code>) y las aristas de gris (<code>#adadad</code>), que Gephi define colores utilizando una combinación hexademicial de números y letras definida por su mezcla de rojo, verde y azul.</p>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:color-unique"></span>
+<img src="images/01-color_unique.PNG" alt="Nodos y Aristas con Colores Únicos" width="100%" />
+<p class="caption">
+Figure 2.5: Nodos y Aristas con Colores Únicos
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Nodos &gt; Tamaño &gt; Único &gt; 20 &gt; Aplicar</em></p>
+</div>
+<div class="rcolumn-80">
+<p>Para modificar el tamaño de los nodos, igualmente usaremos la opción Único. Sin embargo, en esta secuencia modificaremos la característica a cambiar de la siguiente manera: <em>Nodos &gt; Tamaño &gt; Único &gt; 20 &gt; Aplicar</em>. Como vera en la Figura <a href="trabajando-con-gephi.html#fig:size-unique">2.6</a> todos los nodos en el grafico aparecen con el mismo tamaño.</p>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:size-unique"></span>
+<img src="images/01-size_unique.PNG" alt="Nodos con Tamaño Único" width="100%" />
+<p class="caption">
+Figure 2.6: Nodos con Tamaño Único
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Nodos &gt; Color &gt; Partición &gt; –Escoge un atributo &gt; Modularity Class &gt; Aplicar</em></p>
+</div>
+<div class="rcolumn-80">
+<p>La <em>Partición</em> cambia todos los elementos visibles utilizando valores de atributos categóricos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo categórico, <code>modularidad</code>, que representa el subgrupo al que pertenece cada nodo. Usando ese atributo podemos cambiar el color de los nodos seleccionando <em>Nodos &gt; Color &gt; Partición &gt; –Escoge un atributo &gt; Modularity Class &gt; Aplicar</em>. Una vez aplicado, los colores de los nodos deberían permitirle entender qué nodos pertenecen a las misma comunidades. De manera similar, podríamos intentar cambiar los colores de las aristas basándonos en un atributo categórico; sin embargo, el conjunto de datos de ejemplo no incluye dicho tipo de variable.</p>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:color-partition"></span>
+<img src="images/01-color_partition.PNG" alt="Nodos Coloreados por Atributos Categoriales." width="100%" />
+<p class="caption">
+Figure 2.7: Nodos Coloreados por Atributos Categoriales.
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Nodos &gt; Tamaño &gt; Ranking &gt; –Escoge un atributo &gt; Grado &gt; Aplicar</em></p>
+</div>
+<div class="rcolumn-80">
+<p>El <em>Ranking</em> cambia todos los elementos visibles utilizando valores de atributos continuos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo continuo, <code>grado</code>, que representa el numero de enlaces que tiene cada nodo. Usando ese atributo podemos cambiar el tamaño de los nodos seleccionando <em>Nodos &gt; Tamaño &gt; Ranking &gt; –Escoge un atributo &gt; Grado &gt; Aplicar</em>. Ahora deberá ver que algunos nodos aparecen mucho más grandes que otros, esto se debe a que algunos tienen más conexiones. Más adelante en el libro ampliaremos el significado de esta medida y presentaremos otras. Quizás se este preguntando, ¿es posible cambiar el grosor de las aristas en función de una variable continua? La respuesta es sí, pero hacerlo requiere un menú diferente, por lo que abordaremos esto más adelante.</p>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:size-ranking"></span>
+<img src="images/01-size-ranking.PNG" alt="Nodos Dimensionados por Variable Continua." width="100%" />
+<p class="caption">
+Figure 2.8: Nodos Dimensionados por Variable Continua.
+</p>
+</div>
 </div>
 <div id="contexto" class="section level4">
 <h4><span class="header-section-number">2.3.3.2</span> Contexto</h4>
@@ -263,6 +350,9 @@ Figure 2.2: Datos Les Misrables Cargados
 </div>
 <div id="ref-Knuth1993">
 <p>Knuth, D. E. 1993. “The Stanford Graphbase: A Platform for Combinatorial Computing.” Addison-Wesley.</p>
+</div>
+<div id="ref-kateto2016">
+<p>Ognyavanova, Katherine. 2016. “Network Visualization with Gephi.” In <em>Sunbelt 2016</em>.</p>
 </div>
 </div>
             </section>

@@ -50,12 +50,28 @@
   width: 50%;
 }
 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .lcolumn-20 {
   float: left;
   width: 20%;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  font-size: 75%;
 }
 
 .rcolumn-80 {
   float: right;
   width: 80%;
+    padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
 }
+

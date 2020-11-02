@@ -60,9 +60,96 @@ Para esta breve instrucción al software, vamos a usar uno de los conjuntos de d
 
 ### Vista General
 
-Esta es la ventana que utilizará más a menudo. Aquí podrá tomar diferentes acciones parea manipular sus gráficos. La característica más obvia de esta ventana es el gráfico prominente en el centro; sin embargo, hay varias ventanillas relevantes; aquí, las cubriremos en orden alfabético:
+Esta es la ventana que utilizará más a menudo, ver Figura \@ref(fig:overview). Aquí podrá tomar diferentes acciones para manipular la aparencia sus gráficos, filtrar información y calcular medidas de red, arista, o nodo.
+
+<div class="figure" style="text-align: center">
+<img src="images/01-overview.png" alt="Gephi: Vista General" width="100%" />
+<p class="caption">(\#fig:overview)Gephi: Vista General</p>
+</div>
+
+La característica más obvia de esta ventana es el gráfico prominente en el centro; sin embargo, hay varias ventanillas relevantes; aquí, las cubriremos en orden alfabético.
 
 #### Apariencia
+
+El cuadro de apariencia le permite cambiar las características visuales de los nodos, aristas y etiquetas [@kateto2016]. Las opciones se bifurcan para trabajar en la apariencia de nodos aristas, accesibles a través de las pestañas correspondientes (*Nodos* y *Aristas*). Para editar nodos o aristas se le presenta una serie de opcionesen el lado derecho de este cuadro, divididas de tal manera (ver Figura \@ref(fig:apariencia)):
+
+  - *Nodos*:
+    - *Color* (1): Modificar el color de los nodos
+    - *Tamaño* (2): Modificar el tamaño de cada nodo
+    - *Color de etiqueta* (3): Modificar el color de las etiquetas de los nodos
+    - *Tamaño de etiqueta* (4): Modificar el color de las etiquetas de los nodos
+  
+  - *Aristas*:
+    - *Color* (5): Modificar el color de los nodo
+    - *Color de etiqueta* (6): Modificar el color de las etiquetas de los aristas
+    - *Tamaño de etiqueta* (7): Modificar el tamaño de las etiquetas de los aristas
+
+<div class="figure" style="text-align: center">
+<img src="images/01-apariencia.png" alt="Gephi: Apariencia" width="100%" />
+<p class="caption">(\#fig:apariencia)Gephi: Apariencia</p>
+</div>
+
+Cada sección contendrá de dos a tres pestañas: *Único*, *Partición* y *Ranking*. Veamos como funcionan con utilizando el software:
+
+::::{.row}
+::::{.lcolumn-20}
+*Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*
+
+*Aristas > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*
+::::
+::::{.rcolumn-80}
+ *Único* cambia los elementos de manera uniforme por color o tamaño seleccionado. Por consiguiente, para modificar el tamaño color de los nodos en gráfico, proceda a seleccionar *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. Si desea modificar el color de las aristas para que reflejen un valor único, seleccione *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. En la Figura \@ref(fig:color-unique) los nodos han sido coloreados de negro (`#000000`) y las aristas de gris (`#adadad`), que Gephi define colores utilizando una combinación hexademicial de números y letras definida por su mezcla de rojo, verde y azul.
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/01-color_unique.png" alt="Nodos y Aristas con Colores Únicos" width="100%" />
+<p class="caption">(\#fig:color-unique)Nodos y Aristas con Colores Únicos</p>
+</div>
+
+::::{.row}
+::::{.lcolumn-20}
+*Nodos > Tamaño > Único > 20 > Aplicar*
+::::
+::::{.rcolumn-80}
+Para modificar el tamaño de los nodos, igualmente usaremos la opción Único. Sin embargo, en esta secuencia modificaremos la característica a cambiar de la siguiente manera: *Nodos > Tamaño > Único > 20 > Aplicar*. Como vera en la Figura \@ref(fig:size-unique) todos los nodos en el grafico aparecen con el mismo tamaño. 
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/01-size_unique.png" alt="Nodos con Tamaño Único" width="100%" />
+<p class="caption">(\#fig:size-unique)Nodos con Tamaño Único</p>
+</div>
+
+
+::::{.row}
+::::{.lcolumn-20}
+*Nodos > Color > Partición > --Escoge un atributo > Modularity Class > Aplicar*
+::::
+::::{.rcolumn-80}
+La *Partición* cambia todos los elementos visibles utilizando valores de atributos categóricos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo categórico, `modularidad`, que representa el subgrupo al que pertenece cada nodo. Usando ese atributo podemos cambiar el color de los nodos seleccionando *Nodos > Color > Partición > --Escoge un atributo > Modularity Class > Aplicar*. Una vez aplicado, los colores de los nodos deberían permitirle entender qué nodos pertenecen a las misma comunidades. De manera similar, podríamos intentar cambiar los colores de las aristas basándonos en un atributo categórico; sin embargo, el conjunto de datos de ejemplo no incluye dicho tipo de variable.
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/01-color_partition.png" alt="Nodos Coloreados por Atributos Categoriales." width="100%" />
+<p class="caption">(\#fig:color-partition)Nodos Coloreados por Atributos Categoriales.</p>
+</div>
+
+::::{.row}
+::::{.lcolumn-20}
+*Nodos > Tamaño > Ranking > --Escoge un atributo > Grado > Aplicar*
+::::
+::::{.rcolumn-80}
+El *Ranking* cambia todos los elementos visibles utilizando valores de atributos continuos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo continuo, `grado`, que representa el numero de enlaces que tiene cada nodo. Usando ese atributo podemos cambiar el tamaño de los nodos seleccionando *Nodos > Tamaño > Ranking > --Escoge un atributo > Grado > Aplicar*. Ahora deberá ver que algunos nodos aparecen mucho más grandes que otros, esto se debe a que algunos tienen más conexiones. Más adelante en el libro ampliaremos el significado de esta medida y presentaremos otras. Quizás se este preguntando, ¿es posible cambiar el grosor de las aristas en función de una variable continua? La respuesta es sí, pero hacerlo requiere un menú diferente, por lo que abordaremos esto más adelante.
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/01-size-ranking.png" alt="Nodos Dimensionados por Variable Continua." width="100%" />
+<p class="caption">(\#fig:size-ranking)Nodos Dimensionados por Variable Continua.</p>
+</div>
+
 
 #### Contexto
 
