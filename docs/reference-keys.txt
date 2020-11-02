@@ -2,6 +2,12 @@ fig:bienvenida
 fig:les-mis
 fig:overview
 fig:apariencia
+fig:color-unique
+fig:size-unique
+fig:color-partition
+fig:size-ranking
+fig:force-atlas
+fig:expansion
 fig:undirected
 eq:symmatrix
 fig:directed
@@ -68,7 +74,5 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
-fig:color-unique
-fig:size-unique
-fig:color-partition
-fig:size-ranking
+fig:degree
+fig:filter

@@ -303,15 +303,79 @@ Figure 2.8: Nodos Dimensionados por Variable Continua.
 </div>
 <div id="contexto" class="section level4">
 <h4><span class="header-section-number">2.3.3.2</span> Contexto</h4>
+<p>Esta sección proporciona información sobre las propiedades básicas del gráfico; específicamente, el número de nodos y aristas y si el gráfico es dirigido o no.</p>
 </div>
 <div id="distribuición" class="section level4">
 <h4><span class="header-section-number">2.3.3.3</span> Distribuición</h4>
+<p>ARSo depende en gran medida de la exploración de datos a través de buena visualización. Esta es una de las características clave de Gephi, contiene una buena cantidad de algoritmos de diseño de gráficos y los ejecuta bastante rápido (todo dependiendo de la potencia de su procesador). La ventana <em>Distribuición</em> le permite al usuario seleccionar entre una serie de algoritmos de diseño de gráficos y modificar los parámetros preestablecidos según sea necesario. En esta sección exploraremos algunos de los algoritmos gráficos más notables incluidos con la instalación base de Gephi.</p>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Elije una distribuición &gt; Force Atlas &gt; Ejecutar</em></p>
+</div>
+<div class="rcolumn-80">
+<p><em>Force Atlas</em> y <em>Force Atlas 2</em> son algoritmos de diseño dirigidos por fuerza, producido por los desarrolladores de Gephi, que permite visualizar efectivamente gráficos de tamaño pequeño a mediano <span class="citation">(Jacomy <a href="#ref-Jacomy2011" role="doc-biblioref">2011</a>)</span>. Estos son algoritmos continuos, es decir que el permiten que el analista edite al gráfico mientras el algoritmo dibuja; asimismo, significa que además de <em>Ejecutar</em> el algoritmo hay que seleccionar <em>Parar</em> cuando uno este satisfecho con el diseño. Veamos como funciona este algoritmo, para ello en la sección de Distribución seleccione <em>Elije una distribuición &gt; Force Atlas &gt; Ejecutar</em>. Después de un par de minutos, recuerde en dar clic sobre el botón <em>Parar</em>. Como puede ver, el algoritmo a contraído los nodos. Esta es una característica de los algoritmos dirigidos por fuerza donde los nodos vinculados se atraen entre si y los nodos no vinculados se repelen.</p>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:force-atlas"></span>
+<img src="images/01-force_atlas.PNG" alt="Gráfico dibujado con Force Atlas" width="100%" />
+<p class="caption">
+Figure 2.9: Gráfico dibujado con Force Atlas
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Elije una distribuición &gt; Expansión &gt; Ejecutar</em></p>
+<p><em>Elije una distribuición &gt; Contracción &gt; Ejecutar</em></p>
+</div>
+<div class="rcolumn-80">
+<p>Uno de los algoritmos de diseño más útiles es <em>Expansión</em>, el cual aumenta el tamaño de la red pero mantiene la ubicación relativa de los nodos constante. Tenga en cuenta que la opción Contracción que nos permitirá volver a introducir una red si se expande demasiado. El polo opuesto de esta opción es <em>Contracción</em>, que permite compactar la red manteniendo la ubicación relativa de los nodos. Ambas opciones so ejecutadas de manera instantánea, por consiguiente, no hay que detener el algoritmo.</p>
+<p>Por ejemplo, la Figura <a href="trabajando-con-gephi.html#fig:expansion">2.10</a> es una versión expandida de a Figura <a href="trabajando-con-gephi.html#fig:force-atlas">2.9</a>. Sin embargo, podría decirse que es más fácil observar los patrones en este gráfico editado. Para expandir el gráfico seleccione <em>Elije una distribuición &gt; Expansión &gt; Ejecutar</em>. De clic en <em>Ejecutar</em> un par de veces, si sobrepasa el punto deseado seleccione <em>Elije una distribuición &gt; Contracción &gt; Ejecutar</em> para contraer el gráfico.</p>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:expansion"></span>
+<img src="images/01-expansion.PNG" alt="Gráfico dibujado con Force Atlas y Expandido" width="100%" />
+<p class="caption">
+Figure 2.10: Gráfico dibujado con Force Atlas y Expandido
+</p>
+</div>
+<p>Por ahora, solo cubriremos estas tres opciones de diseño. Más adelante utilizaremos algoritmos de diseño de manera orgánica. Sin embargo, le recomendamos que juegue con otras opciones, eche un vistazo a cómo se ven los gráficos resultantes, pero tenga en cuenta que algunos algoritmos no se detendrán por sí mismos, por lo que es posible que deba detenerlos manualmente.</p>
 </div>
 <div id="estadísticas" class="section level4">
 <h4><span class="header-section-number">2.3.3.4</span> Estadísticas</h4>
+<p>Además de utilizar visualizaciones, los analistas de ARSo depende a menudo de medidas estadísticas utilizadas para comprender las características estructurales de la red a fondo. Gephi proporciona una cantidad limitada, pero suficiente de medidas estadísticas al descargar el software. La pestaña de <em>Estadísticas</em> es la ubicación principal en Gephi para encontrar dichas medidas. Localícela a mano derecha del <em>Grafo</em>, es posible que tenga que seleccionar la pestaña puesto que comparte el mismo espacio con <em>Filtros</em>.</p>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Visión general de la red &gt; Grado medio &gt; Ejecutar</em></p>
+</div>
+<div class="rcolumn-80">
+<p>Para ejecutar una medida, seleccione el botón <em>Ejecutar</em> a un lado de dicha medida. En capítulos futuros explicaremos la gran mayoría de las medidas presentes, por ahora, revisitemos la medida de grado. Esta se refiere al número de aristas adjuntas al nodo. Para calcular esta medida, seleccione <em>Visión general de la red &gt; Grado medio &gt; Ejecutar</em>.</p>
+<p>Esta selección debe generar un informe HTML que muestre la distribución de grados del gráfico, consulte la Figura <a href="trabajando-con-gephi.html#fig:degree">2.11</a>. Además de este reporte, esta acción agregara valores de centralidad de grado a cada nodo en la tabla de aristas situada en el <em>Laboratorio de Datos</em>. Proceda a cerrar este cuadro de diálogo, si desea volver a abrirlo repita los pasos presentados previamente.</p>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:degree"></span>
+<img src="images/01-degree.PNG" alt="Ejecutando Estadística de Grado" width="100%" />
+<p class="caption">
+Figure 2.11: Ejecutando Estadística de Grado
+</p>
+</div>
 </div>
 <div id="filtros" class="section level4">
 <h4><span class="header-section-number">2.3.3.5</span> Filtros</h4>
+<p>A menudo tendremos que modificar nuestros datos en Gephi, dentro de la Vista General encontrara la pestaña de <em>Filtros</em>. Esta contiene una variedad de parámetros para filtrar los datos presentados con base a características (variables continuas o categóricas) de los nodos o las aristas. Puede aplicar uno o varios filtros a un gráfico para descubrir características ocultas o refinar la cantidad de información que se muestra en un gráfico.</p>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Arrastrar a Consultas &gt; Rango (Grado) Configuración = 2-36 &gt; Filtrar</em></p>
+</div>
+<div class="rcolumn-80">
+<p>#TODO</p>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:filter"></span>
+<img src="images/01-filter.PNG" alt="Filtrando por Grado" width="100%" />
+<p class="caption">
+Figure 2.12: Filtrando por Grado
+</p>
+</div>
 </div>
 <div id="grafo" class="section level4">
 <h4><span class="header-section-number">2.3.3.6</span> Grafo</h4>
@@ -347,6 +411,9 @@ Figure 2.8: Nodos Dimensionados por Variable Continua.
 </div>
 <div id="ref-Everton2012">
 <p>Everton, Sean F. 2012. <em>Disrupting Dark Networks</em>. Cambridge.</p>
+</div>
+<div id="ref-Jacomy2011">
+<p>Jacomy, Mathieu. 2011. “ForceAtlas2, the New Version of Our Home-Brew Layout.” <em>Gephi</em>. <a href="https://gephi.wordpress.com">https://gephi.wordpress.com</a>.</p>
 </div>
 <div id="ref-Knuth1993">
 <p>Knuth, D. E. 1993. “The Stanford Graphbase: A Platform for Combinatorial Computing.” Addison-Wesley.</p>

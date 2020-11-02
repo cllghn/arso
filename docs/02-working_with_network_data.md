@@ -153,11 +153,88 @@ El *Ranking* cambia todos los elementos visibles utilizando valores de atributos
 
 #### Contexto
 
+Esta sección proporciona información sobre las propiedades básicas del gráfico; específicamente, el número de nodos y aristas y si el gráfico es dirigido o no.
+
 #### Distribuición
+
+ARSo depende en gran medida de la exploración de datos a través de buena visualización. Esta es una de las características clave de Gephi, contiene una buena cantidad de algoritmos de diseño de gráficos y los ejecuta bastante rápido (todo dependiendo de la potencia de su procesador). La ventana *Distribuición* le permite al usuario seleccionar entre una serie de algoritmos de diseño de gráficos y modificar los parámetros preestablecidos según sea necesario. En esta sección exploraremos algunos de los algoritmos gráficos más notables incluidos con la instalación base de Gephi.
+
+
+::::{.row}
+::::{.lcolumn-20}
+*Elije una distribuición > Force Atlas > Ejecutar*
+::::
+::::{.rcolumn-80}
+*Force Atlas* y *Force Atlas 2* son algoritmos de diseño dirigidos por fuerza, producido por los desarrolladores de Gephi, que permite visualizar efectivamente gráficos de tamaño pequeño a mediano [@Jacomy2011]. Estos son algoritmos continuos, es decir que el permiten que el analista edite al gráfico mientras el algoritmo dibuja; asimismo, significa que además de *Ejecutar* el algoritmo hay que seleccionar *Parar* cuando uno este satisfecho con el diseño. Veamos como funciona este algoritmo, para ello en la sección de Distribución seleccione *Elije una distribuición > Force Atlas > Ejecutar*. Después de un par de minutos, recuerde en dar clic sobre el botón *Parar*. Como puede ver, el algoritmo a contraído los nodos. Esta es una característica de los algoritmos dirigidos por fuerza donde los nodos vinculados se atraen entre si y los nodos no vinculados se repelen.
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/01-force_atlas.PNG" alt="Gráfico dibujado con Force Atlas" width="100%" />
+<p class="caption">(\#fig:force-atlas)Gráfico dibujado con Force Atlas</p>
+</div>
+
+
+::::{.row}
+::::{.lcolumn-20}
+*Elije una distribuición > Expansión  > Ejecutar*
+
+*Elije una distribuición > Contracción  > Ejecutar*
+::::
+::::{.rcolumn-80}
+Uno de los algoritmos de diseño más útiles es *Expansión*, el cual aumenta el tamaño de la red pero mantiene la ubicación relativa de los nodos constante. Tenga en cuenta que la opción Contracción que nos permitirá volver a introducir una red si se expande demasiado. El polo opuesto de esta opción es *Contracción*, que permite compactar la red manteniendo la ubicación relativa de los nodos. Ambas opciones so ejecutadas de manera instantánea, por consiguiente, no hay que detener el algoritmo.
+
+Por ejemplo, la Figura \@ref(fig:expansion) es una versión expandida de a Figura \@ref(fig:force-atlas). Sin embargo, podría decirse que es más fácil observar los patrones en este gráfico editado. Para expandir el gráfico seleccione *Elije una distribuición > Expansión  > Ejecutar*. De clic en *Ejecutar* un par de veces, si sobrepasa el punto deseado seleccione *Elije una distribuición > Contracción  > Ejecutar* para contraer el gráfico. 
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/01-expansion.PNG" alt="Gráfico dibujado con Force Atlas y Expandido" width="100%" />
+<p class="caption">(\#fig:expansion)Gráfico dibujado con Force Atlas y Expandido</p>
+</div>
+
+Por ahora, solo cubriremos estas tres opciones de diseño. Más adelante utilizaremos algoritmos de diseño de manera orgánica. Sin embargo, le recomendamos que juegue con otras opciones, eche un vistazo a cómo se ven los gráficos resultantes, pero tenga en cuenta que algunos algoritmos no se detendrán por sí mismos, por lo que es posible que deba detenerlos manualmente.
 
 #### Estadísticas
 
+Además de utilizar visualizaciones, los analistas de ARSo depende a menudo de medidas estadísticas utilizadas para comprender las características estructurales de la red a fondo. Gephi proporciona una cantidad limitada, pero suficiente de medidas estadísticas al descargar el software. La pestaña de *Estadísticas* es la ubicación principal en Gephi para encontrar dichas medidas. Localícela a mano derecha del *Grafo*, es posible que tenga que seleccionar la pestaña puesto que comparte el mismo espacio con *Filtros*.
+
+
+::::{.row}
+::::{.lcolumn-20}
+*Visión general de la red > Grado medio > Ejecutar*
+::::
+::::{.rcolumn-80}
+Para ejecutar una medida, seleccione el botón *Ejecutar* a un lado de dicha medida. En capítulos futuros explicaremos la gran mayoría de las medidas presentes, por ahora, revisitemos la medida de grado. Esta se refiere al número de aristas adjuntas al nodo. Para calcular esta medida, seleccione *Visión general de la red > Grado medio > Ejecutar*.
+
+Esta selección debe generar un informe HTML que muestre la distribución de grados del gráfico, consulte la Figura \@ref(fig:degree). Además de este reporte, esta acción agregara valores de centralidad de grado a cada nodo en la tabla de aristas situada en el *Laboratorio de Datos*. Proceda a cerrar este cuadro de diálogo, si desea volver a abrirlo repita los pasos presentados previamente. 
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/01-degree.PNG" alt="Ejecutando Estadística de Grado" width="100%" />
+<p class="caption">(\#fig:degree)Ejecutando Estadística de Grado</p>
+</div>
+
 #### Filtros
+
+A menudo tendremos que modificar nuestros datos en Gephi, dentro de la Vista General encontrara la pestaña de *Filtros*. Esta contiene una variedad de parámetros para filtrar los datos presentados con base a características (variables continuas o categóricas) de los nodos o las aristas. Puede aplicar uno o varios filtros a un gráfico para descubrir características ocultas o refinar la cantidad de información que se muestra en un gráfico.
+
+
+::::{.row}
+::::{.lcolumn-20}
+*Arrastrar a Consultas > Rango (Grado) Configuración = 2-36 > Filtrar*
+::::
+::::{.rcolumn-80}
+#TODO
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/01-filter.PNG" alt="Filtrando por Grado" width="100%" />
+<p class="caption">(\#fig:filter)Filtrando por Grado</p>
+</div>
+
 
 #### Grafo
 
