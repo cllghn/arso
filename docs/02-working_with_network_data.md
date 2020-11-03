@@ -226,7 +226,9 @@ A menudo tendremos que modificar nuestros datos en Gephi, dentro de la Vista Gen
 *Arrastrar a Consultas > Rango (Grado) Configuración = 2-36 > Filtrar*
 ::::
 ::::{.rcolumn-80}
-#TODO
+Para filtrar grafo en base a el numero de enlaces, por ejemplo, remover los nodos pendientes, en *Biblioteca* de filtros localice *Atributos > Rango > Grado*, arrastre el filtro de rango a la parte inferior de este cuadro, específicamente la sección de *Consultas*. Al agregar el filtro en *Consultas* notará que en la parte inferior del cuadro aparecerá un rango de `1` a `36`. Modifique el rango para que el mínimo numero de enlaces sea 2 y su rango lea de `2` a `36`. Otra manera de decir esto es filtraremos los nodos de manera que solo aquellos con 2 o más enlaces permanezcan en la red. Por último, de clic en el botón *Filtrar*. Note los cambios en las ventanillas de *Grafo* y *Contexto*, deberá ver un menor numero de nodos y aristas.
+
+Si desea remover el filtro, presione el botón *Auto aplicar* en la parte inferior derecha (que solía leer *Filtrar*). Al hacer esto, sus datos deben volver a aparecer. 
 ::::
 ::::
 
@@ -235,8 +237,49 @@ A menudo tendremos que modificar nuestros datos en Gephi, dentro de la Vista Gen
 <p class="caption">(\#fig:filter)Filtrando por Grado</p>
 </div>
 
-
 #### Grafo
+
+La última sección que cubriremos en esta esta introducción a la *Vista General* es el *Grafo* y algunas de las funciones asociadas con esta ventanilla. En el lado derecho e inferior del panel, encontrará las herramientas básicas para interactuar manualmente con el gráfico y editar algunos de los atributos visuales de su gráfico. En esta breve introducción, los definiremos con fines de conciencia general, pero no entraremos en demasiados detalles, ya que los usaremos más adelante en el libro según sea necesario.
+
+
+<div class="figure" style="text-align: center">
+<img src="images/01-grafo.png" alt="Ventanilla de Grafo" width="100%" />
+<p class="caption">(\#fig:grafo)Ventanilla de Grafo</p>
+</div>
+
+
+Lo que sigue es una lista de nombres de comandos y funciones en orden secuencial, ver Figura \@ref(fig:grafo):
+
+ 1.	*Selección directa* – elegir un nodo a la vez
+ 2.	*Selección rectangular* – elegir uno o múltiples nodos en un área rectangular
+ 3.	*Desplazar* – moverse sin seleccionar
+ 4.	*Pincel* – colorea los nodos presionando el botón derecho del ratón
+ 5.	*Dar tamaño* – cambia el tamaño de los nodos presionando con el boto derecho y arrastrando el ratón  verticalmente
+ 6.	*Brocha* – como el pincel, da color a los nodos, pero da la opción de difundir el color a los vecinos,  vecinos de vecinos, predecesores y sucesores.
+ 7.	*Lápiz de nodos* – añade un nuevo nodo al grafo
+ 8.	*Lápiz de aristas* – añade una nueva arista al grafo
+ 9.	*Camino más corto* – muestra el camino más corto entre dos nodos seleccionados
+ 10.	*Mapa de calor* – establece la intensidad del color el base a distancia de vecinos
+ 11.	*Editor* – editar atributos del nodo
+ 12.	*Centrar el grafo* – retorna el grafo al centro
+ 13.	*Reestablecer colores* - devolver los colores a la configuración predeterminada
+ 14.	*Reestablecer colores de etiquetas* - devolver el color de las etiquetas a la configuración  predeterminada
+ 15.	*Reestablecer visibilidad de las etiquetas* 
+ 16.	*Color de fondo* – cambiar el color de fondo
+ 17.	*Captura de pantalla* – capturar y guardar el grafico en pantalla
+ 18.	*Mostar etiquetas de los nodos* – mostrar las etiquetas correspondientes de a cada nodo
+ 19.	*Mostrar aristas* – encender o apagar las aristas 
+ 20.	*Las aristas tienen el color del nodo origen*
+ 21.	*Mostar etiquetas de las aristas*
+ 22.	*Escala del peso de las aristas* – incrementar o disminuir el grosor de las aristas
+ 23.  *Modo de tamaño* – seleccionar modo de tamaño para las etiquetas
+ 24.	*Modo de color* – seleccionar modo de color para las etiquetas
+ 25.	*Fuente* – seleccionar fuente para las etiquetas
+ 26.	*Escala de la fuente* – incrementar o reducir el tamaño de las etiquetas
+ 27.	*Color por defecto* – elegir el color de las etiquetas
+ 28.	*Atributos* – configurar los atributos de las etiquetas para nodos o aristas
+ 29.	*Expandir* – añadir opciones para editar la apariencia *Global*, de *Aristas*, o *Etiquetas*.
+ 
 
 ### Laboratorio de Datos
 

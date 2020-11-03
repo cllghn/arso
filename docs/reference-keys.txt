@@ -76,3 +76,5 @@ puentes-y-corredores
 glosario-de-términos
 fig:degree
 fig:filter
+fig:grapfo
+fig:grafo

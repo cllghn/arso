@@ -367,7 +367,8 @@ Figure 2.11: Ejecutando Estadística de Grado
 <p><em>Arrastrar a Consultas &gt; Rango (Grado) Configuración = 2-36 &gt; Filtrar</em></p>
 </div>
 <div class="rcolumn-80">
-<p>#TODO</p>
+<p>Para filtrar grafo en base a el numero de enlaces, por ejemplo, remover los nodos pendientes, en <em>Biblioteca</em> de filtros localice <em>Atributos &gt; Rango &gt; Grado</em>, arrastre el filtro de rango a la parte inferior de este cuadro, específicamente la sección de <em>Consultas</em>. Al agregar el filtro en <em>Consultas</em> notará que en la parte inferior del cuadro aparecerá un rango de <code>1</code> a <code>36</code>. Modifique el rango para que el mínimo numero de enlaces sea 2 y su rango lea de <code>2</code> a <code>36</code>. Otra manera de decir esto es filtraremos los nodos de manera que solo aquellos con 2 o más enlaces permanezcan en la red. Por último, de clic en el botón <em>Filtrar</em>. Note los cambios en las ventanillas de <em>Grafo</em> y <em>Contexto</em>, deberá ver un menor numero de nodos y aristas.</p>
+<p>Si desea remover el filtro, presione el botón <em>Auto aplicar</em> en la parte inferior derecha (que solía leer <em>Filtrar</em>). Al hacer esto, sus datos deben volver a aparecer.</p>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:filter"></span>
@@ -379,6 +380,45 @@ Figure 2.12: Filtrando por Grado
 </div>
 <div id="grafo" class="section level4">
 <h4><span class="header-section-number">2.3.3.6</span> Grafo</h4>
+<p>La última sección que cubriremos en esta esta introducción a la <em>Vista General</em> es el <em>Grafo</em> y algunas de las funciones asociadas con esta ventanilla. En el lado derecho e inferior del panel, encontrará las herramientas básicas para interactuar manualmente con el gráfico y editar algunos de los atributos visuales de su gráfico. En esta breve introducción, los definiremos con fines de conciencia general, pero no entraremos en demasiados detalles, ya que los usaremos más adelante en el libro según sea necesario.</p>
+<div class="figure" style="text-align: center"><span id="fig:grafo"></span>
+<img src="images/01-grafo.PNG" alt="Ventanilla de Grafo" width="100%" />
+<p class="caption">
+Figure 2.13: Ventanilla de Grafo
+</p>
+</div>
+<p>Lo que sigue es una lista de nombres de comandos y funciones en orden secuencial, ver Figura <a href="trabajando-con-gephi.html#fig:grafo">2.13</a>:</p>
+<ol style="list-style-type: decimal">
+<li><em>Selección directa</em> – elegir un nodo a la vez</li>
+<li><em>Selección rectangular</em> – elegir uno o múltiples nodos en un área rectangular</li>
+<li><em>Desplazar</em> – moverse sin seleccionar</li>
+<li><em>Pincel</em> – colorea los nodos presionando el botón derecho del ratón</li>
+<li><em>Dar tamaño</em> – cambia el tamaño de los nodos presionando con el boto derecho y arrastrando el ratón verticalmente</li>
+<li><em>Brocha</em> – como el pincel, da color a los nodos, pero da la opción de difundir el color a los vecinos, vecinos de vecinos, predecesores y sucesores.</li>
+<li><em>Lápiz de nodos</em> – añade un nuevo nodo al grafo</li>
+<li><em>Lápiz de aristas</em> – añade una nueva arista al grafo</li>
+<li><em>Camino más corto</em> – muestra el camino más corto entre dos nodos seleccionados</li>
+<li><em>Mapa de calor</em> – establece la intensidad del color el base a distancia de vecinos</li>
+<li><em>Editor</em> – editar atributos del nodo</li>
+<li><em>Centrar el grafo</em> – retorna el grafo al centro</li>
+<li><em>Reestablecer colores</em> - devolver los colores a la configuración predeterminada</li>
+<li><em>Reestablecer colores de etiquetas</em> - devolver el color de las etiquetas a la configuración predeterminada</li>
+<li><em>Reestablecer visibilidad de las etiquetas</em></li>
+<li><em>Color de fondo</em> – cambiar el color de fondo</li>
+<li><em>Captura de pantalla</em> – capturar y guardar el grafico en pantalla</li>
+<li><em>Mostar etiquetas de los nodos</em> – mostrar las etiquetas correspondientes de a cada nodo</li>
+<li><em>Mostrar aristas</em> – encender o apagar las aristas</li>
+<li><em>Las aristas tienen el color del nodo origen</em></li>
+<li><em>Mostar etiquetas de las aristas</em></li>
+<li><em>Escala del peso de las aristas</em> – incrementar o disminuir el grosor de las aristas</li>
+<li><em>Modo de tamaño</em> – seleccionar modo de tamaño para las etiquetas</li>
+<li><em>Modo de color</em> – seleccionar modo de color para las etiquetas</li>
+<li><em>Fuente</em> – seleccionar fuente para las etiquetas</li>
+<li><em>Escala de la fuente</em> – incrementar o reducir el tamaño de las etiquetas</li>
+<li><em>Color por defecto</em> – elegir el color de las etiquetas</li>
+<li><em>Atributos</em> – configurar los atributos de las etiquetas para nodos o aristas</li>
+<li><em>Expandir</em> – añadir opciones para editar la apariencia <em>Global</em>, de <em>Aristas</em>, o <em>Etiquetas</em>.</li>
+</ol>
 </div>
 </div>
 <div id="laboratorio-de-datos" class="section level3">
