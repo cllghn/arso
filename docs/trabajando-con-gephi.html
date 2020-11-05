@@ -83,8 +83,8 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
-<li class="chapter" data-level="0.0.1" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i><b>0.0.1</b> Editores</a></li>
-<li class="chapter" data-level="0.0.2" data-path="index.html"><a href="index.html#colaboradores-1"><i class="fa fa-check"></i><b>0.0.2</b> Colaboradores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores-1"><i class="fa fa-check"></i>Colaboradores</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>I Introducción</b></span></li>
@@ -423,9 +423,74 @@ Figure 2.13: Ventanilla de Grafo
 </div>
 <div id="laboratorio-de-datos" class="section level3">
 <h3><span class="header-section-number">2.3.4</span> Laboratorio de Datos</h3>
+<p>El <em>Laboratorio de datos</em> contiene tablas de los datos de nodos (Figura <a href="trabajando-con-gephi.html#fig:data-lab">2.14</a> izquireda) y aristas (Figura <a href="trabajando-con-gephi.html#fig:data-lab">2.14</a> derecha). Estas tablas permiten a los analistas interactuar con la información y editar valores directamente o mediante la serie de comandos en la parte inferior de la pantalla (Figura <a href="trabajando-con-gephi.html#fig:data-lab">2.14</a> abajo). Esta es una descripción muy simplificada de las capacidades de esta sección. Sin embargo, nos centraremos en estas características clave en esta introducción de alto nivel.</p>
+<div class="figure" style="text-align: center"><span id="fig:data-lab"></span>
+<img src="images/01-data_lab.png" alt="Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas" width="100%" />
+<p class="caption">
+Figure 2.14: Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas
+</p>
+</div>
+<div id="tabla-de-datos-nodos" class="section level4">
+<h4><span class="header-section-number">2.3.4.1</span> Tabla de Datos: Nodos</h4>
+<p>La tabla de nodos contiene un identificador único para cada nodo en el gráfico (generalmente ubicado en la columna más a la izquierda como <code>Id</code>). Además, note la columna <code>Label</code> directamente a la derecha, esta es digna de mención ya que sirve como receptáculo para las etiquetas de los nodos, es decir, los valores en esta columna aparecerán una etiqueta de nodos en el gráfico cuando se especifique.</p>
+<div class="figure" style="text-align: center"><span id="fig:nodes-table"></span>
+<img src="images/01-nodes_table.png" alt="Laboratorio de datos, Tabla de Nodos" width="100%" />
+<p class="caption">
+Figure 2.15: Laboratorio de datos, Tabla de Nodos
+</p>
+</div>
+<p>A medida que se agregan atributos de nodo al gráfico, en esta tabla deberán aparecer nuevas columnas con estos valores. De manera similar, dentro de Gephi, los analistas a menudo ejecutan diferentes métricas a nivel nodo, estos valores se agregarán a cada registro (fila) en una nueva variable (columna).</p>
+</div>
+<div id="tabla-de-datos-aristas" class="section level4">
+<h4><span class="header-section-number">2.3.4.2</span> Tabla de Datos: Aristas</h4>
+<p>Al igual que la tabla de nodos, la tabla de bordes incluye información clave en el gráfico de red; específicamente, los datos relacionales. Esta información está codificada en siete columnas. Lo que sigue es una breve explicación de estas columnas:</p>
+<ul>
+<li><code>Origen</code> y <code>Destino</code> - Todas las relaciones en ARSo vinculan un nodo inicial y un nodo final. Por ejemplo, si el nodo A está vinculado al nodo B, tendríamos que dibujar un vínculo del nodo A o B al nodo complementario. Gephi codifica esto en dos columnas <code>Origen</code> y <code>Destino</code>, por lo que para el mismo ejemplo, si A y B están conectados, podríamos poner A en la columna <code>Origen</code> y B en la columna <code>Destino</code> o viceversa.
+-<code>Tipo</code> - Denota el tipo de relación entre los nodos en las columnas <code>Origen</code> y <code>Destino</code>. Los valores pueden ser <code>Dirigida</code> o<code>No dirigida</code>. Si el tipo es <code>Dirigida</code> la relación es un arco o arista, de lo contrario, si es tipo <code>No Dirigida</code> el vínculo es un borde.</li>
+<li><code>Id</code> - Un identificador único para el vínculo. Usualmente asignado por Gephi al importar datos.</li>
+<li><code>Label</code> - Etiqueta del vínculo.</li>
+<li><code>Interval</code> - Para vínculos en una secuencia, esta es la columna donde encontrara los valores de tiempo.<br />
+</li>
+<li><code>Weight</code> - Denota el peso para vínculos ponderados.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:edges-table"></span>
+<img src="images/01-edges_table.PNG" alt="Laboratorio de datos, Tabla de Aristas" width="100%" />
+<p class="caption">
+Figure 2.16: Laboratorio de datos, Tabla de Aristas
+</p>
+</div>
+</div>
+<div id="menu-inferior" class="section level4">
+<h4><span class="header-section-number">2.3.4.3</span> Menu Inferior</h4>
+<p>Esta última sección permite a los usuarios agregar, borrar o eliminar columnas, fusionar valores de varias columnas, copiar datos de una columna a otra, entre otras opciones. A lo largo de este libro, ampliaremos el uso de estos comandos según sea necesario.</p>
+<div class="figure" style="text-align: center"><span id="fig:lower-bar"></span>
+<img src="images/01-lower_bar.png" alt="Laboratorio de datos, Opciones" width="100%" />
+<p class="caption">
+Figure 2.17: Laboratorio de datos, Opciones
+</p>
+</div>
+</div>
 </div>
 <div id="previsualización" class="section level3">
 <h3><span class="header-section-number">2.3.5</span> Previsualización</h3>
+<p><em>Previsualización</em> es donde se pule la visualización para fines de exportación. Esta sección es diferente de la <em>Vista General</em> en que uno no puede interactuar dinámicamente con los datos a través de filtros, colores o diseño. El valor agregado de esta sección es enfocar la atención del analista en generar gráficos de calidad de publicación y para ello las opciones (en el lado izquierdo) serán mucho más limitadas.</p>
+<p>Aquí nos centraremos en 4 secciones clave (indicadas en la Figura <a href="trabajando-con-gephi.html#fig:preview">2.18</a>):</p>
+<ul>
+<li>Configuración de Previsualización (1) - Proporciona un conjunto de configuraciones de gráficos preestablecidos y permite al usuario guardar los ajustes preestablecidos para uso futuro.</li>
+<li>Parámetros (2) – Ajuste la configuración de visualización como:
+<ul>
+<li>Color de nodo, ancho, bordes, etiquetas, etc.</li>
+<li>Muestra los bordes, ajusta el ancho, el color, la curvatura, las etiquetas, las flechas, etc.</li>
+</ul></li>
+<li>Opciones Adicionales (3) – Ajuste las propiedades para la previsualización, exporte el gráfico y aplique las ediciones de la sección <em>Parámetros</em>.</li>
+<li>Ventanilla de Previsualización (4) – Proporciona una vista del gráfico terminado.</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:preview"></span>
+<img src="images/01-preview.PNG" alt="Previsualización" width="100%" />
+<p class="caption">
+Figure 2.18: Previsualización
+</p>
+</div>
 </div>
 <div id="errores-comunes" class="section level3">
 <h3><span class="header-section-number">2.3.6</span> Errores Comunes</h3>

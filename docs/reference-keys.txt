@@ -8,6 +8,12 @@ fig:color-partition
 fig:size-ranking
 fig:force-atlas
 fig:expansion
+fig:degree
+fig:filter
+fig:grafo
+fig:data-lab
+fig:nodes-table
+fig:edges-table
 fig:undirected
 eq:symmatrix
 fig:directed
@@ -24,8 +30,6 @@ fig:unnamed-chunk-4
 fig:unnamed-chunk-6
 fig:unnamed-chunk-11
 fig:unnamed-chunk-12
-editores
-colaboradores-1
 introduction
 introducción
 conceptos-erróneos-y-diferencias
@@ -46,6 +50,9 @@ estadísticas
 filtros
 grafo
 laboratorio-de-datos
+tabla-de-datos-nodos
+tabla-de-datos-aristas
+menu-inferior
 previsualización
 errores-comunes
 tipos-de-datos-de-redes-sociales
@@ -74,7 +81,5 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
-fig:degree
-fig:filter
-fig:grapfo
-fig:grafo
+fig:lower-bar
+fig:preview

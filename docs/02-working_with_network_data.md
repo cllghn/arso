@@ -283,7 +283,66 @@ Lo que sigue es una lista de nombres de comandos y funciones en orden secuencial
 
 ### Laboratorio de Datos
 
+El *Laboratorio de datos* contiene tablas de los datos de nodos (Figura \@ref(fig:data-lab) izquireda) y aristas (Figura \@ref(fig:data-lab) derecha). Estas tablas permiten a los analistas interactuar con la información y editar valores directamente o mediante la serie de comandos en la parte inferior de la pantalla (Figura \@ref(fig:data-lab) abajo). Esta es una descripción muy simplificada de las capacidades de esta sección. Sin embargo, nos centraremos en estas características clave en esta introducción de alto nivel.
+
+<div class="figure" style="text-align: center">
+<img src="images/01-data_lab.png" alt="Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas" width="100%" />
+<p class="caption">(\#fig:data-lab)Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas</p>
+</div>
+
+#### Tabla de Datos: Nodos
+
+La tabla de nodos contiene un identificador único para cada nodo en el gráfico (generalmente ubicado en la columna más a la izquierda como `Id`). Además, note la columna `Label` directamente a la derecha, esta es digna de mención ya que sirve como receptáculo para las etiquetas de los nodos, es decir, los valores en esta columna aparecerán una etiqueta de nodos en el gráfico cuando se especifique. 
+
+<div class="figure" style="text-align: center">
+<img src="images/01-nodes_table.png" alt="Laboratorio de datos, Tabla de Nodos" width="100%" />
+<p class="caption">(\#fig:nodes-table)Laboratorio de datos, Tabla de Nodos</p>
+</div>
+
+A medida que se agregan atributos de nodo al gráfico, en esta tabla deberán aparecer nuevas columnas con estos valores. De manera similar, dentro de Gephi, los analistas a menudo ejecutan diferentes métricas a nivel nodo, estos valores se agregarán a cada registro (fila) en una nueva variable (columna).
+
+#### Tabla de Datos: Aristas
+
+Al igual que la tabla de nodos, la tabla de bordes incluye información clave en el gráfico de red; específicamente, los datos relacionales. Esta información está codificada en siete columnas. Lo que sigue es una breve explicación de estas columnas:
+
+  - `Origen` y `Destino` -  Todas las relaciones en ARSo vinculan un nodo inicial y un nodo final. Por ejemplo, si el nodo A está vinculado al nodo B, tendríamos que dibujar un vínculo del nodo A o B al nodo complementario. Gephi codifica esto en dos columnas `Origen` y `Destino`, por lo que para el mismo ejemplo, si A y B están conectados, podríamos poner A en la columna `Origen` y B en la columna `Destino` o viceversa.
+  -` Tipo` - Denota el tipo de relación entre los nodos en las columnas `Origen` y `Destino`. Los valores pueden ser `Dirigida` o` No dirigida`. Si el tipo es `Dirigida` la relación es un arco o arista, de lo contrario, si es tipo `No Dirigida` el vínculo es un borde.
+  - `Id` - Un identificador único para el vínculo. Usualmente asignado por Gephi al importar datos.
+  - `Label` - Etiqueta del vínculo. 
+  - `Interval` - Para vínculos en una secuencia, esta es la columna donde encontrara los valores de tiempo.  
+  - `Weight` - Denota el peso para vínculos ponderados. 
+
+<div class="figure" style="text-align: center">
+<img src="images/01-edges_table.png" alt="Laboratorio de datos, Tabla de Aristas" width="100%" />
+<p class="caption">(\#fig:edges-table)Laboratorio de datos, Tabla de Aristas</p>
+</div>
+
+#### Menu Inferior
+
+Esta última sección permite a los usuarios agregar, borrar o eliminar columnas, fusionar valores de varias columnas, copiar datos de una columna a otra, entre otras opciones. A lo largo de este libro, ampliaremos el uso de estos comandos según sea necesario.
+
+<div class="figure" style="text-align: center">
+<img src="images/01-lower_bar.png" alt="Laboratorio de datos, Opciones" width="100%" />
+<p class="caption">(\#fig:lower-bar)Laboratorio de datos, Opciones</p>
+</div>
+
 ### Previsualización
+
+*Previsualización* es donde se pule la visualización para fines de exportación. Esta sección es diferente de la *Vista General* en que uno no puede interactuar dinámicamente con los datos a través de filtros, colores o diseño. El valor agregado de esta sección es enfocar la atención del analista en generar gráficos de calidad de publicación y para ello las opciones (en el lado izquierdo) serán mucho más limitadas.
+
+Aquí nos centraremos en 4 secciones clave (indicadas en la Figura \@ref(fig:preview)):
+
+  -	Configuración de Previsualización (1) - Proporciona un conjunto de configuraciones de gráficos preestablecidos y permite al usuario guardar los ajustes preestablecidos para uso futuro.
+  -	Parámetros (2) – Ajuste la configuración de visualización como:
+    - Color de nodo, ancho, bordes, etiquetas, etc.
+    - Muestra los bordes, ajusta el ancho, el color, la curvatura, las etiquetas, las flechas, etc.
+  -	Opciones Adicionales (3) – Ajuste las propiedades para la previsualización, exporte el gráfico y aplique las ediciones de la sección *Parámetros*.
+  -	Ventanilla de Previsualización (4) – Proporciona una vista del gráfico terminado.
+
+<div class="figure" style="text-align: center">
+<img src="images/01-preview.png" alt="Previsualización" width="100%" />
+<p class="caption">(\#fig:preview)Previsualización</p>
+</div>
 
 ### Errores Comunes
 
