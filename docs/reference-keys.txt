@@ -14,6 +14,8 @@ fig:grafo
 fig:data-lab
 fig:nodes-table
 fig:edges-table
+fig:lower-bar
+fig:preview
 fig:undirected
 eq:symmatrix
 fig:directed
@@ -81,5 +83,12 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
-fig:lower-bar
-fig:preview
+eq:simple-matrix
+eq:friends
+eq:bussiness
+eq:friendsbusiness
+eq:mat-op1
+eq:mat-op2
+eq:mat-op3
+eq:mat
+eq:el

@@ -171,7 +171,7 @@
 <h3><span class="header-section-number">3.1.1</span> Modo-uno: Simétricos</h3>
 <p>Las <strong>relaciones simétricas de modo-uno</strong> son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:undirected">3.1</a> representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.</p>
 <div class="figure" style="text-align: center"><span id="fig:undirected"></span>
-<img src="02-working_with_network_data_files/figure-html/undirected-1.png" alt="Gráfico no dirigido" width="70%" />
+<img src="02-types-of-data_files/figure-html/undirected-1.png" alt="Gráfico no dirigido" width="70%" />
 <p class="caption">
 Figure 3.1: Gráfico no dirigido
 </p>
@@ -230,7 +230,7 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
 <h3><span class="header-section-number">3.1.2</span> Modo-uno: Asimétricos</h3>
 <p>También son relaciones entre un solo conjunto de actores; sin embargo, las <strong>redes asimétricas de modo-uno</strong> generalmente se refieren a bordes que van de un nodo a otro, pero que no siempre son recíprocos <span class="citation">(Borgatti, Everett, and Johnson <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>; Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span>. Por ejemplo, considere la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a>. Inicialmente notará que los vínculos tienen dirección, representada por una flecha. Observe que algunos de los vínculos no son recíprocos (por ejemplo, A envía un enlace no reciproco a C), mientras que otros son correspondidos (por ejemplo, A envía un enlace a B y este lo retorna).</p>
 <div class="figure" style="text-align: center"><span id="fig:directed"></span>
-<img src="02-working_with_network_data_files/figure-html/directed-1.png" alt="Gráfico dirigido" width="70%" />
+<img src="02-types-of-data_files/figure-html/directed-1.png" alt="Gráfico dirigido" width="70%" />
 <p class="caption">
 Figure 3.2: Gráfico dirigido
 </p>
@@ -288,7 +288,7 @@ E4 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0  &amp; 0  &amp; 0  &a
 \]</span></p>
 <p>¿Qué patrones puede ver en la matriz previa <a href="tipos-de-datos-de-redes-sociales.html#eq:bip">(3.3)</a>? Primero, note la simetría de la matriz, es decir que los datos son simétricos. Al sumar las filas o columnas, notamos que el evento mas asistido es el primer evento (E1) con tres personas. Adicionalmente, la persona con mayor asistencia a eventos es el actor D (3 eventos). La Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:bip">3.3</a> es un sociograma de estos datos, en este las personas y eventos han sido dibujados con dos diferentes tipos de iconos para diferenciar entre las clases de nodos, sin embargo, esta diferenciación es puramente cosmetica.</p>
 <div class="figure" style="text-align: center"><span id="fig:bip"></span>
-<img src="02-working_with_network_data_files/figure-html/bip-1.png" alt="Gráfico Bipartita" width="70%" />
+<img src="02-types-of-data_files/figure-html/bip-1.png" alt="Gráfico Bipartita" width="70%" />
 <p class="caption">
 Figure 3.3: Gráfico Bipartita
 </p>
@@ -357,7 +357,7 @@ F &amp; Masculino &amp; 25 \\
 </div>
 <p>La matriz de la izquierda es una sociomatriz simétrica de modo-uno, que contiene todas las relaciones entre el conjunto de nodos {A, B, C, D, E, F}. La matriz de la derecha contiene los atributos para el conjunto de nodos, específicamente, género y edad. La Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:attrs">3.4</a> combina estos datos, donde los nodos están coloreados por el atributo categórico (género) y dimensionados por las variables continuas (edad).</p>
 <div class="figure" style="text-align: center"><span id="fig:attrs"></span>
-<img src="02-working_with_network_data_files/figure-html/attrs-1.png" alt="Gráfico no dirigido, con atributos" width="70%" />
+<img src="02-types-of-data_files/figure-html/attrs-1.png" alt="Gráfico no dirigido, con atributos" width="70%" />
 <p class="caption">
 Figure 3.4: Gráfico no dirigido, con atributos
 </p>
@@ -365,6 +365,7 @@ Figure 3.4: Gráfico no dirigido, con atributos
 <div class="infobox note">
 <p>Al recopilar atributos, solo es necesario tener una entrada por nodo. Además, si se trabaja con redes multimodales (por ejemplo, bipartitas), se pueden recopilar atributos para todas las categorías de nodos.</p>
 </div>
+
 </div>
 </div>
 <h3>References</h3>

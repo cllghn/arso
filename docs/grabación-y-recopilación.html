@@ -162,13 +162,188 @@
             <section class="normal" id="section-">
 <div id="grabación-y-recopilación" class="section level1">
 <h1><span class="header-section-number">4</span> Grabación y Recopilación</h1>
+<p>Hasta este punto, hemos descrito los datos de red. En esta sección, nos tomaremos un tiempo para entender cómo codificar datos para importarlos a Gephi, estas estrategias igualmente funcionan con otras plataformas de software. Para ello comenzaremos describiendo sociomatrices, que vimos anteriormente. Después, veremos otra manera de codificar relaciones de manera eficiente como listas de aristas. Luego, exploramos cómo codificar características no relacionales en listas de nodos. Finalmente, tendrá la oportunidad de poner en práctica este conocimiento a través de un ejercicio práctico en Gephi.</p>
 <div id="matrices" class="section level2">
 <h2><span class="header-section-number">4.1</span> Matrices</h2>
-<p>(agregar texto aquí)</p>
+<p>Comenzamos con a la grabación de datos de red en una matriz. Como señala Hanneman, la forma más común de matriz en ARSo es una matriz cuadrada con tantas filas y columnas como actores en nuestro conjunto de datos, en este modelo los valores en las celdas de la matriz registran información sobre los vínculos entre cada par de actores <span class="citation">(Hanneman and Riddle <a href="#ref-Hanneman2005" role="doc-biblioref">2005</a>)</span>. Por ejemplo, la matriz <a href="grabación-y-recopilación.html#eq:simple-matrix">(4.1)</a> representa la forma más simple y común de codificar datos relacionales en forma de matriz; es decir, en forma de matriz binaria. En este caso, vemos un uno si existe un vínculo, de lo contrario vemos un cero.</p>
+<p><span class="math display" id="eq:simple-matrix">\[
+\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
+A &amp; - &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+B &amp; 1 &amp; - &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+C &amp; 1 &amp; 1 &amp; - &amp; 1 &amp; 0 &amp; 0 \\
+D &amp; 0 &amp; 0 &amp; 1 &amp; - &amp; 1 &amp; 1 \\
+E &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; - &amp; 1 \\
+F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
+\tag{4.1}
+\end{matrix}
+\]</span>
+Como se ha de imaginar, las matrices no siempre son binarias. De hecho, es apropiado y común el recopilar datos de magnitud para un vínculo. Por ejemplo, se puede medir la fuerza de una relación a nivel ordinal o de intervalo. Igualmente, no es inapropiado el recaudar datos relacionales con números positivos y negativos donde los números positivos corresponden a relaciones positivas, el cero es un punto medio neutral y las relaciones negativas tienen valores menores a cero.</p>
+<p>Recuerde que como habíamos visto previamente, los datos codificados en matrices pueden ser simétricos o asimétricos, dirigidos o no dirigidos. Por consiguiente, tradicionalmente es de buena educación ser explicito al mencionar el tipo de matriz que se esta trabajando; por ejemplo, “matriz simétrica binaria modo-uno” o “matriz asimétrica ponderada modo-uno”.</p>
+<p>Las matrices tienen múltiples ventajas en ARSo. Primero, son simples de entender. Sin embargo, la razón clave por la cual se utilizan habitualmente es porque se pueden realizar cálculos matemáticos con estas para resumir la información de lar red e ilustrar patrones relacióneles <span class="citation">(Borgatti, Everett, and Johnson <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>.</p>
+<p>Por ejemplo, al trabajar con múltiples matrices de modo-uno con las mismas dimensiones, podemos producir una tercera matriz con el mismo número de dimensiones utilizado el producto Hadamard (operación por elementos). Por ejemplo, tomemos dos matrices con el mismo número de dimensiones una representando amistades y los otros vínculos de negocios. Podemos producir una tercera relación con las mismas dimensiones que podemos nombrar “amigos en negocios”, la ecuación <a href="grabación-y-recopilación.html#eq:mat-op1">(4.2)</a> ilustra esta operación de matrices por elemento.</p>
+<p><span class="math display" id="eq:mat-op1">\[\begin{equation}
+\begin{matrix}
+  &amp; A &amp; B &amp; C \\
+A &amp; 0 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 \\
+C &amp; 0 &amp; 1 &amp; 0 \\
+\end{matrix}
+
+\enspace \circ \enspace
+
+\begin{matrix}
+  &amp; A &amp; B &amp; C \\
+A &amp; 0 &amp; 1 &amp; 1 \\
+B &amp; 1 &amp; 0 &amp; 0 \\
+C &amp; 1 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\enspace = \enspace
+
+\begin{matrix}
+  &amp; A   &amp; B   &amp; C \\
+A &amp; 0x0 &amp; 1x1 &amp; 0x1 \\
+B &amp; 1x1 &amp; 0x0 &amp; 0x0 \\
+C &amp; 0x1 &amp; 1x0 &amp; 0x0 \\
+\end{matrix}
+
+\enspace = \enspace
+
+\begin{matrix}
+  &amp; A &amp; B &amp; C \\
+A &amp; 0 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 0 \\
+C &amp; 0 &amp; 0 &amp; 0 \\
+\end{matrix}
+\tag{4.2}
+\end{equation}\]</span></p>
+<p>Adicionalmente, podemos multiplicar matrices “conformables”, es decir el numero de filas en la primera matriz es igual a el numero de columnas en la segunda. Las matrices cuadradas de modo-uno son conformables puesto que tienen el mismo numero de filas y columnas, por lo cual las podemos multiplicar <span class="citation">(Hanneman and Riddle <a href="#ref-Hanneman2005" role="doc-biblioref">2005</a>)</span>. A diferencia de el producto Hadamard, en la multiplicación de matrices el orden de estas impacta los resultados. Es decir, supongamos que trabajamos con dos matrices de modo-uno (<span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>), si multiplico <span class="math inline">\(AxB\)</span> el producto no es equivalente a <span class="math inline">\(BxA\)</span> (<span class="math inline">\(AxB \neq BxA\)</span>). La ecuación <a href="grabación-y-recopilación.html#eq:mat-op2">(4.3)</a> illustra el proceso de multiplicar matrices <span class="math inline">\(AxB\)</span>. Empezamos con la parte superior izquierda de la primera matriz y multiplicamos cada valor en la primera fila por los valores de la primera columna de la segunda matriz. Terminamos por sumar los resultados de estas multiplicaciones.</p>
+<p><span class="math display" id="eq:mat-op2">\[\begin{equation}
+\begin{matrix}
+  &amp; A &amp; B &amp; C \\
+A &amp; 0 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 \\
+C &amp; 0 &amp; 1 &amp; 0 \\
+\end{matrix}
+
+\enspace \times \enspace
+
+\begin{matrix}
+  &amp; A &amp; B &amp; C \\
+A &amp; 0 &amp; 1 &amp; 1 \\
+B &amp; 1 &amp; 0 &amp; 0 \\
+C &amp; 1 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\enspace = \enspace
+
+\begin{matrix}
+  &amp; A &amp; B &amp; C \\
+A &amp; 1 &amp; 0 &amp; 0 \\
+B &amp; 1 &amp; 1 &amp; 1 \\
+C &amp; 1 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\\
+\\
+\\
+
+\begin{matrix}
+  &amp; A                 &amp; B                 &amp; C                 \\
+A &amp; (0x0)+(1x1)+(0x1) &amp; (0x1)+(1x0)+(0x0) &amp; (0x1)+(1x0)+(0x0) \\
+B &amp; (1x0)+(0x1)+(1x1) &amp; (1x1)+(0x0)+(1x0) &amp; (1x1)+(0x0)+(1x0) \\
+C &amp; (0x0)+(1x1)+(0x1) &amp; (0x1)+(1x0)+(0x0) &amp; (0x1)+(1x0)+(0x0) \\
+\end{matrix}
+\tag{4.3}
+\end{equation}\]</span></p>
+<p>El proceso de multiplicar <span class="math inline">\(BxA\)</span> es similar, pero los resultados son diferentes <a href="grabación-y-recopilación.html#eq:mat-op3">(4.4)</a>.</p>
+<p><span class="math display" id="eq:mat-op3">\[\begin{equation}
+\begin{matrix}
+  &amp; A &amp; B &amp; C \\
+A &amp; 0 &amp; 1 &amp; 1 \\
+B &amp; 1 &amp; 0 &amp; 0 \\
+C &amp; 1 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\enspace \times \enspace
+
+\begin{matrix}
+  &amp; A &amp; B &amp; C \\
+A &amp; 0 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 \\
+C &amp; 0 &amp; 1 &amp; 0 \\
+\end{matrix}
+
+
+\enspace = \enspace
+
+\begin{matrix}
+  &amp; A &amp; B &amp; C \\
+A &amp; 1 &amp; 1 &amp; 1 \\
+B &amp; 0 &amp; 1 &amp; 0 \\
+C &amp; 0 &amp; 1 &amp; 0 \\
+\end{matrix}
+
+\\
+\\
+\\
+
+
+\begin{matrix}
+  &amp; A                 &amp; B                 &amp; C                 \\
+A &amp; (0x0)+(1x1)+(1x0) &amp; (0x1)+(1x0)+(1x1) &amp; (0x0)+(1x1)+(1x0) \\
+B &amp; (1x0)+(0x1)+(0x0) &amp; (1x1)+(0x0)+(0x1) &amp; (1x0)+(0x1)+(0x0) \\
+C &amp; (1x0)+(0x1)+(0x0) &amp; (1x1)+(0x0)+(0x1) &amp; (1x0)+(0x1)+(0x0) \\
+\end{matrix}
+\tag{4.4}
+\end{equation}\]</span></p>
+<p>En términos prácticos, <span class="citation">Borgatti, Everett, and Johnson (<a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span> presentan el siguiente ejemplo, supongamos que <span class="math inline">\(A\)</span> es una matriz de adyacencia que representa la ‘relación de amistad’ y <span class="math inline">\(B\)</span> es la relación de ‘jefe de’. Entonces si tengo una relación <span class="math inline">\(AxB\)</span> con un nodo, este es el jefe de al menos uno de mis amigos . En contraste, si tengo una relación de <span class="math inline">\(BxA\)</span> con un nodo, entonces este es amigo de mi jefe <span class="citation">(Borgatti, Everett, and Johnson <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>. Como puede ver, estas son relaciones muy diferentes producidas al multiplicar las mismas matrices.</p>
+<p>Ya que hemos recalcado las ventajas de utilizar matrices, es esencial entender algunas de las desventajas. Por ejemplo, las matrices sufren de tres desventajas principales:</p>
+<ul>
+<li>Cada matriz representa un solo tipo de relación. Supongamos que el análisis requiere el combinar relaciones familiares y financieras. Para lograr esto, requerimos codificar dos matrices antes de manipularlas. Además, el formato de matriz no permite el agregar metadata sobre las relaciones, por ejemplo: procedencia de un dato, fecha en que ha ocurrido, entre otros.</li>
+<li>El mantener una o múltiples matrices requiere mantener todas las células. Por ejemplo, en una red de 100 nodos, el analista debe mantener 10,000 células (100 x 100) aun cuando la mayoría de estas estén vacías (sin relación).</li>
+<li>Además de requerir un alto grado de atención para mantener una matriz, resulta que esta estructura no es la manera más eficiente de guardar datos en una computadora. Específicamente, cada 0 que representa la ausencia de una relación tiene un costo en forma de memoria.</li>
+</ul>
+<p>Como puede ver, las matrices (como todas las estructuras de recopilación de datos) tienen ventajas y desventajas. El algebra de matrices es la fundación de la mayoría de los algoritmos utilizados por analistas de redes, por consiguiente, es esencial entender estas estructuras. Sin embargo, las desventajas mencionadas previamente son la razón por la cual los analistas de redes tienen a mantener sus datos relacionales en otros formatos más eficientes y permisibles. En la siguiente sección cubriremos uno de estos formatos llamado lista de aristas.</p>
 </div>
 <div id="lista-de-aristas" class="section level2">
 <h2><span class="header-section-number">4.2</span> Lista de Aristas</h2>
-<p>(agregar texto aquí)</p>
+<p>Una de las estructuras más económicas en la recopilación de datos, las listas de aristas solo consideran los vínculos existentes y excluyen lo demás. Por ejemplo, la matriz <a href="grabación-y-recopilación.html#eq:mat">(4.5)</a> puede ser colapsada como lista de aristas <a href="grabación-y-recopilación.html#eq:el">(4.6)</a>.</p>
+<div class="row">
+<div class="lcolumn-50">
+<span class="math display" id="eq:mat">\[\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
+A &amp; - &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+B &amp; 1 &amp; - &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+C &amp; 1 &amp; 1 &amp; - &amp; 1 &amp; 0 &amp; 0 \\
+D &amp; 0 &amp; 0 &amp; 1 &amp; - &amp; 1 &amp; 1 \\
+E &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; - &amp; 1 \\
+F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
+\tag{4.5}
+\end{matrix}\]</span>
+</div>
+<div class="rcolumn-50">
+<span class="math display" id="eq:el">\[\begin{matrix}
+Origen &amp; Destino \\
+A      &amp; B       \\
+A      &amp; C       \\
+B      &amp; A       \\
+B      &amp; C       \\
+C      &amp; A       \\
+C      &amp; B       \\
+C      &amp; D       \\
+D      &amp; C       \\
+D      &amp; E       \\
+D      &amp; F       \\
+E      &amp; D       \\
+E      &amp; F       \\
+F      &amp; D       \\
+F      &amp; E      \\
+\tag{4.6}
+\end{matrix}\]</span>
+</div>
+</div>
 </div>
 <div id="lista-de-nodos" class="section level2">
 <h2><span class="header-section-number">4.3</span> Lista de Nodos</h2>
@@ -311,6 +486,15 @@ Figure 4.7: Lista de Aristas en la Table de Datos
 </ol>
 <pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Borgatti2018">
+<p>Borgatti, Stephen P., Martin G. Everett, and Jeffrey C. Johnson. 2018. <em>Analyzing Social Networks</em>. Sage.</p>
+</div>
+<div id="ref-Hanneman2005">
+<p>Hanneman, Robert A., and Mark Riddle. 2005. <em>Introduction to Social Network Methods</em>. University of California.</p>
 </div>
 </div>
             </section>

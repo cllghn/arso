@@ -4,6 +4,11 @@ output_dir: docs
 rmd_files: ["index.Rmd", 
             "01-introduction.Rmd",
             "02-working_with_network_data.Rmd",
+            "02-gephi.Rmd",
+            "02-types-of-data.Rmd",
+            "02-recording-data.Rmd",
+            "02-combine-aggregate.Rmd",
+            "02-extract-simplify.Rmd",
             "03-measures.Rmd",
             "04-applications.Rmd",
             "05-glossary.Rmd"
