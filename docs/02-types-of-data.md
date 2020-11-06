@@ -128,8 +128,8 @@ Una vez más, veamos algunos ejemplos de redes modo-dos utilizadas para mapear J
 
 Aunque no son el enfoque principal de ARSo, los datos de atributo se utilizan a menudo para acompañar el análisis de la red. Como se discutió anteriormente, a nivel de nodo, los atributos son características no relacionales de los nodos en un gráfico [@Cunningham2016]. Estos se recopilan por separado de las relaciones. Por ejemplo, considere las dos matrices siguientes \@ref(eq:small-matrix) \@ref(eq:attribute-matrix).
 
+:::: {.row}
 :::: {.lcolumn-50}
-
 \begin{matrix}
   & A & B & C & D & E & F \\
 A & - & 1 & 1 & 0 & 0 & 0 \\
@@ -140,7 +140,6 @@ E & 0 & 0 & 0 & 1 & - & 1 \\
 F & 0 & 0 & 0 & 1 & 1 & - \\
 (\#eq:small-matrix)
 \end{matrix}
-
 ::::
 
 :::: {.rcolumn-50}
@@ -154,6 +153,7 @@ E & Masculino & 20 \\
 F & Masculino & 25 \\
 (\#eq:attribute-matrix)
 \end{matrix}
+::::
 ::::
 
 La matriz de la izquierda es una sociomatriz simétrica de modo-uno, que contiene todas las relaciones entre el conjunto de nodos {A, B, C, D, E, F}. La matriz de la derecha contiene los atributos para el conjunto de nodos, específicamente, género y edad. La Figura \@ref(fig:attrs) combina estos datos, donde los nodos están coloreados por el atributo categórico (género) y dimensionados por las variables continuas (edad).

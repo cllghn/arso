@@ -117,8 +117,14 @@
 <li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
-<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a></li>
-<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a></li>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
+<li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
+<li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
+</ul></li>
 <li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
 <li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a><ul>
 <li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
@@ -331,6 +337,7 @@ Figure 3.3: Gráfico Bipartita
 <div id="datos-de-atributos" class="section level2">
 <h2><span class="header-section-number">3.3</span> Datos de Atributos</h2>
 <p>Aunque no son el enfoque principal de ARSo, los datos de atributo se utilizan a menudo para acompañar el análisis de la red. Como se discutió anteriormente, a nivel de nodo, los atributos son características no relacionales de los nodos en un gráfico <span class="citation">(Cunningham, Everton, and Murphy <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. Estos se recopilan por separado de las relaciones. Por ejemplo, considere las dos matrices siguientes <a href="tipos-de-datos-de-redes-sociales.html#eq:small-matrix">(3.4)</a> <a href="tipos-de-datos-de-redes-sociales.html#eq:attribute-matrix">(3.5)</a>.</p>
+<div class="row">
 <div class="lcolumn-50">
 <span class="math display" id="eq:small-matrix">\[\begin{matrix}
   &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
@@ -354,6 +361,7 @@ E &amp; Masculino &amp; 20 \\
 F &amp; Masculino &amp; 25 \\
 \tag{3.5}
 \end{matrix}\]</span>
+</div>
 </div>
 <p>La matriz de la izquierda es una sociomatriz simétrica de modo-uno, que contiene todas las relaciones entre el conjunto de nodos {A, B, C, D, E, F}. La matriz de la derecha contiene los atributos para el conjunto de nodos, específicamente, género y edad. La Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:attrs">3.4</a> combina estos datos, donde los nodos están coloreados por el atributo categórico (género) y dimensionados por las variables continuas (edad).</p>
 <div class="figure" style="text-align: center"><span id="fig:attrs"></span>
