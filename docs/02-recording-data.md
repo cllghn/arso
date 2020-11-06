@@ -221,6 +221,31 @@ Tradicionalmente, los analistas de ARSo tienden a mantener sus listas de aristas
 
 ### ¿Por qué usarlas o no?
 
+Las listas de aristas son comúnmente utilizadas por su simplicidad, eficiencia y versatilidad. Son simples pues no incluyen espacios de vínculos faltantes. Asimismo, el mantenerlas es simple pues cada fila representa una relación.  Adicionalmente so versátiles pues proveen flexibilidad en el numero y tipo de características de un vinculo que se pueden incluir. Como se ha mencionado previamente, el formato básico de una lista de aristas incluye dos columnas, sin embargo, no hay limite a la cantidad de variables que podemos agregar para describir cada vinculo, por ejemplo: dirigido/no dirigido, fecha, intensidad, tipo, peso, fuente de procedencia, etc.
+
+Las Figuras \@ref(fig:exp-el1), \@ref(fig:exp-el2) y \@ref(fig:exp-el3) son ejemplos de listas de aristas. La primera lista de aristas, Figura \@ref(fig:exp-el1), contiene los elementos mínimos requeridos; es decir, dos columnas nombradas que representan los dos vértices conectados por un vínculo relacional. Cada fila representa una relación, sin embargo, no hay manera de diferenciar si estas relaciones son dirigidas/no dirigidas o si ambos vínculos representan el mismo tipo de relaciones (por ejemplo, familiares, financieras, románticas, etc.). Es por ello por lo que la segunda lista, Figura \@ref(fig:exp-el2), expande sobre la primera al agregar un par de variables. En este ejemplo, las nuevas columnas permiten diferenciar el tipo de relación e incluso agregan información temporal y pesos a cada enlace. El último ejemplo, Figura \@ref(fig:exp-el3), continúa expandiendo la lista de aristas y presenta una lista con múltiples tipos de relaciones y multimodo. Es decir, algunas relaciones son modo-uno, mientras que otras son modo-dos. 
+
+<div class="figure" style="text-align: center">
+<!--html_preserve--><div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"filter":"none","data":[["A","B"],["B","C"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<p class="caption">(\#fig:exp-el1)Lista de Aristas Básica</p>
+</div>
+
+<br>
+
+<div class="figure" style="text-align: center">
+<!--html_preserve--><div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"filter":"none","data":[["A","B"],["B","C"],["Comunicación","Financiera"],["No dirigido","Dirigido"],["2020-11-03","2020-11-03"],[5,10]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n      <th>Tipo<\/th>\n      <th>Fecha<\/th>\n      <th>Peso<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<p class="caption">(\#fig:exp-el2)Lista de Aristas Expandida</p>
+</div>
+
+<br>
+
+<div class="figure" style="text-align: center">
+<!--html_preserve--><div id="htmlwidget-e5c8c404fe174e4c81bd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e5c8c404fe174e4c81bd">{"x":{"filter":"none","data":[["A","B","A"],["B","C","1"],["Comunicación","Financiera","Afiliación"],["No dirigido","Dirigido","No dirigido"],["2020-11-03","2020-11-03","2020-11-03"],[5,10,7]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n      <th>Tipo<\/th>\n      <th>Fecha<\/th>\n      <th>Peso<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<p class="caption">(\#fig:exp-el3)Lista de Aristas Expandida y Multimodo</p>
+</div>
 
 ## Lista de Nodos
 

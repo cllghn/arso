@@ -95,3 +95,6 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
+fig:exp-el1
+fig:exp-el2
+fig:exp-el3

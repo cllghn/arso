@@ -224,6 +224,58 @@ Tradicionalmente, los analistas de ARSo tienden a mantener sus listas de aristas
 
 ### ¿Por qué usarlas o no?
 
+Las listas de aristas son comúnmente utilizadas por su simplicidad, eficiencia y versatilidad. Son simples pues no incluyen espacios de vínculos faltantes. Asimismo, el mantenerlas es simple pues cada fila representa una relación.  Adicionalmente so versátiles pues proveen flexibilidad en el numero y tipo de características de un vinculo que se pueden incluir. Como se ha mencionado previamente, el formato básico de una lista de aristas incluye dos columnas, sin embargo, no hay limite a la cantidad de variables que podemos agregar para describir cada vinculo, por ejemplo: dirigido/no dirigido, fecha, intensidad, tipo, peso, fuente de procedencia, etc.
+
+Las Figuras \@ref(fig:exp-el1), \@ref(fig:exp-el2) y \@ref(fig:exp-el3) son ejemplos de listas de aristas. La primera lista de aristas, Figura \@ref(fig:exp-el1), contiene los elementos mínimos requeridos; es decir, dos columnas nombradas que representan los dos vértices conectados por un vínculo relacional. Cada fila representa una relación, sin embargo, no hay manera de diferenciar si estas relaciones son dirigidas/no dirigidas o si ambos vínculos representan el mismo tipo de relaciones (por ejemplo, familiares, financieras, románticas, etc.). Es por ello por lo que la segunda lista, Figura \@ref(fig:exp-el2), expande sobre la primera al agregar un par de variables. En este ejemplo, las nuevas columnas permiten diferenciar el tipo de relación e incluso agregan información temporal y pesos a cada enlace. El último ejemplo, Figura \@ref(fig:exp-el3), continúa expandiendo la lista de aristas y presenta una lista con múltiples tipos de relaciones y multimodo. Es decir, algunas relaciones son modo-uno, mientras que otras son modo-dos. 
+
+```{r exp-el1, fig.cap = "Lista de Aristas Básica"}
+data.frame("Origen"   = c("A", "B"),
+           "Destino"  = c("B", "C")) %>%
+  DT::datatable(class = 'cell-border stripe',
+                rownames = FALSE,
+                options = list(dom = 't'))
+```
+
+<br>
+
+```{r exp-el2, fig.cap = "Lista de Aristas Expandida"}
+data.frame(
+  "Origen"   = c("A", "B"),
+  "Destino"  = c("B", "C"),
+  "Relación" = c("Comunicación",
+                 "Financiera"),
+  "Tipo"     = c("No dirigido",
+                 "Dirigido"),
+  "Fecha"    = c("2020-11-03",
+                 "2020-11-03"),
+  "Peso"     = c(5, 10)
+  ) %>%
+  DT::datatable(class = 'cell-border stripe',
+                rownames = FALSE,
+                options = list(dom = 't'))
+```
+
+<br>
+
+```{r exp-el3, fig.cap = "Lista de Aristas Expandida y Multimodo"}
+data.frame(
+  "Origen"   = c("A", "B", "A"),
+  "Destino"  = c("B", "C", 1),
+  "Relación" = c("Comunicación",
+                 "Financiera",
+                 "Afiliación"),
+  "Tipo"     = c("No dirigido",
+                 "Dirigido",
+                 "No dirigido"),
+  "Fecha"    = c("2020-11-03",
+                 "2020-11-03",
+                 "2020-11-03"),
+  "Peso"     = c(5, 10, 7)
+  ) %>%
+  DT::datatable(class = 'cell-border stripe',
+                rownames = FALSE,
+                options = list(dom = 't'))
+```
 
 ## Lista de Nodos
 
