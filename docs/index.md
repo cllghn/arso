@@ -16,7 +16,7 @@ Este es el sitio de Análisis de Redes Sociales (ARSo) Oscuras. Este libro elect
 
 El contenido de este documento fue diseñado conjuntamente entre el [Ambiente Común de Investigación Operativa (CORE Lab, por sus siglas en inglés)](https://nps.edu/web/core) de la [Escuela Naval de Post Grado (NPS, por sus siglas en inglés)](https://nps.edu/) y la [Escuela Superior de Guerra del Ejército, Escuela de Post Grado (ESGE-EPG), Lima, Perú](http://esge.edu.pe/esge-epg/).
 
-<br />
+<br/>
 
 <img src="images/core-esge.png" width="75%" style="display: block; margin: auto;" />
 
@@ -30,7 +30,7 @@ El desarrollo de este libro fue posible gracias al patrocinio del [Programa de B
 
 ### Editores {-}
 
-**Gral. de Brig. (R) Augusto Álvarez Torres (Ret)** ostenta los títulos académicos de Maestro en Seguridad, Defensa y Desarrollo Nacional y en Ciencias Militares con mención en Planeamiento Estratégico y Toma de Decisiones, es egresado de la Escuela de Post Grado de Ciencias Políticas de las Universidad Ricardo Pala, ha seguido cursos de Terrorismo e Insurgencia, Crimen Organizado, Políticas y Estrategias  de Seguridad, Estrategia y Seguridad Internacional, Relaciones Político, Civil, Militar y Liderazgo Estratégico estrategia de Seguridad y Defensa frente a las Amenazas Complejas en la UND/CHDS- EE. UU. Los cursos de Análisis de redes Nivel I y II, en la Escuela Naval de Post Grado en Monterey, California EE. UU. Actualmente se desempeña como Catedrático en el [Centro de Altos Estudios Nacionales (CAEN)](https://www.caen.edu.pe/wordpress/), Profesor Principal de la Catedra de Historia Militar y Profesor Adjunto en la [Universidad Conjunta de Operaciones Especiales en Florida, EE. UU](https://www.socom.mil/JSOU/Pages/default.aspx).
+**Gral. de Brig. EP (R) Augusto Manuel E. Álvarez Torres** ostenta los títulos académicos de Maestro en Seguridad, Defensa y Desarrollo Nacional y en Ciencias Militares con mención en Planeamiento Estratégico y Toma de Decisiones, es egresado de la Escuela de Post Grado de Ciencias Políticas de las Universidad Ricardo Pala, ha seguido cursos de Terrorismo e Insurgencia, Crimen Organizado, Políticas y Estrategias  de Seguridad, Estrategia y Seguridad Internacional, Relaciones Político, Civil, Militar y Liderazgo Estratégico estrategia de Seguridad y Defensa frente a las Amenazas Complejas en la UND/CHDS- EE. UU. Los cursos de Análisis de redes Nivel I y II, en la Escuela Naval de Post Grado en Monterey, California EE. UU. Actualmente se desempeña como Catedrático en el [Centro de Altos Estudios Nacionales (CAEN)](https://www.caen.edu.pe/wordpress/), Profesor Principal de la Catedra de Historia Militar y Profesor Adjunto en la [Universidad Conjunta de Operaciones Especiales en Florida, EE. UU](https://www.socom.mil/JSOU/Pages/default.aspx).
 
 **Christopher J. Callaghan** es un investigador asociado en el CORE Lab en el [Departamento de Análisis de Defensa](https://nps.edu/web/da) en NPS. Su trabajo aprovecha el análisis de datos de código abierto para comprender y modelar una variedad de problemas de seguridad nacional e internacional. Antes de unirse al NPS, Chris se desempeñó como investigador asociado en el Instituto Middlebury de Estudios Internacionales (MIIS, por sus sus siglas en inglés) en Monterey California, donde trabajó en múltiples esfuerzos relacionados con la "ciudadanía" local e internacional.
 

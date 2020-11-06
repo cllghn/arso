@@ -236,7 +236,7 @@ data.frame("Origen"   = c("A", "B"),
                 options = list(dom = 't'))
 ```
 
-<br>
+</br>
 
 ```{r exp-el2, fig.cap = "Lista de Aristas Expandida"}
 data.frame(

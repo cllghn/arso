@@ -231,7 +231,7 @@ Las Figuras \@ref(fig:exp-el1), \@ref(fig:exp-el2) y \@ref(fig:exp-el3) son ejem
 <p class="caption">(\#fig:exp-el1)Lista de Aristas Básica</p>
 </div>
 
-<br>
+</br>
 
 <div class="figure" style="text-align: center">
 <!--html_preserve--><div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:auto;" class="datatables html-widget"></div>
@@ -242,8 +242,8 @@ Las Figuras \@ref(fig:exp-el1), \@ref(fig:exp-el2) y \@ref(fig:exp-el3) son ejem
 <br>
 
 <div class="figure" style="text-align: center">
-<!--html_preserve--><div id="htmlwidget-e5c8c404fe174e4c81bd" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e5c8c404fe174e4c81bd">{"x":{"filter":"none","data":[["A","B","A"],["B","C","1"],["Comunicación","Financiera","Afiliación"],["No dirigido","Dirigido","No dirigido"],["2020-11-03","2020-11-03","2020-11-03"],[5,10,7]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n      <th>Tipo<\/th>\n      <th>Fecha<\/th>\n      <th>Peso<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"filter":"none","data":[["A","B","A"],["B","C","1"],["Comunicación","Financiera","Afiliación"],["No dirigido","Dirigido","No dirigido"],["2020-11-03","2020-11-03","2020-11-03"],[5,10,7]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n      <th>Tipo<\/th>\n      <th>Fecha<\/th>\n      <th>Peso<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 <p class="caption">(\#fig:exp-el3)Lista de Aristas Expandida y Multimodo</p>
 </div>
 
