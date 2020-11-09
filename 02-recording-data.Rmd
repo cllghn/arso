@@ -224,11 +224,11 @@ Tradicionalmente, los analistas de ARSo tienden a mantener sus listas de aristas
 
 ### ¿Por qué usarlas o no?
 
-Las listas de aristas son comúnmente utilizadas por su simplicidad, eficiencia y versatilidad. Son simples pues no incluyen espacios de vínculos faltantes. Asimismo, el mantenerlas es simple pues cada fila representa una relación.  Adicionalmente so versátiles pues proveen flexibilidad en el numero y tipo de características de un vinculo que se pueden incluir. Como se ha mencionado previamente, el formato básico de una lista de aristas incluye dos columnas, sin embargo, no hay limite a la cantidad de variables que podemos agregar para describir cada vinculo, por ejemplo: dirigido/no dirigido, fecha, intensidad, tipo, peso, fuente de procedencia, etc.
+Las listas de aristas son comúnmente utilizadas por su simplicidad, eficiencia y versatilidad. Son eficientes pues no incluyen espacios vacíos para vínculos faltantes. Asimismo, el mantenerlas es simple pues cada fila representa una relación.  Adicionalmente so versátiles pues proveen flexibilidad en el numero y tipo de características de un vinculo que se pueden incluir. Como se ha mencionado previamente, el formato básico de una lista de aristas incluye dos columnas, sin embargo, no hay limite a la cantidad de variables que podemos agregar para describir cada vinculo, por ejemplo: dirigido/no dirigido, fecha, intensidad, tipo, peso, fuente de procedencia, etc.
 
-Las Figuras \@ref(fig:exp-el1), \@ref(fig:exp-el2) y \@ref(fig:exp-el3) son ejemplos de listas de aristas. La primera lista de aristas, Figura \@ref(fig:exp-el1), contiene los elementos mínimos requeridos; es decir, dos columnas nombradas que representan los dos vértices conectados por un vínculo relacional. Cada fila representa una relación, sin embargo, no hay manera de diferenciar si estas relaciones son dirigidas/no dirigidas o si ambos vínculos representan el mismo tipo de relaciones (por ejemplo, familiares, financieras, románticas, etc.). Es por ello por lo que la segunda lista, Figura \@ref(fig:exp-el2), expande sobre la primera al agregar un par de variables. En este ejemplo, las nuevas columnas permiten diferenciar el tipo de relación e incluso agregan información temporal y pesos a cada enlace. El último ejemplo, Figura \@ref(fig:exp-el3), continúa expandiendo la lista de aristas y presenta una lista con múltiples tipos de relaciones y multimodo. Es decir, algunas relaciones son modo-uno, mientras que otras son modo-dos. 
+Las Figuras \@ref(fig:el1), \@ref(fig:el2) y \@ref(fig:el3) son ejemplos de listas de aristas. La primera lista de aristas, Figura \@ref(fig:el1), contiene los elementos mínimos requeridos; es decir, dos columnas nombradas que representan los dos vértices conectados por un vínculo relacional. Cada fila representa una relación, sin embargo, no hay manera de diferenciar si estas relaciones son dirigidas/no dirigidas o si ambos vínculos representan el mismo tipo de relaciones (por ejemplo, familiares, financieras, románticas, etc.). Es por ello por lo que la segunda lista, Figura \@ref(fig:el2), expande sobre la primera al agregar un par de variables. En este ejemplo, las nuevas columnas permiten diferenciar el tipo de relación e incluso agregan información temporal y pesos a cada enlace. El último ejemplo, Figura \@ref(fig:el3), continúa expandiendo la lista de aristas y presenta una lista con múltiples tipos de relaciones y multimodo. Es decir, algunas relaciones son modo-uno, mientras que otras son modo-dos. 
 
-```{r exp-el1, fig.cap = "Lista de Aristas Básica"}
+```{r el1, fig.cap = "Lista de Aristas Básica"}
 data.frame("Origen"   = c("A", "B"),
            "Destino"  = c("B", "C")) %>%
   DT::datatable(class = 'cell-border stripe',
@@ -236,9 +236,8 @@ data.frame("Origen"   = c("A", "B"),
                 options = list(dom = 't'))
 ```
 
-</br>
 
-```{r exp-el2, fig.cap = "Lista de Aristas Expandida"}
+```{r el2, fig.cap = "Lista de Aristas Expandida"}
 data.frame(
   "Origen"   = c("A", "B"),
   "Destino"  = c("B", "C"),
@@ -255,9 +254,8 @@ data.frame(
                 options = list(dom = 't'))
 ```
 
-<br>
 
-```{r exp-el3, fig.cap = "Lista de Aristas Expandida y Multimodo"}
+```{r el3, fig.cap = "Lista de Aristas Expandida y Multimodo"}
 data.frame(
   "Origen"   = c("A", "B", "A"),
   "Destino"  = c("B", "C", 1),
@@ -279,7 +277,34 @@ data.frame(
 
 ## Lista de Nodos
 
-(agregar texto aquí)
+La lista de nodos, a diferencia de la lista de aristas, contiene los datos no relacionales de cada nodo en un sociograma. Por consiguiente, es común que ambas listas sean mantenidas de manera independiente. 
+
+Es decir, en una lista de aristas es probable que un nodo aparezca de manera repetida, es común que cada actor en una red este atado a múltiples otros. En contraste, en una lista de nodos es común (y recomendable) el tener a un solo registro por actor. Por ejemplo, en la lista de aristas \ref(eq:el4) vemos cuatro nodos {A, B, C, D} conectados por tres diferentes tipos de relaciones. La lista de nodos correspondiente \ref(eq:nl1) incluye información de estos nodos como género o edad, estas son características no relacionales de aquellos nodos en la red. Aunque podemos repetir el registro de cada actor, no es necesario normalmente el software solo toma en cuenta un solo registro, normalmente el último en la lista. 
+
+:::: {.row}
+:::: {.lcolumn-50}
+\begin{matrix}
+Origen & Destino & Relación \\
+A      & B       & Amistad  \\
+A      & C       & Familia  \\
+A      & D       & Finanzas \\
+(\#eq:el4)
+\end{matrix}
+::::
+
+:::: {.rcolumn-50}
+\begin{matrix}
+Id & Género    & Edad \\
+A  & Masculino & 20 \\
+B  & Femenino  & 20 \\
+C  & Femenino  & 20 \\
+D  & Masculino & 29 \\
+(\#eq:nl1)
+\end{matrix}
+::::
+
+Por su parte, Gephi es capaz de ingerir listas de nodos. Para ello, requiere que esta tabla contenga el nombre de columna `Id`. Esta variable representa la columna que el software tomara en cuenta como fuente de identificadores únicos para los nodos en una red. Por ejemplo, en la lista de aristas \ref(eq:nl1) vemos entradas correspondientes a los identificadores de cada nodo en la lista de aristas.
+
 
 ## Ejercicio Práctico
 
