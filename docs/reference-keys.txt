@@ -34,6 +34,8 @@ eq:el
 fig:el1
 fig:el2
 fig:el3
+eq:el4
+eq:nl1
 fig:koschade
 fig:gv
 fig:import
@@ -98,5 +100,3 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
-eq:el4
-eq:nl1
