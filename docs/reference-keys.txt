@@ -31,6 +31,9 @@ eq:mat-op2
 eq:mat-op3
 eq:mat
 eq:el
+fig:el1
+fig:el2
+fig:el3
 fig:koschade
 fig:gv
 fig:import
@@ -95,6 +98,5 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
-fig:exp-el1
-fig:exp-el2
-fig:exp-el3
+eq:el4
+eq:nl1

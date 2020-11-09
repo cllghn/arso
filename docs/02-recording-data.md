@@ -221,35 +221,61 @@ Tradicionalmente, los analistas de ARSo tienden a mantener sus listas de aristas
 
 ### ¿Por qué usarlas o no?
 
-Las listas de aristas son comúnmente utilizadas por su simplicidad, eficiencia y versatilidad. Son simples pues no incluyen espacios de vínculos faltantes. Asimismo, el mantenerlas es simple pues cada fila representa una relación.  Adicionalmente so versátiles pues proveen flexibilidad en el numero y tipo de características de un vinculo que se pueden incluir. Como se ha mencionado previamente, el formato básico de una lista de aristas incluye dos columnas, sin embargo, no hay limite a la cantidad de variables que podemos agregar para describir cada vinculo, por ejemplo: dirigido/no dirigido, fecha, intensidad, tipo, peso, fuente de procedencia, etc.
+Las listas de aristas son comúnmente utilizadas por su simplicidad, eficiencia y versatilidad. Son eficientes pues no incluyen espacios vacíos para vínculos faltantes. Asimismo, el mantenerlas es simple pues cada fila representa una relación.  Adicionalmente so versátiles pues proveen flexibilidad en el numero y tipo de características de un vinculo que se pueden incluir. Como se ha mencionado previamente, el formato básico de una lista de aristas incluye dos columnas, sin embargo, no hay limite a la cantidad de variables que podemos agregar para describir cada vinculo, por ejemplo: dirigido/no dirigido, fecha, intensidad, tipo, peso, fuente de procedencia, etc.
 
-Las Figuras \@ref(fig:exp-el1), \@ref(fig:exp-el2) y \@ref(fig:exp-el3) son ejemplos de listas de aristas. La primera lista de aristas, Figura \@ref(fig:exp-el1), contiene los elementos mínimos requeridos; es decir, dos columnas nombradas que representan los dos vértices conectados por un vínculo relacional. Cada fila representa una relación, sin embargo, no hay manera de diferenciar si estas relaciones son dirigidas/no dirigidas o si ambos vínculos representan el mismo tipo de relaciones (por ejemplo, familiares, financieras, románticas, etc.). Es por ello por lo que la segunda lista, Figura \@ref(fig:exp-el2), expande sobre la primera al agregar un par de variables. En este ejemplo, las nuevas columnas permiten diferenciar el tipo de relación e incluso agregan información temporal y pesos a cada enlace. El último ejemplo, Figura \@ref(fig:exp-el3), continúa expandiendo la lista de aristas y presenta una lista con múltiples tipos de relaciones y multimodo. Es decir, algunas relaciones son modo-uno, mientras que otras son modo-dos. 
+Las Figuras \@ref(fig:el1), \@ref(fig:el2) y \@ref(fig:el3) son ejemplos de listas de aristas. La primera lista de aristas, Figura \@ref(fig:el1), contiene los elementos mínimos requeridos; es decir, dos columnas nombradas que representan los dos vértices conectados por un vínculo relacional. Cada fila representa una relación, sin embargo, no hay manera de diferenciar si estas relaciones son dirigidas/no dirigidas o si ambos vínculos representan el mismo tipo de relaciones (por ejemplo, familiares, financieras, románticas, etc.). Es por ello por lo que la segunda lista, Figura \@ref(fig:el2), expande sobre la primera al agregar un par de variables. En este ejemplo, las nuevas columnas permiten diferenciar el tipo de relación e incluso agregan información temporal y pesos a cada enlace. El último ejemplo, Figura \@ref(fig:el3), continúa expandiendo la lista de aristas y presenta una lista con múltiples tipos de relaciones y multimodo. Es decir, algunas relaciones son modo-uno, mientras que otras son modo-dos. 
 
 <div class="figure" style="text-align: center">
 <!--html_preserve--><div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:auto;" class="datatables html-widget"></div>
 <script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"filter":"none","data":[["A","B"],["B","C"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
-<p class="caption">(\#fig:exp-el1)Lista de Aristas Básica</p>
+<p class="caption">(\#fig:el1)Lista de Aristas Básica</p>
 </div>
 
-</br>
 
 <div class="figure" style="text-align: center">
-<!--html_preserve--><div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"filter":"none","data":[["A","B"],["B","C"],["Comunicación","Financiera"],["No dirigido","Dirigido"],["2020-11-03","2020-11-03"],[5,10]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n      <th>Tipo<\/th>\n      <th>Fecha<\/th>\n      <th>Peso<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
-<p class="caption">(\#fig:exp-el2)Lista de Aristas Expandida</p>
+<!--html_preserve--><div id="htmlwidget-e5c8c404fe174e4c81bd" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e5c8c404fe174e4c81bd">{"x":{"filter":"none","data":[["A","B"],["B","C"],["Comunicación","Financiera"],["No dirigido","Dirigido"],["2020-11-03","2020-11-03"],[5,10]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n      <th>Tipo<\/th>\n      <th>Fecha<\/th>\n      <th>Peso<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<p class="caption">(\#fig:el2)Lista de Aristas Expandida</p>
 </div>
 
-<br>
 
 <div class="figure" style="text-align: center">
-<!--html_preserve--><div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"filter":"none","data":[["A","B","A"],["B","C","1"],["Comunicación","Financiera","Afiliación"],["No dirigido","Dirigido","No dirigido"],["2020-11-03","2020-11-03","2020-11-03"],[5,10,7]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n      <th>Tipo<\/th>\n      <th>Fecha<\/th>\n      <th>Peso<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
-<p class="caption">(\#fig:exp-el3)Lista de Aristas Expandida y Multimodo</p>
+<!--html_preserve--><div id="htmlwidget-36aa3d2a04d42bbc2145" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-36aa3d2a04d42bbc2145">{"x":{"filter":"none","data":[["A","B","A"],["B","C","1"],["Comunicación","Financiera","Afiliación"],["No dirigido","Dirigido","No dirigido"],["2020-11-03","2020-11-03","2020-11-03"],[5,10,7]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n      <th>Tipo<\/th>\n      <th>Fecha<\/th>\n      <th>Peso<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","columnDefs":[{"className":"dt-right","targets":5}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<p class="caption">(\#fig:el3)Lista de Aristas Expandida y Multimodo</p>
 </div>
 
 ## Lista de Nodos
 
-(agregar texto aquí)
+La lista de nodos, a diferencia de la lista de aristas, contiene los datos no relacionales de cada nodo en un sociograma. Por consiguiente, es común que ambas listas sean mantenidas de manera independiente. 
+
+Es decir, en una lista de aristas es probable que un nodo aparezca de manera repetida, es común que cada actor en una red este atado a múltiples otros. En contraste, en una lista de nodos es común (y recomendable) el tener a un solo registro por actor. Por ejemplo, en la lista de aristas \ref(eq:el4) vemos cuatro nodos {A, B, C, D} conectados por tres diferentes tipos de relaciones. La lista de nodos correspondiente \ref(eq:nl1) incluye información de estos nodos como género o edad, estas son características no relacionales de aquellos nodos en la red. Aunque podemos repetir el registro de cada actor, no es necesario normalmente el software solo toma en cuenta un solo registro, normalmente el último en la lista. 
+
+:::: {.row}
+:::: {.lcolumn-50}
+\begin{matrix}
+Origen & Destino & Relación \\
+A      & B       & Amistad  \\
+A      & C       & Familia  \\
+A      & D       & Finanzas \\
+(\#eq:el4)
+\end{matrix}
+::::
+
+:::: {.rcolumn-50}
+\begin{matrix}
+Id & Género    & Edad \\
+A  & Masculino & 20 \\
+B  & Femenino  & 20 \\
+C  & Femenino  & 20 \\
+D  & Masculino & 29 \\
+(\#eq:nl1)
+\end{matrix}
+::::
+::::
+
+Por su parte, Gephi es capaz de ingerir listas de nodos. Para ello, requiere que esta tabla contenga el nombre de columna `Id`. Esta variable representa la columna que el software tomara en cuenta como fuente de identificadores únicos para los nodos en una red. Por ejemplo, en la lista de aristas \ref(eq:nl1) vemos entradas correspondientes a los identificadores de cada nodo en la lista de aristas.
+
 
 ## Ejercicio Práctico
 
