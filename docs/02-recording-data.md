@@ -249,7 +249,7 @@ Las Figuras \@ref(fig:el1), \@ref(fig:el2) y \@ref(fig:el3) son ejemplos de list
 
 La lista de nodos, a diferencia de la lista de aristas, contiene los datos no relacionales de cada nodo en un sociograma. Por consiguiente, es común que ambas listas sean mantenidas de manera independiente. 
 
-Es decir, en una lista de aristas es probable que un nodo aparezca de manera repetida, es común que cada actor en una red este atado a múltiples otros. En contraste, en una lista de nodos es común (y recomendable) el tener a un solo registro por actor. Por ejemplo, en la lista de aristas \ref(eq:el4) vemos cuatro nodos {A, B, C, D} conectados por tres diferentes tipos de relaciones. La lista de nodos correspondiente \ref(eq:nl1) incluye información de estos nodos como género o edad, estas son características no relacionales de aquellos nodos en la red. Aunque podemos repetir el registro de cada actor, no es necesario normalmente el software solo toma en cuenta un solo registro, normalmente el último en la lista. 
+Es decir, en una lista de aristas es probable que un nodo aparezca de manera repetida, es común que cada actor en una red este atado a múltiples otros. En contraste, en una lista de nodos es común (y recomendable) el tener a un solo registro por actor. Por ejemplo, en la lista de aristas \@ref(eq:el4) vemos cuatro nodos {A, B, C, D} conectados por tres diferentes tipos de relaciones. La lista de nodos correspondiente \@ref(eq:nl1) incluye información de estos nodos como género o edad, estas son características no relacionales de aquellos nodos en la red. Aunque podemos repetir el registro de cada actor, no es necesario normalmente el software solo toma en cuenta un solo registro, normalmente el último en la lista. 
 
 :::: {.row}
 :::: {.lcolumn-50}
@@ -274,7 +274,7 @@ D  & Masculino & 29 \\
 ::::
 ::::
 
-Por su parte, Gephi es capaz de ingerir listas de nodos. Para ello, requiere que esta tabla contenga el nombre de columna `Id`. Esta variable representa la columna que el software tomara en cuenta como fuente de identificadores únicos para los nodos en una red. Por ejemplo, en la lista de aristas \ref(eq:nl1) vemos entradas correspondientes a los identificadores de cada nodo en la lista de aristas.
+Por su parte, Gephi es capaz de ingerir listas de nodos. Para ello, requiere que esta tabla contenga el nombre de columna `Id`. Esta variable representa la columna que el software tomara en cuenta como fuente de identificadores únicos para los nodos en una red. Por ejemplo, en la lista de aristas \@ref(eq:nl1) vemos entradas correspondientes a los identificadores de cada nodo en la lista de aristas.
 
 
 ## Ejercicio Práctico
