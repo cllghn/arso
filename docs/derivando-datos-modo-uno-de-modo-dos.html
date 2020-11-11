@@ -85,6 +85,7 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores-1"><i class="fa fa-check"></i>Colaboradores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>I Introducción</b></span></li>
@@ -133,10 +134,12 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a><ul>
-<li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.1</b> Ejercicio Práctico</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.1.1</b> Antes de empezar</a></li>
-<li class="chapter" data-level="5.1.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.1.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
-<li class="chapter" data-level="5.1.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.1.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
+<li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
+<li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
+<li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
+<li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="combinar-y-agregar-redes.html"><a href="combinar-y-agregar-redes.html"><i class="fa fa-check"></i><b>6</b> Combinar y Agregar Redes</a></li>
@@ -168,76 +171,411 @@
             <section class="normal" id="section-">
 <div id="derivando-datos-modo-uno-de-modo-dos" class="section level1">
 <h1><span class="header-section-number">5</span> Derivando Datos Modo-Uno de Modo-Dos</h1>
-<p>(agregar texto aquí)</p>
+<p>En este capítulo volveremos a ver datos de modo-dos, sin embargo, el objetivo principal es pasar mas allí de la definición y explorar como estos sirven de precursores a relaciones de modo-uno. A lo largo de esta sección, retornaremos a la multiplicación de matrices, si no se siente cómodo con este proceso favor de repasar el capítulo previo. Este capitulo concluye con un ejercicio previo en Gephi.</p>
+<div id="modo-dos-qué-es" class="section level2">
+<h2><span class="header-section-number">5.1</span> Modo-Dos, ¿Qué es?</h2>
+<p>Para recapitular, las redes de modo-dos son aquellas que constan de dos grupos de nodos y donde los enlaces solo existen entre nodos de diferentes clases. A veces se les conoce como redes de afiliación, redes de membresía o incidencia <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span>. Imagínese una red modo-dos que conecta personas a eventos, por ejemplo, pandilleros conectados con pandillas o otros grupos ilícitos. Bajo la definición previa, los vínculos solo conectan pandilleros a organizaciones como en la Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:bip">5.1</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:bip"></span>
+<img src="02-twomode-to-one_files/figure-html/bip-1.png" alt="Gráfico Bipartita" width="70%" />
+<p class="caption">
+Figure 5.1: Gráfico Bipartita
+</p>
+</div>
+</div>
+<div id="proyección" class="section level2">
+<h2><span class="header-section-number">5.2</span> Proyección</h2>
+<p>El encontrar este tipo de datos en ARSo es común. Sin embargo, tradicionalmente el objetivo del análisis es mapear el espacio social entre miembros de una sola clase de nodo. En el ejemplo previo, un objetivo sería derivar las conexiones entre personas con base a sus membresías a organizaciones. Similarmente, es posible derivar relaciones entre organizaciones para entender las dinámicas entre organizaciones. El derivar relaciones de modo-uno empezando con datos de modo-dos es una de las herramientas mas comunes y relevantes utilizadas por analistas de ARSo. Este proceso se conoce como <strong>proyección</strong>.</p>
+<p>Para lograr esto, retornaremos a la multiplicación de matrices. Primero, examine <a href="derivando-datos-modo-uno-de-modo-dos.html#eq:bip-adj">(5.1)</a> la matriz de adyacencia con los datos de la Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:bip">5.1</a>. Note que los vínculos solo conectan personan con eventos, por consiguiente, asumimos que lo que tenemos es una red bipartita.</p>
+<span class="math display" id="eq:bip-adj">\[\begin{matrix}
+   &amp; A &amp; B &amp; C &amp; D &amp; E1 &amp; E2 &amp; E3 \\
+A  &amp; - &amp; 0 &amp; 0 &amp; 0 &amp; 1  &amp; 0  &amp; 0  \\
+B  &amp; 0 &amp; - &amp; 0 &amp; 0 &amp; 1  &amp; 0  &amp; 0  \\
+C  &amp; 0 &amp; 0 &amp; - &amp; 0 &amp; 1  &amp; 1  &amp; 0  \\
+D  &amp; 0 &amp; 0 &amp; 0 &amp; - &amp; 0  &amp; 1  &amp; 1  \\
+E1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; -  &amp; 0  &amp; 0  \\
+E2 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0  &amp; -  &amp; 0  \\
+E3 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0  &amp; 0  &amp; -  \\
+
+\tag{5.1}
+\end{matrix}\]</span>
+<p>Otra forma de representar los datos de una red bipartita, además de una lista de arista, es una matriz de incidencia. En esta, vemos las que las filas y las columnas contienen las diferentes clases. Por ejemplo, en la <a href="derivando-datos-modo-uno-de-modo-dos.html#eq:bip-inc">(5.2)</a> encontramos los eventos como columnas y las personas como filas.</p>
+<span class="math display" id="eq:bip-inc">\[\begin{matrix}
+  &amp; E1 &amp; E2 &amp; E3 \\
+A &amp; 1  &amp; 0  &amp; 0  \\
+B &amp; 1  &amp; 0  &amp; 0  \\
+C &amp; 1  &amp; 1  &amp; 0  \\
+D &amp; 0  &amp; 1  &amp; 1  \\ 
+
+\tag{5.2}
+\end{matrix}\]</span>
+<p>Para multiplicar matrices estas tienen que ser conformables, es decir, es decir el número de filas en la primera matriz es igual a el número de columnas en la segunda. Es por ello, que para multiplicar la matriz de incidencia <a href="derivando-datos-modo-uno-de-modo-dos.html#eq:bip-inc">(5.2)</a> consigo misma es necesario transponerla. Supongamos que la matriz de incidencia es <span class="math inline">\(M\)</span>, en esta situación el producto de la multiplicación de matrices seria <span class="math inline">\(MxM^T\)</span>. Por ejemplo, <a href="derivando-datos-modo-uno-de-modo-dos.html#eq:proj1">(5.3)</a> representa dicha multiplicación.</p>
+<p><span class="math display" id="eq:proj1">\[\begin{equation}
+\begin{matrix}
+  &amp; E1 &amp; E2 &amp; E3 \\
+A &amp; 1  &amp; 0  &amp; 0  \\
+B &amp; 1  &amp; 0  &amp; 0  \\
+C &amp; 1  &amp; 1  &amp; 0  \\
+D &amp; 0  &amp; 1  &amp; 1  \\ 
+\end{matrix}
+
+\enspace \times \enspace
+
+\begin{matrix}
+   &amp; A &amp; B &amp; C &amp; D \\
+E1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+E2 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \\
+E3 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+\end{matrix}
+\tag{5.3}
+\end{equation}\]</span></p>
+<p>El proceso de multiplicar dos matrices conformables es el mismo que hemos visto anteriormente. Empezando en el lado superior izquierdo de la primera matriz, multiplicamos cada célula de la primera matriz por los valores en cada célula de la primera columna de la segunda matriz, sumamos los resultados y proseguimos con cada fila de la primera matriz multiplicada por cada columna de la segunda <span class="citation">(Hanneman and Riddle <a href="#ref-Hanneman2005" role="doc-biblioref">2005</a>)</span>. La ecuación <a href="derivando-datos-modo-uno-de-modo-dos.html#eq:mult">(5.4)</a> incluye los resultados de dicho proceso.</p>
+<p><span class="math display" id="eq:mult">\[\begin{equation}
+\begin{smallmatrix}
+  &amp; A                 &amp; B                 &amp; C                 &amp; D                 \\
+A &amp; (1x1)+(0x0)+(0x0) &amp; (1x1)+(0x0)+(0x0) &amp; (1x1)+(0x1)+(0x0) &amp; (1x0)+(0x1)+(0x1) \\
+B &amp; (1x1)+(0x0)+(0x0) &amp; (1x1)+(0x0)+(0x0) &amp; (1x1)+(0x1)+(0x0) &amp; (1x0)+(0x1)+(0x1) \\
+C &amp; (1x1)+(1x0)+(0x0) &amp; (1x1)+(1x0)+(0x0) &amp; (1x1)+(1x1)+(0x0) &amp; (1x0)+(1x1)+(0x1) \\
+D &amp; (0x1)+(1x0)+(1x0) &amp; (0x1)+(1x0)+(1x0) &amp; (0x1)+(1x1)+(1x0) &amp; (0x0)+(1x1)+(1x1) \\
+
+\end{smallmatrix}
+
+\enspace = \enspace
+
+
+\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D \\
+A &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+C &amp; 1 &amp; 1 &amp; 2 &amp; 1 \\
+D &amp; 0 &amp; 0 &amp; 1 &amp; 2 \\
+\end{matrix}
+\tag{5.4}
+\end{equation}\]</span></p>
+<p>Después de remover la diagonal, vínculos con uno mismo, el resultado es una matriz de adyacencia entre personas <a href="derivando-datos-modo-uno-de-modo-dos.html#eq:proj1-clean">(5.5)</a>. Esta es simétrica y por lo tanto usualmente tratamos estos datos como no dirigidos puesto que es imposible determina que actor inicio el enlace y quien lo recibe . La Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:projected1">5.2</a> representa estos datos relacionales. Note que esta representación de la red solo contiene datos de modo-uno, por consiguiente, es posible “medir” el espacio social entre los actores. El ejemplo más simple de ello es la centralidad de grado, la cual es un conteo del número de vínculos de un actor y tiende a representar actividad, es decir, mientras más vínculos más activo es un nodo. En la Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:projected1">5.2</a> el actor C tiene una centralidad de grado equivalente a 3, es decir que es el nodo mas activo en participar en eventos con otros nodos y por ello lo encontramos con el numero mas alto de enlaces en esta pequeña red.</p>
+<span class="math display" id="eq:proj1-clean">\[\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D \\
+A &amp; 0 &amp; 1 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
+C &amp; 1 &amp; 1 &amp; 0 &amp; 1 \\
+D &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+
+\tag{5.5}
+\end{matrix}\]</span>
+<div class="figure" style="text-align: center"><span id="fig:projected1"></span>
+<img src="02-twomode-to-one_files/figure-html/projected1-1.png" alt="Red proyectada, persona-a-persona" width="70%" />
+<p class="caption">
+Figure 5.2: Red proyectada, persona-a-persona
+</p>
+</div>
+<p>Recuerde que el orden de las matrices en una multiplicación impacta el resultado. Por ejemplo, si la primera matriz en la multiplicación es la transpuesta <span class="math inline">\(M^T\)</span>, el producto de dicha operación sería <span class="math inline">\(M^TxM\)</span>.</p>
+<p><span class="math display" id="eq:proj2">\[\begin{equation}
+
+\begin{matrix}
+   &amp; A &amp; B &amp; C &amp; D \\
+E1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+E2 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \\
+E3 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+\end{matrix}
+
+\enspace \times \enspace
+
+\begin{matrix}
+  &amp; E1 &amp; E2 &amp; E3 \\
+A &amp; 1  &amp; 0  &amp; 0  \\
+B &amp; 1  &amp; 0  &amp; 0  \\
+C &amp; 1  &amp; 1  &amp; 0  \\
+D &amp; 0  &amp; 1  &amp; 1  \\ 
+\end{matrix}
+
+\tag{5.6}
+\end{equation}\]</span></p>
+<p>Una vez más, la multiplicación produce una matriz de adyacencia, pero en este caso los vínculos conectan eventos <a href="derivando-datos-modo-uno-de-modo-dos.html#eq:proj2-clean">(5.7)</a>.</p>
+<p><span class="math display" id="eq:proj2-clean">\[\begin{equation}
+\begin{smallmatrix}
+   &amp; E1                      &amp; E2                      &amp; E3                      \\
+E1 &amp; (1x1)+(1x1)+(1x1)+(0x0) &amp; (1x0)+(1x0)+(1x1)+(0x1) &amp; (1x0)+(1x0)+(1x0)+(0x1) \\
+E2 &amp; (0x1)+(0x1)+(1x1)+(1x0) &amp; (0x0)+(0x0)+(1x1)+(1x1) &amp; (0x0)+(0x0)+(1x0)+(1x1) \\
+E3 &amp; (0x1)+(0x1)+(0x1)+(1x0) &amp; (0x0)+(0x0)+(0x1)+(1x1) &amp; (0x0)+(0x0)+(0x0)+(1x1) \\
+\end{smallmatrix}
+
+\enspace = \enspace
+
+
+\begin{matrix}
+   &amp; E1 &amp; E2 &amp; E3  \\
+E1 &amp; 3  &amp; 1  &amp; 0 \\
+E2 &amp; 1  &amp; 2  &amp; 1 \\
+E3 &amp; 0  &amp; 1  &amp; 1 \\
+\end{matrix}
+\tag{5.7}
+\end{equation}\]</span></p>
+<p>Después de remover la diagonal, la matriz puede ser dibujar como grafo (ver Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:projected2">5.3</a>). En este gráfico el evento 2 (E2) tiene el grado de centralidad equivalente a dos, por lo cual asumimos que es el evento más popular o asistido por más personas que han asistido a otros eventos en la red.</p>
+<div class="figure" style="text-align: center"><span id="fig:projected2"></span>
+<img src="02-twomode-to-one_files/figure-html/projected2-1.png" alt="Red proyectada, evento-a-evento" width="70%" />
+<p class="caption">
+Figure 5.3: Red proyectada, evento-a-evento
+</p>
+</div>
+<p>Como puede ver, ambos productos de la proyección de una red bipartita pueden ser analizados por si mismos. En los siguientes capítulos de este texto presentamos una variedad de algoritmos analíticos diseñados para redes de modo-uno. Por consiguiente, antes de aplicar estas herramientas matemáticas, es crucial que el analista transforme sus datos a modo-uno.</p>
+<p>Es probable que se esté preguntando, “¿tendré que multiplicar matrices a mano para proyectar mis datos de modo-dos a modo-uno?” La respuesta es, “no”. Gephi, y otras herramientas de software tienen la habilidad de proyectar redes modo-dos. Es por ello que a continuación tendrá la oportunidad de trabajar con redes de modo-dos a través de un ejercicio practico con Gephi. Sin embargo, el contenido de esta sección le debe haber presentado suficiente información para entender las mecánicas del proceso que tomará el software.</p>
+</div>
 <div id="ejercicio-práctico-1" class="section level2">
-<h2><span class="header-section-number">5.1</span> Ejercicio Práctico</h2>
-<p>En este ejercicio exploraremos algunas de las propiedades de redes modo dos. Estas se diferencian de las redes de modo uno puesto que consisten en dos conjuntos de actores, por ejemplo, un conjunto de personas y otro de eventos. A veces se les conoce como redes de afiliación, redes de membresía o incidencia.</p>
+<h2><span class="header-section-number">5.3</span> Ejercicio Práctico</h2>
 <p>Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: Southern Club Women. Davis y sus colegas registraron la asistencia de 18 mujeres a 14 eventos sociales diferentes. El resultado es una matriz de persona por evento, por lo tanto, cada celda (<em>xij</em>) es igual a <code>1</code> si la persona (<em>i</em>) asistió al evento social (<em>j</em>), y <code>0</code> en el caso contrario.</p>
 <div id="antes-de-empezar-1" class="section level3">
-<h3><span class="header-section-number">5.1.1</span> Antes de empezar</h3>
+<h3><span class="header-section-number">5.3.1</span> Antes de empezar</h3>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Herramientas &gt; Plugins</em></p>
+</div>
+<div class="rcolumn-80">
 <ol style="list-style-type: decimal">
-<li>Para este laboratorio requerirá el módulo (plugin) complementario para procesar datos: <em>MultimodeNetworks Transformation</em>. Para comprobar si lo ha instalado previamente, cheque utilizando los comandos <em>Herramientas&gt;Plugins</em> que abrirá un cuadro de diálogo (Figura ##). Allí, haga clic en la pestaña <em>Instalados</em>, y si ve el módulo en esta lista, puede dar clic en <em>Cerrar</em>.</li>
-</ol>
-<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Si no lo ha instalado previamente, haga clic en la pestaña <em>Plugins disponibles</em>, desplácese hacia abajo y localice el módulo requerido (Figura ##). Marque la casilla a la izquierda de la opción y haga clic en <em>Instalar</em>. Siga las instrucciones. Para que estos cambios tomen efecto deberá reiniciar Gephi.</li>
-</ol>
-<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Después de reiniciar Gephi, asegúrese que el nuevo módulo está instalado correctamente. Para activarlo, use los comandos <em>Ventana&gt;Multimode Projections</em>. Esta acción abrirá una nueva ventanilla (Figura ##). Ahora está listo para comenzar con el resto del ejercicio.</li>
+<li>Para este laboratorio requerirá el módulo (plugin) complementario para procesar datos: <em>MultimodeNetworks Transformation</em>. Para comprobar si lo ha instalado previamente, cheque utilizando los comandos <em>Herramientas &gt; Plugins</em> que abrirá un cuadro de diálogo (Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:instalados">5.4</a>). Allí, haga clic en la pestaña <em>Instalados</em>, y si ve el módulo en esta lista, puede dar clic en <em>Cerrar</em>.</li>
 </ol>
 </div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:instalados"></span>
+<img src="images/02-05-01_installed.png" alt="Plugins instalados" width="75%" />
+<p class="caption">
+Figure 5.4: Plugins instalados
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+<ol start="2" style="list-style-type: decimal">
+<li>Si no lo ha instalado previamente, haga clic en la pestaña <em>Plugins disponibles</em>, desplácese hacia abajo y localice el módulo requerido (Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:disponibles">5.5</a>). Marque la casilla a la izquierda de la opción y haga clic en <em>Instalar</em>. Siga las instrucciones. Para que estos cambios tomen efecto deberá reiniciar Gephi.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:disponibles"></span>
+<img src="images/02-05-02_available.png" alt="Plugins disponibles" width="75%" />
+<p class="caption">
+Figure 5.5: Plugins disponibles
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Ventana &gt; Multimode Projections</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="3" style="list-style-type: decimal">
+<li>Después de reiniciar Gephi, asegúrese que el nuevo módulo está instalado correctamente. Para activarlo, use los comandos <em>Ventana &gt; Multimode Projections</em>. Esta acción abrirá una nueva ventanilla (Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:multimode">5.6</a>). Ahora está listo para comenzar con el resto del ejercicio.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:multimode"></span>
+<img src="images/02-05-03_pestana.png" alt="Pestaña MultiMode Projection" width="75%" />
+<p class="caption">
+Figure 5.6: Pestaña MultiMode Projection
+</p>
+</div>
+</div>
 <div id="importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas" class="section level3">
-<h3><span class="header-section-number">5.1.2</span> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</h3>
+<h3><span class="header-section-number">5.3.2</span> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</h3>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Ventana &gt; Multimode Projections</em></p>
+</div>
+<div class="rcolumn-80">
 <ol style="list-style-type: decimal">
 <li>Para importar datos de red modo-dos en formato de lista de bordes (o lista de aristas), usaremos dos conjuntos de datos. El primero, una lista de nodos que contiene una columna con la identificación del nodo (columna are requerida, <code>ID</code>), etiqueta y tipo de nodo. El segundo conjunto es una lista de aristas que contiene los vínculos entre nodos. Antes de importar los datos, eche un descargue a estos archivos (<strong>PLEASE PUT LINK TO DATA HERE</strong> and <strong>PLEASE PUT LINK TO DATA HERE</strong>).</li>
 </ol>
-<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:importar"></span>
+<img src="images/02-05-04_importar.png" alt="Cuadro de Diálogo: Importar Hoja de Cálculo" width="75%" />
+<p class="caption">
+Figure 5.7: Cuadro de Diálogo: Importar Hoja de Cálculo
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Archivo &gt; Abrir</em></p>
+</div>
+<div class="rcolumn-80">
 <ol start="2" style="list-style-type: decimal">
-<li>Primero debemos importar la lista de nodos. Utilice los comandos <em>Archivo&gt;Abrir</em> y luego localice y abra <code>davisnode.csv</code>. En el cuadro de diálogo (Figura ##) dígale a Gephi que el archivo es una tabla de nodos y asegure que el separador entre valores sea una coma. Haga clic en <em>Siguiente</em> y luego en el siguiente cuadro de diálogo seleccione <em>Terminar</em>. Como siempre, esto abrirá el informe de importación (Figura ##). Por favor indique que el tipo de grafo es <em>No dirigido</em>, la estrategia para combinar las aristas es <em>Mínimo</em>, y que desea agregar estos datos en un nuevo espacio de trabajo. Ahora, haga clic en <em>Aceptar</em>.</li>
+<li>Primero debemos importar la lista de nodos. Utilice los comandos <em>Archivo &gt; Abrir</em> y luego localice y abra <code>davisnode.csv</code>. En el cuadro de diálogo (Figura ##) dígale a Gephi que el archivo es una tabla de nodos y asegure que el separador entre valores sea una coma. Haga clic en <em>Siguiente</em> y luego en el siguiente cuadro de diálogo seleccione <em>Terminar</em>. Como siempre, esto abrirá el informe de importación (Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:nodes">5.8</a>). Por favor indique que el tipo de grafo es <em>No dirigido</em>, la estrategia para combinar las aristas es <em>Mínimo</em>, y que desea agregar estos datos en un nuevo espacio de trabajo. Ahora, haga clic en <em>Aceptar</em>.</li>
 </ol>
-<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:nodes"></span>
+<img src="images/02-05-04_nodos.png" alt="Informe de Importación para Lista de Nodos" width="75%" />
+<p class="caption">
+Figure 5.8: Informe de Importación para Lista de Nodos
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
 <ol start="3" style="list-style-type: decimal">
-<li><p>Observe los datos que ha importado en la tabla de nodos en la ventana <em>Laboratorio de datos</em>. Si cambia a la ventana <em>Vista general</em> verá nodos, pero no aristas (lo cual es correcto puesto que no hemos importado los enlaces).</p></li>
-<li><p>Ahora, importe la lista de aristas (<code>davisedge.csv</code>) utilizando los comandos <em>Archivo &gt; Abrir</em>. Esta vez, importe la lista de aristas, asegurándose que Gephi sepa que se está importando este tipo de archivo (<em>Tabla de Aristas</em>). Luego haga clic en <em>Siguiente</em> y en el siguiente cuadro de diálogo seleccione <em>Terminar</em>. En el informe de importación indique que el tipo de grafo es <em>No dirigido</em>, la estrategia para combinar las aristas es <em>Mínimo</em>, y que desea añadir al espacio de trabajo existente. Finalice dando clic en <em>Aceptar</em> (Figura ##).</p></li>
+<li>Observe los datos que ha importado en la tabla de nodos en la ventana <em>Laboratorio de datos</em>. Si cambia a la ventana <em>Vista general</em> verá nodos, pero no aristas (lo cual es correcto puesto que no hemos importado los enlaces).</li>
 </ol>
-<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Archivo &gt; Abrir</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="4" style="list-style-type: decimal">
+<li>Ahora, importe la lista de aristas (<code>davisedge.csv</code>) utilizando los comandos <em>Archivo &gt; Abrir</em>. Esta vez, importe la lista de aristas, asegurándose que Gephi sepa que se está importando este tipo de archivo (<em>Tabla de Aristas</em>). Luego haga clic en <em>Siguiente</em> y en el siguiente cuadro de diálogo seleccione <em>Terminar</em>. En el informe de importación indique que el tipo de grafo es <em>No dirigido</em>, la estrategia para combinar las aristas es <em>Mínimo</em>, y que desea añadir al espacio de trabajo existente. Finalice dando clic en <em>Aceptar</em> (Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:aristas">5.9</a>).</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:aristas"></span>
+<img src="images/02-05-06_aristas.png" alt="Informe de Importación para Lista de Aristas" width="75%" />
+<p class="caption">
+Figure 5.9: Informe de Importación para Lista de Aristas
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
 <ol start="5" style="list-style-type: decimal">
-<li>Puesto que la tabla de nodos incluye un atributo (<code>type</code>) que indica si un nodo es <code>persona</code> o <code>evento</code>, no necesitamos la herramienta <em>MultiMode Networks Projection</em> que descargamos para diferenciar entre clases de nodos.</li>
+<li>Puesto que la tabla de nodos incluye un atributo (<code>type</code>) que indica si un nodo es <code>persona</code> o <code>evento</code>, no necesitamos la herramienta <em>MultiMode Networks Projection</em> que descargamos para diferenciar entre clases de nodos.<br />
+</li>
 </ol>
-<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:bip-1"></span>
+<img src="images/02-05-07_bip_data.png" alt="Datos Bipartitas Desde Lista de Aristas" width="75%" />
+<p class="caption">
+Figure 5.10: Datos Bipartitas Desde Lista de Aristas
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Apariencia &gt; Nodos &gt; Color &gt; Partición &gt; –Escoge un attribute &gt; type</em></p>
+</div>
+<div class="rcolumn-80">
 <ol start="6" style="list-style-type: decimal">
 <li>Cambie a la ventana <em>Vista general</em> y, en la pestaña <em>Apariencia</em>, seleccione <em>Nodos &gt; Color &gt; Partición</em> y, a continuación, con el menú desplegable <em>–Elija un atributo</em>, seleccione <em>type</em>. Antes de presionar <em>Aplicar</em>, haga clic en el enlace <em>Paleta…</em> justo arriba del botón <em>Aplicar</em> y elija la paleta roja / azul. Ahora presione <em>Aplicar</em>. Una vez que haya terminado, guarde sus datos, pero no cierre Gephi. En la siguiente parte, exploraremos cómo “plegar” una red de modo-dos para crear dos redes de modo-uno.</li>
 </ol>
 </div>
+</div>
+</div>
 <div id="plegar-redes-de-modo-dos-en-gephi" class="section level3">
-<h3><span class="header-section-number">5.1.3</span> Plegar Redes de Modo-dos en Gephi</h3>
+<h3><span class="header-section-number">5.3.3</span> Plegar Redes de Modo-dos en Gephi</h3>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>MulitMode Networks Projection &gt; Load Attributes &gt; Attribute types &gt; type</em></p>
+</div>
+<div class="rcolumn-80">
 <ol style="list-style-type: decimal">
-<li><p>En la ventana <em>Descripción general</em>, seleccione la pestaña <em>MultiMode Networks Projection</em> que utilizamos en la segunda sección de este laboratorio. De clic en el botón <em>Load attributes</em> que cargara los atributos de los nodos. Ahora, en el menú desplegable <em>Attribute type</em> seleccione la opción <em>type</em>. Al plegar queremos crear dos redes de modo-uno, la primera entre personas y la segunda entre eventos.</p></li>
-<li><p>Comencemos creando la red “persona a persona” (mujeres conectadas solo a mujeres). Para hacer esto, modifique los menús desplegables <em>Left matrix</em> y <em>Right matrix</em> de la siguiente manera, luego de clic en <em>Run</em>.</p></li>
+<li>En la ventana <em>Descripción general</em>, seleccione la pestaña <em>MultiMode Networks Projection</em> que utilizamos en la segunda sección de este laboratorio. De clic en el botón <em>Load attributes</em> que cargara los atributos de los nodos. Ahora, en el menú desplegable <em>Attribute type</em> seleccione la opción <em>type</em>. Al plegar queremos crear dos redes de modo-uno, la primera entre personas y la segunda entre eventos.</li>
 </ol>
-<div id="htmlwidget-ac96cb3ee4656e2e9ec3" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ac96cb3ee4656e2e9ec3">{"x":{"filter":"none","data":[["Left Matrix","Right Matrix"],["Person - Event","Event - Person"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Left matrix &gt; Person–Event</em>
+<em>Right matrix &gt; Event–Person</em></p>
+<p><em>Run</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="2" style="list-style-type: decimal">
+<li>Comencemos creando la red “persona a persona” (mujeres conectadas solo a mujeres). Para hacer esto, modifique los menús desplegables <em>Left matrix</em> y <em>Right matrix</em> de la siguiente manera, luego de clic en <em>Run</em>.</li>
+</ol>
+</div>
+</div>
+<div id="htmlwidget-fe47e9e6e87dda4b00e5" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fe47e9e6e87dda4b00e5">{"x":{"filter":"none","data":[["Left Matrix","Right Matrix"],["Person - Event","Event - Person"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Filtros &gt; Atributos &gt; Partición &gt; type</em></p>
+<p><em>Consultas &gt; Person &gt; Filtrar </em></p>
+</div>
+<div class="rcolumn-80">
 <ol start="3" style="list-style-type: decimal">
-<li>Ahora agregaremos un filtro para extraer las relaciones de entre los nodos <code>person</code>. Seleccione la pestaña <em>Filtros</em>, abra la carpeta <em>Atributos</em> y localice la opción <em>type</em> dentro de la carpeta de <em>Partición</em>. Arrastre el filtro de <em>type</em> a la sección de <em>Consultas</em> (Figura ##). En respuesta a esta acción vera una nueva ventanilla al fondo de este panel (titulada <em>Partición (type) Configuración</em>), seleccione la opción <em>Person</em> y de clic en el botón <em>Fitrar</em> (Figura ##). Ahora exporte este grafico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón <em>Exportar el grafo filtrado en un nuevo espacio de trabajo</em> (el botón resaltado por una caja roja en la Figura ##).</li>
+<li>Ahora agregaremos un filtro para extraer las relaciones de entre los nodos <code>person</code>. Seleccione la pestaña <em>Filtros</em>, abra la carpeta <em>Atributos</em> y localice la opción <em>type</em> dentro de la carpeta de <em>Partición</em>. Arrastre el filtro de <em>type</em> a la sección de <em>Consultas</em> (Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:bip-3">5.11</a>). En respuesta a esta acción vera una nueva ventanilla al fondo de este panel (titulada <em>Partición (type) Configuración</em>), seleccione la opción <em>Person</em> y de clic en el botón <em>Fitrar</em> (Figura ##). Ahora exporte este grafico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón <em>Exportar el grafo filtrado en un nuevo espacio de trabajo</em> (el botón resaltado por una caja roja en la Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:bip-3">5.11</a>).</li>
 </ol>
-<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:bip-3"></span>
+<img src="images/02-05-09_bip_data_3.png" alt="Red Bipartita Filtrada, Partición = Person" width="75%" />
+<p class="caption">
+Figure 5.11: Red Bipartita Filtrada, Partición = Person
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Apariencia &gt; Nodos &gt; Tamaño &gt; Unique </em></p>
+</div>
+<div class="rcolumn-80">
 <ol start="4" style="list-style-type: decimal">
-<li>En el espacio de trabajo recién creado, modifique la visualización de la red usando las herramientas de diseño en Gephi. La Figura ## es un ejemplo (diseño, etiquetas y el tamaño de nodos editados). Observando esta esta red conteste las siguientes interrogantes. <strong>¿Qué mujeres parecen estar socialmente cerca entre sí? ¿Algunas son más centrales? ¿Qué mujeres parecen ser las más distantes del grupo?</strong></li>
+<li>En el espacio de trabajo recién creado, modifique la visualización de la red usando las herramientas de diseño en Gephi. La Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:bip-4">5.12</a> es un ejemplo (diseño, etiquetas y el tamaño de nodos editados). Observando esta esta red conteste las siguientes interrogantes. <strong>¿Qué mujeres parecen estar socialmente cerca entre sí? ¿Algunas son más centrales? ¿Qué mujeres parecen ser las más distantes del grupo?</strong></li>
 </ol>
-<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:bip-4"></span>
+<img src="images/02-05-09_bip_data_4.png" alt="Enlaces de Persona-a-Persona" width="75%" />
+<p class="caption">
+Figure 5.12: Enlaces de Persona-a-Persona
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>MultiMode Networks Projection</em></p>
+<p><em>Right matrix &gt; Event–Person</em>
+<em>Left matrix &gt; Person–Event</em></p>
+<p><em>Run</em></p>
+</div>
+<div class="rcolumn-80">
 <ol start="5" style="list-style-type: decimal">
 <li>Regrese al espacio previo de trabajo donde generó la red de modo-uno. En la ventanilla de <em>Filtros</em> seleccione <em>Auto aplicar</em> (al hacer esto el botón cambiará y dirá <em>Fitrar</em>). Regrese a la pestaña <em>MultiMode Networks Projection</em>, modifique los menús desplegables <em>Left matrix</em> y <em>Right matrix</em> de la siguiente manera, luego de clic en <em>Run</em>.</li>
 </ol>
-<div id="htmlwidget-e5c8c404fe174e4c81bd" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e5c8c404fe174e4c81bd">{"x":{"filter":"none","data":[["Left Matrix","Right Matrix"],["Event - Person","Person - Event"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="htmlwidget-fe47e9e6e87dda4b00e5" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fe47e9e6e87dda4b00e5">{"x":{"filter":"none","data":[["Left Matrix","Right Matrix"],["Event - Person","Person - Event"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Filtros &gt; Atributos &gt; Partición &gt; type</em></p>
+<p><em>Consultas &gt; Event &gt; Filtrar</em></p>
+</div>
+<div class="rcolumn-80">
 <ol start="6" style="list-style-type: decimal">
-<li><p>Una vez más vera nuevos enlaces en el gráfico. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos “Eventos”. Seleccione la pestaña “Filtros”, abra la carpeta “Atributos” y localice la opción “type” dentro de la carpeta de “Partición”. Arrastre el filtro de “type” a la sección de “Consultas”. En respuesta a esta acción vera una nueva ventanilla al fondo de este panel (titulada “Partición (type) Configuración”), selecciones la opción “Event” y de clic en el botón “Fitrar”. Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón “Exportar el grafo filtrado en un nevo espacio de trabajo”.</p></li>
-<li><p>En el nuevo espacio de trabajo vera una red de modo uno que contiene relaciones de evento-a-evento. Como hicimos con la red de persona-a-persona modifique el gráfico con las herramientas de diseño en Gephi (Figura 20). Mirando esta red, ¿qué eventos parecen socialmente cercanos entre sí? ¿Alguno parece más central, más popular que los demás? ¿Alguno parece ser menos popular?</p></li>
+<li>Una vez más vera nuevos enlaces en el gráfico. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos “Eventos”. Seleccione la pestaña “Filtros”, abra la carpeta “Atributos” y localice la opción “type” dentro de la carpeta de “Partición”. Arrastre el filtro de “type” a la sección de “Consultas”. En respuesta a esta acción vera una nueva ventanilla al fondo de este panel (titulada “Partición (type) Configuración”), selecciones la opción “Event” y de clic en el botón “Fitrar”. Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón “Exportar el grafo filtrado en un nevo espacio de trabajo”.</li>
 </ol>
-<pre><code>[1] &quot;DO NOT FORGET TO ADD FIGURE HERE&quot;</code></pre>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Filtros &gt; Atributos &gt; Partición &gt; type</em></p>
+<p><em>Consultas &gt; Event &gt; Filtrar</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="7" style="list-style-type: decimal">
+<li>En el nuevo espacio de trabajo vera una red de modo uno que contiene relaciones de evento-a-evento. Como hicimos con la red de persona-a-persona modifique el gráfico con las herramientas de diseño en Gephi (Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:bip-5">5.13</a>). Mirando esta red, <strong>¿Qué eventos parecen socialmente cercanos entre sí? ¿Alguno parece más central, más popular que los demás? ¿Alguno parece ser menos popular?</strong></li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:bip-5"></span>
+<img src="images/02-05-09_bip_data_5.png" alt="Enlaces de Evento-a-Evento" width="75%" />
+<p class="caption">
+Figure 5.13: Enlaces de Evento-a-Evento
+</p>
+</div>
 
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Everton2012">
+<p>Everton, Sean F. 2012. <em>Disrupting Dark Networks</em>. Cambridge.</p>
+</div>
+<div id="ref-Hanneman2005">
+<p>Hanneman, Robert A., and Mark Riddle. 2005. <em>Introduction to Social Network Methods</em>. University of California.</p>
 </div>
 </div>
             </section>

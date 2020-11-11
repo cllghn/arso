@@ -37,3 +37,12 @@ El desarrollo de este libro fue posible gracias al patrocinio del [Programa de B
 **Sean F. Everton** es un Profesor en el [Departamento de Análisis de Defensa](https://nps.edu/web/da) y Codirector del CORE Lab de NPS. Ha publicado en las áreas de análisis de redes sociales, sociología de la religión, sociología económica y sociología política y actualmente se especializa en el uso del análisis de redes sociales para rastrear e interrumpir redes oscuras (por ejemplo, redes criminales y terroristas). Su primer libro, [*Disrupting Dark Networks*](https://www.amazon.com/Disrupting-Networks-Structural-Analysis-Sciences/dp/1107606683), fue publicado por Cambridge University Press en 2012, y su segundo libro, [*Understanding Dark Networks*](https://www.amazon.com/Understanding-Dark-Networks-Daniel-Cunningham/dp/1442249447/ref=pd_lpo_14_img_1/145-9289795-0957343?_encoding=UTF8&pd_rd_i=1442249447&pd_rd_r=a7b19253-9be1-42b7-a6fa-e4ee67f7e2f5&pd_rd_w=kcb7y&pd_rd_wg=Oq37r&pf_rd_p=7b36d496-f366-4631-94d3-61b87b52511b&pf_rd_r=3KX19ZDD20YZ1H2BTMTN&psc=1&refRID=3KX19ZDD20YZ1H2BTMTN) fue publicado por Rowman y Littlefield en 2016. Su libro más reciente , [*Networks and Religion*](https://www.amazon.com/Networks-Religion-Build-up-Structural-Analysis/dp/1108404073/ref=pd_bxgy_img_3/145-9289795-0957343?_encoding=UTF8&pd_rd_i=1108404073&pd_rd_r=d71cd43b-1c10-4abc-bb64-7049818d0f1a&pd_rd_w=FSY0j&pd_rd_wg=Wa7Wy&pf_rd_p=ce6c479b-ef53-49a6-845b-bbbf35c28dd3&pf_rd_r=AH007P8AR7HCWFKEP88J&psc=1&refRID=AH007P8AR7HCWFKEP88J), que explora la interacción de las redes y la religión, fue publicado por Cambridge University Press en 2018.
 
 ### Colaboradores {-}
+
+**NOMBRE DE ESTUDIANTE**...
+
+
+### Misión educativa {-}
+
+:::{.boxed}
+**El material contenido en este documento se hace disponible con el propósito de revisión y discusión entre colegas y no necesariamente refleja las opiniones del Departamento de Marina (en inglés Department of the Navy)  o del Departamento de Defensa (en inglés Department of Defense) de los Estados Unidos.**
+:::
