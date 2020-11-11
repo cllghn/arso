@@ -55,6 +55,13 @@ fig:projected2
 fig:instalados
 fig:disponibles
 fig:multimode
+fig:importar
+fig:nodes
+fig:aristas
+fig:bip-1
+fig:bip-3
+fig:bip-4
+fig:bip-5
 fig:unnamed-chunk-1
 fig:unnamed-chunk-2
 introduction
@@ -101,6 +108,8 @@ preparar-y-visualizar-redes-de-modo-uno-en-gephi
 guardar-gráfico-de-red-en-gephi
 importación-de-listas-de-aristas-modo-uno
 derivando-datos-modo-uno-de-modo-dos
+modo-dos-qué-es
+proyección
 ejercicio-práctico-1
 antes-de-empezar-1
 importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas
@@ -112,13 +121,3 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
-modo-dos-qué-es
-proyección
-fig:importar
-fig:nodes
-fig:aristas
-fig:bip-1
-fig:bip-2
-fig:bip-3
-fig:bip-4
-fig:bip-5

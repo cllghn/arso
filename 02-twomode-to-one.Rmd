@@ -350,7 +350,7 @@ DT::datatable(tab, options = list(dom = 't', ordering = FALSE), colnames = "",
 ::::
 ::::
 
-  
+
 ```{r bip-3, out.width="75%", fig.cap = "Red Bipartita Filtrada, Partición = Person"}
 knitr::include_graphics("images/02-05-09_bip_data_3.png")
 ```

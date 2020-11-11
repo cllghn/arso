@@ -343,7 +343,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 ::::
 ::::
 
-  
+
 <div class="figure" style="text-align: center">
 <img src="images/02-05-09_bip_data_3.png" alt="Red Bipartita Filtrada, Partición = Person" width="75%" />
 <p class="caption">(\#fig:bip-3)Red Bipartita Filtrada, Partición = Person</p>
