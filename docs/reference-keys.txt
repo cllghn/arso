@@ -68,6 +68,12 @@ fig:combined
 eq:mat3
 eq:mat4
 fig:apiladas
+eq:matsum
+fig:agregadas
+fig:recombinar
+fig:importacion
+fig:apilada
+fig:positivos
 fig:unnamed-chunk-1
 fig:unnamed-chunk-2
 introduction
@@ -125,6 +131,7 @@ matrices-y-listas-de-aristas
 combinar
 apilar
 agregar
+recombinar
 ejercicio-práctico-2
 importar-múltiples-redes-a-gephi
 extrayendo-y-visualizando-múltiples-lazos-en-gephi
@@ -134,10 +141,3 @@ subgrupos-cohesivos
 centralidad
 puentes-y-corredores
 glosario-de-términos
-eq:matsum
-fig:agregadas
-recombinar
-fig:recombinar
-fig:importacion
-fig:apilada
-fig:positivos
