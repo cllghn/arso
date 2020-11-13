@@ -38,7 +38,7 @@ En esta sección, nos enfocamos en matrices modo-uno por su simplicidad, pero ca
 
 ### ¿Por qué usarlas o no?
 
-Las matrices tienen múltiples ventajas en ARSo. Primero, son simples de entender. Sin embargo, la razón clave por la cual se utilizan habitualmente es porque se pueden realizar cálculos matemáticos con estas para resumir la información de lar red e ilustrar patrones relacióneles [@Borgatti2018].
+Las matrices tienen múltiples ventajas en ARSo. Primero, son simples de entender. Sin embargo, la razón clave por la cual se utilizan habitualmente es porque se pueden realizar cálculos matemáticos con estas para resumir la información de lar red e ilustrar patrones relaciónales [@Borgatti2018].
 
 Por ejemplo, al trabajar con múltiples matrices de modo-uno con las mismas dimensiones, podemos producir una tercera matriz con el mismo número de dimensiones utilizado el producto Hadamard (operación por elementos). Por ejemplo, tomemos dos matrices con el mismo número de dimensiones una representando amistades y los otros vínculos de negocios. Podemos producir una tercera relación con las mismas dimensiones que podemos nombrar “amigos en negocios”, la ecuación \@ref(eq:mat-op1) ilustra esta operación de matrices por elemento.
 
@@ -344,7 +344,7 @@ knitr::include_graphics("images/02-Fig_2_General_View.png")
 *Archivo > Abrir…*
 ::::
 ::::{.rcolumn-80}
-  2. Primero debemos importar los datos de recopilados en el primer paso a Gephi. Para hacer esto, use el comando *Archivo>Abrir…* Esto abrirá un cuadro de dialogo (no mostrado) desde el cual puede ubicar y seleccionar el archivo de Excel que creo anteriormente. Una vez que haya hecho esto, haga clic en *Abrir* y aparecerá un nuevo cuadro de dialogo, similar a la Figura \@ref(fig:import) Tenga en cuenta que, en la esquina superior derecha, tiene la opción de importa la hoja de cálculo en varios formatos. Como registramos los datos en matriz, utilizaremos la opción *Matriz*. Haga clic en *Siguiente*, en el siguiente cuadro de dialogo, haga clic en *Terminar* (puesto que no tenemos información de tiempo asociada con estos datos).
+  2. Primero debemos importar los datos de recopilados en el primer paso a Gephi. Para hacer esto, use el comando *Archivo > Abrir…* Esto abrirá un cuadro de dialogo (no mostrado) desde el cual puede ubicar y seleccionar el archivo de Excel que creo anteriormente. Una vez que haya hecho esto, haga clic en *Abrir* y aparecerá un nuevo cuadro de dialogo, similar a la Figura \@ref(fig:import) Tenga en cuenta que, en la esquina superior derecha, tiene la opción de importa la hoja de cálculo en varios formatos. Como registramos los datos en matriz, utilizaremos la opción *Matriz*. Haga clic en *Siguiente*, en el siguiente cuadro de dialogo, haga clic en *Terminar* (puesto que no tenemos información de tiempo asociada con estos datos).
 ::::
 ::::
   
@@ -383,7 +383,7 @@ knitr::include_graphics("images/02-Fig-5_apariencia.png")
 
 ::::{.row}
 ::::{.lcolumn-20}
-*Distribuicion>Fruchterman Reingold, Force Atlas, Expansion, Yifan Hu*
+*Distribuicion  >Fruchterman Reingold, Force Atlas, Expansion, Yifan Hu*
 ::::
 ::::{.rcolumn-80}
   5. Justo debajo de la pestaña *Apariencia* encontraraá otra de nombre *Distribución* (consulte la Figura \@ref(fig:diseno)). Gephi ofrece varias opciones de distribución de nodos, sobre las cuales poder aprender en la página de tutoriales de [Gephi](https://gephi.org/users/tutorial-layouts/).  En esta actividad solo exploraremos unos pocos. Utilizando el menú desplegable, primero seleccione el algoritmo de nombre *Fruchterman Reigold* y haga clic en el botón *Ejecutar*.   Dependiendo de la red, es posible que este algoritmo no sea el adecuado. Pruebe otros, por ejemplo *Force Atlas*. Al principio parecerá que los nodos han colapsado unos sobre otros, pero esto es engañoso. Para ver porque, elija la opción *Expansion* y haga clic repetidamente en el botón *Ejecutar* hasta que el grafico sea los suficientemente grande para poder distinguir las conexiones entre nodos. Finalmente. Pruebe el algoritmo *Yifan Hu*, el cual, al menos con la red de Koschade, produce el grafico más adecuado. Es decir, los subgrupos son fáciles de detectar y los nodos no se encuentran apilados unos sobre los otros. 

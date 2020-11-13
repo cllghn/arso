@@ -1,7 +1,8 @@
 ---
 output: html_document
+bibliography: book.bib
 ---
-# (PART) Apéndice: Glosario {-}
+# (PART) Apéndice {-}
 
 # Glosario de Términos
 

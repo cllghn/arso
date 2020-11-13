@@ -9,8 +9,6 @@ bookdown::gitbook:
       scroll_highlight: yes
       before: |
         <li><a href="./">Análisis de Redes Sociales Oscuras</a></li>
-    toolbar:
-      position: fixed
     font_settings: 
       theme: white
       family: sans
