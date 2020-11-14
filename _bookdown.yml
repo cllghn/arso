@@ -1,5 +1,8 @@
 new_session: yes
 output_dir: docs
+language:
+  label:
+    fig: "Figura "
 
 rmd_files: ["index.Rmd", 
             "01-introduction.Rmd",

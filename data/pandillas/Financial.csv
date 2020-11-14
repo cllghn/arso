@@ -1,0 +1,16 @@
+Source,Target,Relationship
+Animal,Shadow,Financial
+Animal,Snake,Financial
+Animal,Crusier,Financial
+Ant,Little Red,Financial
+Bugs,Blue Eyes,Financial
+Bloodhound,Cranky,Financial
+Bloodhound,Ha-Ha,Financial
+Cranky,O.G.,Financial
+Enforcer,Freckles,Financial
+Fat Boy,O.G.,Financial
+Fat Boy,Crusier,Financial
+Slingshot,Ha-Ha,Financial
+O.G.,Ha-Ha,Financial
+O.G.,Snake,Financial
+O.G.,Crusier,Financial

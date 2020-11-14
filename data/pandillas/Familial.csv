@@ -1,0 +1,31 @@
+Source,Target,Relationship
+Adonis,Boxcar,Familial
+Adonis,Ghost,Familial
+Adonis,Jelly,Familial
+Bananas,Blue Eyes,Familial
+Bananas,Brains,Familial
+Bananas,Slingshot,Familial
+Bananas,Gremlin,Familial
+Bat G.,Big G.,Familial
+Bat G.,Blaze,Familial
+Big G.,Blaze,Familial
+Boots,Fat Boy,Familial
+Boots,Freckles,Familial
+Boots,Icepick,Familial
+Boots,Repo Girl,Familial
+Boxcar,Ghost,Familial
+Boxcar,Jelly,Familial
+Brains,Slingshot,Familial
+Brains,Gremlin,Familial
+Fat Boy,Freckles,Familial
+Fat Boy,Icepick,Familial
+Fat Boy,Repo Girl,Familial
+Slingshot,Gremlin,Familial
+Freckles,Icepick,Familial
+Freckles,Repo Girl,Familial
+Ghost,Jelly,Familial
+Goldie,Pookey,Familial
+Goldie,O.G.,Familial
+Pookey,O.G.,Familial
+Icepick,Repo Girl,Familial
+Snake,Sonny Black,Familial

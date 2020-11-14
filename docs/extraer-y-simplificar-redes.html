@@ -154,7 +154,17 @@
 <li class="chapter" data-level="6.3.2" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a></li>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a><ul>
+<li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
+<li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
+<li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
+<li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
+<li class="chapter" data-level="7.3.4" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificación-colapso-reducción-en-gephi"><i class="fa fa-check"></i><b>7.3.4</b> Simplificación (colapso / reducción) en Gephi</a></li>
+<li class="chapter" data-level="7.3.5" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extracción-en-gephi"><i class="fa fa-check"></i><b>7.3.5</b> Extracción en Gephi</a></li>
+</ul></li>
+</ul></li>
 <li class="part"><span><b>III ARSo: Medidas</b></span></li>
 <li class="chapter" data-level="8" data-path="topología.html"><a href="topología.html"><i class="fa fa-check"></i><b>8</b> Topología</a></li>
 <li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a></li>
@@ -182,12 +192,316 @@
             <section class="normal" id="section-">
 <div id="extraer-y-simplificar-redes" class="section level1">
 <h1><span class="header-section-number">7</span> Extraer y Simplificar Redes</h1>
-<p>(agregar texto aquí)</p>
+<p>Antes de concluir esta sección sobre técnicas de manipulación de datos, tocaremos los temas de simplificación y extracción de subredes. <span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span> menciona que a menudo al trabajar con redes sociales grandes es difícil apreciar los patrones de interacciones por el volumen de información; por esto, los analistas utilizan un conjunto de técnicas para encoger la red o extraer subconjuntos de datos con características relevantes <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span>. El objetivo de esta sección es presentarle herramientas comúnmente utilizadas para reimaginar redes con propósito de localizar patrones emergentes. Para mantener claridad, en esta sección tocaremos cada técnica de manera individual. Antes concluir, tendrá la oportunidad de practicar el uso de estas herramientas en Gephi.</p>
+<div id="extraer" class="section level2">
+<h2><span class="header-section-number">7.1</span> Extraer</h2>
+<p>El extraer es una técnica utilizada para aislar porciones de una red con base a un conjunto de características. Estas pueden ser características de los nodos o las aristas. Por ejemplo, la en una red de pandilleros tenemos miembros de esta organización atados por diferentes tipos de enlaces. Adicionalmente, algunos de los miembros de esta organización se encuentran libres y vivos, vivos y en busqueda, y encarcelados/detenidos. La Figura <a href="extraer-y-simplificar-redes.html#fig:pandilleros">7.1</a> es una representación gráfica de este ejemplo. En ella los nodos libres y vivos están coloreados de negro, los vivos y en búsqueda en gris, y los encarcelados/detenidos en blanco. Por su parte los enlaces rojos son familiares, los verdes financieros, rosados representan amistosos, y azul son de superior-subordinado.</p>
+<div class="figure" style="text-align: center"><span id="fig:pandilleros"></span>
+<img src="02-extract-simplify_files/figure-html/pandilleros-1.png" alt="Red de Pandilleros" width="70%" />
+<p class="caption">
+Figura 7.1: Red de Pandilleros
+</p>
+</div>
+<p>Podemos enfocarnos en las características de los nodos y extraer una subred con base a estos atributos. Por ejemplo, si el enfoque del análisis es localizar a los nodos vivos y libres más activos, es importante extraer de la red solo nodos libres o en busqueda. La Figure <a href="extraer-y-simplificar-redes.html#fig:vivos">7.2</a> solo incluye nodos vivos y libres, por ello re han removido seis nodos de el conjunto de datos original.</p>
+<div class="figure" style="text-align: center"><span id="fig:vivos"></span>
+<img src="02-extract-simplify_files/figure-html/vivos-1.png" alt="Red de Pandilleros Vivos y Libres" width="70%" />
+<p class="caption">
+Figura 7.2: Red de Pandilleros Vivos y Libres
+</p>
+</div>
+<p>Similarmente, podemos extraer subredes con base en los patrones o tipos de relaciones. Supongamos que el objetivo es aislar nodos enlazados únicamente por vínculos financieros, la Figura <a href="extraer-y-simplificar-redes.html#fig:fin">7.3</a> representa la subred de nodos exclusivamente conectados por vínculos de finanzas.</p>
+<div class="figure" style="text-align: center"><span id="fig:fin"></span>
+<img src="02-extract-simplify_files/figure-html/fin-1.png" alt="Red de Pandilleros con Lazos Financieros" width="70%" />
+<p class="caption">
+Figura 7.3: Red de Pandilleros con Lazos Financieros
+</p>
+</div>
+</div>
+<div id="simplificar" class="section level2">
+<h2><span class="header-section-number">7.2</span> Simplificar</h2>
+<p>El simplificar, a veces llamado colapsar, es una estrategia que permite el colapsar múltiples nodos con un atributo compartido en un conjunto de datos a uno solo nodo. Como sugiere <span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span>, esta estrategia es valiosa si el objetivo del análisis es examinar los patrones de enlaces entre tipos de nodos y no entre nodos individuales <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span>.</p>
+<p>Una vez más, retornemos a la red de pandilleros. Esta vez, los nodos han sido coloreados con base a la afiliación de cada miembro a pandillas, Figura <a href="extraer-y-simplificar-redes.html#fig:pos">7.4</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:pos"></span>
+<img src="02-extract-simplify_files/figure-html/pos-1.png" alt="Red de Pandilleros con Nodos Coloreados por Pandilla" width="70%" />
+<p class="caption">
+Figura 7.4: Red de Pandilleros con Nodos Coloreados por Pandilla
+</p>
+</div>
+<p>Utilizando estas categorías, podemos colapsar la red. Por ejemplo, la Figura <a href="extraer-y-simplificar-redes.html#fig:collapsed">7.5</a> es una representación de la red donde cada nodo representa una categoría. Cada vínculo entre estas categorías simboliza la presencia de una relación entre dos personas con afiliaciones a dicho grupo.</p>
+<div class="figure" style="text-align: center"><span id="fig:collapsed"></span>
+<img src="02-extract-simplify_files/figure-html/collapsed-1.png" alt="Pandilleros, Collapsados por Grupo Ilícito" width="70%" />
+<p class="caption">
+Figura 7.5: Pandilleros, Collapsados por Grupo Ilícito
+</p>
+</div>
+</div>
+<div id="ejercicio-práctico-3" class="section level2">
+<h2><span class="header-section-number">7.3</span> Ejercicio Práctico</h2>
+<p>En este laboratorio, veremos técnicas para combinar datos relacionales con datos de atributos. Estos son útiles para resaltar diferentes aspectos de la red o para simplificar las redes. En este ejercicio utilizaremos un subconjunto de los datos principales de Noordin: “Red Operativa Noordin (agregada)”(<strong>ADD DATA LINK HERE</strong>), junto con los atributos asociados.</p>
+<div id="antes-de-empezar-2" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> Antes de empezar</h3>
+<p>Para poder manipular los datos adecuadamente es necesario descargar e instalar un módulo adicional de software, <em>Grupos by partition</em> ó <em>Grupos por partición</em>. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo <em>MultimodeNetworks Transformation</em> en ejercicio práctico en el capitulo <a href="derivando-datos-modo-uno-de-modo-dos.html#derivando-datos-modo-uno-de-modo-dos">Derivando Datos Modo-Uno de Modo-Dos</a>.</p>
+<p>Recuerde que deberá reiniciar Gephi.</p>
+</div>
+<div id="importar-redes-y-atributos-en-gephi" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> Importar redes y atributos en Gephi</h3>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Archivo &gt; Abrir</em>
+<em>Importar como &gt; Tabla de nodos</em></p>
+</div>
+<div class="rcolumn-80">
+<ol style="list-style-type: decimal">
+<li>Comenzaremos importando la red operacional junto con sus atributos en Gephi. Primero, abra el archivo <code>Attributes (Nodes Table).csv</code> utilizando el comando <em>Archivo &gt; Abrir</em> en Gephi. Este archivo contiene una lista de los nodos de red y sus atributos correspondientes. Gephi debe detectar el tipo de archivo que esta importando, pero mantenga en mente que a veces no funciona correctamente. En el cuadro de diálogo de importación (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion">7.6</a>), asegúrese de indicar que el <em>Separador</em> sean comas y de importar el archivo como una <em>Tabla de Nodos</em>. Luego haga clic en <em>Siguiente</em>.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
 
+</div>
+<div class="rcolumn-80">
+<ol start="2" style="list-style-type: decimal">
+<li>En la siguiente pantalla de importación (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion2">7.7</a>) vera que se han detectado una serie de atributos: <code>Education Level</code>, <code>Contact with People</code>, <code>Current Status (ICG Article)</code>, <code>Military Training</code>, <code>Nationality</code>, <code>Noordin’s Network</code>, <code>Primary Group Affiliation</code>, y <code>Role</code>, junto con la identificación y etiqueta de cada nodo (actor) en la red. Gephi probablemente importará de manera predeterminada todos los atributos como <em>String</em>, por lo tanto, usando los menus desplegables debajo de cada atributo, cámbielo de <em>String</em> a <em>Integer</em>. Luego, de clic en <em>Terminar</em>.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:importacion"></span>
+<img src="images/02-07-01.png" alt="Cuadro de dialogo para importar un archivo CSV (1 de 2)" width="70%" />
+<p class="caption">
+Figura 7.6: Cuadro de dialogo para importar un archivo CSV (1 de 2)
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:importacion2"></span>
+<img src="images/02-07-02.png" alt="Cuadro de dialogo para importar un archivo CSV (2 de 2)" width="70%" />
+<p class="caption">
+Figura 7.7: Cuadro de dialogo para importar un archivo CSV (2 de 2)
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+<ol start="3" style="list-style-type: decimal">
+<li>A continuación, debería ver el <em>Informe de importación</em> de Gephi (Figure (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion3">7.8</a>). Aquí, indique que desea agregar los datos a un nuevo espacio de trabajo. Tenga en cuenta que en el informe no he cambiado ninguno de los valores predeterminados. Como esta tabla no incluye aristas, ninguna de las otras opciones importa. Haga clic en <em>Aceptar</em>.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:importacion3"></span>
+<img src="images/02-07-03.png" alt="Informe de importación de Gephi" width="70%" />
+<p class="caption">
+Figura 7.8: Informe de importación de Gephi
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Archivo &gt; Abrir</em>
+<em>Importar como &gt; Tabla de aristas</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="4" style="list-style-type: decimal">
+<li>Ahora importemos la lista de aristas correspondiente, <code>Operational (Edge List).csv</code>, usando el comando <em>Archivo &gt; Abrir</em>. Gephi debe detectar el formato del archivo correctamente, pero asegúrese que los separadores sean comas y que el archivo de importación sea reconocido como <em>Tabla de aristas</em> (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion4">7.9</a>). Luego haga clic en <em>Siguiente</em>. En e siguiente cuadro de diálogo, acepte todos los valores predeterminado de Gephi y haga clic en <em>Terminar</em>.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:importacion4"></span>
+<img src="images/02-07-04.png" alt="Cuadro de dialogo para importar un archivo CSV" width="70%" />
+<p class="caption">
+Figura 7.9: Cuadro de dialogo para importar un archivo CSV
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+<ol start="5" style="list-style-type: decimal">
+<li>Una vez más, deberá ver el informe de importación de Gephi (Figure <a href="extraer-y-simplificar-redes.html#fig:importacion5">7.10</a>). Aunque, es importante que le indique a Gephi que el grafo no es dirigido, que desea utilizar la estrategia para combinar aristas <em>Minimo</em> y que desea agregar los datos al lugar de trabajo existente. Note que el informe indica que solo hay 68 nodos, sin embargo, el reporte de importación de los atributos (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion3">7.8</a>) indico que hay 79. ¿Por qué? La respuesta es que la red contiene 11 nodos aislados, estos son, individuos que no tienen enlaces a otros en esta red. Haga clic en <em>Aceptar</em>. Antes de comenzar, guarde sus datos como archivo de Gephi.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:importacion5"></span>
+<img src="images/02-07-05.png" alt="Reporte de importación" width="70%" />
+<p class="caption">
+Figura 7.10: Reporte de importación
+</p>
+</div>
+</div>
+<div id="uso-de-atributos-de-nodo-en-visualizaciones-de-red" class="section level3">
+<h3><span class="header-section-number">7.3.3</span> Uso de atributos de nodo en visualizaciones de red</h3>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Apariencia &gt; Nodos &gt; Partición &gt; –Escoge un atributo &gt; Current status (icg article)</em></p>
+</div>
+<div class="rcolumn-80">
+<ol style="list-style-type: decimal">
+<li>Ahora, veamos cómo podemos incorporar algunos de los datos de atributos de nodo en nuestras visualizaciones de red. En la pantalla <em>Vista general</em>, ubique la pestaña <em>Apariencia</em>, luego haga clic en la pestana <em>Nodos</em> y el icono de la paleta de colores a la derecha, y finalmente en la opción <em>Partición</em>. Usando el menú desplegable de atributos, seleccione <code>current status (icg article)</code> y de clic en <em>Aplicar</em>. Los nodos ahora deben exhibir tres colores diferentes, cada uno de los cuales refleja el estado actual de un actor (es decir, si está muerto “0”, vivo y libre “1” o en la cárcel “2”; todo esto está en el libro de códigos). El color asociado con cada atributo se encuentra justo debajo del menú desplegable. Si no le gustan los colores predeterminados, puede hacer clic en el cuadro junto al número o hacer clic en el enlace <em>Paleta…</em>, que abrirá una serie de opciones diferentes.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Apariencia &gt; Nodos &gt; Partición &gt; –Escoge un atributo &gt; role</em></p>
+<p><em>Paleta… &gt; Generate…</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="2" style="list-style-type: decimal">
+<li>Ahora, seleccione <code>role</code> y haga clic en <em>Aplicar</em>. Si se desplaza hacia abajo por los colores asociados con los 12 roles, notará que Gephi no posee suficientes colores para todas las categorías. Para rectificar esto, haga clic en el enlace <em>Paleta…</em> y elija <em>Generar…</em> en el cuadro de diálogo (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion6">7.11</a>), aumente el número de colores a 12, elija uno de los ajustes preestablecidos, haga clic en <em>Generar</em> y luego <em>Aceptar</em>. En la ventana <em>Descripción general</em>, haga clic en <em>Aplicar</em>, y ahora todos sus nodos deben tener un color individual.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:importacion6"></span>
+<img src="images/02-07-06.png" alt="Cuadro de diálogo 'Generar paleta'" width="70%" />
+<p class="caption">
+Figura 7.11: Cuadro de diálogo ‘Generar paleta’
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Apariencia &gt; Nodos &gt; Tamaño &gt; Ranking &gt; Attributo &gt; Education Level</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="3" style="list-style-type: decimal">
+<li>Ahora, ajustemos el tamaño de los nodos según el nivel educativo. En la pestaña <em>Apariencia</em>, haga clic en <em>Nodos</em>, luego en el icono de tamaño (a la derecha de la paleta de colores) y luego en <em>Ranking</em>. Usando el menú desplegable de atributos, seleccione <code>education level</code> y haga clic en <em>Aplicar</em>. El tamaño de los nodos ahora debe reflejar el nivel de educación. Los tamaños de nodo mínimo y máximo predeterminados de Gephi predeterminan un rango arbitrario de valores. Si mira en el libro de códigos (o en la ventana <em>Laboratorio de datos</em>), verá que el nivel educativo va de 0 a 8. Para distinguir los nodos un poco mejor, ajusté el mínimo y el máximo de 3 a 27 (no usamos 0 como mínimo porque los nodos desaparecerán). Después de usar las técnicas de visualización cubiertas en nuestros laboratorios anteriores, mi red resultante aparece en la Figura <a href="extraer-y-simplificar-redes.html#fig:7">7.12</a>. Esta vez, utilice el diseño <em>Force Atlas</em> pues no empuja los aislados lejos del resto de la red. <strong>¿Detecta algún patrón relacional asociado con los atributos de los nodos (por ejemplo, los actores con niveles de educación más altos se encuentran en el centro de la red)?</strong></li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:7"></span>
+<img src="images/02-07-07.png" alt="Red operacional de Noordin" width="70%" />
+<p class="caption">
+Figura 7.12: Red operacional de Noordin
+</p>
+</div>
+</div>
+<div id="simplificación-colapso-reducción-en-gephi" class="section level3">
+<h3><span class="header-section-number">7.3.4</span> Simplificación (colapso / reducción) en Gephi</h3>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+<ol style="list-style-type: decimal">
+<li>Solo prosiga a completar esta sección si ha descargado el módulo requerido, <em>Grupos por partición</em>.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Herramientas &gt; Generate groups by partition</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="2" style="list-style-type: decimal">
+<li>En la ventana <em>Descripción general</em>, seleccione el comando <em>Herramientas &gt; Generate groups by partition</em>. Aparecerá un cuadro de diálogo que le preguntará si desea crear un nuevo espacio de trabajo o sobrescribir el actual. Elija <em>Crear</em>. Esto generará un nuevo espacio de trabajo donde los nodos han sido colapsados según el rol de cada nodo. Es importante tener en cuenta que este modulo contrae la red en base a la partición de nodos seleccionada en la ventana <em>Vista general</em>. Si hubiéramos querido colapsar la red basándose, por ejemplo, en el estado actual, entonces habríamos tenido que volver a colorear y revisualisar la red usando otra partición, siguiendo los comandos detallados en la seccion <a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red">Uso de atributos de nodo en visualizaciones de red</a>.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+<ol start="3" style="list-style-type: decimal">
+<li>Finalmente, necesitamos cambiar el nombre de las etiquetas para que correspondan con los diferentes roles. Cambie a la ventana <em>Laboratorio de datos</em>, seleccione la <em>Tabla de nodos</em> y verá que ahora solo hay 12 nodos correspondiendo a los grupos colapsados (por ejemplo, <code>Group of Jabir</code>). Al colapsar los nodos el nombre asociado con el grupo corresponde a uno de los actores que pertenecen a este subconjunto. Para modificar las etiquetas con los roles, vamos a tener que abrir la tabla original de atributos (<code>Attributes (Nodes Table).csv</code>) y el libro de códigos. En Excel observara que el rol de Jabir es <code>7</code>, y en el libro de código vemos que el rol <code>7</code> es el de <code>Recruiter</code> (o reclutador en español). En la columna de etiqueta (<em>Label</em>) en la tabla de nodos haga doble clic en la fila <code>Group by Jabir</code>, que abrirá un cuadro de texto. Allí, remplace la etiqueta con el rol (<code>Reclutador</code> o <code>Recruiter</code>) y luego repita este proceso para todos los grupos restantes. Cuando hay cambiado el nombre de todas las etiquetas, la red resultante tendrá un aspecto similar a la Figura <a href="extraer-y-simplificar-redes.html#fig:8">7.13</a>.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:8"></span>
+<img src="images/02-07-08.png" alt="Nodos por rol" width="70%" />
+<p class="caption">
+Figura 7.13: Nodos por rol
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista General</a></em></p>
+<p><em>Nodos &gt; Tamaño &gt; Único</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="4" style="list-style-type: decimal">
+<li>Ahora, cambie la Ventana <em>Vista general</em> y visualice la red. Los nodos probablemente variarán en tamaño, por lo que se recomienda modificar el tamaño utilizando los comandos <em>Nodos &gt; Tamaño &gt; Único</em> en esta secuencia. También use el algoritmo de diseño <em>Force Atlas</em> para editar el grafico. Note que los pesos de las aristas reflejan en número de enlaces entre cada par de nodos, por lo que podemos reducir el grosor de estos. Además, agregue el tamaño de las etiquetas a su gusto (vea nuestra sugerencia en la Figura <a href="extraer-y-simplificar-redes.html#fig:9">7.14</a>). Antes de pasar al siguiente paso, haga clic derecho en el nodo <code>propagandista</code> (o <code>propagandist</code>). Esta acción abrirá un cuadro de diálogo; allí, seleccione <em>Bloquear</em>. Hacer esto evita que el nodo se mueva al aplicar algoritmos de diseño adicionales.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:9"></span>
+<img src="images/02-07-09.png" alt="Red colapsada por atributo de rol (diseño Force Atlas)" width="70%" />
+<p class="caption">
+Figura 7.14: Red colapsada por atributo de rol (diseño Force Atlas)
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+<ol start="5" style="list-style-type: decimal">
+<li>Experimenté con varios algoritmos de diseño, en mi grafico (Figura <a href="extraer-y-simplificar-redes.html#fig:10">7.15</a>) vera un sociograma modificado con el algoritmo de diseño <em>OpenOrd</em>. Mirando el gráfico (que usted mismo puede producir en Gephi), <strong>¿Qué sugieren los patrones entre los roles?</strong> Tenga en cuenta que algunos de los nodos tienen vínculos consigo mismos (bucles). <strong>¿Qué crees que indican estos patrones? ¿Por qué cree que el nodo “Recon and sureveillance” no se encuentra más cerca a los demás nodos?</strong></li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:10"></span>
+<img src="images/02-07-10.png" alt="Red colapsada por el atributo de rol (diseño OpenOrd)" width="70%" />
+<p class="caption">
+Figura 7.15: Red colapsada por el atributo de rol (diseño OpenOrd)
+</p>
+</div>
+</div>
+<div id="extracción-en-gephi" class="section level3">
+<h3><span class="header-section-number">7.3.5</span> Extracción en Gephi</h3>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Filtros &gt; Atributos &gt; Partición &gt; current status</em></p>
+<p><em>Consultas &gt; Partición &gt; 1</em></p>
+<p><em>Filtrar &gt; Exportar gráfico filtrado a un nuevo espacio de trabajo</em></p>
+</div>
+<div class="rcolumn-80">
+<ol style="list-style-type: decimal">
+<li>Ahora, vamos a extraer un conjunto de red más grande. Para hacer esto, volvamos a la red original (sin colapsar), que probablemente se encuentra el primer espacio de trabajo. En la pestaña <em>Filtros</em> en el lado derecho de la ventana <em>Descripción general</em>, seleccione <em>Atributos</em>, luego <em>Partición</em> y luego <em>current status (icg articles)</em> a la sección <em>Consultas</em>. En el cuadro debajo de la sección <em>Consultas</em> - <em>Partition (current status (icg article)) Configuración</em> – deberá ver tres cuadros, etiquetados <em>2</em>, <em>1</em>, y <em>0</em>, que indican si el actor esta muerto <code>0</code>, vivo y libre <code>1</code>, o en la cárcel <code>2</code>. Aquí, extraeremos la red <code>Viva y libre</code> marcando la casilla <em>1</em>. Haga clic en <em>Filtrar</em> y luego use el botón <em>Exportar gráfico filtrado a un nuevo espacio de trabajo</em>, que utilizamos en el laboratorio anterior (cuadro rojo en la Figura <a href="extraer-y-simplificar-redes.html#fig:11">7.16</a>).</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:11"></span>
+<img src="images/02-07-11.png" alt="Red viva y libre filtrada" width="70%" />
+<p class="caption">
+Figura 7.16: Red viva y libre filtrada
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+<ol start="2" style="list-style-type: decimal">
+<li>Cambie el nuevo espacio de trabajo y cámbiele el nombre (por ejemplo, <code>Red viva y libre</code>). Después de experimentar con algunos algoritmos de diseño, tamaño de nodo con base en el nivel educativo, tamaño de etiqueta y pesos de borde, produje el grafico en la Figura <a href="extraer-y-simplificar-redes.html#fig:12">7.17</a>. Tenga en cuenta que vez elegí no mostrar los nodos aislados. Los colores reflejan el rol.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:12"></span>
+<img src="images/02-07-12.png" alt="Red viva y libre (sin aislados)" width="70%" />
+<p class="caption">
+Figura 7.17: Red viva y libre (sin aislados)
+</p>
+</div>
+
+</div>
+</div>
 </div>
 
 
 
+<h3>References</h3>
+<div id="refs" class="references">
+<div id="ref-Everton2012">
+<p>Everton, Sean F. 2012. <em>Disrupting Dark Networks</em>. Cambridge.</p>
+</div>
+</div>
             </section>
 
           </div>
@@ -242,20 +556,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
