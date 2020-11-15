@@ -1,0 +1,89 @@
+---
+output: html_document
+---
+
+# Topología
+
+Este conjunto de medidas son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación numérica sobre la estructura de la red [@Valente2010]. Esta es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros [@McCormick2000], asimismo estas configuración hace a la red más vulnerable a disrupción al remover un punado de actores clave. 
+
+
+## Ejercicio Práctico
+
+En este ejericio consideramos varias métricas para examinar la topología de la red, por ejemplo: tamaño de la red, densidad, grado promedio, distancia promedio, diámetro y centralización. El tamaño es igual al número de actores en una red. La densidad es igual al número de enlaces dividido por el total de lazos posibles. Sin embargo, el número de enlaces posibles en una red está inversamente relacionado con el tamaño de la red (es decir, cuanto más grande es la red, menor es la densidad); por consiguiente, los investigadores usan otras medidas como el grado promedio para comparar redes de diferente tamaño. La distancia promedio de la ruta es la longitud promedio de todas las rutas más cortas (es decir, geodésicas) entre todos los actores en una red, y el diámetro es la geodésica más larga de una red. Finalmente, la centralización mide el grado en que una red se centra en un solo actor (o grupo de actores).
+
+Para este ejercicio utilizaremos un conjunto de datos con diez redes diferentes apiladas, que se encuentran ya cargadas en el archivo: `Noordin.gephi`.(**ADD DATA LINK HERE**)
+
+### Antes de Empezar
+
+Para este ejercicio, deberá instalar el módulo *Clustering Coefficient* (ó coeficiente de agrupación) en Gephi. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo *MultimodeNetworks Transformation* en ejercicio práctico en el capitulo [Derivando Datos Modo-Uno de Modo-Dos]. 
+
+
+### Topología de redes en Gephi
+
+::::{.row}
+::::{.lcolumn-20}
+*[Gephi]*
+*Archivo>Abrir*
+::::
+::::{.rcolumn-80}
+  1.	Abra el archivo `Noordin.gephi`. En el primer espacio de trabajo, encontrará la red Noordin apilada. Los otros 10 espacios de trabajo son subredes por tipo de relación individual. 
+::::
+::::
+
+::::{.row}
+::::{.lcolumn-20}
+*[Vista General]*
+*Contexto*
+::::
+::::{.rcolumn-80}
+  2.	Comenzaremos por ver cómo encontrar el tamaño de una red. En la esquina superior derecha de la ventana *Descripción general*, debe ver una pestaña *Contexto* (cuadro rojo en la Figura \@ref(fig:1); si no se encuentra visible, seleccione la opción *Contexto* en el menú *Ventana*). En esta ventanilla vera el tamaño (número de nodos), cuántos lazos (aristas) tiene la red/subred y si los datos son dirigidos o no. **¿Cuál es el tamaño de "Noordin (Red apilada)" (en inglés “Noordin (Stacked Network)”)?** Cambie al espacio de trabajo "Red de amistad (en inglés “Friendship”). **¿Qué tamaño tiene? ¿Cuántas aristas hay?**
+::::
+::::
+
+```{r 1, fig.cap="Ventana de descripción general, ventanilla de contexto"}
+knitr::include_graphics(path = "images/02-08-01.png")
+```
+
+::::{.row}
+::::{.lcolumn-20}
+*Estadísticas > Densidad de grafo > Ejecutar* 
+::::
+::::{.rcolumn-80}
+  3.	Calcular la densidad de la red en Gephi es sencillo. Seleccione la pestaña *Estadísticas* que se encuentra debajo de la ventana *Contexto* (consulte la Figura \@ref(fig:2)) y haga clic en el botón *Ejecutar* junto a la opción *Densidad de grafo*. Cuando se le solicite, trate el gráfico como no dirigido. *¿Cuál es la densidad de la red apilada?* De clic en *Cerrar* para cerrar la ventanilla de reporte. Si desea volver a consultar la densidad, el resultado aparece junto a *Densidad de grafo*. Siempre puede volver a ver el reporte dando clic en el círculo con el *?* a la derecha de la opción *Ejecutar*. Repita el proceso para las redes de Amistad (en inglés "Frienship”) y Comunicaciones (en inglés “Comunications”). *¿Cuál es la densidad de la red de amistad? ¿Y la red de comunicaciones?*
+::::
+::::
+
+```{r 2, fig.cap="Ventana de descripción general, pestaña Estadísticas"}
+knitr::include_graphics(path = "images/02-08-02.png")
+```
+
+::::{.row}
+::::{.lcolumn-20}
+*Estadísticas > Grado medio > Ejecutar* 
+::::
+::::{.rcolumn-80}
+  4.	La densidad de la red es igual a el número de enlaces dividido por todos los lazos posibles. Sin embargo, los puntajes de densidad tienden a disminuir a medida que las redes sociales se hacen más grandes porque el número de enlaces posibles aumenta exponencialmente con cada actor adicional, pero el número de lazos que cada actor puede mantener permanece relativamente constante. Por esto, la densidad de la red se debe usar para comparar redes del mismo tamaño (que hacemos aquí). Una medida alternativa a la densidad es el grado medio puesto que esta no es sensible al tamaño de la red. Por consiguiente, podemos utilizar esta segunda medida para comparar redes de diferentes tamaños. Podemos estimar el grado promedio de la red apilada haciendo clic en "Ejecutar" junto a "Grado medio" en la ventana de “Estadísticas”.  En este caso, solo nos interesa la medida de grado promedio estándar en lugar de la medida de "Grado medio con pesos" porque no queremos incorporar los pesos de las conexiones. La puntuación aparecerá en la esquina superior izquierda de la ventana del informe (no se muestra). ¿Cuál es el grado promedio de la red apilada? El informe también produce un gráfico de "distribución de grados" que indica el número de actores en diferentes niveles de centralidad de grado. Si observa de cerca, verá que parece que hay un actor con un grado de centralidad de 130. Volveremos a este informe en un laboratorio posterior cuando veamos los puntajes de centralidad individuales. ¿Cuál es el grado medio de la red de amistad? ¿Comunicaciones? De las 10 redes individuales, ¿cuál tiene el grado medio más alto?
+::::
+::::
+
+::::{.row}
+::::{.lcolumn-20}
+*Estadísticas > Clustering Coefficient > Ejecutar*
+::::
+::::{.rcolumn-80}
+  5.	Otra medida que podemos usar para capturar el nivel general de cohesión es el coeficiente de agrupación. Se estima identificando primero la red del ego para cada actor (es decir, los lazos de cada actor con otros actores vecinos o alteres y los lazos entre ellos), después calcular la densidad de esta misma (sin incluir el ego o los lazos del ego en el cálculo) , y luego tomando el promedio de todos los puntajes de densidad de la red del ego. Esta medida toma en cuenta el número de los vecinos de cada actor que están contados entre sí (también conocido como cierre triádico) y calcula el promedio de toda la red. Para obtener esta medida, en la pestaña *Estadísticas*, busque la sección denominada *Visión general de la red*. Haga clic en *Ejecutar* junto a *Clustering Coefficient*. Indique que desea utilizar el *Basic method* (método básico) y haga clic en *Aceptar*. El resultado aparecerá en la parte inferior de la ventana del informe después de las puntuaciones individuales, bajo *General C*. **¿Cuál es el coeficiente de agrupación de la red apilada? ¿La red de la amistad? ¿Red de comunicaciones? ¿Qué coeficiente de agrupamiento de red es más alto?**
+::::
+::::
+
+::::{.row}
+::::{.lcolumn-20}
+*Estadísticas > Longitud media de camino > Ejecutar*
+::::
+::::{.rcolumn-80}
+6.	Ahora veremos cómo obtener la distancia promedio y el diámetro en una red. La primera medida captura la distancia promedio entre todos los pares de actores (conectados) en la red, y puede indicar la velocidad con que la información puede viajar a través de una red. En otras palabras, la información se ha de difundir mas eficazmente en una red de menor distancia promedio que en una red con una distancia promedio alta. El diámetro de la red se refiere a la geodésica más larga de una red (es decir, la ruta más corta entre todos los pares de actores) y podría indicar qué tan dispersa o extendida está una red. Por lo tanto, puede capturar el grado en que una red está centralizada o descentralizada. Sin embargo, debemos tener un poco de cuidado al interpretar el diámetro porque es, en parte, una función del tamaño de la red. Por ejemplo, las redes grandes probablemente tendrán diámetros mayores. Para calcular la distancia y el diámetro promedio de la ruta de la red apilada, regrese a la pestaña *Estadísticas* y busque la sección *Visión general de las aristas*. Allí, haga clic en el botón *Ejecutar* a la derecha de *Longitud media de camino*. En el cuadro de diálogo, seleccione la opción no dirigida, no se preocupe por normalizar la centralidad en este momento (lo cubriremos en la sección de centralidad) y haga clic en *Aceptar*. Esto abrirá un informe (Figura \@ref(fig:3)) que proporciona mucha información, parte de la cual no nos ocuparemos en este momento. En la parte superior izquierda del informe, en *Results* (Resultados), Gephi nos dice cuál es el diámetro (*diameter*) y la distancia promedio de la ruta (*Average Path length*) para la red Noordin apilada **¿Cuál es la distancia y el diámetro promedio de las redes de comunicaciones y amistad?**
+::::
+::::
+
+```{r 3, fig.cap="Ventana de descripción general, pestaña Estadísticas"}
+knitr::include_graphics(path = "images/02-08-03.png")
+```

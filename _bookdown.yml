@@ -14,8 +14,13 @@ rmd_files: ["index.Rmd",
             "02-multiple-networks.Rmd",
             "02-extract-simplify.Rmd",
             "03-measures.Rmd",
+            "03-topologia.Rmd",
+            "03-subgrupos.Rmd",
+            "03-centralidad.Rmd",
+            "03-puentesycorredores.Rmd",
             "04-applications.Rmd",
-            "05-glossary.Rmd"
+            "05-glossary.Rmd",
+            "06-references.Rmd"
             ]
 
 delete_merged_file: true
