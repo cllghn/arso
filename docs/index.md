@@ -26,6 +26,13 @@ El contenido de este documento fue diseñado conjuntamente entre el [Ambiente Co
 El desarrollo de este libro fue posible gracias al patrocinio del [Programa de Becas de Defensa Regional (RDFP, pos sus siglas en inglés)](https://dsca.mil/programs/combating-terrorism-and-irregular-warfare-fellowship-program-ctiwfp) de la [Agencia de Cooperación para la Seguridad de la Defensa (DSCA, por sus siglas en inglés)](https://dsca.mil/) con el propósito de apoyar el plan de estudios de ESGE-EPG.
 
 
+## Misión educativa {-}
+
+:::{.boxed}
+**El material contenido en este documento se hace disponible con el propósito de revisión y discusión entre colegas y no necesariamente refleja las opiniones del Departamento de Marina (en inglés Department of the Navy)  o del Departamento de Defensa (en inglés Department of Defense) de los Estados Unidos.**
+:::
+
+
 ## Colaboradores {-}
 
 ### Editores {-}
@@ -39,10 +46,3 @@ El desarrollo de este libro fue posible gracias al patrocinio del [Programa de B
 ### Colaboradores {-}
 
 **NOMBRE DE ESTUDIANTE**...
-
-
-### Misión educativa {-}
-
-:::{.boxed}
-**El material contenido en este documento se hace disponible con el propósito de revisión y discusión entre colegas y no necesariamente refleja las opiniones del Departamento de Marina (en inglés Department of the Navy)  o del Departamento de Defensa (en inglés Department of Defense) de los Estados Unidos.**
-:::

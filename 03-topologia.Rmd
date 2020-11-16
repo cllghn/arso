@@ -2,10 +2,173 @@
 output: html_document
 ---
 
+```{r setup, include=FALSE}
+library(data.table)
+library(DT)
+library(igraph)
+```
+
 # Topología
 
 Este conjunto de medidas son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación numérica sobre la estructura de la red [@Valente2010]. Esta es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros [@McCormick2000], asimismo estas configuración hace a la red más vulnerable a disrupción al remover un punado de actores clave. 
 
+Por ejemplo, observe las Figuras \@ref(fig:star) y \@ref(fig:full), ambas tienen la misma cantidad de nodos, pero las características estructurales de cada una tienen ventajas y desventajas. Por ejemplo, en la Figura \@ref(fig:star) la mayoría de los nodos rodean a un actor en el entro de la red. Este tipo de configuración es comúnmente asociada con organizaciones jerárquicas con protocolos establecidos de comando y control. La ventaja de esta topología es un que un nodo central controla el flujo de recursos e información, en teoría haciendo la diseminación de estos recursos mas eficiente. Sin embargo, esta estructura tiene un defecto clave. ¿Qué pasa si removemos al actor central? La red se deshace por complete y el flujo es interrumpido de manera indeterminada.
+
+Ahora, en la Figura \@ref(fig:full) no encontramos una formación centrada alrededor de un actor clave. Al contrario, en este caso todos los nodos se encuentran conectados entre ellos. La ventaja es clara, no hay un solo punto de disrupción como en la Figura \@ref(fig:star). Sin embargo, las características estructurales no sugieren un solo camino para el flujo de información o recursos, lo cual en algunas ocasiones retrasa ciertos procesos organizacionales. Es decir, si todos son líderes, nadie puede estar a cargo de dar instrucciones a los demás. 
+
+::::{.row}
+::::{.lcolumn-50}
+```{r star, fig.cap="Red estrella"}
+g <- igraph::make_star(n = 5, mode = "undirected")
+coords <- layout_with_kk(g)
+g %>% plot.igraph(layout     = coords,
+                  edge.curved = 0.25,
+                  vertex.color = "lightblue",
+                  vertex.size   = 30,
+                  edges.color  = "grey")
+```
+::::
+::::{.rcolumn-50}
+```{r full, fig.cap="Red completa"}
+igraph::make_full_graph(n = 5, directed = FALSE) %>%
+  plot.igraph(layout      = coords,
+              edge.curved = 0.25,
+                  vertex.color = "lightblue",
+                  vertex.size   = 30,
+                  edges.color  = "grey")
+```
+::::
+::::
+
+En este capítulo, examinaremos una serie de medidas que capturan características estructurales de la red completa. Comenzaremos con una serie de medidas básicas comúnmente utilizadas para describir una red, como: tamaño, distancia y diámetro. Después, exploraremos dos dimensiones topológicas: interconexión y centralización. Esta discusión será complementada por una serie de medidas correspondientes. Finalmente, este capítulo concluirá con un ejercicio practico en Gephi.
+
+## Medidas Básicas de Topología
+
+Estas proveen al analista contexto sobre la red en discusión. Aquí cubriremos: tamaño, distancia promedio, y diámetro.  
+
+### Tamaño
+
+El tamaño se refiere a el numero de actores en una red [@Everton2012]. Es importante pues afecta otras medidas topológicas de la red. Por ello, conocer tamaño de una red es importante al interpretar medidas basadas en este valor, como densidad o diámetro [@Cunningham2016].
+
+Comúnmente denotamos el tamaño de un a red con la letra $N$. Por ejemplo, en las Figuras \@ref(fig:g5) y \@ref(fig:g10) $N$ es equivalente a 5 y 10 respectivamente. 
+
+::::{.row}
+::::{.lcolumn-50}
+```{r g5, fig.cap="Grafo de red, tamaño = 5"}
+igraph::barabasi.game(n = 5, power = 0.5, directed = FALSE) %>%
+  my_igraph()
+```
+::::
+::::{.rcolumn-50}
+```{r g10, fig.cap="Grafo de red, tamaño = 10"}
+igraph::barabasi.game(n = 10, power = 0.5, directed = FALSE) %>%
+  my_igraph()
+```
+::::
+::::
+
+En teoría, hay un límite practico a la cantidad de enlaces que puede mantener cada persona en la red, por ello, el tamaño habitualmente no es una de las medidas más interesantes sino un indicador de los limites de la red [@Valente2010]. Es por ello, que el analista debe consideran como establecer los limites de la red para reflejar de manera adecuada el tamaño real de la red [@Cunningham2016].
+
+### Distancia Promedio
+
+La distancia promedio se refiere a la longitud promedio de todos los caminos más cortos entre todos los actores de una red [@Everton2012]. Para un graph no dirigido binario $G$, definimos la distancia promedio como:
+
+$$
+l_G = \frac{1}{N(N-1)}\sum\limits_{i \neq j}d(v_i,v_j)
+$$
+
+Examinemos esta definición, con la Figura \@ref(fig:circ). Supongamos que el objetivo del actor 1 es transferir información de los otros actores en la red de manera mas eficiente. Si $d$ es la distancia entre un par de nodos, podemos expresar la distancia entre el nodo 1 los demás de la siguiente manera:
+
+
+::::{.row}
+::::{.lcolumn-50}
+
+```{r circ, fig.cap="Grafo circular"}
+igraph::make_ring(n = 5) %>%
+  my_igraph()
+```
+::::
+::::{.rcolumn-50}
+$$
+d(1, 2) = 1 \\
+d(1, 3) = 2 \\
+d(1, 4) = 2 \\
+d(1, 5) = 1
+$$
+::::
+::::
+
+Por consiguiente, debemos calcular la distancia ($d$) entre cualquier nodo ($i$) y todos los demas en la red ($j$), sumar estos valores ($\sum\limits_{i \neq j}d(v_i,v_j)$)  y multiplicar este valor por la fracción del total de enlaces posibles en el gráfico ($\frac{1}{N(N-1)}$). En la Figura \@ref(fig:circ) esta operación toma lugar de la siguiente manera: 
+
+$$
+l_G = \frac{1}{5(5-1)} \times 5(1 + 2 + 2 + 1) = 1.5
+$$
+
+Al calcular la distancia promedio, podemos decir que en promedio todos los nodos en la Figura \@ref(fig:circ) se encuentran a 1.5 pasos entre ellos. Asimismo, puesto que este es un promedio de distancias, podemos comparar este valor con el promedio de otra red.
+
+En términos prácticos, la distancia promedio indicativa de la velocidad con la cual la información viaja a través de una red. Es decir, en una red compacta la información se debe difundir rápidamente; al contrario, en una red con una distancia promedio alta la difusión de información tomara lugar en un periodo de tiempo más amplio [@Everton2012]. Esta interpretación no es ley, sino una interpretación comúnmente hecha por analistas. Sin embargo, es importante considerar que en ciertas situaciones redes con distancia promedio pequeñas no gozan de difusión rápida puesto que algunos actores tienden a retener información de sus vecinos [@Cunningham2016]. Adicionalmente, es impórtate recalcar que la formula de distancia promedio se centra en eficiencia, es decir distancias mas cortas entre nodos. Es posible que, en una red oscura donde los nodos no conozcan a sus vecinos o a los vecinos de sus vecinos, un actor envié información a través de caminos con distancias mayores al promedio. Por lo tanto, la distancia promedio solo sugiere eficiencias con base a la estructura de una red. 
+
+### Diámetro
+
+La distancia geodésica mayor entre cualquier par de nodos en un grafo [@Everton2012]. Formalmente, @Wasserman1994 definen esta medida como la máxima $d(i, j)$ o $maxd(i,j)$. Por ejemplo, podemos calcular las distancias geodésicas de la Figura \@ref(fig:diam):
+
+```{r diam, fig.cap= "Grafo ejemplo"}
+data.frame(from = c(1, 1, 2, 2, 3, 4),
+           to   = c(2, 3, 3, 4, 4, 5)) %>%
+  graph_from_data_frame(directed = FALSE) %>%
+  my_igraph()
+```
+
+El diámetro del grafo es equivalente a $max d(i,j)$ = $d(1,5)$= 3.
+
+Esta medida es importante pues cuantifica cuán lejos se encuentran los nodos más distantes entre sí [@Wasserman1994]. Como con la distancia promedio, consideremos una red en la cual la información viaja a través de los vínculos entre actores. Suponiendo que los mensajes siguen las rutas más cortas, tomará tiempo para que un mensaje recurra toda la red cuando el diámetro es mayor. 
+
+## Interconexión 
+
+En una red oscura, la interconexión entre los actores es crucial para la red como organismo dinámico. Por ejemplo, puesto que la seguridad de la organización es crucial, a menudo el reclutamiento de nuevos miembros toma lugar a través de los vínculos preexistentes de miembros de la red [@Cunningham2016]. Es por este aislamiento que las redes oscuras enfocadas en el anonimato tienden volverse cada vez más densas con vínculos entre miembros de la red y pocos enlaces al mundo exterior. Sin embargo, el cortar vínculos con el mundo exterior conlleva un costo al limitar el acceso a recursos (por ejemplo, materiales, logísticos, financieros, etc.). Es por ello, que algunos investigadores y analistas sugieren que los vínculos a externos a actores externos a la red oscura son esenciales para acceder recursos y sobrevivir retos [@Uzzi1996]. 
+
+Esta dinámica entre acceso a recursos y seguridad, fuerza a las organizaciones y a los actores que las conforman a balancear aislamiento (por ejemplo, interconexión alta) con acceso a recursos exteriores (por ejemplo, interconexión moderada o baja). En esta sección, nos enfocamos en las medidas comúnmente utilizadas para medir este proceso. Específicamente, densidad y grado medio.
+
+### Densidad
+
+La densidad ($d$) es el número de enlaces en un grafo dividido por el número total posible de enlaces en el mismo [@Cunningham2016]. En una red no dirigida, se define como:
+
+$$
+d = \frac{L}{n(n-1)/2}
+$$
+
+Donde $L$ se refiere al numero actual de enlaces y $n$ es el numero de actores en la red. Para una red dirigida, no es necesario dividir el denominador entre dos, por lo que la ecuación es diferente:
+
+$$
+d = \frac{L}{n(n-1)}
+$$
+
+Pongamos esta herramienta en práctica; específicamente, con la Figura \@ref(fig:den) la cual podemos representar como matriz de adyacencia \@ref(eq:den).
+
+:::{.row}
+::::{.lcolumn-50}
+```{r den, fig.cap= "Grafo no dirigido"}
+igraph::make_star(n = 4, mode = "undirected") %>%
+  my_igraph()
+```
+::::
+::::{.rcolumn-50}
+\begin{matrix}
+  & 1 & 2 & 3 & 4 \\
+1 & - & 1 & 1 & 1 \\
+2 & 1 & - & 0 & 0 \\
+3 & 1 & 0 & - & - \\
+4 & 1 & 0 & 0 & -
+(\#eq:den)
+\end{matrix}
+::::
+::::
+
+El numero actual ($L$) de enlaces es seis y contamos con cuatro nodos en este gráfico. Entonces, la densidad de esta red es equivalente a $d = \frac{6}{3}$ = 0.5. Es decir, la interconexión de la red es 0.5 o la mitad de posible donde todos los actores están conectados (en este caso la densidad seria 1).
+
+### Grado Medio
+
+## Centralización
 
 ## Ejercicio Práctico
 
