@@ -82,10 +82,10 @@
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores-1"><i class="fa fa-check"></i>Colaboradores</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>I Introducción</b></span></li>
@@ -171,11 +171,17 @@
 <li class="chapter" data-level="8.1.1" data-path="topología.html"><a href="topología.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
 <li class="chapter" data-level="8.1.2" data-path="topología.html"><a href="topología.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
 <li class="chapter" data-level="8.1.3" data-path="topología.html"><a href="topología.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
-<li class="chapter" data-level="8.1.4" data-path="topología.html"><a href="topología.html#fragmentación"><i class="fa fa-check"></i><b>8.1.4</b> Fragmentación</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="topología.html"><a href="topología.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.2</b> Ejercicio Práctico</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="topología.html"><a href="topología.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.2.1</b> Antes de Empezar</a></li>
-<li class="chapter" data-level="8.2.2" data-path="topología.html"><a href="topología.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.2.2</b> Topología de redes en Gephi</a></li>
+<li class="chapter" data-level="8.2" data-path="topología.html"><a href="topología.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="topología.html"><a href="topología.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
+<li class="chapter" data-level="8.2.2" data-path="topología.html"><a href="topología.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="topología.html"><a href="topología.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="topología.html"><a href="topología.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="topología.html"><a href="topología.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="topología.html"><a href="topología.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
+<li class="chapter" data-level="8.4.2" data-path="topología.html"><a href="topología.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
@@ -218,7 +224,7 @@
 <p>En este capítulo volveremos a ver datos de modo-dos, sin embargo, el objetivo principal es pasar mas allí de la definición y explorar como estos sirven de precursores a relaciones de modo-uno. A lo largo de esta sección, retornaremos a la multiplicación de matrices, si no se siente cómodo con este proceso favor de repasar el capítulo previo. Este capitulo concluye con un ejercicio previo en Gephi.</p>
 <div id="modo-dos-qué-es" class="section level2">
 <h2><span class="header-section-number">5.1</span> Modo-Dos, ¿Qué es?</h2>
-<p>Para recapitular, las redes de modo-dos son aquellas que constan de dos grupos de nodos y donde los enlaces solo existen entre nodos de diferentes clases. A veces se les conoce como redes de afiliación, redes de membresía o incidencia <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>)</span>. Imagínese una red modo-dos que conecta personas a eventos, por ejemplo, pandilleros conectados con pandillas o otros grupos ilícitos. Bajo la definición previa, los vínculos solo conectan pandilleros a organizaciones como en la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:bip">3.3</a>.</p>
+<p>Para recapitular, las redes de modo-dos son aquellas que constan de dos grupos de nodos y donde los enlaces solo existen entre nodos de diferentes clases. A veces se les conoce como redes de afiliación, redes de membresía o incidencia <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Imagínese una red modo-dos que conecta personas a eventos, por ejemplo, pandilleros conectados con pandillas o otros grupos ilícitos. Bajo la definición previa, los vínculos solo conectan pandilleros a organizaciones como en la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:bip">3.3</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:bip"></span>
 <img src="02-twomode-to-one_files/figure-html/bip-1.png" alt="Gráfico Bipartita" width="70%" />
 <p class="caption">
@@ -616,7 +622,7 @@ Figura 5.12: Enlaces de Evento-a-Evento
 <h3> Referencias</h3>
 <div id="refs" class="references">
 <div id="ref-Everton2012">
-<p>Everton, Sean F. 2012. <em>Disrupting Dark Networks</em>. Cambridge.</p>
+<p>Everton, Sean F. 2012a. <em>Disrupting Dark Networks</em>. Cambridge.</p>
 </div>
 <div id="ref-Hanneman2005">
 <p>Hanneman, Robert A., and Mark Riddle. 2005. <em>Introduction to Social Network Methods</em>. University of California.</p>

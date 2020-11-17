@@ -176,7 +176,9 @@
 <li class="chapter" data-level="8.2.1" data-path="topología.html"><a href="topología.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
 <li class="chapter" data-level="8.2.2" data-path="topología.html"><a href="topología.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="topología.html"><a href="topología.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a></li>
+<li class="chapter" data-level="8.3" data-path="topología.html"><a href="topología.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="topología.html"><a href="topología.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
+</ul></li>
 <li class="chapter" data-level="8.4" data-path="topología.html"><a href="topología.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
 <li class="chapter" data-level="8.4.1" data-path="topología.html"><a href="topología.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="8.4.2" data-path="topología.html"><a href="topología.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
@@ -197,8 +199,9 @@
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
 <li class="part"><span><b>V Apéndice</b></span></li>
 <li class="chapter" data-level="12" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>12</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="13" data-path="libros-de-codigos.html"><a href="libros-de-codigos.html"><i class="fa fa-check"></i><b>13</b> Libros de Codigos</a></li>
 <li class="part"><span><b>VI Referencias</b></span></li>
-<li class="chapter" data-level="13" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>13</b> Referencias</a></li>
+<li class="chapter" data-level="14" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>14</b> Referencias</a></li>
 </ul>
 
       </nav>
@@ -308,6 +311,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

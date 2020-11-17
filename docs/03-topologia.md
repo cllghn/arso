@@ -128,6 +128,8 @@ $$
 d = \frac{L}{n(n-1)}
 $$
 
+En términos prácticos, ambas ecuaciones producen puntuaciones de densidad de 0 a 1. Es decir, una red con una densidad de 0 es una en la que no existen vínculos entre los actores. Mientras que una red con una densidad de uno es un gráfico completamente conectado en el que todos los actores están vinculados entre sí.
+
 Pongamos esta herramienta en práctica; específicamente, con la Figura \@ref(fig:den) la cual podemos representar como matriz de adyacencia \@ref(eq:den).
 
 :::{.row}
@@ -149,11 +151,113 @@ Pongamos esta herramienta en práctica; específicamente, con la Figura \@ref(fi
 ::::
 ::::
 
-El numero actual ($L$) de enlaces es seis y contamos con cuatro nodos en este gráfico. Entonces, la densidad de esta red es equivalente a $d = \frac{6}{3}$ = 0.5. Es decir, la interconexión de la red es 0.5 o la mitad de posible donde todos los actores están conectados (en este caso la densidad seria 1).
+El numero actual ($L$) de enlaces es seis y contamos con cuatro nodos en este gráfico. Entonces, la densidad de esta red es equivalente a $d = \frac{6}{3}$ = 0.5. Es decir, la interconexión de la red es 0.5 o la mitad de posible donde todos los actores están conectados.
 
 ### Grado Medio
 
+La medida de densidad está inversamente relacionada con el tamaño de la red porque al agregar actores a la red el número de vínculos posibles aumenta exponencialmente mientras que el número de vínculos que cada actor puede mantener es limitado [@Everton2012]. Es por ello que a menudo las redes más grandes tendrán densidades más bajas. Con base en esta observación, los analistas de redes utilizan la medida de grado medio para comparar el nivel de interconexión entre redes de diferentes tamaños. El grado medio se define formalmente como el promedio de enlaces que tiene cada actor en la red. Si el grado de cada nodo es $k$, entonces:
+
+$$
+\bar{k} = \frac{E}{N}
+$$
+
+
+
+
+Donde $N$ es el numero de nodos y $E$ es el numero de vínculos en la red. En términos prácticos, esta ecuación retorna un numero promedio de vínculos para todos los actores en la red. Esto, nos ayuda a comparar redes de diferentes tamaños. Por ejemplo, las redes \@ref(fig:avg1) y \@ref(fig:avg2) tienen un grado medio similar, de 1.98 y 1.99 respectivamente. Adicionalmente, la densidad es equivalente a 0.02 y a 0.01.
+
+:::{.row}
+::::{.lcolumn-50}
+<div class="figure" style="text-align: center">
+<img src="03-topologia_files/figure-html/avg1-1.png" alt="Grafo sin escala de 100 nodos" width="70%" />
+<p class="caption">(\#fig:avg1)Grafo sin escala de 100 nodos</p>
+</div>
+::::
+::::{.rcolumn-50}
+<div class="figure" style="text-align: center">
+<img src="03-topologia_files/figure-html/avg2-1.png" alt="Grafo sin escala de 200 nodos" width="70%" />
+<p class="caption">(\#fig:avg2)Grafo sin escala de 200 nodos</p>
+</div>
+::::
+::::
+
+Es decir, aunque la densidad de estos gráficos es disimilar podemos atribuir esta discrepancia a el numero de nodos en cada red. Sin embargo, al comparar el grado medio, vemos que en promedio cada actor en ambas redes se encuentra conectado a dos otros nodos.
+
 ## Centralización
+
+Para recapitular, la eficiencia operacional de una red se ve afectada por la habilidad de esta para movilizar recursos materiales o humanos [@McCormick2000]. Algunos, sugieren que esta capacidad operacional se encuentra íntimamente relacionada con la topología de la red social; específicamente, la centralización de la red [@Morselli2001; @Cunningham2016]. Sin embargo, las redes altamente centralizadas no son libres de desafíos. Por ejemplo, son vulnerables a la eliminación de un puñado clave de nodos [@Bakker2011]. Por ello, @Everton2012a hace el argumento "demasiado de algo bueno puede llevar a las redes a tener un rendimiento inferior ... [desde la perspectiva de la red oscura] no deben encontrase demasiado centralizadas o descentralizadas, mientras que desde la nuestra así es exactamente como queremos que sean" [@Everton2012a]. 
+
+
+Por consiguiente, es crucial que como analistas de redes sepamos como determinar el nivel de centralización de una red. En la siguiente sección presentamos la medida de centralización, la cual es comúnmente utilizada para capturar de manera cuantitativa el nivel de centralización de una red.
+
+### Centralización
+
+La centralización es el grado en que los vínculos de una red se centran en una persona o un conjunto de personas, de modo que en una red centralizada, una o varias personas ocupan puestos de poder y control en la red, mientras que las redes descentralizadas tienen estructuras de poder y control difusas [@Valente2010].
+
+Esta medida se basa en la centralidad de cada nodo en la red para calcular que tan variables o heterogéneas son las centralidades de cada actor [@Wasserman1994]. Podemos observar un ejemplo de red centralizada en la Figura \@ref(fig:star). En el grafo estrella el actor uno (1) tiene contacto directo con todos los demás, los cuales no tienen contacto entre ellos. Utilizando este concepto básico de centralidad de grado, el numero de vínculos que tiene cada nodo, exploremos como calcular la centralización de grado. Aquí utilizamos la definición general matemática de Freeman [-@Freeman1979] para calcular el índice de centralización de grado a nivel grupo:
+
+$$
+C = \frac{\sum [C(n^*) - C(n_i)]}{max\sum [C(n^*) - C(n_i)]}
+$$
+
+Donde $C(n_i)$ representa el índice de centralidad de un actor y $C(n^*)$ es el mayor valor del índice de centralidad en la red. Por lo tanto, $\sum [C(n^*) - C(n_i)]$ es la suma de las diferencias entre el valor maximo y los valores observados; adicionalmente, $max\sum [C(n^*) - C(n_i)]$ es la suma teórica máxima [@Wasserman1994]. El producto de esta operación es un índice entre 0 y 1. Una red con un índice de centralización 0 seria aquella donde todos los actores tienen la misma centralidad. De manera opuesta, una rede con índice de centralización 1 representa una configuración donde un solo actor domina el índice de centralidad comparado con los demás nodos en la red. Pongamos este nuevo conocimiento en práctica utilizando la medida básica de centralidad de grado, la cual representa el número de vínculos que tiene cada nodo. Utilizando la fórmula de Freeman, calculemos la centralización de grado la red estrella (\@ref(fig:star)). 
+
+:::: {.row}
+:::: {.lcolumn-50}
+
+$C_D = \frac{\sum [C(n^*) - C(n_i)]}{max\sum [C(n^*) - C(n_i)]}$
+
+$C_D = \frac{(4-4)+(4-1)+(4-1)+(4-1)+(4-1)}{12}$
+
+$C_D = 1.0$
+
+::::
+:::: {.rcolumn-50}
+\begin{matrix}
+Nodo   & Grado \\
+1      & 4     \\
+2      & 1     \\
+3      & 1     \\
+4      & 1     \\
+5      & 1     \\
+(\#eq:grados)
+\end{matrix}
+::::
+::::
+
+En la red estrella encontramos una centralización de grado de 1.0. Por consiguiente, de manera matemática asumimos que los nodos en este grafico convergen alrededor de un actor central.
+
+<div class="figure" style="text-align: center">
+<img src="03-topologia_files/figure-html/star2-1.png" alt="Red estrella modificada" width="70%" />
+<p class="caption">(\#fig:star2)Red estrella modificada</p>
+</div>
+
+Veamos que sucede al introducir vínculos adicionales al grafo. En la Figura \@ref(fig:star2) el actor uno retiene el mismo número de vínculos que le proveen contacto directo con todos los demás,  sin embargo, en esta ocasión los actores dos (2) y tres (3) tiene acceso mutuo. Recalculemos, la centralización de la red con base a la centralidad de grado:
+
+:::: {.row}
+:::: {.lcolumn-50}
+$C_D = \frac{\sum [C(n^*) - C(n_i)]}{max\sum [C(n^*) - C(n_i)]}$
+
+$C_D = \frac{(4-4)+(4-2)+(4-2)+(4-1)+(4-1)}{12}$
+
+$C_D = 0.833$
+::::
+:::: {.rcolumn-50}
+\begin{matrix}
+Nodo   & Grado \\
+1      & 4     \\
+2      & 2     \\
+3      & 2     \\
+4      & 1     \\
+5      & 1     \\
+(\#eq:grados2)
+\end{matrix}
+::::
+::::
+
+El índice de centralización de grado es 0.833. Lo cual sugiere que la mayoría de los vínculos en la red se encuentran enlazados con un actor central. Sin embargo, al agregar vínculos en la periferia de la red vemos una reducción en la homogeneidad de los valores individuales, la cual reduce el índice grupal.
+
+Antes de concluir esta sección, es importante recalcar dos cosas. Primero, como se ha mencionado la centralización es un índice grupal generado a base de las medidas de centralidad para cada vértice. En los siguientes capítulos veremos múltiples medidas de centralidad que pueden servir como precursores para calcular una medida de centralización. En este capitulo solamente hemos utilizado la centralidad de grado como precursor, pero es importante tener en mente que es posible generar índices de centralización con medidas de centralidad como intermediación, cercanía, o eigenvector. Segundo, Gephi no tiene la capacidad de calcular centralización, sin embargo, otras plataformas de software (como ORA, UCInet, o igraph) tienen esta capacidad y complementan las funciones de Gephi. 
 
 ## Ejercicio Práctico
 
@@ -164,6 +268,7 @@ Para este ejercicio utilizaremos un conjunto de datos con diez redes diferentes 
 ### Antes de Empezar
 
 Para este ejercicio, deberá instalar el módulo *Clustering Coefficient* (ó coeficiente de agrupación) en Gephi. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo *MultimodeNetworks Transformation* en ejercicio práctico en el capitulo [Derivando Datos Modo-Uno de Modo-Dos]. 
+
 
 
 ### Topología de redes en Gephi
