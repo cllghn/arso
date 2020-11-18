@@ -214,3 +214,6 @@ libro-de-códigos-de-noordin-top
 referencias
 componentes-débiles
 componentes-fuertes
+fig:weakcomp
+fig:strongcomp
+louvain

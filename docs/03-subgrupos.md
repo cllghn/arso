@@ -10,13 +10,16 @@ En esta breve introducción cubriremos componentes, núcleos, grupos Newman y gr
 
 ## Componentes
 
-Estos son la forma mas simple de subgrupos cohesivos en ARSo. Simplemente, representan subredes en las cuales los miembros están conectados los unos a los otros (directa o indirectamente) pero no a miembros de otras subredes [@Everton2012:171]. Los componentes pueden ser divididos en dos campos, fuertes o débiles. 
+Estos son la forma mas simple de subgrupos cohesivos en ARSo. Simplemente, representan subredes en las cuales los miembros están conectados los unos a los otros (directa o indirectamente) pero no a miembros de otras subredes [@Everton2012, pp.171]. Los componentes pueden ser divididos en dos campos, fuertes o débiles. 
 
 ### Componentes Débiles
 
 Los nodos en un grafo desconectado se pueden dividir en dos o mas subconjuntos de manera que no haya caminos entre los nodos en diferentes conjuntos [@Wasserman1994], estos subconjuntos del grafo se llaman componentes débiles. Localizar componentes débiles es apropiado para datos dirigidos o no dirigidos, puesto que el objetivo es localizar subconjuntos conectados. Tome por ejemplo la Figura \@ref(fig:weakcomp). En esta imagen, el color de los nodos denota el componente débil al que pertenecen. Como ve, encontramos tres componentes débiles en dicho gráfico, uno con cinco actores, una diada, y un aislado. 
 
-<img src="03-subgrupos_files/figure-html/weakcomp-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/weakcomp-1.png" alt="Red con multiples componentes débiles" width="70%" />
+<p class="caption">(\#fig:weakcomp)Red con multiples componentes débiles</p>
+</div>
 
 El detectar componentes débiles no solo sirve para colorear los grafos, de hecho, una de las aplicaciones mas comunes es el aislar componentes. Por ejemplo, la densidad de el grafo en la Figura \@ref(fig:weakcomp) es 0.25. Este índice sugiere una red escarza, sin embargo, de manera visual podemos ver que algunos componentes son más densos que otros. Por ejemplo, el componente principal, aquel de mayor tamaño en un conjunto de subcomponentes, aparenta ser mas denso. Es por ello que podemos aislar este componente principal y al ejecutar la medida de densidad, vemos un valor de 0.6. Otra manera de pensar en este proceso es que nos permiten enfocarnos en diferentes subconjuntos del grafo en nuestro análisis. 
 
@@ -24,7 +27,10 @@ El detectar componentes débiles no solo sirve para colorear los grafos, de hech
 
 Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley2010 define los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre si y  (B) el subconjunto no es parte de un conjunto mayor con la propiedad de que todos los nodos pueden llegar a todos los demás [@Easley2010:388]. Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. Por ejemplo, en la Figura \@ref(fig:strongcomp) el color de los nodos nuevamente denota membresía a un subcomponente fuerte.
 
-<img src="03-subgrupos_files/figure-html/strongcomp-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/strongcomp-1.png" alt="Red con multiples componentes fuertes" width="70%" />
+<p class="caption">(\#fig:strongcomp)Red con multiples componentes fuertes</p>
+</div>
 
 Observe que en esta ocasión encontramos cuatro componentes fuertes, el primero se encuentra compuesto por un actor aislado {H}, el segundo es una diada reciproca {F, G}, el tercero es un solo actor {E}, y el cuarto sería el componente fuerte principal {A, B, C, D}. Es probable que se esté preguntando, ¿Por qué E no forma parte del componente fuerte principal? La razón la podemos encontrar en la definición de Easley y Kleinberg. Note que en el componente principal todos los nodos pueden alcanzarse entre sí, es decir, si cualquier nodo en el componente fuese a difundir alguna noticia atreves de sus contactos esta información podría retornar al originador. Esta dinámica se repite con la diada de los actores F y G. Sin embargo, E se encuentra en un componente único puesto que no alcanza a otros nodos.
 
@@ -34,7 +40,7 @@ Como puede ver, los componentes fuertes son mas restrictivos que los componentes
 
 ## Girvan-Newman
 
-##Louvain
+## Louvain
 
 ## Ejercicio Práctico
 

@@ -10,13 +10,13 @@ En esta breve introducción cubriremos componentes, núcleos, grupos Newman y gr
 
 ## Componentes
 
-Estos son la forma mas simple de subgrupos cohesivos en ARSo. Simplemente, representan subredes en las cuales los miembros están conectados los unos a los otros (directa o indirectamente) pero no a miembros de otras subredes [@Everton2012:171]. Los componentes pueden ser divididos en dos campos, fuertes o débiles. 
+Estos son la forma mas simple de subgrupos cohesivos en ARSo. Simplemente, representan subredes en las cuales los miembros están conectados los unos a los otros (directa o indirectamente) pero no a miembros de otras subredes [@Everton2012, pp.171]. Los componentes pueden ser divididos en dos campos, fuertes o débiles. 
 
 ### Componentes Débiles
 
 Los nodos en un grafo desconectado se pueden dividir en dos o mas subconjuntos de manera que no haya caminos entre los nodos en diferentes conjuntos [@Wasserman1994], estos subconjuntos del grafo se llaman componentes débiles. Localizar componentes débiles es apropiado para datos dirigidos o no dirigidos, puesto que el objetivo es localizar subconjuntos conectados. Tome por ejemplo la Figura \@ref(fig:weakcomp). En esta imagen, el color de los nodos denota el componente débil al que pertenecen. Como ve, encontramos tres componentes débiles en dicho gráfico, uno con cinco actores, una diada, y un aislado. 
 
-```{r weakcomp, fig.caption = "Red con multiples componentes débiles"}
+```{r weakcomp, fig.cap = "Red con multiples componentes débiles"}
 g <- data.frame(from = c("A", "A", "B", "A", "C", "D", "F", "H"),
            to   = c("B", "C", "D", "E", "E", "A", "G", "H")) %>%
   graph_from_data_frame(directed = FALSE,
@@ -42,7 +42,7 @@ El detectar componentes débiles no solo sirve para colorear los grafos, de hech
 
 Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley2010 define los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre si y  (B) el subconjunto no es parte de un conjunto mayor con la propiedad de que todos los nodos pueden llegar a todos los demás [@Easley2010:388]. Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. Por ejemplo, en la Figura \@ref(fig:strongcomp) el color de los nodos nuevamente denota membresía a un subcomponente fuerte.
 
-```{r strongcomp, fig.caption = "Red con multiples componentes fuertes"}
+```{r strongcomp, fig.cap = "Red con multiples componentes fuertes"}
 g <- data.frame(from = c("D", "B", "A", "A", "A", "C", "C", "G", "F", "H"),
                 to   = c("B", "A", "D", "E", "C", "A", "E", "F", "G", "H")) %>%
   graph_from_data_frame(directed = TRUE#,
@@ -66,7 +66,8 @@ g %>%
     layout             = layout_with_kk,
     vertex.size        = 30,
     vertex.label.color = "black",
-    edges.color        = "grey")
+    edges.color        = "grey",
+    edges.arrow.width  = 0.1)
 
 ```
 
@@ -78,7 +79,7 @@ Como puede ver, los componentes fuertes son mas restrictivos que los componentes
 
 ## Girvan-Newman
 
-##Louvain
+## Louvain
 
 ## Ejercicio Práctico
 
