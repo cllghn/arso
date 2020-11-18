@@ -2,7 +2,6 @@
 output: html_document
 bibliography: book.bib
 ---
-# (PART) Apéndice {-}
 
 # Glosario de Términos
 
@@ -86,6 +85,3 @@ bibliography: book.bib
 **Vínculos** (*Ties*): La relación entre dos nodos. Un vínculo puede ser direccionado (llamado *arco*, por ejemplo: **<--** | **-->** | **<->**) o no direccionado (llamado *borde*, por ejemplo: **---**). 
 
 <img src="05-glossary_files/figure-html/unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" />
-
-
-# Libros de Codigos

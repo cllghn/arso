@@ -191,6 +191,9 @@ ejercicio-práctico-4
 antes-de-empezar-3
 topología-de-redes-en-gephi
 subgrupos-cohesivos
+componentes
+k-cores
+girvan-newman
 ejercicio-práctico-5
 antes-de-empezar-4
 identificación-de-subgrupos-en-gephi
@@ -199,5 +202,15 @@ ejercicio-práctico-6
 centralidad-en-gephi
 puentes-y-corredores
 glosario-de-términos
-libros-de-codigos
+libro-de-códigos
+libro-de-códigos-de-muestra
+relaciones
+persona-a-persona-modo-uno
+persona-a-evento-modo-dos
+persona-a-locación-or-material-modo-dos
+persona-a-organización-modo-dos
+atributos
+libro-de-códigos-de-noordin-top
 referencias
+componentes-débiles
+componentes-fuertes

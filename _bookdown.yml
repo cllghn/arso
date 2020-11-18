@@ -19,7 +19,9 @@ rmd_files: ["index.Rmd",
             "03-centralidad.Rmd",
             "03-puentesycorredores.Rmd",
             "04-applications.Rmd",
+            "05-apendices.Rmd",
             "05-glossary.Rmd",
+            "05-codigos.Rmd",
             "06-references.Rmd"
             ]
 
