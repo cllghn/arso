@@ -226,3 +226,4 @@ fig:process
 fig:bigone
 ejercicio-práctico-7
 puentes-y-corredores-en-gephi
+fig:5

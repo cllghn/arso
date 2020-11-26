@@ -22,71 +22,102 @@ La red se encuentra clasificada en grupos por edad e idioma: empleados hispanoha
 ::::{.row}
 ::::{.lcolumn-20}
 *[Gephi]*
-*Archivo>Abrir*
+
+*Archivo > Abrir*
 ::::
 ::::{.rcolumn-80}
-1. En Gephi, primero importe el archivo [`strike.net`](https://raw.githubusercontent.com/cjcallag/arso/main/data/strike.net?token=AG4QS5FKC332CQW7BLHW7J27ZBV5Y) (los archivos Pajek (.net) son un formato común de herramientas para ARSo). Asegúrese de indicar que el archivo no está dirigido y de elegir *Mínimo* como estrategia de combinación de bordes. A continuación, importe el archivo de atributos [`Broker Score.csv`](**DOWNLOAD LINK**), este debe leerse como una tabla de nodos separados por comas. En el segundo de los dos cuadros de diálogo de importación (Figura \@ref(fig:1)). Finalmente, en el informe de importación de Gephi, indique que desea agregar estos datos al espacio de trabajo existente y haga clic en *Aceptar*.
+1. En Gephi, primero importe el archivo [`strike.net`](https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/strike.net?token=AG4QS5GYM43UCDVHHTGMXWK7ZBWXU) (los archivos Pajek (.net) son un formato común de herramientas para ARSo). Asegúrese de indicar que el archivo no está dirigido y de elegir *Mínimo* como estrategia de combinación de bordes. A continuación, importe el archivo de atributos [`brokerage_scores.csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/brokerage_scores.csv?token=AG4QS5APNYXOIYAUNCOFMJS7ZBWZO), este debe leerse como una tabla de nodos separados por comas. En el segundo de los dos cuadros de diálogo de importación (Figura \@ref(fig:1)). Finalmente, en el informe de importación de Gephi, indique que desea agregar estos datos al espacio de trabajo existente y haga clic en *Aceptar*.
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/03-11-01.png" alt="Cuadro de diálogo Importación de Gephi " width="70%" />
+<p class="caption">(\#fig:1)Cuadro de diálogo Importación de Gephi </p>
+</div>
+
+
+::::{.row}
+::::{.lcolumn-20}
+*[Laboratorio de datos]*
+
+*Tabla de Datos > Nodos*
+::::
+::::{.rcolumn-80}
+2. Verifique la *Tabla de nodos* en la ventana *Laboratorio de datos* para verificar que los atributos se hayan importado correctamente. Regrese a la ventana *Descripción general* y visualice la red donde el color del nodo refleja el grupo en el que se clasificaron (empleados hispanohablantes de 30 años o menos, empleados angloparlantes de 37 años o menos y empleados angloparlantes de 38 años o más). La Figura \@ref(fig:2) presenta un ejemplo.
+::::
+::::
+
+<div class="figure" style="text-align: center">
+<img src="images/03-11-02.png" alt="Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde" width="70%" />
+<p class="caption">(\#fig:2)Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde</p>
+</div>
+
+::::{.row}
+::::{.lcolumn-20}
+::::
+::::{.rcolumn-80}
+3. En la red, el vínculo entre Alejandro y Bob es el único canal de intercambio de información entre los empleados hispanos y todos los demás empleados. Eliminarlo aislaría a los empleados hispanos de la información que circula entre los demás empleados. Dicho de otra manera, cuando quitas el lazo entre Alejandro y Bob, desconectas a los trabajadores hispanos del resto de la red de comunicación. Tenga en cuenta que eliminar el vínculo entre Frank y Gill también desconecta la red: Frank se convierte en un aislado.
 ::::
 ::::
 
 
 ::::{.row}
 ::::{.lcolumn-20}
-
 ::::
 ::::{.rcolumn-80}
-
+4. La eliminación de un actor puede tener el mismo efecto que la eliminación de un enlace. Si Bob fuera removido, todos sus vínculos desaparecerían, incluido el puente con Alejandro. Bob se conoce como punto de corte, vértice de corte, punto de articulación o amplificador de límites (según el programa que utilice) porque eliminarlo desconecta la red. Los puntos de corte son cruciales para el flujo de información en una red. Son "cuellos de botella" en el sentido de que controlan el flujo de recursos de una parte de una red a otra. Formalmente, los puntos de corte son actores que pertenecen a dos o más bicomponentes, que son subredes que son invulnerables a la eliminación de un solo actor. En un bi-componente, ningún actor puede controlar completamente el flujo de información entre otros actores porque siempre hay un camino alternativo que los recursos pueden seguir.
 ::::
 ::::
 
 
 ::::{.row}
 ::::{.lcolumn-20}
+*[Vista General]*
 
+*Apariencia > Nodos > Color > Partición > Aplicar*
 ::::
 ::::{.rcolumn-80}
-
+5. Actualmente, Gephi no puede identificar bicomponentes y puntos de corte, por ello hemos importado los resultados de otros programas a Gephi. Coloree los nodos para reflejar los bicomponentes y los puntos de corte en la red Strike seleccionando la partición *cutpoints and bicomponents*. Ahora, los puntos de corte (Alejandro, Bob, Norm, Sam y Gill) deben ser todos del mismo color, mientras que los colores del resto de los actores deben reflejar sus respectivos bicomponentes. Puede comprobar por sí mismo que la eliminación de un punto de corte desconectará la red.
 ::::
 ::::
 
 
 ::::{.row}
 ::::{.lcolumn-20}
+*Estadísticas > Grado medio> Ejecutar*
 
+*Apariencia > Nodos > Tamaño> Ranking > Aplicar*
 ::::
 ::::{.rcolumn-80}
+6. A continuación, en la pestaña *Estadísticas* en la ventana *Visión general de la red*, *Ejecute* la función *Bridging Centrality*. Esto genera un informe, que puede cerrar. También calcula tres métricas: centralidad de intermediación, coeficiente de vinculación (agrupamiento) y centralidad de vinculación, siendo esta última el producto de las dos primeras. Primero, ajuste el tamaño de los nodos en términos de centralidad de intermediación. **¿Existe alguna asociación entre la centralidad de intermediación y qué nodos son puntos de corte?** A continuación, ajuste el tamaño de los nodos en términos de coeficiente de puenteo (agrupamiento). **¿Qué sucedió?** Por último, ajuste el tamaño de los nodos en términos de centralidad de puenteo (Figura \@ref(fig:3)). **¿Se compara esta medida con qué nodos son puntos de corte? ¿Cómo se compara con la centralidad de intermediación?** Recuerde, puede verificar las puntuaciones de centralidad de intermediación y puente en la ventana "Laboratorio de datos".
+::::
+::::
 
-::::
-::::
+<div class="figure" style="text-align: center">
+<img src="images/03-11-03.png" alt="Red Huelga: puntos de corte, bicomponentes y centralidad de puente" width="70%" />
+<p class="caption">(\#fig:3)Red Huelga: puntos de corte, bicomponentes y centralidad de puente</p>
+</div>
 
 
 ::::{.row}
 ::::{.lcolumn-20}
-
 ::::
 ::::{.rcolumn-80}
-
+7. Finalmente, ajuste el tamaño de los nodos en términos de puntajes de corretaje totales (no dirigidos) (*undirected g&f total*) (Figura \@ref(fig:4)) y luego la medida de autonomía de Burt (*burt's autonomy*) (Figura \@ref(fig:5)). **¿Cómo se comparan estas visualizaciones con las anteriores? ¿Alguno parece más útil que otros?**
 ::::
 ::::
 
 
-::::{.row}
-::::{.lcolumn-20}
-
-::::
-::::{.rcolumn-80}
-
-::::
-::::
+<div class="figure" style="text-align: center">
+<img src="images/03-11-04.png" alt="Red Huelga: puntos de corte, bicomponentes y puntajes de corretaje G&amp;F" width="70%" />
+<p class="caption">(\#fig:4)Red Huelga: puntos de corte, bicomponentes y puntajes de corretaje G&F</p>
+</div>
 
 
 
-::::{.row}
-::::{.lcolumn-20}
+<div class="figure" style="text-align: center">
+<img src="images/03-11-05.png" alt="Red Huelga: puntos de corte, bicomponentes y la autonomía de Burt" width="70%" />
+<p class="caption">(\#fig:5)Red Huelga: puntos de corte, bicomponentes y la autonomía de Burt</p>
+</div>
 
-::::
-::::{.rcolumn-80}
-
-::::
-::::
 
