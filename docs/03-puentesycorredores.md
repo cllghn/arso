@@ -2,12 +2,49 @@
 output: html_document
 ---
 
+
+
 # Puentes y Corredores
 
+## Puntos de Corte
+
+Un nodo, $n_{i}$ es punto de corte si el número de componentes en el grafo inicial es menor que el número de componentes en el subgrafo que resulta al remover dicho nodo [@Wasserman1994, 139]. Por ejemplo, en el grafo izquierdo de la Figura \@ref(fig:cutpoint) el nodo A es un punto de corte. ¿Por qué? Como dice la definición previa, al remover A se descompone el grafo en un número mayor de componentes (\@ref(fig:cutpoint) derecha).
+
+<div class="figure" style="text-align: center">
+<img src="03-puentesycorredores_files/figure-html/cutpoint-1.png" alt="Ejemplo de punto de corte" width="70%" />
+<p class="caption">(\#fig:cutpoint)Ejemplo de punto de corte</p>
+</div>
+
+El concepto de puntos de corte puede extenderse a un conjunto de nodos necesarios para mantener el grafo conexo, es decir un conjunto de corte [@Wasserman1994, 140]. De misma forma, el número de componentes en un grafo que contiene un conjunto de corte es menor que el que resulta al remover estos nodos. Por ejemplo, en la Figura \@ref(fig:cutset) el conjunto de corte {A, F} contiene dos nodos que al ser removidos incrementa el numero de componentes en la red.
+
+<div class="figure" style="text-align: center">
+<img src="03-puentesycorredores_files/figure-html/cutset-1.png" alt="Ejemplo de conjunto de corte" width="70%" />
+<p class="caption">(\#fig:cutset)Ejemplo de conjunto de corte</p>
+</div>
+
+Los puntos y conjuntos de corte son cruciales para las redes donde el flujo de recursos, información o materiales son cruciales para el objetivo de la organización. Por ejemplo, en una red de comunicación la información suele viajar a través de estos nodos entre partes distantes de la red. Por consiguiente, el remover estos intermediadores resulta en una ruptura de comunicación. Sin embargo, cabe recalcar que no todos los nodos en un punto o conjunto de corte son creados iguales. Por ejemplo, en la Figura \@ref(fig:cutset) el remover el nodo F solo desconecta al nodo G del grafo y pero crea dos componentes en el proceso. Similarmente, el remover el nodo A de manera individual genera dos componentes {B, C, D} y {E, F, G}. Sin embargo, se puede hacer un argumento que al remover A impactamos la red de mayor manera que al remover F. Es por ello, que los analistas de redes tienden a utilizar los puntos o conjuntos de corte en juntos con otras medidas de intermediación para determinar nodos o combinaciones optimas para disrumpir una red de manera eficaz.
+
+
+## Bi-componentes y Puentes
+
+Un bi-componente es formalmente un componente sin punto de corte. Por lo tanto, estos son invulnerables a fragmentación en múltiples subestructuras al remover un solo punto de corte [@Everton2010, 265]. Por ejemplo, en la Figura \@ref(fig:bicomponents) encontramos tres bi-componentes: {A, B, C}, {D, E, F, G} y {F, H, I}. Note el traslapo entre componentes, por ejemplo, {D, E, F, G} y {F, H, I} comparten el nodo F, el cual es un punto de corte. De hecho, los nodos compartidos entre bi-componentes son siempre puntos de corte.
+
+<div class="figure" style="text-align: center">
+<img src="03-puentesycorredores_files/figure-html/bicomponents-1.png" alt="Análisis de bi-componentes" width="70%" />
+<p class="caption">(\#fig:bicomponents)Análisis de bi-componentes</p>
+</div>
+
+A menudo, cuando los analistas hablan de bi-componentes se refieren a estructuras con tres o mas nodos y sin un punto de corte [@Everton2012, 265]. Adicionalmente, de particular interés son los vínculos entre bi-componentes, como la relación en la Figura \@ref(fig:bicomponents) entre los nodos C y D en rojo. Para los enlaces existe una noción análoga al punto de corte, conocida como puentes. De acuerdo con @Wasserman1994 un puente es “una línea que hace que el grafo que contiene esta línea tenga menos componentes que el subgrafo que resulta una vez que se quita la línea (los nodos incidentes con la línea siguen estando en el subgrafo)” [@Wasserman1994, 140]. Otros autores definen los puentes como bi-componentes de dos nodos que al ser removidos desconectan la red [@Everton2012, 265]. Ambas definiciones capturan un punto clave, los puentes son enlaces claves que conectan regiones de la red, sin ellos el flujo efectivo de recursos, ideas o materiales es imposible.
+
+## Intermediación de borde
+
+La intermediación de bordes es definida de manera similar a la intermediación de nodos. @Borgatti2018 la definen como un recuento del número de veces que un enlace se encuentra en una ruta geodésica entre un par de vértices.
+
+## Agujeros Estructurales
 
 ## Ejercicio Práctico
 
-En este ejercicio, exploraremos una variedad de algoritmos para detectar puentes y corredores en una red: centralidad del puente, bicomponentes y puntos de corte, agujeros estructurales, e intermediación de borde. En general, un corredor es un actor que, en virtud de su ubicación estructural, posee el poder potencial para controlar el flujo de recursos a través de una red, mientras que un puente puede considerarse como un vínculo que conecta dos subgrupos. La centralidad de puente intenta localizar actores que se encuentran entre componentes densamente conectados en una red. Para hacer esto, combina la centralidad de intermediación con un coeficiente de agrupamiento que es similar pero no idéntico al algoritmo de coeficiente de agrupamiento. Un bicomponente es un componente que es inmune a la eliminación de un solo nodo, mientras que un punto de corte es un nodo que, si se elimina, desconecta la red. Un bicomponente con solo dos actores se considera un puente porque si se elimina, la red se desconecta. El concepto de agujeros estructurales fue desarrollado por Ron Burt. Se basa en la noción de Mark Granovetter de "la fuerza de los vínculos débiles", pero en lugar de centrarse en el tipo de vínculo (es decir, fuerte frente a débil), se centra en detectar las brechas (es decir, huecos) en la estructura social que algunos puente de lazos. Finalmente, la intermediación de los bordes identifica los bordes (en lugar de los nodos) que se encuentran entre otros bordes de la red. Asume que los bordes que obtienen un puntaje alto en la intermediación tienen más probabilidades de ser puentes que los que no lo hacen. 
+En este ejercicio, exploraremos una variedad de algoritmos para detectar puentes y corredores en una red: centralidad de puentes, bi-componentes y puntos de corte, agujeros estructurales, e intermediación de borde. En general, un corredor es un actor que, en virtud de su ubicación estructural, posee el poder potencial para controlar el flujo de recursos a través de una red, mientras que un puente puede considerarse como un vínculo que conecta dos subgrupos. La centralidad de puente intenta localizar actores que se encuentran entre componentes densamente conectados en una red. Para hacer esto, combina la centralidad de intermediación con un coeficiente de agrupamiento que es similar pero no idéntico al algoritmo de coeficiente de agrupamiento. Un bi-componente es un componente que es inmune a la eliminación de un solo nodo, mientras que un punto de corte es un nodo que, si se elimina, desconecta la red. Un bi-componente con solo dos actores se considera un puente porque si se elimina, la red se desconecta. El concepto de agujeros estructurales fue desarrollado por Ron Burt. Se basa en la noción de Mark Granovetter de "la fuerza de los vínculos débiles", pero en lugar de centrarse en el tipo de vínculo (es decir, fuerte frente a débil), se centra en detectar las brechas (es decir, huecos) en la estructura social que algunos puente de lazos. Finalmente, la intermediación de los bordes identifica los bordes (en lugar de los nodos) que se encuentran entre otros bordes de la red. Asume que los bordes que obtienen un puntaje alto en la intermediación tienen más probabilidades de ser puentes que los que no lo hacen. 
 
 Desafortunadamente, por el momento Gephi solo calcula una de estas métricas: centralidad de puente, y deberá descargar el complemento Bridging Centrality para calcularlo.
 
@@ -65,7 +102,7 @@ La red se encuentra clasificada en grupos por edad e idioma: empleados hispanoha
 ::::{.lcolumn-20}
 ::::
 ::::{.rcolumn-80}
-4. La eliminación de un actor puede tener el mismo efecto que la eliminación de un enlace. Si Bob fuera removido, todos sus vínculos desaparecerían, incluido el puente con Alejandro. Bob se conoce como punto de corte, vértice de corte, punto de articulación o amplificador de límites (según el programa que utilice) porque eliminarlo desconecta la red. Los puntos de corte son cruciales para el flujo de información en una red. Son "cuellos de botella" en el sentido de que controlan el flujo de recursos de una parte de una red a otra. Formalmente, los puntos de corte son actores que pertenecen a dos o más bicomponentes, que son subredes que son invulnerables a la eliminación de un solo actor. En un bi-componente, ningún actor puede controlar completamente el flujo de información entre otros actores porque siempre hay un camino alternativo que los recursos pueden seguir.
+4. La eliminación de un actor puede tener el mismo efecto que la eliminación de un enlace. Si Bob fuera removido, todos sus vínculos desaparecerían, incluido el puente con Alejandro. Bob se conoce como punto de corte, vértice de corte, punto de articulación o amplificador de límites (según el programa que utilice) porque eliminarlo desconecta la red. Los puntos de corte son cruciales para el flujo de información en una red. Son "cuellos de botella" en el sentido de que controlan el flujo de recursos de una parte de una red a otra. Formalmente, los puntos de corte son actores que pertenecen a dos o más bi-componentes, que son subredes que son invulnerables a la eliminación de un solo actor. En un bi-componente, ningún actor puede controlar completamente el flujo de información entre otros actores porque siempre hay un camino alternativo que los recursos pueden seguir.
 ::::
 ::::
 
@@ -77,7 +114,7 @@ La red se encuentra clasificada en grupos por edad e idioma: empleados hispanoha
 *Apariencia > Nodos > Color > Partición > Aplicar*
 ::::
 ::::{.rcolumn-80}
-5. Actualmente, Gephi no puede identificar bicomponentes y puntos de corte, por ello hemos importado los resultados de otros programas a Gephi. Coloree los nodos para reflejar los bicomponentes y los puntos de corte en la red Strike seleccionando la partición *cutpoints and bicomponents*. Ahora, los puntos de corte (Alejandro, Bob, Norm, Sam y Gill) deben ser todos del mismo color, mientras que los colores del resto de los actores deben reflejar sus respectivos bicomponentes. Puede comprobar por sí mismo que la eliminación de un punto de corte desconectará la red.
+5. Actualmente, Gephi no puede identificar bi-componentes y puntos de corte, por ello hemos importado los resultados de otros programas a Gephi. Coloree los nodos para reflejar los bi-componentes y los puntos de corte en la red Strike seleccionando la partición *cutpoints and bicomponents*. Ahora, los puntos de corte (Alejandro, Bob, Norm, Sam y Gill) deben ser todos del mismo color, mientras que los colores del resto de los actores deben reflejar sus respectivos bi-componentes. Puede comprobar por sí mismo que la eliminación de un punto de corte desconectará la red.
 ::::
 ::::
 
@@ -94,8 +131,8 @@ La red se encuentra clasificada en grupos por edad e idioma: empleados hispanoha
 ::::
 
 <div class="figure" style="text-align: center">
-<img src="images/03-11-03.png" alt="Red Huelga: puntos de corte, bicomponentes y centralidad de puente" width="70%" />
-<p class="caption">(\#fig:3)Red Huelga: puntos de corte, bicomponentes y centralidad de puente</p>
+<img src="images/03-11-03.png" alt="Red Huelga: puntos de corte, bi-componentes y centralidad de puente" width="70%" />
+<p class="caption">(\#fig:3)Red Huelga: puntos de corte, bi-componentes y centralidad de puente</p>
 </div>
 
 
@@ -109,15 +146,15 @@ La red se encuentra clasificada en grupos por edad e idioma: empleados hispanoha
 
 
 <div class="figure" style="text-align: center">
-<img src="images/03-11-04.png" alt="Red Huelga: puntos de corte, bicomponentes y puntajes de corretaje G&amp;F" width="70%" />
-<p class="caption">(\#fig:4)Red Huelga: puntos de corte, bicomponentes y puntajes de corretaje G&F</p>
+<img src="images/03-11-04.png" alt="Red Huelga: puntos de corte, bi-componentes y puntajes de corretaje G&amp;F" width="70%" />
+<p class="caption">(\#fig:4)Red Huelga: puntos de corte, bi-componentes y puntajes de corretaje G&F</p>
 </div>
 
 
 
 <div class="figure" style="text-align: center">
-<img src="images/03-11-05.png" alt="Red Huelga: puntos de corte, bicomponentes y la autonomía de Burt" width="70%" />
-<p class="caption">(\#fig:5)Red Huelga: puntos de corte, bicomponentes y la autonomía de Burt</p>
+<img src="images/03-11-05.png" alt="Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt" width="70%" />
+<p class="caption">(\#fig:5)Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt</p>
 </div>
 
 

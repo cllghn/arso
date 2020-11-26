@@ -227,3 +227,12 @@ fig:bigone
 ejercicio-práctico-7
 puentes-y-corredores-en-gephi
 fig:5
+fig:cutpoint
+puntos-de-corte
+bicomponentes
+puentes
+intermediación-de-borde
+agujeros-estructurales
+fig:cutset
+fig:bicomponents
+bi-componentes-y-puentes

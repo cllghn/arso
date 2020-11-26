@@ -203,8 +203,12 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
-<li class="chapter" data-level="11.1" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.1</b> Ejercicio Práctico</a><ul>
-<li class="chapter" data-level="11.1.1" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.1.1</b> Puentes y Corredores en Gephi</a></li>
+<li class="chapter" data-level="11.1" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#puntos-de-corte"><i class="fa fa-check"></i><b>11.1</b> Puntos de Corte</a></li>
+<li class="chapter" data-level="11.2" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#bi-componentes-y-puentes"><i class="fa fa-check"></i><b>11.2</b> Bi-componentes y Puentes</a></li>
+<li class="chapter" data-level="11.3" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#intermediación-de-borde"><i class="fa fa-check"></i><b>11.3</b> Intermediación de borde</a></li>
+<li class="chapter" data-level="11.4" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#agujeros-estructurales"><i class="fa fa-check"></i><b>11.4</b> Agujeros Estructurales</a></li>
+<li class="chapter" data-level="11.5" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.5.1" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.5.1</b> Puentes y Corredores en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
@@ -238,14 +242,50 @@
             <section class="normal" id="section-">
 <div id="puentes-y-corredores" class="section level1">
 <h1><span class="header-section-number">11</span> Puentes y Corredores</h1>
+<div id="puntos-de-corte" class="section level2">
+<h2><span class="header-section-number">11.1</span> Puntos de Corte</h2>
+<p>Un nodo, <span class="math inline">\(n_{i}\)</span> es punto de corte si el número de componentes en el grafo inicial es menor que el número de componentes en el subgrafo que resulta al remover dicho nodo <span class="citation">(Wasserman and Faust <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, 139)</span>. Por ejemplo, en el grafo izquierdo de la Figura <a href="puentes-y-corredores.html#fig:cutpoint">11.1</a> el nodo A es un punto de corte. ¿Por qué? Como dice la definición previa, al remover A se descompone el grafo en un número mayor de componentes (<a href="puentes-y-corredores.html#fig:cutpoint">11.1</a> derecha).</p>
+<div class="figure" style="text-align: center"><span id="fig:cutpoint"></span>
+<img src="03-puentesycorredores_files/figure-html/cutpoint-1.png" alt="Ejemplo de punto de corte" width="70%" />
+<p class="caption">
+Figura 11.1: Ejemplo de punto de corte
+</p>
+</div>
+<p>El concepto de puntos de corte puede extenderse a un conjunto de nodos necesarios para mantener el grafo conexo, es decir un conjunto de corte <span class="citation">(Wasserman and Faust <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, 140)</span>. De misma forma, el número de componentes en un grafo que contiene un conjunto de corte es menor que el que resulta al remover estos nodos. Por ejemplo, en la Figura <a href="puentes-y-corredores.html#fig:cutset">11.2</a> el conjunto de corte {A, F} contiene dos nodos que al ser removidos incrementa el numero de componentes en la red.</p>
+<div class="figure" style="text-align: center"><span id="fig:cutset"></span>
+<img src="03-puentesycorredores_files/figure-html/cutset-1.png" alt="Ejemplo de conjunto de corte" width="70%" />
+<p class="caption">
+Figura 11.2: Ejemplo de conjunto de corte
+</p>
+</div>
+<p>Los puntos y conjuntos de corte son cruciales para las redes donde el flujo de recursos, información o materiales son cruciales para el objetivo de la organización. Por ejemplo, en una red de comunicación la información suele viajar a través de estos nodos entre partes distantes de la red. Por consiguiente, el remover estos intermediadores resulta en una ruptura de comunicación. Sin embargo, cabe recalcar que no todos los nodos en un punto o conjunto de corte son creados iguales. Por ejemplo, en la Figura <a href="puentes-y-corredores.html#fig:cutset">11.2</a> el remover el nodo F solo desconecta al nodo G del grafo y pero crea dos componentes en el proceso. Similarmente, el remover el nodo A de manera individual genera dos componentes {B, C, D} y {E, F, G}. Sin embargo, se puede hacer un argumento que al remover A impactamos la red de mayor manera que al remover F. Es por ello, que los analistas de redes tienden a utilizar los puntos o conjuntos de corte en juntos con otras medidas de intermediación para determinar nodos o combinaciones optimas para disrumpir una red de manera eficaz.</p>
+</div>
+<div id="bi-componentes-y-puentes" class="section level2">
+<h2><span class="header-section-number">11.2</span> Bi-componentes y Puentes</h2>
+<p>Un bi-componente es formalmente un componente sin punto de corte. Por lo tanto, estos son invulnerables a fragmentación en múltiples subestructuras al remover un solo punto de corte <span class="citation">(<span class="citeproc-not-found" data-reference-id="Everton2010"><strong>???</strong></span>)</span>. Por ejemplo, en la Figura <a href="puentes-y-corredores.html#fig:bicomponents">11.3</a> encontramos tres bi-componentes: {A, B, C}, {D, E, F, G} y {F, H, I}. Note el traslapo entre componentes, por ejemplo, {D, E, F, G} y {F, H, I} comparten el nodo F, el cual es un punto de corte. De hecho, los nodos compartidos entre bi-componentes son siempre puntos de corte.</p>
+<div class="figure" style="text-align: center"><span id="fig:bicomponents"></span>
+<img src="03-puentesycorredores_files/figure-html/bicomponents-1.png" alt="Análisis de bi-componentes" width="70%" />
+<p class="caption">
+Figura 11.3: Análisis de bi-componentes
+</p>
+</div>
+<p>A menudo, cuando los analistas hablan de bi-componentes se refieren a estructuras con tres o mas nodos y sin un punto de corte <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>, 265)</span>. Adicionalmente, de particular interés son los vínculos entre bi-componentes, como la relación en la Figura <a href="puentes-y-corredores.html#fig:bicomponents">11.3</a> entre los nodos C y D en rojo. Para los enlaces existe una noción análoga al punto de corte, conocida como puentes. De acuerdo con <span class="citation">Wasserman and Faust (<a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> un puente es “una línea que hace que el grafo que contiene esta línea tenga menos componentes que el subgrafo que resulta una vez que se quita la línea (los nodos incidentes con la línea siguen estando en el subgrafo)” <span class="citation">(Wasserman and Faust <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, 140)</span>. Otros autores definen los puentes como bi-componentes de dos nodos que al ser removidos desconectan la red <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>, 265)</span>. Ambas definiciones capturan un punto clave, los puentes son enlaces claves que conectan regiones de la red, sin ellos el flujo efectivo de recursos, ideas o materiales es imposible.</p>
+</div>
+<div id="intermediación-de-borde" class="section level2">
+<h2><span class="header-section-number">11.3</span> Intermediación de borde</h2>
+<p>La intermediación de bordes es definida de manera similar a la intermediación de nodos. <span class="citation">Borgatti, Everett, and Johnson (<a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span> la definen como un recuento del número de veces que un enlace se encuentra en una ruta geodésica entre un par de vértices.</p>
+</div>
+<div id="agujeros-estructurales" class="section level2">
+<h2><span class="header-section-number">11.4</span> Agujeros Estructurales</h2>
+</div>
 <div id="ejercicio-práctico-7" class="section level2">
-<h2><span class="header-section-number">11.1</span> Ejercicio Práctico</h2>
-<p>En este ejercicio, exploraremos una variedad de algoritmos para detectar puentes y corredores en una red: centralidad del puente, bicomponentes y puntos de corte, agujeros estructurales, e intermediación de borde. En general, un corredor es un actor que, en virtud de su ubicación estructural, posee el poder potencial para controlar el flujo de recursos a través de una red, mientras que un puente puede considerarse como un vínculo que conecta dos subgrupos. La centralidad de puente intenta localizar actores que se encuentran entre componentes densamente conectados en una red. Para hacer esto, combina la centralidad de intermediación con un coeficiente de agrupamiento que es similar pero no idéntico al algoritmo de coeficiente de agrupamiento. Un bicomponente es un componente que es inmune a la eliminación de un solo nodo, mientras que un punto de corte es un nodo que, si se elimina, desconecta la red. Un bicomponente con solo dos actores se considera un puente porque si se elimina, la red se desconecta. El concepto de agujeros estructurales fue desarrollado por Ron Burt. Se basa en la noción de Mark Granovetter de “la fuerza de los vínculos débiles”, pero en lugar de centrarse en el tipo de vínculo (es decir, fuerte frente a débil), se centra en detectar las brechas (es decir, huecos) en la estructura social que algunos puente de lazos. Finalmente, la intermediación de los bordes identifica los bordes (en lugar de los nodos) que se encuentran entre otros bordes de la red. Asume que los bordes que obtienen un puntaje alto en la intermediación tienen más probabilidades de ser puentes que los que no lo hacen.</p>
+<h2><span class="header-section-number">11.5</span> Ejercicio Práctico</h2>
+<p>En este ejercicio, exploraremos una variedad de algoritmos para detectar puentes y corredores en una red: centralidad de puentes, bi-componentes y puntos de corte, agujeros estructurales, e intermediación de borde. En general, un corredor es un actor que, en virtud de su ubicación estructural, posee el poder potencial para controlar el flujo de recursos a través de una red, mientras que un puente puede considerarse como un vínculo que conecta dos subgrupos. La centralidad de puente intenta localizar actores que se encuentran entre componentes densamente conectados en una red. Para hacer esto, combina la centralidad de intermediación con un coeficiente de agrupamiento que es similar pero no idéntico al algoritmo de coeficiente de agrupamiento. Un bi-componente es un componente que es inmune a la eliminación de un solo nodo, mientras que un punto de corte es un nodo que, si se elimina, desconecta la red. Un bi-componente con solo dos actores se considera un puente porque si se elimina, la red se desconecta. El concepto de agujeros estructurales fue desarrollado por Ron Burt. Se basa en la noción de Mark Granovetter de “la fuerza de los vínculos débiles”, pero en lugar de centrarse en el tipo de vínculo (es decir, fuerte frente a débil), se centra en detectar las brechas (es decir, huecos) en la estructura social que algunos puente de lazos. Finalmente, la intermediación de los bordes identifica los bordes (en lugar de los nodos) que se encuentran entre otros bordes de la red. Asume que los bordes que obtienen un puntaje alto en la intermediación tienen más probabilidades de ser puentes que los que no lo hacen.</p>
 <p>Desafortunadamente, por el momento Gephi solo calcula una de estas métricas: centralidad de puente, y deberá descargar el complemento Bridging Centrality para calcularlo.</p>
 <p>Para este ejercicio usaremos la red de comunicación de la planta de procesamiento de madera donde los trabajadores rechazaron un nuevo paquete de compensación y finalmente se declararon en huelga. Por ello, la gerencia contrató a un consultor externo para analizar la estructura de comunicación del empleado porque consideró que los negociadores sindicales no estaban comunicando eficazmente la información sobre el paquete a todos los empleados. El consultor externo pidió a todos los empleados que indicaran, en una escala de 5 puntos, la frecuencia con la que hablaban de la huelga con cada uno de sus colegas, desde ‘casi nunca’ (menos de una vez por semana) a ‘muy a menudo’ (varias veces por día). El consultor utilizó 3 como valor de corte para identificar un vínculo entre dos empleados. Si al menos una de las dos personas indicaron que hablaron sobre el trabajo con una frecuencia de tres o más, se incluyó un vínculo entre ellos en la red.</p>
 <p>La red se encuentra clasificada en grupos por edad e idioma: empleados hispanohablantes de 30 años o menos, empleados angloparlantes de 37 años o menos y empleados angloparlantes de 38 años o más. Todos los vínculos entre grupos tienen antecedentes especiales. Entre los hispanos, Alejandro es el más competente en inglés y Bob habla algo de español, por lo que existe un vínculo entre ellos. Bob le debe a Norm por conseguir su trabajo y Ozzie es el padre de Karl, lo que ayuda a explicar sus lazos. Sam y Wendle son los negociadores sindicales y fueron los encargados de explicar el nuevo programa propuesto por los gerentes.</p>
 <div id="puentes-y-corredores-en-gephi" class="section level3">
-<h3><span class="header-section-number">11.1.1</span> Puentes y Corredores en Gephi</h3>
+<h3><span class="header-section-number">11.5.1</span> Puentes y Corredores en Gephi</h3>
 <div class="row">
 <div class="lcolumn-20">
 <p><em><a href="trabajando-con-gephi.html#gephi">Gephi</a></em></p>
@@ -253,14 +293,14 @@
 </div>
 <div class="rcolumn-80">
 <ol style="list-style-type: decimal">
-<li>En Gephi, primero importe el archivo <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/strike.net?token=AG4QS5GYM43UCDVHHTGMXWK7ZBWXU"><code>strike.net</code></a> (los archivos Pajek (.net) son un formato común de herramientas para ARSo). Asegúrese de indicar que el archivo no está dirigido y de elegir <em>Mínimo</em> como estrategia de combinación de bordes. A continuación, importe el archivo de atributos <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/brokerage_scores.csv?token=AG4QS5APNYXOIYAUNCOFMJS7ZBWZO"><code>brokerage_scores.csv</code></a>, este debe leerse como una tabla de nodos separados por comas. En el segundo de los dos cuadros de diálogo de importación (Figura <a href="puentes-y-corredores.html#fig:1">11.1</a>). Finalmente, en el informe de importación de Gephi, indique que desea agregar estos datos al espacio de trabajo existente y haga clic en <em>Aceptar</em>.</li>
+<li>En Gephi, primero importe el archivo <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/strike.net?token=AG4QS5GYM43UCDVHHTGMXWK7ZBWXU"><code>strike.net</code></a> (los archivos Pajek (.net) son un formato común de herramientas para ARSo). Asegúrese de indicar que el archivo no está dirigido y de elegir <em>Mínimo</em> como estrategia de combinación de bordes. A continuación, importe el archivo de atributos <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/brokerage_scores.csv?token=AG4QS5APNYXOIYAUNCOFMJS7ZBWZO"><code>brokerage_scores.csv</code></a>, este debe leerse como una tabla de nodos separados por comas. En el segundo de los dos cuadros de diálogo de importación (Figura <a href="puentes-y-corredores.html#fig:1">11.4</a>). Finalmente, en el informe de importación de Gephi, indique que desea agregar estos datos al espacio de trabajo existente y haga clic en <em>Aceptar</em>.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:1"></span>
 <img src="images/03-11-01.PNG" alt="Cuadro de diálogo Importación de Gephi " width="70%" />
 <p class="caption">
-Figura 11.1: Cuadro de diálogo Importación de Gephi
+Figura 11.4: Cuadro de diálogo Importación de Gephi
 </p>
 </div>
 <div class="row">
@@ -270,14 +310,14 @@ Figura 11.1: Cuadro de diálogo Importación de Gephi
 </div>
 <div class="rcolumn-80">
 <ol start="2" style="list-style-type: decimal">
-<li>Verifique la <em>Tabla de nodos</em> en la ventana <em>Laboratorio de datos</em> para verificar que los atributos se hayan importado correctamente. Regrese a la ventana <em>Descripción general</em> y visualice la red donde el color del nodo refleja el grupo en el que se clasificaron (empleados hispanohablantes de 30 años o menos, empleados angloparlantes de 37 años o menos y empleados angloparlantes de 38 años o más). La Figura <a href="puentes-y-corredores.html#fig:2">11.2</a> presenta un ejemplo.</li>
+<li>Verifique la <em>Tabla de nodos</em> en la ventana <em>Laboratorio de datos</em> para verificar que los atributos se hayan importado correctamente. Regrese a la ventana <em>Descripción general</em> y visualice la red donde el color del nodo refleja el grupo en el que se clasificaron (empleados hispanohablantes de 30 años o menos, empleados angloparlantes de 37 años o menos y empleados angloparlantes de 38 años o más). La Figura <a href="puentes-y-corredores.html#fig:2">11.5</a> presenta un ejemplo.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:2"></span>
 <img src="images/03-11-02.PNG" alt="Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde" width="70%" />
 <p class="caption">
-Figura 11.2: Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde
+Figura 11.5: Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde
 </p>
 </div>
 <div class="row">
@@ -296,7 +336,7 @@ Figura 11.2: Red Huelga, Color = Strike Groups, Peso del borde = Intermediación
 </div>
 <div class="rcolumn-80">
 <ol start="4" style="list-style-type: decimal">
-<li>La eliminación de un actor puede tener el mismo efecto que la eliminación de un enlace. Si Bob fuera removido, todos sus vínculos desaparecerían, incluido el puente con Alejandro. Bob se conoce como punto de corte, vértice de corte, punto de articulación o amplificador de límites (según el programa que utilice) porque eliminarlo desconecta la red. Los puntos de corte son cruciales para el flujo de información en una red. Son “cuellos de botella” en el sentido de que controlan el flujo de recursos de una parte de una red a otra. Formalmente, los puntos de corte son actores que pertenecen a dos o más bicomponentes, que son subredes que son invulnerables a la eliminación de un solo actor. En un bi-componente, ningún actor puede controlar completamente el flujo de información entre otros actores porque siempre hay un camino alternativo que los recursos pueden seguir.</li>
+<li>La eliminación de un actor puede tener el mismo efecto que la eliminación de un enlace. Si Bob fuera removido, todos sus vínculos desaparecerían, incluido el puente con Alejandro. Bob se conoce como punto de corte, vértice de corte, punto de articulación o amplificador de límites (según el programa que utilice) porque eliminarlo desconecta la red. Los puntos de corte son cruciales para el flujo de información en una red. Son “cuellos de botella” en el sentido de que controlan el flujo de recursos de una parte de una red a otra. Formalmente, los puntos de corte son actores que pertenecen a dos o más bi-componentes, que son subredes que son invulnerables a la eliminación de un solo actor. En un bi-componente, ningún actor puede controlar completamente el flujo de información entre otros actores porque siempre hay un camino alternativo que los recursos pueden seguir.</li>
 </ol>
 </div>
 </div>
@@ -307,7 +347,7 @@ Figura 11.2: Red Huelga, Color = Strike Groups, Peso del borde = Intermediación
 </div>
 <div class="rcolumn-80">
 <ol start="5" style="list-style-type: decimal">
-<li>Actualmente, Gephi no puede identificar bicomponentes y puntos de corte, por ello hemos importado los resultados de otros programas a Gephi. Coloree los nodos para reflejar los bicomponentes y los puntos de corte en la red Strike seleccionando la partición <em>cutpoints and bicomponents</em>. Ahora, los puntos de corte (Alejandro, Bob, Norm, Sam y Gill) deben ser todos del mismo color, mientras que los colores del resto de los actores deben reflejar sus respectivos bicomponentes. Puede comprobar por sí mismo que la eliminación de un punto de corte desconectará la red.</li>
+<li>Actualmente, Gephi no puede identificar bi-componentes y puntos de corte, por ello hemos importado los resultados de otros programas a Gephi. Coloree los nodos para reflejar los bi-componentes y los puntos de corte en la red Strike seleccionando la partición <em>cutpoints and bicomponents</em>. Ahora, los puntos de corte (Alejandro, Bob, Norm, Sam y Gill) deben ser todos del mismo color, mientras que los colores del resto de los actores deben reflejar sus respectivos bi-componentes. Puede comprobar por sí mismo que la eliminación de un punto de corte desconectará la red.</li>
 </ol>
 </div>
 </div>
@@ -318,14 +358,14 @@ Figura 11.2: Red Huelga, Color = Strike Groups, Peso del borde = Intermediación
 </div>
 <div class="rcolumn-80">
 <ol start="6" style="list-style-type: decimal">
-<li>A continuación, en la pestaña <em>Estadísticas</em> en la ventana <em>Visión general de la red</em>, <em>Ejecute</em> la función <em>Bridging Centrality</em>. Esto genera un informe, que puede cerrar. También calcula tres métricas: centralidad de intermediación, coeficiente de vinculación (agrupamiento) y centralidad de vinculación, siendo esta última el producto de las dos primeras. Primero, ajuste el tamaño de los nodos en términos de centralidad de intermediación. <strong>¿Existe alguna asociación entre la centralidad de intermediación y qué nodos son puntos de corte?</strong> A continuación, ajuste el tamaño de los nodos en términos de coeficiente de puenteo (agrupamiento). <strong>¿Qué sucedió?</strong> Por último, ajuste el tamaño de los nodos en términos de centralidad de puenteo (Figura <a href="puentes-y-corredores.html#fig:3">11.3</a>). <strong>¿Se compara esta medida con qué nodos son puntos de corte? ¿Cómo se compara con la centralidad de intermediación?</strong> Recuerde, puede verificar las puntuaciones de centralidad de intermediación y puente en la ventana “Laboratorio de datos”.</li>
+<li>A continuación, en la pestaña <em>Estadísticas</em> en la ventana <em>Visión general de la red</em>, <em>Ejecute</em> la función <em>Bridging Centrality</em>. Esto genera un informe, que puede cerrar. También calcula tres métricas: centralidad de intermediación, coeficiente de vinculación (agrupamiento) y centralidad de vinculación, siendo esta última el producto de las dos primeras. Primero, ajuste el tamaño de los nodos en términos de centralidad de intermediación. <strong>¿Existe alguna asociación entre la centralidad de intermediación y qué nodos son puntos de corte?</strong> A continuación, ajuste el tamaño de los nodos en términos de coeficiente de puenteo (agrupamiento). <strong>¿Qué sucedió?</strong> Por último, ajuste el tamaño de los nodos en términos de centralidad de puenteo (Figura <a href="puentes-y-corredores.html#fig:3">11.6</a>). <strong>¿Se compara esta medida con qué nodos son puntos de corte? ¿Cómo se compara con la centralidad de intermediación?</strong> Recuerde, puede verificar las puntuaciones de centralidad de intermediación y puente en la ventana “Laboratorio de datos”.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:3"></span>
-<img src="images/03-11-03.PNG" alt="Red Huelga: puntos de corte, bicomponentes y centralidad de puente" width="70%" />
+<img src="images/03-11-03.PNG" alt="Red Huelga: puntos de corte, bi-componentes y centralidad de puente" width="70%" />
 <p class="caption">
-Figura 11.3: Red Huelga: puntos de corte, bicomponentes y centralidad de puente
+Figura 11.6: Red Huelga: puntos de corte, bi-componentes y centralidad de puente
 </p>
 </div>
 <div class="row">
@@ -334,20 +374,20 @@ Figura 11.3: Red Huelga: puntos de corte, bicomponentes y centralidad de puente
 </div>
 <div class="rcolumn-80">
 <ol start="7" style="list-style-type: decimal">
-<li>Finalmente, ajuste el tamaño de los nodos en términos de puntajes de corretaje totales (no dirigidos) (<em>undirected g&amp;f total</em>) (Figura <a href="puentes-y-corredores.html#fig:4">11.4</a>) y luego la medida de autonomía de Burt (<em>burt’s autonomy</em>) (Figura <a href="puentes-y-corredores.html#fig:5">11.5</a>). <strong>¿Cómo se comparan estas visualizaciones con las anteriores? ¿Alguno parece más útil que otros?</strong></li>
+<li>Finalmente, ajuste el tamaño de los nodos en términos de puntajes de corretaje totales (no dirigidos) (<em>undirected g&amp;f total</em>) (Figura <a href="puentes-y-corredores.html#fig:4">11.7</a>) y luego la medida de autonomía de Burt (<em>burt’s autonomy</em>) (Figura <a href="puentes-y-corredores.html#fig:5">11.8</a>). <strong>¿Cómo se comparan estas visualizaciones con las anteriores? ¿Alguno parece más útil que otros?</strong></li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:4"></span>
-<img src="images/03-11-04.PNG" alt="Red Huelga: puntos de corte, bicomponentes y puntajes de corretaje G&amp;F" width="70%" />
+<img src="images/03-11-04.PNG" alt="Red Huelga: puntos de corte, bi-componentes y puntajes de corretaje G&amp;F" width="70%" />
 <p class="caption">
-Figura 11.4: Red Huelga: puntos de corte, bicomponentes y puntajes de corretaje G&amp;F
+Figura 11.7: Red Huelga: puntos de corte, bi-componentes y puntajes de corretaje G&amp;F
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:5"></span>
-<img src="images/03-11-05.PNG" alt="Red Huelga: puntos de corte, bicomponentes y la autonomía de Burt" width="70%" />
+<img src="images/03-11-05.PNG" alt="Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt" width="70%" />
 <p class="caption">
-Figura 11.5: Red Huelga: puntos de corte, bicomponentes y la autonomía de Burt
+Figura 11.8: Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt
 </p>
 </div>
 
@@ -361,6 +401,18 @@ Figura 11.5: Red Huelga: puntos de corte, bicomponentes y la autonomía de Burt
 
 
 
+</div>
+<h3> Referencias</h3>
+<div id="refs" class="references">
+<div id="ref-Borgatti2018">
+<p>Borgatti, Stephen P., Martin G. Everett, and Jeffrey C. Johnson. 2018. <em>Analyzing Social Networks</em>. Sage.</p>
+</div>
+<div id="ref-Everton2012">
+<p>Everton, Sean F. 2012. <em>Disrupting Dark Networks</em>. Cambridge.</p>
+</div>
+<div id="ref-Wasserman1994">
+<p>Wasserman, Stanley, and Katherine Faust. 1994. <em>Social Network Analysis: Methods and Applications</em>. Cambridge University Press.</p>
+</div>
 </div>
             </section>
 
@@ -416,6 +468,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
