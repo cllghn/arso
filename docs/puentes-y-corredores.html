@@ -185,12 +185,16 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
-<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a></li>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
+<li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
+</ul></li>
 <li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
 <li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
-<li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.4</b> Ejercicio Práctico</a><ul>
-<li class="chapter" data-level="9.4.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.4.1</b> Antes de Empezar</a></li>
-<li class="chapter" data-level="9.4.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.4.2</b> Identificación de Subgrupos en Gephi</a></li>
+<li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
+<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.5.1</b> Antes de Empezar</a></li>
+<li class="chapter" data-level="9.5.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.5.2</b> Identificación de Subgrupos en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="centralidad.html"><a href="centralidad.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a><ul>
@@ -198,7 +202,11 @@
 <li class="chapter" data-level="10.1.1" data-path="centralidad.html"><a href="centralidad.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.1.1</b> Centralidad en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a></li>
+<li class="chapter" data-level="11" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
+<li class="chapter" data-level="11.1" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.1</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.1.1</b> Puentes y Corredores en Gephi</a></li>
+</ul></li>
+</ul></li>
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
 <li class="part"><span><b>V Apéndices</b></span></li>
 <li class="chapter" data-level="12" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>12</b> Glosario de Términos</a></li>
@@ -230,7 +238,76 @@
             <section class="normal" id="section-">
 <div id="puentes-y-corredores" class="section level1">
 <h1><span class="header-section-number">11</span> Puentes y Corredores</h1>
+<div id="ejercicio-práctico-7" class="section level2">
+<h2><span class="header-section-number">11.1</span> Ejercicio Práctico</h2>
+<p>En este ejercicio, exploraremos una variedad de algoritmos para detectar puentes y corredores en una red: centralidad del puente, bicomponentes y puntos de corte, agujeros estructurales, e intermediación de borde. En general, un corredor es un actor que, en virtud de su ubicación estructural, posee el poder potencial para controlar el flujo de recursos a través de una red, mientras que un puente puede considerarse como un vínculo que conecta dos subgrupos. La centralidad de puente intenta localizar actores que se encuentran entre componentes densamente conectados en una red. Para hacer esto, combina la centralidad de intermediación con un coeficiente de agrupamiento que es similar pero no idéntico al algoritmo de coeficiente de agrupamiento. Un bicomponente es un componente que es inmune a la eliminación de un solo nodo, mientras que un punto de corte es un nodo que, si se elimina, desconecta la red. Un bicomponente con solo dos actores se considera un puente porque si se elimina, la red se desconecta. El concepto de agujeros estructurales fue desarrollado por Ron Burt. Se basa en la noción de Mark Granovetter de “la fuerza de los vínculos débiles”, pero en lugar de centrarse en el tipo de vínculo (es decir, fuerte frente a débil), se centra en detectar las brechas (es decir, huecos) en la estructura social que algunos puente de lazos. Finalmente, la intermediación de los bordes identifica los bordes (en lugar de los nodos) que se encuentran entre otros bordes de la red. Asume que los bordes que obtienen un puntaje alto en la intermediación tienen más probabilidades de ser puentes que los que no lo hacen.</p>
+<p>Desafortunadamente, por el momento Gephi solo calcula una de estas métricas: centralidad de puente, y deberá descargar el complemento Bridging Centrality para calcularlo.</p>
+<p>Para este ejercicio usaremos la red de comunicación de la planta de procesamiento de madera donde los trabajadores rechazaron un nuevo paquete de compensación y finalmente se declararon en huelga. Por ello, la gerencia contrató a un consultor externo para analizar la estructura de comunicación del empleado porque consideró que los negociadores sindicales no estaban comunicando eficazmente la información sobre el paquete a todos los empleados. El consultor externo pidió a todos los empleados que indicaran, en una escala de 5 puntos, la frecuencia con la que hablaban de la huelga con cada uno de sus colegas, desde ‘casi nunca’ (menos de una vez por semana) a ‘muy a menudo’ (varias veces por día). El consultor utilizó 3 como valor de corte para identificar un vínculo entre dos empleados. Si al menos una de las dos personas indicaron que hablaron sobre el trabajo con una frecuencia de tres o más, se incluyó un vínculo entre ellos en la red.</p>
+<p>La red se encuentra clasificada en grupos por edad e idioma: empleados hispanohablantes de 30 años o menos, empleados angloparlantes de 37 años o menos y empleados angloparlantes de 38 años o más. Todos los vínculos entre grupos tienen antecedentes especiales. Entre los hispanos, Alejandro es el más competente en inglés y Bob habla algo de español, por lo que existe un vínculo entre ellos. Bob le debe a Norm por conseguir su trabajo y Ozzie es el padre de Karl, lo que ayuda a explicar sus lazos. Sam y Wendle son los negociadores sindicales y fueron los encargados de explicar el nuevo programa propuesto por los gerentes.</p>
+<div id="puentes-y-corredores-en-gephi" class="section level3">
+<h3><span class="header-section-number">11.1.1</span> Puentes y Corredores en Gephi</h3>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#gephi">Gephi</a></em>
+<em>Archivo&gt;Abrir</em></p>
+</div>
+<div class="rcolumn-80">
+<ol style="list-style-type: decimal">
+<li>En Gephi, primero importe el archivo <code>strike.net</code> (<strong>ADD DATA LINK HERE</strong>) (los archivos Pajek (.net) son un formato común de herramientas para ARSo). El informe de importación de Gephi indicará que hay una serie de problemas “graves”, pero estos reflejan los colores de los nodos asignados como atributo en igraph, y Gephi no sabe qué hacer con ellos. Por lo tanto, al importarlos, los ignorará. Además, asegúrese de indicar que el archivo no está dirigido y de elegir “Mínimo” como estrategia de combinación de bordes. A continuación, importe el archivo de atributos generado en R (Broker Score.csv). Esto debe leerse como una tabla de nodos separados por comas. En el segundo de los dos cuadros de diálogo de importación (Figura 1), es posible que deba cambiar los menús desplegables de “Cadena” a “Entero” para todos los atributos, excepto la Autonomía de Burt. Para eso, cámbielo a “BigDecimal”. Haga clic en “Finalizar”. Finalmente, en el informe de importación de Gephi, indique que desea agregar estos datos al espacio de trabajo existente y haga clic en Aceptar.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
 
+</div>
+<div class="rcolumn-80">
+
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+
+</div>
+</div>
+
+</div>
+</div>
 </div>
 
 
@@ -294,20 +371,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

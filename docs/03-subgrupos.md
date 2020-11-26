@@ -2,6 +2,9 @@
 output: html_document
 ---
 
+
+
+
 # Subgrupos Cohesivos
 
 En este capítulo, exploraremos algunos (pero no todos) métodos para hallar subgrupos cohesivos de actores dentro de una red social. Los subgrupos cohesivos son subconjuntos de actores entre los cuales existen lazos fuertes, por ello los métodos que utilizaremos formalizan la noción de un grupo social utilizando las propiedades estructurales de una red social [@Wasserman1994].
@@ -25,7 +28,7 @@ El detectar componentes débiles no solo sirve para colorear los grafos, de hech
 
 ### Componentes Fuertes
 
-Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley2010 define los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre si y  (B) el subconjunto no es parte de un conjunto mayor con la propiedad de que todos los nodos pueden llegar a todos los demás [@Easley2010:388]. Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. Por ejemplo, en la Figura \@ref(fig:strongcomp) el color de los nodos nuevamente denota membresía a un subcomponente fuerte.
+Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley2010 define los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre si y  (B) el subconjunto no es parte de un conjunto mayor con la propiedad de que todos los nodos pueden llegar a todos los demás [@Easley2010, pp. 388]. Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. Por ejemplo, en la Figura \@ref(fig:strongcomp) el color de los nodos nuevamente denota membresía a un subcomponente fuerte.
 
 <div class="figure" style="text-align: center">
 <img src="03-subgrupos_files/figure-html/strongcomp-1.png" alt="Red con multiples componentes fuertes" width="70%" />
@@ -38,9 +41,172 @@ Como puede ver, los componentes fuertes son mas restrictivos que los componentes
 
 ## K-cores
 
+Otra forma de localizar subgrupos cohesivos en una red es basándose en grados nodales; específicamente, utilizando k-cores (o k-núcleos) que se definen en términos del grado mínimo, *k*, en un subgrafo o del número mínimo de adyacencia presentes [@Wasserman1994] . Por ejemplo, la Figura \@ref(fig:kcore) representa un grafo completo, es decir, 0-core. En este, vemos nodos aislados con cero enlaces, nodos pendientes con un solo vinculo y nodos con una variedad de grados de centralidad. Un 1k-core incluye todos los nodos conectados al menos a una persona (ver Figura \@ref(fig:kcore1)). Similarmente, un 2k-core incluye nodos conectados al menos dos otros nodos (ver Figura \@ref(fig:kcore2)). De igual manera podemos definir un 3k-core como nodos con tres o más vínculos (ver Figura \@ref(fig:kcore3)). Al aumentar *k* comenzamos a localizar el núcleo de actores mas interconectados de la red, de igual manera el subconjunto restante aumentara en densidad [@Valente2010]. 
+
+::::{.row}
+::::{.lcolumn-50}
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/kcore-1.png" alt="Red completa" width="70%" />
+<p class="caption">(\#fig:kcore)Red completa</p>
+</div>
+::::
+::::{.rcolumn-50}
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/kcore1-1.png" alt="1k-core" width="70%" />
+<p class="caption">(\#fig:kcore1)1k-core</p>
+</div>
+::::
+::::
+
+::::{.row}
+::::{.lcolumn-50}
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/kcore2-1.png" alt="2k-core" width="70%" />
+<p class="caption">(\#fig:kcore2)2k-core</p>
+</div>
+::::
+::::{.rcolumn-50}
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/kcore3-1.png" alt="3k-core" width="70%" />
+<p class="caption">(\#fig:kcore3)3k-core</p>
+</div>
+::::
+::::
+
+El remover nodos incrementando *k* es una estrategia comúnmente utilizada por analistas de redes para describir la estructura de la red. Específicamente, para aislar el núcleo de la periferia, o los actores mas activos de los actores con pocas conexiones. 
+
 ## Girvan-Newman
 
+El algoritmo de Girvan y Newman [-@Newman2004] detecta subcomunidades enfocándose en remover vínculos intermediarios entre subconjuntos de nodos con el propósito de localizar subcomponentes. Simplemente, en la red \@ref(fig:bowtie) vemos dos triadas cerradas conectadas a través de un puente. En este grafico los vínculos han sido dibujados de manera ponderada con base en la intermediación de cada enlace. El algoritmo de Girvan y Newman comienza por calcular la intermediación de los enlaces, remueve de manera sistemática aquellos con el mayor índice de intermediación y procede a recalcular intermediación de enlaces y remover enlaces con alto valor de manera iterativa. Supongamos que ejecutamos este algoritmos por un ciclo, entonces removeriamos el puente entre traídas lo cual produce dos subconjuntos mejor descritos como componentes débiles (ver, \@ref(fig:bowtie2)).   
+
+::::{.row}
+::::{.lcolumn-50}
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/bowtie-1.png" alt="Red hipotética" width="70%" />
+<p class="caption">(\#fig:bowtie)Red hipotética</p>
+</div>
+::::
+::::{.rcolumn-50}
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/bowtie2-1.png" alt="Componentes débiles" width="70%" />
+<p class="caption">(\#fig:bowtie2)Componentes débiles</p>
+</div>
+::::
+::::
+
+En practica, el algoritmo ejecuta este proceso y retorna un valor categórico correspondiente a la subcomunidad a la que pertenece cada nodo. Por lo tanto, el grafico original no se ve afectado y el analista gana información sobre la comunidad Girvan-Newman correspondiente para cada nodo. Por ejemplo, la Figura \@ref(fig:gn) contiene la red previa con comunidades Girvan-Newman resaltadas.
+
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/gn-1.png" alt="Comunidades Girvan-Newman y puentes resalatdos." width="70%" />
+<p class="caption">(\#fig:gn)Comunidades Girvan-Newman y puentes resalatdos.</p>
+</div>
+
+El algoritmo de Girvan-Newman provee una forma de generar particiones de la red a grupos mutuamente exclusivos y un índice que mide la adecuación de estas particiones, de tal forma que el analista puede elegir entre estas particiones en busca de la más adecuada conforme a los datos de la red [@Valente2010, pp. 106]. Normalmente, la partición de la red que genera el índice de modularidad mas alto es considerado el punto óptimo [@Everton2012].
+
+<!-- ```{r} -->
+<!-- gn <- g %>% cluster_edge_betweenness()  -->
+<!-- gn %>% plot_dendrogram(mode = "auto", use.modularity = FALSE) -->
+<!-- ``` -->
+
+<!-- ```{r} -->
+<!-- library(ggplot2) -->
+<!-- ggplot() + -->
+<!--   geom_line(aes(y = gn$modularity, x = 1:length(gn$modularity))) + -->
+<!--   xlab(NULL) + -->
+<!--   ylab("Modularidad") -->
+
+<!-- ``` -->
+
+
+:::: {.infobox .note data-latex="note"}
+
+La modularidad mide la fuerza de la división de una red en módulos (a veces llamados particiones, comunidades, etc.). En términos prácticos, las redes con alta modularidad tienen conexiones densas dentro de los módulos pero escasa entre estos. Se define como:
+
+$$
+Q = \frac{1}{2m} \sum_{i, j}[A_{ij} – \frac{k_{i}k_{j}}{2m}]\delta(c_i, c_j)
+$$
+
+Donde $A_{ij}$ es el peso del vinculo entre los nodos $i$ y $j$. $k_{i}$ y $k_{j}$ son los grados de cada nodo correspondiente. $\delta(c_i, c_j)$ o Kronecker delta donde el valor es 1.0 si ambos $i$ y $j$ corresponden a la misma partición, de otra manera el valor es 0.0. Por último, $m$ corresponde al número de vínculos en la red. 
+
+El siguiente es un ejemplo de cómo calcular la modularidad de una red a mano a se base en el [ejemplo de Matthew Joseph](https://www.researchgate.net/post/Can_anyone_provide_a_short_example_of_how_the_modularity_is_being_calculated_in_networks) en ResearchGate y [luego Abhishek Mishra]( https://medium.com/walmartglobaltech/demystifying-louvains-algorithm-and-its-implementation-in-gpu-9a07cdd3b010). Empecemos con nuestra pequeña red \@ref(fig:tie3) y su matriz de adyacencia \@ref(eq:tiemat).
+
+::::{.row}
+::::{.lcolumn-50}
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/tie3-1.png" alt="Red hipotética" width="70%" />
+<p class="caption">(\#fig:tie3)Red hipotética</p>
+</div>
+::::
+::::{.rcolumn-50}
+\begin{matrix}
+  & A & B & C & D & E & F \\
+A & - & 1 & 1 & 0 & 0 & 0 \\
+B & 1 & - & 1 & 1 & 0 & 0 \\
+C & 1 & 1 & - & 0 & 0 & 0 \\
+D & 0 & 1 & 0 & - & 1 & 1 \\
+E & 0 & 0 & 0 & 1 & - & 1 \\
+F & 0 & 0 & 0 & 1 & 1 & - \\
+(\#eq:tiemat)
+\end{matrix}
+::::
+::::
+
+Como mencionamos previamente, la implementación del algoritmo Girvan-Newman comienza por remover el vinculo con la mayor intermediación, en este caso el puente entre los actores D y B. Aquí utilizaremos esta partición como punto de partida, es decir, la primera partición contiene los nodos {A, B, C} y la segunda {D, E, F}. Igualmente, el numero de enlaces en este grafo es $m$ = 7 y el grado de cada es equivalente a:
+
+\begin{matrix}
+  & Grado \\
+A &  2    \\
+B &  3    \\
+C &  2    \\
+D &  3    \\
+E &  2    \\
+F &  2    \\
+(\#eq:attribute-matrix)
+\end{matrix}
+
+Con esta información disponible, podemos calcular la modularidad del grafo:
+
+\begin{align*}
+    Q = \frac{1}{2 \times 7} ((0 - \frac{2 \times 2}{(2 \times 7)}) \times 1 &+ && \text{A a A: no connectados (0), mismo grupo (1)}\\
+    (1 - \frac{2 \times 3}{(2 \times 7)}) \times 1 &+ && \text{A a B: connectados (1), mismo grupo (1)}\\
+    (1 - \frac{2 \times 2}{(2 \times 7)}) \times 1 &+ && \text{A a C: connectados (1), mismo grupo (1)}\\
+    (0 - \frac{2 \times 3}{(2 \times 7)}) \times 0 &+ && \text{A a D: no connectados (0), otro grupo (0)}\\
+    (0 - \frac{2 \times 2}{(2 \times 7)}) \times 0 &+ && \text{A a E: no connectados (0), otro grupo (0)}\\
+    (0 - \frac{2 \times 2}{(2 \times 7)}) \times 0 &+ && \text{A a F: no connectados (0), otro grupo (0)}\\
+    (0 - \frac{3 \times 2}{(2 \times 7)}) \times 1 &+ && \text{B a B: no connectados (0), mismo grupo (1)}\\
+    (1 - \frac{3 \times 2}{(2 \times 7)}) \times 1 &+ && \text{B a A: connectados (1), mismo grupo (1)}\\
+    (1 - \frac{3 \times 2}{(2 \times 7)}) \times 1 &+ && \text{B a C: connectados (1), mismo grupo (1)}\\
+    (1 - \frac{3 \times 3}{(2 \times 7)}) \times 0 &+ && \text{B a D: connectados (1), otro grupo (0)}\\
+    (0 - \frac{3 \times 2}{(2 \times 7)}) \times 0 &+ && \text{B a E: no connectados (0), otro grupo (0)}\\
+    (0 - \frac{3 \times 2}{(2 \times 7)}) \times 0 &+ && \text{B a F: no connectados (0), otro grupo (0)}\\
+    &...)
+\end{align*}
+
+Podemos simplificar la operación previa como:
+
+\begin{align*}
+    Q = \frac{1}{2 \times 7} (4(1) + 2(0.5)) = 0.3571
+\end{align*}
+
+La modularidad con los nodos {A,B,C} y {D, E,F} en particiones separadas es igual a $Q$ = 0.3571. En este ejemplo no continuaremos removiendo enlaces y asignando nuevas particiones, como lo haría el algoritmo Girvan-Newman. El objetivo de este ejercicio breve es presentarle en mayor detalle el mecanismo utilizado para calcular la modularidad de una red y determinar el número óptimo de subcomunidades. 
+::::
+
 ## Louvain
+
+Publicado originalmente en 2008, el método Louvain es un método de optimización codicioso que intenta optimizar la modularidad de las particiones de la red. Esencialmente, la optimización se lleva a cabo en dos pasos. Primero, el método encuentra pequeñas comunidades locales optimizando la modularidad. Luego, agrega nodos que pertenecen a las comunidades identificadas y construye una nueva red con esos nodos colapsados. El proceso continúa hasta que se identifique la máxima modularidad y se produzca una jerarquía de comunidades [@Blondel2008].
+
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/process-1.png" alt="Visualización de los pasos en el algoritmo" width="100%" />
+<p class="caption">(\#fig:process)Visualización de los pasos en el algoritmo</p>
+</div>
+
+La Figura \@ref(fig:process) es una representación gráfica una sola ronda en el proceso. Sin embargo en términos prácticos, el proceso resulta en particiones que denotan las subcomunidades a las que pertenece cada nodo. La red izquierda de la Figura \@ref(fig:bigone) consta de 100 nodos, a su derecha vemos las subcomunidades optimas detectadas por el algoritmo de Louvain. Es importante recalcar que el objetivo del algoritmo es optimizar la modularidad y por consiguiente los grupos resultantes son una representación matemática de lo patrones de enlaces en el gráfico. Sin embargo, este tipo de herramienta analítica es útil en localizar comunidades cohesivas donde los miembros tienen normas, valores o aptitudes similares. Otra manera de pensar en esto es que los nodos dentro de cada grupo pueden seleccionarse a si mismos como parte del grupo o las presiones sociales del grupo pueden persuadir a los nuevos miembros para que adopten normas o valores del grupo [@Valente2010, 108].  
+
+<div class="figure" style="text-align: center">
+<img src="03-subgrupos_files/figure-html/bigone-1.png" alt="Red sin escala (izquierda) y red sin escala con particiones (derecha)" width="100%" />
+<p class="caption">(\#fig:bigone)Red sin escala (izquierda) y red sin escala con particiones (derecha)</p>
+</div>
+
 
 ## Ejercicio Práctico
 

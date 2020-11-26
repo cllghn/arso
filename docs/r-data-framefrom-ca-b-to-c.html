@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>10 {r} # data.frame(from = c("A", "B", ), # to = c()) # | Análisis de Redes Sociales Oscuras</title>
+  <meta name="description" content="TBD." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="10 {r} # data.frame(from = c("A", "B", ), # to = c()) # | Análisis de Redes Sociales Oscuras" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="TBD." />
+  <meta name="github-repo" content="cjcallag/arso" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="10 {r} # data.frame(from = c("A", "B", ), # to = c()) # | Análisis de Redes Sociales Oscuras" />
+  
+  <meta name="twitter:description" content="TBD." />
+  
+
+<meta name="author" content="CORE Lab + ESGE-EPG" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="subgrupos-cohesivos.html"/>
+<link rel="next" href="centralidad.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="arso.css" type="text/css" />
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Análisis de Redes Sociales Oscuras</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores-1"><i class="fa fa-check"></i>Colaboradores</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>I Introducción</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a><ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#introducción"><i class="fa fa-check"></i><b>1.1</b> Introducción</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.2</b> Conceptos Erróneos y Diferencias</a></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.4</b> Suposiciones</a></li>
+<li class="chapter" data-level="1.5" data-path="introduction.html"><a href="introduction.html#resumen-y-conclusiones"><i class="fa fa-check"></i><b>1.5</b> Resumen y Conclusiones</a></li>
+</ul></li>
+<li class="part"><span><b>II ARSo: Tecnicas</b></span></li>
+<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a><ul>
+<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-101"><i class="fa fa-check"></i><b>2.3</b> Gephi 101</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
+<li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
+<li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
+<li class="chapter" data-level="2.3.4" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#laboratorio-de-datos"><i class="fa fa-check"></i><b>2.3.4</b> Laboratorio de Datos</a></li>
+<li class="chapter" data-level="2.3.5" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#previsualización"><i class="fa fa-check"></i><b>2.3.5</b> Previsualización</a></li>
+<li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
+<li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
+<li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
+<li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
+<li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
+<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
+<li class="chapter" data-level="4.4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#guardar-gráfico-de-red-en-gephi"><i class="fa fa-check"></i><b>4.4.2</b> Guardar Gráfico de Red en Gephi</a></li>
+<li class="chapter" data-level="4.4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#importación-de-listas-de-aristas-modo-uno"><i class="fa fa-check"></i><b>4.4.3</b> Importación de Listas de Aristas Modo-Uno</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a><ul>
+<li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
+<li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
+<li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
+<li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Multiples Relaciones</a><ul>
+<li class="chapter" data-level="6.1" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html#matrices-y-listas-de-aristas"><i class="fa fa-check"></i><b>6.1</b> Matrices y Listas de Aristas</a></li>
+<li class="chapter" data-level="6.2" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html#apilar"><i class="fa fa-check"></i><b>6.2.1</b> Apilar</a></li>
+<li class="chapter" data-level="6.2.2" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html#agregar"><i class="fa fa-check"></i><b>6.2.2</b> Agregar</a></li>
+<li class="chapter" data-level="6.2.3" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html#recombinar"><i class="fa fa-check"></i><b>6.2.3</b> Recombinar</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html#importar-múltiples-redes-a-gephi"><i class="fa fa-check"></i><b>6.3.1</b> Importar múltiples redes a Gephi</a></li>
+<li class="chapter" data-level="6.3.2" data-path="multiples-relaciones.html"><a href="multiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a><ul>
+<li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
+<li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
+<li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
+<li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
+<li class="chapter" data-level="7.3.4" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificación-colapso-reducción-en-gephi"><i class="fa fa-check"></i><b>7.3.4</b> Simplificación (colapso / reducción) en Gephi</a></li>
+<li class="chapter" data-level="7.3.5" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extracción-en-gephi"><i class="fa fa-check"></i><b>7.3.5</b> Extracción en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III ARSo: Medidas</b></span></li>
+<li class="chapter" data-level="8" data-path="topología.html"><a href="topología.html"><i class="fa fa-check"></i><b>8</b> Topología</a><ul>
+<li class="chapter" data-level="8.1" data-path="topología.html"><a href="topología.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="topología.html"><a href="topología.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
+<li class="chapter" data-level="8.1.2" data-path="topología.html"><a href="topología.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
+<li class="chapter" data-level="8.1.3" data-path="topología.html"><a href="topología.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="topología.html"><a href="topología.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="topología.html"><a href="topología.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
+<li class="chapter" data-level="8.2.2" data-path="topología.html"><a href="topología.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="topología.html"><a href="topología.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="topología.html"><a href="topología.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="topología.html"><a href="topología.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="topología.html"><a href="topología.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
+<li class="chapter" data-level="8.4.2" data-path="topología.html"><a href="topología.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
+<li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
+<li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
+<li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="r-data-framefrom-ca-b-to-c.html"><a href="r-data-framefrom-ca-b-to-c.html"><i class="fa fa-check"></i><b>10</b> <code>{r} # data.frame(from = c("A", "B", ), #            to   = c()) #</code></a><ul>
+<li class="chapter" data-level="10.1" data-path="r-data-framefrom-ca-b-to-c.html"><a href="r-data-framefrom-ca-b-to-c.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>10.1</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="r-data-framefrom-ca-b-to-c.html"><a href="r-data-framefrom-ca-b-to-c.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>10.1.1</b> Antes de Empezar</a></li>
+<li class="chapter" data-level="10.1.2" data-path="r-data-framefrom-ca-b-to-c.html"><a href="r-data-framefrom-ca-b-to-c.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>10.1.2</b> Identificación de Subgrupos en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="centralidad.html"><a href="centralidad.html"><i class="fa fa-check"></i><b>11</b> Centralidad</a><ul>
+<li class="chapter" data-level="11.1" data-path="centralidad.html"><a href="centralidad.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>11.1</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.1.1" data-path="centralidad.html"><a href="centralidad.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>11.1.1</b> Centralidad en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html"><i class="fa fa-check"></i><b>12</b> Puentes y Corredores</a></li>
+<li class="part"><span><b>IV Aplicaciones</b></span></li>
+<li class="part"><span><b>V Apéndices</b></span></li>
+<li class="chapter" data-level="13" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>13</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="14" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html"><i class="fa fa-check"></i><b>14</b> Libro de Códigos</a><ul>
+<li class="chapter" data-level="14.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>14.1</b> Libro de Códigos de Muestra</a><ul>
+<li class="chapter" data-level="14.1.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones"><i class="fa fa-check"></i><b>14.1.1</b> Relaciones</a></li>
+<li class="chapter" data-level="14.1.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos"><i class="fa fa-check"></i><b>14.1.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="14.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>14.2</b> Libro de Códigos de Noordin Top</a></li>
+</ul></li>
+<li class="part"><span><b>VI Referencias</b></span></li>
+<li class="chapter" data-level="15" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>15</b> Referencias</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales Oscuras</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="r-data.framefrom-ca-b-to-c" class="section level1">
+<h1><span class="header-section-number">10</span> <code>{r} # data.frame(from = c("A", "B", ), #            to   = c()) #</code></h1>
+<div id="ejercicio-práctico-5" class="section level2">
+<h2><span class="header-section-number">10.1</span> Ejercicio Práctico</h2>
+<p>Los científicos sociales generalmente asumen que “la interacción social es la base de la solidaridad, las normas compartidas, la identidad y el comportamiento colectivo, por lo que es probable que las personas que interactúan intensamente se consideren parte de un grupo social”. Por lo tanto, una herramienta principal del análisis de redes sociales es identificar grupos densos de actores “entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos”. Por lo general, se denominan “subgrupos cohesivos”, “subredes” o “subgrupos”. Una forma de agrupar a los actores se basa en atributos compartidos (por ejemplo, raza, género, etc.). Otro es utilizar el patrón de vínculos entre actores.</p>
+<p>En un mundo ideal, habría un solo algoritmo para identificar subgrupos cohesivos, pero este no es un mundo ideal, por lo que los analistas de redes sociales han desarrollado una variedad de algoritmos para identificar subredes. No los consideraremos todos aquí; simplemente hay demasiados. En cambio, nos centraremos en algunos. En Gephi consideraremos componentes, k-cores y algoritmos de detección de comunidades; y en snExplorer veremos brevemente los recuentos de componentes, k-núcleos y camarillas.</p>
+<div id="antes-de-empezar-4" class="section level3">
+<h3><span class="header-section-number">10.1.1</span> Antes de Empezar</h3>
+<p>Para este ejercicio vamos a necesitar el módulo <em>Newman-Girvan</em> clustering antes de comenzar Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo <em>MultimodeNetworks Transformation</em> en ejercicio práctico en el capitulo <a href="derivando-datos-modo-uno-de-modo-dos.html#derivando-datos-modo-uno-de-modo-dos">Derivando Datos Modo-Uno de Modo-Dos</a>.</p>
+</div>
+<div id="identificación-de-subgrupos-en-gephi" class="section level3">
+<h3><span class="header-section-number">10.1.2</span> Identificación de Subgrupos en Gephi</h3>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#gephi">Gephi</a></em></p>
+<p><em>Archivo &gt; Abrir</em></p>
+</div>
+<div class="rcolumn-80">
+<ol style="list-style-type: decimal">
+<li>Abra Gephi y lea el archivo <code>Alive Trust Network.gephi</code>(<strong>ADD DATA LINK HERE</strong>). Comenzaremos explorando componentes, estos son subgrupos de actores que están conectados (ya sea directa o indirectamente) entre sí. En las redes dirigidas, puede identificar dos tipos de componentes: fuertes y débiles. Los componentes fuertes toman en cuenta la dirección de los lazos, mientras que los componentes débiles no. Con redes no dirigidas, solo puede identificar componentes débiles.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Estadísticas &gt; Componentes conexos &gt; Ejecutar</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="2" style="list-style-type: decimal">
+<li>Para identificar componentes en Gephi, haga clic en <em>Ejecutar</em> junto a la función <em>Componentes conexos</em> en la pestaña <em>Estadísticas</em>. Aparecerá un cuadro de diálogo titulado <em>Parámetros de Componenetes Conectados</em> (no se muestra) que ofrece la opción de indicar si nuestros datos son <em>Dirigidos</em> o <em>No dirigidos</em>. Aquí, estamos trabajando con datos no dirigidos, así que elija esta opción y haga clic en <em>Aceptar</em>. Ahora deberá aparecer el informe <em>Connected Componenets Report</em> (Reporte de Componentes conectados) (Figura <a href="r-data-framefrom-ca-b-to-c.html#fig:1">10.1</a>), que reporta los parámetros de la red, el número de componentes <em>Results</em> (Resultados) y un gráfico que indica el número y tamaño de cada uno de los componentes. Como puede ver, Gephi encontró 8 componentes, pero al comparar esta cifra con el gráfico de red, podemos ver que 7 de estos son nodos aislados. Igualmente podemos llegar a esta conclusión examinando el gráfico en el informe. Si observa verá que hay 7 componentes de tamaño 1 y un componente de un poco más grande que 60 (62 en realidad). Cierre la ventana del informe cuando haya terminado.</li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:1"></span>
+<img src="images/03-09-01.png" alt="Reporte de Componentes Conectados en Gephi" width="70%" />
+<p class="caption">
+Figura 10.1: Reporte de Componentes Conectados en Gephi
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:2"></span>
+<img src="images/03-09-02.png" alt="Red de confianza con actores vivos, color por componente" width="70%" />
+<p class="caption">
+Figura 10.2: Red de confianza con actores vivos, color por componente
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#laboratorio-de-datos">Laboratorio de datos</a></em></p>
+<p><em>Tabla de datos &gt; Nodos</em></p>
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Apariencia &gt; Nodos &gt; Color &gt; Partición &gt; –Escoge un atributo &gt; Component ID &gt; Aplicar</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="3" style="list-style-type: decimal">
+<li>También puede ver los resultados navegando al <em>Laboratorio de datos</em> y buscando una nueva columna (partición) en la sección <em>Nodos</em> denominada <em>Component ID</em> (identificación del componente). Gephi genera una serie de números, comenzando con 0, que identifican los componentes respectivos de cada actor. También podemos usar esta variable categórica para visualizar la red, seleccionando primero la opción <em>Nodos&gt; Color&gt; Partición</em> en la pestaña <em>Apariencia</em>, y luego con el menú desplegable <em>–Escoge un atributo</em>, seleccione <em>Component ID</em> y de clic en <em>Aplicar</em>. El resultado no es muy interesante (Figura <a href="r-data-framefrom-ca-b-to-c.html#fig:2">10.2</a>) ya que cada nodo aislado posee un color diferente, mientras que los actores conectados en el componente más grande (llamado componente principal) son todos del mismo color.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Filtros &gt; Atributos &gt; Partición &gt; Queries &gt; Partition &gt; Filter &gt; Export filtered graph to a new workspace</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="4" style="list-style-type: decimal">
+<li>No obstante, puede que algunas ocasiones sea útil identificar el componente principal. De hecho, no es raro que los investigadores extraigan el componente principal y lo analicen por separado. Por lo tanto, exportaremos el componente principal a un espacio de trabajo separado donde lo analizaremos por separado. Para hacer esto, en la pestaña <em>Filtros</em> a la derecha de la ventana <em>Vista general</em>, primero seleccione <em>Atributos</em> y luego <em>Partición</em>. A continuación, arrastre la partición <em>Component ID</em> a <em>Consultas</em>. En las opciones abajo, haga clic en el cuadro que tiene el mayor porcentaje de nodos (probablemente <code>0</code>), haga clic en <em>Filtrar</em> y luego use el botón <em>Exportar el grafo filtrado en un nuevo espacio de trabajo</em> (Figura <a href="r-data-framefrom-ca-b-to-c.html#fig:3">10.3</a>). <strong>¿Cuál es el tamaño del componente principal? ¿Cuál es su densidad? ¿Grado medio?</strong></li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:3"></span>
+<img src="images/03-09-03.png" alt="Red de confianza con actores vivos, componente principal" width="70%" />
+<p class="caption">
+Figura 10.3: Red de confianza con actores vivos, componente principal
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+<ol start="5" style="list-style-type: decimal">
+<li>Veamos si identificar <em>k-cores</em> es una mejor estrategia para identificar subgrupos cohesivos para esta red en particular. La “k” en k-core indica el número mínimo de vínculos de cada actor dentro del núcleo (“core”); por ejemplo, un núcleo 2 incluye a todos los actores que tienen dos o más conexiones con otros actores dentro del núcleo, y un núcleo 3 incluye todos los actores que tienen tres o más vínculos con otros actores dentro de un núcleo. Es importante tener en cuenta que el k-core más alto de una red no corresponde necesariamente al puntaje de centralidad de grado más alto obtenido por un actor en la red. Más bien, es el subgrupo en el que cada actor comparte el mayor número de vínculos. Imagínese una red en la que un actor tiene seis vínculos, pero nadie más tiene más de cuatro. El k-core más alto no sería un 6-core porque todos los demás en el subgrupo también necesitarían tener seis enlaces.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Filtros &gt; Topología &gt; K-core</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="6" style="list-style-type: decimal">
+<li>Regrese a la pestaña <em>Alive Trust Network</em>. Una vez más usaremos un filtro para encontrar k-cores. Esta vez, arrastre la opción <em>K-core</em> que se encuentra sección de <em>Topología</em> en la pestaña <em>Filtro</em> a <em>Consultas</em>. Hacia la parte inferior de la pestaña <em>Filtros</em>, debería ver un cuadro <em>K-core Configuración</em> que estará predeterminado en <em>1</em>. Haga clic en el botón <em>Filtrar</em> y los aislados deberán desaparecer. Aumente la configuración a <em>2</em> y no debería haber ningún cambio. Eso es porque Gephi aparentemente cuenta los lazos dos veces, para reflejar las dos direcciones de un enlace aunque, en este caso, Gephi sabe (o debería saber) que se trata de una red no dirigida. Por lo tanto, el filtro de 1 y 2 capturan el primer núcleo (k = 1), 3 y 4 capturan el segundo núcleo (k =2), y así sucesivamente. Si sigue aumentando la configuración, todos los nodos desaparecen al llegar a quince, lo que significa que el núcleo k más alto de la red es el séptimo núcleo (14/2). Vea la Figura <a href="r-data-framefrom-ca-b-to-c.html#fig:4">10.4</a>. Exporte el 7-core a un nuevo espacio de trabajo. <strong>¿Qué actores parecen ser los más centrales en la red del séptimo núcleo (k = 7)?</strong></li>
+</ol>
+</div>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:4"></span>
+<img src="images/03-09-04.png" alt="Red de confianza con actores vivos, 7-core" width="70%" />
+<p class="caption">
+Figura 10.4: Red de confianza con actores vivos, 7-core
+</p>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em><a href="trabajando-con-gephi.html#vista-general">Vista general</a></em></p>
+<p><em>Estadísticas &gt; Girvan-Newman Clustering &gt; Ejecutar</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="7" style="list-style-type: decimal">
+<li>Ahora consideremos otro método para identificar subgrupos: algoritmos de detección de comunidades. Consideraremos dos: Girvan-Newman y Louvain. El segundo estará implementado automaticamente en Gephi, pero Girvan-Newman no, por lo que deberá descargar e instalar el módulo Newman-Girvan Clustering, si aún no lo ha hecho. En la pestaña <em>Estadísticas</em> de Alive Trust Network, haga clic en el botón <em>Ejecutar</em> a un lado de función <em>Girvan-Newman Clustering</em>. Esto abrirá un cuadro de diálogo (no se muestra). Acepte sus valores predeterminados y haga clic en "<em>Aceptar</em>. Esto producirá un informe (no se muestra) que indica el número de comunidades que detectó y la modularidad. <strong>¿Cuántas comunidades encontró el algoritmo?</strong></li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Apariencia &gt; Nodos &gt; Color &gt; Partición &gt; –Escoge un atributo &gt; Cluter-ID &gt; Aplicar</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="8" style="list-style-type: decimal">
+<li>Asimismo, coloree los nodos según la partición creada por el algoritmo (Cluter-ID). Note que el algoritmo Girvan-Newman ha asignado cada uno de los aislados a una comunidad separada. No todos los algoritmos de detección de comunidades tratan los aislamientos de esta manera, por lo que cuando compare los resultados de dos o más de ellos, tenga esto en cuenta.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Estadísticas &gt; Modularidad &gt; Ejecutar</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="9" style="list-style-type: decimal">
+<li>Ahora, repitamos el proceso con el algoritmo de Louvain, que se implementa mediante la función <em>Modularidad</em> en la pestaña <em>Estadísticas</em>. Esto abrirá un cuadro de diálogo (no se muestra). Tenga en cuenta que incluye un parámetro de ajuste (<em>Resolución</em>), que le permite ajustar si desea obtener menos o más comunidades. Por ahora, haga clic en <em>Aceptar</em>. Esto produce un informe (no se muestra). <strong>¿Cuántas comunidades encontró el algoritmo? ¿Qué es la modularidad?¿Cómo se compara esto con los resultados de Girvan-Newman?</strong></li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Apariencia &gt; Nodos &gt; Color&gt;Partición &gt; –Escoge un atributo &gt;Modularity Class &gt; Aplicar</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="10" style="list-style-type: decimal">
+<li>Coloree los nodos usando la partición creada por el algoritmo de Louvain (<em>Clase de modularidad</em>). Debido a que hay más de ~8 comunidades, deberá ajustar la paleta de colores como hicimos en laboratorios anteriores. <strong>¿Louvain asigna a cada aislado en una comunidad separada?</strong></li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+<p><em>Generate groups by partition</em></p>
+</div>
+<div class="rcolumn-80">
+<ol start="11" style="list-style-type: decimal">
+<li>Ahora colapse la red usando la herramienta <em>Generate groups by partition</em> (Generar grupos por partición). Asegúrese de decirle a Gephi que cree un nuevo espacio de trabajo. Recuerde que los atributos son aspectos no relacionales de las redes. Pueden ser previamente dados (por ejemplo, rol, género, nacionalidad) o pueden ser generados por nuestro análisis de una red. Los algoritmos de agrupación, como los núcleos k y los de detección de comunicación, clasifican actores en varios subgrupos, y la partición de “pertenencia” del subgrupo es un atributo de actor.</li>
+</ol>
+</div>
+</div>
+<div class="row">
+<div class="lcolumn-20">
+
+</div>
+<div class="rcolumn-80">
+<ol start="12" style="list-style-type: decimal">
+<li>Visualice la red reducida. <strong>¿Aparece algún subgrupo (o subgrupos) más central que otros?</strong></li>
+</ol>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="subgrupos-cohesivos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="centralidad.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": null,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"css": "arso.css",
+"font_settings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
