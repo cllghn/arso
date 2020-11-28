@@ -67,7 +67,7 @@ Los puntos y conjuntos de corte son cruciales para las redes donde el flujo de r
 
 ## Bi-componentes y Puentes
 
-Un bi-componente es formalmente un componente sin punto de corte. Por lo tanto, estos son invulnerables a fragmentación en múltiples subestructuras al remover un solo punto de corte [@Everton2010, 265]. Por ejemplo, en la Figura \@ref(fig:bicomponents) encontramos tres bi-componentes: {A, B, C}, {D, E, F, G} y {F, H, I}. Note el traslapo entre componentes, por ejemplo, {D, E, F, G} y {F, H, I} comparten el nodo F, el cual es un punto de corte. De hecho, los nodos compartidos entre bi-componentes son siempre puntos de corte.
+Un bi-componente es formalmente un componente sin punto de corte. Por lo tanto, estos son invulnerables a fragmentación en múltiples subestructuras al remover un solo punto de corte [@Everton2012, 265]. Por ejemplo, en la Figura \@ref(fig:bicomponents) encontramos tres bi-componentes: {A, B, C}, {D, E, F, G} y {F, H, I}. Note el traslapo entre componentes, por ejemplo, {D, E, F, G} y {F, H, I} comparten el nodo F, el cual es un punto de corte. De hecho, los nodos compartidos entre bi-componentes son siempre puntos de corte.
 
 ```{r bicomponents, fig.cap="Análisis de bi-componentes"}
 g <- data.frame(
@@ -91,9 +91,36 @@ A menudo, cuando los analistas hablan de bi-componentes se refieren a estructura
 
 ## Intermediación de borde
 
-La intermediación de bordes es definida de manera similar a la intermediación de nodos. @Borgatti2018 la definen como un recuento del número de veces que un enlace se encuentra en una ruta geodésica entre un par de vértices.
+La intermediación de bordes es definida de manera similar a la intermediación de nodos (ver [Centralidad de Intermediación]). @Borgatti2018 la definen como un recuento del número de veces que un enlace se encuentra en una ruta geodésica entre un par de vértices [@Borgatti2018, 221].De manera formal podemos definir este índice con la misma notación desarrollada por Brandes [-@Brandes2001] y utilizada por Hashimoto y col. [-@Hashimoto2009] para describir la intermediación de bordes. Donde la intermediación de un borde $e$ en el grafo $G$, se denota como $I(e)$ y mide la frecuencia en la que $e$ aparece en el camino mas corto (geodesico) entre dos distintos nodos $a$ y $b$. Aquí $\sigma_{ab}$ es el número de geodésicos entre $a$ y $b$ en un grafo $G$. Mientras que $\sigma_{ab}(e)$ es el numero de geodésicos entre $a$ y $b$ que contienen $e$. Entonces, la intermediación de bordes seria:
 
-## Agujeros Estructurales
+$$
+I(e) = \sum\limits_{a, b}\frac{\sigma_{ab}(e)}{\sigma_{ab}}
+$$
+
+Donde la operación toma en cuenta todas combinaciones distintas de nodos $a$ y $b$ en $G$. El resultado de esta operación es un índice numérico de intermediación para cada vinculo en la red. 
+
+La medida fue desarrollada por Girvan y Newman [-@Girvan2002] con el propósito localizar vínculos entre comunidades. De acuerdo con los autores, si una red contiene comunidades conectadas a través de un numero escaso de vínculos intergrupales, entonces las rutas geodésicas entre estas comunidades deben atravesar estos enlaces [@Girvan2002]. Por consiguiente, estos enlaces entre comunidades deberán tener un índice alto de intermediación de borde. 
+
+Por ejemplo, en la Figura \@ref(fig:edgebetween) loos bordes han sido ponderados con base al índice de intermediación de cada enlace. En esta red los actores en cada subconjunto, {A, B, C, D} y {E, F, G, H}, se encuentran densamente interconectados internamente. Adicionalmente, el subconjunto {E, F, G, H} es adyacente a un nodo pendiente, I, El único camino entre estos subconjuntos consiste en el vínculo entre D y E. Por ello si un nodo en el subconjunto {A, B, C, D} desea compartir información con alguien en el subconjunto {E, F, G, H} o con I esta debe fluir a través de el vinculo con mayor intermediación, es decir el camino más corto más a menudo. 
+
+```{r edgebetween, fig.cap = "Representación esquemática de una red con dos comunidades densamente enlazadas entre si por vínculos con alta intermediación (rojo)."}
+g <- data.frame(from = c("A", "A", "A", "B", "B", "C", "D", "E", "E", "E", "F", "F", "G", "I"),
+                to   = c("B", "C", "D", "C", "D", "D", "E", "F", "G", "H", "G", "H", "H", "G")) %>%
+  graph_from_data_frame(directed = FALSE) %>%
+  set_edge_attr(., name = "width", value = edge_betweenness(.))
+
+g %>% my_igraph()
+```
+
+:::: {.infobox .note data-latex="note"}
+Recuerde que el algoritmo de intermediación optimiza el flujo entre nodos seleccionando los caminos mas cortos. Es decir que los vínculos conexos a pendientes tendrán un índice relativamente alto puesto que solo existe un camino para acceder dicho nodo. Por ejemplo, en la Figura \@ref(fig:edgebetween)el vínculo entre {E, F, G, H} y I es relativamente alto, aunque solo conecta a un solo nodo al resto del grafo.
+::::
+
+En términos prácticos, esta medida es utiliza a menudo en combinación con los puntos de corte y los puentes para iluminar caminos entre comunidades. A diferencia de los puentes, esta medida le provee al analista un índice continuo de valores. Es decir, a diferencia de una medida binaria esta presenta un rango de valores para que el analista decida que vínculos son más importantes y que diferencia cuantitativa existe entre estos.
+
+## Agujeros Estructurales, Restricción y Autonomía
+
+La ultima medida de corretaje que cubriremos en este capítulo es autonomía. Sin embargo, para poder entender esta medida es importante presentar el contexto teórico y matemático presentado por el autor de este índice Ronal Burt. 
 
 ## Ejercicio Práctico
 

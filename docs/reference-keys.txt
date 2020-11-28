@@ -236,3 +236,5 @@ agujeros-estructurales
 fig:cutset
 fig:bicomponents
 bi-componentes-y-puentes
+fig:edgebetween
+agujeros-estructurales-restricción-y-autonomía
