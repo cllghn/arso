@@ -238,3 +238,8 @@ fig:bicomponents
 bi-componentes-y-puentes
 fig:edgebetween
 agujeros-estructurales-restricción-y-autonomía
+fig:holes
+fig:triads
+fig:practice
+eq:constraint
+fig:autonomy
