@@ -198,8 +198,16 @@
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="centralidad.html"><a href="centralidad.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a><ul>
-<li class="chapter" data-level="10.1" data-path="centralidad.html"><a href="centralidad.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.1</b> Ejercicio Práctico</a><ul>
-<li class="chapter" data-level="10.1.1" data-path="centralidad.html"><a href="centralidad.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.1.1</b> Centralidad en Gephi</a></li>
+<li class="chapter" data-level="10.1" data-path="centralidad.html"><a href="centralidad.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="centralidad.html"><a href="centralidad.html#medidas-basadas-en-frecuencia"><i class="fa fa-check"></i><b>10.1.1</b> Medidas Basadas en Frecuencia</a></li>
+<li class="chapter" data-level="10.1.2" data-path="centralidad.html"><a href="centralidad.html#medidas-basadas-en-distancia"><i class="fa fa-check"></i><b>10.1.2</b> Medidas Basadas en Distancia</a></li>
+<li class="chapter" data-level="10.1.3" data-path="centralidad.html"><a href="centralidad.html#medidas-basadas-en-caminos"><i class="fa fa-check"></i><b>10.1.3</b> Medidas Basadas en Caminos</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="centralidad.html"><a href="centralidad.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="centralidad.html"><a href="centralidad.html#medidas-basadas-en-frecuencia-1"><i class="fa fa-check"></i><b>10.2.1</b> Medidas Basadas en Frecuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="centralidad.html"><a href="centralidad.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="centralidad.html"><a href="centralidad.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.3.1</b> Centralidad en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="puentes-y-corredores.html"><a href="puentes-y-corredores.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
@@ -265,14 +273,14 @@ Figura 11.2: Ejemplo de conjunto de corte
 </div>
 <div id="bi-componentes-y-puentes" class="section level2">
 <h2><span class="header-section-number">11.2</span> Bi-componentes y Puentes</h2>
-<p>Un bi-componente es formalmente un componente sin punto de corte. Por lo tanto, estos son invulnerables a fragmentación en múltiples subestructuras al remover un solo punto de corte <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>, 265)</span>. Por ejemplo, en la Figura <a href="puentes-y-corredores.html#fig:bicomponents">11.3</a> encontramos tres bi-componentes: {A, B, C}, {D, E, F, G} y {F, H, I}. Note el traslapo entre componentes, por ejemplo, {D, E, F, G} y {F, H, I} comparten el nodo F, el cual es un punto de corte. De hecho, los nodos compartidos entre bi-componentes son siempre puntos de corte.</p>
+<p>Un bi-componente es formalmente un componente sin punto de corte. Por lo tanto, estos son invulnerables a fragmentación en múltiples subestructuras al remover un solo punto de corte <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>, 265)</span>. Por ejemplo, en la Figura <a href="puentes-y-corredores.html#fig:bicomponents">11.3</a> encontramos tres bi-componentes: {A, B, C}, {D, E, F, G} y {F, H, I}. Note el traslapo entre componentes, por ejemplo, {D, E, F, G} y {F, H, I} comparten el nodo F, el cual es un punto de corte. De hecho, los nodos compartidos entre bi-componentes son siempre puntos de corte.</p>
 <div class="figure" style="text-align: center"><span id="fig:bicomponents"></span>
 <img src="03-puentesycorredores_files/figure-html/bicomponents-1.png" alt="Análisis de bi-componentes" width="70%" />
 <p class="caption">
 Figura 11.3: Análisis de bi-componentes
 </p>
 </div>
-<p>A menudo, cuando los analistas hablan de bi-componentes se refieren a estructuras con tres o mas nodos y sin un punto de corte <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>, 265)</span>. Adicionalmente, de particular interés son los vínculos entre bi-componentes, como la relación en la Figura <a href="puentes-y-corredores.html#fig:bicomponents">11.3</a> entre los nodos C y D en rojo. Para los enlaces existe una noción análoga al punto de corte, conocida como puentes. De acuerdo con <span class="citation">Wasserman and Faust (<a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> un puente es “una línea que hace que el grafo que contiene esta línea tenga menos componentes que el subgrafo que resulta una vez que se quita la línea (los nodos incidentes con la línea siguen estando en el subgrafo)” <span class="citation">(Wasserman and Faust <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, 140)</span>. Otros autores definen los puentes como bi-componentes de dos nodos que al ser removidos desconectan la red <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a>, 265)</span>. Ambas definiciones capturan un punto clave, los puentes son enlaces claves que conectan regiones de la red, sin ellos el flujo efectivo de recursos, ideas o materiales es imposible.</p>
+<p>A menudo, cuando los analistas hablan de bi-componentes se refieren a estructuras con tres o mas nodos y sin un punto de corte <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>, 265)</span>. Adicionalmente, de particular interés son los vínculos entre bi-componentes, como la relación en la Figura <a href="puentes-y-corredores.html#fig:bicomponents">11.3</a> entre los nodos C y D en rojo. Para los enlaces existe una noción análoga al punto de corte, conocida como puentes. De acuerdo con <span class="citation">Wasserman and Faust (<a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> un puente es “una línea que hace que el grafo que contiene esta línea tenga menos componentes que el subgrafo que resulta una vez que se quita la línea (los nodos incidentes con la línea siguen estando en el subgrafo)” <span class="citation">(Wasserman and Faust <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, 140)</span>. Otros autores definen los puentes como bi-componentes de dos nodos que al ser removidos desconectan la red <span class="citation">(Everton <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>, 265)</span>. Ambas definiciones capturan un punto clave, los puentes son enlaces claves que conectan regiones de la red, sin ellos el flujo efectivo de recursos, ideas o materiales es imposible.</p>
 </div>
 <div id="intermediación-de-borde" class="section level2">
 <h2><span class="header-section-number">11.3</span> Intermediación de borde</h2>
@@ -337,11 +345,11 @@ B &amp;  2    \\
 C &amp;  4    \\
 D &amp;  1    \\
 E &amp;  1    \\
-\tag{11.1}
+\tag{3.5}
 \end{matrix}\]</span>
 </div>
 </div>
-<p>Primero, note que A se encuentra conectado a dos nodos adyacentes ({B, C}), Por ello, calcularemos la restricción para entre el ego A y cada nodo adyacente. Utilizaremos la centralidad grado para determinar la porción de vínculos entre dos pares de nodos. Por ejemplo, la porción de vínculos entre el ego (A) y cada alterno (<span class="math inline">\(p_{ij}\)</span>) es 0.5 puesto que A solo tiene un vinculo con B y C respectivamente, pero dos enlaces en total (<span class="math inline">\(\frac{1}{2}\)</span>). Podemos calcular los valores restantes de utilizando los indices en <a href="puentes-y-corredores.html#eq:attribute-matrix">(11.1)</a> de la siguiente manera:</p>
+<p>Primero, note que A se encuentra conectado a dos nodos adyacentes ({B, C}), Por ello, calcularemos la restricción para entre el ego A y cada nodo adyacente. Utilizaremos la centralidad grado para determinar la porción de vínculos entre dos pares de nodos. Por ejemplo, la porción de vínculos entre el ego (A) y cada alterno (<span class="math inline">\(p_{ij}\)</span>) es 0.5 puesto que A solo tiene un vinculo con B y C respectivamente, pero dos enlaces en total (<span class="math inline">\(\frac{1}{2}\)</span>). Podemos calcular los valores restantes de utilizando los indices en <a href="tipos-de-datos-de-redes-sociales.html#eq:attribute-matrix">(3.5)</a> de la siguiente manera:</p>
 <span class="math display" id="eq:constraint">\[\begin{matrix}
 Origen\,(i)  &amp; Destino\,(j) &amp; Camino\,(ij)     &amp; Camino\, (iq)      &amp; Camino\, (qj)      \\
 A            &amp; B           &amp; 1                 &amp; 1                  &amp;  1                 \\
@@ -350,7 +358,7 @@ A            &amp; B           &amp; 1                 &amp; 1                  
              &amp;             &amp; Porción\,(ij)     &amp; Porción\,(iq)      &amp; Porción\,(qj)      \\
 A            &amp; B           &amp; \frac{1}{2} = 0.5 &amp; \frac{1}{2} = 0.5  &amp; \frac{1}{4} = 0.25  \\
              &amp; C           &amp; \frac{1}{2} = 0.5 &amp; \frac{1}{2} = 0.5  &amp; \frac{1}{2} = 0.5  \\
-\tag{11.2}
+\tag{11.1}
 \end{matrix}\]</span>
 <p>Con estos valores, podemos calcular la restricción del nodo A:</p>
 <p><span class="math display">\[
@@ -380,14 +388,14 @@ Figura 11.8: Red con nodos dimensionados por autonomía
 </div>
 <div class="rcolumn-80">
 <ol style="list-style-type: decimal">
-<li>En Gephi, primero importe el archivo <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/strike.net?token=AG4QS5GYM43UCDVHHTGMXWK7ZBWXU"><code>strike.net</code></a> (los archivos Pajek (.net) son un formato común de herramientas para ARSo). Asegúrese de indicar que el archivo no está dirigido y de elegir <em>Mínimo</em> como estrategia de combinación de bordes. A continuación, importe el archivo de atributos <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/brokerage_scores.csv?token=AG4QS5APNYXOIYAUNCOFMJS7ZBWZO"><code>brokerage_scores.csv</code></a>, este debe leerse como una tabla de nodos separados por comas. En el segundo de los dos cuadros de diálogo de importación (Figura <a href="puentes-y-corredores.html#fig:1">11.9</a>). Finalmente, en el informe de importación de Gephi, indique que desea agregar estos datos al espacio de trabajo existente y haga clic en <em>Aceptar</em>.</li>
+<li>En Gephi, primero importe el archivo <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/strike.net?token=AG4QS5GYM43UCDVHHTGMXWK7ZBWXU"><code>strike.net</code></a> (los archivos Pajek (.net) son un formato común de herramientas para ARSo). Asegúrese de indicar que el archivo no está dirigido y de elegir <em>Mínimo</em> como estrategia de combinación de bordes. A continuación, importe el archivo de atributos <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/brokers_and_bridges/brokerage_scores.csv?token=AG4QS5APNYXOIYAUNCOFMJS7ZBWZO"><code>brokerage_scores.csv</code></a>, este debe leerse como una tabla de nodos separados por comas. En el segundo de los dos cuadros de diálogo de importación (Figura <a href="topología.html#fig:1">8.11</a>). Finalmente, en el informe de importación de Gephi, indique que desea agregar estos datos al espacio de trabajo existente y haga clic en <em>Aceptar</em>.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:1"></span>
 <img src="images/03-11-01.PNG" alt="Cuadro de diálogo Importación de Gephi " width="70%" />
 <p class="caption">
-Figura 11.9: Cuadro de diálogo Importación de Gephi
+Figura 8.11: Cuadro de diálogo Importación de Gephi
 </p>
 </div>
 <div class="row">
@@ -397,14 +405,14 @@ Figura 11.9: Cuadro de diálogo Importación de Gephi
 </div>
 <div class="rcolumn-80">
 <ol start="2" style="list-style-type: decimal">
-<li>Verifique la <em>Tabla de nodos</em> en la ventana <em>Laboratorio de datos</em> para verificar que los atributos se hayan importado correctamente. Regrese a la ventana <em>Descripción general</em> y visualice la red donde el color del nodo refleja el grupo en el que se clasificaron (empleados hispanohablantes de 30 años o menos, empleados angloparlantes de 37 años o menos y empleados angloparlantes de 38 años o más). La Figura <a href="puentes-y-corredores.html#fig:2">11.10</a> presenta un ejemplo.</li>
+<li>Verifique la <em>Tabla de nodos</em> en la ventana <em>Laboratorio de datos</em> para verificar que los atributos se hayan importado correctamente. Regrese a la ventana <em>Descripción general</em> y visualice la red donde el color del nodo refleja el grupo en el que se clasificaron (empleados hispanohablantes de 30 años o menos, empleados angloparlantes de 37 años o menos y empleados angloparlantes de 38 años o más). La Figura <a href="topología.html#fig:2">8.12</a> presenta un ejemplo.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:2"></span>
 <img src="images/03-11-02.PNG" alt="Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde" width="70%" />
 <p class="caption">
-Figura 11.10: Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde
+Figura 8.12: Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde
 </p>
 </div>
 <div class="row">
@@ -445,14 +453,14 @@ Figura 11.10: Red Huelga, Color = Strike Groups, Peso del borde = Intermediació
 </div>
 <div class="rcolumn-80">
 <ol start="6" style="list-style-type: decimal">
-<li>A continuación, en la pestaña <em>Estadísticas</em> en la ventana <em>Visión general de la red</em>, <em>Ejecute</em> la función <em>Bridging Centrality</em>. Esto genera un informe, que puede cerrar. También calcula tres métricas: centralidad de intermediación, coeficiente de vinculación (agrupamiento) y centralidad de vinculación, siendo esta última el producto de las dos primeras. Primero, ajuste el tamaño de los nodos en términos de centralidad de intermediación. <strong>¿Existe alguna asociación entre la centralidad de intermediación y qué nodos son puntos de corte?</strong> A continuación, ajuste el tamaño de los nodos en términos de coeficiente de puenteo (agrupamiento). <strong>¿Qué sucedió?</strong> Por último, ajuste el tamaño de los nodos en términos de centralidad de puenteo (Figura <a href="puentes-y-corredores.html#fig:3">11.11</a>). <strong>¿Se compara esta medida con qué nodos son puntos de corte? ¿Cómo se compara con la centralidad de intermediación?</strong> Recuerde, puede verificar las puntuaciones de centralidad de intermediación y puente en la ventana “Laboratorio de datos”.</li>
+<li>A continuación, en la pestaña <em>Estadísticas</em> en la ventana <em>Visión general de la red</em>, <em>Ejecute</em> la función <em>Bridging Centrality</em>. Esto genera un informe, que puede cerrar. También calcula tres métricas: centralidad de intermediación, coeficiente de vinculación (agrupamiento) y centralidad de vinculación, siendo esta última el producto de las dos primeras. Primero, ajuste el tamaño de los nodos en términos de centralidad de intermediación. <strong>¿Existe alguna asociación entre la centralidad de intermediación y qué nodos son puntos de corte?</strong> A continuación, ajuste el tamaño de los nodos en términos de coeficiente de puenteo (agrupamiento). <strong>¿Qué sucedió?</strong> Por último, ajuste el tamaño de los nodos en términos de centralidad de puenteo (Figura <a href="topología.html#fig:3">8.13</a>). <strong>¿Se compara esta medida con qué nodos son puntos de corte? ¿Cómo se compara con la centralidad de intermediación?</strong> Recuerde, puede verificar las puntuaciones de centralidad de intermediación y puente en la ventana “Laboratorio de datos”.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:3"></span>
 <img src="images/03-11-03.PNG" alt="Red Huelga: puntos de corte, bi-componentes y centralidad de puente" width="70%" />
 <p class="caption">
-Figura 11.11: Red Huelga: puntos de corte, bi-componentes y centralidad de puente
+Figura 8.13: Red Huelga: puntos de corte, bi-componentes y centralidad de puente
 </p>
 </div>
 <div class="row">
@@ -461,20 +469,20 @@ Figura 11.11: Red Huelga: puntos de corte, bi-componentes y centralidad de puent
 </div>
 <div class="rcolumn-80">
 <ol start="7" style="list-style-type: decimal">
-<li>Finalmente, ajuste el tamaño de los nodos en términos de puntajes de corretaje totales (no dirigidos) (<em>undirected g&amp;f total</em>) (Figura <a href="puentes-y-corredores.html#fig:4">11.12</a>) y luego la medida de autonomía de Burt (<em>burt’s autonomy</em>) (Figura <a href="puentes-y-corredores.html#fig:5">11.13</a>). <strong>¿Cómo se comparan estas visualizaciones con las anteriores? ¿Alguno parece más útil que otros?</strong></li>
+<li>Finalmente, ajuste el tamaño de los nodos en términos de puntajes de corretaje totales (no dirigidos) (<em>undirected g&amp;f total</em>) (Figura <a href="subgrupos-cohesivos.html#fig:4">9.13</a>) y luego la medida de autonomía de Burt (<em>burt’s autonomy</em>) (Figura <a href="puentes-y-corredores.html#fig:5">11.9</a>). <strong>¿Cómo se comparan estas visualizaciones con las anteriores? ¿Alguno parece más útil que otros?</strong></li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:4"></span>
 <img src="images/03-11-04.PNG" alt="Red Huelga: puntos de corte, bi-componentes y puntajes de corretaje G&amp;F" width="70%" />
 <p class="caption">
-Figura 11.12: Red Huelga: puntos de corte, bi-componentes y puntajes de corretaje G&amp;F
+Figura 9.13: Red Huelga: puntos de corte, bi-componentes y puntajes de corretaje G&amp;F
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:5"></span>
 <img src="images/03-11-05.PNG" alt="Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt" width="70%" />
 <p class="caption">
-Figura 11.13: Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt
+Figura 11.9: Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt
 </p>
 </div>
 
@@ -504,7 +512,7 @@ Figura 11.13: Red Huelga: puntos de corte, bi-componentes y la autonomía de Bur
 <p>Cunningham, Daniel, Sean F. Everton, and Philip Murphy. 2016. <em>Understanding Dark Networks: A Strategic Framework for the Use of Social Network Analysis</em>. Rowman; Littlefield.</p>
 </div>
 <div id="ref-Everton2012">
-<p>Everton, Sean F. 2012. <em>Disrupting Dark Networks</em>. Cambridge.</p>
+<p>Everton, Sean F. 2012a. <em>Disrupting Dark Networks</em>. Cambridge.</p>
 </div>
 <div id="ref-Girvan2002">
 <p>Girvan, Michelle, and Mark Newman. 2002. “Community Structure in Social and Biological Networks.” <em>PNAS</em> 99 (12): 7821–6.</p>
