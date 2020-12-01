@@ -20,6 +20,7 @@ Aquí discutiremos las tres centralidades más comunes, originalmente desarrolla
 ## Datos No Dirigidos: Centralidad y Poder 
 
 Aquí consideramos algunas de las medidas de centralidad apropiadas para trabajar con datos no dirigidos. Para clarificar algunas de las similitudes y diferencias entre estas medidas, serán presentadas utilizando un el sistema de clasificación en @Cunningham2016. Específicamente, en tres secciones:
+
   - Basadas en frecuencia: la característica unificadora de estas es el enfoque en la frecuencia con la que un actor tiene vínculos con otros en la red. Por ello, estas suponen que la alta frecuencia de enlaces es correspondiente a poder o importancia en la red. 
   - Basadas en distancia: estas asumen que las distancias entre actores es el factor principal en determina la centralidad y poder de cada nodo. 
   - Basadas en caminos: estas se basan en la ubicación de un nodo en la red, principalmente se esta ubicación es una posición de corretaje o intermediación. 
@@ -140,11 +141,98 @@ Antes de concluir la discusión de centralidad de cercanía, es importante enten
 
 #### Centralidad de Intermediación  
 
+La tercera medida de Freeman [-@Freeman1979] que consideraremos en este capítulo mide la frecuencia con la que un nodo se encuentra en los caminos mas cortos conectando a todos los demás en la red. La centralidad de intermediación es comúnmente utilizada por los analistas de redes puesto que identifica actores en posiciones de corretaje claves. @Wasserman1994 recalca que interacciones de dos actores no adyacentes pueden depender de aquellos que se encuentran entre esos dos; es decir, los intermediarios podrían, potencialmente, tener algún control sobre las interacciones entre nodos no adyacentes, o podríamos también decir, tener más influencia interpersonal sobre otros [@Wasserman1994]. 
+
+Calcularemos centralidad de intermediación con la definición formal de Freeman [-@Freeman1979], quien fue uno de los primeros investigadores en cuantificar esta idea. Donde $g_{jk}$ es el número de caminos más cortos, geodésicos, que unen a dos actores. En un grafo donde los vínculos tienen el mismo peso, es probable que existan múltiples geodésicos entre dos nodos, por ello asumimos que todos los caminos geodésicos tienen la misma probabilidad de ser elegidos, simplemente podemos articula esta idea en términos matemáticos como $\frac{1}{g_{jk}}$. Puesto que el objetivo es identificar el índice de intermediación de un nodo ($i$), $g_{jk}(n_i)$ representa la porción de los caminos geodésicos que conectan a dos actores $g_{jk}$ y que contienen al actor $i$. Freeman define el índice de intermediación de cualquier actor ($n_i$) en un grafo como la suma de todas las probabilidades estimadas para todos los pares de nodos en la red sin incluir al actor $i$ [@Wasserman1994]:
+
+$$
+C_B(n_i) = \sum_{j<k} \frac{g_{jk}(n_i)}{g_{jk}}
+$$
+
+El índice alcanza su valor máximo cuando el nodo $n_i$ se encuentra en todas las distancias geodésicas. Por lo tanto, el valor máximo es $\frac{(n-1)(n-2)}{2}$ que corresponde a el número de actores sin incluir $n_1$. Podemos utilizar el valor máximo para normalizar el índice a una medida con valores entre 0 y 1, lo cual facilita la comparación con otros índices. Por lo tanto, la centralidad de intermediación centralizada se puede calcular como:
+
+$$
+C'_B(n_i) = \frac{\sum_{j<k} \frac{g_{jk}(n_i)}{g_{jk}}}{\frac{(n-1)(n-2)}{2}}
+$$
+Pongamos esta equacion en practica. La Figura \@ref(fig:betw) incluye un grafo no dirigido. ¿Qué nodo tendrá la centralidad de intermediación mas alta? ? En este ejemplo le préstamos el cálculo de la centralidad de intermediación de los vértices en el grafico. Para esta operación el valor máximo es 6 ($\frac{(5-1)(5-2)}{2}$). Los índices presentados han sido normalizados.
+
+```{r betw, fig.cap = "Grafo no dirigido simple."}
+g <- graph_from_literal(A--D, A--C, B--C, B--D, C--D, D--E)
+g %>% my_igraph()
+```
+
+$Intermediación\ del\ nodo\ A: 0$
+
+$Intermediación\ del\ nodo\ B: 0$
+
+$Intermediación\ del\ nodo\ C: 0.083$
+$$
+Par\ (A, B) = 1/2 \\
+\frac{0.5}{6} = 0.083
+$$
+$Intermediación\ del\ nodo\ D: 0.583$
+$$
+Par\ (A, B) = 1/2 \\
+Par\ (A, E) = 1/1 \\
+Par\ (B, E) = 1/1 \\
+Par\ (C, E) = 1/1 \\
+\frac{0.5+1+1+1}{6} = 0.583
+$$
+$Intermediación\ del\ nodo\ E: 0$
+
+Note que en este índice un nodo puede tener un valor nulo, por ejemplo {A, B, E}. Esto ocurre pues estos nodos no se encuentran en ningún camino geodésico entre otros nodos. El ejemplo mas sencillo es el nodo E, que no se encuentra en ningún camino entre nodos pues es un pendiente en la red. Los nodos A y B son redundantes para los demás nodos pues no caen en un camino geodésico, es decir, si E quiere navegar a C la ruta procedería de E a B y luego a C. Otros nodos sirven como posibles intermediadores, por ejemplo C. Este se encuentra en un camino entre A y B. Sin embargo, puesto que existen dos caminos geodésicos entre estos nodos, la porción de caminos entre A y B en la que encontramos a C es solo 0.5. Finalmente, algunos nodos son cruciales para el flujo de la red. Por ejemplo, el nodo D es el punto de acceso a E y se localiza en la mitad de los caminos geodésicos entre A y B.
+
+El proceso demostrado en esta sección es largo y un poco tedioso, sin embargo, los programas de software utilizados por analistas de ARSo producen estos índices con bastante rapidez. Esperamos que pueda ver el valor de esta medida como analista de redes. Simplemente permite identificar nodos cuyo potencial como corredores es mayor en base a su ubicación estructural en una red de nodos. Antes de concluir con esta sección es importante recalcar un punto clave presentado por @Cunningham2016. Los autores notan que no existe ninguna garantía que dos nodos elijan tomar el camino más corto entre estos en la red [@Cunningham2016]. En ciertos contextos sociales, el camino mas largo puede ser preferible. Por ejemplo, una ruta larga puede ser la única ruta conocida por un par de actores y por lo tanto el camino preferido. Esto no quiere decir que la centralidad de intermediación no tiene valor para el analista de redes, esta medida es útil y comúnmente utilizada pues a menudo aporta nueva información, pero esta debe ser evaluada a par con el contexto de la red. 
+
+
 ## Datos Dirigidos: Centralidad y Prestigio
 
 ### Medidas Basadas en Frecuencia
 
 #### Centralidad de Grado: Entrada y Salida
+
+Retornemos por un segundo a la idea de grados de centralidad, previamente definida en una red no dirigida como el conteo de vínculos de un actor. Sin embargo, en un grafo dirigido podemos expandir este concepto para captar la dirección del vínculo adyacente a cada nodo. Específicamente, podemos enfocarnos en los vínculos adyacentes hacia o desde el nodo, que de manera formal llamamos grado de entrada o de salida. @Wasserman1994 postula que es necesario considerar ambos por separado pues uno cuantifica la tendencia de los nodos a forjar vínculos mientras que el otro la tendencia de recibirlos [@Wasserman1994, 151]. 
+
+Considere la Figura \@ref(fig:directed) que incluye un grafo dirigido. La dirección de la flecha indica el nodo que recibe un enlace, del otro lado de la flecha encontramos a aquel nodo que envía dicho arco. La interpretación del grado de entrada o salida depende del contexto del grafo. Por ejemplo, supongamos que los vínculos en la Figura \@ref(fig:directed) representan enlaces de confianza; es decir, cada nodo nomina a otros en la red en quien confía. En esta situación interpretaríamos a un nodo con alto grado de entrada como alguien confiable y un nodo con alto grado de salida como alguien confiado.
+
+```{r directed, fig.cap = "Datos dirigidos"}
+graph_from_literal(A-+B, B-+C, D-+ C, E-+D, C-+E, C-+A, E-+B, A-+D) %>%
+  plot.igraph(vertex.color = "lightblue",
+              vertex.size  = 30,
+              edges.color  = "grey",
+              layout       = layout_in_circle)
+```
+
+@Wasserman1994 definen el grado de entrada hacia un nodo $n_i$ como $d_I(n_i)$, donde el grado de entrada es igual al numero de arcos que terminan en $n_i$ ($l_k = <n_j, n_i>$) para todos los arcos ($l_k\ \epsilon\ L$) y nodos ($n_j\ \epsilon\ N$) en el grafo ($G(N, L)$). Similarmente, el grado de salida de un nodo $d_O(n_i)$ es el numero de nodos adyacentes desde $n_i$. Es decir, todos los enlaces que comienzan en $n_i$ ($l_k = <n_i, n_j>$) para todos los arcos ($l_k\ \epsilon\ L$) y nodos ($n_j\ \epsilon\ N$) en el grafo [@Wasserman1994]. En una matriz de adyacencia, la suma de las filas para cada nodo es equivalente a el grado de salida, y los totales de las comunas es igual al grado de entrada. Formalmente: 
+
+$$
+d_O(n_i) = \sum^g_{j=1} x_{ij} = x_{i+},
+$$
+
+y
+
+$$
+d_O(n_i) = \sum^g_{j=1} x_{ij} = x_{+i}.
+$$
+
+En términos prácticos el calcular estos valores es simple. La matriz \@ref(eq:measures) contiene los datos dirigidos. En este ejempo, hemos agregados una fila ($d_I(n_i)$) y columna ($d_O(n_i)$) adicional con los valores de centralidad de entrada y salida. Para calcular dichos índices hemos sumado los valores en la sociomatriz. El sumar las filas, de arriba hacia abajo, resulta en el grado de entrada para cada nodo. Similarmente, el sumar las columnas, de izquierda a derecha produce el grado de salida.
+
+\begin{equation}
+\begin{matrix}
+         & A & B & C & D & E & d_O(n_i) \\
+A        & 0 & 1 & 0 & 1 & 0 & 2 \\
+B        & 0 & 0 & 1 & 0 & 0 & 1 \\
+C        & 1 & 0 & 0 & 1 & 0 & 2 \\
+D        & 0 & 0 & 1 & 0 & 0 & 1 \\
+E        & 0 & 1 & 0 & 1 & 0 & 2 \\ \\
+d_I(n_i) & 1 & 2 & 2 & 3 & 0
+\end{matrix}
+
+(\#eq:measures)
+\end{equation}
+
+Note que algunos nodos no reciben ningún enlace, por ejemplo, E tiene un grado de entrada de cero $d_I(n_E) = 0$. Sin embargo, esta falta de vínculos hacia E no impacta de manera directa el número de enlaces que comienzan con E, $d_O(n_E) = 2$. El punto clave en interpretar estos índices es el contextualizar las medidas, es decir, hacerse la pregunta como analista: ¿Qué significa un alto grado de entrada o salida con las relaciones presentes?
+
 
 #### Centros de Actividad y Autoridades
 

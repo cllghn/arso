@@ -122,6 +122,9 @@ fig:bigone
 fig:4
 tab:dscores
 eq:calcdeg
+fig:clo
+eq:clomeasure
+eq:out
 fig:cutpoint
 fig:cutset
 fig:bicomponents
@@ -233,8 +236,11 @@ centralidad-de-eigenvector
 medidas-basadas-en-distancia
 centralidad-de-cercanía
 medidas-basadas-en-caminos
+centralidad-de-intermediación
 datos-dirigidos-centralidad-y-prestigio
 medidas-basadas-en-frecuencia-1
+centralidad-de-grado-entrada-y-salida
+centros-de-actividad-y-autoridades
 ejercicio-práctico-6
 centralidad-en-gephi
 puentes-y-corredores
@@ -251,9 +257,7 @@ relaciones
 atributos
 libro-de-códigos-de-noordin-top
 referencias
-fig:clo
-eq:clomeasure
-centralidad-de-intermediación
-medidas-basadas-en-caminos-1
-centralidad-de-grado-entrada-y-salida
-centros-de-actividad-y-autoridades
+eq:in
+eq:measures
+eq:betcalc
+fig:betw
