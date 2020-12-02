@@ -85,7 +85,6 @@
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores-1"><i class="fa fa-check"></i>Colaboradores</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>I Introducción</b></span></li>
@@ -100,7 +99,7 @@
 <li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a><ul>
 <li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
 <li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
-<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-101"><i class="fa fa-check"></i><b>2.3</b> Gephi 101</a><ul>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a><ul>
 <li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
 <li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
@@ -269,13 +268,13 @@
 <p><span class="math display">\[
 C_i^{deg} = \sum\limits_{j=1}^n x_{ij}
 \]</span>
-Donde la medida se calcula para todos lo nodos en un grafo. Es decir, el grado se define como la suma de los vínculos entre un nodo (<span class="math inline">\(i\)</span>) hacia actores adyacentes (<span class="math inline">\(x_{ij}\)</span>). Por ejemplo, el grado de centralidad de los nodos en la Figura <a href="centralidad.html#fig:degree">10.1</a> aparecen en la Tabla <a href="centralidad.html#tab:dscores">10.1</a>. El nodo con mayor grado en este grafo es A puesto a que se encuentra enlazado con cuatro otros, D y E tienen un grado de centralidad de dos y finalmente C y B tienen un grado de uno.</p>
+Donde la medida se calcula para todos lo nodos en un grafo. Es decir, el grado se define como la suma de los vínculos entre un nodo (<span class="math inline">\(i\)</span>) hacia actores adyacentes (<span class="math inline">\(x_{ij}\)</span>). Por ejemplo, el grado de centralidad de los nodos en la Figura <a href="trabajando-con-gephi.html#fig:degree">2.11</a> aparecen en la Tabla <a href="centralidad.html#tab:dscores">10.1</a>. El nodo con mayor grado en este grafo es A puesto a que se encuentra enlazado con cuatro otros, D y E tienen un grado de centralidad de dos y finalmente C y B tienen un grado de uno.</p>
 <div class="row">
 <div class="lcolumn-50">
 <div class="figure" style="text-align: center"><span id="fig:degree"></span>
 <img src="03-centralidad_files/figure-html/degree-1.png" alt="Grafo no dirigido" width="70%" />
 <p class="caption">
-Figura 10.1: Grafo no dirigido
+Figura 2.11: Grafo no dirigido
 </p>
 </div>
 </div>
@@ -338,11 +337,252 @@ E &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0
 
 \tag{10.1}
 \end{equation}\]</span></p>
-<p>Como todas las medidas en esta sección, la manera en la que se calcula el grado de centralidad es indicativo de el objetivo de la medida y como se debe interpretar. <span class="citation">Cunningham, Everton, and Murphy (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> postulan que el grado mide la popularidad de un actor en términos de influencia directa entre este y otros nodos directamente adyacentes <span class="citation">(Cunningham, Everton, and Murphy <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>, 147)</span>. La idea principal aquí es que los vínculos sirven como canales para el flujo de influencia, materiales, ideas, etc. Por consiguiente, un nodo como A en la Figura <a href="centralidad.html#fig:degree">10.1</a> que a invertido su tiempo y recursos en enlazarse con cuatro otros nodos en una red, es posiblemente mas activo en la red que un actor como B conexo solo a un nodo.</p>
-<p>Similarmente, los nodos con alto grado de centralidad tienden a ser más visibles en la red. Si asumimos que ciertos bienes – por ejemplo, información – tienden a difundirse en una red por medio de los enlaces, entonces podemos asumir que aquellos nodos con alto grado de centralidad estarán bien informados <span class="citation">(Borgatti, Everett, and Johnson <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>. Por ejemplo, en la Figura <a href="centralidad.html#fig:degree">10.1</a> el nodo A puede recibir información de tres ubicaciones aisladas, de los nodos B o C, y de la traída compuesta por D y E. En contraste, B y C solo pueden acceder a información de la red a través de A. Similarmente, D y B dependen de A para acceder a recursos no redundantes en la triada.</p>
+<p>Como todas las medidas en esta sección, la manera en la que se calcula el grado de centralidad es indicativo de el objetivo de la medida y como se debe interpretar. <span class="citation">Cunningham, Everton, and Murphy (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> postulan que el grado mide la popularidad de un actor en términos de influencia directa entre este y otros nodos directamente adyacentes <span class="citation">(Cunningham, Everton, and Murphy <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>, 147)</span>. La idea principal aquí es que los vínculos sirven como canales para el flujo de influencia, materiales, ideas, etc. Por consiguiente, un nodo como A en la Figura <a href="trabajando-con-gephi.html#fig:degree">2.11</a> que a invertido su tiempo y recursos en enlazarse con cuatro otros nodos en una red, es posiblemente mas activo en la red que un actor como B conexo solo a un nodo.</p>
+<p>Similarmente, los nodos con alto grado de centralidad tienden a ser más visibles en la red. Si asumimos que ciertos bienes – por ejemplo, información – tienden a difundirse en una red por medio de los enlaces, entonces podemos asumir que aquellos nodos con alto grado de centralidad estarán bien informados <span class="citation">(Borgatti, Everett, and Johnson <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>. Por ejemplo, en la Figura <a href="trabajando-con-gephi.html#fig:degree">2.11</a> el nodo A puede recibir información de tres ubicaciones aisladas, de los nodos B o C, y de la traída compuesta por D y E. En contraste, B y C solo pueden acceder a información de la red a través de A. Similarmente, D y B dependen de A para acceder a recursos no redundantes en la triada.</p>
 </div>
 <div id="centralidad-de-eigenvector" class="section level4">
 <h4><span class="header-section-number">10.1.1.2</span> Centralidad de Eigenvector</h4>
+<p>La centralidad de eigenvector, o centralidad de autovector (“eigen” significa “propio”), puede ser descrita de múltiples maneras. Aquí la categorizamos como una medida basada en frecuencia de vínculos similar a la centralidad de grado, pero con una variación clave, en esta medida ponderamos el grado de cada nodo por la centralidad de los nodos adyacentes <span class="citation">(Borgatti, Everett, and Johnson <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>. Esta medida asume que los enlaces a actores altamente centrales son mas importantes que los enlaces a nodos en la periferia <span class="citation">(Cunningham, Everton, and Murphy <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. En otras palabras, es preferible tener conexiones a nodos bien conectados. Por ejemplo, en la Figura <a href="centralidad.html#fig:evexample">10.1</a> los nodos A y F tienen la misma centralidad de grado (2). Sin embargo, A se encuentra conectado a nodos quienes a su vez tienen un numero de enlaces limitado. En contraste, F se encuentra conectado a G y H los cuales son adyacentes a tres otros nodos. En este ejemplo, si el analista enfoca su análisis en centralidad de grado, que mide actividad directa, A y F son equivalentes. Sin embargo, si expandimos el enfoque del análisis para considerar la influencia indirecta, es aparente que F se encuentra en una posición superior al nodo A en base al alcance de sus conexiones indirectas.</p>
+<div class="figure" style="text-align: center"><span id="fig:evexample"></span>
+<img src="03-centralidad_files/figure-html/evexample-1.png" alt="Comparación de nodos (A y F) con el mismo grado" width="70%" />
+<p class="caption">
+Figura 10.1: Comparación de nodos (A y F) con el mismo grado
+</p>
+</div>
+<p>De manera formal, Bonacich <span class="citation">(<a href="#ref-Bonacich1987" role="doc-biblioref">1987</a>)</span> postula que la centralidad de eigenvector para cada nodo (<span class="math inline">\(i\)</span>) corresponde a:</p>
+<p><span class="math display">\[
+e_i = \frac{1}{\lambda} \sum_j R_{ij}e_j
+\]</span></p>
+<p>Donde <span class="math inline">\(R\)</span> corresponde a la matriz de adyacencia, la cual es usualmente (pero no obligatoriamente) simétrica y los elementos de la diagonal son iguales a cero. Además, <span class="math inline">\(\lambda\)</span> es la constante llamada eigenvalor requerida. Por convención, el eigenvalor más grande es preferido. Para determinar el eigenvalor principal de una red podemos emplear una serie de herramientas de software (Gephi calcula este valor en segundos) o el método de las potencias <span class="citation">(Meghanathan <a href="#ref-Meghanathan2016" role="doc-biblioref">2016</a>)</span>. Las operaciones en <a href="centralidad.html#eq:evprocess">(10.2)</a> representan el proceso de calcular la centralidad de eigenvector para el grafico en la Figura <a href="centralidad.html#fig:ev">10.2</a>.</p>
+<div class="figure" style="text-align: center"><span id="fig:ev"></span>
+<img src="03-centralidad_files/figure-html/ev-1.png" alt="Grafo no dirigido" width="70%" />
+<p class="caption">
+Figura 10.2: Grafo no dirigido
+</p>
+</div>
+<p><span class="math display" id="eq:evprocess">\[\begin{equation}
+Primera\ Iteración:
+\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E \\
+A &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\
+C &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
+D &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+E &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 3 \\ 3 \\ 3 \\ 2 \\ 1
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5303\\ 0.5303 \\ 0.5303 \\ 0.3535 \\ 0.1768
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 5.6569
+
+\\~\\
+
+Segunda\ Iteración:
+\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E \\
+A &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\
+C &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
+D &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+E &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.5303\\ 0.5303 \\ 0.5303 \\ 0.3535 \\ 0.1768
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.4142 \\ 1.2374 \\ 1.4142 \\ 1.0606 \\ 0.5303
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.6365 \\ 0.5569 \\ 0.6365 \\ 0.4773 \\ 0.2387
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.221984
+
+\\~\\
+
+Tercera\ Iteración:
+\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E \\
+A &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\
+C &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
+D &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+E &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.6365 \\ 0.5569 \\ 0.6365 \\ 0.4773 \\ 0.2387
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.6707 \\ 1.5117 \\ 1.6707 \\ 1.273 \\ 0.5569
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5337 \\ 0.4829 \\ 0.5337 \\ 0.4067 \\ 0.1779
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 3.130236
+
+\\~\\
+
+Cuarta\ Iteración:
+\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E \\
+A &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\
+C &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
+D &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+E &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.5337 \\ 0.4829 \\ 0.5337 \\ 0.4067 \\ 0.1779
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.4233 \\ 1.2454 \\ 1.4233 \\ 1.0675 \\ 0.4829
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5389 \\ 0.4715 \\ 0.5389 \\ 0.4041 \\ 0.1828
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.641108
+
+\\~\\
+
+Quinta\ Iteración:
+\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E \\
+A &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\
+C &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
+D &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+E &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.5389 \\ 0.4715 \\ 0.5389 \\ 0.4041 \\ 0.1828
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.4146 \\ 1.2607 \\ 1.4146 \\ 1.0778 \\ 0.4715
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5356 \\ 0.4773 \\ 0.5356 \\ 0.4081 \\ 0.1785
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.641162
+
+\\~\\
+
+Sexta\ Iteración:
+\begin{matrix}
+  &amp; A &amp; B &amp; C &amp; D &amp; E \\
+A &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 \\
+B &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\
+C &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
+D &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+E &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.5356 \\ 0.4773 \\ 0.5356 \\ 0.4081 \\ 0.1785
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.4210 \\ 1.2497 \\ 1.4210 \\ 1.0712 \\ 0.4773
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5380 \\ 0.4731 \\ 0.5380 \\ 0.4055 \\ 0.1807
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.641176
+
+\\~\\
+...
+\\~\\
+
+
+Decimonovena\ Iteración:
+
+\begin{matrix}
+Nodo        &amp; A     &amp; B     &amp; C     &amp; D     &amp; E \\
+Eigenvector &amp; 0.537 &amp; 0.475 &amp; 0.537 &amp; 0.407 &amp; 0.179
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.641186
+
+\tag{10.2}
+\end{equation}\]</span></p>
+<p>Como puede ver, el método de las potencias es un proceso iterativo. Comienza al multiplicar la matriz por un vector con valores de uno, el cual produce el grado de centralidad. Normalizamos los valores de dicho vector, en la primera ronda 5.6569, y dividimos el producto de la multiplicación de matriz por el valor normalizado, esto produce un eigenvector tentativo. La siguiente ronda comienza multiplicando la matriz de adyacencia por el eigenvector tentativo de la ronda previa. Una vez más normalizamos el vector resultante de la multiplicación y dividimos dichos valores por el valor normalizado. Esencialmente este proceso continua hasta que el producto de la normalización del vector converge <span class="citation">(Meghanathan <a href="#ref-Meghanathan2016" role="doc-biblioref">2016</a>)</span>. En el ejemplo previo, este proceso toma 19 iteraciones para concluir. Sin embargo, alrededor de la cuarta iteración empezamos a ver un valor similar a valor convergente de en la última y penúltima ronda.</p>
+<p>Después de tanta aritmética, se ha de estar preguntando ¿cómo interpreto los índices de centralidad resultantes? Como se mencionó previamente, esta medida de centralidad toma en cuenta los enlaces de cada nodo, así como los enlaces de sus vecinos. En términos prácticos el software habitualmente generara una serie de valores donde los índices de mas grandes representan nodos con mayor influencia indirecta. Como dice el dicho, “lo importante no es lo que sepas, sino a quien conozcas”. Especialmente la centralidad de eigenvector toma esta idea y la cuantifica en términos matemáticos.</p>
 </div>
 </div>
 <div id="medidas-basadas-en-distancia" class="section level3">
@@ -352,11 +592,11 @@ E &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0
 <p>La medida más común basada en distancia entre nodos es la centralidad de cercanía definida por Freeman <span class="citation">(<a href="#ref-Freeman1979" role="doc-biblioref">1979</a>)</span> como la distancia geodésica entre un nodo y los demás en una red. Se calcula sumando las distancias geodésicas entre cada nodo y los demás y después invirtiendo el valor para cambiar el índice de una medida de distancia a cercanía <span class="citation">(Valente <a href="#ref-Valente2010" role="doc-biblioref">2010</a>, 85)</span>. Es común calcular la centralidad de cercanía como un índice normalizado (con valores de 0 a 1) de la siguiente manera:</p>
 <p><span class="math display">\[C_i^{clo} = \frac{N-1}{\sum\limits_{j = 1}^{n}d_{ij}}\]</span></p>
 <p>Donde <span class="math inline">\(d_{ij}\)</span> es la distancia geodésica entre dos nodos. Adicionalmente, el número máximo teórico de cercanía en cualquier red es <span class="math inline">\(N-1\)</span>, por lo tanto, al dividir las distancias sumadas por este numerados generamos un valor normalizado. El dividir el valor máximo por la suma de las distancias genera un índice donde los valores grandes corresponden a nodos más centrales <span class="citation">(Borgatti, Everett, and Johnson <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>, 199)</span>.</p>
-<p>Calcular esta medida es simple, el grafo <a href="centralidad.html#fig:clo">10.2</a> servirá como ejemplo. Comenzaremos por encontrar los caminos geodésicos entre todos los nodos, presentado en la matriz izquierda de la ecuación <a href="centralidad.html#eq:clomeasure">(10.2)</a>. El siguiente paso consiste en sumar las distancias para cada nodo. Finalmente, dividimos el número máximo teórico de cercanía (<span class="math inline">\(N-1\)</span>) por la suma de las distancias de cada nodo. Por ejemplo, el nodo A tiene una distancia cumulativa de 15 y el valor teórico máximo de cercanía es 6. Por lo tanto, la cercanía normalizada del nodo A es equivalente a <span class="math inline">\(\frac{6}{15} = 0.4\)</span>.</p>
+<p>Calcular esta medida es simple, el grafo <a href="centralidad.html#fig:clo">10.3</a> servirá como ejemplo. Comenzaremos por encontrar los caminos geodésicos entre todos los nodos, presentado en la matriz izquierda de la ecuación <a href="centralidad.html#eq:clomeasure">(10.3)</a>. El siguiente paso consiste en sumar las distancias para cada nodo. Finalmente, dividimos el número máximo teórico de cercanía (<span class="math inline">\(N-1\)</span>) por la suma de las distancias de cada nodo. Por ejemplo, el nodo A tiene una distancia cumulativa de 15 y el valor teórico máximo de cercanía es 6. Por lo tanto, la cercanía normalizada del nodo A es equivalente a <span class="math inline">\(\frac{6}{15} = 0.4\)</span>.</p>
 <div class="figure" style="text-align: center"><span id="fig:clo"></span>
 <img src="03-centralidad_files/figure-html/clo-1.png" alt="Grafo no dirigido" width="70%" />
 <p class="caption">
-Figura 10.2: Grafo no dirigido
+Figura 10.3: Grafo no dirigido
 </p>
 </div>
 <p><span class="math display" id="eq:clomeasure">\[\begin{equation}
@@ -383,7 +623,7 @@ Suma \\ 15 \\ 15 \\ 10 \\ 9 \\ 11 \\ 11 \\ 15
 Cercanía\ Normalizada \\ 0.4 \\ 0.4 \\ 0.6 \\ 0.667 \\ 0.545 \\ 0.545 \\ 0.4
 \end{matrix}
 
-\tag{10.2}
+\tag{10.3}
 \end{equation}\]</span></p>
 <p>La centralidad de cercanía es una medida intuitiva. <span class="citation">Borgatti, Everett, and Johnson (<a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span> sugieren que en términos de flujo de recursos los nodos más cercanos a menudo reciben materiales, recursos o información rápidamente <span class="citation">(Borgatti, Everett, and Johnson <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>, 199)</span>. Esto es significativo puesto que los recursos tienden a perder fidelidad a lo largo de distancias de camino largas. Por ejemplo, la información tiende a ser distorsionada conforme cambia de manos en una red o la transferencia de fondos financieros tiende a acumular costos con cada brinco entre nodos. Es por ello que los nodos centrales en términos de cercanía no solo tienden a recibir información, recursos o materiales de manera acelerada, sino también de alta fidelidad.</p>
 <p>Antes de concluir la discusión de centralidad de cercanía, es importante entender una de las limitaciones clave de esta medida. Principalmente, el hecho que esta medida no debe ser aplicada al trabajar con grafos con componentes no conexos, por ejemplo, aquel con múltiples componentes. En estas situaciones <span class="citation">Cunningham, Everton, and Murphy (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> sugieren aislar el componente principal antes de calcular la centralidad de cercanía.</p>
@@ -402,11 +642,11 @@ C_B(n_i) = \sum_{j&lt;k} \frac{g_{jk}(n_i)}{g_{jk}}
 <p><span class="math display">\[
 C&#39;_B(n_i) = \frac{\sum_{j&lt;k} \frac{g_{jk}(n_i)}{g_{jk}}}{\frac{(n-1)(n-2)}{2}}
 \]</span>
-Pongamos esta equacion en practica. La Figura <a href="centralidad.html#fig:betw">10.3</a> incluye un grafo no dirigido. ¿Qué nodo tendrá la centralidad de intermediación mas alta? ? En este ejemplo le préstamos el cálculo de la centralidad de intermediación de los vértices en el grafico. Para esta operación el valor máximo es 6 (<span class="math inline">\(\frac{(5-1)(5-2)}{2}\)</span>). Los índices presentados han sido normalizados.</p>
+Pongamos esta equacion en practica. La Figura <a href="centralidad.html#fig:betw">10.4</a> incluye un grafo no dirigido. ¿Qué nodo tendrá la centralidad de intermediación mas alta? En este ejemplo le préstamos el cálculo de la centralidad de intermediación de los vértices en el grafico. Para esta operación el valor máximo es 6 (o <span class="math inline">\(\frac{(5-1)(5-2)}{2}\)</span>). Los índices presentados han sido normalizados.</p>
 <div class="figure" style="text-align: center"><span id="fig:betw"></span>
 <img src="03-centralidad_files/figure-html/betw-1.png" alt="Grafo no dirigido simple." width="70%" />
 <p class="caption">
-Figura 10.3: Grafo no dirigido simple.
+Figura 10.4: Grafo no dirigido simple.
 </p>
 </div>
 <p><span class="math inline">\(Intermediación\ del\ nodo\ A: 0\)</span></p>
@@ -437,11 +677,11 @@ Par\ (C, E) = 1/1 \\
 <div id="centralidad-de-grado-entrada-y-salida" class="section level4">
 <h4><span class="header-section-number">10.2.1.1</span> Centralidad de Grado: Entrada y Salida</h4>
 <p>Retornemos por un segundo a la idea de grados de centralidad, previamente definida en una red no dirigida como el conteo de vínculos de un actor. Sin embargo, en un grafo dirigido podemos expandir este concepto para captar la dirección del vínculo adyacente a cada nodo. Específicamente, podemos enfocarnos en los vínculos adyacentes hacia o desde el nodo, que de manera formal llamamos grado de entrada o de salida. <span class="citation">Wasserman and Faust (<a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> postula que es necesario considerar ambos por separado pues uno cuantifica la tendencia de los nodos a forjar vínculos mientras que el otro la tendencia de recibirlos <span class="citation">(Wasserman and Faust <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, 151)</span>.</p>
-<p>Considere la Figura <a href="centralidad.html#fig:directed">10.4</a> que incluye un grafo dirigido. La dirección de la flecha indica el nodo que recibe un enlace, del otro lado de la flecha encontramos a aquel nodo que envía dicho arco. La interpretación del grado de entrada o salida depende del contexto del grafo. Por ejemplo, supongamos que los vínculos en la Figura <a href="centralidad.html#fig:directed">10.4</a> representan enlaces de confianza; es decir, cada nodo nomina a otros en la red en quien confía. En esta situación interpretaríamos a un nodo con alto grado de entrada como alguien confiable y un nodo con alto grado de salida como alguien confiado.</p>
+<p>Considere la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a> que incluye un grafo dirigido. La dirección de la flecha indica el nodo que recibe un enlace, del otro lado de la flecha encontramos a aquel nodo que envía dicho arco. La interpretación del grado de entrada o salida depende del contexto del grafo. Por ejemplo, supongamos que los vínculos en la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a> representan enlaces de confianza; es decir, cada nodo nomina a otros en la red en quien confía. En esta situación interpretaríamos a un nodo con alto grado de entrada como alguien confiable y un nodo con alto grado de salida como alguien confiado.</p>
 <div class="figure" style="text-align: center"><span id="fig:directed"></span>
 <img src="03-centralidad_files/figure-html/directed-1.png" alt="Datos dirigidos" width="70%" />
 <p class="caption">
-Figura 10.4: Datos dirigidos
+Figura 3.2: Datos dirigidos
 </p>
 </div>
 <p><span class="citation">Wasserman and Faust (<a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> definen el grado de entrada hacia un nodo <span class="math inline">\(n_i\)</span> como <span class="math inline">\(d_I(n_i)\)</span>, donde el grado de entrada es igual al numero de arcos que terminan en <span class="math inline">\(n_i\)</span> (<span class="math inline">\(l_k = &lt;n_j, n_i&gt;\)</span>) para todos los arcos (<span class="math inline">\(l_k\ \epsilon\ L\)</span>) y nodos (<span class="math inline">\(n_j\ \epsilon\ N\)</span>) en el grafo (<span class="math inline">\(G(N, L)\)</span>). Similarmente, el grado de salida de un nodo <span class="math inline">\(d_O(n_i)\)</span> es el numero de nodos adyacentes desde <span class="math inline">\(n_i\)</span>. Es decir, todos los enlaces que comienzan en <span class="math inline">\(n_i\)</span> (<span class="math inline">\(l_k = &lt;n_i, n_j&gt;\)</span>) para todos los arcos (<span class="math inline">\(l_k\ \epsilon\ L\)</span>) y nodos (<span class="math inline">\(n_j\ \epsilon\ N\)</span>) en el grafo <span class="citation">(Wasserman and Faust <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span>. En una matriz de adyacencia, la suma de las filas para cada nodo es equivalente a el grado de salida, y los totales de las comunas es igual al grado de entrada. Formalmente:</p>
@@ -452,7 +692,7 @@ d_O(n_i) = \sum^g_{j=1} x_{ij} = x_{i+},
 <p><span class="math display">\[
 d_O(n_i) = \sum^g_{j=1} x_{ij} = x_{+i}.
 \]</span></p>
-<p>En términos prácticos el calcular estos valores es simple. La matriz <a href="centralidad.html#eq:measures">(10.3)</a> contiene los datos dirigidos. En este ejempo, hemos agregados una fila (<span class="math inline">\(d_I(n_i)\)</span>) y columna (<span class="math inline">\(d_O(n_i)\)</span>) adicional con los valores de centralidad de entrada y salida. Para calcular dichos índices hemos sumado los valores en la sociomatriz. El sumar las filas, de arriba hacia abajo, resulta en el grado de entrada para cada nodo. Similarmente, el sumar las columnas, de izquierda a derecha produce el grado de salida.</p>
+<p>En términos prácticos el calcular estos valores es simple. La matriz <a href="centralidad.html#eq:measures">(10.4)</a> contiene los datos dirigidos. En este ejempo, hemos agregados una fila (<span class="math inline">\(d_I(n_i)\)</span>) y columna (<span class="math inline">\(d_O(n_i)\)</span>) adicional con los valores de centralidad de entrada y salida. Para calcular dichos índices hemos sumado los valores en la sociomatriz. El sumar las filas, de arriba hacia abajo, resulta en el grado de entrada para cada nodo. Similarmente, el sumar las columnas, de izquierda a derecha produce el grado de salida.</p>
 <p><span class="math display" id="eq:measures">\[\begin{equation}
 \begin{matrix}
          &amp; A &amp; B &amp; C &amp; D &amp; E &amp; d_O(n_i) \\
@@ -464,7 +704,7 @@ E        &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 2 \\ \\
 d_I(n_i) &amp; 1 &amp; 2 &amp; 2 &amp; 3 &amp; 0
 \end{matrix}
 
-\tag{10.3}
+\tag{10.4}
 \end{equation}\]</span></p>
 <p>Note que algunos nodos no reciben ningún enlace, por ejemplo, E tiene un grado de entrada de cero <span class="math inline">\(d_I(n_E) = 0\)</span>. Sin embargo, esta falta de vínculos hacia E no impacta de manera directa el número de enlaces que comienzan con E, <span class="math inline">\(d_O(n_E) = 2\)</span>. El punto clave en interpretar estos índices es el contextualizar las medidas, es decir, hacerse la pregunta como analista: ¿Qué significa un alto grado de entrada o salida con las relaciones presentes?</p>
 </div>
@@ -498,14 +738,14 @@ d_I(n_i) &amp; 1 &amp; 2 &amp; 2 &amp; 3 &amp; 0
 </div>
 <div class="rcolumn-80">
 <ol start="2" style="list-style-type: decimal">
-<li>En este laboratorio nuestro interés es capturar los puntajes de centralidad de grado de cada actor. Para hacer esto, cambie a la ventana <em>Laboratorio de datos</em>, haga clic en <em>Nodos</em> en la pestaña <em>Tabla de datos</em>, y vera una columna en el extremo derecho con la etiqueta <em>Grado</em> (Figura <a href="centralidad.html#fig:1">10.5</a>). Puede ordenar los actores por grado (ya sea ascendente o descendente) haciendo clic en la etiqueta. Por lo tanto, con un par de clics, puede determinar qué actores son más o menos influentes en términos de grado. Si observa la Figura <a href="centralidad.html#fig:1">10.5</a>, puede ver que Noordin Top ocupa el primer lugar (46), seguido de Suramto (28), Ubeid (27), Abdullah Sunata (25) e Iwan Dharmawan (25). Si desea puede exportar esta table y manipular la información en Excel.</li>
+<li>En este laboratorio nuestro interés es capturar los puntajes de centralidad de grado de cada actor. Para hacer esto, cambie a la ventana <em>Laboratorio de datos</em>, haga clic en <em>Nodos</em> en la pestaña <em>Tabla de datos</em>, y vera una columna en el extremo derecho con la etiqueta <em>Grado</em> (Figura <a href="topología.html#fig:1">8.11</a>). Puede ordenar los actores por grado (ya sea ascendente o descendente) haciendo clic en la etiqueta. Por lo tanto, con un par de clics, puede determinar qué actores son más o menos influentes en términos de grado. Si observa la Figura <a href="topología.html#fig:1">8.11</a>, puede ver que Noordin Top ocupa el primer lugar (46), seguido de Suramto (28), Ubeid (27), Abdullah Sunata (25) e Iwan Dharmawan (25). Si desea puede exportar esta table y manipular la información en Excel.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:1"></span>
 <img src="images/03-10-01.png" alt="Red combinada de nodos vivos, Laboratorio de datos" width="70%" />
 <p class="caption">
-Figura 10.5: Red combinada de nodos vivos, Laboratorio de datos
+Figura 8.11: Red combinada de nodos vivos, Laboratorio de datos
 </p>
 </div>
 <div class="row">
@@ -514,14 +754,14 @@ Figura 10.5: Red combinada de nodos vivos, Laboratorio de datos
 </div>
 <div class="rcolumn-80">
 <ol start="3" style="list-style-type: decimal">
-<li>Para visualizar la red donde el tamaño del nodo refleja el grado de centralidad, en la pestaña <em>Apariencia</em>, seleccione <em>Nodos</em>, <em>Tamaño</em> y elija <em>Ranking</em>. En el menú desplegable, elija <em>Grado</em> (no importa si elige el primero o el segundo). Haga clic en <em>Aplicar</em>. El gráfico de red resultante debe tener un aspecto similar al de la Figura <a href="centralidad.html#fig:2">10.6</a>.</li>
+<li>Para visualizar la red donde el tamaño del nodo refleja el grado de centralidad, en la pestaña <em>Apariencia</em>, seleccione <em>Nodos</em>, <em>Tamaño</em> y elija <em>Ranking</em>. En el menú desplegable, elija <em>Grado</em> (no importa si elige el primero o el segundo). Haga clic en <em>Aplicar</em>. El gráfico de red resultante debe tener un aspecto similar al de la Figura <a href="topología.html#fig:2">8.12</a>.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:2"></span>
 <img src="images/03-10-02.png" alt="Red combinada de nodos vivos, el tamaño refleja el grado de centralidad" width="70%" />
 <p class="caption">
-Figura 10.6: Red combinada de nodos vivos, el tamaño refleja el grado de centralidad
+Figura 8.12: Red combinada de nodos vivos, el tamaño refleja el grado de centralidad
 </p>
 </div>
 <div class="row">
@@ -541,14 +781,14 @@ Figura 10.6: Red combinada de nodos vivos, el tamaño refleja el grado de centra
 </div>
 <div class="rcolumn-80">
 <ol start="5" style="list-style-type: decimal">
-<li>Para obtener la centralidad de cercanía e intermediación en Gephi, podemos usar <em>Logitud media de camino</em> en la pestaña <em>Estadísticas</em>. Al hacer clic en <em>Ejecutar</em>, aparece un cuadro de diálogo (Figura <a href="centralidad.html#fig:3">10.7</a>), que presenta un par de opciones para tratar la red como dirigida o no dirigida (aquí, detecta correctamente que la red no está dirigida). Seleccione la opción para normalizar las centralidaded en el rango. La normalización es buena para comparar diferentes medidas. Note que esta opción también calcula la centralidad de excentricidad, que (como indica el cuadro de diálogo) es la distancia desde un nodo en particular hasta el nodo más lejano en la red. Haga clic en <em>Aceptar</em> y Gephi producirá un informe, en el verá que Gephi calcula dos medidas de proximidad: proximidad (Freeman) y proximidad armónica. Dado que se trata de una red desconectada, utilizaremos la segunda. Como hicimos anteriormente, cambie a la ventana <em>Laboratorio de datos</em> y vea qué actores obtienen la puntuación más alta en términos de centralidad de intermediación y cercanía armónica (Harmonic Closeness Centrality).</li>
+<li>Para obtener la centralidad de cercanía e intermediación en Gephi, podemos usar <em>Logitud media de camino</em> en la pestaña <em>Estadísticas</em>. Al hacer clic en <em>Ejecutar</em>, aparece un cuadro de diálogo (Figura <a href="topología.html#fig:3">8.13</a>), que presenta un par de opciones para tratar la red como dirigida o no dirigida (aquí, detecta correctamente que la red no está dirigida). Seleccione la opción para normalizar las centralidaded en el rango. La normalización es buena para comparar diferentes medidas. Note que esta opción también calcula la centralidad de excentricidad, que (como indica el cuadro de diálogo) es la distancia desde un nodo en particular hasta el nodo más lejano en la red. Haga clic en <em>Aceptar</em> y Gephi producirá un informe, en el verá que Gephi calcula dos medidas de proximidad: proximidad (Freeman) y proximidad armónica. Dado que se trata de una red desconectada, utilizaremos la segunda. Como hicimos anteriormente, cambie a la ventana <em>Laboratorio de datos</em> y vea qué actores obtienen la puntuación más alta en términos de centralidad de intermediación y cercanía armónica (Harmonic Closeness Centrality).</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:3"></span>
 <img src="images/03-10-03.png" alt="Diámetro de red/distancia promedio de camino" width="70%" />
 <p class="caption">
-Figura 10.7: Diámetro de red/distancia promedio de camino
+Figura 8.13: Diámetro de red/distancia promedio de camino
 </p>
 </div>
 <div class="row">

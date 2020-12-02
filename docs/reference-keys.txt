@@ -122,9 +122,13 @@ fig:bigone
 fig:4
 tab:dscores
 eq:calcdeg
+fig:evexample
+fig:ev
+eq:evprocess
 fig:clo
 eq:clomeasure
-eq:out
+fig:betw
+eq:measures
 fig:cutpoint
 fig:cutset
 fig:bicomponents
@@ -146,7 +150,7 @@ resumen-y-conclusiones
 trabajando-con-gephi
 introducción-1
 gephi
-gephi-101
+gephi-para-principiantes
 antes-de-empezar
 inicie-gephi
 vista-general
@@ -257,7 +261,3 @@ relaciones
 atributos
 libro-de-códigos-de-noordin-top
 referencias
-eq:in
-eq:measures
-eq:betcalc
-fig:betw

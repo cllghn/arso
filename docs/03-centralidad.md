@@ -87,6 +87,251 @@ Similarmente, los nodos con alto grado de centralidad tienden a ser más visible
 
 #### Centralidad de Eigenvector
 
+La centralidad de eigenvector, o centralidad de autovector (“eigen” significa “propio”), puede ser descrita de múltiples maneras. Aquí la categorizamos como una medida basada en frecuencia de vínculos similar a la centralidad de grado, pero con una variación clave, en esta medida ponderamos el grado de cada nodo por la centralidad de los nodos adyacentes [@Borgatti2018]. Esta medida asume que los enlaces a actores altamente centrales son mas importantes que los enlaces a nodos en la periferia [@Cunningham2016]. En otras palabras, es preferible tener conexiones a nodos bien conectados. Por ejemplo, en la Figura \@ref(fig:evexample) los nodos A y F tienen la misma centralidad de grado (2). Sin embargo, A se encuentra conectado a nodos quienes a su vez tienen un numero de enlaces limitado. En contraste, F se encuentra conectado a G y H los cuales son adyacentes a tres otros nodos. En este ejemplo, si el analista enfoca su análisis en centralidad de grado, que mide actividad directa, A y F son equivalentes. Sin embargo, si expandimos el enfoque del análisis para considerar la influencia indirecta, es aparente que F se encuentra en una posición superior al nodo A en base al alcance de sus conexiones indirectas.
+
+<div class="figure" style="text-align: center">
+<img src="03-centralidad_files/figure-html/evexample-1.png" alt="Comparación de nodos (A y F) con el mismo grado" width="70%" />
+<p class="caption">(\#fig:evexample)Comparación de nodos (A y F) con el mismo grado</p>
+</div>
+
+De manera formal, Bonacich [-@Bonacich1987] postula que la centralidad de eigenvector para cada nodo ($i$) corresponde a:
+
+$$
+e_i = \frac{1}{\lambda} \sum_j R_{ij}e_j
+$$
+
+Donde $R$ corresponde a la matriz de adyacencia, la cual es usualmente (pero no obligatoriamente) simétrica y los elementos de la diagonal son iguales a cero. Además, $\lambda$ es la constante llamada eigenvalor requerida. Por convención, el eigenvalor más grande es preferido. Para determinar el eigenvalor principal de una red podemos emplear una serie de herramientas de software (Gephi calcula este valor en segundos) o el método de las potencias [@Meghanathan2016]. Las operaciones en \@ref(eq:evprocess) representan el proceso de calcular la centralidad de eigenvector para el grafico en la Figura \@ref(fig:ev).  
+
+<div class="figure" style="text-align: center">
+<img src="03-centralidad_files/figure-html/ev-1.png" alt="Grafo no dirigido" width="70%" />
+<p class="caption">(\#fig:ev)Grafo no dirigido</p>
+</div>
+\begin{equation}
+Primera\ Iteración:
+\begin{matrix}
+  & A & B & C & D & E \\
+A & 0 & 1 & 1 & 1 & 0 \\
+B & 1 & 0 & 1 & 0 & 1 \\
+C & 1 & 1 & 0 & 1 & 0 \\
+D & 1 & 0 & 1 & 0 & 0 \\
+E & 0 & 1 & 0 & 0 & 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 3 \\ 3 \\ 3 \\ 2 \\ 1
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5303\\ 0.5303 \\ 0.5303 \\ 0.3535 \\ 0.1768
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 5.6569
+
+\\~\\
+
+Segunda\ Iteración:
+\begin{matrix}
+  & A & B & C & D & E \\
+A & 0 & 1 & 1 & 1 & 0 \\
+B & 1 & 0 & 1 & 0 & 1 \\
+C & 1 & 1 & 0 & 1 & 0 \\
+D & 1 & 0 & 1 & 0 & 0 \\
+E & 0 & 1 & 0 & 0 & 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.5303\\ 0.5303 \\ 0.5303 \\ 0.3535 \\ 0.1768
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.4142 \\ 1.2374 \\ 1.4142 \\ 1.0606 \\ 0.5303
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.6365 \\ 0.5569 \\ 0.6365 \\ 0.4773 \\ 0.2387
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.221984
+
+\\~\\
+
+Tercera\ Iteración:
+\begin{matrix}
+  & A & B & C & D & E \\
+A & 0 & 1 & 1 & 1 & 0 \\
+B & 1 & 0 & 1 & 0 & 1 \\
+C & 1 & 1 & 0 & 1 & 0 \\
+D & 1 & 0 & 1 & 0 & 0 \\
+E & 0 & 1 & 0 & 0 & 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.6365 \\ 0.5569 \\ 0.6365 \\ 0.4773 \\ 0.2387
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.6707 \\ 1.5117 \\ 1.6707 \\ 1.273 \\ 0.5569
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5337 \\ 0.4829 \\ 0.5337 \\ 0.4067 \\ 0.1779
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 3.130236
+
+\\~\\
+
+Cuarta\ Iteración:
+\begin{matrix}
+  & A & B & C & D & E \\
+A & 0 & 1 & 1 & 1 & 0 \\
+B & 1 & 0 & 1 & 0 & 1 \\
+C & 1 & 1 & 0 & 1 & 0 \\
+D & 1 & 0 & 1 & 0 & 0 \\
+E & 0 & 1 & 0 & 0 & 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.5337 \\ 0.4829 \\ 0.5337 \\ 0.4067 \\ 0.1779
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.4233 \\ 1.2454 \\ 1.4233 \\ 1.0675 \\ 0.4829
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5389 \\ 0.4715 \\ 0.5389 \\ 0.4041 \\ 0.1828
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.641108
+
+\\~\\
+
+Quinta\ Iteración:
+\begin{matrix}
+  & A & B & C & D & E \\
+A & 0 & 1 & 1 & 1 & 0 \\
+B & 1 & 0 & 1 & 0 & 1 \\
+C & 1 & 1 & 0 & 1 & 0 \\
+D & 1 & 0 & 1 & 0 & 0 \\
+E & 0 & 1 & 0 & 0 & 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.5389 \\ 0.4715 \\ 0.5389 \\ 0.4041 \\ 0.1828
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.4146 \\ 1.2607 \\ 1.4146 \\ 1.0778 \\ 0.4715
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5356 \\ 0.4773 \\ 0.5356 \\ 0.4081 \\ 0.1785
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.641162
+
+\\~\\
+
+Sexta\ Iteración:
+\begin{matrix}
+  & A & B & C & D & E \\
+A & 0 & 1 & 1 & 1 & 0 \\
+B & 1 & 0 & 1 & 0 & 1 \\
+C & 1 & 1 & 0 & 1 & 0 \\
+D & 1 & 0 & 1 & 0 & 0 \\
+E & 0 & 1 & 0 & 0 & 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0.5356 \\ 0.4773 \\ 0.5356 \\ 0.4081 \\ 0.1785
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 1.4210 \\ 1.2497 \\ 1.4210 \\ 1.0712 \\ 0.4773
+\end{matrix}
+
+\equiv
+
+\begin{matrix}
+\\ 0.5380 \\ 0.4731 \\ 0.5380 \\ 0.4055 \\ 0.1807
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.641176
+
+\\~\\
+...
+\\~\\
+
+
+Decimonovena\ Iteración:
+
+\begin{matrix}
+Nodo        & A     & B     & C     & D     & E \\
+Eigenvector & 0.537 & 0.475 & 0.537 & 0.407 & 0.179
+\end{matrix}
+
+\\
+
+Vector\ normalizado = 2.641186
+
+(\#eq:evprocess)
+\end{equation}
+
+Como puede ver, el método de las potencias es un proceso iterativo. Comienza al multiplicar la matriz por un vector con valores de uno, el cual produce el grado de centralidad. Normalizamos los valores de dicho vector, en la primera ronda 5.6569, y dividimos el producto de la multiplicación de matriz por el valor normalizado, esto produce un eigenvector tentativo. La siguiente ronda comienza multiplicando la matriz de adyacencia por el eigenvector tentativo de la ronda previa. Una vez más normalizamos el vector resultante de la multiplicación y dividimos dichos valores por el valor normalizado. Esencialmente este proceso continua hasta que el producto de la normalización del vector converge [@Meghanathan2016]. En el ejemplo previo, este proceso toma 19 iteraciones para concluir. Sin embargo, alrededor de la cuarta iteración empezamos a ver un valor similar a valor convergente de en la última y penúltima ronda.
+
+Después de tanta aritmética, se ha de estar preguntando ¿cómo interpreto los índices de centralidad resultantes? Como se mencionó previamente, esta medida de centralidad toma en cuenta los enlaces de cada nodo, así como los enlaces de sus vecinos. En términos prácticos el software habitualmente generara una serie de valores donde los índices de mas grandes representan nodos con mayor influencia indirecta. Como dice el dicho, “lo importante no es lo que sepas, sino a quien conozcas”. Especialmente la centralidad de eigenvector toma esta idea y la cuantifica en términos matemáticos. 
+
 ### Medidas Basadas en Distancia
 
 #### Centralidad de Cercanía
@@ -152,7 +397,7 @@ El índice alcanza su valor máximo cuando el nodo $n_i$ se encuentra en todas l
 $$
 C'_B(n_i) = \frac{\sum_{j<k} \frac{g_{jk}(n_i)}{g_{jk}}}{\frac{(n-1)(n-2)}{2}}
 $$
-Pongamos esta equacion en practica. La Figura \@ref(fig:betw) incluye un grafo no dirigido. ¿Qué nodo tendrá la centralidad de intermediación mas alta? ? En este ejemplo le préstamos el cálculo de la centralidad de intermediación de los vértices en el grafico. Para esta operación el valor máximo es 6 ($\frac{(5-1)(5-2)}{2}$). Los índices presentados han sido normalizados.
+Pongamos esta equacion en practica. La Figura \@ref(fig:betw) incluye un grafo no dirigido. ¿Qué nodo tendrá la centralidad de intermediación mas alta? En este ejemplo le préstamos el cálculo de la centralidad de intermediación de los vértices en el grafico. Para esta operación el valor máximo es 6 (o $\frac{(5-1)(5-2)}{2}$). Los índices presentados han sido normalizados.
 
 <div class="figure" style="text-align: center">
 <img src="03-centralidad_files/figure-html/betw-1.png" alt="Grafo no dirigido simple." width="70%" />
