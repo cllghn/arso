@@ -491,6 +491,146 @@ Note que algunos nodos no reciben ningún enlace, por ejemplo, E tiene un grado 
 
 #### Centros de Actividad y Autoridades
 
+El ultimo algoritmo que exploraremos en esta sección es centros de actividad, o hubs, y autoridades, comúnmente conocido como “hubs and authorities” en inglés o simplemente HITS. Su autor, Kleinberg [-Kleinberg1999], originalmente desarrollo esta rutina para clasificar sitios de web. Este algoritmo es similar a la centralidad de eigenvector [@Cunningham2016], sin embargo, tiene diferencias cruciales. Fue diseñado para trabajar con datos dirigido, por lo tanto, genera dos medidas un índice de centro de actividad y otro de autoridad. 
+
+Kleinberg [-Kleinberg1999] postula que un centro de actividad sería un nodo enlazado a múltiples autoridades. Es decir, los centros de autoridad actúan como portales que dirigen el trafico de enlaces hacia nodos eminentes en un tema. Estos últimos son las autoridades, quienes reciben el tráfico de las autoridades [@Monge2013]. Recuerde que este algoritmo fue diseñado para categorizar sitos de web, por ello que podemos pensar en centros de actividad como sitios de web a los que acuden las personas buscando información sobre un tema, por ejemplo, Wikipedia. Las autoridades en este contexto serian los sitios de web en la sección de referencias de un tema. 
+
+Antes de proceder a calcular los índices, piense ¿En que contextos sociales piensa usted que un analista de ARSo utilizaría el algoritmo de HITS? Es importante recalcar que, aunque el algoritmo fue diseñado para clasificar sitios de web, tiene múltiples aplicaciones en contextos sociales. Por ejemplo, en una red de comunicación dirigida entre miembros de una organización podemos aislar quienes son los centros de actividad o los nodos que representan las autoridades de la red. En este ejemplo, el localizar un centro de autoridad seria valioso pues como mencionamos estos sirven como portales comúnmente utilizados en la red para acceder a autoridades. Similarmente, dependiendo de nuestro objetivo, un nodo en posición de autoridad se encuentra en una posición estructural prestigiosa de la red en cuestión.
+
+En términos prácticos, el calcular los índices para cada nodo de centro de actividad y autoridad es relativamente simple. Observe la red \@ref(fig:directed), los centros de autoridad apuntan a las autoridades. De hecho, esto sucede por la relación mutuamente reforzada donde un buen centro de actividad apunta a muchas buenas autoridades y del otro lado de la moneda una buena autoridad es aquel nodo que recibe múltiples vínculos de buenos centros de actividad [@Kleinberg1999]. Aquí demostraremos paso a paso como calcular los índices para a los nodos en la Figura \@ref(fig:directedg). 
+
+```{r directedg, fig.cap = "Grafo dirigido"}
+g <- graph_from_literal(A-+E, A-+F, B-+E, B-+F, B-+G, C-+E, C-+G, C-+H, D-+F, D-+H)
+g %>% plot.igraph(
+  layout       = layout_in_circle,
+  vertex.color = "lightblue",
+  vertex.size  = 30,
+  edges.color  = "grey"
+)
+```
+
+Comencemos por dibujar la matriz de adyacencia \@ref(eq:hits1).
+
+\begin{equation}
+\begin{matrix}
+  & A & B & C & D & E & F & G & H \\
+A & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+B & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 \\
+C & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 \\
+D & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 \\
+E & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+F & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+G & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+H & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\end{matrix}
+(\#eq:hits1)
+\end{equation}
+
+Para calcular el primer vector de autoridad $v$, primero debemos transponer la matriz de adyacencia ($A^T$) y multiplicarla por 1 \@ref(eq:hits2).
+
+\begin{equation}
+\begin{matrix}
+  & A & B & C & D & E & F & G & H \\
+A & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+B & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+C & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+D & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+E & 1 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+F & 1 & 1 & 0 & 1 & 0 & 0 & 0 & 0 \\
+G & 0 & 1 & 1 & 0 & 0 & 0 & 0 & 0 \\
+H & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1 \\ 1
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 0 \\ 0 \\ 0 \\ 0 \\ 3 \\ 3 \\ 2 \\ 2
+\end{matrix}
+
+(\#eq:hits2)
+\end{equation}
+
+Con el vector de autoridad resultante, calcularemos centros de actividad $u$ al multiplicar la matriz de adyacencia $A$ por el vector actualizado de autoridad $v$ \@ref(eq:hits3).
+
+\begin{equation}
+\begin{matrix}
+  & A & B & C & D & E & F & G & H \\
+A & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
+B & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 \\
+C & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 \\
+D & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 \\
+E & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+F & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+G & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+H & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\end{matrix}
+
+\quad \times \quad
+
+\begin{matrix}
+\\ 0 \\ 0 \\ 0 \\ 0 \\ 3 \\ 3 \\ 2 \\ 2
+\end{matrix}
+
+=
+
+\begin{matrix}
+\\ 6 \\ 8 \\ 7 \\ 5 \\ 0 \\ 0 \\ 0 \\ 0
+\end{matrix}
+
+(\#eq:hits3)
+\end{equation}
+
+Para concluir la primera iteración de este algoritmo, en el siguiente paso normalizaremos ambos vectores $u$ y $v$ para calcular un eigenvalor y dividiremos cada índice por el valor normalizado. De la siguiente manera:
+
+\begin{equation}
+
+v = 0^2 + 0^2 + 0^2 + 0^2 + 3^2 + 3^2 + 2^2 + 2^2 = \sqrt{13} = 3.605551 \\
+u = 6^2 + 8^2 + 7^2 + 5^2 + 0^2 + 0^2 + 0^2 + 0^2 = \sqrt{174} = 13.19091
+
+\\~\\
+
+\begin{matrix}
+  & v_1                       & u_1 \\
+A & \frac{0}{3.6056} = 0      & \frac{6}{13.1909} = 0.4549\\
+B & \frac{0}{3.6056} = 0      & \frac{8}{13.1909} = 0.6065\\
+C & \frac{0}{3.6056} = 0      & \frac{7}{13.1909} = 0.5307\\
+D & \frac{0}{3.6056} = 0      & \frac{5}{13.1909} = 0.379\\
+E & \frac{3}{3.6056} = 0.832  & \frac{0}{13.1909} = 0 \\
+F & \frac{3}{3.6056} = 0.832  & \frac{0}{13.1909} = 0 \\
+G & \frac{2}{3.6056} = 0.5467 & \frac{0}{13.1909} = 0 \\
+H & \frac{2}{3.6056} = 0.5467 & \frac{0}{13.1909} = 0 \\
+\end{matrix}
+(\#eq:hits4)
+\end{equation}
+
+El siguiente ciclo, comenzamos utilizando los valores de centros de actividad ($u_1$) y autoridades ($v_1$) del ciclo previo. Una vez más, normalizaremos ambos vectores y dividiremos los valores en estos por el producto de la normalización.  
+
+<!-- \begin{equation} -->
+
+<!-- v = 0^2 + 0^2 + 0^2 + 0^2 + 3^2 + 3^2 + 2^2 + 2^2 = \sqrt{13} = 3.605551 \\ -->
+<!-- u = 6^2 + 8^2 + 7^2 + 5^2 + 0^2 + 0^2 + 0^2 + 0^2 = \sqrt{174} = 13.19091 -->
+
+<!-- \\~\\ -->
+
+<!--   & u_1                       & u_1 \\ -->
+<!-- A & \frac{0}{3.6056} = 0      & \frac{6}{13.1909} = 0.4549\\ -->
+<!-- B & \frac{0}{3.6056} = 0      & \frac{8}{13.1909} = 0.6065\\ -->
+<!-- C & \frac{0}{3.6056} = 0      & \frac{7}{13.1909} = 0.5307\\ -->
+<!-- D & \frac{0}{3.6056} = 0      & \frac{5}{13.1909} = 0.379\\ -->
+<!-- E & \frac{3}{3.6056} = 0.832  & \frac{0}{13.1909} = 0 \\ -->
+<!-- F & \frac{3}{3.6056} = 0.832  & \frac{0}{13.1909} = 0 \\ -->
+<!-- G & \frac{2}{3.6056} = 0.5467 & \frac{0}{13.1909} = 0 \\ -->
+<!-- H & \frac{2}{3.6056} = 0.5467 & \frac{0}{13.1909} = 0 \\ -->
+
+<!-- (\#eq:hits5) -->
+<!-- \end{equation} -->
+
 ## Ejercicio Práctico
 
 En este ejercicio practicaremos algunas de las medidas de centralidad presentes en Gephi. Para ello necesitara descargar el conjunto de datos titulado: `Alive Combined Network.gephi` (**ADD DATA LINK HERE**).

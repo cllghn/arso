@@ -261,3 +261,8 @@ relaciones
 atributos
 libro-de-códigos-de-noordin-top
 referencias
+fig:directedg
+eq:hits1
+eq:hits2
+eq:hits3
+eq:hits4
