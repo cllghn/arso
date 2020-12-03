@@ -82,7 +82,7 @@ Para ver ejemplos de datos de red asimétricos de un modo, podemos volver a @Eve
 
 | Vínculo | Tipo de Actor | Definición |
 |---------|---------------|------------|
-|  | Persona |  | 
+| Comunicación | Persona | La comunicación interna se define como la transmisión de mensajes entre individuos y/o grupos dentro de la red a través de algún tipo de medio. | 
 
 ## Datos de Modo-Dos
 

@@ -290,7 +290,7 @@ En esta actividad nos centraremos en las visualizaciones de red. Estas son impor
 
 ### Preparar y Visualizar Redes de Modo-Uno en Gephi
 
-Localice el artículo de Stuart Koschade. La única versión disponible es en inglés, por consiguiente, no es requerido que lea el texto. Utilizando Excel (u otro programa con hojas de cálculo) registre los datos de redes sociales que figuran en la Tabla 2 en el artículo de Koschade. Su matriz debe ser similar a la Figura \@ref(fig:koschade) a continuación. 
+Localice el artículo de Stuart Koschade, [aquí](https://www.tandfonline.com/doi/full/10.1080/10576100600798418). La única versión disponible es en inglés, por consiguiente, no es requerido que lea el texto. Utilizando Excel (u otro programa con hojas de cálculo) registre los datos de redes sociales que figuran en la Tabla 2 en el artículo de Koschade. Su matriz debe ser similar a la Figura \@ref(fig:koschade) a continuación. 
 
 <div class="figure" style="text-align: center">
 <img src="images/02-Fig_1_Matrix_Excel.png" alt="Hoja de cálculo de Excel que muestra la matriz de datos en Koschade" width="100%" />

@@ -7,7 +7,7 @@ bibliography: [book.bib]
 csl: [apa-5th-edition.csl]
 link-citations: yes
 github-repo: cjcallag/arso
-description: "TBD."
+description: "Un manual práctico para analistas de redes sociales de habla hispana."
 ---
 
 # Bienvenida {-}
