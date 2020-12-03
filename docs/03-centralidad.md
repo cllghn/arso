@@ -476,37 +476,35 @@ Note que algunos nodos no reciben ningún enlace, por ejemplo, E tiene un grado 
 
 #### Centros de Actividad y Autoridades
 
-El ultimo algoritmo que exploraremos en esta sección es centros de actividad, o hubs, y autoridades, comúnmente conocido como “hubs and authorities” en inglés o simplemente HITS. Su autor, Kleinberg [-Kleinberg1999], originalmente desarrollo esta rutina para clasificar sitios de web. Este algoritmo es similar a la centralidad de eigenvector [@Cunningham2016], sin embargo, tiene diferencias cruciales. Fue diseñado para trabajar con datos dirigido, por lo tanto, genera dos medidas un índice de centro de actividad y otro de autoridad. 
+El ultimo algoritmo que exploraremos en esta sección es centros de actividad, o hubs, y autoridades, comúnmente conocido como “hubs and authorities” en inglés o simplemente HITS. Su autor, Kleinberg [-@Kleinberg1999], originalmente desarrollo esta rutina para clasificar sitios de web. Este algoritmo es similar a la centralidad de eigenvector [@Cunningham2016], sin embargo, tiene diferencias cruciales. Fue diseñado para trabajar con datos dirigido, por lo tanto, genera dos medidas un índice de centro de actividad y otro de autoridad. 
 
-Kleinberg [-Kleinberg1999] postula que un centro de actividad sería un nodo enlazado a múltiples autoridades. Es decir, los centros de autoridad actúan como portales que dirigen el trafico de enlaces hacia nodos eminentes en un tema. Estos últimos son las autoridades, quienes reciben el tráfico de las autoridades [@Monge2013]. Recuerde que este algoritmo fue diseñado para categorizar sitos de web, por ello que podemos pensar en centros de actividad como sitios de web a los que acuden las personas buscando información sobre un tema, por ejemplo, Wikipedia. Las autoridades en este contexto serian los sitios de web en la sección de referencias de un tema. 
+Kleinberg [-@Kleinberg1999] postula que un centro de actividad sería un nodo enlazado a múltiples autoridades. Es decir, los centros de autoridad actúan como portales que dirigen el trafico de enlaces hacia nodos eminentes en un tema. Estos últimos son las autoridades, quienes reciben el tráfico de las autoridades [@Monge2003]. Recuerde que este algoritmo fue diseñado para categorizar sitos de web, por ello que podemos pensar en centros de actividad como sitios de web a los que acuden las personas buscando información sobre un tema, por ejemplo, Wikipedia. Las autoridades en este contexto serian los sitios de web en la sección de referencias de un tema. 
 
 Antes de proceder a calcular los índices, piense ¿En que contextos sociales piensa usted que un analista de ARSo utilizaría el algoritmo de HITS? Es importante recalcar que, aunque el algoritmo fue diseñado para clasificar sitios de web, tiene múltiples aplicaciones en contextos sociales. Por ejemplo, en una red de comunicación dirigida entre miembros de una organización podemos aislar quienes son los centros de actividad o los nodos que representan las autoridades de la red. En este ejemplo, el localizar un centro de autoridad seria valioso pues como mencionamos estos sirven como portales comúnmente utilizados en la red para acceder a autoridades. Similarmente, dependiendo de nuestro objetivo, un nodo en posición de autoridad se encuentra en una posición estructural prestigiosa de la red en cuestión.
 
-En términos prácticos, el calcular los índices para cada nodo de centro de actividad y autoridad es relativamente simple. Observe la red \@ref(fig:directed), los centros de autoridad apuntan a las autoridades. De hecho, esto sucede por la relación mutuamente reforzada donde un buen centro de actividad apunta a muchas buenas autoridades y del otro lado de la moneda una buena autoridad es aquel nodo que recibe múltiples vínculos de buenos centros de actividad [@Kleinberg1999]. Aquí demostraremos paso a paso como calcular los índices para a los nodos en la Figura \@ref(fig:directedg). 
+En términos prácticos, el calcular los índices para cada nodo de centro de actividad y autoridad es relativamente simple. Observe la red \@ref(fig:directed), los centros de autoridad apuntan a las autoridades, esto sucede por la relación mutuamente reforzada donde un buen centro de actividad apunta a muchas buenas autoridades y del otro lado de la moneda una buena autoridad es aquel nodo que recibe múltiples vínculos de buenos centros de actividad [@Kleinberg1999].
 
 <div class="figure" style="text-align: center">
 <img src="03-centralidad_files/figure-html/directedg-1.png" alt="Grafo dirigido" width="70%" />
 <p class="caption">(\#fig:directedg)Grafo dirigido</p>
 </div>
 
-Comencemos por dibujar la matriz de adyacencia \@ref(eq:hits1).
+Suponga que el nodo $i$ tiene un índice de autoridad de $a_i$ y de centro de actividad $h_i$ donde i es equivalente a $1:n$. Asuma que la autoridad y centro de actividad inicial de cada nodo $i$ será $a_{i}^0$ y $h_{i}^0$.  El método iterativo HITS actualizara los valores iniciales con las siguientes sumas:
 
-\begin{equation}
-\begin{matrix}
-  & A & B & C & D & E & F & G & H \\
-A & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 \\
-B & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 0 \\
-C & 0 & 0 & 0 & 0 & 1 & 0 & 1 & 1 \\
-D & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 1 \\
-E & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-F & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-G & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-H & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
-\end{matrix}
-(\#eq:hits1)
-\end{equation}
+$$
+a_{i}^k = \sum_{j} h_{j}^{(k-1)}
+$$
+$$
+h_{i}^k = \sum_{j} a_{j}^{(k-1)}
+$$
 
-Para calcular el primer vector de autoridad $v$, primero debemos transponer la matriz de adyacencia ($A^T$) y multiplicarla por 1 \@ref(eq:hits2).
+Como proceso iterativo, podemos seleccionar el número de iteraciones $k$, en este ejemplo utilizaremos $k=1$. Podemos reescribir las ecuaciones previas como multiplicaciones de matriz:
+
+$$
+a^k = A^{T}h_{(k-1)},\ h^k = Aa_{k}
+$$
+
+Para calcular el primer vector de autoridad $a^1$, primero debemos transponer la matriz de adyacencia ($A^T$) y multiplicarla por el vector inicial de centros de actividad $h^0$ de valor uno \@ref(eq:hits2).
 
 \begin{equation}
 \begin{matrix}
@@ -530,13 +528,13 @@ H & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0 \\
 =
 
 \begin{matrix}
-\\ 0 \\ 0 \\ 0 \\ 0 \\ 3 \\ 3 \\ 2 \\ 2
+a^1 \\ 0 \\ 0 \\ 0 \\ 0 \\ 3 \\ 3 \\ 2 \\ 2
 \end{matrix}
 
 (\#eq:hits2)
 \end{equation}
 
-Con el vector de autoridad resultante, calcularemos centros de actividad $u$ al multiplicar la matriz de adyacencia $A$ por el vector actualizado de autoridad $v$ \@ref(eq:hits3).
+Con el vector de autoridad resultante $a^1$, calcularemos centros de actividad $h^1$ al multiplicar la matriz de adyacencia $A$ por el vector de autoridad \@ref(eq:hits3).
 
 \begin{equation}
 \begin{matrix}
@@ -560,23 +558,23 @@ H & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
 =
 
 \begin{matrix}
-\\ 6 \\ 8 \\ 7 \\ 5 \\ 0 \\ 0 \\ 0 \\ 0
+h^1 \\ 6 \\ 8 \\ 7 \\ 5 \\ 0 \\ 0 \\ 0 \\ 0
 \end{matrix}
 
 (\#eq:hits3)
 \end{equation}
 
-Para concluir la primera iteración de este algoritmo, en el siguiente paso normalizaremos ambos vectores $u$ y $v$ para calcular un eigenvalor y dividiremos cada índice por el valor normalizado. De la siguiente manera:
+Para concluir la primera iteración $k=1$ de este algoritmo, calculamos los eigenvectores normalizados $||a||$ y $||v||$ y dividimos cada índice por el valor normalizado. De la siguiente manera:
 
 \begin{equation}
 
-v = 0^2 + 0^2 + 0^2 + 0^2 + 3^2 + 3^2 + 2^2 + 2^2 = \sqrt{13} = 3.605551 \\
-u = 6^2 + 8^2 + 7^2 + 5^2 + 0^2 + 0^2 + 0^2 + 0^2 = \sqrt{174} = 13.19091
+||v|| = \sqrt{0^2 + 0^2 + 0^2 + 0^2 + 3^2 + 3^2 + 2^2 + 2^2} = 3.605551 \\
+||u|| = \sqrt{6^2 + 8^2 + 7^2 + 5^2 + 0^2 + 0^2 + 0^2 + 0^2} = 13.19091
 
 \\~\\
 
 \begin{matrix}
-  & v_1                       & u_1 \\
+  & a^1                       & h^1 \\
 A & \frac{0}{3.6056} = 0      & \frac{6}{13.1909} = 0.4549\\
 B & \frac{0}{3.6056} = 0      & \frac{8}{13.1909} = 0.6065\\
 C & \frac{0}{3.6056} = 0      & \frac{7}{13.1909} = 0.5307\\
@@ -589,26 +587,73 @@ H & \frac{2}{3.6056} = 0.5467 & \frac{0}{13.1909} = 0 \\
 (\#eq:hits4)
 \end{equation}
 
-El siguiente ciclo, comenzamos utilizando los valores de centros de actividad ($u_1$) y autoridades ($v_1$) del ciclo previo. Una vez más, normalizaremos ambos vectores y dividiremos los valores en estos por el producto de la normalización.  
+<!-- El siguiente ciclo $k=2$, comenzamos utilizando los valores de centros de actividad ($h^1$) y autoridades ($h^1$) del ciclo previo. Una vez más, normalizaremos ambos vectores y dividiremos los valores en estos por el producto de la normalización.   -->
 
 <!-- \begin{equation} -->
 
-<!-- v = 0^2 + 0^2 + 0^2 + 0^2 + 3^2 + 3^2 + 2^2 + 2^2 = \sqrt{13} = 3.605551 \\ -->
-<!-- u = 6^2 + 8^2 + 7^2 + 5^2 + 0^2 + 0^2 + 0^2 + 0^2 = \sqrt{174} = 13.19091 -->
+<!-- ||a|| = \sqrt{0^2 + 0^2 + 0^2 + 0^2 + 0.832^2 + 0.832^2 + 0.5467^2 + 0.5467^2} = 1.407906 \\ -->
+<!-- ||h|| = \sqrt{0.4549^2 + 0.6065^2 + 0.5307^2 + 0.379^2 + 0^2 + 0^2 + 0^2 + 0^2} = 1.000039 -->
 
 <!-- \\~\\ -->
 
-<!--   & u_1                       & u_1 \\ -->
-<!-- A & \frac{0}{3.6056} = 0      & \frac{6}{13.1909} = 0.4549\\ -->
-<!-- B & \frac{0}{3.6056} = 0      & \frac{8}{13.1909} = 0.6065\\ -->
-<!-- C & \frac{0}{3.6056} = 0      & \frac{7}{13.1909} = 0.5307\\ -->
-<!-- D & \frac{0}{3.6056} = 0      & \frac{5}{13.1909} = 0.379\\ -->
-<!-- E & \frac{3}{3.6056} = 0.832  & \frac{0}{13.1909} = 0 \\ -->
-<!-- F & \frac{3}{3.6056} = 0.832  & \frac{0}{13.1909} = 0 \\ -->
-<!-- G & \frac{2}{3.6056} = 0.5467 & \frac{0}{13.1909} = 0 \\ -->
-<!-- H & \frac{2}{3.6056} = 0.5467 & \frac{0}{13.1909} = 0 \\ -->
-
+<!-- \begin{matrix} -->
+<!--   & a^2                            & h^2 \\ -->
+<!-- A & \frac{0}{1.4079} = 0           & \frac{0.4549}{1.000039} = 0.4549\\ -->
+<!-- B & \frac{0}{1.4079} = 0           & \frac{0.6065}{1.000039} = 0.6065\\ -->
+<!-- C & \frac{0}{1.4079} = 0           & \frac{0.5307}{1.000039} = 0.5307\\ -->
+<!-- D & \frac{0}{1.4079} = 0           & \frac{0.379}{1.000039} = 0.379\\ -->
+<!-- E & \frac{0.832}{1.4079} = 0.5909  & \frac{0}{1.000039} = 0 \\ -->
+<!-- F & \frac{0.832}{1.4079} = 0.5909  & \frac{0}{1.000039} = 0 \\ -->
+<!-- G & \frac{0.5467}{1.4079} = 0.3883 & \frac{0}{1.000039} = 0 \\ -->
+<!-- H & \frac{0.5467}{1.4079} = 0.3883 & \frac{0}{1.000039} = 0 \\ -->
+<!-- \end{matrix} -->
 <!-- (\#eq:hits5) -->
+<!-- \end{equation} -->
+
+El siguiente ciclo $k=2$, comenzara utilizando los valores de centros de actividad ($h^1$) y autoridades ($a^1$) del ciclo previo. El proceso re repite una y otra vez dependiente en el numero de iteraciones.
+
+Los resultados previos deben corresponder con nuestra intuición, E y F son los nodos mas autoritarios, puesto que reciben la mayoría de los enlaces de entrada. Similarmente, B y C son los centros de autoridad más activos pues envían la mayor porción de vínculos. Sin embargo, el algoritmo HITS nos permite cuantificar que nodos ocupan que posición. 
+
+<!-- \begin{equation} -->
+
+<!-- v = 0^2 + 0^2 + 0^2 + 0^2 + 0.5909^2 + 0.5909^2 + 0.3883^2 + 0.3883^2 = \sqrt{0.9998794} = 0.9999397 \\ -->
+<!-- u = 0.4549^2 + 0.6065^2 + 0.5307^2 + 0.379^2 + 0^2 + 0^2 + 0^2 + 0^2 = \sqrt{1.000078} = 1.000039 -->
+
+<!-- \\~\\ -->
+
+<!-- \begin{matrix} -->
+<!--   & v_3                            & u_3 \\ -->
+<!-- A & \frac{0}{0.9999} = 0           & \frac{0.4549}{1.000039} = 0.4549\\ -->
+<!-- B & \frac{0}{0.9999} = 0           & \frac{0.6065}{1.000039} = 0.6065\\ -->
+<!-- C & \frac{0}{0.9999} = 0           & \frac{0.5307}{1.000039} = 0.5307\\ -->
+<!-- D & \frac{0}{0.9999} = 0           & \frac{0.379}{1.000039} = 0.379\\ -->
+<!-- E & \frac{0.5909}{0.9999} = 0.5909 & \frac{0}{1.000039} = 0 \\ -->
+<!-- F & \frac{0.5909}{0.9999} = 0.5909 & \frac{0}{1.000039} = 0 \\ -->
+<!-- G & \frac{0.3883}{0.9999} = 0.3883 & \frac{0}{1.000039} = 0 \\ -->
+<!-- H & \frac{0.3883}{0.9999} = 0.3883 & \frac{0}{1.000039} = 0 \\ -->
+<!-- \end{matrix} -->
+<!-- (\#eq:hits6) -->
+<!-- \end{equation} -->
+
+<!-- \begin{equation} -->
+
+<!-- v = 0^2 + 0^2 + 0^2 + 0^2 + 0.5909^2 + 0.5909^2 + 0.3883^2 + 0.3883^2 = \sqrt{0.9998794} = 0.9999397 \\ -->
+<!-- u = 0.4549^2 + 0.6065^2 + 0.5307^2 + 0.379^2 + 0^2 + 0^2 + 0^2 + 0^2 = \sqrt{1.000078} = 1.000039 -->
+
+<!-- \\~\\ -->
+
+<!-- \begin{matrix} -->
+<!--   & v_3                            & u_3 \\ -->
+<!-- A & \frac{0}{0.9999} = 0           & \frac{0.4549}{1.000039} = 0.4549\\ -->
+<!-- B & \frac{0}{0.9999} = 0           & \frac{0.6065}{1.000039} = 0.6065\\ -->
+<!-- C & \frac{0}{0.9999} = 0           & \frac{0.5307}{1.000039} = 0.5307\\ -->
+<!-- D & \frac{0}{0.9999} = 0           & \frac{0.379}{1.000039} = 0.379\\ -->
+<!-- E & \frac{0.5909}{0.9999} = 0.5909 & \frac{0}{1.000039} = 0 \\ -->
+<!-- F & \frac{0.5909}{0.9999} = 0.5909 & \frac{0}{1.000039} = 0 \\ -->
+<!-- G & \frac{0.3883}{0.9999} = 0.3883 & \frac{0}{1.000039} = 0 \\ -->
+<!-- H & \frac{0.3883}{0.9999} = 0.3883 & \frac{0}{1.000039} = 0 \\ -->
+<!-- \end{matrix} -->
+<!-- (\#eq:hits7) -->
 <!-- \end{equation} -->
 
 ## Ejercicio Práctico

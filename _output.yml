@@ -1,9 +1,12 @@
 bookdown::gitbook:
-  css: [arso.css, style.css]
+  css: [arso.css]
   split_by: chapter
   config:
-    sharing: null
+    sharing: no
     css: arso.css
+    edit:
+      link: https://github.com/cjcallag/arso/edit/main/%s
+      test: "Editar"
     toc:
       collapse: section
       scroll_highlight: yes
@@ -13,4 +16,3 @@ bookdown::gitbook:
       theme: white
       family: sans
       size: 2
-      

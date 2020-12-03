@@ -6,24 +6,118 @@ output: html_document
 
 # Análisis de Redes Sociales: Una (Breve) Introducción {#introduction}
 
-(agregar texto aquí)
+Georg Simmel [@Simmel1950] es visto generalmente como el precursor intelectual del análisis de redes sociales (ARSo). Argumentó que para comprender el comportamiento social, debemos estudiar los patrones de interacción, y sus estudios ofrecieron conocimientos penetrantes, por ejemplo, sobre la naturaleza de las sociedades secretas, la dinámica de las díadas y tríadas, y cómo la creciente complejidad social ha llevado a mayores niveles de individualismo. Los estudios de Simmel continúan influyendo la disciplina la actualmente, sin embargo, podemos rastrear el surgimiento del análisis de redes sociales a dos corrientes principales de pensamiento: el trabajo de los psicólogos y los antropólogos sociales. La primera corriente enfatizó cómo los patrones organizados dan forma a la forma en que vemos e interpretamos el mundo, mientras que la segunda se centró en la relación entre los patrones y la estructura sociales. Ambas ayudaron a sentar la base para el desarrollo formal de ARSo en Harvard en las décadas de 1960 y 1970, dirigido por el sociólogo Harrison White [@White2008] y sus estudiantes (por ejemplo, Ronald Breiger, Kathleen Carley, Bonnie Erickson, Ivan Chase, Mark Granovetter, Michael Schwartz y Barry Wellman). White, quien obtuvo su doctorado en física teórica, argumentó que la sociología, a pesar de su pretensión de estudiar los fenómenos sociales, estaba en deuda con formas individualistas de análisis basadas en las características agregadas de los individuos, a menudo con la ayuda del análisis estadístico de los datos de encuestas. En respuesta, desarrolló un enfoque basado en estudios centrados en las relaciones sociales y los patrones que surgieron de ellas. 
 
-## Introducción
+Los esfuerzos de White no ocurrieron en el vacío. Otras tradiciones teóricas también informaron el desarrollo del ARSo, como la teoría de grafos, la teoría del intercambio y la investigación sobre el reclutamiento de individuos para movimientos religiosos y sociales. En los últimos años, los economistas se han interesado cada vez más en las redes sociales, al igual que los físicos y otros científicos. Esto ha llevado a un mayor interés en el ARSo, atrayendo a investigadores de diversas disciplinas y generando varios estudios altamente creativos.
 
-(agregar texto aquí)
+¿Qué es el análisis de redes sociales? En pocas palabras, es una colección de teorías y métodos que asume que el comportamiento de los actores se ve afectado por sus vínculos con los demás y las redes en las que están integrados. En lugar de asumir que los actores no son afectados por quienes los rodean, ARSo asume que los patrones de interacción afectan lo que dicen, hacen y creen los actores. Aunque algunas interacciones son al azar, muchas no lo son. Es decir, los actores tienden a interactuar con otros similares, y la interacción repetida puede conducir al surgimiento de la formación social a nivel micro (por ejemplo, individual), meso (por ejemplo, grupo) y macro (por ejemplo, instituciones, naciones) que pueden ser la unidad de análisis. El ARSo se diferencia de otros enfoques cuantitativos tradicionales, que tienden a centrarse en los atributos de los actores (por ejemplo, género, raza, educación), pues el ARSo se centra en cómo los patrones de interacción afectan el comportamiento. Debido a que los atributos no cambian en los contextos sociales, no pueden explicar ninguna variación en el comportamiento de un actor, lo que sugiere que los patrones de interacción son tan (o quizás más) importantes para comprender el comportamiento que los atributos:
+
+> Una mujer que tiene un trabajo servil que requiere poca iniciativa en una oficina puede ser una líder dinámica de una asociación de vecinos y una participante asertiva de la asociación de padres de familia. Esas diferencias de comportamiento son difíciles de reconciliar con atributos inmutables de género, edad y estatus, pero son comprensibles al reconocer que las relaciones estructurales de las personas pueden variar notablemente en los contextos sociales -- [@Knoke2007, 5].
+
+Consecuentemente, un objetivo principal del ARSo ha sido desarrollar métricas para ayudar a los analistas a comprender mejor las características estructurales de una red en particular. Esta metodología se ha utilizado con éxito para explicar variedades de comportamiento principalmente porque obliga a los investigadores a “pensar en términos de restricciones y opciones inherentes a la forma en que se organizan las relaciones sociales” [@Raab2003]. El resto de este capítulo presenta los términos, conceptos y suposiciones básicas de ARSo. Sin embargo, antes de hacerlo, señalamos brevemente algunos de los conceptos erróneos que rodean al ARSo.
 
 ## Conceptos Erróneos y Diferencias
 
-(agregar texto aquí)
+El termino análisis de redes sociales a veces se confunde con medios sociales y análisis de medios sociales. Es decir, cuando las personas escuchan que van a aprender el análisis de redes sociales, a menudo piensan que aprenderán a extraer datos de medio sociales como Facebook y Twitter. ARSo es una colección de teorías y métodos que se han desarrollado para comprender la estructura de las redes sociales. Por el contrario, los medios sociales constan de plataformas y contenido generado por el usuario que puede incluir texto, imágenes, videos, conexiones entre usuarios y enlaces a sitios web. El hecho de que el contenido de los medios sociales es a menudo relacional puede aumentar la confusión. Para clarificar, los analistas pueden extraer datos de los medios sociales y, posteriormente, utilizar ARSo para comprender ciertos aspectos de estas redes sociales (por ejemplo, seguidores en una red de Twitter de usuario a usuario). Sin embargo, es importante hacer la diferenciación.
 
-## Términos y Conceptos Básicos
+La forma en que algunos usan el término "red" también puede resultar confusa. Algunos lo usan para referirse a tipos de organizaciones descentralizadas, informales y/u orgánicas [@Burns1961; @Podolny1998; @Powell1990; @Powell1994; @Ronfeldt2001]. Esta distinción puede ser útil, pero dentro del mundo del análisis de redes sociales, todas las organizaciones son redes. Algunas pueden ser más jerárquicas que otras, pero siguen siendo redes [@Nohria1992]. Es por ello que los analistas de redes sociales han desarrollado algoritmos que miden el grado en que una red en particular es jerárquica o no (ver, por ejemplo, @Davis1979; @deNooy2005; @Krackhardt1994).
 
-(agregar texto aquí)
+Finalmente, el ARSo a veces se confunde con el análisis de enlaces, una metodología relacionada pero distinta que examina los patrones relacionales de varios objetos. Una diferencia fundamental entre los dos es que, si bien los diagramas de análisis de enlaces a menudo incluyen diferentes tipos de objetos (por ejemplo, individuos, automóviles, teléfonos celulares, etc.) y los vínculos entre ellos, los diagramas de redes sociales solo incluyen vínculos entre tipos similares de objetos. Tomemos, por ejemplo, un diagrama de análisis de vínculos en el que dos individuos (A y B) tienen vínculos con otros cinco objetos, pero los objetos con los que tienen vínculos difieren entre sí (Figura \@ref(fig:links)). En este ejemplo, la persona A está vinculada a la persona B, así como a una bomba, un teléfono celular, una casa y un automóvil, mientras que la persona B está vinculada a cuatro personas (A, C, D y E) y un teléfono celular. Si bien ambos tienen cinco vínculos (que es la definición de grado de centralidad; consulte la discusión sobre centralidad a continuación), no podemos comparar de manera significativa el número de vínculos de estos dos individuos porque son de diferentes tipos de objetos. Sería como comparar manzanas y naranjas.
+
+<div class="figure" style="text-align: center">
+<img src="images/01-links.png" alt="Ejemplo de un análisis de enlaces" width="70%" />
+<p class="caption">(\#fig:links)Ejemplo de un análisis de enlaces</p>
+</div>
+
+En el ARSo, los actores tienen vínculos con objetos similares, lo que hace significativa la comparación directa del número de vínculos. Esto se ilustra en la Figura \@ref(fig:arso) donde en el panel de la izquierda, los individuos A y B tienen cada uno cinco vínculos con otros cinco individuos, mientras que en el derecho, tienen cinco vínculos con cinco escuelas diferentes. En ambos casos, los lazos de A son comparables a los de B porque son del mismo tipo de objeto. Aunque los analistas de redes sociales están interesados en más que el recuento de los lazos de los actores, otros algoritmos de análisis de redes sociales generalmente asumen que los lazos se dan entre tipos similares de objetos.
+
+<div class="figure" style="text-align: center">
+<img src="images/01-arso.png" alt="Ejemplo de diagramas de red" width="70%" />
+<p class="caption">(\#fig:arso)Ejemplo de diagramas de red</p>
+</div>
 
 ## Suposiciones
 
-(agregar texto aquí)
+La mayoría de las teorías y métodos de ARSo se basan en un conjunto común de suposiciones [@Wasserman1994; @Azarian2005; @Knoke2007]:
+
+  - Los actores y sus acciones relacionadas son interdependientes, en lugar de independientes, con otros actores
+  - Los vínculos entre actores son conductos para la transferencia o el flujo de diversos tipos de bienes o recursos materiales y/o no materiales (por ejemplo, fondos, creencias, confianza, etc.)
+  - Las estructuras sociales son vistas en términos de patrones durables de vínculos entre actores
+  - Las interacciones repetidas entre actores dan lugar a formaciones sociales que cobran vida propia, siguen su propia lógica y no pueden reducirse a sus partes constituyentes aunque sigan dependiendo de estas
+  - La ubicación de los actores en la estructura social (es decir, su ubicación estructural) impacta sus creencias, normas y comportamiento observado
+  - Las redes sociales son entidades dinámicas que cambian a medida que los actores, subgrupos y vínculos entre actores entran, se forman, salen o se eliminan de la red
+
+### Interdependencia de los Actores
+
+El ARSo asume que los actores no toman decisiones de forma autónoma, sino que están sustancialmente influenciados por el comportamiento y las decisiones de otros actores. Esta suposición difiere de la perspectiva de elección racional "pura" en la que los actores actúan independientemente de aquellos con quienes interactúan. Estudios como los experimentos de conformidad social de Solomon Asch (-@Asch1951, 1955), los experimentos de obediencia a la autoridad de Stanley Milgram -@Milgram1974 y el experimento de la prisión de Philip Zimbardo (-@Zimbardo1972, 2000) destacan cómo las redes en las que están inmersos los actores pueden influir en su comportamiento. Estos estudios sugieren que, en lugar de actuar independientemente de quienes los rodean, las personas hacen lo contrario. Los sujetos en el experimento de Asch optaron por estar de acuerdo con la multitud frente a la presión de los compañeros, incluso cuando la respuesta correcta era obvia. Los sujetos de Milgram tomaron decisiones en presencia de autoridad que probablemente no habrían hecho en un contexto diferente. Y en solo unos días, los guardias de Zimbardo adquirieron un sorprendente nivel de brutalidad, que presagió las actividades que tomaron lugar en la prisión de Abu Ghraib y el debacle que consiguió treinta años después.
+
+Los individuos no son los únicos actores influenciados por otros actores. Por ejemplo, John Meyer, Woody Powell y Paul DiMaggio (y numerosos colegas) han demostrado que los grupos, corporaciones y estados-nación no tienen más probabilidades de actuar de forma autónoma que los individuos (ver, por ejemplo, @DiMaggio1983; @Meyer1997; @Meyer1977). Cuanto más interactúan entre sí, más se parecen con el tiempo. Lo hacen no necesariamente por razones instrumentales, sino para mantener su legitimidad a los ojos de otros actores similares. 
+
+> Cuando una práctica o estructura organizacional se entiende comúnmente como una característica definitoria de una organización 'legítima' de cierto tipo, las élites de la organización se sienten presionados para instituir esa práctica o estructura. Si hay una norma cultural que dice: "Para que una organización sea una buena organización, debe tener la característica X", las organizaciones se sienten presionadas para instituir la característica X -- [@Chavez1997, 32-33].
+
+### Lazos como Conductos
+
+Otra suposición es que los lazos (es decir, las relaciones) entre actores funcionan como conductos para el flujo de varios tipos de "bienes" materiales y no materiales, como información, sentimientos, recursos financieros, normas, enfermedades, opiniones y confianza. Quizás, el ejemplo más conocido de esto es el estudio de Granovetter -@Granovetter1973 sobre cómo las personas encuentran sus trabajos actuales. Granovetter descubrió que era mucho más probable que las personas utilizaran contactos personales en comparación a otros medios cuando se trataba de encontrar trabajo. De aquellos que encontraron su trabajo a través de contactos personales, la mayoría de esos contactos eran débiles (es decir, conocidos) en lugar de lazos fuertes (es decir, amigos cercanos). ¿Por qué? Porque es menos probable que nuestros lazos débiles se involucren socialmente entre sí que nuestros lazos fuertes. Por ello, el conjunto de personas que componen nuestra red de conocidos tiende a ser relativamente escaso, mientras que el grupo de personas que componen nuestra red de amigos cercanos tiende a ser denso. Considere el patrón de lazos sociales sugerido por este argumento (Figura \@ref(fig:strongweak). La mayoría de las personas tendrán algunos amigos cercanos, la mayoría de los cuales se conocen entre sí. Probablemente también tengan varios conocidos, pocos de los cuales se conocen entre sí. Sin embargo, es probable que cada uno de estos conocidos tenga amigos cercanos propios, por lo que también es probable que estén integrados en sus propias redes altamente interconectadas, pero separadas de nuestro individuo original. Según Granovetter, los lazos débiles son importantes en términos de la estructura general de una red porque forman los puentes cruciales que unen a grupos de personas densamente unidas. De hecho, sin ellos, estos grupos no estarían conectados en absoluto.
+
+<div class="figure" style="text-align: center">
+<img src="01-introduction_files/figure-html/strongweak-1.png" alt="Lazos fuertes y débiles" width="70%" />
+<p class="caption">(\#fig:strongweak)Lazos fuertes y débiles</p>
+</div>
+
+Esto llevó a Granovetter a argumentar que "cualquier cosa que se difunda", ya sea información laboral, influencia, recursos, confianza, etc., "llegará a un mayor número de personas y viajará una mayor distancia […] cuando pasa por lazos débiles en lugar de fuertes ” [@Granovetter1973, 1366]. Debido a esto, es más probable que los actores con pocos lazos débiles “se limiten a las noticias provinciales y las opiniones de sus amigos cercanos” [@Granovetter1983, 2002]. Además, los grupos o comunidades cuyos miembros carecen de vínculos débiles encontrarán más dificultades para movilizarse por una causa. Por ejemplo, al comparar dos intentos de organización comunitaria, uno que tuvo éxito y otro que no, Granovetter [-@Granovetter1973, 1373-1376] argumentó que una diferencia crítica entre los dos era que el que no tuvo éxito carecía de los lazos débiles que necesitaba para unir sus diversos círculos sociales. 
+
+Esto no significa que los lazos fuertes tienen poco o ningún valor. Es más probable que los sentimientos de confianza y solidaridad se compartan entre lazos fuertes que entre los débiles. Así, mientras que los vínculos débiles brindan a las personas acceso a información y recursos más allá de sus círculos sociales inmediatos, los vínculos fuertes suelen ser fuentes de apoyo en tiempos de incertidumbre. De hecho, es más probable que las personas con numerosos vínculos fuertes sean más felices y disfruten de una mejor salud.
+
+### Estructura Social y Formaciones Sociales Emergentes
+
+Los científicos sociales se refieren con frecuencia al concepto de estructura social. Con este término, generalmente tienen en mente los patrones durables de comportamiento y las relaciones dentro de los sistemas sociales (por ejemplo, los roles) o las instituciones y normas sociales que se han integrado en los sistemas sociales de tal manera que dan forma al comportamiento. Las estructuras sociales “restringen quién está presente, dónde se encuentran, qué pueden hacer y cómo se relacionan entre sí. Esta estructura es tan real como los edificios que ocupan las personas” [@Turner2006, 88]. Sin embargo, es notoriamente difícil de captar la estructura social empíricamente, por lo que muchos encuentran atractivo el ARSo. Esta metodología conceptualiza las estructuras sociales en términos de patrones perdurables de vínculos entre actores. Por tanto, proporciona un método para estudiar de forma sistemática y empírica las causas y consecuencias de la estructura social.
+
+La mayoría de los analistas de redes sociales también sostienen que las interacciones repetidas entre actores (por ejemplo, individuos) pueden dar lugar a formaciones sociales emergentes (por ejemplo, grupos, organizaciones formales, naciones) que siguen su propia lógica y no pueden reducirse ni explicarse por sus partes constituyentes, incluso aunque siguen dependiendo de esas partes [@White2008]. Los ejemplos de emergencia abundan en el mundo físico, como la combinación de hidrógeno (H) y oxígeno (O) en agua (H20). Como el agua no puede reducirse o explicarse completamente por sus átomos subyacentes, las formaciones sociales emergentes son productos de interacciones entre actores que no pueden explicarse por completo únicamente por las características de esos actores [@Smith2010, 27]. En cambio, toman vida propia, lo que significa que los actores de todos los tipos y niveles ya sean individuos, grupos, organizaciones o naciones, pueden ser examinados utilizando el ARSo sin la necesidad de explorar los componentes subyacentes.
+
+### Ubicación Estructural: Creencias, Normas, Intenciones, Comportamiento e Identidad
+
+Las formaciones sociales emergentes pueden ejercer lo que se llama causalidad descendente, razón por la cual el ARSo asume que las actitudes, creencias, intenciones, comportamiento e incluso sus identidades de los actores están determinadas principalmente por su ubicación en la estructura social. Por ejemplo, la investigación ha encontrado repetidamente que las personas ubicadas estructuralmente (es decir, socialmente) cerca de un movimiento particular, religioso o de otro tipo, tienen una mayor probabilidad de unirse a ese movimiento que aquellas que no lo están [@Lofland1965; @McAdam1986 ; @Snow1980; @Stark1980]. En otras palabras, las personas tienden a no unirse a grupos al azar. En cambio, es más probable que se unan a los grupos en los que conocen a alguien.
+
+### Redes sociales dinámicas
+
+Finalmente, el análisis de redes sociales asume que las redes son dinámicas. Siempre están cambiando a medida que los actores entran y salen de la red y a medida que se forman y se disuelven los lazos. Pueden crecer o encogerse de tamaño, volverse más o menos fragmentados o aumentar o disminuir su nivel de centralización. Los grupos de actores pueden agruparse o disolverse iterativamente, y los actores centrales pueden convertirse en actores periféricos (y viceversa). Para complicar las cosas, los actores también se mueven de una ubicación geográfica a otra, lo que podría afectar las operaciones de una red. Históricamente, los datos de redes longitudinales han sido difíciles de obtener y los métodos para examinarlos no han sido desarrollados. De hecho, el texto clásico del ARSo de Wasserman y Faust hace poca mención a las redes longitudinales. Afortunadamente, eso está cambiando. Gran parte del análisis hasta la fecha ha sido principalmente descriptivo, pero en los últimos años los analistas de redes sociales han desarrollado numerosos enfoques para descubrir patrones y procesos a partir de datos longitudinales [@deNooy2011; @Doreian1997; @McCulloh2011; @Snijders2010]
+
+### Resumen: Redes Sociales, Agencia Humana y Cultura
+
+## Términos y Conceptos Básicos
+
+### Actores y Enlaces
+
+### Redes Sociales
+
+Una red social es simplemente "un conjunto finito o conjuntos de actores" ligados entre sí [@Wasserman1994, 20]. La Figura \@ref(fig:hypothetical) muestra una red social hipotética donde los círculos representan actores y las líneas representan vínculos o relaciones. Como ilustra, los actores a menudo se agrupan en subgrupos relativamente distintos. Además, algunos están incrustados en el centro de estos subgrupos, mientras que otros se encuentran más en la periferia, a veces sirven como puentes entre subgrupos.
+
+<div class="figure" style="text-align: center">
+<img src="01-introduction_files/figure-html/hypothetical-1.png" alt="Red social hipotética" width="70%" />
+<p class="caption">(\#fig:hypothetical)Red social hipotética</p>
+</div>
+
+
+### Camino (y Distancia de Caminos)
+
+### Topología 
+
+### Subgrupos (Cluster, subredes)
+
+### Centralidad
+
+### Puentes y Corredores
+
+### Funciones y Posiciones
+
+### Análisis Exploratorio y Explicativo de Redes Sociales
+
+### Atributos
+
+Si bien el análisis de redes sociales se centra principalmente en el patrón de vínculos entre actores, la mayoría de los analistas de redes sociales no ignoran por completo los datos de atributos. Si los actores de una red son individuos, entonces los datos de atributos incluyen características como género, raza, etnia, años de educación, nivel de ingresos, edad, etc. Si son organizaciones, las variables de atributo pueden ser aquellas que indiquen el tamaño (por ejemplo, número de empleados), edad, tipo, etc. Y si los actores son países, las variables de atributo incluirían medidas como el PIB per cápita o el tamaño de la población. 
+
+A veces, el límite entre atributos y afiliaciones puede ser algo difuso. Como regla general, algo es una afiliación si la participación compartida de dos actores indica una relación (por ejemplo, co-membresía en una organización voluntaria). Aún así, una afiliación también puede funcionar como un atributo.
 
 ## Resumen y Conclusiones
 
-(agregar texto aquí)
+Este capítulo ha proporcionado una descripción general del ARSO, cómo se diferencia de otros enfoques analíticos, los términos y conceptos básicos que emplea y los supuestos fundamentales que subyacen en gran parte del trabajo de los analistas de redes. Este capítulo también exploró los problemas relacionados con la cultura y la agencia humana y el grado en que influyen en el comportamiento humano.

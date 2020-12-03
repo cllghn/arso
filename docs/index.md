@@ -4,7 +4,7 @@ author: ["CORE Lab + ESGE-EPG"]
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
-biblio-style: apalike
+csl: [apa-5th-edition.csl]
 link-citations: yes
 github-repo: cjcallag/arso
 description: "TBD."
