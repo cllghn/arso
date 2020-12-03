@@ -2,6 +2,7 @@ fig:links
 fig:arso
 fig:strongweak
 fig:hypothetical
+fig:subs
 fig:bienvenida
 fig:les-mis
 fig:overview
@@ -284,3 +285,4 @@ relaciones
 atributos-1
 libro-de-códigos-de-noordin-top
 referencias
+fig:bb
