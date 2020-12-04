@@ -228,7 +228,7 @@ Para este ejercicio vamos a necesitar el módulo *Newman-Girvan* clustering ante
 *Archivo > Abrir* 
 ::::
 ::::{.rcolumn-80}
-  1.	Abra Gephi y lea el archivo `Alive Trust Network.gephi`(**ADD DATA LINK HERE**). Comenzaremos explorando componentes, estos son subgrupos de actores que están conectados (ya sea directa o indirectamente) entre sí. En las redes dirigidas, puede identificar dos tipos de componentes: fuertes y débiles. Los componentes fuertes toman en cuenta la dirección de los lazos, mientras que los componentes débiles no. Con redes no dirigidas, solo puede identificar componentes débiles.
+  1.	Abra Gephi y lea el archivo `alive_trust_network.gephi`, que puede descargar [aquí](https://github.com/cjcallag/arso/blob/main/data/subgroups/alive_trust_network.gephi?raw=true). Comenzaremos explorando componentes, estos son subgrupos de actores que están conectados (ya sea directa o indirectamente) entre sí. En las redes dirigidas, puede identificar dos tipos de componentes: fuertes y débiles. Los componentes fuertes toman en cuenta la dirección de los lazos, mientras que los componentes débiles no. Con redes no dirigidas, solo puede identificar componentes débiles.
 ::::
 ::::
 

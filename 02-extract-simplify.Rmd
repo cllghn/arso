@@ -127,7 +127,7 @@ Recuerde que deberá reiniciar Gephi.
 *Importar como > Tabla de nodos*
 ::::
 ::::{.rcolumn-80}
-  1.	Comenzaremos importando la red operacional junto con sus atributos en Gephi. Primero, abra el archivo `Attributes (Nodes Table).csv` utilizando el comando *Archivo > Abrir* en Gephi. Este archivo contiene una lista de los nodos de red y sus atributos correspondientes. Gephi debe detectar el tipo de archivo que esta importando, pero mantenga en mente que a veces no funciona correctamente. En el cuadro de diálogo  de importación (Figura \@ref(fig:importacion)), asegúrese de indicar que el *Separador* sean comas y de importar el archivo como una *Tabla de Nodos*. Luego haga clic en *Siguiente*. 
+  1.	Comenzaremos importando la red operacional junto con sus atributos en Gephi. Primero, abra el archivo [`Attributes (Nodes Table).csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/simplifying/Attributes%20(Nodes%20Table).csv) utilizando el comando *Archivo > Abrir* en Gephi. Este archivo contiene una lista de los nodos de red y sus atributos correspondientes. Gephi debe detectar el tipo de archivo que esta importando, pero mantenga en mente que a veces no funciona correctamente. En el cuadro de diálogo  de importación (Figura \@ref(fig:importacion)), asegúrese de indicar que el *Separador* sean comas y de importar el archivo como una *Tabla de Nodos*. Luego haga clic en *Siguiente*. 
 ::::
 ::::
 
@@ -170,7 +170,7 @@ knitr::include_graphics("images/02-07-03.png")
 *Importar como > Tabla de aristas*
 ::::
 ::::{.rcolumn-80}
-  4.	Ahora importemos la lista de aristas correspondiente, `Operational (Edge List).csv`, usando el comando *Archivo > Abrir*. Gephi debe detectar el formato del archivo correctamente, pero asegúrese que los separadores sean comas y que el archivo de importación sea reconocido como *Tabla de aristas* (Figura \@ref(fig:importacion4)). Luego haga clic en *Siguiente*. En e siguiente cuadro de diálogo, acepte todos los valores predeterminado de Gephi y haga clic en *Terminar*. 
+  4.	Ahora importemos la lista de aristas correspondiente, [`Operational (Edge List).csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/simplifying/Operational%20(Edge%20List).csv), usando el comando *Archivo > Abrir*. Gephi debe detectar el formato del archivo correctamente, pero asegúrese que los separadores sean comas y que el archivo de importación sea reconocido como *Tabla de aristas* (Figura \@ref(fig:importacion4)). Luego haga clic en *Siguiente*. En e siguiente cuadro de diálogo, acepte todos los valores predeterminado de Gephi y haga clic en *Terminar*. 
 ::::
 ::::
 

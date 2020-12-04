@@ -550,7 +550,7 @@ knitr::include_graphics("images/02-Fig-13_preview.png")
 *Archivo > Abrir*
 ::::
 ::::{.rcolumn-80}
-  1. Ahora, veamos como importar una lista de aristas. Hemos preparado una para este ejercicio (**PLEASE PUT LINK TO DATA HERE**). Ábrala en Excel y examínela. Para importar vamos a repetir algunos pasos anteriores, use el comando *Archivo > Abrir* para abrir un cuadro de dialogo desde el cual puede importar el archivo de csv. Haga clic en *Abrir* y aparecerá un nuevo cuadro de dialogo, similar a la Figura ##. Tenga en cuenta que, una vez más, tenemos la opción de importar varias estructuras de datos, pero Gephi ha auto detectado que el archivo es una lista de aristas, de clic en *Siguiente*. En la siguiente venta, Gephi ofrece opciones para indicar que tipo de datos se incluirán, por ejemplo, la columna `Peso`. Ya que los valores predeterminados son adecuados, haga clic en *Finalizar*.
+  1. Ahora, veamos como importar una lista de aristas. Hemos preparado una para este ejercicio, [descárgue `koschade_bali_edges.csv` desde aquí](https://raw.githubusercontent.com/cjcallag/arso/main/data/recording_data/koschade_bali_edges.csv). Ábrala en Excel y examínela. Para importar vamos a repetir algunos pasos anteriores, use el comando *Archivo > Abrir* para abrir un cuadro de dialogo desde el cual puede importar el archivo de csv. Haga clic en *Abrir* y aparecerá un nuevo cuadro de dialogo, similar a la Figura ##. Tenga en cuenta que, una vez más, tenemos la opción de importar varias estructuras de datos, pero Gephi ha auto detectado que el archivo es una lista de aristas, de clic en *Siguiente*. En la siguiente venta, Gephi ofrece opciones para indicar que tipo de datos se incluirán, por ejemplo, la columna `Peso`. Ya que los valores predeterminados son adecuados, haga clic en *Finalizar*.
 ::::
 ::::
   
@@ -587,7 +587,7 @@ print("DO NOT FORGET TO ADD FIGURE HERE")
 *Archivo > Abrir*
 ::::
 ::::{.rcolumn-80}
-  4.	Ahora, importemos los datos de atributos, específicamente `roles`. Seleccione el comando *Archivo > Abrir* y localice el archivo (**PLEASE PUT LINK TO DATA HERE**). En el cuadro de dialogo, indique que es una *Tabla de nodos* en la opción *Importar como:* y de clic en *Siguiente*. Acepte los valores predeterminados de Gephi y de clic en *Finalizar*. Acepte los valores predeterminados, excepto que esta vez en *Informe de importación* cambie la opción de *Nuevo espacio de trabajo* a *Anadir al espacio de trabajo existente* y de clic en *Aceptar*.
+  4.	Ahora, importemos los datos de atributos, específicamente `roles`. Seleccione el comando *Archivo > Abrir* y localice y descargue el archivo [`koschade_bali_nodes.csv` aquí](https://raw.githubusercontent.com/cjcallag/arso/main/data/recording_data/koschade_bali_nodes.csv). En el cuadro de dialogo, indique que es una *Tabla de nodos* en la opción *Importar como:* y de clic en *Siguiente*. Acepte los valores predeterminados de Gephi y de clic en *Finalizar*. Acepte los valores predeterminados, excepto que esta vez en *Informe de importación* cambie la opción de *Nuevo espacio de trabajo* a *Anadir al espacio de trabajo existente* y de clic en *Aceptar*.
 ::::
 ::::
 

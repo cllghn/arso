@@ -26,41 +26,62 @@ bibliography: book.bib
 
 **Centralidad de cercanía** (*Closeness centrality*): La centralidad de la cercanía captura qué tan cerca (en términos de la más corta distancia de ruta) cada actor es a todos los demás actores de una red. Ejemplo, red con nodos dimensionados por centralidad de cercanía:
 
-<img src="05-glossary_files/figure-html/unnamed-chunk-3-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="05-glossary_files/figure-html/unnamed-chunk-3-1.png" alt="Nodos dimensionados por cercanía" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-3)Nodos dimensionados por cercanía</p>
+</div>
 
 **Centralidad de eigenvector** (*Eigenvector centrality*): La centralidad de eigenvector supone que los vínculos con los actores centrales son más importantes que los vínculos con los actores periféricos y, por lo tanto, pondera las conexiones sumadas de cada actor con los demás por sus puntajes de centralidad. Ejemplo, red con nodos dimensionados por centralidad de eigenvector:
 
-<img src="05-glossary_files/figure-html/unnamed-chunk-4-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="05-glossary_files/figure-html/unnamed-chunk-4-1.png" alt="Nodos dimensionados por eigenvector" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-4)Nodos dimensionados por eigenvector</p>
+</div>
 
 **Centralidad de intermediación** (*Betweenness centrality*): La centralidad de intermediación mide la medida en que cada actor se encuentra en el camino más corto entre todos los demás actores de una red. Ejemplo, red con nodos dimensionados por centralidad de intermediación:
 
-<img src="05-glossary_files/figure-html/unnamed-chunk-5-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="05-glossary_files/figure-html/unnamed-chunk-5-1.png" alt="Nodos dimensionados por intermediación" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-5)Nodos dimensionados por intermediación</p>
+</div>
 
 **Centralidad de grado** (*Degree centrality*): Formalmente, el grado de centralidad de un actor es igual al número de vínculos incidentes ó el número de lazos de un actor. Ejemplo, red con nodos dimensionados por centralidad de grado:
 
-<img src="05-glossary_files/figure-html/unnamed-chunk-6-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="05-glossary_files/figure-html/unnamed-chunk-6-1.png" alt="Nodos dimensionados por grado" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-6)Nodos dimensionados por grado</p>
+</div>
 
 **Centralización** (*Centralization*): La centralización utiliza la variación en la centralidad todos los actores dentro de la red para medir el nivel de centralización. Más variación produce puntuaciones más altas de centralización de red; menos variación produce puntuaciones más bajos. En general, cuanto más grande es un índice de centralización, más probable es que un solo actor sea muy central.
 
 **Datos de atributos** (*Attribure data*): Características (no-relacionales) de un actor en particulaers como identidad étnica, raza, años de educación, edad, nivel de salario, etc.
 
-<img src="05-glossary_files/figure-html/unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="05-glossary_files/figure-html/unnamed-chunk-7-1.png" alt="Nodos coloreados por atributo" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-7)Nodos coloreados por atributo</p>
+</div>
 
-**Datos de red modo-uno** (*One-mode network data*): Consiste en un solo conjunto de actores. Por ejemplo:
+**Datos de red modo uno** (*One-mode network data*): Consiste en un solo conjunto de actores. Por ejemplo:
   
   + Relaciones de persona a persona como amistades, familiares, etc.
   + Relaciones de organización a organización.
   + Relaciones de grupo a grupo.
 
-<img src="05-glossary_files/figure-html/unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="05-glossary_files/figure-html/unnamed-chunk-8-1.png" alt="Red modo uno" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-8)Red modo uno</p>
+</div>
 
-**Datos de red modo-dos** (*Two-mode network data*): Una red que consta de dos conjuntos de actores. Por ejemplo:
+**Datos de red modo dos** (*Two-mode network data*): Una red que consta de dos conjuntos de actores. Por ejemplo:
 
   + Relaciones de persona a organización como afiliación.
   + Relaciones de persona a grupo.
   + Relaciones de grupo a nación.
   
-<img src="05-glossary_files/figure-html/unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="05-glossary_files/figure-html/unnamed-chunk-9-1.png" alt="Red modo dos" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-9)Red modo dos</p>
+</div>
 
 **Densidad** (*Density*): Conceptualmente, la densidad se refiere al grado de interconexión de una red. Formalmente, es el número de vínculos en una red, expresado como una proporción del número máximo posible de vínculos. Está inversamente relacionado con el tamaño de la red (es decir, cuanto más grande es la red, menor es la densidad) porque el número de líneas posibles aumenta exponencialmente a medida que se agregan actores a la red, mientras que el número de lazos que cada actor puede mantener tiende a ser limitado. 
 
@@ -78,10 +99,16 @@ bibliography: book.bib
 
 **Tipos de relación** (*Types of relationships*): Valor categorico de vínculo entre un grupo de actores, como: amistad (en rojo), familia (en azul), etc.
 
-<img src="05-glossary_files/figure-html/unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="05-glossary_files/figure-html/unnamed-chunk-10-1.png" alt="Relaciones apiladas" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-10)Relaciones apiladas</p>
+</div>
 
 **Topología** (*Topography*): La topología de la red se refiere a la estructura general de la red. Las medidas de uso común incluyen densidad, fragmentación, tamaño de red y centralización.
 
 **Vínculos** (*Ties*): La relación entre dos nodos. Un vínculo puede ser direccionado (llamado *arco*, por ejemplo: **<--** | **-->** | **<->**) o no direccionado (llamado *borde*, por ejemplo: **---**). 
 
-<img src="05-glossary_files/figure-html/unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
+<img src="05-glossary_files/figure-html/unnamed-chunk-11-1.png" alt="Red no dirigida (izquierda) y red dirigida (derecha)" width="70%" />
+<p class="caption">(\#fig:unnamed-chunk-11)Red no dirigida (izquierda) y red dirigida (derecha)</p>
+</div>
