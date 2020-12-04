@@ -658,7 +658,7 @@ Los resultados previos deben corresponder con nuestra intuición, E y F son los 
 
 ## Ejercicio Práctico
 
-En este ejercicio practicaremos algunas de las medidas de centralidad presentes en Gephi. Para ello necesitara descargar el conjunto de datos titulado: `Alive Combined Network.gephi` (**ADD DATA LINK HERE**).
+En este ejercicio practicaremos algunas de las medidas de centralidad presentes en Gephi. Para ello necesitara descargar el conjunto de datos titulado: [`alive_combined_network.gephi`](https://github.com/cjcallag/arso/blob/main/data/centrality/alive%20_combined_network.gephi?raw=true).
 
 ### Centralidad en Gephi
 
@@ -671,7 +671,7 @@ En este ejercicio practicaremos algunas de las medidas de centralidad presentes 
 *Estadísticas > Grado medio > Ejecutar*
 ::::
 ::::{.rcolumn-80}
-  1.	Abra `Alive Combined Network.gephi` (**ADD DATA LINK HERE**). Los colores de los nodos de la red reflejan los subgrupos de acuerdo con el algoritmo de Louvain. Gephi implementa un puñado de medidas de centralidad. La medida más común de centralidad es el grado, que en una red no dirigida y binaria es simplemente un recuento del número de vínculos de cada actor (es decir, el número de vecinos). Los vínculos en una red son ponderados cuando los actores comparten múltiples entre sí, por un par de actores puede compartir más de un vínculo, como parentesco, religioso, escolar. Para la centralidad de grado, Gephi ofrece la opción de tomar en cuenta el peso de los vínculos o ignorarlo. Para calcular la centralidad de grado no ponderada, ubique la opción *Grado medio* en la pestaña *Estadísticas* y haga clic en *Ejecutar*. Esto genera un informe, que hemos visto antes, que le presenta la centralidad de grado medio y produce un gráfico que indica la distribución de los valores de grado.
+  1.	Abra `alive_combined_network.gephi`, que puede descargar [aquí](https://github.com/cjcallag/arso/blob/main/data/centrality/alive%20_combined_network.gephi?raw=true). Los colores de los nodos de la red reflejan los subgrupos de acuerdo con el algoritmo de Louvain. Gephi implementa un puñado de medidas de centralidad. La medida más común de centralidad es el grado, que en una red no dirigida y binaria es simplemente un recuento del número de vínculos de cada actor (es decir, el número de vecinos). Los vínculos en una red son ponderados cuando los actores comparten múltiples entre sí, por un par de actores puede compartir más de un vínculo, como parentesco, religioso, escolar. Para la centralidad de grado, Gephi ofrece la opción de tomar en cuenta el peso de los vínculos o ignorarlo. Para calcular la centralidad de grado no ponderada, ubique la opción *Grado medio* en la pestaña *Estadísticas* y haga clic en *Ejecutar*. Esto genera un informe, que hemos visto antes, que le presenta la centralidad de grado medio y produce un gráfico que indica la distribución de los valores de grado.
 ::::
 ::::
 

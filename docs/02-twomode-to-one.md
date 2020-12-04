@@ -229,7 +229,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 *Ventana > Multimode Projections*
 ::::
 ::::{.rcolumn-80}
-  1. Para importar datos de red modo-dos en formato de lista de bordes (o lista de aristas), usaremos dos conjuntos de datos. El primero, una lista de nodos que contiene una columna con la identificación del nodo (columna are requerida, `ID`), etiqueta y tipo de nodo. El segundo conjunto es una lista de aristas que contiene los vínculos entre nodos. Antes de importar los datos, eche un descargue a estos archivos (**PLEASE PUT LINK TO DATA HERE** and **PLEASE PUT LINK TO DATA HERE**).
+  1. Para importar datos de red modo-dos en formato de lista de bordes (o lista de aristas), usaremos dos conjuntos de datos. El primero, una lista de nodos que contiene una columna con la identificación del nodo (columna are requerida, `ID`), etiqueta y tipo de nodo. El segundo conjunto es una lista de aristas que contiene los vínculos entre nodos. Antes de importar los datos, eche un descargue los archivos [`davis_edges.csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/two_mode/davis_edges.csv) y [`davis_nodes.csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/two_mode/davis_nodes.csv).
 ::::
 ::::
 

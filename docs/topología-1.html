@@ -5,20 +5,20 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>8 Topología | Análisis de Redes Sociales Oscuras</title>
-  <meta name="description" content="TBD." />
+  <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="8 Topología | Análisis de Redes Sociales Oscuras" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="TBD." />
+  <meta property="og:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="8 Topología | Análisis de Redes Sociales Oscuras" />
   
-  <meta name="twitter:description" content="TBD." />
+  <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
 
 <meta name="author" content="CORE Lab + ESGE-EPG" />
@@ -292,7 +292,7 @@ Figura 8.2: Red completa
 <p>Estas proveen al analista contexto sobre la red en discusión. Aquí cubriremos: tamaño, distancia promedio, y diámetro.</p>
 <div id="tamaño" class="section level3">
 <h3><span class="header-section-number">8.1.1</span> Tamaño</h3>
-<p>El tamaño se refiere a el numero de actores en una red <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Es importante pues afecta otras medidas topológicas de la red. Por ello, conocer tamaño de una red es importante al interpretar medidas basadas en este valor, como densidad o diámetro <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>.</p>
+<p>El tamaño se refiere a el numero de actores en una red <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Es importante pues afecta otras medidas topológicas de la red. Por ello, conocer tamaño de una red es importante al interpretar medidas basadas en este valor, como densidad o diámetro <span class="citation">(Cunningham, Everton, &amp; Murphy, <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>.</p>
 <p>Comúnmente denotamos el tamaño de un a red con la letra <span class="math inline">\(N\)</span>. Por ejemplo, en las Figuras <a href="topología-1.html#fig:g5">8.3</a> y <a href="topología-1.html#fig:g10">8.4</a> <span class="math inline">\(N\)</span> es equivalente a 5 y 10 respectivamente.</p>
 <div class="row">
 <div class="lcolumn-50">
@@ -488,7 +488,7 @@ Nodo   &amp; Grado \\
 <div id="ejercicio-práctico-4" class="section level2">
 <h2><span class="header-section-number">8.4</span> Ejercicio Práctico</h2>
 <p>En este ejericio consideramos varias métricas para examinar la topología de la red, por ejemplo: tamaño de la red, densidad, grado promedio, distancia promedio, diámetro y centralización. El tamaño es igual al número de actores en una red. La densidad es igual al número de enlaces dividido por el total de lazos posibles. Sin embargo, el número de enlaces posibles en una red está inversamente relacionado con el tamaño de la red (es decir, cuanto más grande es la red, menor es la densidad); por consiguiente, los investigadores usan otras medidas como el grado promedio para comparar redes de diferente tamaño. La distancia promedio de la ruta es la longitud promedio de todas las rutas más cortas (es decir, geodésicas) entre todos los actores en una red, y el diámetro es la geodésica más larga de una red. Finalmente, la centralización mide el grado en que una red se centra en un solo actor (o grupo de actores).</p>
-<p>Para este ejercicio utilizaremos un conjunto de datos con diez redes diferentes apiladas, que se encuentran ya cargadas en el archivo: <code>Noordin.gephi</code>.(<strong>ADD DATA LINK HERE</strong>)</p>
+<p>Para este ejercicio utilizaremos un conjunto de datos con diez redes diferentes apiladas, que se encuentran ya cargadas en el archivo: <a href="https://github.com/cjcallag/arso/blob/main/data/topology/Noordin.gephi?raw=true"><code>Noordin.gephi</code></a>. <strong>Descargue y guarde el archivo, abra el archivo siguiendo los pasos que se muestran a continuación.</strong></p>
 <div id="antes-de-empezar-3" class="section level3">
 <h3><span class="header-section-number">8.4.1</span> Antes de Empezar</h3>
 <p>Para este ejercicio, deberá instalar el módulo <em>Clustering Coefficient</em> (ó coeficiente de agrupación) en Gephi. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo <em>MultimodeNetworks Transformation</em> en ejercicio práctico en el capitulo <a href="derivando-datos-modo-uno-de-modo-dos.html#derivando-datos-modo-uno-de-modo-dos">Derivando Datos Modo-Uno de Modo-Dos</a>.</p>

@@ -296,7 +296,7 @@ Antes de concluir esta sección, es importante recalcar dos cosas. Primero, como
 
 En este ejericio consideramos varias métricas para examinar la topología de la red, por ejemplo: tamaño de la red, densidad, grado promedio, distancia promedio, diámetro y centralización. El tamaño es igual al número de actores en una red. La densidad es igual al número de enlaces dividido por el total de lazos posibles. Sin embargo, el número de enlaces posibles en una red está inversamente relacionado con el tamaño de la red (es decir, cuanto más grande es la red, menor es la densidad); por consiguiente, los investigadores usan otras medidas como el grado promedio para comparar redes de diferente tamaño. La distancia promedio de la ruta es la longitud promedio de todas las rutas más cortas (es decir, geodésicas) entre todos los actores en una red, y el diámetro es la geodésica más larga de una red. Finalmente, la centralización mide el grado en que una red se centra en un solo actor (o grupo de actores).
 
-Para este ejercicio utilizaremos un conjunto de datos con diez redes diferentes apiladas, que se encuentran ya cargadas en el archivo: `Noordin.gephi`.(**ADD DATA LINK HERE**)
+Para este ejercicio utilizaremos un conjunto de datos con diez redes diferentes apiladas, que se encuentran ya cargadas en el archivo: [`Noordin.gephi`](https://github.com/cjcallag/arso/blob/main/data/topology/Noordin.gephi?raw=true). **Descargue y guarde el archivo, abra el archivo siguiendo los pasos que se muestran a continuación.**
 
 ### Antes de Empezar
 

@@ -56,7 +56,7 @@ random.graph.game(n = 10, p.or.m = 0.075) %>%
 
 **Centralidad de cercanía** (*Closeness centrality*): La centralidad de la cercanía captura qué tan cerca (en términos de la más corta distancia de ruta) cada actor es a todos los demás actores de una red. Ejemplo, red con nodos dimensionados por centralidad de cercanía:
 
-```{r}
+```{r, fig.cap = "Nodos dimensionados por cercanía"}
 plot.igraph(g,
             vertex.border.color = "black",
             layout = coords,
@@ -68,7 +68,7 @@ plot.igraph(g,
 
 **Centralidad de eigenvector** (*Eigenvector centrality*): La centralidad de eigenvector supone que los vínculos con los actores centrales son más importantes que los vínculos con los actores periféricos y, por lo tanto, pondera las conexiones sumadas de cada actor con los demás por sus puntajes de centralidad. Ejemplo, red con nodos dimensionados por centralidad de eigenvector:
 
-```{r}
+```{r, fig.cap = "Nodos dimensionados por eigenvector"}
 plot.igraph(g,
             vertex.border.color = "black",
             layout = coords,
@@ -80,7 +80,7 @@ plot.igraph(g,
 
 **Centralidad de intermediación** (*Betweenness centrality*): La centralidad de intermediación mide la medida en que cada actor se encuentra en el camino más corto entre todos los demás actores de una red. Ejemplo, red con nodos dimensionados por centralidad de intermediación:
 
-```{r}
+```{r, fig.cap = "Nodos dimensionados por intermediación"}
 plot.igraph(g,
             vertex.border.color = "black",
             layout = coords,
@@ -92,7 +92,7 @@ plot.igraph(g,
 
 **Centralidad de grado** (*Degree centrality*): Formalmente, el grado de centralidad de un actor es igual al número de vínculos incidentes ó el número de lazos de un actor. Ejemplo, red con nodos dimensionados por centralidad de grado:
 
-```{r}
+```{r, fig.cap = "Nodos dimensionados por grado"}
 plot.igraph(g,
             vertex.border.color = "black",
             layout = coords,
@@ -106,7 +106,7 @@ plot.igraph(g,
 
 **Datos de atributos** (*Attribure data*): Características (no-relacionales) de un actor en particulaers como identidad étnica, raza, años de educación, edad, nivel de salario, etc.
 
-```{r}
+```{r, fig.cap = "Nodos coloreados por atributo"}
 random.graph.game(n = 10, p.or.m = 0.3) %>%
   plot.igraph(
     vertex.border.color = "black",
@@ -118,13 +118,13 @@ random.graph.game(n = 10, p.or.m = 0.3) %>%
   )
 ```
 
-**Datos de red modo-uno** (*One-mode network data*): Consiste en un solo conjunto de actores. Por ejemplo:
+**Datos de red modo uno** (*One-mode network data*): Consiste en un solo conjunto de actores. Por ejemplo:
   
   + Relaciones de persona a persona como amistades, familiares, etc.
   + Relaciones de organización a organización.
   + Relaciones de grupo a grupo.
 
-```{r}
+```{r, fig.cap = "Red modo uno"}
 random.graph.game(n = 10, p.or.m = 0.5) %>%
   plot.igraph(
     vertex.border.color = "black",
@@ -134,13 +134,13 @@ random.graph.game(n = 10, p.or.m = 0.5) %>%
   )
 ```
 
-**Datos de red modo-dos** (*Two-mode network data*): Una red que consta de dos conjuntos de actores. Por ejemplo:
+**Datos de red modo dos** (*Two-mode network data*): Una red que consta de dos conjuntos de actores. Por ejemplo:
 
   + Relaciones de persona a organización como afiliación.
   + Relaciones de persona a grupo.
   + Relaciones de grupo a nación.
   
-```{r}
+```{r, fig.cap = "Red modo dos"}
 bipartite.random.game(n1 = 5, n2 = 10, p = 0.5) %>%
   plot.igraph(
     vertex.color = ifelse(
@@ -174,7 +174,7 @@ bipartite.random.game(n1 = 5, n2 = 10, p = 0.5) %>%
 
 **Tipos de relación** (*Types of relationships*): Valor categorico de vínculo entre un grupo de actores, como: amistad (en rojo), familia (en azul), etc.
 
-```{r}
+```{r, fig.cap = "Relaciones apiladas"}
 random.graph.game(n = 10, p.or.m = 0.5) %>%
   plot.igraph(
     vertex.border.color = "black",
@@ -190,7 +190,7 @@ random.graph.game(n = 10, p.or.m = 0.5) %>%
 
 **Vínculos** (*Ties*): La relación entre dos nodos. Un vínculo puede ser direccionado (llamado *arco*, por ejemplo: **<--** | **-->** | **<->**) o no direccionado (llamado *borde*, por ejemplo: **---**). 
 
-```{r}
+```{r, fig.cap = "Red no dirigida (izquierda) y red dirigida (derecha)"}
 par(mfrow=c(1,2), mar=c(5,1,1,1))
 g <- make_star(5, mode = "in")
 plot(g,

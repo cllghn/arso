@@ -5,20 +5,20 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>12 Glosario de Términos | Análisis de Redes Sociales Oscuras</title>
-  <meta name="description" content="TBD." />
+  <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="12 Glosario de Términos | Análisis de Redes Sociales Oscuras" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="TBD." />
+  <meta property="og:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="12 Glosario de Términos | Análisis de Redes Sociales Oscuras" />
   
-  <meta name="twitter:description" content="TBD." />
+  <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
 
 <meta name="author" content="CORE Lab + ESGE-EPG" />
@@ -281,30 +281,65 @@ Figura 12.2: Aislados
 </div>
 <p><strong>Centralidad</strong> (<em>Centrality</em>): Las medidas de centralidad dan una indicación aproximada del poder social de un actor en función de su posición dentro de la red. Un actor central puede ser alguien que tiene numerosos vínculos con otros actores (<em>grado de centralidad</em>), que está más cerca (en términos de distancia de ruta) a otros actores de la red (<em>centralidad de cercanía</em>), que se encuentra en el camino más corto entre dos actores en la red (<em>centralidad de intermediación</em>), ó que tiene vínculos con actores altamente centrales (<em>centralidad de eigenvector</em>).</p>
 <p><strong>Centralidad de cercanía</strong> (<em>Closeness centrality</em>): La centralidad de la cercanía captura qué tan cerca (en términos de la más corta distancia de ruta) cada actor es a todos los demás actores de una red. Ejemplo, red con nodos dimensionados por centralidad de cercanía:</p>
-<p><img src="05-glossary_files/figure-html/unnamed-chunk-3-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="05-glossary_files/figure-html/unnamed-chunk-3-1.png" alt="Nodos dimensionados por cercanía" width="70%" />
+<p class="caption">
+Figura 12.3: Nodos dimensionados por cercanía
+</p>
+</div>
 <p><strong>Centralidad de eigenvector</strong> (<em>Eigenvector centrality</em>): La centralidad de eigenvector supone que los vínculos con los actores centrales son más importantes que los vínculos con los actores periféricos y, por lo tanto, pondera las conexiones sumadas de cada actor con los demás por sus puntajes de centralidad. Ejemplo, red con nodos dimensionados por centralidad de eigenvector:</p>
-<p><img src="05-glossary_files/figure-html/unnamed-chunk-4-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="05-glossary_files/figure-html/unnamed-chunk-4-1.png" alt="Nodos dimensionados por eigenvector" width="70%" />
+<p class="caption">
+Figura 12.4: Nodos dimensionados por eigenvector
+</p>
+</div>
 <p><strong>Centralidad de intermediación</strong> (<em>Betweenness centrality</em>): La centralidad de intermediación mide la medida en que cada actor se encuentra en el camino más corto entre todos los demás actores de una red. Ejemplo, red con nodos dimensionados por centralidad de intermediación:</p>
-<p><img src="05-glossary_files/figure-html/unnamed-chunk-5-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="05-glossary_files/figure-html/unnamed-chunk-5-1.png" alt="Nodos dimensionados por intermediación" width="70%" />
+<p class="caption">
+Figura 12.5: Nodos dimensionados por intermediación
+</p>
+</div>
 <p><strong>Centralidad de grado</strong> (<em>Degree centrality</em>): Formalmente, el grado de centralidad de un actor es igual al número de vínculos incidentes ó el número de lazos de un actor. Ejemplo, red con nodos dimensionados por centralidad de grado:</p>
-<p><img src="05-glossary_files/figure-html/unnamed-chunk-6-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-6"></span>
+<img src="05-glossary_files/figure-html/unnamed-chunk-6-1.png" alt="Nodos dimensionados por grado" width="70%" />
+<p class="caption">
+Figura 12.6: Nodos dimensionados por grado
+</p>
+</div>
 <p><strong>Centralización</strong> (<em>Centralization</em>): La centralización utiliza la variación en la centralidad todos los actores dentro de la red para medir el nivel de centralización. Más variación produce puntuaciones más altas de centralización de red; menos variación produce puntuaciones más bajos. En general, cuanto más grande es un índice de centralización, más probable es que un solo actor sea muy central.</p>
 <p><strong>Datos de atributos</strong> (<em>Attribure data</em>): Características (no-relacionales) de un actor en particulaers como identidad étnica, raza, años de educación, edad, nivel de salario, etc.</p>
-<p><img src="05-glossary_files/figure-html/unnamed-chunk-7-1.png" width="70%" style="display: block; margin: auto;" /></p>
-<p><strong>Datos de red modo-uno</strong> (<em>One-mode network data</em>): Consiste en un solo conjunto de actores. Por ejemplo:</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="05-glossary_files/figure-html/unnamed-chunk-7-1.png" alt="Nodos coloreados por atributo" width="70%" />
+<p class="caption">
+Figura 12.7: Nodos coloreados por atributo
+</p>
+</div>
+<p><strong>Datos de red modo uno</strong> (<em>One-mode network data</em>): Consiste en un solo conjunto de actores. Por ejemplo:</p>
 <ul>
 <li>Relaciones de persona a persona como amistades, familiares, etc.</li>
 <li>Relaciones de organización a organización.</li>
 <li>Relaciones de grupo a grupo.</li>
 </ul>
-<p><img src="05-glossary_files/figure-html/unnamed-chunk-8-1.png" width="70%" style="display: block; margin: auto;" /></p>
-<p><strong>Datos de red modo-dos</strong> (<em>Two-mode network data</em>): Una red que consta de dos conjuntos de actores. Por ejemplo:</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-8"></span>
+<img src="05-glossary_files/figure-html/unnamed-chunk-8-1.png" alt="Red modo uno" width="70%" />
+<p class="caption">
+Figura 12.8: Red modo uno
+</p>
+</div>
+<p><strong>Datos de red modo dos</strong> (<em>Two-mode network data</em>): Una red que consta de dos conjuntos de actores. Por ejemplo:</p>
 <ul>
 <li>Relaciones de persona a organización como afiliación.</li>
 <li>Relaciones de persona a grupo.</li>
 <li>Relaciones de grupo a nación.</li>
 </ul>
-<p><img src="05-glossary_files/figure-html/unnamed-chunk-9-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-9"></span>
+<img src="05-glossary_files/figure-html/unnamed-chunk-9-1.png" alt="Red modo dos" width="70%" />
+<p class="caption">
+Figura 12.9: Red modo dos
+</p>
+</div>
 <p><strong>Densidad</strong> (<em>Density</em>): Conceptualmente, la densidad se refiere al grado de interconexión de una red. Formalmente, es el número de vínculos en una red, expresado como una proporción del número máximo posible de vínculos. Está inversamente relacionado con el tamaño de la red (es decir, cuanto más grande es la red, menor es la densidad) porque el número de líneas posibles aumenta exponencialmente a medida que se agregan actores a la red, mientras que el número de lazos que cada actor puede mantener tiende a ser limitado.</p>
 <p><strong>Diámetro</strong> (<em>Diameter</em>): El diámetro de una red se refiere a el camino geodésico más largo de una red.</p>
 <p><strong>Distancia de ruta (longitud)</strong> (<em>Path distance (length)</em>): La distancia entre pares de actores en una red. El camino más corto entre un par de actores se conoce como la distancia geodésica.</p>
@@ -313,10 +348,20 @@ Figura 12.2: Aislados
 <p><strong>Grado promedio</strong> (<em>Average degree</em>): El grado promedio es igual al número promedio de vínculos entre todos los actores en una red. A veces se usa una medida alternativa a la densidad de la red porque, a diferencia de la densidad, no es sensible al tamaño de la red.</p>
 <p><strong>Tamaño de red</strong> (<em>Network size</em>): El tamaño de una red es igual al número de actores en la red.</p>
 <p><strong>Tipos de relación</strong> (<em>Types of relationships</em>): Valor categorico de vínculo entre un grupo de actores, como: amistad (en rojo), familia (en azul), etc.</p>
-<p><img src="05-glossary_files/figure-html/unnamed-chunk-10-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-10"></span>
+<img src="05-glossary_files/figure-html/unnamed-chunk-10-1.png" alt="Relaciones apiladas" width="70%" />
+<p class="caption">
+Figura 12.10: Relaciones apiladas
+</p>
+</div>
 <p><strong>Topología</strong> (<em>Topography</em>): La topología de la red se refiere a la estructura general de la red. Las medidas de uso común incluyen densidad, fragmentación, tamaño de red y centralización.</p>
 <p><strong>Vínculos</strong> (<em>Ties</em>): La relación entre dos nodos. Un vínculo puede ser direccionado (llamado <em>arco</em>, por ejemplo: <strong>&lt;–</strong> | <strong>–&gt;</strong> | <strong>&lt;-&gt;</strong>) o no direccionado (llamado <em>borde</em>, por ejemplo: <strong>—</strong>).</p>
-<p><img src="05-glossary_files/figure-html/unnamed-chunk-11-1.png" width="70%" style="display: block; margin: auto;" /></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-11"></span>
+<img src="05-glossary_files/figure-html/unnamed-chunk-11-1.png" alt="Red no dirigida (izquierda) y red dirigida (derecha)" width="70%" />
+<p class="caption">
+Figura 12.11: Red no dirigida (izquierda) y red dirigida (derecha)
+</p>
+</div>
 
 </div>
             </section>
@@ -373,20 +418,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>
