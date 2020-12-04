@@ -310,7 +310,7 @@ Figura 6.1: Multiples Relaciones
 </div>
 <div id="combinar" class="section level2">
 <h2><span class="header-section-number">6.2</span> Combinar</h2>
-<p>El combinar datos relacionales en ARSo puede significar diferentes acciones para trabajar con datos. <span class="citation">Cunningham, Everton, &amp; Murphy (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> proponen tres técnicas: apilar, agregar y recombinar. En esta sección discutiremos las tres.</p>
+<p>El combinar datos relacionales en ARSo puede significar diferentes acciones para trabajar con datos. <span class="citation">Cunningham et al. (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> proponen tres técnicas: apilar, agregar y recombinar. En esta sección discutiremos las tres.</p>
 <div id="apilar" class="section level3">
 <h3><span class="header-section-number">6.2.1</span> Apilar</h3>
 <p>El apilar es una técnica comúnmente utilizada por analistas para mantener y utilizar múltiples relaciones de manera independiente <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. El como mantener e incorporar estos archivos varia con base a la herramienta de software. Por ejemplo, las matrices subsecuentes (<a href="multiples-relaciones.html#eq:mat3">(6.3)</a> y <a href="multiples-relaciones.html#eq:mat4">(6.4)</a>) contienen relaciones de manera independiente, al apilarlas podemos crear un gráfico (ver Figura (fig:apiladas)) que incorpora ambas sin tener que unir estas matrices; por consiguiente, todos los datos se mantienen íntegros.</p>
@@ -569,20 +569,20 @@ Figura 6.4: Relaciones Recombinar
 </div>
 <div class="rcolumn-80">
 <ol start="2" style="list-style-type: decimal">
-<li>Use el comando <em>Archivo &gt; Abrir</em> para importar el archivo <code>Liking 1.csv</code>, que puede descargar <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/multiple_networks/liking_1.csv">aquí</a> . En el primer cuadro de diálogo (Figura <a href="multiples-relaciones.html#fig:aristas">6.5</a>), asegúrese de que Gephi sepa que es una tabla de aristas y que los datos están separados por comas. Haga clic en <em>Siguiente</em> y en el siguiente cuadro de diálogo (no se muestra) acepte los valores predeterminados de Gephi y haga clic en <em>Terminar</em>. En el <em>Informe de importación</em> (Figura <a href="multiples-relaciones.html#fig:importacion">6.6</a>), indique que es una red dirigida, no desea mezclar los bordes, pero sí desea agregar los datos al espacio de trabajo existente. Luego haga clic en <em>Aceptar</em>.</li>
+<li>Use el comando <em>Archivo &gt; Abrir</em> para importar el archivo <code>Liking 1.csv</code>, que puede descargar <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/multiple_networks/liking_1.csv">aquí</a> . En el primer cuadro de diálogo (Figura <a href="derivando-datos-modo-uno-de-modo-dos.html#fig:aristas">5.8</a>), asegúrese de que Gephi sepa que es una tabla de aristas y que los datos están separados por comas. Haga clic en <em>Siguiente</em> y en el siguiente cuadro de diálogo (no se muestra) acepte los valores predeterminados de Gephi y haga clic en <em>Terminar</em>. En el <em>Informe de importación</em> (Figura <a href="multiples-relaciones.html#fig:importacion">6.5</a>), indique que es una red dirigida, no desea mezclar los bordes, pero sí desea agregar los datos al espacio de trabajo existente. Luego haga clic en <em>Aceptar</em>.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:aristas"></span>
 <img src="images/02-06-01_aristas.png" alt="Importar lista de aristas" width="70%" />
 <p class="caption">
-Figura 6.5: Importar lista de aristas
+Figura 5.8: Importar lista de aristas
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:importacion"></span>
 <img src="images/02-06-02_reporte.png" alt="Reporte de Importación" width="70%" />
 <p class="caption">
-Figura 6.6: Reporte de Importación
+Figura 6.5: Reporte de Importación
 </p>
 </div>
 <div class="row">
@@ -605,14 +605,14 @@ Figura 6.6: Reporte de Importación
 </div>
 <div class="rcolumn-80">
 <ol start="4" style="list-style-type: decimal">
-<li>En la ventana <em>Vista general</em>, ubique la pestaña <em>Apariencia</em> y luego haga clic en la pestaña <em>Aristas</em>, luego en el icono de la paleta de colores, luego en <em>Partición</em> y luego con el menú desplegable <em>–Escoge un atributo</em>, seleccione <em>relation</em> (en español: relación) y haga clic en <em>Aplicar</em>. Recuerde que el número predeterminado de colores de partición de Gephi es ocho, pero aquí tenemos 10 tipos de vínculos (relaciones). Por lo tanto, haga clic en el enlace <em>Paleta …</em>, y en el cuadro de diálogo, seleccione <em>Generar</em>, y al igual que nosotros hizo anteriormente, cambiar el número de colores a 10 y genere un nuevo conjunto de colores. Una vez más, haga clic en <em>Aplicar</em>. El gráfico de red probablemente se ve un poco colorido (Figura <a href="multiples-relaciones.html#fig:apilada">6.7</a>). Esto se debe a que cada conjunto de bordes está coloreado por una sola clasificación.</li>
+<li>En la ventana <em>Vista general</em>, ubique la pestaña <em>Apariencia</em> y luego haga clic en la pestaña <em>Aristas</em>, luego en el icono de la paleta de colores, luego en <em>Partición</em> y luego con el menú desplegable <em>–Escoge un atributo</em>, seleccione <em>relation</em> (en español: relación) y haga clic en <em>Aplicar</em>. Recuerde que el número predeterminado de colores de partición de Gephi es ocho, pero aquí tenemos 10 tipos de vínculos (relaciones). Por lo tanto, haga clic en el enlace <em>Paleta …</em>, y en el cuadro de diálogo, seleccione <em>Generar</em>, y al igual que nosotros hizo anteriormente, cambiar el número de colores a 10 y genere un nuevo conjunto de colores. Una vez más, haga clic en <em>Aplicar</em>. El gráfico de red probablemente se ve un poco colorido (Figura <a href="multiples-relaciones.html#fig:apilada">6.6</a>). Esto se debe a que cada conjunto de bordes está coloreado por una sola clasificación.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:apilada"></span>
 <img src="images/02-06-03_apilada.png" alt="Red apilada de datos Monasterio de Sampson" width="70%" />
 <p class="caption">
-Figura 6.7: Red apilada de datos Monasterio de Sampson
+Figura 6.6: Red apilada de datos Monasterio de Sampson
 </p>
 </div>
 <div class="row">
@@ -643,7 +643,7 @@ Figura 6.7: Red apilada de datos Monasterio de Sampson
 <div class="figure" style="text-align: center"><span id="fig:positivos"></span>
 <img src="images/02-06-04_positivos.png" alt="Enlaces positivos de la red Monasterio de Sampson" width="70%" />
 <p class="caption">
-Figura 6.8: Enlaces positivos de la red Monasterio de Sampson
+Figura 6.7: Enlaces positivos de la red Monasterio de Sampson
 </p>
 </div>
 <div class="row">
@@ -654,7 +654,7 @@ Figura 6.8: Enlaces positivos de la red Monasterio de Sampson
 </div>
 <div class="rcolumn-80">
 <ol start="2" style="list-style-type: decimal">
-<li>En el nuevo espacio de trabajo, que puede renombrar <code>Vínculos positivos</code>, aplique el algoritmo de diseño Yifan Hu. Los nodos probablemente estarán demasiado apegados y será difícil distinguir cualquier patrón. Para rectificar esto, en el cuadro debajo del menú desplegable del algoritmo de diseño, cambie la <em>Distancia óptima</em> de 100 a 600 y haga clic en <em>Ejecutar</em>. Usando algunas de las otras técnicas discutidas en ejercicios practicos anteriores, termine de modificar la red de lazos positivos en la red del Monasterio Sampson. La Figura <a href="multiples-relaciones.html#fig:positivos">6.8</a> es un ejemplo. Como antes, el color de los lazos refleja varios tipos de relaciones. Si no le gusta el color que heredaron cuando exportó el gráfico a este espacio de trabajo, puede volver a la pestaña <em>Apariencia</em>, hacer clic en <em>Aristas</em>, luego en el icono de la paleta de colores, luego en la opción <em>Particiones</em>, y luego con el menú desplegable <em>Elegir un atributo</em>, seleccione <em>relation</em> y haga clic en <em>Aplicar</em>. Exporte su grafico de relaciones positivas con etiquetas. <strong>¿Qué patrones observa?</strong></li>
+<li>En el nuevo espacio de trabajo, que puede renombrar <code>Vínculos positivos</code>, aplique el algoritmo de diseño Yifan Hu. Los nodos probablemente estarán demasiado apegados y será difícil distinguir cualquier patrón. Para rectificar esto, en el cuadro debajo del menú desplegable del algoritmo de diseño, cambie la <em>Distancia óptima</em> de 100 a 600 y haga clic en <em>Ejecutar</em>. Usando algunas de las otras técnicas discutidas en ejercicios practicos anteriores, termine de modificar la red de lazos positivos en la red del Monasterio Sampson. La Figura <a href="multiples-relaciones.html#fig:positivos">6.7</a> es un ejemplo. Como antes, el color de los lazos refleja varios tipos de relaciones. Si no le gusta el color que heredaron cuando exportó el gráfico a este espacio de trabajo, puede volver a la pestaña <em>Apariencia</em>, hacer clic en <em>Aristas</em>, luego en el icono de la paleta de colores, luego en la opción <em>Particiones</em>, y luego con el menú desplegable <em>Elegir un atributo</em>, seleccione <em>relation</em> y haga clic en <em>Aplicar</em>. Exporte su grafico de relaciones positivas con etiquetas. <strong>¿Qué patrones observa?</strong></li>
 </ol>
 </div>
 </div>
