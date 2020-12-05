@@ -294,4 +294,6 @@ libro-de-códigos-de-muestra
 relaciones
 atributos-1
 libro-de-códigos-de-noordin-top
+relaciones-1
+atributos-2
 referencias
