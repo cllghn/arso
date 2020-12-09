@@ -271,11 +271,11 @@
 <p>Tradicionalmente los analistas de redes sociales trabajan con tres tipos de datos: modo-uno, modo-dos, y atributos <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. En esta sección exploraremos estos tipos de datos en más detalle. El objetivo es definir y compararlos antes de empezar a recopilar y manipular estos datos.</p>
 <div id="datos-de-modo-uno" class="section level2">
 <h2><span class="header-section-number">3.1</span> Datos de Modo-Uno</h2>
-<p>Estos son aquellos que consisten en un solo conjunto de actores o nodos. Por ejemplo, en una red de amistad las personas están unidas a través de lazos de amistad, una red de negocios une diferentes empresas por medio de transacciones financieras, o una red diplomática une naciones con base a lazos diplomáticos. Los tres ejemplos propuestos representan relaciones de modo-uno puesto que los actores que forman parte de estas relaciones constan de un conjunto único de actores.</p>
+<p>Estos son aquellos que consisten en un solo conjunto de actores o nodos. Por ejemplo, en una red de amistad las personas están unidas a través de lazos amistosos, una red de negocios une diferentes empresas por medio de transacciones financieras, o una red diplomática une naciones con base a lazos diplomáticos. Los tres ejemplos propuestos representan relaciones de modo-uno puesto que los actores que forman parte de estas relaciones constan de un conjunto único de actores.</p>
 <p>Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguientes secciones diferenciaremos entre tipos de relaciones modo-uno con base a la simetría o asimetría de la relación.</p>
 <div id="modo-uno-simétricos" class="section level3">
 <h3><span class="header-section-number">3.1.1</span> Modo-uno: Simétricos</h3>
-<p>Las <strong>relaciones simétricas de modo-uno</strong> son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:undirected">3.1</a> representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, seria imposible que la persona B no sea familiar de la persona A.</p>
+<p>Las <strong>relaciones simétricas de modo-uno</strong> son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:undirected">3.1</a> representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, sería imposible que la persona B no sea familiar de la persona A.</p>
 <div class="figure" style="text-align: center"><span id="fig:undirected"></span>
 <img src="02-types-of-data_files/figure-html/undirected-1.png" alt="Gráfico no dirigido" width="70%" />
 <p class="caption">
@@ -300,7 +300,7 @@ Figura 3.1: Gráfico no dirigido
 <tr class="odd">
 <td>Amistad</td>
 <td>Persona</td>
-<td>Definido como vínculos estrechos a través del afecto de la estima entre dos personas. Los lazos de amistad no son únicamente basados en reuniones y/o vínculos escolares.</td>
+<td>Definido como vínculos de afecto y estima entre dos personas. Los lazos de amistad no son únicamente basados en reuniones y/o vínculos escolares.</td>
 </tr>
 <tr class="even">
 <td>Compañeros de clase</td>
@@ -317,7 +317,7 @@ Figura 3.1: Gráfico no dirigido
 <div class="infobox note">
 <p>Los vínculos modo-uno simétricos se utilizan a menudo cuando es difícil o imposible determinar qué actor inició o envió el enlace y quién lo recibió <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. En los tres ejemplos previos podemos asumir mutualidad entre actores.</p>
 </div>
-<p>Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La matiz <a href="tipos-de-datos-de-redes-sociales.html#eq:symmatrix">(3.1)</a> es una reprecentación de los vínculos familiares de la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:undirected">3.1</a>. El primer paso en generar una matriz de adyacencia es listar todos los nodos relevantes, {A, B, C, D, E, F}, como filas y columnas en la matriz. Representamos la presencia o ausencia de un vínculo con un valor, aquí se usan 0’s y 1’s para indicar que un nodo tiene una relación con otro. De lo contrario, se coloca un 0. Además, eliminamos la diagonal, ya que no es relevante que un nodo tenga un vínculo simétrico consigo mismo.</p>
+<p>Ya que hemos definido este tipo de datos, es tiempo de ver como codificarlos. Los datos de modo-uno se pueden representar en un tipo de sociomatriz llamada matriz de adyacencia. La matiz <a href="tipos-de-datos-de-redes-sociales.html#eq:symmatrix">(3.1)</a> es una reprecentación de los vínculos familiares de la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:undirected">3.1</a>. El primer paso en generar una matriz de adyacencia es listar todos los nodos relevantes, {A, B, C, D, E, F}, como filas y columnas en la matriz. Representamos la presencia o ausencia de un vínculo con un valor, Se usan 1s para indicar que un nodo tiene una relación con otro. De lo contrario, se coloca un 0. Además, eliminamos la diagonal, ya que no es relevante que un nodo tenga un vínculo simétrico consigo mismo.</p>
 <p><span class="math display" id="eq:symmatrix">\[
 \begin{matrix}
   &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
@@ -330,18 +330,18 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
 \tag{3.1}
 \end{matrix}
 \]</span></p>
-<p>Se estará preguntando, ¿cómo leemos la matriz? Centrémonos en un nodo a la vez. Por ejemplo, el nodo A, la primera letra de la columna más a la izquierda, está conectado con los nodos B y C, pero no con los demas {D, E, F}. Recuerde que la relación en cuestión es simétrica. Como tal, los dos lados de la matriz se reflejarán entre sí. En términos prácticos, significa que B y C también están vinculados a A.</p>
+<p>Se estará preguntando, ¿cómo leemos la matriz? Centrémonos en un nodo a la vez. Por ejemplo, el nodo A, la primera letra de la columna más a la izquierda, está conectado con los nodos B y C, pero no con los demás {D, E, F}. Recuerde que la relación en cuestión es simétrica. Como tal, los dos lados de la matriz se reflejarán entre sí. Esto quiere decir que B y C también están vinculados a A.</p>
 </div>
 <div id="modo-uno-asimétricos" class="section level3">
 <h3><span class="header-section-number">3.1.2</span> Modo-uno: Asimétricos</h3>
-<p>También son relaciones entre un solo conjunto de actores; sin embargo, las <strong>redes asimétricas de modo-uno</strong> generalmente se refieren a bordes que van de un nodo a otro, pero que no siempre son recíprocos <span class="citation">(Borgatti, Everett, &amp; Johnson, <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>; Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Por ejemplo, considere la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a>. Inicialmente notará que los vínculos tienen dirección, representada por una flecha. Observe que algunos de los vínculos no son recíprocos (por ejemplo, A envía un enlace no reciproco a C), mientras que otros son correspondidos (por ejemplo, A envía un enlace a B y este lo retorna).</p>
+<p>Estos también son relaciones entre un solo conjunto de actores; sin embargo, las <strong>redes asimétricas de modo-uno</strong> generalmente se refieren a bordes que van de un nodo a otro, pero que no siempre son recíprocos <span class="citation">(Borgatti, Everett, &amp; Johnson, <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>; Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Por ejemplo, considere la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a>. Inicialmente notará que los vínculos tienen dirección, representada por una flecha. Observe que algunos de los vínculos no son recíprocos (por ejemplo, A envía un enlace no recíproco a C), mientras que otros son correspondidos (por ejemplo, A envía un enlace a B y este lo retorna).</p>
 <div class="figure" style="text-align: center"><span id="fig:directed"></span>
 <img src="02-types-of-data_files/figure-html/directed-1.png" alt="Gráfico dirigido" width="70%" />
 <p class="caption">
 Figura 3.2: Gráfico dirigido
 </p>
 </div>
-<p><span class="citation">Cunningham et al. (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> sugieren que en situaciones donde es posible distinguir la dirección de el enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz <a href="tipos-de-datos-de-redes-sociales.html#eq:asymmatrix">(3.2)</a> representa los datos de la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a>. Como con toda sociomatriz, comenzamos por listar todos los nodos posibles como filas y columnas {A, B, C, D, E, F}. Igualmente, matriz la leemos de izquierda a derecha. Por ejemplo, comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. En este caso, el actor a recibe un enlace de B pero no de C. Ahora, fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Mas aun, algunos nodos no envían ningún en enlace (por ejemplo, actor D), solo recibe.</p>
+<p><span class="citation">Cunningham et al. (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> sugieren que en situaciones donde es posible distinguir la dirección del enlace, es preferible construir matrices asimétricas de modo uno. Por ejemplo, la matriz <a href="tipos-de-datos-de-redes-sociales.html#eq:asymmatrix">(3.2)</a> representa los datos de la Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:directed">3.2</a>. Como con toda sociomatriz, comenzamos por listar todos los nodos posibles como filas y columnas {A, B, C, D, E, F}. Igualmente, la leemos de izquierda a derecha, comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. En este caso, el actor A recibe un enlace de B pero no de C. Ahora, fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Más aún, algunos nodos no envían ningún en enlace solo reciben (como el actor D).</p>
 <p><span class="math display" id="eq:asymmatrix">\[
 \begin{matrix}
   &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
@@ -354,7 +354,7 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; - \\
 \tag{3.2}
 \end{matrix}
 \]</span></p>
-<p>Para ver ejemplos de datos de red asimétricos de un modo, podemos volver a <span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span> y algunos de los ejemplos proporcionados en <em>Disrupting Dark Network</em> utilizados para mapear la red terrorista Jemaah Islamiyah:</p>
+<p>Para ver ejemplos de datos de red asimétricos de modo-uno, podemos volver a <span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>:</p>
 <table>
 <colgroup>
 <col width="25%" />
@@ -380,7 +380,7 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; - \\
 </div>
 <div id="datos-de-modo-dos" class="section level2">
 <h2><span class="header-section-number">3.2</span> Datos de Modo-Dos</h2>
-<p>Las relaciones <strong>modo-dos</strong> son aquellas, que a diferencia de las modo-uno, consisten en vínculos en entre dos clases de actores. Para entender datos de modo-dos, utilicemos la premisa de uno de los conjuntos de datos modo-dos más populares, Davis’s Southern Women <span class="citation">(Davies, Gardner, &amp; Gardner, <a href="#ref-Davis1941" role="doc-biblioref">1941</a>)</span>. En este ejemplo tenemos dos conjuntos de actores. El primero representa personas {A, B, C, D, E, F}, el segundo representa eventos (E) sociales {E1, E2, E3}. En este ejemplo, no tenemos vínculos entre personas sino vínculos de asistencia entre una persona y un evento. Podemos codificar estos datos utilizando una sociomatriz, listando todos los nodos {A, B, C, D, E, F, E1, E2, E3, E4} en las filas y columnas, ver figura <a href="tipos-de-datos-de-redes-sociales.html#eq:bip">(3.3)</a>. La asistencia se representa de manera binaria con un 1, mientras que la ausencia con un 0.</p>
+<p>Las relaciones <strong>modo-dos</strong> son aquellas, que a diferencia de las modo-uno, consisten de vínculos entre dos clases de actores. Para entender datos de modo-dos, utilicemos la premisa de uno de los conjuntos de datos modo-dos más populares, Davis’s Southern Women <span class="citation">(Davies, Gardner, &amp; Gardner, <a href="#ref-Davis1941" role="doc-biblioref">1941</a>)</span>. En este ejemplo tenemos dos conjuntos de actores. El primero representa personas {A, B, C, D, E, F}, el segundo representa eventos (E) sociales {E1, E2, E3}. En esta red modo-dos, no tenemos vínculos entre personas, sino vínculos de asistencia entre una persona y un evento. Podemos codificar estos datos utilizando una sociomatriz, listando todos los nodos {A, B, C, D, E, F, E1, E2, E3, E4} en las filas y columnas, ver figura <a href="tipos-de-datos-de-redes-sociales.html#eq:bip">(3.3)</a>. La asistencia se representa de manera binaria con un 1, mientras que la ausencia con un 0.</p>
 <p><span class="math display" id="eq:bip">\[
 \begin{matrix}
    &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F &amp; E1 &amp; E2 &amp; E3 &amp; E4 \\
@@ -397,15 +397,15 @@ E4 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0  &amp; 0  &amp; 0  &a
 \end{matrix}
 \tag{3.3}
 \]</span></p>
-<p>¿Qué patrones puede ver en la matriz previa <a href="tipos-de-datos-de-redes-sociales.html#eq:bip">(3.3)</a>? Primero, note la simetría de la matriz, es decir que los datos son simétricos. Al sumar las filas o columnas, notamos que el evento mas asistido es el primer evento (E1) con tres personas. Adicionalmente, la persona con mayor asistencia a eventos es el actor D (3 eventos). La Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:bip">3.3</a> es un sociograma de estos datos, en este las personas y eventos han sido dibujados con dos diferentes tipos de iconos para diferenciar entre las clases de nodos, sin embargo, esta diferenciación es puramente cosmetica.</p>
+<p>¿Qué patrones puede ver en la matriz previa <a href="tipos-de-datos-de-redes-sociales.html#eq:bip">(3.3)</a>? Primero, note la simetría de la matriz, es decir que los datos son simétricos. Al sumar las filas o columnas, notamos que el evento mas asistido es el primer evento (E1) con tres personas. Adicionalmente, la persona con mayor asistencia a eventos es el actor D (3 eventos). La Figura <a href="tipos-de-datos-de-redes-sociales.html#fig:bip">3.3</a> es un sociograma de estos datos, en este las personas y eventos han sido dibujados con dos diferentes tipos de íconos para diferenciar entre las clases de nodos, sin embargo, esta diferenciación es puramente cosmética.</p>
 <div class="figure" style="text-align: center"><span id="fig:bip"></span>
 <img src="02-types-of-data_files/figure-html/bip-1.png" alt="Gráfico Bipartita" width="70%" />
 <p class="caption">
 Figura 3.3: Gráfico Bipartita
 </p>
 </div>
-<p>Probablemente el patrón mas importante que podemos observar en la matriz y el sociograma de modo-dos es que los nodos solo están conectados <em>entre</em> clases. En este ejemplo, las personas solo pueden estar vinculadas con eventos y viceversa. Esta es la regla mas importante de las redes modo-dos, solo se permiten conexiones entre nodos de diferentes conjuntos o particiones. Es por ello, que a menudo verán el termino <strong>bipartita</strong> que refiere a redes modo-dos.</p>
-<p>Una suposición clave que subyace al uso de redes de modo-dos es que las personas tienden a unirse o participar en una organización común y/o eventos a menudo tienen una razón compartida para hacerlo, por ejemplo, ideología, interés, etc <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Como tal, es más probable que dos miembros de un grupo interactúen entre sí y compartan una conexión que dos personas al azar en una población. Mas adelante generaremos datos modo-uno empezando con modo-dos. Por el momento, es importante entender por qué utilizamos este tipo de información en nuestro análisis.</p>
+<p>Probablemente el patrón más importante que podemos observar en la matriz y el sociograma de modo-dos es que los nodos solo están conectados <em>entre</em> clases. En este ejemplo, las personas solo pueden estar vinculadas con eventos y viceversa. Esta es la regla más importante de las redes modo-dos, solo se permiten conexiones entre nodos de diferentes conjuntos o particiones. Es por ello, que a menudo verán el termino <strong>bipartita</strong> que refiere a redes modo-dos.</p>
+<p>Una suposición clave que subyace al uso de redes de modo-dos es que las personas que tienden a unirse o participar en una organización común y/o eventos, a menudo tienen una razón compartida para hacerlo, como ideología, interés, etc. <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Como tal, es más probable que dos miembros de un grupo interactúen entre sí y compartan una conexión que dos personas al azar en una población. Más adelante generaremos datos modo-uno empezando con modo-dos. Por el momento, es importante entender por qué utilizamos este tipo de información en nuestro análisis.</p>
 <p>Una vez más, veamos algunos ejemplos de redes modo-dos utilizadas para mapear Jemaah Islamiyah en <span class="citation">Everton (<a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>:</p>
 <table>
 <colgroup>
@@ -429,7 +429,7 @@ Figura 3.3: Gráfico Bipartita
 <tr class="even">
 <td>Afiliación Organizacional</td>
 <td>Persona y Evento</td>
-<td>Una organización terrorista / insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas / insurgentes, que consiste en miembros reclamantes voluntariamente afiliados.</td>
+<td>Una organización terrorista/insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas/insurgentes, que consiste en miembros voluntariamente afiliados.</td>
 </tr>
 <tr class="odd">
 <td>Eventos de Formación</td>
@@ -441,7 +441,7 @@ Figura 3.3: Gráfico Bipartita
 </div>
 <div id="datos-de-atributos" class="section level2">
 <h2><span class="header-section-number">3.3</span> Datos de Atributos</h2>
-<p>Aunque no son el enfoque principal de ARSo, los datos de atributo se utilizan a menudo para acompañar el análisis de la red. Como se discutió anteriormente, a nivel de nodo, los atributos son características no relacionales de los nodos en un gráfico <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. Estos se recopilan por separado de las relaciones. Por ejemplo, considere las dos matrices siguientes <a href="tipos-de-datos-de-redes-sociales.html#eq:small-matrix">(3.4)</a> <a href="tipos-de-datos-de-redes-sociales.html#eq:attribute-matrix">(3.5)</a>.</p>
+<p>Aunque no son el enfoque principal de ARSo, los datos de atributo se utilizan a menudo para acompañar el análisis de la red. Como se discutió anteriormente, a nivel de nodo, los atributos son características no relacionales de los nodos en un gráfico <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. Estos se recopilan por separado de las relaciones. Por ejemplo, considere las dos matrices <a href="tipos-de-datos-de-redes-sociales.html#eq:small-matrix">(3.4)</a> y <a href="tipos-de-datos-de-redes-sociales.html#eq:attribute-matrix">(3.5)</a>.</p>
 <div class="row">
 <div class="lcolumn-50">
 <span class="math display" id="eq:small-matrix">\[\begin{matrix}

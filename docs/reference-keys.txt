@@ -197,7 +197,7 @@ grafo
 laboratorio-de-datos
 tabla-de-datos-nodos
 tabla-de-datos-aristas
-menu-inferior
+menú-inferior
 previsualización
 errores-comunes
 tipos-de-datos-de-redes-sociales

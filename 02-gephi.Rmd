@@ -151,7 +151,7 @@ ARSo depende en gran medida de la exploración de datos a través de buena visua
 *Elije una distribuición > Force Atlas > Ejecutar*
 ::::
 ::::{.rcolumn-80}
-*Force Atlas* y *Force Atlas 2* son algoritmos de diseño dirigidos por fuerza, producidos por los desarrolladores de Gephi, que permiten visualizar efectivamente gráficos de tamaño pequeño a mediano [@Jacomy2011]. Estos son algoritmos continuos, es decir que le permiten al analista editar al gráfico mientras el algoritmo dibuja; asimismo, significa que además de *Ejecutar* el algoritmo hay que seleccionar *Parar* cuando uno este satisfecho con el diseño. Veamos como funciona este algoritmo, para ello en la sección de *Distribución* seleccione *Elije una distribuición > Force Atlas > Ejecutar*. Después de un par de minutos, recuerde en dar clic sobre el botón *Parar*. Como puede ver, el algoritmo a contraído los nodos. Esta es una característica de los algoritmos dirigidos por fuerza donde los nodos vinculados se atraen entre sí y los nodos no vinculados se repelen.
+*Force Atlas* y *Force Atlas 2* son algoritmos de diseño dirigidos por fuerza, producidos por los desarrolladores de Gephi, que permiten visualizar efectivamente gráficos de tamaño pequeño a mediano [@Jacomy2011]. Estos son algoritmos continuos, es decir que le permiten al analista editar al gráfico mientras el algoritmo dibuja. Además de *Ejecutar* el algoritmo hay que seleccionar *Parar* cuando uno este satisfecho con el diseño. Veamos como funciona este algoritmo, para ello en la sección de *Distribución* seleccione *Elije una distribuición > Force Atlas > Ejecutar*. Después de un par de minutos, recuerde en dar clic sobre el botón *Parar*. Como puede ver, el algoritmo a contraído los nodos. Esta es una característica de los algoritmos dirigidos por fuerza donde los nodos vinculados se atraen entre sí y los nodos no vinculados se repelen.
 ::::
 ::::
 
@@ -181,16 +181,16 @@ Por ahora, solo cubriremos estas tres opciones de diseño. Más adelante utiliza
 
 #### Estadísticas
 
-Además de utilizar visualizaciones, los analistas de ARSo dependen a menudo de medidas estadísticas utilizadas para comprender las características estructurales de la red a fondo. Gephi proporciona una cantidad limitada, pero suficiente de medidas estadísticas al descargar el software. La pestaña de *Estadísticas* es la ubicación principal en Gephi para encontrar dichas medidas. Localícela a mano derecha del *Grafo*, es posible que tenga que seleccionar la pestaña puesto que comparte el mismo espacio con *Filtros*.
+Además de utilizar visualizaciones, los analistas de ARSo dependen a menudo de medidas estadísticas utilizadas para comprender las características estructurales de la red a fondo. Gephi proporciona una cantidad limitada, pero suficiente de medidas estadísticas al descargar el software. La pestaña de *Estadísticas* sirve como ubicación principal para encontrar las medidas. Localícela a mano derecha del *Grafo*, es posible que tenga que seleccionar la pestaña ya que comparte el mismo espacio con *Filtros*.
 
 ::::{.row}
 ::::{.lcolumn-20}
 *Visión general de la red > Grado medio > Ejecutar*
 ::::
 ::::{.rcolumn-80}
-Para ejecutar una medida, seleccione el botón *Ejecutar* a un lado de dicha opción. En capítulos futuros explicaremos la gran mayoría de las medidas presentes, por ahora, visitemos la medida de grado. Esta se refiere al número de aristas adjuntas al nodo. Para calcular esta medida, seleccione *Visión general de la red > Grado medio > Ejecutar*.
+Para ejecutar una medida, seleccione el botón *Ejecutar* a un lado de dicha opción. En capítulos posteriores explicaremos la gran mayoría de las medidas presentes, por ahora, visitemos la medida de grado. Esta se refiere al número de aristas adjuntas al nodo. Para calcular esta medida, seleccione *Visión general de la red > Grado medio > Ejecutar*.
 
-Esta selección debe generar un informe HTML que muestre la distribución de grados del gráfico, consulte la Figura \@ref(fig:degree). Además de este reporte, esta acción agregara valores de centralidad de grado a cada nodo en la tabla de aristas situada en el *Laboratorio de Datos*. Proceda a cerrar este cuadro de diálogo, si desea volver a abrirlo repita los pasos presentados previamente. 
+Esta selección debe generar un informe HTML que muestre la distribución de grados del gráfico, consulte la Figura \@ref(fig:degree). Además de este reporte, esta acción agregará valores de centralidad de grado a cada nodo en la tabla de aristas situada en el *Laboratorio de Datos*. Proceda a cerrar este cuadro de diálogo, si desea volver a abrirlo repita los pasos previos. 
 ::::
 ::::
 
@@ -200,17 +200,16 @@ knitr::include_graphics("images/01-degree.PNG")
 
 #### Filtros
 
-A menudo tendremos que modificar nuestros datos en Gephi, dentro de la Vista General encontrara la pestaña de *Filtros*. Esta contiene una variedad de parámetros para filtrar los datos presentados con base a características (variables continuas o categóricas) de los nodos o las aristas. Puede aplicar uno o varios filtros a un gráfico para descubrir características ocultas o refinar la cantidad de información que se muestra en un gráfico.
-
+A menudo tendremos que modificar nuestros datos en Gephi, dentro de la *Vista General* encontrara la pestaña de *Filtros* a un costado del *Grafo*. Esta contiene una variedad de parámetros para filtrar los datos presentados con base a características (variables continuas o categóricas) de los nodos o las aristas. Puede aplicar uno o varios filtros a un gráfico para descubrir características ocultas o refinar la cantidad de información que se muestra en un grafo.
 
 ::::{.row}
 ::::{.lcolumn-20}
 *Arrastrar a Consultas > Rango (Grado) Configuración = 2-36 > Filtrar*
 ::::
 ::::{.rcolumn-80}
-Para filtrar grafo en base a el numero de enlaces, por ejemplo, remover los nodos pendientes, en *Biblioteca* de filtros localice *Atributos > Rango > Grado*, arrastre el filtro de rango a la parte inferior de este cuadro, específicamente la sección de *Consultas*. Al agregar el filtro en *Consultas* notará que en la parte inferior del cuadro aparecerá un rango de `1` a `36`. Modifique el rango para que el mínimo numero de enlaces sea 2 y su rango lea de `2` a `36`. Otra manera de decir esto es filtraremos los nodos de manera que solo aquellos con 2 o más enlaces permanezcan en la red. Por último, de clic en el botón *Filtrar*. Note los cambios en las ventanillas de *Grafo* y *Contexto*, deberá ver un menor numero de nodos y aristas.
+Para filtrar el grafo con base al número de enlaces, por ejemplo, remover los nodos pendientes, vaya a *Biblioteca* de filtros localice *Atributos > Rango > Grado*, arrastre el filtro de rango al cuadro de la sección de *Consultas*. Al agregar el filtro en *Consultas* notará que en la parte inferior del cuadro aparecerá un rango de `1` a `36`. Modifique el rango para que el número mínimo de enlaces sea `2` y su rango lea de `2` a `36`. Es decir, filtraremos los nodos de manera que solo aquellos con 2 o más enlaces permanezcan en la red. Por último, de clic en el botón *Filtrar*. Note los cambios en las ventanillas de *Grafo* y *Contexto*, deberá ver un menor número de nodos y aristas.
 
-Si desea remover el filtro, presione el botón *Auto aplicar* en la parte inferior derecha (que solía leer *Filtrar*). Al hacer esto, sus datos deben volver a aparecer. 
+Si desea remover el filtro, presione el botón *Auto aplicar* en la parte inferior derecha (que solía leer *Filtrar*). Al hacer esto, sus datos volverán a aparecer. 
 ::::
 ::::
 
@@ -220,7 +219,7 @@ knitr::include_graphics("images/01-filter.PNG")
 
 #### Grafo
 
-La última sección que cubriremos en esta esta introducción a la *Vista General* es el *Grafo* y algunas de las funciones asociadas con esta ventanilla. En el lado derecho e inferior del panel, encontrará las herramientas básicas para interactuar manualmente con el gráfico y editar algunos de los atributos visuales de su gráfico. En esta breve introducción, los definiremos con fines de conciencia general, pero no entraremos en demasiados detalles, ya que los usaremos más adelante en el libro según sea necesario.
+La última sección que cubriremos en esta esta introducción a la *Vista General* es el *Grafo* y algunas de las funciones asociadas con esta ventana. En el lado izquierdo e inferior del panel, encontrará las herramientas básicas para interactuar manualmente con el gráfico y editar algunos de los atributos visuales. En esta breve introducción, los definiremos de manera general, pero no entraremos en demasiados detalles, ya que los usaremos más adelante en el manual según sea necesario.
 
 
 ```{r grafo, out.width = "100%", fig.cap =  "Ventanilla de Grafo"}
@@ -228,42 +227,41 @@ knitr::include_graphics("images/01-grafo.png")
 ```
 
 
-Lo que sigue es una lista de nombres de comandos y funciones en orden secuencial, ver Figura \@ref(fig:grafo):
+A continuación se presenta una lista de nombres de comandos y funciones en orden secuencial, ver Figura \@ref(fig:grafo):
 
- 1.	*Selección directa* – elegir un nodo a la vez
- 2.	*Selección rectangular* – elegir uno o múltiples nodos en un área rectangular
- 3.	*Desplazar* – moverse sin seleccionar
- 4.	*Pincel* – colorea los nodos presionando el botón derecho del ratón
- 5.	*Dar tamaño* – cambia el tamaño de los nodos presionando con el boto derecho y arrastrando el ratón  verticalmente
- 6.	*Brocha* – como el pincel, da color a los nodos, pero da la opción de difundir el color a los vecinos,  vecinos de vecinos, predecesores y sucesores.
- 7.	*Lápiz de nodos* – añade un nuevo nodo al grafo
- 8.	*Lápiz de aristas* – añade una nueva arista al grafo
- 9.	*Camino más corto* – muestra el camino más corto entre dos nodos seleccionados
- 10.	*Mapa de calor* – establece la intensidad del color el base a distancia de vecinos
- 11.	*Editor* – editar atributos del nodo
- 12.	*Centrar el grafo* – retorna el grafo al centro
- 13.	*Reestablecer colores* - devolver los colores a la configuración predeterminada
- 14.	*Reestablecer colores de etiquetas* - devolver el color de las etiquetas a la configuración  predeterminada
- 15.	*Reestablecer visibilidad de las etiquetas* 
- 16.	*Color de fondo* – cambiar el color de fondo
- 17.	*Captura de pantalla* – capturar y guardar el gráfico en pantalla
- 18.	*Mostar etiquetas de los nodos* – mostrar las etiquetas correspondientes de a cada nodo
- 19.	*Mostrar aristas* – encender o apagar las aristas 
- 20.	*Las aristas tienen el color del nodo origen*
- 21.	*Mostar etiquetas de las aristas*
- 22.	*Escala del peso de las aristas* – incrementar o disminuir el grosor de las aristas
- 23.  *Modo de tamaño* – seleccionar modo de tamaño para las etiquetas
- 24.	*Modo de color* – seleccionar modo de color para las etiquetas
- 25.	*Fuente* – seleccionar fuente para las etiquetas
- 26.	*Escala de la fuente* – incrementar o reducir el tamaño de las etiquetas
- 27.	*Color por defecto* – elegir el color de las etiquetas
- 28.	*Atributos* – configurar los atributos de las etiquetas para nodos o aristas
- 29.	*Expandir* – añadir opciones para editar la apariencia *Global*, de *Aristas*, o *Etiquetas*.
+ 1.	 *Selección directa* – elegir un nodo a la vez
+ 2.	 *Selección rectangular* – elegir uno o múltiples nodos en un área rectangular
+ 3.	 *Desplazar* – moverse sin seleccionar
+ 4.	 *Pincel* – colorea los nodos presionando el botón derecho del ratón
+ 5.	 *Dar tamaño* – cambia el tamaño de los nodos presionando el botón derecho y arrastrando el ratón  verticalmente
+ 6.	 *Brocha* – como el pincel, da color a los nodos, pero difunde el color a los vecinos
+ 8.	 *Lápiz de aristas* – añade una nueva arista al grafo
+ 9.	 *Camino más corto* – muestra el camino más corto entre dos nodos seleccionados
+ 10. *Mapa de calor* – establece la intensidad del color con base a distancia de los vecinos
+ 11. *Editor* – editar atributos del nodo
+ 12. *Centrar el grafo* – retorna el grafo al centro
+ 13. *Reestablecer colores* - devolver los colores a la configuración predeterminada
+ 14. *Reestablecer colores de etiquetas* - devolver el color de las etiquetas a la configuración  predeterminada
+ 15. *Reestablecer visibilidad de las etiquetas* - reestablecer la visibilidad de etiquetas
+ 16. *Color de fondo* – cambiar el color de fondo
+ 17. *Captura de pantalla* – capturar y guardar el gráfico en pantalla
+ 18. *Mostar etiquetas de los nodos* – mostrar las etiquetas correspondientes de cada nodo
+ 19. *Mostrar aristas* – encender o apagar las aristas 
+ 20. *Las aristas tienen el color del nodo origen*
+ 21. *Mostar etiquetas de las aristas*
+ 22. *Escala del peso de las aristas* – incrementar o disminuir el grosor de las aristas
+ 23. *Modo de tamaño* – seleccionar modo de tamaño para las etiquetas
+ 24. *Modo de color* – seleccionar modo de color para las etiquetas
+ 25. *Fuente* – seleccionar fuente para las etiquetas
+ 26. *Escala de la fuente* – incrementar o reducir el tamaño de las etiquetas
+ 27. *Color por defecto* – elegir el color de las etiquetas
+ 28. *Atributos* – configurar los atributos de las etiquetas para nodos o aristas
+ 29. *Expandir* – añadir opciones para editar la apariencia *Global*, de *Aristas*, o *Etiquetas*.
  
 
 ### Laboratorio de Datos
 
-El *Laboratorio de datos* contiene tablas de los datos de nodos (Figura \@ref(fig:data-lab) izquireda) y aristas (Figura \@ref(fig:data-lab) derecha). Estas tablas permiten a los analistas interactuar con la información y editar valores directamente o mediante la serie de comandos en la parte inferior de la pantalla (Figura \@ref(fig:data-lab) abajo). Esta es una descripción muy simplificada de las capacidades de esta sección. Sin embargo, nos centraremos en estas características clave en esta introducción de alto nivel.
+El *Laboratorio de datos* contiene tablas de los datos de nodos (Figura \@ref(fig:data-lab) izquireda) y aristas (Figura \@ref(fig:data-lab) derecha). Estas tablas permiten a los analistas interactuar con la información y editar valores directamente o mediante la serie de comandos en la parte inferior de la pantalla (Figura \@ref(fig:data-lab) abajo). Esta es una descripción muy simplificada de las capacidades de esta sección, nos centraremos en las características clave de alto nivel.
 
 ```{r data-lab, out.width = "100%", fig.cap =  "Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas"}
 knitr::include_graphics("images/01-data_lab.png")
@@ -271,32 +269,32 @@ knitr::include_graphics("images/01-data_lab.png")
 
 #### Tabla de Datos: Nodos
 
-La tabla de nodos contiene un identificador único para cada nodo en el gráfico (generalmente ubicado en la columna más a la izquierda como `Id`). Además, note la columna `Label` directamente a la derecha, esta es digna de mención ya que sirve como receptáculo para las etiquetas de los nodos, es decir, los valores en esta columna aparecerán una etiqueta de nodos en el gráfico cuando se especifique. 
+La tabla de nodos contiene un identificador único para cada nodo en el gráfico (generalmente ubicado en la columna más a la izquierda nombrada `Id`). Además, note la columna `Label` directamente a la derecha, esta es digna de mención ya que sirve como receptáculo para las etiquetas de los nodos, es decir, los valores en esta columna aparecerán como etiqueta de nodos en el gráfico cuando se especifique. 
 
 ```{r nodes-table, out.width = "100%", fig.cap =  "Laboratorio de datos, Tabla de Nodos"}
 knitr::include_graphics("images/01-nodes_table.png")
 ```
 
-A medida que se agregan atributos de nodo al gráfico, en esta tabla deberán aparecer nuevas columnas con estos valores. De manera similar, dentro de Gephi, los analistas a menudo ejecutan diferentes métricas a nivel nodo, estos valores se agregarán a cada registro (fila) en una nueva variable (columna).
+A la medida que se agregan atributos de nodo al gráfico, en esta tabla deberán aparecer nuevas columnas con estos valores. De manera similar, dentro de Gephi, los analistas a menudo ejecutan diferentes métricas a nivel nodo, estos valores se agregarán a cada registro (fila) en una nueva variable (columna).
 
 #### Tabla de Datos: Aristas
 
-Al igual que la tabla de nodos, la tabla de bordes incluye información clave en el gráfico de red; específicamente, los datos relacionales. Esta información está codificada en siete columnas. Lo que sigue es una breve explicación de estas columnas:
+Al igual que la tabla de nodos, la tabla de aristas incluye información clave del gráfico de red; específicamente, los datos relacionales. Esta información está codificada en siete columnas definidas a continuación:
 
-  - `Origen` y `Destino` -  Todas las relaciones en ARSo vinculan un nodo inicial y un nodo final. Por ejemplo, si el nodo A está vinculado al nodo B, tendríamos que dibujar un vínculo del nodo A o B al nodo complementario. Gephi codifica esto en dos columnas `Origen` y `Destino`, por lo que para el mismo ejemplo, si A y B están conectados, podríamos poner A en la columna `Origen` y B en la columna `Destino` o viceversa.
-  -` Tipo` - Denota el tipo de relación entre los nodos en las columnas `Origen` y `Destino`. Los valores pueden ser `Dirigida` o` No dirigida`. Si el tipo es `Dirigida` la relación es un arco o arista, de lo contrario, si es tipo `No Dirigida` el vínculo es un borde.
-  - `Id` - Un identificador único para el vínculo. Usualmente asignado por Gephi al importar datos.
-  - `Label` - Etiqueta del vínculo. 
-  - `Interval` - Para vínculos en una secuencia, esta es la columna donde encontrara los valores de tiempo.  
-  - `Weight` - Denota el peso para vínculos ponderados. 
+  - `Origen` y `Destino`:  Todas las relaciones en un grafo vinculan un nodo inicial y un nodo final. Por ejemplo, si el nodo A está vinculado al nodo B, dibujaríamos un vínculo entre estos dos. Gephi codifica esto en dos columnas `Origen` y `Destino`, por lo que  si A y B están conectados, pondríamos A en la columna `Origen` y B en la columna `Destino` o viceversa.
+  - `Tipo`: Denota el tipo de relación entre los nodos en las columnas `Origen` y `Destino`. Los valores pueden ser `Dirigida` o` No dirigida`. Si el tipo es `Dirigida` la relación es un arco o arista, de lo contrario, si es tipo es `No Dirigida` el vínculo es un borde.
+  - `Id`: Un identificador único para el vínculo. Usualmente asignado por Gephi al importar datos.
+  - `Label`: Etiqueta del vínculo. 
+  - `Interval`: Para vínculos en una secuencia, esta es la columna donde encontrará los valores cronológicos.
+  - `Weight`: Denota el peso para vínculos ponderados.
 
 ```{r edges-table, out.width = "100%", fig.cap =  "Laboratorio de datos, Tabla de Aristas"}
 knitr::include_graphics("images/01-edges_table.png")
 ```
 
-#### Menu Inferior
+#### Menú Inferior
 
-Esta última sección permite a los usuarios agregar, borrar o eliminar columnas, fusionar valores de varias columnas, copiar datos de una columna a otra, entre otras opciones. A lo largo de este libro, ampliaremos el uso de estos comandos según sea necesario.
+Esta última sección permite a los usuarios agregar, borrar o eliminar columnas, fusionar valores de varias columnas, copiar datos de una columna a otra, entre otras opciones. A lo largo de este manual, ampliaremos el uso de estos comandos según sea necesario.
 
 ```{r lower-bar, out.width = "100%", fig.cap =  "Laboratorio de datos, Opciones"}
 knitr::include_graphics("images/01-lower_bar.png")
@@ -304,15 +302,15 @@ knitr::include_graphics("images/01-lower_bar.png")
 
 ### Previsualización
 
-*Previsualización* es donde se pule la visualización para fines de exportación. Esta sección es diferente de la *Vista General* en que uno no puede interactuar dinámicamente con los datos a través de filtros, colores o diseño. El valor agregado de esta sección es enfocar la atención del analista en generar gráficos de calidad de publicación y para ello las opciones (en el lado izquierdo) serán mucho más limitadas.
+*Previsualización* es donde se refina la visualización para fines de exportación. Esta sección es diferente de la *Vista General* en que uno no puede interactuar dinámicamente con los datos a través de filtros, colores o diseño. El valor agregado de esta sección es enfocar la atención del analista en generar gráficos para publicación y por ello las opciones son limitadas.
 
 Aquí nos centraremos en 4 secciones clave (indicadas en la Figura \@ref(fig:preview)):
 
   -	Configuración de Previsualización (1) - Proporciona un conjunto de configuraciones de gráficos preestablecidos y permite al usuario guardar los ajustes preestablecidos para uso futuro.
-  -	Parámetros (2) – Ajuste la configuración de visualización como:
-    - Color de nodo, ancho, bordes, etiquetas, etc.
-    - Muestra los bordes, ajusta el ancho, el color, la curvatura, las etiquetas, las flechas, etc.
-  -	Opciones Adicionales (3) – Ajuste las propiedades para la previsualización, exporte el gráfico y aplique las ediciones de la sección *Parámetros*.
+  -	Parámetros (2) – Ajusta a la configuración de visualización como:
+    - Color de nodo, tamaño, bordes, etiquetas, etc.
+    - Modifica los bordes, ajusta el ancho, el color, la curvatura, las etiquetas, las flechas, etc.
+  -	Opciones Adicionales (3) – Ajusta las propiedades para la previsualización, exporta el gráfico y aplica las ediciones de la sección *Parámetros*.
   -	Ventanilla de Previsualización (4) – Proporciona una vista del gráfico terminado.
 
 ```{r preview, out.width = "100%", fig.cap =  "Previsualización"}
@@ -321,11 +319,13 @@ knitr::include_graphics("images/01-preview.png")
 
 ### Errores Comunes
 
-Es normal que los usuarios de software se encuentren con problemas conocidos. Esta sección incluye una lista breve (y creciente) de problemas notificados que pueden crear un poco de confusión. Sin embargo, Gephi es un software de código abierto, por lo que puede encontrar errores desconocidos. Cuando esto suceda, [infórmelo a los desarrolladores](https://github.com/gephi/gephi/issues/new) después de leer las reglas de la comunidad e [investigar el problema](http://forum-gephi.org/).
+Es normal que los usuarios de este software se encuentren con problemas conocidos. Esta sección incluye una lista breve (y creciente) de problemas notificados que pueden crear un poco de confusión. Sin embargo, Gephi es un software de código abierto, por lo que puede encontrar errores desconocidos. Cuando esto suceda, [infórmelo a los desarrolladores](https://github.com/gephi/gephi/issues/new) después de leer las reglas de la comunidad e [investigar el problema](http://forum-gephi.org/).
 
-  - Intenta abrir Gephi pero se encuentra con el siguiente error: "Error: Cannot fing Java 1.8 or higher": 
+Esta es una lista de errores conocidos:
+
+  - Intenta abrir Gephi pero se encuentra con el siguiente error: "Error: Cannot find Java 1.8 or higher": 
     1. Primero cheque que ha instalado Java 1.8 o posterior. Si no lo ha hecho, ese es el primer problema.
-    2. Si ha instalado Java, es probable (pero no necesario) que este viendo el error en una computadora con Windows. Vaya a la carpeta de Gephi (en Windows cheque `C:\Program Files (x86)\Gephi-0.9.1\bin\`). En teoría vera dos versiones de Gephi en esta carpeta, probablemente tituladas `gephi.exe` y `gephi64.exe`. Intente abrir una a la vez. Una deberá funcionar, cree un atajo a este archivo. 
+    2. Si ha instalado Java, es probable (pero no necesario) que este viendo el error en una computadora con Windows. Vaya a la carpeta de Gephi (en Windows cheque `C:\Program Files (x86)\Gephi-0.9.1\bin\`), donde vera dos versiones probablemente tituladas `gephi.exe` y `gephi64.exe`. Intente abrir una a la vez. Una deberá funcionar, cree un atajo a este programa. 
     
-  - Ha desaparecido el gráfico/ventanilla/pestaña: En Gephi hay una gran cantidad de pequeñas ventanas y pestañas y todo se puede mover, minimizar y cerrar. Esto puede dar como resultado algunas situaciones en las que lo estropea todo y ya no puede encontrar las ventanas que necesita. Si eso sucede en el menú Ventana, hay una opción para Restablecer ventanas que establecerá todas las pestañas y demás a los valores predeterminados. Por ello es posible que en algunas situaciones usted accidentalmente modifique, minimice o cierre alguna ventana que necesita. Si esto sucede, no se frustre, localice el menú *Ventana* en la parte superior, allí podrá restablecer todas las ventanas a la configuración inicial (*Restablecer Ventanas*) o si lo desea activar una ventanilla a la vez. 
+  - Ha desaparecido el gráfico/ventanilla/pestaña: En Gephi hay una gran cantidad de pequeñas ventanas y pestañas y todo se puede mover, minimizar y cerrar. Si por accidente cierra una ventana, vaya a el menú Ventana, de clic an la opción *Restablecer Ventanas* que reestablecerá todas las pestañas de manera predeterminada. 
 
