@@ -7,11 +7,11 @@ bibliography: book.bib
 
 # Derivando Datos Modo-Uno de Modo-Dos
 
-En este capítulo volveremos a ver datos de modo-dos, sin embargo, el objetivo principal es pasar mas allí de la definición y explorar como estos sirven de precursores a relaciones de modo-uno. A lo largo de esta sección, retornaremos a la multiplicación de matrices, si no se siente cómodo con este proceso favor de repasar el capítulo previo. Este capitulo concluye con un ejercicio previo en Gephi.
+En este capítulo volveremos a ver datos de modo-dos, donde el objetivo principal es pasar más allí de la definición y explorar como estos sirven de precursores a relaciones de modo-uno. A lo largo de este, retornaremos a la multiplicación de matrices, si no se siente cómodo con este proceso favor de repasar el capítulo previo. Concluiremos con un ejercicio practico en Gephi.
 
 ## Modo-Dos, ¿Qué es?
 
-Para recapitular, las redes de modo-dos son aquellas que constan de dos grupos de nodos y donde los enlaces solo existen entre nodos de diferentes clases. A veces se les conoce como redes de afiliación, redes de membresía o incidencia [@Everton2012]. Imagínese una red modo-dos que conecta personas a eventos, por ejemplo,  pandilleros conectados con pandillas o otros grupos ilícitos. Bajo la definición previa, los vínculos solo conectan pandilleros a organizaciones como en la Figura \@ref(fig:bip). 
+Para recapitular, las redes de modo-dos son aquellas que constan de dos grupos de nodos y donde los enlaces solo existen entre nodos de diferentes clases. A veces se les conoce como redes de afiliación, redes de membresía o incidencia [@Everton2012]. Imagínese una red modo-dos que conecta personas a eventos, por ejemplo, pandilleros conectados con pandillas u otros grupos ilícitos. Bajo la definición previa, los vínculos solo conectan pandilleros a organizaciones como en la Figura \@ref(fig:bip). 
 
 <div class="figure" style="text-align: center">
 <img src="02-twomode-to-one_files/figure-html/bip-1.png" alt="Gráfico Bipartita" width="70%" />
@@ -20,9 +20,9 @@ Para recapitular, las redes de modo-dos son aquellas que constan de dos grupos d
 
 ## Proyección
 
-El encontrar este tipo de datos en ARSo es común. Sin embargo, tradicionalmente el objetivo del análisis es mapear el espacio social entre miembros de una sola clase de nodo. En el ejemplo previo, un objetivo sería derivar las conexiones entre personas con base a sus membresías a organizaciones. Similarmente, es posible derivar relaciones entre organizaciones para entender las dinámicas entre organizaciones. El derivar relaciones de modo-uno empezando con datos de modo-dos es una de las herramientas mas comunes y relevantes utilizadas por analistas de ARSo. Este proceso se conoce como **proyección**. 
+El encontrar datos de modo-dos en ARSo es común. Tradicionalmente el objetivo del análisis es mapear el espacio social entre miembros de una sola clase de nodo. En la figura previa, un objetivo sería derivar las conexiones entre personas con base a sus membresías a organizaciones. Similarmente, es posible derivar relaciones entre organizaciones para entender las dinámicas organizaciones. El derivar relaciones de modo-uno empezando con datos de modo-dos es una de las herramientas más comunes y relevantes utilizadas por analistas de ARSo. Este proceso se conoce como **proyección**. 
 
-Para lograr esto, retornaremos a la multiplicación de matrices. Primero, examine \@ref(eq:bip-adj) la matriz de adyacencia con los datos de la Figura \@ref(fig:bip). Note que los vínculos solo conectan personan con eventos, por consiguiente, asumimos que lo que tenemos es una red bipartita. 
+Para lograr esto, retornaremos a la multiplicación de matrices. Primero, examine la matriz de adyacencia \@ref(eq:bip-adj) con los datos de la Figura \@ref(fig:bip). Note que los vínculos solo conectan personan con eventos, por consiguiente, asumimos que lo que tenemos es una red bipartita. 
 
 \begin{matrix}
    & A & B & C & D & E1 & E2 & E3 \\
@@ -37,7 +37,7 @@ E3 & 0 & 0 & 0 & 1 & 0  & 0  & -  \\
 (\#eq:bip-adj)
 \end{matrix}
 
-Otra forma de representar los datos de una red bipartita, además de una lista de arista, es una matriz de incidencia. En esta, vemos las que las filas y las columnas contienen las diferentes clases. Por ejemplo, en la \@ref(eq:bip-inc) encontramos los eventos como columnas y las personas como filas. 
+Otra forma de representar los datos de una red bipartita, además de una lista de arista, es una matriz de incidencia. En esta, vemos las que las filas y las columnas contienen las diferentes clases. Por ejemplo, en la matriz de incidencia \@ref(eq:bip-inc) encontramos los eventos como columnas y las personas como filas. 
 
 \begin{matrix}
   & E1 & E2 & E3 \\
@@ -49,7 +49,7 @@ D & 0  & 1  & 1  \\
 (\#eq:bip-inc)
 \end{matrix}
 
-Para multiplicar matrices estas tienen que ser conformables, es decir, es decir el número de filas en la primera matriz es igual a el número de columnas en la segunda. Es por ello, que para multiplicar la matriz de incidencia \@ref(eq:bip-inc) consigo misma es necesario transponerla. Supongamos que la matriz de incidencia es $M$, en esta situación el producto de la multiplicación de matrices seria $MxM^T$. Por ejemplo, \@ref(eq:proj1) representa dicha multiplicación. 
+Para multiplicar matrices estas tienen que ser conformables, es decir, es decir el número de filas en la primera matriz es igual a el número de columnas en la segunda. Es por ello que para multiplicar la matriz de incidencia \@ref(eq:bip-inc) consigo misma es necesario transponerla. Supongamos que la matriz de incidencia es $M$, en esta situación el producto de la multiplicación de matrices seria $MxM^T$, como se ve representado en la ecuación \@ref(eq:proj1). 
 
 \begin{equation}
 \begin{matrix}
@@ -70,7 +70,6 @@ E3 & 0 & 0 & 0 & 1 \\
 \end{matrix}
 (\#eq:proj1)
 \end{equation}
-
 
 El proceso de multiplicar dos matrices conformables es el mismo que hemos visto anteriormente. Empezando en el lado superior izquierdo de la primera matriz, multiplicamos cada célula de la primera matriz por los valores en cada célula de la primera columna de la segunda matriz, sumamos los resultados y proseguimos con cada fila de la primera matriz multiplicada por cada columna de la segunda [@Hanneman2005]. La ecuación \@ref(eq:mult) incluye los resultados de dicho proceso.
 
@@ -97,7 +96,7 @@ D & 0 & 0 & 1 & 2 \\
 (\#eq:mult)
 \end{equation}
 
-Después de remover la diagonal, vínculos con uno mismo, el resultado es una matriz de adyacencia entre personas \@ref(eq:proj1-clean). Esta es simétrica y por lo tanto usualmente tratamos estos datos como no dirigidos puesto que es imposible determina que actor inicio el enlace y quien lo recibe .  La Figura \@ref(fig:projected1) representa estos datos relacionales. Note que esta representación de la red solo contiene datos de modo-uno, por consiguiente, es posible “medir” el espacio social entre los actores. El ejemplo más simple de ello es la centralidad de grado, la cual es un conteo del número de vínculos de un actor y tiende a representar actividad, es decir, mientras más vínculos más activo es un nodo. En la Figura \@ref(fig:projected1) el actor C tiene una centralidad de grado equivalente a 3, es decir que es el nodo mas activo en participar en eventos con otros nodos y por ello lo encontramos con el numero mas alto de enlaces en esta pequeña red. 
+Después de remover la diagonal, vínculos con uno mismo, el resultado es una matriz de adyacencia entre personas \@ref(eq:proj1-clean). Esta es simétrica y por lo tanto usualmente tratamos estos datos como no dirigidos puesto que es imposible determina que actor inicio el enlace y quien lo recibe.  La Figura \@ref(fig:projected1) representa estos datos relacionales. Note que esta representación de la red solo contiene datos de modo-uno, por consiguiente, es posible “medir” el espacio social entre los actores. El ejemplo más simple de ello es la centralidad de grado, la cual es un conteo del número de vínculos de un actor y tiende a representar actividad, es decir, mientras más vínculos más activo es un nodo. En la Figura \@ref(fig:projected1) el actor C tiene una centralidad de grado equivalente a 3, es decir que es el nodo más activo en participar en eventos con otros nodos. 
 
 \begin{matrix}
   & A & B & C & D \\
@@ -115,7 +114,7 @@ D & 0 & 0 & 1 & 0 \\
 <p class="caption">(\#fig:projected1)Red proyectada, persona-a-persona</p>
 </div>
 
-Recuerde que el orden de las matrices en una multiplicación impacta el resultado.  Por ejemplo, si la primera matriz en la multiplicación es la transpuesta $M^T$, el producto de dicha operación sería $M^TxM$. 
+Recuerde que el orden de las matrices en una multiplicación impacta el resultado.  Por ejemplo, si la primera matriz en la multiplicación es la transpuesta $M^T$, el producto de dicha operación sería $M^TxM$, ilustrado en la ecuación \@ref(eq:proj2). 
 
 \begin{equation}
 
@@ -139,7 +138,7 @@ D & 0  & 1  & 1  \\
 (\#eq:proj2)
 \end{equation}
 
-Una vez más, la multiplicación produce una matriz de adyacencia, pero en este caso los vínculos conectan eventos \@ref(eq:proj2-clean). 
+Una vez más, la multiplicación produce una matriz de adyacencia, pero en este caso los vínculos conectan eventos a otros eventos, como vemos en la matriz producto de la ecuación \@ref(eq:proj2-clean). 
 
 \begin{equation}
 \begin{smallmatrix}
@@ -161,16 +160,16 @@ E3 & 0  & 1  & 1 \\
 (\#eq:proj2-clean)
 \end{equation}
 
-Después de remover la diagonal, la matriz puede ser dibujar como grafo (ver Figura \@ref(fig:projected2)). En este gráfico el evento 2 (E2) tiene el grado de centralidad equivalente a dos, por lo cual asumimos que es el evento más popular o asistido por más personas que han asistido a otros eventos en la red. 
+Después de remover la diagonal, la matriz puede ser dibujar como grafo (ver Figura \@ref(fig:projected2)). En este gráfico el evento 2 (E2) tiene un grado de centralidad equivalente a dos, por lo cual asumimos que es el evento más popular o asistido por más personas que han asistido a otros eventos en la red. 
 
 <div class="figure" style="text-align: center">
 <img src="02-twomode-to-one_files/figure-html/projected2-1.png" alt="Red proyectada, evento-a-evento" width="70%" />
 <p class="caption">(\#fig:projected2)Red proyectada, evento-a-evento</p>
 </div>
 
-Como puede ver, ambos productos de la proyección de una red bipartita pueden ser analizados por si mismos. En los siguientes capítulos de este texto presentamos una variedad de algoritmos analíticos diseñados para redes de modo-uno. Por consiguiente, antes de aplicar estas herramientas matemáticas, es crucial que el analista transforme sus datos a modo-uno. 
+Como puede ver, ambos productos de la proyección de una red bipartita pueden ser analizados por si mismos. En los siguientes capítulos de este manual presentamos una variedad de algoritmos analíticos diseñados para redes de modo-uno. Por consiguiente, antes de aplicar estas herramientas matemáticas, es crucial que el analista transforme sus datos a modo-uno. 
 
-Es probable que se esté preguntando, “¿tendré que multiplicar matrices a mano para proyectar mis datos de modo-dos a modo-uno?” La respuesta es, “no”. Gephi, y otras herramientas de software tienen la habilidad de proyectar redes modo-dos. Es por ello que a continuación tendrá la oportunidad de trabajar con redes de modo-dos a través de un ejercicio practico con Gephi. Sin embargo, el contenido de esta sección le debe haber presentado suficiente información para entender las mecánicas del proceso que tomará el software.
+Es probable que se esté preguntando, “¿tendré que multiplicar matrices a mano para proyectar mis datos de modo-dos a modo-uno?” La respuesta es, “no”. Gephi, y otras herramientas de software tienen la habilidad de proyectar redes modo-dos. Es por ello que a continuación tendrá la oportunidad de trabajar con redes de modo-dos a través de un ejercicio práctico en Gephi. Sin embargo, el contenido de esta sección le debe haber presentado suficiente información para entender las mecánicas del proceso que implementará el software.
 
 
 ## Ejercicio Práctico

@@ -10,13 +10,14 @@ library(DT)
 
 # Grabación y Recopilación
 
-Hasta este punto, hemos descrito los datos de red. En esta sección, nos tomaremos un tiempo para entender cómo codificar datos para importarlos a Gephi, estas estrategias igualmente funcionan con otras plataformas de software. Para ello comenzaremos describiendo sociomatrices, que vimos anteriormente. Después, veremos otra manera de codificar relaciones de manera eficiente como listas de aristas. Luego, exploramos cómo codificar características no relacionales en listas de nodos. Finalmente, tendrá la oportunidad de poner en práctica este conocimiento a través de un ejercicio práctico en Gephi.
+Hasta este punto hemos descrito los datos una red. Por lo que en esta sección, explicaremos cómo recopilar datos e importarlos a Gephi. Estas estrategias igualmente funcionaran con otras plataformas de software. Comenzaremos describiendo sociomatrices. Después, veremos otra manera de codificar relaciones como listas de aristas. Luego, exploramos cómo codificar características no relacionales en listas de nodos. Finalmente, tendrá la oportunidad de poner en práctica este conocimiento a través de un ejercicio práctico en Gephi.
+
 
 ## Matrices
 
 ### ¿Qué son?
 
-Comenzamos con a la grabación de datos de red en una matriz. Como señala Hanneman, la forma más común de matriz en ARSo es una matriz cuadrada con tantas filas y columnas como actores en nuestro conjunto de datos, en este modelo los valores en las celdas de la matriz registran información sobre los vínculos entre cada par de actores [@Hanneman2005]. Por ejemplo, la matriz \@ref(eq:simple-matrix) representa la forma más simple y común de codificar datos relacionales en forma de matriz; es decir, en forma de matriz binaria. En este caso, vemos un uno si existe un vínculo, de lo contrario vemos un cero. 
+Comenzamos con la recopilación de datos de red en una matriz. Como señala Hanneman, la forma más común de matriz en ARSo es una matriz cuadrada con número de filas y columnas como actores en nuestro conjunto de datos, en este modelo los valores en las celdas de la matriz registran información sobre los vínculos entre cada par de actores [@Hanneman2005]. Por ejemplo, la matriz \@ref(eq:simple-matrix) representa la forma más simple y común de codificar datos relacionales en forma de matriz binaria. En este caso, vemos un 1 si existe un vínculo, de lo contrario vemos un 0. 
 
 $$
 \begin{matrix}
@@ -30,17 +31,18 @@ F & 0 & 0 & 0 & 1 & 1 & - \\
 (\#eq:simple-matrix)
 \end{matrix}
 $$
-Como se ha de imaginar, las matrices no siempre son binarias. De hecho, es apropiado y común el recopilar datos de magnitud para un vínculo. Por ejemplo, se puede medir la fuerza de una relación a nivel ordinal o de intervalo. Igualmente, no es inapropiado el recaudar datos relacionales con números positivos y negativos donde los números positivos corresponden a relaciones positivas, el cero es un punto medio neutral y las relaciones negativas tienen valores menores a cero. 
 
-Recuerde que como habíamos visto previamente, los datos codificados en matrices pueden ser simétricos o asimétricos, dirigidos o no dirigidos. Por consiguiente, tradicionalmente es de buena educación ser explicito al mencionar el tipo de matriz que se esta trabajando; por ejemplo, “matriz simétrica binaria modo-uno” o “matriz asimétrica ponderada modo-uno”.
+Como se ha de imaginar, las matrices no siempre son binarias. De hecho, es apropiado y común el recopilar datos de magnitud para un vínculo. Por ejemplo, se puede medir la fuerza de una relación a nivel ordinal o de intervalo. Igualmente, se pueden recaudar datos relacionales con números positivos y negativos, donde los números positivos corresponden a relaciones positivas, el cero es un punto medio neutral y las relaciones negativas tienen valores menores a cero. 
 
-En esta sección, nos enfocamos en matrices modo-uno por su simplicidad, pero cabe recalcar que las matrices pueden ser de modo-dos. Adicionalmente, la mayoría de los analistas de redes trabajan con relaciones de modo-uno, aun si estas han sido derivadas de una relación modo-dos. Es por ello que retornaremos a las matrices modo-dos cuando toquemos el tema de derivar relaciones modo-uno de modo-dos.
+Recuerde que como habíamos visto previamente, los datos codificados en matrices pueden ser simétricos o asimétricos, dirigidos o no dirigidos. Por consiguiente, tradicionalmente es de buena educación ser explícito al mencionar el tipo de matriz que se esta trabajando; por ejemplo, “matriz simétrica binaria modo-uno” o “matriz asimétrica ponderada modo-uno”.
+
+En esta sección, nos enfocamos en matrices de relaciones modo-uno por su simplicidad, pero cabe recalcar que las matrices pueden ser de relación modo-dos. La mayoría de los analistas de redes trabajan con relaciones de modo-uno, sin importar si estas han sido derivadas de una relación modo-dos. Es por ello que retornaremos a las matrices modo-dos cuando toquemos el tema de derivar relaciones modo-uno de modo-dos.
 
 ### ¿Por qué usarlas o no?
 
-Las matrices tienen múltiples ventajas en ARSo. Primero, son simples de entender. Sin embargo, la razón clave por la cual se utilizan habitualmente es porque se pueden realizar cálculos matemáticos con estas para resumir la información de lar red e ilustrar patrones relaciónales [@Borgatti2018].
+Las matrices tienen múltiples ventajas en ARSo. Primero, son simples de entender. Sin embargo, la razón clave por la cual se utilizan habitualmente es porque se pueden realizar cálculos matemáticos con estas para resumir la información de la red e ilustrar patrones relacionales [@Borgatti2018].
 
-Por ejemplo, al trabajar con múltiples matrices de modo-uno con las mismas dimensiones, podemos producir una tercera matriz con el mismo número de dimensiones utilizado el producto Hadamard (operación por elementos). Por ejemplo, tomemos dos matrices con el mismo número de dimensiones una representando amistades y los otros vínculos de negocios. Podemos producir una tercera relación con las mismas dimensiones que podemos nombrar “amigos en negocios”, la ecuación \@ref(eq:mat-op1) ilustra esta operación de matrices por elemento.
+Al trabajar con múltiples matrices de datos modo-uno con las mismas dimensiones, podemos producir una tercera matriz con el mismo número de dimensiones utilizado el producto Hadamard (operación por elementos). Por ejemplo, tomemos dos matrices con el mismo número de dimensiones una representando amistades y la otra con vínculos de negocios. Con estas podemos producir una tercera relación con las mismas dimensiones la cual nombremos “amigos en negocios”, la ecuación \@ref(eq:mat-op1) ilustra esta operación de matrices por elemento.
 
 
 \begin{equation}
@@ -80,7 +82,7 @@ C & 0 & 0 & 0 \\
 (\#eq:mat-op1)
 \end{equation}
 
-Adicionalmente, podemos multiplicar matrices “conformables”, es decir el número de filas en la primera matriz es igual a el número de columnas en la segunda. Las matrices cuadradas de modo-uno son conformables puesto que tienen el mismo numero de filas y columnas, por lo cual las podemos multiplicar [@Hanneman2005]. A diferencia de el producto Hadamard, en la multiplicación de matrices el orden de estas impacta los resultados. Es decir, supongamos que trabajamos con dos matrices de modo-uno ($A$ y $B$), si multiplico $AxB$ el producto no es equivalente a $BxA$ ($AxB \neq BxA$). La ecuación \@ref(eq:mat-op2) illustra el proceso de multiplicar matrices $AxB$. Empezamos con la parte superior izquierda de la primera matriz y multiplicamos cada valor en la primera fila por los valores de la primera columna de la segunda matriz. Los elementos correspondientes de una fila de la primera matriz y una columna de la segunda se multiplican y se suman para producir un solo elemento del producto.
+Adicionalmente, podemos multiplicar matrices “conformables”; es decir, el número de filas en la primera matriz es igual a el número de columnas en la segunda. Las matrices cuadradas de modo-uno son conformables puesto que tienen el mismo numero de filas y columnas, por lo cual las podemos multiplicar [@Hanneman2005]. A diferencia de el producto Hadamard, en la multiplicación de matrices el orden de estas impacta los resultados. Supongamos que trabajamos con dos matrices de modo-uno ($A$ y $B$), si multiplico $AxB$ el producto no es equivalente a $BxA$ ($AxB \neq BxA$). La ecuación \@ref(eq:mat-op2) illustra el proceso de multiplicar matrices $AxB$. Empezamos con la parte superior izquierda de la primera matriz y multiplicamos cada valor en la primera fila por los valores de la primera columna de la segunda matriz. Los elementos de una fila de la primera matriz y de una columna de la segunda se multiplican y se suman para producir un solo producto.
 
 
 \begin{equation}
@@ -122,7 +124,7 @@ C & (0x0)+(1x1)+(0x1) & (0x1)+(1x0)+(0x0) & (0x1)+(1x0)+(0x0) \\
 (\#eq:mat-op2)
 \end{equation}
 
-El proceso de multiplicar $BxA$ es similar, pero los resultados son diferentes \@ref(eq:mat-op3). 
+El proceso de multiplicar $BxA$ es el mismo, pero los resultados son diferentes \@ref(eq:mat-op3). 
 
 \begin{equation}
 \begin{matrix}
@@ -165,22 +167,22 @@ C & (1x0)+(0x1)+(0x0) & (1x1)+(0x0)+(0x1) & (1x0)+(0x1)+(0x0) \\
 (\#eq:mat-op3)
 \end{equation}
 
-En términos prácticos, @Borgatti2018 presentan el siguiente ejemplo, supongamos que $A$ es una matriz de adyacencia que representa la 'relación de amistad' y $B$ es la relación de 'jefe de'. Entonces si tengo una relación $AxB$ con un nodo, este es el jefe de al menos uno de mis amigos . En contraste, si tengo una relación de $BxA$ con un nodo, entonces este es amigo de mi jefe [@Borgatti2018]. Como puede ver, estas son relaciones muy diferentes producidas al multiplicar las mismas matrices.
+En términos prácticos, @Borgatti2018 presentan el siguiente ejemplo, $A$ es una matriz de adyacencia que representa la 'relación de amistad' y $B$ es la relación de 'jefe de'. Entonces si tengo una relación $AxB$ con un nodo, este es el jefe de al menos uno de mis amigos. En contraste, si tengo una relación de $BxA$ con un nodo, entonces este es amigo de mi jefe [@Borgatti2018]. Como puede ver, estas son relaciones muy diferentes producidas al multiplicar las mismas matrices.
 
+Ya que hemos recalcado las ventajas de utilizar matrices, es esencial entender algunas de las desventajas clave:
 
-Ya que hemos recalcado las ventajas de utilizar matrices, es esencial entender algunas de las desventajas. Por ejemplo, las matrices sufren de tres desventajas principales:
-
-  - Cada matriz representa un solo tipo de relación. Supongamos que el análisis requiere el combinar relaciones familiares y financieras. Para lograr esto, requerimos codificar dos matrices antes de manipularlas. Además, el formato de matriz no permite el agregar metadata sobre las relaciones, por ejemplo: procedencia de un dato, fecha en que ha ocurrido, entre otros.
+  - Cada matriz representa un solo tipo de relación. Supongamos que el análisis requiere combinar relaciones familiares y financieras. Para esto, necesitariamos recopilar dos matrices individuales antes de manipularlas. Además, el formato de matriz no permite el agregar metadatos sobre las relaciones, por ejemplo: procedencia de un dato, fecha en que ha ocurrido, entre otros.
   - El mantener una o múltiples matrices requiere mantener todas las células. Por ejemplo, en una red de 100 nodos, el analista debe mantener 10,000 células (100 x 100) aun cuando la mayoría de estas estén vacías (sin relación).
-  - Además de requerir un alto grado de atención para mantener una matriz, resulta que esta estructura no es la manera más eficiente de guardar datos en una computadora. Específicamente, cada 0 que representa la ausencia de una relación tiene un costo en forma de memoria.
+  - Esta estructura no es la manera más eficiente de guardar datos en una computadora. Específicamente, cada 0 que representa la ausencia de una relación tiene un costo en forma de memoria.
 
-Como puede ver, las matrices (como todas las estructuras de recopilación de datos) tienen ventajas y desventajas. El algebra de matrices es la fundación de la mayoría de los algoritmos utilizados por analistas de redes, por consiguiente, es esencial entender estas estructuras. Sin embargo, las desventajas mencionadas previamente son la razón por la cual los analistas de redes tienen a mantener sus datos relacionales en otros formatos más eficientes y permisibles. En la siguiente sección cubriremos uno de estos formatos llamado lista de aristas.
+Como puede ver, las matrices (como todas las estructuras de recopilación de datos) tienen ventajas y desventajas. El álgebra de matrices es la base de la mayoría de los algoritmos utilizados por analistas de redes, por consiguiente, es esencial entender estas estructuras. Sin embargo, las desventajas mencionadas previamente son la razón por la cual los analistas de redes tienen a mantener sus datos relacionales en otros formatos más eficientes y permisibles. En la siguiente sección cubriremos uno de estos formatos llamado lista de aristas.
+
 
 ## Lista de Aristas
 
 ### ¿Qué son?
 
-Una de las estructuras más económicas en la recopilación de datos, las listas de aristas solo consideran los vínculos existentes y excluyen lo demás. Por ejemplo, la matriz \@ref(eq:mat) puede ser colapsada como lista de aristas \@ref(eq:el).
+Son una de las estructuras más económicas en la recopilación de datos. Las listas de aristas solo consideran los vínculos existentes y excluyen lo demás. Por ejemplo, la matriz \@ref(eq:mat) puede ser colapsada como lista de aristas \@ref(eq:el).
 
 ::::{.row}
 :::: {.lcolumn-50}
@@ -218,26 +220,24 @@ F      & E      \\
 ::::
 ::::
 
-Esencialmente, una lista de aristas es un rectángulo con un mínimo de dos columnas, cada fila representa una combinación de nodos vinculados. @Cunningham2016 mencionan que aunque las listas de aristas pueden ser dirigidas o no dirigidas, es decir contienen arcos o bordes,  las columnas denotan un actor que “envía” el enlace y otro que “recibe” el enlace [@Cunningham2016]. En Gephi, el software denota estas posiciones con nombres obligatorios; es decir, que en términos de Gephi, la columna de “envía” siempre aparecerá nombrada “Origen” (o “Source” en Ingles). Similarmente, la columna “recibe” siempre aparecerá como “Destino” (o “Target” en Ingles”). Es importante recalcar que estos nombres son obligatorios en el proceso de importación de listas de aristas en Gephi. 
+Esencialmente, una lista de aristas es un rectángulo con un mínimo de dos columnas, cada fila representa una combinación de nodos vinculados. @Cunningham2016 mencionan que aunque las listas de aristas pueden ser dirigidas o no dirigidas, es decir, contienen arcos o bordes, las columnas denotan un actor que “envía” el enlace y otro que “recibe” el enlace. En Gephi, el software denota estas posiciones con nombres obligatorios; es decir, que en términos de Gephi, la columna de “envía” siempre aparecerá nombrada “Origen” (o “Source” en Inglés). Similarmente, la columna “recibe” siempre aparecerá como “Destino” (o “Target” en Inglés). 
 
 Tradicionalmente, los analistas de ARSo tienden a mantener sus listas de aristas en software como Microsoft Excel. Sin embargo, es posible integrar tablas de bases de datos (por ejemplo, SQL) como precursores. 
 
 ### ¿Por qué usarlas o no?
 
-Las listas de aristas son comúnmente utilizadas por su simplicidad, eficiencia y versatilidad. Son eficientes pues no incluyen espacios vacíos para vínculos faltantes. Asimismo, el mantenerlas es simple pues cada fila representa una relación.  Adicionalmente so versátiles pues proveen flexibilidad en el numero y tipo de características de un vinculo que se pueden incluir. Como se ha mencionado previamente, el formato básico de una lista de aristas incluye dos columnas, sin embargo, no hay limite a la cantidad de variables que podemos agregar para describir cada vinculo, por ejemplo: dirigido/no dirigido, fecha, intensidad, tipo, peso, fuente de procedencia, etc.
+Las listas de aristas son comúnmente utilizadas por su simplicidad, eficiencia y versatilidad. Son eficientes pues no incluyen espacios vacíos para vínculos faltantes. Asimismo, el mantenerlas es simple pues cada fila representa una relación.  Adicionalmente son versátiles pues proveen flexibilidad en el número y tipo de características de un vínculo que se pueden incluir. Como se ha mencionado previamente, el formato básico de una lista de aristas incluye dos columnas, sin embargo, no hay límite a la cantidad de variables que podemos agregar para describir cada vínculo, por ejemplo: dirigido/no dirigido, fecha, intensidad, tipo, peso, fuente de procedencia, etc.
 
-Las Figuras \@ref(fig:el1), \@ref(fig:el2) y \@ref(fig:el3) son ejemplos de listas de aristas. La primera lista de aristas, Figura \@ref(fig:el1), contiene los elementos mínimos requeridos; es decir, dos columnas nombradas que representan los dos vértices conectados por un vínculo relacional. Cada fila representa una relación, sin embargo, no hay manera de diferenciar si estas relaciones son dirigidas/no dirigidas o si ambos vínculos representan el mismo tipo de relaciones (por ejemplo, familiares, financieras, románticas, etc.). Es por ello por lo que la segunda lista, Figura \@ref(fig:el2), expande sobre la primera al agregar un par de variables. En este ejemplo, las nuevas columnas permiten diferenciar el tipo de relación e incluso agregan información temporal y pesos a cada enlace. El último ejemplo, Figura \@ref(fig:el3), continúa expandiendo la lista de aristas y presenta una lista con múltiples tipos de relaciones y multimodo. Es decir, algunas relaciones son modo-uno, mientras que otras son modo-dos. 
+Las Tablas \@ref(tab:el1), \@ref(tab:el2) y \@ref(tab:el3) son ejemplos de listas de aristas. La primera lista de aristas, Tabla \@ref(tab:el1), contiene los elementos mínimos requeridos; es decir, dos columnas nombradas que representan los dos vértices conectados por un vínculo relacional. Cada fila representa una relación, sin embargo, no hay manera de diferenciar si estas relaciones son dirigidas/no dirigidas o si ambos vínculos representan el mismo tipo de relaciones (por ejemplo, familiares, financieras, románticas, etc.). Es por ello que la segunda lista, Tabla \@ref(tab:el2), expande sobre la primera al agregar un par de variables. En este ejemplo, las nuevas columnas permiten diferenciar el tipo de relación e incluso agregan información temporal y pesos a cada enlace. La última lista, Tabla \@ref(tab:el3), continúa expandiendo la lista de aristas previa ya que  presenta relaciones multimodo. Es decir, algunas relaciones son modo-uno, mientras que otras son modo-dos. 
 
-```{r el1, fig.cap = "Lista de Aristas Básica"}
+```{r el1}
 data.frame("Origen"   = c("A", "B"),
            "Destino"  = c("B", "C")) %>%
-  DT::datatable(class = 'cell-border stripe',
-                rownames = FALSE,
-                options = list(dom = 't'))
+  knitr::kable(booktabs = TRUE, caption = "Lista de Aristas Básica")
 ```
 
 
-```{r el2, fig.cap = "Lista de Aristas Expandida"}
+```{r el2, fig.align='center'}
 data.frame(
   "Origen"   = c("A", "B"),
   "Destino"  = c("B", "C"),
@@ -247,15 +247,12 @@ data.frame(
                  "Dirigido"),
   "Fecha"    = c("2020-11-03",
                  "2020-11-03"),
-  "Peso"     = c(5, 10)
-  ) %>%
-  DT::datatable(class = 'cell-border stripe',
-                rownames = FALSE,
-                options = list(dom = 't'))
+  "Peso"     = c(5, 10)) %>%
+  knitr::kable(booktabs = TRUE, caption = "Lista de Aristas Expandida")
 ```
 
 
-```{r el3, fig.cap = "Lista de Aristas Expandida y Multimodo"}
+```{r el3, fig.align='center'}
 data.frame(
   "Origen"   = c("A", "B", "A"),
   "Destino"  = c("B", "C", 1),
@@ -268,18 +265,15 @@ data.frame(
   "Fecha"    = c("2020-11-03",
                  "2020-11-03",
                  "2020-11-03"),
-  "Peso"     = c(5, 10, 7)
-  ) %>%
-  DT::datatable(class = 'cell-border stripe',
-                rownames = FALSE,
-                options = list(dom = 't'))
+  "Peso"     = c(5, 10, 7)) %>%
+  knitr::kable(booktabs = TRUE, caption = "Lista de Aristas Expandida y Multimodo")
 ```
 
 ## Lista de Nodos
 
-La lista de nodos, a diferencia de la lista de aristas, contiene los datos no relacionales de cada nodo en un sociograma. Por consiguiente, es común que ambas listas sean mantenidas de manera independiente. 
+La lista de nodos, a diferencia de la lista de aristas, contiene los datos no relacionales de cada nodo en un sociograma. Por consiguiente, ambas listas sean mantenidas de manera independiente. 
 
-Es decir, en una lista de aristas es probable que un nodo aparezca de manera repetida, es común que cada actor en una red este atado a múltiples otros. En contraste, en una lista de nodos es común (y recomendable) el tener a un solo registro por actor. Por ejemplo, en la lista de aristas \@ref(eq:el4) vemos cuatro nodos {A, B, C, D} conectados por tres diferentes tipos de relaciones. La lista de nodos correspondiente \@ref(eq:nl1) incluye información de estos nodos como género o edad, estas son características no relacionales de aquellos nodos en la red. Aunque podemos repetir el registro de cada actor, no es necesario normalmente el software solo toma en cuenta un solo registro, normalmente el último en la lista. 
+Es decir, en una lista de aristas es probable que un nodo aparezca de manera repetida, puesto que es común que cada actor en una red este atado a múltiples otros. En contraste, en una lista de nodos es recomendable el tener a un solo registro por actor. Por ejemplo, en la lista de aristas \@ref(eq:el4) vemos cuatro nodos {A, B, C, D} conectados por tres diferentes tipos de relaciones. La lista de nodos correspondiente \@ref(eq:nl1) incluye información de estos nodos como género y edad, estas son características no relacionales de aquellos nodos en la red. Aunque podemos repetir el registro de cada actor, no es necesario normalmente el software solo toma en cuenta un registro, normalmente el último en la lista. 
 
 :::: {.row}
 :::: {.lcolumn-50}
@@ -304,7 +298,7 @@ D  & Masculino & 29 \\
 ::::
 ::::
 
-Por su parte, Gephi es capaz de ingerir listas de nodos. Para ello, requiere que esta tabla contenga el nombre de columna `Id`. Esta variable representa la columna que el software tomara en cuenta como fuente de identificadores únicos para los nodos en una red. Por ejemplo, en la lista de aristas \@ref(eq:nl1) vemos entradas correspondientes a los identificadores de cada nodo en la lista de aristas.
+Por su parte, Gephi es capaz de ingerir listas de nodos. Para ello, requiere que esta tabla contenga el nombre de columna `Id`. Esta variable representa la columna que el software tomará en cuenta como fuente de identificadores únicos para los nodos en una red. Por ejemplo, en la lista de nodos \@ref(eq:nl1) vemos entradas correspondientes a los identificadores de cada nodo en la lista de aristas.
 
 
 ## Ejercicio Práctico
@@ -314,9 +308,9 @@ Este ejercicio tiene dos propósitos:
   1. Proporcionarle práctica en recopilar datos
   2. Importar y manipular datos de modo-uno a Gephi
   
-Las redes de modo-uno consisten de un conjunto único de actores, estos pueden ser personas, grupos, organizaciones, corporaciones, naciones, etc. Los lazos entre estos pueden ser lazos de amistad o parentesco, transacciones materiales (por ejemplo, transacciones comerciales), redes de comunicación (por ejemplo, él envió o la recepción de mensajes), etc. Para este ejercicio utilizaremos los datos recopilados por Stuart Koschade de la célula terrorista Jemaah Islamiyah (JI) responsable del atentado en Bali en el 2002. 
+Las redes de modo-uno consisten de un conjunto único de actores, estos pueden ser personas, grupos, organizaciones, corporaciones, naciones, etc. Los lazos entre estos pueden ser lazos de amistad o parentesco, transacciones materiales (por ejemplo, transacciones comerciales), redes de comunicación (por ejemplo, él envió o la recepción de mensajes), etc. Para este ejercicio utilizaremos los datos recopilados por Stuart Koschade de la célula terrorista Jemaah Islamiyah (JI) responsable del atentado terrorista en Bali en el 2002. 
 
-En esta actividad nos centraremos en las visualizaciones de red. Estas son importantes porque pueden ayudarnos a rastrear y detectar patrones de relaciones en una red social determinada. Sin embargo, puesto que el ojo humano puede ser engañado fácilmente, los analistas de redes sociales confían en algoritmos de dibujo de gráficos que colocan sistemáticamente a los actores en el “espacio social”. 
+El segundo propósito de esta actividad es presentarle algunas de las funciones de la plataforma Gephi. Específicamente, nos centraremos en visualizar redes. Estos gráficos son importantes porque pueden ayudarnos a rastrear y detectar patrones de relaciones en una red social determinada. Puesto que el ojo humano puede ser engañado fácilmente, los analistas de redes sociales confían en algoritmos de dibujo de gráficos que colocan sistemáticamente a los actores en el “espacio social”.
 
 ### Preparar y Visualizar Redes de Modo-Uno en Gephi
 

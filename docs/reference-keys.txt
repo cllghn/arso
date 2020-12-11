@@ -37,9 +37,9 @@ eq:mat-op2
 eq:mat-op3
 eq:mat
 eq:el
-fig:el1
-fig:el2
-fig:el3
+tab:el1
+tab:el2
+tab:el3
 eq:el4
 eq:nl1
 fig:koschade
