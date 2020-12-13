@@ -7,19 +7,19 @@ bibliography: book.bib
 
 # Extraer y Simplificar Redes
 
-Antes de concluir esta sección sobre técnicas de manipulación de datos, tocaremos los temas de simplificación y extracción de subredes. @Everton2012 menciona que a menudo al trabajar con redes sociales grandes es difícil apreciar los patrones de interacciones por el volumen de información; por esto, los analistas utilizan un conjunto de técnicas para encoger la red o extraer subconjuntos de datos con características relevantes [@Everton2012]. El objetivo de esta sección es presentarle herramientas comúnmente utilizadas para reimaginar redes con propósito de localizar patrones emergentes. Para mantener claridad, en esta sección tocaremos cada técnica de manera individual. Antes concluir, tendrá la oportunidad de practicar el uso de estas herramientas en Gephi.
+En este último capítulo de técnicas de manipulación de datos, abarcaremos los temas de simplificación y extracción de subredes. @Everton2012 menciona que a menudo al trabajar con redes sociales grandes es difícil apreciar los patrones de interacciones por el volumen de información; por esto, los analistas utilizan un conjunto de técnicas para encoger la red o extraer subconjuntos de datos con características relevantes. El objetivo de este capítulo es presentarle herramientas comúnmente utilizadas para reimaginar redes con propósito de localizar patrones emergentes. Para mantener claridad, en esta sección tocaremos cada técnica de manera individual. Antes concluir, tendrá la oportunidad de practicar el uso de estas herramientas en Gephi.
 
 
 ## Extraer
 
-El extraer es una técnica utilizada para aislar porciones de una red con base a un conjunto de características. Estas pueden ser características de los nodos o las aristas. Por ejemplo, la en una red de pandilleros tenemos miembros de esta organización atados por diferentes tipos de enlaces. Adicionalmente, algunos de los miembros de esta organización se encuentran libres y vivos, vivos y en busqueda, y encarcelados/detenidos. La Figura \@ref(fig:pandilleros) es una representación gráfica de este ejemplo. En ella los nodos libres y vivos están coloreados de negro, los vivos y en búsqueda en gris, y los encarcelados/detenidos en blanco. Por su parte los enlaces rojos son familiares, los verdes financieros, rosados representan amistosos, y azul son de superior-subordinado.
+Extraer es una técnica utilizada para aislar porciones de una red con base a un conjunto de características. Estas pueden ser características de los nodos o las aristas. Por ejemplo, en una red de pandilleros tenemos miembros asociado por diferentes tipos de enlaces, algunos de los miembros se encuentran libres y vivos, vivos y en búsqueda, y encarcelados/detenidos. La Figura \@ref(fig:pandilleros) es una representación gráfica de este ejemplo. En ella los nodos libres y vivos están coloreados de negro, los vivos y en búsqueda en gris, y los encarcelados/detenidos en blanco. Por su parte los enlaces rojos son familiares, los verdes financieros, rosados amistosos y azul son de superior-subordinado.
 
 <div class="figure" style="text-align: center">
 <img src="02-extract-simplify_files/figure-html/pandilleros-1.png" alt="Red de Pandilleros" width="70%" />
 <p class="caption">(\#fig:pandilleros)Red de Pandilleros</p>
 </div>
 
-Podemos enfocarnos en las características de los nodos y extraer una subred con base a estos atributos. Por ejemplo, si el enfoque del análisis es localizar a los nodos vivos y libres más activos, es importante extraer de la red solo nodos libres o en busqueda. La Figure \@ref(fig:vivos) solo incluye nodos vivos y libres, por ello re han removido seis nodos de el conjunto de datos original.
+Podemos enfocarnos en las características de los nodos y extraer una subred con base a estos atributos. Por ejemplo, si el enfoque del análisis es localizar a los nodos vivos y libres más activos, es importante extraer de la red solo nodos libres o en búsqueda. La Figura \@ref(fig:vivos) sólo incluye nodos vivos y libres, por ello se han removido seis nodos de el conjunto de datos original.
 
 <div class="figure" style="text-align: center">
 <img src="02-extract-simplify_files/figure-html/vivos-1.png" alt="Red de Pandilleros Vivos y Libres" width="70%" />
@@ -35,7 +35,7 @@ Similarmente, podemos extraer subredes con base en los patrones o tipos de relac
 
 ## Simplificar
 
-El simplificar, a veces llamado colapsar, es una estrategia que permite el colapsar múltiples nodos con un atributo compartido en un conjunto de datos a uno solo nodo. Como sugiere @Everton2012, esta estrategia es valiosa si el objetivo del análisis es examinar los patrones de enlaces entre tipos de nodos y no entre nodos individuales [@Everton2012].  
+Simplificar, tambien llamado colapsar, es una estrategia que permite el aglomerar múltiples nodos con un atributo compartido a uno solo nodo. Como sugiere @Everton2012, esta estrategia es valiosa si el objetivo del análisis es examinar los patrones de enlaces entre tipos de nodos y no entre nodos individuales.  
 
 Una vez más, retornemos a la red de pandilleros. Esta vez, los nodos han sido coloreados con base a la afiliación de cada miembro a pandillas, Figura \@ref(fig:pos).
 

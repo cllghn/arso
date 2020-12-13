@@ -6,9 +6,9 @@ output: html_document
 
 # Topología
 
-Este conjunto de medidas son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación numérica sobre la estructura de la red [@Valente2010]. Esta es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros [@McCormick2000], asimismo estas configuración hace a la red más vulnerable a disrupción al remover un punado de actores clave. 
+La topología consta de una familia de medidas que son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación cuantitativa sobre la estructura de esta [@Valente2010]. Es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros [@McCormick2000]; asimismo, esta configuración hace a la red más vulnerable a disrupción al remover un puñado de actores clave. 
 
-Por ejemplo, observe las Figuras \@ref(fig:star) y \@ref(fig:full), ambas tienen la misma cantidad de nodos, pero las características estructurales de cada una tienen ventajas y desventajas. Por ejemplo, en la Figura \@ref(fig:star) la mayoría de los nodos rodean a un actor en el entro de la red. Este tipo de configuración es comúnmente asociada con organizaciones jerárquicas con protocolos establecidos de comando y control. La ventaja de esta topología es un que un nodo central controla el flujo de recursos e información, en teoría haciendo la diseminación de estos recursos mas eficiente. Sin embargo, esta estructura tiene un defecto clave. ¿Qué pasa si removemos al actor central? La red se deshace por complete y el flujo es interrumpido de manera indeterminada.
+Observe las Figuras \@ref(fig:star) y \@ref(fig:full), ambas tienen la misma cantidad de nodos, pero las características estructurales son diferentes y presentan ventajas y desventajas. Por ejemplo, en la Figura \@ref(fig:star) la mayoría de los nodos rodean a un actor en el centro de la red. Este tipo de configuración es comúnmente asociada con organizaciones jerárquicas con protocolos establecidos de comando y control. La ventaja de esta topología es un que un nodo central controla el flujo de recursos e información, en teoría haciendo la diseminación de estos más eficiente. Sin embargo, esta estructura tiene un defecto clave. ¿Qué pasa si removemos al actor central? La red se deshace por completo y el flujo es interrumpido de manera indeterminada.
 
 Ahora, en la Figura \@ref(fig:full) no encontramos una formación centrada alrededor de un actor clave. Al contrario, en este caso todos los nodos se encuentran conectados entre ellos. La ventaja es clara, no hay un solo punto de disrupción como en la Figura \@ref(fig:star). Sin embargo, las características estructurales no sugieren un solo camino para el flujo de información o recursos, lo cual en algunas ocasiones retrasa ciertos procesos organizacionales. Es decir, si todos son líderes, nadie puede estar a cargo de dar instrucciones a los demás. 
 
@@ -27,7 +27,7 @@ Ahora, en la Figura \@ref(fig:full) no encontramos una formación centrada alred
 ::::
 ::::
 
-En este capítulo, examinaremos una serie de medidas que capturan características estructurales de la red completa. Comenzaremos con una serie de medidas básicas comúnmente utilizadas para describir una red, como: tamaño, distancia y diámetro. Después, exploraremos dos dimensiones topológicas: interconexión y centralización. Esta discusión será complementada por una serie de medidas correspondientes. Finalmente, este capítulo concluirá con un ejercicio practico en Gephi.
+En este capítulo, examinaremos una serie de medidas que capturan características estructurales de la red completa. Comenzaremos con una serie de medidas básicas comúnmente utilizadas para describir una red como: tamaño, distancia y diámetro. Después, exploraremos dos dimensiones topológicas: interconexión y centralización. Esta discusión será complementada por una serie de medidas correspondientes. Finalmente, este capítulo concluirá con un ejercicio práctico en Gephi.
 
 ## Medidas Básicas de Topología
 
@@ -35,7 +35,7 @@ Estas proveen al analista contexto sobre la red en discusión. Aquí cubriremos:
 
 ### Tamaño
 
-El tamaño se refiere a el numero de actores en una red [@Everton2012]. Es importante pues afecta otras medidas topológicas de la red. Por ello, conocer tamaño de una red es importante al interpretar medidas basadas en este valor, como densidad o diámetro [@Cunningham2016].
+El tamaño se refiere a el número de actores en una red [@Everton2012]. Es importante pues afecta otras medidas topológicas de la red. Por ello, conocer el tamaño de una red es importante al interpretar medidas basadas en este valor, como densidad o diámetro [@Cunningham2016].
 
 Comúnmente denotamos el tamaño de un a red con la letra $N$. Por ejemplo, en las Figuras \@ref(fig:g5) y \@ref(fig:g10) $N$ es equivalente a 5 y 10 respectivamente. 
 
@@ -54,17 +54,17 @@ Comúnmente denotamos el tamaño de un a red con la letra $N$. Por ejemplo, en l
 ::::
 ::::
 
-En teoría, hay un límite practico a la cantidad de enlaces que puede mantener cada persona en la red, por ello, el tamaño habitualmente no es una de las medidas más interesantes sino un indicador de los limites de la red [@Valente2010]. Es por ello, que el analista debe consideran como establecer los limites de la red para reflejar de manera adecuada el tamaño real de la red [@Cunningham2016].
+En teoría, hay un límite practico a la cantidad de enlaces que puede mantener cada persona en la red, por ello, el tamaño habitualmente no es una de las medidas más interesantes sino un indicador de los límites de la red [@Valente2010]. Es por ello, que el analista debe considerar como establecer los límites para reflejar de manera adecuada el tamaño real de la red [@Cunningham2016].
 
 ### Distancia Promedio
 
-La distancia promedio se refiere a la longitud promedio de todos los caminos más cortos entre todos los actores de una red [@Everton2012]. Para un graph no dirigido binario $G$, definimos la distancia promedio como:
+La distancia promedio se refiere a la longitud promedio de todos los caminos más cortos entre todos los actores de una red [@Everton2012]. Para un grafo no dirigido binario $G$, definimos la distancia promedio como:
 
 $$
 l_G = \frac{1}{N(N-1)}\sum\limits_{i \neq j}d(v_i,v_j)
 $$
 
-Examinemos esta definición, con la Figura \@ref(fig:circ). Supongamos que el objetivo del actor 1 es transferir información de los otros actores en la red de manera mas eficiente. Si $d$ es la distancia entre un par de nodos, podemos expresar la distancia entre el nodo 1 los demás de la siguiente manera:
+Examinemos esta definición, con la Figura \@ref(fig:circ). Supongamos que el objetivo del actor 1 es transferir información a los otros actores en la red de manera más eficiente. Si $d$ es la distancia entre un par de nodos, podemos expresar la distancia entre el nodo 1 los demás de la siguiente manera:
 
 
 ::::{.row}
@@ -85,34 +85,34 @@ $$
 ::::
 ::::
 
-Por consiguiente, debemos calcular la distancia ($d$) entre cualquier nodo ($i$) y todos los demas en la red ($j$), sumar estos valores ($\sum\limits_{i \neq j}d(v_i,v_j)$)  y multiplicar este valor por la fracción del total de enlaces posibles en el gráfico ($\frac{1}{N(N-1)}$). En la Figura \@ref(fig:circ) esta operación toma lugar de la siguiente manera: 
+Por consiguiente, debemos calcular la distancia ($d$) entre cualquier nodo ($i$) y todos los demás en la red ($j$), sumar estos valores ($\sum\limits_{i \neq j}d(v_i,v_j)$)  y multiplicar este valor por la fracción del total de enlaces posibles en el gráfico ($\frac{1}{N(N-1)}$). La Figura \@ref(fig:circ) se vería reflejada como la siguiente operación: 
 
 $$
 l_G = \frac{1}{5(5-1)} \times 5(1 + 2 + 2 + 1) = 1.5
 $$
 
-Al calcular la distancia promedio, podemos decir que en promedio todos los nodos en la Figura \@ref(fig:circ) se encuentran a 1.5 pasos entre ellos. Asimismo, puesto que este es un promedio de distancias, podemos comparar este valor con el promedio de otra red.
+Al calcular la distancia promedio, podemos decir que en promedio todos los nodos en la Figura \@ref(fig:circ) se encuentran a 1.5 pasos entre ellos. Puesto que este es un promedio de distancias, podemos comparar este valor con el promedio de otra red.
 
-En términos prácticos, la distancia promedio indicativa de la velocidad con la cual la información viaja a través de una red. Es decir, en una red compacta la información se debe difundir rápidamente; al contrario, en una red con una distancia promedio alta la difusión de información tomara lugar en un periodo de tiempo más amplio [@Everton2012]. Esta interpretación no es ley, sino una interpretación comúnmente hecha por analistas. Sin embargo, es importante considerar que en ciertas situaciones redes con distancia promedio pequeñas no gozan de difusión rápida puesto que algunos actores tienden a retener información de sus vecinos [@Cunningham2016]. Adicionalmente, es impórtate recalcar que la formula de distancia promedio se centra en eficiencia, es decir distancias mas cortas entre nodos. Es posible que, en una red oscura donde los nodos no conozcan a sus vecinos o a los vecinos de sus vecinos, un actor envié información a través de caminos con distancias mayores al promedio. Por lo tanto, la distancia promedio solo sugiere eficiencias con base a la estructura de una red. 
+En términos prácticos, la distancia promedio es indicativa de la velocidad con la cual la información viaja a través de una red. Es decir, en una red compacta la información se debe difundir rápidamente; al contrario, en una red con una distancia promedio alta la difusión de información tomará lugar en un periodo de tiempo más amplio [@Everton2012]. Esta interpretación no es ley, sino una supoción comúnmente hecha por analistas. Es importante considerar que en ciertas situaciones las redes con distancia promedio pequeñas no gozan de difusión rápida puesto que algunos actores tienden a retener información de sus vecinos [@Cunningham2016]. Adicionalmente, se debe recalcar que la fórmula de distancia promedio se centra en eficiencia, es decir, distancias más cortas entre nodos. Es posible que, en una red oscura donde los nodos no conozcan a sus vecinos o a los vecinos de sus vecinos, un actor envié información a través de caminos con distancias mayores al promedio. Por lo tanto, la distancia promedio solo sugiere eficiencias con base a la estructura de una red. 
 
 ### Diámetro
 
-La distancia geodésica mayor entre cualquier par de nodos en un grafo [@Everton2012]. Formalmente, @Wasserman1994 definen esta medida como la máxima $d(i, j)$ o $maxd(i,j)$. Por ejemplo, podemos calcular las distancias geodésicas de la Figura \@ref(fig:diam):
+La distancia geodésica mayor entre todos los nodos en un grafo [@Everton2012]. Formalmente, @Wasserman1994 definen esta medida como la máxima $d(i, j)$ o $maxd(i,j)$. Por ejemplo, podemos calcular las distancias geodésicas de la Figura \@ref(fig:diam):
 
 <div class="figure" style="text-align: center">
 <img src="03-topologia_files/figure-html/diam-1.png" alt="Grafo ejemplo" width="70%" />
 <p class="caption">(\#fig:diam)Grafo ejemplo</p>
 </div>
 
-El diámetro del grafo es equivalente a $max d(i,j)$ = $d(1,5)$= 3.
+El diámetro del grafo es equivalente es $max d(i,j)$ = $d(1,5)$= 3.
 
 Esta medida es importante pues cuantifica cuán lejos se encuentran los nodos más distantes entre sí [@Wasserman1994]. Como con la distancia promedio, consideremos una red en la cual la información viaja a través de los vínculos entre actores. Suponiendo que los mensajes siguen las rutas más cortas, tomará tiempo para que un mensaje recurra toda la red cuando el diámetro es mayor. 
 
 ## Interconexión 
 
-En una red oscura, la interconexión entre los actores es crucial para la red como organismo dinámico. Por ejemplo, puesto que la seguridad de la organización es crucial, a menudo el reclutamiento de nuevos miembros toma lugar a través de los vínculos preexistentes de miembros de la red [@Cunningham2016]. Es por este aislamiento que las redes oscuras enfocadas en el anonimato tienden volverse cada vez más densas con vínculos entre miembros de la red y pocos enlaces al mundo exterior. Sin embargo, el cortar vínculos con el mundo exterior conlleva un costo al limitar el acceso a recursos (por ejemplo, materiales, logísticos, financieros, etc.). Es por ello, que algunos investigadores y analistas sugieren que los vínculos a externos a actores externos a la red oscura son esenciales para acceder recursos y sobrevivir retos [@Uzzi1996]. 
+En una red oscura, la interconexión entre los actores es crucial para la red como organismo dinámico. Por ejemplo, puesto que la seguridad de la organización es crucial, a menudo el reclutamiento de nuevos miembros toma lugar a través de los vínculos preexistentes de miembros de la red [@Cunningham2016]. Es por este aislamiento que las redes oscuras enfocadas en el anonimato tienden volverse cada vez más densas con vínculos entre miembros de la red y pocos enlaces al mundo exterior. Sin embargo, el cortar vínculos con el mundo exterior conlleva un costo al limitar el acceso a recursos (por ejemplo, materiales, logísticos, financieros, etc.). Es por ello, que algunos investigadores y analistas sugieren que los vínculos a actores externos a la red oscura son esenciales para acceder recursos y sobrevivir retos [@Uzzi1996]. 
 
-Esta dinámica entre acceso a recursos y seguridad, fuerza a las organizaciones y a los actores que las conforman a balancear aislamiento (por ejemplo, interconexión alta) con acceso a recursos exteriores (por ejemplo, interconexión moderada o baja). En esta sección, nos enfocamos en las medidas comúnmente utilizadas para medir este proceso. Específicamente, densidad y grado medio.
+Esta dinámica entre acceso a recursos y seguridad, fuerza a las organizaciones y a los actores que las conforman a balancear aislamiento (por ejemplo, interconexión alta) con acceso a recursos exteriores (por ejemplo, interconexión moderada o baja). En esta sección, nos enfocamos en las medidas comúnmente utilizadas para medir este proceso, específicamente, densidad y grado medio.
 
 ### Densidad
 
@@ -122,7 +122,7 @@ $$
 d = \frac{L}{n(n-1)/2}
 $$
 
-Donde $L$ se refiere al numero actual de enlaces y $n$ es el numero de actores en la red. Para una red dirigida, no es necesario dividir el denominador entre dos, por lo que la ecuación es diferente:
+Donde $L$ se refiere al número actual de enlaces y $n$ es el número de actores en la red. Para una red dirigida, no es necesario dividir el denominador entre dos, por lo que la ecuación es diferente:
 
 $$
 d = \frac{L}{n(n-1)}
@@ -151,11 +151,11 @@ Pongamos esta herramienta en práctica; específicamente, con la Figura \@ref(fi
 ::::
 ::::
 
-El numero actual ($L$) de enlaces es seis y contamos con cuatro nodos en este gráfico. Entonces, la densidad de esta red es equivalente a $d = \frac{6}{3}$ = 0.5. Es decir, la interconexión de la red es 0.5 o la mitad de posible donde todos los actores están conectados.
+El número actual ($L$) de enlaces es seis y contamos con cuatro nodos en este gráfico. Entonces, la densidad de esta red es equivalente a $d = \frac{6}{3}$ = 0.5. Es decir, la interconexión de la red es 0.5 o solo la mitad de los actores están conectados.
 
 ### Grado Medio
 
-La medida de densidad está inversamente relacionada con el tamaño de la red porque al agregar actores a la red el número de vínculos posibles aumenta exponencialmente mientras que el número de vínculos que cada actor puede mantener es limitado [@Everton2012]. Es por ello que a menudo las redes más grandes tendrán densidades más bajas. Con base en esta observación, los analistas de redes utilizan la medida de grado medio para comparar el nivel de interconexión entre redes de diferentes tamaños. El grado medio se define formalmente como el promedio de enlaces que tiene cada actor en la red. Si el grado de cada nodo es $k$, entonces:
+La medida de densidad está inversamente relacionada con el tamaño de la red, puesto que al agregar actores a la red, el número de vínculos posibles aumenta exponencialmente mientras que el número de vínculos que cada actor puede mantener se mantiene constante [@Everton2012]. Es por ello, que a menudo las redes más grandes tendrán densidades más bajas. Con base en esta observación, los analistas de redes utilizan la medida de grado medio para comparar el nivel de interconexión entre redes de diferentes tamaños. El grado medio se define formalmente como el promedio de enlaces que tiene cada actor en la red. Si el grado de cada nodo es $k$, entonces:
 
 $$
 \bar{k} = \frac{E}{N}
@@ -164,7 +164,7 @@ $$
 
 
 
-Donde $N$ es el numero de nodos y $E$ es el numero de vínculos en la red. En términos prácticos, esta ecuación retorna un numero promedio de vínculos para todos los actores en la red. Esto, nos ayuda a comparar redes de diferentes tamaños. Por ejemplo, las redes \@ref(fig:avg1) y \@ref(fig:avg2) tienen un grado medio similar, de 1.98 y 1.99 respectivamente. Adicionalmente, la densidad es equivalente a 0.02 y a 0.01.
+Donde $N$ es el número de nodos y $E$ es el número de vínculos en la red. En términos prácticos, esta ecuación retorna un número promedio de vínculos para todos los actores en la red. Esto nos ayuda a comparar redes de diferentes tamaños. Por ejemplo, las redes \@ref(fig:avg1) y \@ref(fig:avg2) tienen un grado medio similar, de 1.98 y 1.99 respectivamente. La densidad es equivalente a 0.02 y a 0.01,.
 
 :::{.row}
 ::::{.lcolumn-50}
@@ -181,26 +181,25 @@ Donde $N$ es el numero de nodos y $E$ es el numero de vínculos en la red. En t�
 ::::
 ::::
 
-Es decir, aunque la densidad de estos gráficos es disimilar podemos atribuir esta discrepancia a el numero de nodos en cada red. Sin embargo, al comparar el grado medio, vemos que en promedio cada actor en ambas redes se encuentra conectado a dos otros nodos.
+Es decir, aunque la densidad de estos gráficos es disímil podemos atribuir esta discrepancia a el número de nodos en cada red. Sin embargo, la medida más adecuada en esta situacion sería el grado medio, la cual como vemos nos permite comparar el nivel de interconexión entre redes de diferente tamaño. 
 
 ## Centralización
 
-Para recapitular, la eficiencia operacional de una red se ve afectada por la habilidad de esta para movilizar recursos materiales o humanos [@McCormick2000]. Algunos, sugieren que esta capacidad operacional se encuentra íntimamente relacionada con la topología de la red social; específicamente, la centralización de la red [@Morselli2001; @Cunningham2016]. Sin embargo, las redes altamente centralizadas no son libres de desafíos. Por ejemplo, son vulnerables a la eliminación de un puñado clave de nodos [@Bakker2011]. Por ello, @Everton2012a hace el argumento "demasiado de algo bueno puede llevar a las redes a tener un rendimiento inferior ... [desde la perspectiva de la red oscura] no deben encontrase demasiado centralizadas o descentralizadas, mientras que desde la nuestra así es exactamente como queremos que sean" [@Everton2012a]. 
+Para recapitular, la eficiencia operacional de una red se ve afectada por la habilidad de esta para movilizar recursos materiales o humanos [@McCormick2000]. Algunos sugieren que esta capacidad operacional se encuentra íntimamente relacionada con la topología de la red social; específicamente, la centralización de la red [@Morselli2001; @Cunningham2016]. Sin embargo, las redes altamente centralizadas no son libres de desafíos. Sino que pueden ser vulnerables a la eliminación de un puñado clave de nodos [@Bakker2011]. Por ello, @Everton2012a hace el argumento "demasiado de algo bueno puede llevar a las redes a tener un rendimiento inferior ... [desde la perspectiva de la red oscura] no deben encontrase demasiado centralizadas o descentralizadas, mientras que desde la nuestra así es exactamente como queremos que sean" [@Everton2012a]. 
 
-
-Por consiguiente, es crucial que como analistas de redes sepamos como determinar el nivel de centralización de una red. En la siguiente sección presentamos la medida de centralización, la cual es comúnmente utilizada para capturar de manera cuantitativa el nivel de centralización de una red.
+Es crucial que como analistas de redes sepamos como determinar el nivel de centralización de una red. En la siguiente sección presentamos la medida de centralización, la cual es comúnmente utilizada para capturar de manera cuantitativa el nivel de centralización de una red.
 
 ### Centralización
 
 La centralización es el grado en que los vínculos de una red se centran en una persona o un conjunto de personas, de modo que en una red centralizada, una o varias personas ocupan puestos de poder y control en la red, mientras que las redes descentralizadas tienen estructuras de poder y control difusas [@Valente2010].
 
-Esta medida se basa en la centralidad de cada nodo en la red para calcular que tan variables o heterogéneas son las centralidades de cada actor [@Wasserman1994]. Podemos observar un ejemplo de red centralizada en la Figura \@ref(fig:star). En el grafo estrella el actor uno (1) tiene contacto directo con todos los demás, los cuales no tienen contacto entre ellos. Utilizando este concepto básico de centralidad de grado, el numero de vínculos que tiene cada nodo, exploremos como calcular la centralización de grado. Aquí utilizamos la definición general matemática de Freeman [-@Freeman1979] para calcular el índice de centralización de grado a nivel grupo:
+Esta medida se basa en la centralidad de cada nodo en la red para calcular que tan variables o heterogéneas es la distribución de estos índices para cada actor [@Wasserman1994]. Podemos observar un ejemplo de red centralizada en la Figura \@ref(fig:star). En el grafo estrella el actor uno (1) tiene contacto directo con todos los demás, los cuales no tienen contacto entre ellos. Utilizando el concepto de centralidad de grado, que es el número de vínculos que tiene cada nodo, exploremos como calcular la centralización de grado. Aquí utilizamos la definición general matemática de Freeman [-@Freeman1979] para calcular el índice de centralización de grado a nivel grupo:
 
 $$
 C = \frac{\sum [C(n^*) - C(n_i)]}{max\sum [C(n^*) - C(n_i)]}
 $$
 
-Donde $C(n_i)$ representa el índice de centralidad de un actor y $C(n^*)$ es el mayor valor del índice de centralidad en la red. Por lo tanto, $\sum [C(n^*) - C(n_i)]$ es la suma de las diferencias entre el valor maximo y los valores observados; adicionalmente, $max\sum [C(n^*) - C(n_i)]$ es la suma teórica máxima [@Wasserman1994]. El producto de esta operación es un índice entre 0 y 1. Una red con un índice de centralización 0 seria aquella donde todos los actores tienen la misma centralidad. De manera opuesta, una rede con índice de centralización 1 representa una configuración donde un solo actor domina el índice de centralidad comparado con los demás nodos en la red. Pongamos este nuevo conocimiento en práctica utilizando la medida básica de centralidad de grado, la cual representa el número de vínculos que tiene cada nodo. Utilizando la fórmula de Freeman, calculemos la centralización de grado la red estrella (\@ref(fig:star)). 
+Donde $C(n_i)$ representa el índice de centralidad de un actor y $C(n^*)$ es el mayor valor del índice de centralidad en la red. Por lo tanto, $\sum [C(n^*) - C(n_i)]$ es la suma de las diferencias entre el valor máximo y los valores observados; adicionalmente, $max\sum [C(n^*) - C(n_i)]$ es la suma teórica máxima [@Wasserman1994]. El producto de esta operación es un índice entre 0 y 1. Una red con un índice de centralización 0 sería aquella donde todos los actores tienen la misma centralidad. De manera opuesta, una red con índice de centralización 1 representa una configuración donde un solo actor domina el índice de centralidad comparado con los demás nodos en la red.Utilizando la fórmula de Freeman, calculemos la centralización de grado para la red estrella (ver Figura \@ref(fig:star)). 
 
 :::: {.row}
 :::: {.lcolumn-50}
@@ -225,7 +224,7 @@ Nodo   & Grado \\
 ::::
 ::::
 
-En la red estrella encontramos una centralización de grado de 1.0. Por consiguiente, de manera matemática asumimos que los nodos en este grafico convergen alrededor de un actor central.
+En la red estrella la centralización de grado es 1.0 (ver ecuaciónn \@ref(eq:grados)). Por consiguiente, de manera matemática asumimos que los nodos en este gráfico convergen alrededor de un actor central.
 
 <div class="figure" style="text-align: center">
 <img src="03-topologia_files/figure-html/star2-1.png" alt="Red estrella modificada" width="70%" />
@@ -255,9 +254,9 @@ Nodo   & Grado \\
 ::::
 ::::
 
-El índice de centralización de grado es 0.833. Lo cual sugiere que la mayoría de los vínculos en la red se encuentran enlazados con un actor central. Sin embargo, al agregar vínculos en la periferia de la red vemos una reducción en la homogeneidad de los valores individuales, la cual reduce el índice grupal.
+El índice de centralización de grado es 0.833 (ver ecuaciónn \@ref(eq:grados2)). Lo cual sugiere que la mayoría de los vínculos en la red se encuentran enlazados con un actor central. Sin embargo, al agregar vínculos en la periferia de la red vemos una reducción en la homogeneidad de los valores individuales, la cual reduce el índice grupal.
 
-Antes de concluir esta sección, es importante recalcar dos cosas. Primero, como se ha mencionado la centralización es un índice grupal generado a base de las medidas de centralidad para cada vértice. En los siguientes capítulos veremos múltiples medidas de centralidad que pueden servir como precursores para calcular una medida de centralización. En este capitulo solamente hemos utilizado la centralidad de grado como precursor, pero es importante tener en mente que es posible generar índices de centralización con medidas de centralidad como intermediación, cercanía, o eigenvector. Segundo, Gephi no tiene la capacidad de calcular centralización, sin embargo, otras plataformas de software (como ORA, UCInet, o igraph) tienen esta capacidad y complementan las funciones de Gephi. 
+Antes de concluir esta sección, es importante recalcar dos cosas. Primero, como se ha mencionado la centralización es un índice grupal generado a base de las medidas de centralidad para cada vértice. En los siguientes capítulos veremos múltiples medidas de centralidad que pueden servir como precursores para calcular una medida de centralización. En este capítulo solamente hemos utilizado la centralidad de grado como precursor, pero es importante tener en mente que es posible generar índices de centralización con medidas de centralidad como intermediación, cercanía, o eigenvector. Segundo, Gephi no tiene la capacidad de calcular centralización, sin embargo, otras plataformas de software (como ORA, UCInet, o igraph) tienen esta capacidad y complementan las funciones de Gephi. 
 
 ## Ejercicio Práctico
 

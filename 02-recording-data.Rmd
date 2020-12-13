@@ -308,9 +308,10 @@ Este ejercicio tiene dos propósitos:
   1. Proporcionarle práctica en recopilar datos
   2. Importar y manipular datos de modo-uno a Gephi
   
-Las redes de modo-uno consisten de un conjunto único de actores, estos pueden ser personas, grupos, organizaciones, corporaciones, naciones, etc. Los lazos entre estos pueden ser lazos de amistad o parentesco, transacciones materiales (por ejemplo, transacciones comerciales), redes de comunicación (por ejemplo, él envió o la recepción de mensajes), etc. Para este ejercicio utilizaremos los datos recopilados por Stuart Koschade de la célula terrorista Jemaah Islamiyah (JI) responsable del atentado terrorista en Bali en el 2002. 
+Las redes de modo-uno consistende un conjunto único de actores, estos pueden ser personas, grupos, organizaciones, corporaciones, naciones, etc. Los lazos entre estos pueden ser lazos de amistado parentesco, transacciones materiales (por ejemplo, transacciones comerciales), redes de comunicación (por ejemplo, élenvió o la recepción de mensajes), etc. En este laboratorio, utilizaremos los datos recopilados por Stuart Koschade de la célula terrorista Jemaah Islamiyah (JI) responsable del atentado terrorista en Bali del 2002. Todos los datos requeridos en este ejercicio deberán ser primero generados por el usuario y luego descargados.
 
-El segundo propósito de esta actividad es presentarle algunas de las funciones de la plataforma Gephi. Específicamente, nos centraremos en visualizar redes. Estos gráficos son importantes porque pueden ayudarnos a rastrear y detectar patrones de relaciones en una red social determinada. Puesto que el ojo humano puede ser engañado fácilmente, los analistas de redes sociales confían en algoritmos de dibujo de gráficos que colocan sistemáticamente a los actores en el “espacio social”.
+El segundo propósito de esta actividad es presentarle algunas de las funciones de la plataforma Gephi. Específicamente, nos centraremos en visualizar redes. Estos gráficos son importantes porque pueden ayudarnos a rastrear y detectar patrones de relaciones en una red social determinada. Sin embargo, puesto que el ojo humano puede ser engañado fácilmente, los analistas de redes sociales confían en algoritmos de dibujo de gráficos que colocan sistemáticamente a los actores en el “espacio social”. 
+
 
 ### Preparar y Visualizar Redes de Modo-Uno en Gephi
 
@@ -325,7 +326,7 @@ knitr::include_graphics("images/02-Fig_1_Matrix_Excel.png")
 *[Vista general] > Nuevo Projecto*
 ::::
 ::::{.rcolumn-80}
-  1. Abra Gephi y seleccione la opción *Nuevo proyecto* en la pantalla de “Bienvenido a Gephi” (no se muestra en este documento). Asegúrese de estar en la ventana “Vista general” en la esquina superior izquierda de la interfaz. Una vez allí, su interfaz deberá parecerse a la Figura \@ref(fig:gv). 
+  1. Abra Gephi y seleccione la opción *Nuevo proyecto* en la pantalla de “Bienvenido a Gephi”. Asegúrese de estar en la ventana “Vista general” en la esquina superior izquierda de la interfaz. Una vez allí, su interfaz deberá parecerse a la Figura \@ref(fig:gv). 
 ::::
 ::::
 
@@ -338,7 +339,7 @@ knitr::include_graphics("images/02-Fig_2_General_View.png")
 *Archivo > Abrir…*
 ::::
 ::::{.rcolumn-80}
-  2. Primero debemos importar los datos de recopilados en el primer paso a Gephi. Para hacer esto, use el comando *Archivo > Abrir…* Esto abrirá un cuadro de dialogo (no mostrado) desde el cual puede ubicar y seleccionar el archivo de Excel que creo anteriormente. Una vez que haya hecho esto, haga clic en *Abrir* y aparecerá un nuevo cuadro de dialogo, similar a la Figura \@ref(fig:import) Tenga en cuenta que, en la esquina superior derecha, tiene la opción de importa la hoja de cálculo en varios formatos. Como registramos los datos en matriz, utilizaremos la opción *Matriz*. Haga clic en *Siguiente*, en el siguiente cuadro de dialogo, haga clic en *Terminar* (puesto que no tenemos información de tiempo asociada con estos datos).
+  2. Primero debemos importar los datos de recopilados en el primer paso a Gephi. Para hacer esto, use el comando *Archivo > Abrir…*. Esto abrirá un cuadro de diálogo (no mostrado) desde el cual puede ubicar y seleccionar el archivo de Excel que creo anteriormente. Una vez que haya hecho esto, haga clic en *Abrir* y aparecerá un nuevo cuadro de diálogo, similar a la Figura \@ref(fig:import). Tenga en cuenta que, en la esquina superior derecha, tiene la opción de importa la hoja de cálculo en varios formatos. Como registramos los datos en matriz, utilizaremos la opción *Matriz*. Haga clic en *Siguiente*, en el siguiente cuadro de díalogo, haga clic en *Terminar* (puesto que no tenemos información de tiempo asociada con estos datos).
 ::::
 ::::
   
@@ -353,7 +354,7 @@ knitr::include_graphics("images/02-Fig_3_Importing_Gephi.png")
 *Mas opciones… > Estrategias para combinar aristas>Mínimo*
 ::::
 ::::{.rcolumn-80}
-  3. Gephi produce un *Informe de importación* (ver Figura \@ref(fig:import-report)), que proporciona varios tipos de información, por ejemplo, si ocurrió algún error durante la importación, numero de nodos (actores) en la red, la cantidad de bordes (aristas), y así sucesivamente. Ahora, necesitamos decirle a Gephi que esta es una red no dirigida utilizando el menú desplegable *Tipo de grafico* (el tipo predeterminado es *Mixto*). A continuación, haga clic en el enlace *Mas opciones…*, y luego en el menú desplegable *Estrategia para combinar aristas* seleccione *Mínimo*. Este último paso asegura que los pesos de los bordes no se dupliquen. Ahora, haga clic en *Aceptar*.
+  3. Gephi produce un *Informe de importación* (ver Figura \@ref(fig:import-report)), que proporciona varios tipos de información, por ejemplo, si ocurrió algún error durante la importación, numero de nodos (actores) en la red, la cantidad de bordes (aristas), etc. Ahora, necesitamos decirle a Gephi que esta es una red no dirigida utilizando el menú desplegable *Tipo de grafico* (el tipo predeterminado es *Mixto*). A continuación, haga clic en el enlace *Mas opciones…*, y luego en el menú desplegable *Estrategia para combinar aristas* seleccione *Mínimo*. Este último paso asegura que los pesos de los bordes no se dupliquen. Ahora, haga clic en *Aceptar*.
 ::::
 ::::
   
@@ -366,7 +367,7 @@ knitr::include_graphics("images/02-Fig_4_Importing_Report.png")
 *Apariencia > Nodos > Único*
 ::::
 ::::{.rcolumn-80}
-  4. Su red ahora deberá estar cargada, pero probablemente no se vea bien. Comencemos cambiando el color de los nodos. En la esquina superior izquierda de la interfaz vera un pestana *Apariencia* (consulte la Figura \@ref(fig:apariencia)). Allí, seleccione la pestaña *Nodos* y el icono de paleta de color (que es el icono más a la izquierda). Debajo de la pestaña *Nodos* vera un rango de opciones, si no está seleccionada la pestaña *Único*, haga clic en esta. Debajo de esta opción, note un cuadro gris (a la izquierda de `#c0c0c0`); clic manténgalo presionado para seleccionar un nuevo color, luego seleccione *Aplicar*). 
+  4. Su red ahora deberá aparecer en pantalla, pero es probable que los nodos aparezcan de manera desordenada. Comencemos cambiando el color de los nodos. En la esquina superior izquierda de la interfaz vera un pestana *Apariencia* (consulte la Figura \@ref(fig:apariencia)). Allí, seleccione la pestaña *Nodos* y el ícono de paleta de color (que es el ícono más a la izquierda). Debajo de la pestaña *Nodos* verá un rango de opciones, si no está seleccionada la pestaña *Único*, haga clic en esta. Debajo de esta opción, note un cuadro gris (a la izquierda de `#c0c0c0`); de clic y manténgalo presionado para seleccionar un nuevo color, luego seleccione *Aplicar*. 
 ::::
 ::::
 
@@ -380,7 +381,7 @@ knitr::include_graphics("images/02-Fig-5_apariencia.png")
 *Distribuicion  >Fruchterman Reingold, Force Atlas, Expansion, Yifan Hu*
 ::::
 ::::{.rcolumn-80}
-  5. Justo debajo de la pestaña *Apariencia* encontraraá otra de nombre *Distribución* (consulte la Figura \@ref(fig:diseno)). Gephi ofrece varias opciones de distribución de nodos, sobre las cuales poder aprender en la página de tutoriales de [Gephi](https://gephi.org/users/tutorial-layouts/).  En esta actividad solo exploraremos unos pocos. Utilizando el menú desplegable, primero seleccione el algoritmo de nombre *Fruchterman Reigold* y haga clic en el botón *Ejecutar*.   Dependiendo de la red, es posible que este algoritmo no sea el adecuado. Pruebe otros, por ejemplo *Force Atlas*. Al principio parecerá que los nodos han colapsado unos sobre otros, pero esto es engañoso. Para ver porque, elija la opción *Expansion* y haga clic repetidamente en el botón *Ejecutar* hasta que el grafico sea los suficientemente grande para poder distinguir las conexiones entre nodos. Finalmente. Pruebe el algoritmo *Yifan Hu*, el cual, al menos con la red de Koschade, produce el grafico más adecuado. Es decir, los subgrupos son fáciles de detectar y los nodos no se encuentran apilados unos sobre los otros. 
+  5. Justo debajo de la pestaña *Apariencia* encontraraá otra de nombre *Distribución* (consulte la Figura \@ref(fig:diseno)). Gephi ofrece varias opciones de distribución de nodos, spara más información sobre estas consulte la página de tutoriales de [Gephi](https://gephi.org/users/tutorial-layouts/).  En esta actividad solo exploraremos algunas de estas estrategias de distribución. Utilizando el menú desplegable, primero seleccione el algoritmo de nombre *Fruchterman Reigold* y haga clic en el botón *Ejecutar*. Dependiendo de la red, es posible que este algoritmo no sea el adecuado. Pruebe otros, por ejemplo *Force Atlas*. Al principio parecerá que los nodos han colapsado unos sobre otros, pero esto es engañoso. Para ver porque, elija la opción *Expansion* y haga clic repetidamente en el botón *Ejecutar* hasta que el gráfico sea los suficientemente grande para poder distinguir las conexiones entre nodos. Finalmente. Pruebe el algoritmo *Yifan Hu*, el cual, al menos con la red de Koschade, produce el gráfico más adecuado. Es decir, los subgrupos son fáciles de detectar y los nodos no se encuentran apilados unos sobre los otros. 
 ::::
 ::::
 
@@ -393,12 +394,12 @@ knitr::include_graphics("images/02-Fig_6_Layout.png")
 *Grafo*
 ::::
 ::::{.rcolumn-80}
-  6. Estas manipulaciones deben crear un gráfico similar a la Figura ## (similar pues usted ha elegido el color de los nodos). Ahora, note lo diferentes botones al costado de la ventana del *Grafo* (ver Figura ##), estos nos permiten hacer algunos ajustes rápidos al grafo. Por ejemplo, el botón 1 centra el grafico, el 2 activa y desactiva las etiquetas, o puede controlar el tamaño de las etiquetas con la barra deslizante demarcada con el número 5. El botón 3 alterna el color de los nodos. Por último, note la flecha pequeña en la esquina inferior derecha (numero 6), en el siguiente paso y otros laboratorios utilizaremos esta opción.
+  6. Estas manipulaciones deben crear un gráfico similar a la Figura \@ref(fig:botones) (similar pues usted ha elegido el color de los nodos). Ahora, note lo diferentes botones al costado de la ventana del *Grafo* (ver Figura \@ref(fig:botones)), estos nos permiten hacer algunos ajustes rápidos al grafo. Por ejemplo, el botón 1 centra el gráfico, el 2 activa y desactiva las etiquetas, o puede controlar el tamaño de las etiquetas con la barra deslizante demarcada con el número 5. El botón 3 alterna el color de los nodos. Por último, note la flecha pequeña en la esquina inferior derecha (número 6), en el siguiente paso y otros laboratorios utilizaremos esta opción.
 ::::
 ::::  
   
-```{r}
-print("DO NOT FORGET TO ADD FIGURE HERE")
+```{r botones, fig.cap = "Botones en Gephi"}
+knitr::include_graphics("images/01-botones_gephi.png")
 ```
 
 ::::{.row}
@@ -406,29 +407,16 @@ print("DO NOT FORGET TO ADD FIGURE HERE")
 
 ::::
 ::::{.rcolumn-80}
-  7.	Al darle clic a la pequeña flecha (número 6 en la Figura ##), se debe levantar un panel con controles adicionales para manipular la red. El menú que debe es el de controles *Globales* (Figura ##). En este, quizás el control más útil es la barra deslizante de zoom (etiqueta 2), que controla el tamaño del gráfico. En la imagen de abajo he aumentado el tamaño de la red y he centrado la imagen presionando el botón derecho del ratón y arrastrando el gráfico hacia el centro de la ventana. Además de modificar la dimensión del gráfico, puede cambiar el fondo dando clic en el cuadro en la esquina inferior izquierda (etiqueta 1).
+  7.	Al darle clic a la pequeña flecha (número 6 en la Figura \@ref(fig:botones)), se debe levantar un panel con controles adicionales para manipular la red. El menú que debe es el de controles *Globales* (Figura \@ref(fig:globales)). En este, quizás el control más útil es la barra deslizante de zoom (etiqueta 2), que controla el tamaño del gráfico. En la imagen de abajo he aumentado el tamaño de la red y he centrado la imagen presionando el botón derecho del ratón y arrastrando el gráfico hacia el centro de la ventana. Además de modificar la dimensión del gráfico, puede cambiar el fondo dando clic en el cuadro en la esquina inferior izquierda (etiqueta 1).
 ::::
 ::::  
 
-```{r}
-print("DO NOT FORGET TO ADD FIGURE HERE")
+```{r globales, fig.cap = "Pestaña de Controles Globales en Gephi"}
+knitr::include_graphics("images/01-botones_gephi2.png")
 ```
 
-```{r}
-print("DO NOT FORGET TO ADD FIGURE HERE")
-```
-
-::::{.row}
-::::{.lcolumn-20}
-
-::::
-::::{.rcolumn-80}
-  8.	En la Figura ## he seleccionado el panel de control de aristas, proceda haciendo lo mismo. Ahora, cambie el color de las aristas a gris (vea etiqueta 1 en la Figura ##) y use la barra deslizante (etiqueta 2) para reducir el ancho de cada línea. Finalmente, en la Figura 10 a continuación, seleccione la pestaña de etiquetas en el panel de control. Aquí, haga clic en el cuadro a un lado de *Nodos* (etiqueta 1 en la Figura 10) para activar las etiquetas de los nodos en el gráfico. Como verá estas serán inicialmente un poco grandes. Para ajustar estas cambie el tamaño estas utilizando la barra deslizante (etiqueta 3 en Figura 10). En Gephi siempre hay un par de maneras de hacer lo mismo. Por ejemplo, si selecciona el botón a un lado de “Fuentes” (etiqueta 2) note que puede cambiar múltiples propiedades de las etiquetas de cada nodo. El análisis de redes depende de gráficos claros y concisos. Tomo un par de minutos para modificar estas etiquetas a su gusto y cuando termine cierre el panel dando clic a la flecha (etiqueta 4) a mano derecha (ahora apuntando hacia abajo). 
-::::
-::::
-
-```{r}
-print("DO NOT FORGET TO ADD FIGURE HERE")
+```{r globales2, fig.cap = "Pestaña de Control de Aristas"}
+knitr::include_graphics("images/01-botones_gephi3.png")
 ```
 
 ::::{.row}
@@ -436,7 +424,20 @@ print("DO NOT FORGET TO ADD FIGURE HERE")
 
 ::::
 ::::{.rcolumn-80}
-  9.	Limpiemos el gráfico. Para esto, seleccione la pestaña de *Distribución* y seleccione la opción *Ajuste de etiquetas* y haga clic en *Ejecutar*. Este algoritmo de diseño moverá los nodos ligeramente para que las etiquetas no se superpongan. Ahora, seleccione la opción *Noverlap*, y nuevamente de clic en *Ejecutar*. Vera que nuevamente los nodos deberán moverse, creando una distancia entre ellos para que sean más fáciles de discernir. Ahora, observe el grafo. **¿Surge patrones? ¿Hay algún grupo distinto? Si es así, ¿alguna persona actúa como intermediario entre los distintos grupos? ¿Alguno de los individuos parece estas más aislado socialmente que otros? ¿Cómo se comparan los dibujos con la Figura 1 en el artículo de Koschade?**
+  8.	En la Figura \@ref(fig:globales2) he seleccionado el panel de control de aristas, proceda haciendo lo mismo. Ahora, cambie el color de las aristas a gris (vea etiqueta 1 en la Figura \@ref(fig:globales2)) y use la barra deslizante (etiqueta 2) para reducir el ancho de cada línea. . Finalmente, seleccione la pestaña de etiquetas en el panel de control. Aquí, haga clic en el cuadro a un lado de *Nodos* (etiqueta 1 en la Figura \@ref(fig:globales3)) para activar las etiquetas de los nodos en el gráfico. Como verá estas serán inicialmente un poco grandes. Para ajustar estas cambie el tamaño estas utilizando la barra deslizante (etiqueta 3 en Figura \@ref(fig:globales3)). En Gephi siempre hay un par de maneras de hacer lo mismo. Por ejemplo, si selecciona el botón a un lado de “Fuentes” (etiqueta 2) note que puede cambiar múltiples propiedades de las etiquetas de cada nodo. El análisis de redes depende de gráficos claros y concisos. Tómese un par de minutos para modificar estas etiquetas a su gusto y cuando termine cierre el panel dando clic a la flecha (etiqueta 4) a mano derecha (ahora apuntando hacia abajo). 
+::::
+::::
+
+```{r globales3, fig.cap = "Panel de Control de Etiquetas en Gephi"}
+knitr::include_graphics("images/01-botones_gephi4.png")
+```
+
+::::{.row}
+::::{.lcolumn-20}
+
+::::
+::::{.rcolumn-80}
+  9.	10.	Terminemos de editar el gráfico. Para esto, seleccione la pestaña de *Distribución* y seleccione la opción *Ajuste de etiquetas* y haga clic en *Ejecutar*. Este algoritmo de diseño moverá los nodos ligeramente para que las etiquetas no se superpongan. Ahora, seleccione la opción *Noverlap*, y nuevamente de clic en *Ejecutar*. Verá que nuevamente los nodos deberán moverse, creando una distancia entre ellos para que sean más fáciles de discernir. Ahora, observe el grafo. **¿Surge patrones? ¿Hay algún grupo distinto? Si es así, ¿alguna persona actúa como intermediario entre los distintos grupos? ¿Alguno de los individuos parece estas más aislado socialmente que otros? ¿Cómo se comparan los dibujos con la Figura 1 en el artículo de Koschade?**
 ::::
 ::::
  
@@ -487,7 +488,7 @@ knitr::include_graphics("images/02-Fig_11_Gephi_Edge_List.png")
 *[Previsualización]*
 ::::
 ::::{.rcolumn-80}
-  1. Ahora, veamos como guardar nuestro grafico de red. Para esto haga clic en el botón *Previsualización* para cambiar de espacio en Gephi. Al principio no ha de ver nada relevante, así que haga clic en el botón *Refrescar* en la parte inferior de la ventana. Esto resultara en un gráfico de red similar a la Figura \@ref(fig:preview).
+  1. Ahora, veamos como guardar nuestro gráfico de red. Para esto haga clic en el botón *Previsualización* para cambiar de espacio en Gephi. Al principio aparecerá una ventana vacía, así que haga clic en el botón *Refrescar* en la parte inferior de la ventana. Esto resultará en un gráfico de red similar a la Figura \@ref(fig:preview).
 ::::
 ::::
 
@@ -500,7 +501,7 @@ knitr::include_graphics("images/02-Fig-12_preview.png")
 *Etiquetas de nodos > Mostrar etiquetas, Tamaño proporcional, Fuente*
 ::::
 ::::{.rcolumn-80}
-  2. Definitivamente debemos hacer algunos ajustes en el panel izquierdo de la ventana. Comencemos seleccionando primero la opción *Mostrar etiquetas* y deseleccionar la opción *Tamaño proporcional* (esta reducirá el tamaño de las etiquetas) en la subsección “Etiquetas de nodo”. Una vez más haga clic en *Refrescar* para ver el efecto de los cambios. Si cree que las etiquetas siguen siendo demasiado grandes, haga clic en la opción *Fuente* (en la misma subsección) y podrá reducir el tamaño de la fuente. Nuevamente, deberá hacer clic en *Refrescar* para ver el efecto de los cambios.  
+  2. Definitivamente debemos hacer algunos ajustes en el panel izquierdo de la ventana. Comencemos seleccionando primero la opción *Mostrar etiquetas* y deseleccionar la opción *Tamaño proporcional* (esta reducirá el tamaño de las etiquetas) en la subsección *Etiquetas de nodo*. Una vez más haga clic en *Refrescar* para ver el efecto de los cambios. Si cree que las etiquetas siguen siendo demasiado grandes, haga clic en la opción *Fuente* (en la misma subsección) y podrá reducir el tamaño de la fuente. Nuevamente, deberá hacer clic en *Refrescar* para ver el efecto de los cambios.  
 ::::
 ::::
 
@@ -509,7 +510,7 @@ knitr::include_graphics("images/02-Fig-12_preview.png")
 *Aristas > Mostrar aristas, Reescalar pesos*
 ::::
 ::::{.rcolumn-80}
-  3. Ahora cambiemos las propiedades de las aristas. Haga clic en la opción *Mostrar aristas* (si no está autoseleccionada) en la subsección de *Aristas*. Además, seleccione la opción *Reescalar pesos*, esto reducirá el grosor de los enlaces. Tenga en cuenta que justo debajo de la opción *Reescalar pesos* están los valores predeterminado para la escalación de pesos. Si desea, puede modificar estos valores para el mínimo sea 0.2 y el máximo 2.0. Una vez más, seleccione *Refrescar*.
+  3. Ahora cambiemos las propiedades de las aristas. Haga clic en la opción *Mostrar aristas* (si no está autoseleccionada) en la subsección de *Aristas*. Además, seleccione la opción *Reescalar pesos*, esto reducirá el grosor de los enlaces. Tenga en cuenta que justo debajo de la opción *Reescalar pesos* se encuentran los valores predeterminados para la escalación de pesos. Si desea, puede modificar estos valores para el mínimo sea 0.2 y el máximo 2.0. Una vez más, seleccione *Refrescar*.
 ::::
 ::::
 
@@ -518,7 +519,7 @@ knitr::include_graphics("images/02-Fig-12_preview.png")
 *Aristas > Color*
 ::::
 ::::{.rcolumn-80}
-  4.	Por último, haga clic en el cuadro de opción de *Color* en la subsección de *Aristas*. Esto abrirá un cuadro de dialogo que permite elegir el color de los bordes. Elija la opción de color *Especifico* que abierta una paleta de colores de la cual usted puede elegir su propio color al gusto. Una vez que haya seleccionado un color, no olvide darle clic a *Refrescar*. 
+  4.	Por último, haga clic en el cuadro de opción de *Color* en la subsección de *Aristas*. Esto abrirá un cuadro de diálogo que permite elegir el color de los bordes. Elija la opción de color *Especifico* que abrirá una paleta de colores de la cual usted puede elegir su propio color al gusto. Una vez que haya seleccionado un color, no olvide darle clic a *Refrescar*. 
 ::::
 ::::
 
@@ -531,7 +532,7 @@ knitr::include_graphics("images/02-Fig-13_preview.png")
 *Archivo > Guardar como*
 ::::
 ::::{.rcolumn-80}
-  5. Ahora, guardemos nuestro gráfico. Gephi ofrece tres opciones de formato: SVG, PDF, y PNG. En la ventana de *Previsualización* de clic en el botón *SVG/PDF/PNG* a un lado de la etiqueta *Exportar* en la parte inferior izquierda de la ventana. Por ahora, exporte su grafico en `PNG`. Para hacer esto, elija *Archivos PNG (*.png)* en el menú desplegable. Adicionalmente, haga clic en el botón de “Opciones” en la parte inferior derecha. Esta opción abre otro cuadro de dialogo que permite aumentar el número de pixeles y la calidad de la imagen en el archivo producido. Seleccione *OK* sin cambiar las dimensiones de la imagen, cambie el nombre el archivo a producir, y guárdelo en su escritorio. Antes de pasar al siguiente paso guarde su trabajo con el comando *Archivo > Guardar como*.
+  5. Ahora, guardemos nuestro gráfico. Gephi ofrece tres opciones de formato: SVG, PDF, y PNG. En la ventana de *Previsualización* de clic en el botón *SVG/PDF/PNG* a un lado de la etiqueta *Exportar* en la parte inferior izquierda de la ventana. Por ahora, exporte su grafico en `PNG`. Para hacer esto, elija *Archivos PNG (.png)* en el menú desplegable. Adicionalmente, haga clic en el botón de “Opciones” en la parte inferior derecha. Esta opción abre otro cuadro de diálogo que permite aumentar el número de pixeles y la calidad de la imagen en el archivo producido. Seleccione *OK* sin cambiar las dimensiones de la imagen, cambie el nombre el archivo a producir, y guárdelo en su escritorio. Antes de pasar al siguiente paso guarde su trabajo con el comando *Archivo > Guardar como*.
 ::::
 ::::
 
@@ -544,12 +545,12 @@ knitr::include_graphics("images/02-Fig-13_preview.png")
 *Archivo > Abrir*
 ::::
 ::::{.rcolumn-80}
-  1. Ahora, veamos como importar una lista de aristas. Hemos preparado una para este ejercicio, [descárgue `koschade_bali_edges.csv` desde aquí](https://raw.githubusercontent.com/cjcallag/arso/main/data/recording_data/koschade_bali_edges.csv). Ábrala en Excel y examínela. Para importar vamos a repetir algunos pasos anteriores, use el comando *Archivo > Abrir* para abrir un cuadro de dialogo desde el cual puede importar el archivo de csv. Haga clic en *Abrir* y aparecerá un nuevo cuadro de dialogo, similar a la Figura ##. Tenga en cuenta que, una vez más, tenemos la opción de importar varias estructuras de datos, pero Gephi ha auto detectado que el archivo es una lista de aristas, de clic en *Siguiente*. En la siguiente venta, Gephi ofrece opciones para indicar que tipo de datos se incluirán, por ejemplo, la columna `Peso`. Ya que los valores predeterminados son adecuados, haga clic en *Finalizar*.
+  1. Ahora, veamos como importar una lista de aristas. Hemos preparado una para este ejercicio, [descárgue `koschade_bali_edges.csv` desde aquí](https://raw.githubusercontent.com/cjcallag/arso/main/data/recording_data/koschade_bali_edges.csv). Ábrala en Excel y examínela. Para importar vamos a repetir algunos pasos anteriores, use el comando *Archivo > Abrir* para abrir un cuadro de dialogo desde el cual puede importar el archivo de csv. Haga clic en *Abrir* y aparecerá un nuevo cuadro de diálogo, similar a la Figura ##. Tenga en cuenta que, una vez más, tenemos la opción de importar varias estructuras de datos, pero Gephi ha auto detectado que el archivo es una lista de aristas, de clic en *Siguiente*. En la siguiente venta, Gephi ofrece opciones para indicar que tipo de datos se incluirán, por ejemplo, la columna `Peso`. Ya que los valores predeterminados son adecuados, haga clic en *Finalizar*.
 ::::
 ::::
   
-```{r}
-print("DO NOT FORGET TO ADD FIGURE HERE")
+```{r importacion, fig.cap = "Cuadro de Diálogo de Importación"}
+knitr::include_graphics("images/01-impotacion.png")
 ``` 
 
 ::::{.row}
@@ -559,7 +560,7 @@ print("DO NOT FORGET TO ADD FIGURE HERE")
 *Tabla de datos > Nodos*
 ::::
 ::::{.rcolumn-80}
-  2.	Ahora, deberá ver un cuadro de informe de importación de Gephi (parecido a la Figura 4). Dígale a Gephi que la red no es dirigida, seleccione la estrategia *Mínima* de combinación de aristas y haga clic en *Aceptar*. Ahora que hemos terminado de importar, cambie la ventana a *Laboratorio de datos* y haga clic en *Tabla de datos>Nodos*. Tenga en cuenta que no hasta ahora no hay etiquetas adjuntas a los nodos, solo identificadores (`Id`). 
+  2.	Ahora, deberá ver un cuadro de informe de importación de Gephi (parecido a la Figura 4). Dígale a Gephi que la red no es dirigida, seleccione la estrategia *Mínima* de combinación de aristas y haga clic en *Aceptar*. Ahora que hemos terminado de importar, cambie la ventana a *Laboratorio de datos* y haga clic en *Tabla de datos > Nodos*. Tenga en cuenta que no hasta ahora no hay etiquetas adjuntas a los nodos, solo identificadores (`Id`). 
 ::::
 ::::
 
@@ -570,7 +571,7 @@ print("DO NOT FORGET TO ADD FIGURE HERE")
 *Label > Ok*
 ::::
 ::::{.rcolumn-80}
-  3.	Para agregar etiquetas a estos nodos vamos a copiar los identificadores de cada nodo a la columna de etiquetas (`Label`). Seleccione la función *Copiar datos a otra columna* (botón ubicado en la parte inferior de la ventana) y seleccione `Id`. En el cuadro de dialogo que aparecerá, seleccione `Label` y haga clic en *Ok*. 
+  3.	Para agregar etiquetas a estos nodos vamos a copiar los identificadores de cada nodo a la columna de etiquetas (`Label`). Seleccione la función *Copiar datos a otra columna* (botón ubicado en la parte inferior de la ventana) y seleccione `Id`. En el cuadro de diálogo que aparecerá, seleccione `Label` y haga clic en *Ok*. 
 ::::
 ::::
 
@@ -581,7 +582,7 @@ print("DO NOT FORGET TO ADD FIGURE HERE")
 *Archivo > Abrir*
 ::::
 ::::{.rcolumn-80}
-  4.	Ahora, importemos los datos de atributos, específicamente `roles`. Seleccione el comando *Archivo > Abrir* y localice y descargue el archivo [`koschade_bali_nodes.csv` aquí](https://raw.githubusercontent.com/cjcallag/arso/main/data/recording_data/koschade_bali_nodes.csv). En el cuadro de dialogo, indique que es una *Tabla de nodos* en la opción *Importar como:* y de clic en *Siguiente*. Acepte los valores predeterminados de Gephi y de clic en *Finalizar*. Acepte los valores predeterminados, excepto que esta vez en *Informe de importación* cambie la opción de *Nuevo espacio de trabajo* a *Anadir al espacio de trabajo existente* y de clic en *Aceptar*.
+  4.	Ahora, importemos los datos de atributos, específicamente `roles`. Seleccione el comando *Archivo > Abrir* y localice y descargue el archivo [`koschade_bali_nodes.csv` aquí](https://raw.githubusercontent.com/cjcallag/arso/main/data/recording_data/koschade_bali_nodes.csv). En el cuadro de diálogo, indique que es una *Tabla de nodos* en la opción *Importar como:* y de clic en *Siguiente*. Acepte los valores predeterminados de Gephi y de clic en *Finalizar*. Acepte los valores predeterminados, excepto que esta vez en *Informe de importación* cambie la opción de *Nuevo espacio de trabajo* a *Anadir al espacio de trabajo existente* y de clic en *Aceptar*.
 ::::
 ::::
 
@@ -608,22 +609,10 @@ print("DO NOT FORGET TO ADD FIGURE HERE")
 *Nodos > Partición > Color > --Escoge un atributo > role*
 ::::
 ::::{.rcolumn-80}
-  6.	Cambie a la ventana de *Vista general* y modifique el grafico como lo hizo anteriormente. Esta vez coloree los nodos según los nodos de los actores. Para hacer esto, primero seleccione *Nodos > Partición > Color* en la ventanilla de *Apariencia*. Utilizando el menú desplegable *Elija un atributo*, seleccione `rol` y haga clic en *Aplicar* (consulte la Figura ##). De forma predeterminada, el color de los arcos reflejara el color del actor de origen. Noten que puede cambiar el color de todas las aristas en el menú de *Aristas* a un lado de *Nodos*.
+  6.	Cambie a la ventana de *Vista general* y modifique el gráfico como lo hizo anteriormente. Esta vez coloree los nodos según los nodos de los actores. Para hacer esto, primero seleccione *Nodos > Partición > Color* en la ventanilla de *Apariencia*. Utilizando el menú desplegable *Elija un atributo*, seleccione `rol` y haga clic en *Aplicar* (consulte la Figura \@ref(fig:rol)). De forma predeterminada, el color de los arcos reflejara el color del actor de origen. Noten que puede cambiar el color de todas las aristas en el menú de *Aristas* a un lado de *Nodos*.
 ::::
 ::::
 
-::::{.row}
-::::{.lcolumn-20}
-*Archivo>Guardar como…*
-
-*Archivo > Exportar > Archivo de grafo…*
-::::
-::::{.rcolumn-80}
-  7.	Antes de pasar a la última parte de este ejercicio, guarde su trabajo utilizando los comandos *Archivo > Guardar como…*, y luego expórtelo como un archivo Pajek con *Archivo > Exportar > Archivo de grafo…* (en la siguiente ventana asegúrese de guardar el archivo como tipo *Archivos NET (Pajek) (.net)*). En esta clase no vamos a utilizar el software Pajek, pero el formato `.net` es un estándar en ARSo y es comúnmente utilizado por diferentes herramientas de software. Por esto, utilizaremos este tipo de archivo como un método conveniente para mover datos entre programas. 
-::::
-::::
-
-```{r}
-print("DO NOT FORGET TO ADD FIGURE HERE")
-``` 
-
+```{r rol, fig.cap = "Red Koschade, Color de Nodos = Rol"}
+knitr::include_graphics("images/01-rol.png")
+```

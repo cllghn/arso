@@ -5,11 +5,11 @@ bibliography: book.bib
 
 
 
-# Multiples Relaciones
+# Múltiples Relaciones
 
-Hasta este punto, solo hemos trabajado con un tipo (modo-uno o modo-dos) de relaciones a la vez. Sin embargo, en el mundo real los actores incrustados en redes sociales se encuentran entrelazados los unos con otros por múltiples relaciones [@Hanneman2005]. Por ejemplo, en su mente visualice su red social, es decir, los circulos sociales en los que usted se encuentra incrustado.  ¿Qué relaciones a considerado? Es probable incluya vínculos familiares, amistosos, profesionales, membresía ligas de deportes o clubes religiosos. El punto clave es que las redes sociales constan de múltiples tipos de relaciones que unen a los actores que se encuentran dentro de ellas. 
+Hasta este punto, solo hemos trabajado con un tipo (modo-uno o modo-dos) de relaciones a la vez. Sin embargo, en el mundo real los actores incrustados en redes sociales se encuentran entrelazados los unos con otros por múltiples relaciones [@Hanneman2005]. Visualice su red social, es decir, los círculos sociales en los que usted se encuentra involucrado. ¿Qué relaciones ha considerado? Es probable que incluya vínculos familiares, amistosos, profesionales, membresía ligas de deportes o clubes religiosos. El punto clave es que las redes sociales constan de múltiples tipos de relaciones que unen a los actores. 
 
-Por consiguiente, los analistas de redes trabajan con múltiples relaciones para poder abarcar la gama de interacciones en un sistema social.  En este capítulo, cubriéremos algunas técnicas utilizadas al trabajar con múltiples tipos de relaciones, tomando pauta para recalcar las ventajas y desventajas de diferentes enfoques. Concluiremos con un ejercicio practico en Gephi que le dará la oportunidad de utilizar estos conceptos. 
+Por consiguiente, los analistas de redes trabajan con múltiples relaciones para poder abarcar la gama de interacciones en un sistema social. En este capítulo, cubriéremos algunas técnicas utilizadas al trabajar con múltiples tipos de relaciones, tomando pauta para recalcar las ventajas y desventajas de diferentes enfoques. Concluiremos con un ejercicio práctico en Gephi que le dará la oportunidad de utilizar estos conceptos. 
 
 ## Matrices y Listas de Aristas
 
@@ -43,11 +43,11 @@ F & 0 & 0 & 0 & 0 & 0 & 0 \\
 ::::
 ::::
 
-El objetivo como analistas es analizar la combinación de estas relaciones de manera que podamos identificar los bordes de la red. La Figura \@ref(fig:combined) es una representación de los datos descritos previamente en formato de sociomatriz. El grafo incluye dos triadas cerradas consistentes de miembros familiares. Entre estos grupos, encontramos una relación financiera que une estos grupos. 
+El objetivo es analizar la combinación de estas relaciones de manera que podamos identificar los límites de la red. La Figura \@ref(fig:combined) es una representación de los datos descritos previamente en formato de sociomatriz. El grafo incluye dos triadas cerradas que consisten de miembros familiares, los cuales se unen por unarelación financiera. 
 
 <div class="figure" style="text-align: center">
-<img src="02-multiple-networks_files/figure-html/combined-1.png" alt="Multiples Relaciones" width="70%" />
-<p class="caption">(\#fig:combined)Multiples Relaciones</p>
+<img src="02-multiple-networks_files/figure-html/combined-1.png" alt="Múltiples Relaciones" width="70%" />
+<p class="caption">(\#fig:combined)Múltiples Relaciones</p>
 </div>
 
 Como hemos mencionado previamente, el recopilar información en sociomatrices es laborioso e ineficiente. Por consíguete, al recopilar múltiples tipos de relaciones es sugerible utilizar una lista de aristas, el formato básico de dos columnas puede ser expandido para incluir una columna clasificando el tipo de vínculo. Recuerde que en una lista de aristas cada fila representa un vínculo, por lo tanto, es posible apilar relaciones de la siguiente manera:
@@ -55,15 +55,15 @@ Como hemos mencionado previamente, el recopilar información en sociomatrices es
 <!--html_preserve--><div id="htmlwidget-38a41005a5865268ad45" style="width:100%;height:auto;" class="datatables html-widget"></div>
 <script type="application/json" data-for="htmlwidget-38a41005a5865268ad45">{"x":{"filter":"none","data":[["A","A","B","D","D","E","C"],["B","C","C","E","F","F","D"],["Familiar","Familiar","Familiar","Familiar","Familiar","Familiar","Financiera"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(row).css({'background-color':value == \"Familiar\" ? \"#e41a1c\" : value == \"Financiera\" ? \"#018571\" : null});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script><!--/html_preserve-->
 
-El incorporar múltiples relaciones en una sola lista con una variable categórica, permite la importación de datos de manera efectiva. Sin embargo, es común encontrar analistas que mantienen sus relaciones en múltiples archivos por propósitos de combinar datos. 
+El incorporar múltiples relaciones en una sola lista con una variable categórica, permite la importación de datos de manera efectiva. Sin embargo, es común encontrar analistas que mantienen sus relaciones en múltiples archivos por propósitos de manipulación de datos. 
 
 ## Combinar
 
-El combinar datos relacionales en ARSo puede significar diferentes acciones para trabajar con datos. @Cunningham2016 proponen tres técnicas: apilar, agregar y recombinar. En esta sección discutiremos las tres. 
+El combinar datos relacionales en ARSo se puede lograr mediante differentes métodos. @Cunningham2016 proponen tres técnicas: apilar, agregar y recombinar. En esta sección discutiremos las tres. 
 
 ### Apilar
 
-El apilar es una técnica comúnmente utilizada por analistas para mantener y utilizar múltiples relaciones de manera independiente [@Cunningham2016].  El como mantener e incorporar estos archivos varia con base a la herramienta de software. Por ejemplo, las matrices subsecuentes (\@ref(eq:mat3) y \@ref(eq:mat4)) contienen relaciones de manera independiente, al apilarlas podemos crear un gráfico (ver Figura \ref(fig:apiladas)) que incorpora ambas sin tener que unir estas matrices; por consiguiente, todos los datos se mantienen íntegros.
+El apilar es una técnica comúnmente utilizada por analistas para mantener y utilizar múltiples relaciones de manera independiente [@Cunningham2016]. La mantener e incorporar estos archivos varia con base a la herramienta de software. Por ejemplo, las matrices subsecuentes (\@ref(eq:mat3) y \@ref(eq:mat4)) contienen relaciones de manera independiente, al apilarlas podemos crear un gráfico (ver Figura \@ref(fig:apiladas)) que incorpora ambas sin tener que unir estos datos; por consiguiente, todos los datos se mantienen íntegros.
 
 :::: {.row}
 :::: {.lcolumn-50}
@@ -98,11 +98,11 @@ F & 0 & 0 & 0 & 0 & 0 & 0 \\
 <p class="caption">(\#fig:apiladas)Relaciones Apiladas</p>
 </div>
 
-El objetivo de apilar es el poder agregar o remover datos al análisis con base en las necesidades del analista. Sin embargo, algunas plataformas de software tratan datos apilados como separados y por consiguiente calculan medidas con base a cada matriz de manera independiente. Por ejemplo, el contar vínculos de las matrices apiladas previamente produce dos valores 6 y 2. Es por ello, que usualmente el apilar relaciones solo se utiliza como una herramienta visual.
+El objetivo de apilar es el poder agregar o remover datos al análisis con base en las necesidades del analista. Algunas plataformas de software tratan datos apilados como separados y por consiguiente calculan las medidas de cada matriz de manera independiente. Por ejemplo, el contar vínculos de las matrices  apiladas previamente (\@ref(eq:mat3) y \@ref(eq:mat4)) produce dos valores, 6 y 2. Es por ello, que usualmente el apilar relaciones solo se utiliza como una herramienta visual.
 
 ### Agregar
 
-Como lo sugiere el nombre, agregar es una técnica que consiste en crear una nueva red de un conjunto de relaciones; usualmente, sumando las relaciones en un nuevo producto [@Cunningham2016]. Nuevamente, el proceso de agregar relaciones varia con base al programa de software. Sin embargo, podemos visualizar el proceso utilizando una sumación de matrices. Por ejemplo, las matrices subsecuentes () representan dos tipos de relaciones asimétricas. Note que ambas matrices constan del el mismo numero de filas y columnas, lo cual es requerido para sumar matrices.
+Como lo sugiere el nombre, agregar es una técnica que consiste en crear una nueva red de un conjunto de relaciones; usualmente, sumando las relaciones en un nuevo producto [@Cunningham2016]. Nuevamente, el proceso de agregar relaciones varia con base al programa de software. Sin embargo, podemos visualizar el proceso utilizando una sumación de matrices. Por ejemplo, las matrices \@ref(eq:mat5) y \@ref(eq:mat6) representan dos tipos de relaciones asimétricas. Note que ambas matrices constan del mismo número de filas y columnas, lo cual es requerido para sumar matrices.
 
 :::: {.row}
 :::: {.lcolumn-50}
@@ -114,7 +114,7 @@ C & 1 & 1 & 0 & 0 \\
 D & 0 & 0 & 0 & 0 \\
 E & 0 & 0 & 0 & 1 \\
 F & 0 & 0 & 0 & 1 \\
-(\#eq:mat3)
+(\#eq:mat5)
 \end{matrix}
 ::::
 
@@ -127,12 +127,12 @@ C & 0 & 0 & 0 & 1 \\
 D & 0 & 0 & 1 & 0 \\
 E & 0 & 1 & 0 & 0 \\
 F & 0 & 0 & 0 & 0 \\
-(\#eq:mat4)
+(\#eq:mat6)
 \end{matrix}
 ::::
 ::::
 
-El proceso en este ejemplo es simple, se suman las entradas correspondientes(ver \ref(fig:matsum)). Sin embargo, diferentes herramientas de software incluyen modificaciones de esta operación como el tomar un promedio de valores correspondientes, solo incluir el valor mínimo o máximo, etc.
+El proceso en este ejemplo es simple, se suman las entradas correspondientes (ver \@ref(eq:matsum)) y genera una nueva matriz producto. Aquí el producto de la suma se representa en la Figura \@ref(fig:agregadas). Sin embargo, diferentes herramientas de software incluyen modificaciones de esta operación como el tomar un promedio de valores correspondientes, o solo incluir el valor mínimo o máximo, etc.
 
 \begin{equation}
 \begin{matrix}
@@ -171,13 +171,13 @@ D & 0 & 0 & 1 & 0
 <p class="caption">(\#fig:agregadas)Relaciones Agregadas</p>
 </div>
 
-El agregar redes, como el proceso de apilar, tiene ventajas y desventajas. Permite consolidar datos antes de ejecutar medidas. Sin embargo, al consolidarlos perdemos información acerca del tipo de vínculo. Por ejemplo, en la matriz producto anterior vemos algunos valores de “2”, los cuales corresponden a la presencia de vínculos precursores en ambas matrices. Sin embargo, para los vínculos con un valor de “1” es imposible determinar a qué categoría o matriz precursora pertenece dicho vinculo sin evaluar las entradas correspondientes. Por consiguiente, los analistas de redes tienden a agregar datos y retener los conjuntos precursores.
+El agregar redes tiene ventajas y desventajas. Permite consolidar datos antes de ejecutar medidas. Sin embargo, al consolidarlos perdemos información acerca del tipo de vínculo. Por ejemplo, en la matriz producto anterior vemos algunos valores de “2”, los cuales corresponden a la presencia de vínculos precursores en ambas matrices. Sin embargo, para los vínculos con un valor de “1” es imposible determinar a qué categoría o matriz precursora pertenece dicho vínculo sin evaluar las entradas correspondientes. Por consiguiente, los analistas de redes tienden a agregar datos y retener los conjuntos precursores.
 
 ### Recombinar
 
-Ocasionalmente al trabajar con datos de redes encontraremos situaciones en las cuales es necesario evaluar si la presencia de un enlace es suficiente evidencia en determinar la conexión entre dos actores. Particularmente al trabajar con redes oscuras donde las actividades se mantienen encubiertas, el triangular una relación a menudo requiere el utilizar umbrales o filtros para confirmar una conexión entre actores [@Cunningham2016]. 
+Ocasionalmente al trabajar con datos de redes encontraremos situaciones en las cuales es necesario evaluar si la presencia de un enlace es suficiente evidencia para determinar la conexión entre dos actores. Particularmente al trabajar con redes oscuras donde las actividades se mantienen encubiertas, el triangular una relación a menudo requiere utilizar umbrales o filtros para confirmar una conexión entre actores [@Cunningham2016]. 
 
-@Cunningham2016 da un ejemplo practico de recombinar redes. Supongamos que tenemos dos redes modo-dos. La primera (ver \@ref(eq:mat3)) vincula a personas con ubicaciones. La segunda (ver \@ref(eq:mat4)) vincula personas con roles operacionales. 
+@Cunningham2016 da un ejemplo práctico de recombinación redes. Supongamos que tenemos dos redes modo-dos. La primera (ver \@ref(eq:mat7)) vincula a personas con ubicaciones. La segunda (ver \@ref(eq:mat8)) vincula personas con roles operacionales. 
 
 :::: {.row}
 :::: {.lcolumn-50}
@@ -194,7 +194,7 @@ H & 0    & 1     & 0        \\
 I & 1    & 0     & 0        \\
 J & 1    & 0     & 0        \\
 K & 0    & 0     & 1        \\
-(\#eq:mat3)
+(\#eq:mat7)
 \end{matrix}
 ::::
 
@@ -212,12 +212,12 @@ H & 1        & 0         & 0         \\
 I & 0        & 1         & 0         \\
 J & 1        & 0         & 0         \\
 K & 1        & 0         & 0         \\
-(\#eq:mat4)     
+(\#eq:mat8)     
 \end{matrix}
 ::::
 ::::
 
-El vincular a todas las personas en una ubicación no siempre es adecuado, por ejemplo, en una ciudad de millones de habitantes es probable que dos personas que residen en dicha ciudad no se conozcan. Similarmente, el hecho de que dos personas compartan el mismo rol operacional en una organización no significa que estas estén enlazadas. Sin embargo, podemos recombinar nuestros datos para generar una sociomatriz donde actores en la misma ubicación y con el mismo rol operacional comparten un vinculo mutuo. Para ello, utilizamos los siguientes pasos:
+El vincular a todas las personas en una ubicación no siempre es adecuado, por ejemplo, en una ciudad de millones de habitantes es probable que dos personas que residen en dicha ciudad no se conozcan. Similarmente, el hecho de que dos personas compartan el mismo rol operacional en una organización no significa que estas estén enlazadas. Sin embargo, podemos recombinar nuestros datos para generar una sociomatriz donde actores en la misma ubicación y con el mismo rol operacional comparten un vínculo mutuo. Para ello, utilizamos los siguientes pasos:
 
 \begin{equation}
 
@@ -281,7 +281,7 @@ Operativo & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0
 
 \end{equation}
 
-El proceso es simple, primero cada matriz de incidencia (\@ref(eq:mat3) y \@ref(eq:mat4)) es multiplicada por su matriz equivalente transpuesta, esto es equivalente a la operación presentada en la sección de [Proyección] previamente. Puesto que el objetico es aislar enlaces que aparecen en ambas matrices, el siguiente paso es multiplicar ambas utilizando el producto Hadamard (operación por elementos) que vimos previamente. 
+El proceso es simple, primero cada matriz de incidencia (\@ref(eq:mat7) y \@ref(eq:mat8)) para recombinar se debe multiplicar por su matriz equivalente transpuesta, como se presento en la sección de [Proyección]. Puesto que el objetivo es recombinar lo enlaces, el siguiente paso es multiplicar las matrices resultantes utilizando el producto Hadamard (operación por elementos) que vimos previamente. Esta última operación genera una sociomatriz modo-uno donde los nodos se encuentran enlazados si viven en la misma ubicación y comparten el mismo rol operacional (ver \@ref(eq:hadd) y \@ref(fig:recombinar)).
 
 \begin{matrix}
   & A & B & C & D & E & F & G & H & I & J & K \\
@@ -296,6 +296,7 @@ H & 0 & 0 & 0 & 0 & 0 & 0 & 0 & - & 0 & 0 & 0 \\
 I & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & - & 0 & 0 \\
 J & 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & - & 0 \\
 K & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & - \\
+(\#eq:hadd) 
 \end{matrix}
 
 <div class="figure" style="text-align: center">
@@ -303,7 +304,7 @@ K & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & - \\
 <p class="caption">(\#fig:recombinar)Relaciones Recombinar</p>
 </div>
 
-Además de multiplicaciones de matriz, existen múltiples otras estrategias para recombinar relaciones. Sin embargo, esta discusión será continuada mas adelante. Por ahora, solo nos enfocaremos en familiarízalo con el concepto de recombinación. 
+Además de multiplicaciones de matriz, existen múltiples otras estrategias para recombinar relaciones. Sin embargo, esta discusión será continuada más adelante. Por ahora, solo nos enfocaremos en familiarízalo con el concepto de recombinación. 
 
 ## Ejercicio Práctico
 

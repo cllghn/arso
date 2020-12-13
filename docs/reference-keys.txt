@@ -74,8 +74,13 @@ fig:combined
 eq:mat3
 eq:mat4
 fig:apiladas
+eq:mat5
+eq:mat6
 eq:matsum
 fig:agregadas
+eq:mat7
+eq:mat8
+eq:hadd
 fig:recombinar
 fig:importacion
 fig:apilada
@@ -225,7 +230,7 @@ ejercicio-práctico-1
 antes-de-empezar-1
 importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas
 plegar-redes-de-modo-dos-en-gephi
-multiples-relaciones
+múltiples-relaciones
 matrices-y-listas-de-aristas
 combinar
 apilar
@@ -297,3 +302,8 @@ libro-de-códigos-de-noordin-top
 relaciones-1
 atributos-2
 referencias
+fig:botones
+fig:globales
+fig:globales2
+fig:globales3
+fig:rol
