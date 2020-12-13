@@ -212,7 +212,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 *Ventana > Multimode Projections*
 ::::
 ::::{.rcolumn-80}
-  3.	Después de reiniciar Gephi, asegúrese que el nuevo módulo está instalado correctamente. Para activarlo, use los comandos *Ventana > Multimode Projections*. Esta acción abrirá una nueva ventanilla (Figura \@ref(fig:multimode)). Ahora está listo para comenzar con el resto del ejercicio.
+  3.	Después de reiniciar Gephi, asegúrese que el nuevo módulo este instalado correctamente. Para activarlo, use los comandos *Ventana > Multimode Projections*. Esta acción abrirá una nueva ventanilla (Figura \@ref(fig:multimode)). Ahora está listo para comenzar con el resto del ejercicio.
 ::::
 ::::
 
@@ -228,7 +228,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 *Ventana > Multimode Projections*
 ::::
 ::::{.rcolumn-80}
-  1. Para importar datos de red modo-dos en formato de lista de bordes (o lista de aristas), usaremos dos conjuntos de datos. El primero, una lista de nodos que contiene una columna con la identificación del nodo (columna are requerida, `ID`), etiqueta y tipo de nodo. El segundo conjunto es una lista de aristas que contiene los vínculos entre nodos. Antes de importar los datos, eche un descargue los archivos [`davis_edges.csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/two_mode/davis_edges.csv) y [`davis_nodes.csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/two_mode/davis_nodes.csv).
+  1. Para importar datos de red modo-dos en formato de lista de bordes (o lista de aristas), usaremos dos conjuntos de datos. El primero, una lista de nodos que contiene una columna con la identificación del nodo (columna requerida, `ID`), etiqueta y tipo de nodo. El segundo conjunto es una lista de aristas que contiene los vínculos entre nodos. Antes de importar los datos, descargue los archivos [`davis_edges.csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/two_mode/davis_edges.csv) y [`davis_nodes.csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/two_mode/davis_nodes.csv).
 ::::
 ::::
 
@@ -243,7 +243,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 *Archivo > Abrir*
 ::::
 ::::{.rcolumn-80}
-  2. Primero debemos importar la lista de nodos. Utilice los comandos *Archivo > Abrir* y luego localice y abra `davisnode.csv`. En el cuadro de diálogo (Figura ##) dígale a Gephi que el archivo es una tabla de nodos y asegure que el separador entre valores sea una coma. Haga clic en *Siguiente* y luego en el siguiente cuadro de diálogo seleccione *Terminar*. Como siempre, esto abrirá el informe de importación (Figura \@ref(fig:nodes)). Por favor indique que el tipo de grafo es *No dirigido*, la estrategia para combinar las aristas es *Mínimo*,  y que desea agregar estos datos en un nuevo espacio de trabajo. Ahora, haga clic en *Aceptar*. 
+  2. Primero importaremos la lista de nodos. Utilice los comandos *Archivo > Abrir* y luego localice y abra `davis_nodes.csv`. En el cuadro de diálogo (Figura \@ref(fig:importar)) dígale a Gephi que el archivo es una tabla de nodos y asegure que el separador entre valores sea una coma. Haga clic en *Siguiente* y luego en el siguiente cuadro de diálogo seleccione *Terminar*. Como siempre, esto abrirá el informe de importación (Figura \@ref(fig:nodes)). Por favor indique que el tipo de grafo es *No dirigido*, la estrategia para combinar las aristas es *Mínimo*,  y que desea agregar estos datos en un nuevo espacio de trabajo. Ahora, haga clic en *Aceptar*. 
 ::::
 ::::
   
@@ -297,7 +297,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 *Apariencia > Nodos > Color > Partición > --Escoge un attribute > type*
 ::::
 ::::{.rcolumn-80}
-  6.	Cambie a la ventana *Vista general* y, en la pestaña *Apariencia*, seleccione *Nodos > Color > Partición* y, a continuación, con el menú desplegable *--Elija un atributo*, seleccione *type*. Antes de presionar *Aplicar*, haga clic en el enlace *Paleta…* justo arriba del botón *Aplicar* y elija la paleta roja / azul. Ahora presione *Aplicar*. Una vez que haya terminado, guarde sus datos, pero no cierre Gephi. En la siguiente parte, exploraremos cómo "plegar" una red de modo-dos para crear dos redes de modo-uno.
+  6.	Cambie a la ventana *Vista general* y, en la pestaña *Apariencia*, seleccione *Nodos > Color > Partición* y, a continuación, con el menú desplegable *--Elija un atributo*, seleccione *type*. Antes de presionar *Aplicar*, haga clic en el enlace *Paleta…* justo arriba del botón *Aplicar* y elija la paleta roja/azul. Ahora presione *Aplicar*. Una vez que haya terminado, guarde sus datos, pero no cierre Gephi. En la siguiente parte, exploraremos cómo "plegar" una red de modo-dos para crear dos redes de modo-uno.
 ::::
 ::::
 
@@ -311,7 +311,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 *MulitMode Networks Projection > Load Attributes > Attribute types > type*
 ::::
 ::::{.rcolumn-80}
-  1.	En la ventana *Descripción general*, seleccione la pestaña *MultiMode Networks Projection* que utilizamos en la segunda sección de este laboratorio. De clic en el botón  *Load attributes* que cargara los atributos de los nodos. Ahora, en el menú desplegable *Attribute type* seleccione la opción *type*. Al plegar queremos crear dos redes de modo-uno, la primera entre personas y la segunda entre eventos.
+  1.	En la ventana *Descripción general*, seleccione la pestaña *MultiMode Networks Projection* queque instalamos previamente (si no lo puede localizar seleccione el menú de *Ventana* y de clic en *MultiMode Projections*).  De clic en el botón  *Load attributes* que cargará los atributos de los nodos. Ahora, en el menú desplegable *Attribute type* seleccione la opción *type*. Al plegar queremos crear dos redes de modo-uno, la primera entre personas y la segunda entre eventos.
 ::::
 ::::
 
@@ -338,7 +338,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 *Consultas > Person > Filtrar *
 ::::
 ::::{.rcolumn-80}
-  3. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos `person`. Seleccione la pestaña *Filtros*, abra la carpeta *Atributos* y localice la opción *type* dentro de la carpeta de *Partición*. Arrastre el filtro de *type* a la sección de *Consultas* (Figura \@ref(fig:bip-3)). En respuesta a esta acción vera una nueva ventanilla al fondo de este panel (titulada *Partición (type) Configuración*), seleccione la opción *Person* y de clic en el botón *Fitrar* (Figura ##). Ahora exporte este grafico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón *Exportar el grafo filtrado en un nuevo espacio de trabajo* (el botón resaltado por una caja roja en la Figura \@ref(fig:bip-3)).
+  3. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos `person`. Seleccione la pestaña *Filtros*, abra la carpeta *Atributos* y localice la opción *type* dentro de la sección *Partición*. Arrastre el filtro de *type* a la sección de *Consultas* (Figura \@ref(fig:bip-3)). En respuesta a esta acción vera una nueva ventanilla al fondo de este panel (titulada *Partición (type) Configuración*), seleccione la opción *Person* y de clic en el botón *Fitrar* (Figura \@ref(fig:bip-3)). Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón *Exportar el grafo filtrado en un nuevo espacio de trabajo* (el botón resaltado por una caja roja en la Figura \@ref(fig:bip-3)).
 ::::
 ::::
 
@@ -388,7 +388,7 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 *Consultas > Event > Filtrar* 
 ::::
 ::::{.rcolumn-80}
-  6.	Una vez más vera nuevos enlaces en el gráfico. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos “Eventos”. Seleccione la pestaña “Filtros”, abra la carpeta “Atributos” y localice la opción “type” dentro de la carpeta de “Partición”. Arrastre el filtro de “type” a la sección de “Consultas”. En respuesta a esta acción vera una nueva ventanilla al fondo de este panel (titulada “Partición (type) Configuración”), selecciones la opción “Event” y de clic en el botón “Fitrar”. Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón “Exportar el grafo filtrado en un nevo espacio de trabajo”.
+  6.	Una vez más vera nuevos enlaces en el gráfico. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos *Evento*”. Seleccione la pestaña *Filtros*, abra la carpeta *Atributos* y localice la opción “type” dentro de la sección *Partición*. Arrastre el filtro de *type* a la sección de *Consultas*. En respuesta a esta acción vera una nueva ventanilla al fondo de este panel (titulada *Partición (type) Configuración*), seleccione la opción *Event* y de clic en el botón *Fitrar*. Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón *Exportar el grafo filtrado en un nevo espacio de trabajo*.
 ::::
 ::::
 
