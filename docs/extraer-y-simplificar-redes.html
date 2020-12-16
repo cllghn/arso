@@ -313,7 +313,7 @@ Figura 7.5: Pandilleros, Collapsados por Grupo Ilícito
 </div>
 <div id="ejercicio-práctico-3" class="section level2">
 <h2><span class="header-section-number">7.3</span> Ejercicio Práctico</h2>
-<p>En este laboratorio, veremos técnicas para combinar datos relacionales con datos de atributos. Estos son útiles para resaltar diferentes aspectos de la red o para simplificar las redes. En este ejercicio utilizaremos un subconjunto de los datos principales de Noordin: “Red Operativa Noordin (agregada)”(<strong>ADD DATA LINK HERE</strong>), junto con los atributos asociados.</p>
+<p>En este ejercicio, veremos técnicas para combinar datos relacionales con datos de atributos. Estos son útiles para resaltar diferentes aspectos de la red o para simplificar las redes. En este ejercicio utilizaremos un subconjunto de los datos principales de Noordin: “Red Operativa”, junto con los atributos asociados.</p>
 <div id="antes-de-empezar-2" class="section level3">
 <h3><span class="header-section-number">7.3.1</span> Antes de empezar</h3>
 <p>Para poder manipular los datos adecuadamente es necesario descargar e instalar un módulo adicional de software, <em>Grupos by partition</em> ó <em>Grupos por partición</em>. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo <em>MultimodeNetworks Transformation</em> en ejercicio práctico en el capitulo <a href="derivando-datos-modo-uno-de-modo-dos.html#derivando-datos-modo-uno-de-modo-dos">Derivando Datos Modo-Uno de Modo-Dos</a>.</p>
@@ -329,7 +329,7 @@ Figura 7.5: Pandilleros, Collapsados por Grupo Ilícito
 </div>
 <div class="rcolumn-80">
 <ol style="list-style-type: decimal">
-<li>Comenzaremos importando la red operacional junto con sus atributos en Gephi. Primero, abra el archivo <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/simplifying/Attributes%20(Nodes%20Table).csv"><code>Attributes (Nodes Table).csv</code></a> utilizando el comando <em>Archivo &gt; Abrir</em> en Gephi. Este archivo contiene una lista de los nodos de red y sus atributos correspondientes. Gephi debe detectar el tipo de archivo que esta importando, pero mantenga en mente que a veces no funciona correctamente. En el cuadro de diálogo de importación (Figura <a href="múltiples-relaciones.html#fig:importacion">6.5</a>), asegúrese de indicar que el <em>Separador</em> sean comas y de importar el archivo como una <em>Tabla de Nodos</em>. Luego haga clic en <em>Siguiente</em>.</li>
+<li>Comenzaremos importando la red operacional junto con sus atributos en Gephi. Primero, abra el archivo <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/simplifying/Attributes%20(Nodes%20Table).csv"><code>Attributes (Nodes Table).csv</code></a> utilizando el comando <em>Archivo &gt; Abrir</em> en Gephi. Este archivo contiene una lista de los nodos de red y sus atributos correspondientes. Gephi debe detectar el tipo de archivo que está importando, pero mantenga en mente que a veces no funciona correctamente. En el cuadro de diálogo de importación (Figura <a href="grabación-y-recopilación.html#fig:importacion">4.12</a>), asegúrese de indicar que el <em>Separador</em> sean comas y de importar el archivo como una <em>Tabla de Nodos</em>. Luego haga clic en <em>Siguiente</em>.</li>
 </ol>
 </div>
 </div>
@@ -339,14 +339,14 @@ Figura 7.5: Pandilleros, Collapsados por Grupo Ilícito
 </div>
 <div class="rcolumn-80">
 <ol start="2" style="list-style-type: decimal">
-<li>En la siguiente pantalla de importación (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion2">7.6</a>) vera que se han detectado una serie de atributos: <code>Education Level</code>, <code>Contact with People</code>, <code>Current Status (ICG Article)</code>, <code>Military Training</code>, <code>Nationality</code>, <code>Noordin’s Network</code>, <code>Primary Group Affiliation</code>, y <code>Role</code>, junto con la identificación y etiqueta de cada nodo (actor) en la red. Gephi probablemente importará de manera predeterminada todos los atributos como <em>String</em>, por lo tanto, usando los menus desplegables debajo de cada atributo, cámbielo de <em>String</em> a <em>Integer</em>. Luego, de clic en <em>Terminar</em>.</li>
+<li>En la siguiente pantalla de importación (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion2">7.6</a>) vera que se ha detectado una serie de atributos: <code>Education Level</code>, <code>Contact with People</code>, <code>Current Status (ICG Article)</code>, <code>Military Training</code>, <code>Nationality</code>, <code>Noordin’s Network</code>, <code>Primary Group Affiliation</code>, y <code>Role</code>, junto con la identificación y etiqueta de cada nodo (actor) en la red. Gephi probablemente importará de manera predeterminada todos los atributos como <em>String</em> (caracteres de texto). Por lo tanto, usando los menus desplegables debajo de cada atributo, cámbielo de <em>String</em> a <em>Integer</em> (números enteros). Luego, de clic en <em>Terminar</em>.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:importacion"></span>
 <img src="images/02-07-01.png" alt="Cuadro de dialogo para importar un archivo CSV (1 de 2)" width="70%" />
 <p class="caption">
-Figura 6.5: Cuadro de dialogo para importar un archivo CSV (1 de 2)
+Figura 4.12: Cuadro de dialogo para importar un archivo CSV (1 de 2)
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:importacion2"></span>
@@ -361,7 +361,7 @@ Figura 7.6: Cuadro de dialogo para importar un archivo CSV (2 de 2)
 </div>
 <div class="rcolumn-80">
 <ol start="3" style="list-style-type: decimal">
-<li>A continuación, debería ver el <em>Informe de importación</em> de Gephi (Figure (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion3">7.7</a>). Aquí, indique que desea agregar los datos a un nuevo espacio de trabajo. Tenga en cuenta que en el informe no he cambiado ninguno de los valores predeterminados. Como esta tabla no incluye aristas, ninguna de las otras opciones importa. Haga clic en <em>Aceptar</em>.</li>
+<li>A continuación, debería ver el <em>Informe de importación</em> de Gephi (Figure (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion3">7.7</a>). Aquí, indique que desea agregar los datos a un nuevo espacio de trabajo. No cambie ningún otro valor predeterminado de importación (como esta tabla no incluye aristas, ninguna de las otras opciones afectará el resultado). Haga clic en <em>Aceptar</em>.</li>
 </ol>
 </div>
 </div>
@@ -379,7 +379,7 @@ Figura 7.7: Informe de importación de Gephi
 </div>
 <div class="rcolumn-80">
 <ol start="4" style="list-style-type: decimal">
-<li>Ahora importemos la lista de aristas correspondiente, <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/simplifying/Operational%20(Edge%20List).csv"><code>Operational (Edge List).csv</code></a>, usando el comando <em>Archivo &gt; Abrir</em>. Gephi debe detectar el formato del archivo correctamente, pero asegúrese que los separadores sean comas y que el archivo de importación sea reconocido como <em>Tabla de aristas</em> (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion4">7.8</a>). Luego haga clic en <em>Siguiente</em>. En e siguiente cuadro de diálogo, acepte todos los valores predeterminado de Gephi y haga clic en <em>Terminar</em>.</li>
+<li>Ahora importemos la lista de aristas correspondiente, <a href="https://raw.githubusercontent.com/cjcallag/arso/main/data/simplifying/Operational%20(Edge%20List).csv"><code>Operational (Edge List).csv</code></a>, usando el comando <em>Archivo &gt; Abrir</em>. Gephi debe detectar el formato del archivo correctamente, pero asegúrese que los separadores sean comas y que el archivo de importación sea reconocido como <em>Tabla de aristas</em> (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion4">7.8</a>). Luego haga clic en <em>Siguiente</em>. En e siguiente cuadro de diálogo, acepte todos los valores predeterminados de Gephi y haga clic en <em>Terminar</em>.</li>
 </ol>
 </div>
 </div>
@@ -415,7 +415,7 @@ Figura 7.9: Reporte de importación
 </div>
 <div class="rcolumn-80">
 <ol style="list-style-type: decimal">
-<li>Ahora, veamos cómo podemos incorporar algunos de los datos de atributos de nodo en nuestras visualizaciones de red. En la pantalla <em>Vista general</em>, ubique la pestaña <em>Apariencia</em>, luego haga clic en la pestana <em>Nodos</em> y el icono de la paleta de colores a la derecha, y finalmente en la opción <em>Partición</em>. Usando el menú desplegable de atributos, seleccione <code>current status (icg article)</code> y de clic en <em>Aplicar</em>. Los nodos ahora deben exhibir tres colores diferentes, cada uno de los cuales refleja el estado actual de un actor (es decir, si está muerto “0”, vivo y libre “1” o en la cárcel “2”; todo esto está en el libro de códigos). El color asociado con cada atributo se encuentra justo debajo del menú desplegable. Si no le gustan los colores predeterminados, puede hacer clic en el cuadro junto al número o hacer clic en el enlace <em>Paleta…</em>, que abrirá una serie de opciones diferentes.</li>
+<li>Ahora, veamos cómo podemos incorporar algunos de los datos de atributos de nodo en nuestras visualizaciones de red. En la pantalla <em>Vista general</em>, ubique la pestaña <em>Apariencia</em>, luego haga clic en <em>Nodos</em> y el ícono de la paleta de colores a la derecha, y finalmente en la opción <em>Partición</em>. Usando el menú desplegable de atributos, seleccione <code>current status (icg article)</code> y de clic en <em>Aplicar</em>. Los nodos ahora deben exhibir tres colores diferentes, cada uno de los cuales refleja el estado actual de un actor (es decir, si está muerto “0”, vivo y libre “1” o en la cárcel “2”; todo esto está en el libro de códigos). El color asociado con cada atributo se encuentra justo debajo del menú desplegable. Si no le gustan los colores predeterminados, puede dar clic en el cuadro junto al número o en el enlace <em>Paleta…</em>, que abrirá una ventanilla con múltiples opciones.</li>
 </ol>
 </div>
 </div>
@@ -427,7 +427,7 @@ Figura 7.9: Reporte de importación
 </div>
 <div class="rcolumn-80">
 <ol start="2" style="list-style-type: decimal">
-<li>Ahora, seleccione <code>role</code> y haga clic en <em>Aplicar</em>. Si se desplaza hacia abajo por los colores asociados con los 12 roles, notará que Gephi no posee suficientes colores para todas las categorías. Para rectificar esto, haga clic en el enlace <em>Paleta…</em> y elija <em>Generar…</em> en el cuadro de diálogo (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion6">7.10</a>), aumente el número de colores a 12, elija uno de los ajustes preestablecidos, haga clic en <em>Generar</em> y luego <em>Aceptar</em>. En la ventana <em>Descripción general</em>, haga clic en <em>Aplicar</em>, y ahora todos sus nodos deben tener un color individual.</li>
+<li>Ahora, seleccione <code>role</code> y de clic en <em>Aplicar</em>. Este atributo contiene 12 roles, desplácese hacia el final de la lista de colores asociados con los roles, notará que Gephi no posee suficientes colores para este número de categorías. Para rectificar esto, haga clic en el enlace <em>Paleta…</em> y elija <em>Generar…</em> en el cuadro de diálogo (Figura <a href="extraer-y-simplificar-redes.html#fig:importacion6">7.10</a>), aumente el número de colores a 12, elija uno de los ajustes preestablecidos, haga clic en <em>Generar</em> y luego <em>Aceptar</em>. En la ventana <em>Descripción general</em>, haga clic en <em>Aplicar</em>, y ahora todos sus nodos deben tener un color individual.</li>
 </ol>
 </div>
 </div>
@@ -444,7 +444,7 @@ Figura 7.10: Cuadro de diálogo ‘Generar paleta’
 </div>
 <div class="rcolumn-80">
 <ol start="3" style="list-style-type: decimal">
-<li>Ahora, ajustemos el tamaño de los nodos según el nivel educativo. En la pestaña <em>Apariencia</em>, haga clic en <em>Nodos</em>, luego en el icono de tamaño (a la derecha de la paleta de colores) y luego en <em>Ranking</em>. Usando el menú desplegable de atributos, seleccione <code>education level</code> y haga clic en <em>Aplicar</em>. El tamaño de los nodos ahora debe reflejar el nivel de educación. Los tamaños de nodo mínimo y máximo predeterminados de Gephi predeterminan un rango arbitrario de valores. Si mira en el libro de códigos (o en la ventana <em>Laboratorio de datos</em>), verá que el nivel educativo va de 0 a 8. Para distinguir los nodos un poco mejor, ajusté el mínimo y el máximo de 3 a 27 (no usamos 0 como mínimo porque los nodos desaparecerán). Después de usar las técnicas de visualización cubiertas en nuestros laboratorios anteriores, mi red resultante aparece en la Figura <a href="extraer-y-simplificar-redes.html#fig:7">7.11</a>. Esta vez, utilice el diseño <em>Force Atlas</em> pues no empuja los aislados lejos del resto de la red. <strong>¿Detecta algún patrón relacional asociado con los atributos de los nodos (por ejemplo, los actores con niveles de educación más altos se encuentran en el centro de la red)?</strong></li>
+<li>Ahora, ajustemos el tamaño de los nodos según el nivel educativo. En la pestaña <em>Apariencia</em>, haga clic en <em>Nodos</em>, luego en el ícono de tamaño (a la derecha de la paleta de colores) y luego en <em>Ranking</em>. Usando el menú desplegable de atributos, seleccione <code>education level</code> y haga clic en <em>Aplicar</em>. El tamaño de los nodos ahora debe reflejar el nivel de educación. Los tamaños de nodo mínimo y máximo predeterminados de Gephi predeterminados constan de un rango arbitrario de valores. Si observa los valores de este atributo en la ventana <em>Laboratorio de datos</em>, verá que el nivel educativo va de 0 a 8. Para distinguir los nodos un poco mejor, ajusté el mínimo y el máximo de 3 a 27 (no usamos 0 como mínimo porque los nodos desaparecerán). Use las técnicas de visualización cubiertas en nuestros laboratorios anteriores. Este autor presenta un ejemplo en la Figura <a href="extraer-y-simplificar-redes.html#fig:7">7.11</a> generado utilizando el diseño <em>Force Atlas</em> porque no empuja los aislados lejos del resto de la red. <strong>¿Detecta algún patrón relacional asociado con los atributos de los nodos (por ejemplo, los actores con niveles de educación más altos se encuentran en el centro de la red)?</strong></li>
 </ol>
 </div>
 </div>
@@ -474,7 +474,7 @@ Figura 7.11: Red operacional de Noordin
 </div>
 <div class="rcolumn-80">
 <ol start="2" style="list-style-type: decimal">
-<li>En la ventana <em>Descripción general</em>, seleccione el comando <em>Herramientas &gt; Generate groups by partition</em>. Aparecerá un cuadro de diálogo que le preguntará si desea crear un nuevo espacio de trabajo o sobrescribir el actual. Elija <em>Crear</em>. Esto generará un nuevo espacio de trabajo donde los nodos han sido colapsados según el rol de cada nodo. Es importante tener en cuenta que este modulo contrae la red en base a la partición de nodos seleccionada en la ventana <em>Vista general</em>. Si hubiéramos querido colapsar la red basándose, por ejemplo, en el estado actual, entonces habríamos tenido que volver a colorear y revisualisar la red usando otra partición, siguiendo los comandos detallados en la seccion <a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red">Uso de atributos de nodo en visualizaciones de red</a>.</li>
+<li>En la ventana <em>Descripción general</em>, seleccione el comando <em>Herramientas &gt; Generate groups by partition</em>. Aparecerá un cuadro de diálogo que le preguntará si desea crear un nuevo espacio de trabajo o sobrescribir el actual. Elija <em>Crear</em>. Esto generará un nuevo espacio de trabajo donde los nodos han sido colapsados según el rol de cada nodo. Es importante tener en cuenta que este módulo contrae la red en base a la partición de nodos seleccionada en la ventana <em>Vista general</em>. Si hubiéramos querido colapsar la red basándose, por ejemplo, en el estado actual, entonces habríamos tenido que volver a colorear y revisualisar la red usando otra partición, siguiendo los comandos detallados en la seccion <a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red">Uso de atributos de nodo en visualizaciones de red</a>.</li>
 </ol>
 </div>
 </div>
@@ -484,8 +484,75 @@ Figura 7.11: Red operacional de Noordin
 </div>
 <div class="rcolumn-80">
 <ol start="3" style="list-style-type: decimal">
-<li>Finalmente, necesitamos cambiar el nombre de las etiquetas para que correspondan con los diferentes roles. Cambie a la ventana <em>Laboratorio de datos</em>, seleccione la <em>Tabla de nodos</em> y verá que ahora solo hay 12 nodos correspondiendo a los grupos colapsados (por ejemplo, <code>Group of Jabir</code>). Al colapsar los nodos el nombre asociado con el grupo corresponde a uno de los actores que pertenecen a este subconjunto. Para modificar las etiquetas con los roles, vamos a tener que abrir la tabla original de atributos (<code>Attributes (Nodes Table).csv</code>) y el libro de códigos. En Excel observara que el rol de Jabir es <code>7</code>, y en el libro de código vemos que el rol <code>7</code> es el de <code>Recruiter</code> (o reclutador en español). En la columna de etiqueta (<em>Label</em>) en la tabla de nodos haga doble clic en la fila <code>Group by Jabir</code>, que abrirá un cuadro de texto. Allí, remplace la etiqueta con el rol (<code>Reclutador</code> o <code>Recruiter</code>) y luego repita este proceso para todos los grupos restantes. Cuando hay cambiado el nombre de todas las etiquetas, la red resultante tendrá un aspecto similar a la Figura <a href="extraer-y-simplificar-redes.html#fig:8">7.12</a>.</li>
+<li>Finalmente, necesitamos cambiar el nombre de las etiquetas para que correspondan con los diferentes roles. Cambie a la ventana <em>Laboratorio de datos</em>, seleccione la <em>Tabla de nodos</em> y verá que ahora solo hay 12 nodos correspondiendo a los grupos colapsados (por ejemplo, <code>Group of Jabir</code>). Al colapsar los nodos el nombre asociado con el grupo corresponde a uno de los actores que pertenecen a este subconjunto. Para modificar las etiquetas con los roles, vamos a tener que abrir la tabla original de atributos (<code>Attributes (Nodes Table).csv</code>) y la clave a continuación:</li>
 </ol>
+<table>
+<colgroup>
+<col width="53%" />
+<col width="46%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Código</th>
+<th align="left">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="left">Sin información/poca claridad</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="left">Estratega: Planificador de alto nivel de una red terrorista/insurgente</td>
+</tr>
+<tr class="odd">
+<td align="center">2</td>
+<td align="left">Fabricante de bombas: Individuo que construye bombas</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="left">Bombardero/combatiente: Individuo que participa en ataques con bombas o que se describe como un combatiente</td>
+</tr>
+<tr class="odd">
+<td align="center">4</td>
+<td align="left">Entrenador/instructor: Individuo que entrena o instruye a nuevos miembros de una red terrorista</td>
+</tr>
+<tr class="even">
+<td align="center">5</td>
+<td align="left">Terrorista suicida: Individuo que planea o ya ha realizado un ataque suicida</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="left">Reconocimiento y vigilancia: Participa en la vigilancia y reconocimiento de objetivos</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="left">Reclutador: Se dedica a identificar y reclutar nuevos miembros (para incluir bombarderos)</td>
+</tr>
+<tr class="odd">
+<td align="center">8</td>
+<td align="left">Mensajero /Intermediario: Facilita las comunicaciones entre miembros</td>
+</tr>
+<tr class="even">
+<td align="center">9</td>
+<td align="left">Propagandista: Desarrolló campañas de información</td>
+</tr>
+<tr class="odd">
+<td align="center">10</td>
+<td align="left">Facilitador: Asistido en el funcionamiento de la red (especialmente con materiales y finanzas)</td>
+</tr>
+<tr class="even">
+<td align="center">11</td>
+<td align="left">Líder religioso: Se le proporcionó formación y apoyo religiosos</td>
+</tr>
+<tr class="odd">
+<td align="center">12</td>
+<td align="left">Comandante/Líder táctico: A cargo de las operaciones a nivel local/táctico</td>
+</tr>
+</tbody>
+</table>
+<p>En Excel observara que el rol de Jabir es <code>7</code>, y en la clave vemos que el rol <code>7</code> es el de <code>Recruiter</code> (o reclutador en español). En la columna de etiqueta (<em>Label</em>) en la tabla de nodos haga doble clic en la fila <code>Group by Jabir</code>, que abrirá un cuadro de texto. Allí, remplace la etiqueta con el rol (<code>Reclutador</code> o <code>Recruiter</code>) y luego repita este proceso para todos los grupos restantes. Cuando haya cambiado el nombre de todas las etiquetas, la red resultante tendrá un aspecto similar a la Figura <a href="extraer-y-simplificar-redes.html#fig:8">7.12</a>.</p>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:8"></span>
@@ -501,7 +568,7 @@ Figura 7.12: Nodos por rol
 </div>
 <div class="rcolumn-80">
 <ol start="4" style="list-style-type: decimal">
-<li>Ahora, cambie la Ventana <em>Vista general</em> y visualice la red. Los nodos probablemente variarán en tamaño, por lo que se recomienda modificar el tamaño utilizando los comandos <em>Nodos &gt; Tamaño &gt; Único</em> en esta secuencia. También use el algoritmo de diseño <em>Force Atlas</em> para editar el grafico. Note que los pesos de las aristas reflejan en número de enlaces entre cada par de nodos, por lo que podemos reducir el grosor de estos. Además, agregue el tamaño de las etiquetas a su gusto (vea nuestra sugerencia en la Figura <a href="extraer-y-simplificar-redes.html#fig:9">7.13</a>). Antes de pasar al siguiente paso, haga clic derecho en el nodo <code>propagandista</code> (o <code>propagandist</code>). Esta acción abrirá un cuadro de diálogo; allí, seleccione <em>Bloquear</em>. Hacer esto evita que el nodo se mueva al aplicar algoritmos de diseño adicionales.</li>
+<li>Ahora, cambie la Ventana <em>Vista general</em> y visualice la red. Los nodos probablemente variarán en tamaño, por lo que se recomienda modificar el tamaño utilizando los comandos <em>Nodos &gt; Tamaño &gt; Único</em> en esta secuencia. También use el algoritmo de diseño <em>Force Atlas</em> para editar el gráfico. Note que los pesos de las aristas reflejan en número de enlaces entre cada par de nodos, por lo que podemos reducir el grosor de estos. Además, agregue el tamaño de las etiquetas a su gusto (vea nuestra sugerencia en la Figura <a href="extraer-y-simplificar-redes.html#fig:9">7.13</a>). Antes de pasar al siguiente paso, haga clic derecho en el nodo <code>propagandista</code> (o <code>propagandist</code>). Esta acción abrirá un cuadro de diálogo; allí, seleccione <em>Bloquear</em>. Hacer esto evita que el nodo se mueva al aplicar algoritmos de diseño adicionales.</li>
 </ol>
 </div>
 </div>

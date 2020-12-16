@@ -31,7 +31,7 @@ El desarrollo de este manual fue posible gracias al patrocinio del [Programa de 
 ## Misión educativa {-}
 
 :::{.boxed}
-**El material contenido en este manual se realizó con el propósito de revisión y discusión entre colegas para para su posterior aplicación  y no necesariamente refleja las opiniones del Departamento de Marina (en inglés Department of the Navy)  o del Departamento de Defensa (en inglés Department of Defense) de los Estados Unidos.**
+**El material contenido en este manual se realizó con el propósito de revisión y discusión entre colegas para para su posterior aplicación  y no necesariamente refleja las opiniones del Departamento de Marina (en inglés Department of the Navy)  o del Departamento de Defensa (en inglés Department of Defense) de los Estados Unidos y la Escuela Superior de Guerra - Escuela de Post Grado del Ejército de Perú.**
 :::
 
 

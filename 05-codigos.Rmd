@@ -6,7 +6,7 @@ output: html_document
 
 ## Libro de Códigos de Muestra
 
-El propósito de este documento es establecer un libro de códigos para estudiantes aprendiendo a estandarizar relacionales.
+El propósito de este documento es establecer un libro de códigos para estudiantes aprendiendo a estandarizar relaciones.
 
 ### Relaciones
 

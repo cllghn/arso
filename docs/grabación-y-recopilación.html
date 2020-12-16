@@ -292,7 +292,7 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
 </div>
 <div id="por-qué-usarlas-o-no" class="section level3">
 <h3><span class="header-section-number">4.1.2</span> ¿Por qué usarlas o no?</h3>
-<p>Las matrices tienen múltiples ventajas en ARSo. Primero, son simples de entender. Sin embargo, la razón clave por la cual se utilizan habitualmente es porque se pueden realizar cálculos matemáticos con estas para resumir la información de la red e ilustrar patrones relacionales <span class="citation">(Borgatti, Everett, &amp; Johnson, <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>.</p>
+<p>Las matrices tienen múltiples ventajas en ARSo. Primero, son simples de entender. Sin embargo, la razón clave por la cual se utilizan habitualmente es porque se pueden realizar cálculos matemáticos con estas para resumir la información de la red e ilustrar patrones relacionales <span class="citation">(Borgatti et al., <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>.</p>
 <p>Al trabajar con múltiples matrices de datos modo-uno con las mismas dimensiones, podemos producir una tercera matriz con el mismo número de dimensiones utilizado el producto Hadamard (operación por elementos). Por ejemplo, tomemos dos matrices con el mismo número de dimensiones una representando amistades y la otra con vínculos de negocios. Con estas podemos producir una tercera relación con las mismas dimensiones la cual nombremos “amigos en negocios”, la ecuación <a href="grabación-y-recopilación.html#eq:mat-op1">(4.2)</a> ilustra esta operación de matrices por elemento.</p>
 <p><span class="math display" id="eq:mat-op1">\[\begin{equation}
 \begin{matrix}
@@ -459,7 +459,7 @@ F      &amp; E      \\
 \end{matrix}\]</span>
 </div>
 </div>
-<p>Esencialmente, una lista de aristas es un rectángulo con un mínimo de dos columnas, cada fila representa una combinación de nodos vinculados. <span class="citation">Cunningham, Everton, &amp; Murphy (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> mencionan que aunque las listas de aristas pueden ser dirigidas o no dirigidas, es decir, contienen arcos o bordes, las columnas denotan un actor que “envía” el enlace y otro que “recibe” el enlace. En Gephi, el software denota estas posiciones con nombres obligatorios; es decir, que en términos de Gephi, la columna de “envía” siempre aparecerá nombrada “Origen” (o “Source” en Inglés). Similarmente, la columna “recibe” siempre aparecerá como “Destino” (o “Target” en Inglés).</p>
+<p>Esencialmente, una lista de aristas es un rectángulo con un mínimo de dos columnas, cada fila representa una combinación de nodos vinculados. <span class="citation">Cunningham et al. (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> mencionan que aunque las listas de aristas pueden ser dirigidas o no dirigidas, es decir, contienen arcos o bordes, las columnas denotan un actor que “envía” el enlace y otro que “recibe” el enlace. En Gephi, el software denota estas posiciones con nombres obligatorios; es decir, que en términos de Gephi, la columna de “envía” siempre aparecerá nombrada “Origen” (o “Source” en Inglés). Similarmente, la columna “recibe” siempre aparecerá como “Destino” (o “Target” en Inglés).</p>
 <p>Tradicionalmente, los analistas de ARSo tienden a mantener sus listas de aristas en software como Microsoft Excel. Sin embargo, es posible integrar tablas de bases de datos (por ejemplo, SQL) como precursores.</p>
 </div>
 <div id="por-qué-usarlas-o-no-1" class="section level3">
@@ -657,14 +657,14 @@ Figura 4.4: Reporte de Importación Gephi
 </div>
 <div class="rcolumn-80">
 <ol start="4" style="list-style-type: decimal">
-<li>Su red ahora deberá aparecer en pantalla, pero es probable que los nodos aparezcan de manera desordenada. Comencemos cambiando el color de los nodos. En la esquina superior izquierda de la interfaz vera un pestana <em>Apariencia</em> (consulte la Figura <a href="grabación-y-recopilación.html#fig:apariencia">4.5</a>). Allí, seleccione la pestaña <em>Nodos</em> y el ícono de paleta de color (que es el ícono más a la izquierda). Debajo de la pestaña <em>Nodos</em> verá un rango de opciones, si no está seleccionada la pestaña <em>Único</em>, haga clic en esta. Debajo de esta opción, note un cuadro gris (a la izquierda de <code>#c0c0c0</code>); de clic y manténgalo presionado para seleccionar un nuevo color, luego seleccione <em>Aplicar</em>.</li>
+<li>Su red ahora deberá aparecer en pantalla, pero es probable que los nodos aparezcan de manera desordenada. Comencemos cambiando el color de los nodos. En la esquina superior izquierda de la interfaz vera un pestana <em>Apariencia</em> (consulte la Figura <a href="trabajando-con-gephi.html#fig:apariencia">2.4</a>). Allí, seleccione la pestaña <em>Nodos</em> y el ícono de paleta de color (que es el ícono más a la izquierda). Debajo de la pestaña <em>Nodos</em> verá un rango de opciones, si no está seleccionada la pestaña <em>Único</em>, haga clic en esta. Debajo de esta opción, note un cuadro gris (a la izquierda de <code>#c0c0c0</code>); de clic y manténgalo presionado para seleccionar un nuevo color, luego seleccione <em>Aplicar</em>.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:apariencia"></span>
 <img src="images/02-Fig-5_apariencia.png" alt="Pestaña de Apariencia " width="50%" />
 <p class="caption">
-Figura 4.5: Pestaña de Apariencia
+Figura 2.4: Pestaña de Apariencia
 </p>
 </div>
 <div class="row">
@@ -673,14 +673,14 @@ Figura 4.5: Pestaña de Apariencia
 </div>
 <div class="rcolumn-80">
 <ol start="5" style="list-style-type: decimal">
-<li>Justo debajo de la pestaña <em>Apariencia</em> encontraraá otra de nombre <em>Distribución</em> (consulte la Figura <a href="grabación-y-recopilación.html#fig:diseno">4.6</a>). Gephi ofrece varias opciones de distribución de nodos, spara más información sobre estas consulte la página de tutoriales de <a href="https://gephi.org/users/tutorial-layouts/">Gephi</a>. En esta actividad solo exploraremos algunas de estas estrategias de distribución. Utilizando el menú desplegable, primero seleccione el algoritmo de nombre <em>Fruchterman Reigold</em> y haga clic en el botón <em>Ejecutar</em>. Dependiendo de la red, es posible que este algoritmo no sea el adecuado. Pruebe otros, por ejemplo <em>Force Atlas</em>. Al principio parecerá que los nodos han colapsado unos sobre otros, pero esto es engañoso. Para ver porque, elija la opción <em>Expansion</em> y haga clic repetidamente en el botón <em>Ejecutar</em> hasta que el gráfico sea los suficientemente grande para poder distinguir las conexiones entre nodos. Finalmente. Pruebe el algoritmo <em>Yifan Hu</em>, el cual, al menos con la red de Koschade, produce el gráfico más adecuado. Es decir, los subgrupos son fáciles de detectar y los nodos no se encuentran apilados unos sobre los otros.</li>
+<li>Justo debajo de la pestaña <em>Apariencia</em> encontraraá otra de nombre <em>Distribución</em> (consulte la Figura <a href="grabación-y-recopilación.html#fig:diseno">4.5</a>). Gephi ofrece varias opciones de distribución de nodos, spara más información sobre estas consulte la página de tutoriales de <a href="https://gephi.org/users/tutorial-layouts/">Gephi</a>. En esta actividad solo exploraremos algunas de estas estrategias de distribución. Utilizando el menú desplegable, primero seleccione el algoritmo de nombre <em>Fruchterman Reigold</em> y haga clic en el botón <em>Ejecutar</em>. Dependiendo de la red, es posible que este algoritmo no sea el adecuado. Pruebe otros, por ejemplo <em>Force Atlas</em>. Al principio parecerá que los nodos han colapsado unos sobre otros, pero esto es engañoso. Para ver porque, elija la opción <em>Expansion</em> y haga clic repetidamente en el botón <em>Ejecutar</em> hasta que el gráfico sea los suficientemente grande para poder distinguir las conexiones entre nodos. Finalmente. Pruebe el algoritmo <em>Yifan Hu</em>, el cual, al menos con la red de Koschade, produce el gráfico más adecuado. Es decir, los subgrupos son fáciles de detectar y los nodos no se encuentran apilados unos sobre los otros.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:diseno"></span>
 <img src="images/02-Fig_6_Layout.png" alt="Pestaña de Diseño" width="50%" />
 <p class="caption">
-Figura 4.6: Pestaña de Diseño
+Figura 4.5: Pestaña de Diseño
 </p>
 </div>
 <div class="row">
@@ -689,14 +689,14 @@ Figura 4.6: Pestaña de Diseño
 </div>
 <div class="rcolumn-80">
 <ol start="6" style="list-style-type: decimal">
-<li>Estas manipulaciones deben crear un gráfico similar a la Figura <a href="grabación-y-recopilación.html#fig:botones">4.7</a> (similar pues usted ha elegido el color de los nodos). Ahora, note lo diferentes botones al costado de la ventana del <em>Grafo</em> (ver Figura <a href="grabación-y-recopilación.html#fig:botones">4.7</a>), estos nos permiten hacer algunos ajustes rápidos al grafo. Por ejemplo, el botón 1 centra el gráfico, el 2 activa y desactiva las etiquetas, o puede controlar el tamaño de las etiquetas con la barra deslizante demarcada con el número 5. El botón 3 alterna el color de los nodos. Por último, note la flecha pequeña en la esquina inferior derecha (número 6), en el siguiente paso y otros laboratorios utilizaremos esta opción.</li>
+<li>Estas manipulaciones deben crear un gráfico similar a la Figura <a href="grabación-y-recopilación.html#fig:botones">4.6</a> (similar pues usted ha elegido el color de los nodos). Ahora, note lo diferentes botones al costado de la ventana del <em>Grafo</em> (ver Figura <a href="grabación-y-recopilación.html#fig:botones">4.6</a>), estos nos permiten hacer algunos ajustes rápidos al grafo. Por ejemplo, el botón 1 centra el gráfico, el 2 activa y desactiva las etiquetas, o puede controlar el tamaño de las etiquetas con la barra deslizante demarcada con el número 5. El botón 3 alterna el color de los nodos. Por último, note la flecha pequeña en la esquina inferior derecha (número 6), en el siguiente paso y otros laboratorios utilizaremos esta opción.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:botones"></span>
 <img src="images/01-botones_gephi.png" alt="Botones en Gephi" width="70%" />
 <p class="caption">
-Figura 4.7: Botones en Gephi
+Figura 4.6: Botones en Gephi
 </p>
 </div>
 <div class="row">
@@ -705,20 +705,20 @@ Figura 4.7: Botones en Gephi
 </div>
 <div class="rcolumn-80">
 <ol start="7" style="list-style-type: decimal">
-<li>Al darle clic a la pequeña flecha (número 6 en la Figura <a href="grabación-y-recopilación.html#fig:botones">4.7</a>), se debe levantar un panel con controles adicionales para manipular la red. El menú que debe es el de controles <em>Globales</em> (Figura <a href="grabación-y-recopilación.html#fig:globales">4.8</a>). En este, quizás el control más útil es la barra deslizante de zoom (etiqueta 2), que controla el tamaño del gráfico. En la imagen de abajo he aumentado el tamaño de la red y he centrado la imagen presionando el botón derecho del ratón y arrastrando el gráfico hacia el centro de la ventana. Además de modificar la dimensión del gráfico, puede cambiar el fondo dando clic en el cuadro en la esquina inferior izquierda (etiqueta 1).</li>
+<li>Al darle clic a la pequeña flecha (número 6 en la Figura <a href="grabación-y-recopilación.html#fig:botones">4.6</a>), se debe levantar un panel con controles adicionales para manipular la red. El menú que debe es el de controles <em>Globales</em> (Figura <a href="grabación-y-recopilación.html#fig:globales">4.7</a>). En este, quizás el control más útil es la barra deslizante de zoom (etiqueta 2), que controla el tamaño del gráfico. En la imagen de abajo he aumentado el tamaño de la red y he centrado la imagen presionando el botón derecho del ratón y arrastrando el gráfico hacia el centro de la ventana. Además de modificar la dimensión del gráfico, puede cambiar el fondo dando clic en el cuadro en la esquina inferior izquierda (etiqueta 1).</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:globales"></span>
 <img src="images/01-botones_gephi2.png" alt="Pestaña de Controles Globales en Gephi" width="70%" />
 <p class="caption">
-Figura 4.8: Pestaña de Controles Globales en Gephi
+Figura 4.7: Pestaña de Controles Globales en Gephi
 </p>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:globales2"></span>
 <img src="images/01-botones_gephi3.png" alt="Pestaña de Control de Aristas" width="70%" />
 <p class="caption">
-Figura 4.9: Pestaña de Control de Aristas
+Figura 4.8: Pestaña de Control de Aristas
 </p>
 </div>
 <div class="row">
@@ -727,14 +727,14 @@ Figura 4.9: Pestaña de Control de Aristas
 </div>
 <div class="rcolumn-80">
 <ol start="8" style="list-style-type: decimal">
-<li>En la Figura <a href="grabación-y-recopilación.html#fig:globales2">4.9</a> he seleccionado el panel de control de aristas, proceda haciendo lo mismo. Ahora, cambie el color de las aristas a gris (vea etiqueta 1 en la Figura <a href="grabación-y-recopilación.html#fig:globales2">4.9</a>) y use la barra deslizante (etiqueta 2) para reducir el ancho de cada línea. . Finalmente, seleccione la pestaña de etiquetas en el panel de control. Aquí, haga clic en el cuadro a un lado de <em>Nodos</em> (etiqueta 1 en la Figura <a href="grabación-y-recopilación.html#fig:globales3">4.10</a>) para activar las etiquetas de los nodos en el gráfico. Como verá estas serán inicialmente un poco grandes. Para ajustar estas cambie el tamaño estas utilizando la barra deslizante (etiqueta 3 en Figura <a href="grabación-y-recopilación.html#fig:globales3">4.10</a>). En Gephi siempre hay un par de maneras de hacer lo mismo. Por ejemplo, si selecciona el botón a un lado de “Fuentes” (etiqueta 2) note que puede cambiar múltiples propiedades de las etiquetas de cada nodo. El análisis de redes depende de gráficos claros y concisos. Tómese un par de minutos para modificar estas etiquetas a su gusto y cuando termine cierre el panel dando clic a la flecha (etiqueta 4) a mano derecha (ahora apuntando hacia abajo).</li>
+<li>En la Figura <a href="grabación-y-recopilación.html#fig:globales2">4.8</a> he seleccionado el panel de control de aristas, proceda haciendo lo mismo. Ahora, cambie el color de las aristas a gris (vea etiqueta 1 en la Figura <a href="grabación-y-recopilación.html#fig:globales2">4.8</a>) y use la barra deslizante (etiqueta 2) para reducir el ancho de cada línea. . Finalmente, seleccione la pestaña de etiquetas en el panel de control. Aquí, haga clic en el cuadro a un lado de <em>Nodos</em> (etiqueta 1 en la Figura <a href="grabación-y-recopilación.html#fig:globales3">4.9</a>) para activar las etiquetas de los nodos en el gráfico. Como verá estas serán inicialmente un poco grandes. Para ajustar estas cambie el tamaño estas utilizando la barra deslizante (etiqueta 3 en Figura <a href="grabación-y-recopilación.html#fig:globales3">4.9</a>). En Gephi siempre hay un par de maneras de hacer lo mismo. Por ejemplo, si selecciona el botón a un lado de “Fuentes” (etiqueta 2) note que puede cambiar múltiples propiedades de las etiquetas de cada nodo. El análisis de redes depende de gráficos claros y concisos. Tómese un par de minutos para modificar estas etiquetas a su gusto y cuando termine cierre el panel dando clic a la flecha (etiqueta 4) a mano derecha (ahora apuntando hacia abajo).</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:globales3"></span>
 <img src="images/01-botones_gephi4.png" alt="Panel de Control de Etiquetas en Gephi" width="70%" />
 <p class="caption">
-Figura 4.10: Panel de Control de Etiquetas en Gephi
+Figura 4.9: Panel de Control de Etiquetas en Gephi
 </p>
 </div>
 <div class="row">
@@ -755,14 +755,14 @@ Figura 4.10: Panel de Control de Etiquetas en Gephi
 </div>
 <div class="rcolumn-80">
 <ol start="10" style="list-style-type: decimal">
-<li>Ahora, desplace el cursor sobre uno de los nodos, al hacer esto Gephi debe resaltar un nodo a la vez y los enlaces a otros nodos. En la Figura <a href="grabación-y-recopilación.html#fig:ego">4.11</a>, presentamos el nodo de Patek resaltado, este tiene vínculos con varias personas dentro de su propia esfera de influencia, además algunos de estos nodos vecinos están conectados entre ellos. Sin embargo, note que los vecinos de Patek no están enlazados con Samudra. Utilizando esta herramienta (resaltar nodos) en su propio gráfico, <strong>¿saltan patrones que no haya notado antes?</strong> Finalmente, tome una captura de pantalla de su grafico dando clic en el icono de la cámara en la esquina inferior de la ventanilla del gráfico.</li>
+<li>Ahora, desplace el cursor sobre uno de los nodos, al hacer esto Gephi debe resaltar un nodo a la vez y los enlaces a otros nodos. En la Figura <a href="grabación-y-recopilación.html#fig:ego">4.10</a>, presentamos el nodo de Patek resaltado, este tiene vínculos con varias personas dentro de su propia esfera de influencia, además algunos de estos nodos vecinos están conectados entre ellos. Sin embargo, note que los vecinos de Patek no están enlazados con Samudra. Utilizando esta herramienta (resaltar nodos) en su propio gráfico, <strong>¿saltan patrones que no haya notado antes?</strong> Finalmente, tome una captura de pantalla de su grafico dando clic en el icono de la cámara en la esquina inferior de la ventanilla del gráfico.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:ego"></span>
 <img src="images/02-Fig_10_Patek_Ego.png" alt="Red con Patek Resaltado" width="75%" />
 <p class="caption">
-Figura 4.11: Red con Patek Resaltado
+Figura 4.10: Red con Patek Resaltado
 </p>
 </div>
 <div class="row">
@@ -779,7 +779,7 @@ Figura 4.11: Red con Patek Resaltado
 <div class="figure" style="text-align: center"><span id="fig:edges-table"></span>
 <img src="images/02-Fig_11_Gephi_Edge_List.png" alt="Lista de Aristas en la Table de Datos" width="75%" />
 <p class="caption">
-Figura 4.12: Lista de Aristas en la Table de Datos
+Figura 2.16: Lista de Aristas en la Table de Datos
 </p>
 </div>
 <div class="row">
@@ -789,7 +789,7 @@ Figura 4.12: Lista de Aristas en la Table de Datos
 </div>
 <div class="rcolumn-80">
 <ol start="12" style="list-style-type: decimal">
-<li>Ahora, haga clic en la pestaña <em>Aristas</em> y obtendrá una lista de todos los vínculos entre todos los actores (Figura <a href="grabación-y-recopilación.html#fig:edges-table">4.12</a>). Tenga en cuenta que esta información no se presenta en formato de matriz. En cambio, este formato llamaremos lista de bordes o lista de aristas. Estas enumeran un nodo de <code>Origen</code> (actor) y un nodo de <code>Destino</code> (actor), independientemente de si el enlace es dirigido o no.</li>
+<li>Ahora, haga clic en la pestaña <em>Aristas</em> y obtendrá una lista de todos los vínculos entre todos los actores (Figura <a href="trabajando-con-gephi.html#fig:edges-table">2.16</a>). Tenga en cuenta que esta información no se presenta en formato de matriz. En cambio, este formato llamaremos lista de bordes o lista de aristas. Estas enumeran un nodo de <code>Origen</code> (actor) y un nodo de <code>Destino</code> (actor), independientemente de si el enlace es dirigido o no.</li>
 </ol>
 </div>
 </div>
@@ -802,14 +802,14 @@ Figura 4.12: Lista de Aristas en la Table de Datos
 </div>
 <div class="rcolumn-80">
 <ol style="list-style-type: decimal">
-<li>Ahora, veamos como guardar nuestro gráfico de red. Para esto haga clic en el botón <em>Previsualización</em> para cambiar de espacio en Gephi. Al principio aparecerá una ventana vacía, así que haga clic en el botón <em>Refrescar</em> en la parte inferior de la ventana. Esto resultará en un gráfico de red similar a la Figura <a href="grabación-y-recopilación.html#fig:preview">4.13</a>.</li>
+<li>Ahora, veamos como guardar nuestro gráfico de red. Para esto haga clic en el botón <em>Previsualización</em> para cambiar de espacio en Gephi. Al principio aparecerá una ventana vacía, así que haga clic en el botón <em>Refrescar</em> en la parte inferior de la ventana. Esto resultará en un gráfico de red similar a la Figura <a href="trabajando-con-gephi.html#fig:preview">2.18</a>.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:preview"></span>
 <img src="images/02-Fig-12_preview.png" alt="Ventana de Previsualización" width="75%" />
 <p class="caption">
-Figura 4.13: Ventana de Previsualización
+Figura 2.18: Ventana de Previsualización
 </p>
 </div>
 <div class="row">
@@ -846,7 +846,7 @@ Figura 4.13: Ventana de Previsualización
 <div class="figure" style="text-align: center"><span id="fig:preview2"></span>
 <img src="images/02-Fig-13_preview.png" alt="Ventana de Previsualización con Ajustes" width="75%" />
 <p class="caption">
-Figura 4.14: Ventana de Previsualización con Ajustes
+Figura 4.11: Ventana de Previsualización con Ajustes
 </p>
 </div>
 <div class="row">
@@ -876,7 +876,7 @@ Figura 4.14: Ventana de Previsualización con Ajustes
 <div class="figure" style="text-align: center"><span id="fig:importacion"></span>
 <img src="images/01-impotacion.png" alt="Cuadro de Diálogo de Importación" width="70%" />
 <p class="caption">
-Figura 4.15: Cuadro de Diálogo de Importación
+Figura 4.12: Cuadro de Diálogo de Importación
 </p>
 </div>
 <div class="row">
@@ -937,14 +937,14 @@ Figura 4.15: Cuadro de Diálogo de Importación
 </div>
 <div class="rcolumn-80">
 <ol start="6" style="list-style-type: decimal">
-<li>Cambie a la ventana de <em>Vista general</em> y modifique el gráfico como lo hizo anteriormente. Esta vez coloree los nodos según los nodos de los actores. Para hacer esto, primero seleccione <em>Nodos &gt; Partición &gt; Color</em> en la ventanilla de <em>Apariencia</em>. Utilizando el menú desplegable <em>Elija un atributo</em>, seleccione <code>rol</code> y haga clic en <em>Aplicar</em> (consulte la Figura <a href="grabación-y-recopilación.html#fig:rol">4.16</a>). De forma predeterminada, el color de los arcos reflejara el color del actor de origen. Noten que puede cambiar el color de todas las aristas en el menú de <em>Aristas</em> a un lado de <em>Nodos</em>.</li>
+<li>Cambie a la ventana de <em>Vista general</em> y modifique el gráfico como lo hizo anteriormente. Esta vez coloree los nodos según los nodos de los actores. Para hacer esto, primero seleccione <em>Nodos &gt; Partición &gt; Color</em> en la ventanilla de <em>Apariencia</em>. Utilizando el menú desplegable <em>Elija un atributo</em>, seleccione <code>rol</code> y haga clic en <em>Aplicar</em> (consulte la Figura <a href="grabación-y-recopilación.html#fig:rol">4.13</a>). De forma predeterminada, el color de los arcos reflejara el color del actor de origen. Noten que puede cambiar el color de todas las aristas en el menú de <em>Aristas</em> a un lado de <em>Nodos</em>.</li>
 </ol>
 </div>
 </div>
 <div class="figure" style="text-align: center"><span id="fig:rol"></span>
 <img src="images/01-rol.png" alt="Red Koschade, Color de Nodos = Rol" width="70%" />
 <p class="caption">
-Figura 4.16: Red Koschade, Color de Nodos = Rol
+Figura 4.13: Red Koschade, Color de Nodos = Rol
 </p>
 </div>
 

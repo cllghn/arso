@@ -47,8 +47,14 @@ fig:gv
 fig:import
 fig:import-report
 fig:diseno
+fig:botones
+fig:globales
+fig:globales2
+fig:globales3
 fig:ego
 fig:preview2
+fig:importacion
+fig:rol
 eq:bip-adj
 eq:bip-inc
 eq:proj1
@@ -82,7 +88,6 @@ eq:mat7
 eq:mat8
 eq:hadd
 fig:recombinar
-fig:importacion
 fig:apilada
 fig:positivos
 fig:pandilleros
@@ -302,8 +307,3 @@ libro-de-códigos-de-noordin-top
 relaciones-1
 atributos-2
 referencias
-fig:botones
-fig:globales
-fig:globales2
-fig:globales3
-fig:rol
