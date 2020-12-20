@@ -7,41 +7,42 @@ output: html_document
 
 # Subgrupos Cohesivos
 
-En este capítulo, exploraremos algunos (pero no todos) métodos para hallar subgrupos cohesivos de actores dentro de una red social. Los subgrupos cohesivos son subconjuntos de actores entre los cuales existen lazos fuertes, por ello los métodos que utilizaremos formalizan la noción de un grupo social utilizando las propiedades estructurales de una red social [@Wasserman1994].
+En este capítulo, exploraremos algunos (pero no todos) métodos para hallar subgrupos cohesivos de actores dentro de una red social. Los subgrupos cohesivos son subconjuntos de actores entre los cuales existen fuertes lazos, por ello los métodos que utilizaremos formalizan la existencia de un grupo social a través de características estructurales de una red [@Wasserman1994].
 
-En esta breve introducción cubriremos componentes, núcleos, grupos Newman y grupos de Louvain. Para poner este nuevo conocimiento en práctica, el capitulo concluye con un ejercicio practico de como implementar estas medidas en Gephi.
+En esta breve introducción cubriremos: componentes, núcleos (k-core), grupos Girvan-Newman y de Louvain. Para poner este nuevo conocimiento en práctica, el capítulo concluye con un ejercicio práctico de como implementar estas medidas en Gephi.
+
 
 ## Componentes
 
-Estos son la forma mas simple de subgrupos cohesivos en ARSo. Simplemente, representan subredes en las cuales los miembros están conectados los unos a los otros (directa o indirectamente) pero no a miembros de otras subredes [@Everton2012, pp.171]. Los componentes pueden ser divididos en dos campos, fuertes o débiles. 
+Estos son la forma más simple de subgrupos cohesivos en ARSo. Representan subredes en las cuales los miembros están conectados los unos a los otros (directa o indirectamente) pero no a miembros de otras subredes [@Everton2012, pp.171]. Los componentes pueden ser divididos en dos campos, fuertes o débiles. 
 
 ### Componentes Débiles
 
-Los nodos en un grafo desconectado se pueden dividir en dos o mas subconjuntos de manera que no haya caminos entre los nodos en diferentes conjuntos [@Wasserman1994], estos subconjuntos del grafo se llaman componentes débiles. Localizar componentes débiles es apropiado para datos dirigidos o no dirigidos, puesto que el objetivo es localizar subconjuntos conectados. Tome por ejemplo la Figura \@ref(fig:weakcomp). En esta imagen, el color de los nodos denota el componente débil al que pertenecen. Como ve, encontramos tres componentes débiles en dicho gráfico, uno con cinco actores, una diada, y un aislado. 
+Los nodos en un grafo desconectado se pueden dividir en dos o más subconjuntos de manera que no haya caminos entre los nodos en diferentes conjuntos [@Wasserman1994], estos subconjuntos del grafo se llaman componentes débiles. Localizar componentes débiles es apropiado para datos dirigidos o no dirigidos, puesto que el objetivo es localizar subconjuntos conectados. Tome por ejemplo la Figura \@ref(fig:weakcomp). En esta imagen, el color de los nodos denota el componente débil al que pertenecen. Como puede observar, encontramos tres componentes débiles en dicho gráfico, uno con cinco actores, una diada, y un aislado. 
 
 <div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/weakcomp-1.png" alt="Red con multiples componentes débiles" width="70%" />
-<p class="caption">(\#fig:weakcomp)Red con multiples componentes débiles</p>
+<img src="03-subgrupos_files/figure-html/weakcomp-1.png" alt="Red con múltiples componentes débiles" width="70%" />
+<p class="caption">(\#fig:weakcomp)Red con múltiples componentes débiles</p>
 </div>
 
-El detectar componentes débiles no solo sirve para colorear los grafos, de hecho, una de las aplicaciones mas comunes es el aislar componentes. Por ejemplo, la densidad de el grafo en la Figura \@ref(fig:weakcomp) es 0.25. Este índice sugiere una red escarza, sin embargo, de manera visual podemos ver que algunos componentes son más densos que otros. Por ejemplo, el componente principal, aquel de mayor tamaño en un conjunto de subcomponentes, aparenta ser mas denso. Es por ello que podemos aislar este componente principal y al ejecutar la medida de densidad, vemos un valor de 0.6. Otra manera de pensar en este proceso es que nos permiten enfocarnos en diferentes subconjuntos del grafo en nuestro análisis. 
+El detectar componentes débiles no solo sirve para colorear los grafos, de hecho, una de las aplicaciones más comunes es el aislar componentes. Por ejemplo, la densidad de el grafo en la Figura \@ref(fig:weakcomp) es 0.25. Este índice sugiere una red escarza, sin embargo, de manera visual podemos ver que algunos componentes son más densos que otros. El componente principal, aquel de mayor tamaño, aparenta ser más denso. Es por ello que podemos aislar este componente principal y al ejecutar la medida de densidad vemos un valor de 0.6. Este proceso nos permite enfocarnos en diferentes subconjuntos del grafo en nuestro análisis. 
 
 ### Componentes Fuertes
 
-Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley2010 define los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre si y  (B) el subconjunto no es parte de un conjunto mayor con la propiedad de que todos los nodos pueden llegar a todos los demás [@Easley2010, pp. 388]. Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. Por ejemplo, en la Figura \@ref(fig:strongcomp) el color de los nodos nuevamente denota membresía a un subcomponente fuerte.
+Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley2010 define los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre sí y (B) el subconjunto no es parte de un conjunto mayor con la propiedad que los nodos pueden llegar a todos los demás. Por ejemplo, en la Figura \@ref(fig:strongcomp) el color de los nodos denota membresía a un subcomponente fuerte.
 
 <div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/strongcomp-1.png" alt="Red con multiples componentes fuertes" width="70%" />
-<p class="caption">(\#fig:strongcomp)Red con multiples componentes fuertes</p>
+<img src="03-subgrupos_files/figure-html/strongcomp-1.png" alt="Red con múltiples componentes fuertes" width="70%" />
+<p class="caption">(\#fig:strongcomp)Red con múltiples componentes fuertes</p>
 </div>
 
-Observe que en esta ocasión encontramos cuatro componentes fuertes, el primero se encuentra compuesto por un actor aislado {H}, el segundo es una diada reciproca {F, G}, el tercero es un solo actor {E}, y el cuarto sería el componente fuerte principal {A, B, C, D}. Es probable que se esté preguntando, ¿Por qué E no forma parte del componente fuerte principal? La razón la podemos encontrar en la definición de Easley y Kleinberg. Note que en el componente principal todos los nodos pueden alcanzarse entre sí, es decir, si cualquier nodo en el componente fuese a difundir alguna noticia atreves de sus contactos esta información podría retornar al originador. Esta dinámica se repite con la diada de los actores F y G. Sin embargo, E se encuentra en un componente único puesto que no alcanza a otros nodos.
+Observe que en esta ocasión encontramos cuatro componentes fuertes, el primero se encuentra compuesto por un actor aislado {H}, el segundo es una diada reciproca {F, G}, el tercero es un solo actor {E}, y el cuarto sería el componente fuerte principal {A, B, C, D}. Es probable que se esté preguntando, ¿Por qué E no forma parte del componente fuerte principal? La razón la podemos encontrar en la definición de Easley y Kleinberg. Note que en el componente principal todos los nodos pueden alcanzarse entre sí, es decir, si cualquier nodo en el componente fuese a difundir alguna noticia a través de sus contactos esta información podría retornar al originador. Sin embargo, E se encuentra en un componente único puesto que no alcanza a otros nodos.
 
-Como puede ver, los componentes fuertes son mas restrictivos que los componentes débiles. Sin embargo, son utilices al trabajar con datos dirigidos puesto que permiten el análisis de subconjuntos donde todos los nodos pueden alcanzarse entre si tomando en cuenta la direccionalidad de vínculos dirigidos y el flujo potencial de información y/o recursos.
+Como puede ver, los componentes fuertes son mas restrictivos que los componentes débiles. Sin embargo, son útilices al trabajar con datos dirigidos puesto que permiten el análisis de subconjuntos donde todos los nodos pueden alcanzarse entre sí tomando en cuenta la direccionalidad de vínculos dirigidos y el flujo potencial de información y/o recursos.
 
 ## K-cores
 
-Otra forma de localizar subgrupos cohesivos en una red es basándose en grados nodales; específicamente, utilizando k-cores (o k-núcleos) que se definen en términos del grado mínimo, *k*, en un subgrafo o del número mínimo de adyacencia presentes [@Wasserman1994] . Por ejemplo, la Figura \@ref(fig:kcore) representa un grafo completo, es decir, 0-core. En este, vemos nodos aislados con cero enlaces, nodos pendientes con un solo vinculo y nodos con una variedad de grados de centralidad. Un 1k-core incluye todos los nodos conectados al menos a una persona (ver Figura \@ref(fig:kcore1)). Similarmente, un 2k-core incluye nodos conectados al menos dos otros nodos (ver Figura \@ref(fig:kcore2)). De igual manera podemos definir un 3k-core como nodos con tres o más vínculos (ver Figura \@ref(fig:kcore3)). Al aumentar *k* comenzamos a localizar el núcleo de actores mas interconectados de la red, de igual manera el subconjunto restante aumentara en densidad [@Valente2010]. 
+Otra forma de localizar subgrupos cohesivos en una red es basándose en grados nodales; específicamente, utilizando k-cores (o k-núcleos) que se definen en términos del grado mínimo. Donde *k*, en un subgrafo es el número mínimo de nodos adyacentes [@Wasserman1994] . Por ejemplo, la Figura \@ref(fig:kcore) representa un grafo completo, es decir, 0-core. En este, vemos nodos aislados con cero enlaces, nodos pendientes con un solo vínculo y nodos con una variedad de grados de centralidad. Un 1-core incluye todos los nodos conectados al menos a una persona (ver Figura \@ref(fig:kcore1)). Similarmente, un 2-core incluye nodos conectados al menos dos otros nodos (ver Figura \@ref(fig:kcore2)). De igual manera podemos definir un 3-core como nodos con tres o más vínculos (ver Figura \@ref(fig:kcore3)). Al aumentar *k* comenzamos a localizar el núcleo de actores más interconectados de la red, de igual manera el subconjunto restante aumentará en densidad [@Valente2010]. 
 
 ::::{.row}
 ::::{.lcolumn-50}
@@ -73,11 +74,11 @@ Otra forma de localizar subgrupos cohesivos en una red es basándose en grados n
 ::::
 ::::
 
-El remover nodos incrementando *k* es una estrategia comúnmente utilizada por analistas de redes para describir la estructura de la red. Específicamente, para aislar el núcleo de la periferia, o los actores mas activos de los actores con pocas conexiones. 
+El remover nodos incrementando *k* es una estrategia comúnmente utilizada por analistas de redes para describir la estructura de la red. Específicamente, para aislar el núcleo de la periferia, o los actores más activos de los actores con pocas conexiones. 
 
 ## Girvan-Newman
 
-El algoritmo de Girvan y Newman [-@Newman2004] detecta subcomunidades enfocándose en remover vínculos intermediarios entre subconjuntos de nodos con el propósito de localizar subcomponentes. Simplemente, en la red \@ref(fig:bowtie) vemos dos triadas cerradas conectadas a través de un puente. En este grafico los vínculos han sido dibujados de manera ponderada con base en la intermediación de cada enlace. El algoritmo de Girvan y Newman comienza por calcular la intermediación de los enlaces, remueve de manera sistemática aquellos con el mayor índice de intermediación y procede a recalcular intermediación de enlaces y remover enlaces con alto valor de manera iterativa. Supongamos que ejecutamos este algoritmos por un ciclo, entonces removeriamos el puente entre traídas lo cual produce dos subconjuntos mejor descritos como componentes débiles (ver, \@ref(fig:bowtie2)).   
+El algoritmo de Girvan y Newman [-@Newman2004] detecta subcomunidades enfocándose en remover vínculos intermediarios entre subconjuntos de nodos con el propósito de localizar subcomponentes. Por ejemplo, en la red \@ref(fig:bowtie) vemos dos triadas cerradas conectadas a través de un puente. En este gráfico los vínculos han sido dibujados de manera ponderada con base en la intermediación de cada enlace. El algoritmo de Girvan y Newman comienza por calcular la intermediación de los enlaces, remueve de manera sistemática aquellos con el mayor índice de intermediación y procede a recalcularla y remover enlaces con alto valor de manera iterativa. Supongamos que ejecutamos este algoritmos por un ciclo, entonces al remover el puente entre traídas se produce dos subconjuntos, mejor descritos como componentes débiles (ver, \@ref(fig:bowtie2)).   
 
 ::::{.row}
 ::::{.lcolumn-50}
@@ -94,14 +95,14 @@ El algoritmo de Girvan y Newman [-@Newman2004] detecta subcomunidades enfocándo
 ::::
 ::::
 
-En practica, el algoritmo ejecuta este proceso y retorna un valor categórico correspondiente a la subcomunidad a la que pertenece cada nodo. Por lo tanto, el grafico original no se ve afectado y el analista gana información sobre la comunidad Girvan-Newman correspondiente para cada nodo. Por ejemplo, la Figura \@ref(fig:gn) contiene la red previa con comunidades Girvan-Newman resaltadas.
+En práctica, el algoritmo ejecuta este proceso y retorna un valor categórico correspondiente a la subcomunidad a la que pertenece cada nodo. Por lo tanto, el gráfico original no se ve afectado y el analista gana información sobre la comunidad Girvan-Newman correspondiente para cada nodo. Por ejemplo, la Figura \@ref(fig:gn) contiene la red previa con comunidades Girvan-Newman resaltadas.
 
 <div class="figure" style="text-align: center">
 <img src="03-subgrupos_files/figure-html/gn-1.png" alt="Comunidades Girvan-Newman y puentes resalatdos." width="70%" />
 <p class="caption">(\#fig:gn)Comunidades Girvan-Newman y puentes resalatdos.</p>
 </div>
 
-El algoritmo de Girvan-Newman provee una forma de generar particiones de la red a grupos mutuamente exclusivos y un índice que mide la adecuación de estas particiones, de tal forma que el analista puede elegir entre estas particiones en busca de la más adecuada conforme a los datos de la red [@Valente2010, pp. 106]. Normalmente, la partición de la red que genera el índice de modularidad mas alto es considerado el punto óptimo [@Everton2012].
+El algoritmo de Girvan-Newman provee una forma de generar particiones de la red a grupos mutuamente exclusivos y un índice que mide la adecuación de estas particiones, de tal forma que el analista puede elegir entre estas particiones en busca de la más adecuada conforme a los datos de la red [@Valente2010, pp. 106]. Normalmente, la partición de la red que genera el índice de modularidad más alto es considerado el punto óptimo [@Everton2012].
 
 <!-- ```{r} -->
 <!-- gn <- g %>% cluster_edge_betweenness()  -->
@@ -126,7 +127,7 @@ $$
 Q = \frac{1}{2m} \sum_{i, j}[A_{ij} – \frac{k_{i}k_{j}}{2m}]\delta(c_i, c_j)
 $$
 
-Donde $A_{ij}$ es el peso del vinculo entre los nodos $i$ y $j$. $k_{i}$ y $k_{j}$ son los grados de cada nodo correspondiente. $\delta(c_i, c_j)$ o Kronecker delta donde el valor es 1.0 si ambos $i$ y $j$ corresponden a la misma partición, de otra manera el valor es 0.0. Por último, $m$ corresponde al número de vínculos en la red. 
+Donde $A_{ij}$ es el peso del vínculo entre los nodos $i$ y $j$. $k_{i}$ y $k_{j}$ son los grados de cada nodo correspondiente. $\delta(c_i, c_j)$ o la delta Kronecker tiene un valor de 1.0 si ambos $i$ y $j$ corresponden a la misma partición, de otra manera el valor es 0.0. Por último, $m$ corresponde al número de vínculos en la red. 
 
 El siguiente es un ejemplo de cómo calcular la modularidad de una red a mano a se base en el [ejemplo de Matthew Joseph](https://www.researchgate.net/post/Can_anyone_provide_a_short_example_of_how_the_modularity_is_being_calculated_in_networks) en ResearchGate y [luego Abhishek Mishra]( https://medium.com/walmartglobaltech/demystifying-louvains-algorithm-and-its-implementation-in-gpu-9a07cdd3b010). Empecemos con nuestra pequeña red \@ref(fig:tie3) y su matriz de adyacencia \@ref(eq:tiemat).
 
@@ -151,7 +152,7 @@ F & 0 & 0 & 0 & 1 & 1 & - \\
 ::::
 ::::
 
-Como mencionamos previamente, la implementación del algoritmo Girvan-Newman comienza por remover el vinculo con la mayor intermediación, en este caso el puente entre los actores D y B. Aquí utilizaremos esta partición como punto de partida, es decir, la primera partición contiene los nodos {A, B, C} y la segunda {D, E, F}. Igualmente, el numero de enlaces en este grafo es $m$ = 7 y el grado de cada es equivalente a:
+Como mencionamos previamente, la implementación del algoritmo Girvan-Newman comienza por remover el vínculo con la mayor intermediación, en este caso el puente entre los actores D y B. Aquí utilizaremos esta partición como punto de inicio, es decir, la primera partición contiene los nodos {A, B, C} y la segunda {D, E, F}. Igualmente, el número de enlaces en este grafo es $m$ = 7 y el grado de cada nodo es equivalente a:
 
 \begin{matrix}
   & Grado \\
@@ -188,7 +189,7 @@ Podemos simplificar la operación previa como:
     Q = \frac{1}{2 \times 7} (4(1) + 2(0.5)) = 0.3571
 \end{align*}
 
-La modularidad con los nodos {A,B,C} y {D, E,F} en particiones separadas es igual a $Q$ = 0.3571. En este ejemplo no continuaremos removiendo enlaces y asignando nuevas particiones, como lo haría el algoritmo Girvan-Newman. El objetivo de este ejercicio breve es presentarle en mayor detalle el mecanismo utilizado para calcular la modularidad de una red y determinar el número óptimo de subcomunidades. 
+La modularidad con los nodos {A,B,C} y {D, E, F} en particiones separadas es igual a $Q$ = 0.3571. En este ejemplo no continuaremos removiendo enlaces y asignando nuevas particiones, como lo haría el algoritmo Girvan-Newman. El objetivo de este ejercicio breve es presentarle en mayor detalle el mecanismo utilizado para calcular la modularidad de una red y determinar el número óptimo de subcomunidades. 
 ::::
 
 ## Louvain
@@ -200,7 +201,7 @@ Publicado originalmente en 2008, el método Louvain es un método de optimizaci�
 <p class="caption">(\#fig:process)Visualización de los pasos en el algoritmo</p>
 </div>
 
-La Figura \@ref(fig:process) es una representación gráfica una sola ronda en el proceso. Sin embargo en términos prácticos, el proceso resulta en particiones que denotan las subcomunidades a las que pertenece cada nodo. La red izquierda de la Figura \@ref(fig:bigone) consta de 100 nodos, a su derecha vemos las subcomunidades optimas detectadas por el algoritmo de Louvain. Es importante recalcar que el objetivo del algoritmo es optimizar la modularidad y por consiguiente los grupos resultantes son una representación matemática de lo patrones de enlaces en el gráfico. Sin embargo, este tipo de herramienta analítica es útil en localizar comunidades cohesivas donde los miembros tienen normas, valores o aptitudes similares. Otra manera de pensar en esto es que los nodos dentro de cada grupo pueden seleccionarse a si mismos como parte del grupo o las presiones sociales del grupo pueden persuadir a los nuevos miembros para que adopten normas o valores del grupo [@Valente2010, 108].  
+La Figura \@ref(fig:process) es una representación gráfica de una sola ronda en el proceso. Sin embargo, en términos prácticos, el proceso resulta en particiones que denotan las subcomunidades a las que pertenece cada nodo. La red izquierda de la Figura \@ref(fig:bigone) consta de 100 nodos, a su derecha vemos las subcomunidades óptimas detectadas por el algoritmo de Louvain. Es importante recalcar que el objetivo del algoritmo es optimizar la modularidad y por consiguiente los grupos resultantes son una representación matemática de lo patrones de enlaces en el gráfico. Sin embargo, este tipo de herramienta analítica es útil en localizar comunidades cohesivas donde los miembros tienen normas, valores o aptitudes similares. Otra manera de pensar en esto es que los nodos dentro de cada grupo pueden seleccionarse a si mismos como parte del grupo o las presiones sociales del grupo pueden persuadir a los nuevos miembros para que adopten normas o valores del grupo [@Valente2010, 108].  
 
 <div class="figure" style="text-align: center">
 <img src="03-subgrupos_files/figure-html/bigone-1.png" alt="Red sin escala (izquierda) y red sin escala con particiones (derecha)" width="100%" />

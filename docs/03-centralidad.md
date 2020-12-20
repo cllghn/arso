@@ -7,11 +7,11 @@ output: html_document
 
 # Centralidad
 
-La centralidad es uno de los conceptos más antiguos del ARSo. Un actor central puede ser alguien que tiene numerosos vínculos con otros actores (grado), alguien que está más cerca (en términos de distancia del camino) a todos los demás actores (cercanía), alguien que se encuentra en el camino más corto (geodésico) entre dos actores cualesquiera (intermediación), o alguien que tiene vínculos con otros actores muy centrales (eigenvector). En algunas redes, los mismos actores obtienen una puntuación alta en las cuatro medidas. En otras no. 
+La centralidad es uno de los conceptos más antiguos del ARSo. Un actor central puede ser alguien que tiene numerosos vínculos con otros actores (grado), alguien que está más cerca (en términos de distancia del camino) a todos los demás (cercanía), alguien que se encuentra en el camino más corto (geodésico) entre dos actores cualesquiera (intermediación), o alguien que tiene vínculos con otros actores muy centrales (eigenvector). En algunas redes, los mismos actores obtienen una puntuación alta en las cuatro medidas, en otras no. 
 
 Por supuesto, hay más de cuatro medidas de centralidad. UCINET implementa más de 20, el programa R CINNA incluye más de 40, y [David Schoch ha creado una tabla periódica interactiva de más de 100 medidas de centralidad](http://schochastics.net/sna/periodic.html).
 
-Aquí discutiremos las tres centralidades más comunes, originalmente desarrolladas por Freeman [-@Freeman1979], es decir: grado, cercanía e intermediación. Además, otras medidas importantes serán introducidas como eigenvector [@Bonacich1987], grados de entrada y salida [@Wasserman1994] y centros de actividad y autoridades [@Kleinberg1999]. Para diferenciar entre medidas destinadas para datos dirigidos y no-dirigidos, dividiremos el capitulo en dos secciones. Adicionalmente, utilizaremos el marco teórico, originalmente postulado Freeman [-@Freeman1979], en @Cunningham2016 para clasificar las medidas de centralidad en tres familias: medidas basadas en frecuencia, medidas basadas en distancia y medidas basadas en caminos [@Cunningham2016, 142]. Como todos los capítulos, este concluirá con un ejercicio practico en Gephi. 
+Aquí discutiremos las tres centralidades más comunes, originalmente desarrolladas por Freeman [-@Freeman1979], es decir: grado, cercanía e intermediación. Además, otras medidas importantes serán introducidas como eigenvector [@Bonacich1987], grados de entrada y salida [@Wasserman1994] y centros de actividad y autoridades [@Kleinberg1999]. Para diferenciar entre medidas destinadas para datos dirigidos y no-dirigidos, dividiremos el capitulo en dos secciones. Adicionalmente, utilizaremos el marco teórico, originalmente postulado por Freeman [-@Freeman1979], utilizado en @Cunningham2016 para clasificar las medidas de centralidad en tres familias: medidas basadas en frecuencia, medidas basadas en distancia y medidas basadas en caminos. Como en todos los capítulos, este concluirá con un ejercicio práctico en Gephi. 
 
 ## Datos No Dirigidos: Centralidad y Poder 
 
@@ -19,7 +19,7 @@ Aquí consideramos algunas de las medidas de centralidad apropiadas para trabaja
 
   - Basadas en frecuencia: la característica unificadora de estas es el enfoque en la frecuencia con la que un actor tiene vínculos con otros en la red. Por ello, estas suponen que la alta frecuencia de enlaces es correspondiente a poder o importancia en la red. 
   - Basadas en distancia: estas asumen que las distancias entre actores es el factor principal en determina la centralidad y poder de cada nodo. 
-  - Basadas en caminos: estas se basan en la ubicación de un nodo en la red, principalmente se esta ubicación es una posición de corretaje o intermediación. 
+  - Basadas en caminos: estas se basan en la ubicación de un nodo en la red, principalmente si esta ubicación es una posición de corretaje o intermediación. 
 
 ### Medidas Basadas en Frecuencia
 
