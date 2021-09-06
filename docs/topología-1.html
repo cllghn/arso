@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>8 Topología | Análisis de Redes Sociales Oscuras</title>
+  <title>8 Topología | Análisis de Redes Sociales</title>
   <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="8 Topología | Análisis de Redes Sociales Oscuras" />
+  <meta property="og:title" content="8 Topología | Análisis de Redes Sociales" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="8 Topología | Análisis de Redes Sociales Oscuras" />
+  <meta name="twitter:title" content="8 Topología | Análisis de Redes Sociales" />
   
   <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
@@ -32,7 +32,9 @@
   
 <link rel="prev" href="extraer-y-simplificar-redes.html"/>
 <link rel="next" href="subgrupos-cohesivos.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,19 +51,41 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="arso.css" type="text/css" />
 </head>
@@ -76,20 +100,21 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Análisis de Redes Sociales Oscuras</a></li>
+<li><a href="./">Análisis de Redes Sociales</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introducción</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 </ul></li>
-</ul></li>
-<li class="part"><span><b>I Introducción</b></span></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a><ul>
+<li class="part"><span><b>I ¿ Qué es el ARSo?</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a><ul>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#interdependencia-de-los-actores"><i class="fa fa-check"></i><b>1.2.1</b> Interdependencia de los Actores</a></li>
 <li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#lazos-como-conductos"><i class="fa fa-check"></i><b>1.2.2</b> Lazos como Conductos</a></li>
 <li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#estructura-social-y-formaciones-sociales-emergentes"><i class="fa fa-check"></i><b>1.2.3</b> Estructura Social y Formaciones Sociales Emergentes</a></li>
@@ -97,7 +122,8 @@
 <li class="chapter" data-level="1.2.5" data-path="introduction.html"><a href="introduction.html#redes-sociales-dinámicas"><i class="fa fa-check"></i><b>1.2.5</b> Redes sociales dinámicas</a></li>
 <li class="chapter" data-level="1.2.6" data-path="introduction.html"><a href="introduction.html#resumen-redes-sociales-agencia-humana-y-cultura"><i class="fa fa-check"></i><b>1.2.6</b> Resumen: Redes Sociales, Agencia Humana y Cultura</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a><ul>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a>
+<ul>
 <li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#actores-y-enlaces"><i class="fa fa-check"></i><b>1.3.1</b> Actores y Enlaces</a></li>
 <li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#redes-sociales"><i class="fa fa-check"></i><b>1.3.2</b> Redes Sociales</a></li>
 <li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#camino-y-distancia-de-caminos"><i class="fa fa-check"></i><b>1.3.3</b> Camino (y Distancia de Caminos)</a></li>
@@ -112,10 +138,12 @@
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#resumen-y-conclusiones"><i class="fa fa-check"></i><b>1.4</b> Resumen y Conclusiones</a></li>
 </ul></li>
 <li class="part"><span><b>II ARSo: Tecnicas</b></span></li>
-<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a><ul>
-<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
 <li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
-<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a><ul>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
 <li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
@@ -124,55 +152,68 @@
 <li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
-<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
 <li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
 <li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
-<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a><ul>
+<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a><ul>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
-<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
 <li class="chapter" data-level="4.4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#guardar-gráfico-de-red-en-gephi"><i class="fa fa-check"></i><b>4.4.2</b> Guardar Gráfico de Red en Gephi</a></li>
 <li class="chapter" data-level="4.4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#importación-de-listas-de-aristas-modo-uno"><i class="fa fa-check"></i><b>4.4.3</b> Importación de Listas de Aristas Modo-Uno</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a><ul>
+<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
 <li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
-<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
 <li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a><ul>
+<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#matrices-y-listas-de-aristas"><i class="fa fa-check"></i><b>6.1</b> Matrices y Listas de Aristas</a></li>
-<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a><ul>
+<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#apilar"><i class="fa fa-check"></i><b>6.2.1</b> Apilar</a></li>
 <li class="chapter" data-level="6.2.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#agregar"><i class="fa fa-check"></i><b>6.2.2</b> Agregar</a></li>
 <li class="chapter" data-level="6.2.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#recombinar"><i class="fa fa-check"></i><b>6.2.3</b> Recombinar</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#importar-múltiples-redes-a-gephi"><i class="fa fa-check"></i><b>6.3.1</b> Importar múltiples redes a Gephi</a></li>
 <li class="chapter" data-level="6.3.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a><ul>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
 <li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
-<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
 <li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
@@ -181,74 +222,114 @@
 </ul></li>
 </ul></li>
 <li class="part"><span><b>III ARSo: Medidas</b></span></li>
-<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a><ul>
-<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a><ul>
+<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a>
+<ul>
 <li class="chapter" data-level="8.1.1" data-path="topología-1.html"><a href="topología-1.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
 <li class="chapter" data-level="8.1.2" data-path="topología-1.html"><a href="topología-1.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
 <li class="chapter" data-level="8.1.3" data-path="topología-1.html"><a href="topología-1.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a><ul>
+<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="topología-1.html"><a href="topología-1.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
 <li class="chapter" data-level="8.2.2" data-path="topología-1.html"><a href="topología-1.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a>
+<ul>
 <li class="chapter" data-level="8.3.1" data-path="topología-1.html"><a href="topología-1.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="8.4.1" data-path="topología-1.html"><a href="topología-1.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="8.4.2" data-path="topología-1.html"><a href="topología-1.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
-<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a><ul>
+<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
 <li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
 <li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
 <li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
-<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="9.5.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.5.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="9.5.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.5.2</b> Identificación de Subgrupos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a><ul>
-<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a><ul>
+<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia"><i class="fa fa-check"></i><b>10.1.1</b> Medidas Basadas en Frecuencia</a></li>
 <li class="chapter" data-level="10.1.2" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-distancia"><i class="fa fa-check"></i><b>10.1.2</b> Medidas Basadas en Distancia</a></li>
 <li class="chapter" data-level="10.1.3" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-caminos"><i class="fa fa-check"></i><b>10.1.3</b> Medidas Basadas en Caminos</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a><ul>
+<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia-1"><i class="fa fa-check"></i><b>10.2.1</b> Medidas Basadas en Frecuencia</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="centralidad-1.html"><a href="centralidad-1.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.3.1</b> Centralidad en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
+<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puntos-de-corte"><i class="fa fa-check"></i><b>11.1</b> Puntos de Corte</a></li>
 <li class="chapter" data-level="11.2" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#bi-componentes-y-puentes"><i class="fa fa-check"></i><b>11.2</b> Bi-componentes y Puentes</a></li>
 <li class="chapter" data-level="11.3" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#intermediación-de-borde"><i class="fa fa-check"></i><b>11.3</b> Intermediación de borde</a></li>
 <li class="chapter" data-level="11.4" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#agujeros-estructurales-restricción-y-autonomía"><i class="fa fa-check"></i><b>11.4</b> Agujeros Estructurales, Restricción y Autonomía</a></li>
-<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.5.1</b> Puentes y Corredores en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
-<li class="part"><span><b>V Apéndices</b></span></li>
-<li class="chapter" data-level="12" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>12</b> Glosario de Términos</a></li>
-<li class="chapter" data-level="13" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html"><i class="fa fa-check"></i><b>13</b> Libro de Códigos</a><ul>
-<li class="chapter" data-level="13.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>13.1</b> Libro de Códigos de Muestra</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones"><i class="fa fa-check"></i><b>13.1.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.1.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-1"><i class="fa fa-check"></i><b>13.1.2</b> Atributos</a></li>
+<li class="chapter" data-level="12" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>12</b> Un Proceso de Diseño para la Investigación de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>12.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>12.1.1</b> Pregunata(s) de Investigación</a></li>
+<li class="chapter" data-level="12.1.2" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>12.1.2</b> Limites</a></li>
+<li class="chapter" data-level="12.1.3" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>12.1.3</b> Codificar Relaciones y Atributos</a></li>
+<li class="chapter" data-level="12.1.4" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>12.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
+<li class="chapter" data-level="12.1.5" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#conclusiones"><i class="fa fa-check"></i><b>12.1.5</b> Conclusiones</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>13.2</b> Libro de Códigos de Noordin Top</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones-1"><i class="fa fa-check"></i><b>13.2.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.2.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-2"><i class="fa fa-check"></i><b>13.2.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html"><i class="fa fa-check"></i><b>13</b> Ejemplos Practicos</a>
+<ul>
+<li class="chapter" data-level="" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#informe-de-la-red-criminal-en-la-república-de-panamá"><i class="fa fa-check"></i>Informe de la Red Criminal en la República de Panamá</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#libro-de-códigos"><i class="fa fa-check"></i><b>13.0.1</b> Libro de Códigos</a></li>
+<li class="chapter" data-level="13.0.2" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#mapa-de-red"><i class="fa fa-check"></i><b>13.0.2</b> Mapa de red</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>VI Referencias</b></span></li>
-<li class="chapter" data-level="14" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>14</b> Referencias</a></li>
+<li class="appendix"><span><b>Apéndices</b></span></li>
+<li class="chapter" data-level="A" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>A</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="B" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html"><i class="fa fa-check"></i><b>B</b> Libro de Códigos</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>B.1</b> Libro de Códigos de Muestra</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-2"><i class="fa fa-check"></i><b>B.1.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.1.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-3"><i class="fa fa-check"></i><b>B.1.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>B.2</b> Libro de Códigos de Noordin Top</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-3"><i class="fa fa-check"></i><b>B.2.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.2.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-4"><i class="fa fa-check"></i><b>B.2.2</b> Atributos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Referencias</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">
+Publicado con bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -258,7 +339,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales Oscuras</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales</a>
           </h1>
         </div>
 
@@ -266,14 +347,15 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="topología-1" class="section level1">
+<div id="topología-1" class="section level1" number="8">
 <h1><span class="header-section-number">8</span> Topología</h1>
-<p>La topología consta de una familia de medidas que son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación cuantitativa sobre la estructura de esta <span class="citation">(Valente, <a href="#ref-Valente2010" role="doc-biblioref">2010</a>)</span>. Es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros <span class="citation">(McCormick &amp; Owen, <a href="#ref-McCormick2000" role="doc-biblioref">2000</a>)</span>; asimismo, esta configuración hace a la red más vulnerable a disrupción al remover un puñado de actores clave.</p>
+<p>La topología consta de una familia de medidas que son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación cuantitativa sobre la estructura de esta <span class="citation">(<a href="#ref-Valente2010" role="doc-biblioref">Valente, 2010</a>)</span>. Es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros <span class="citation">(<a href="#ref-McCormick2000" role="doc-biblioref">McCormick &amp; Owen, 2000</a>)</span>; asimismo, esta configuración hace a la red más vulnerable a disrupción al remover un puñado de actores clave. De manera opuesta, las redes altamente descentralizadas son relativamente invulnerables a la eliminación de actores clave, pueden tener dificultades para movilizar recursos <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016</a>)</span>.</p>
 <p>Observe las Figuras <a href="topología-1.html#fig:star">8.1</a> y <a href="topología-1.html#fig:full">8.2</a>, ambas tienen la misma cantidad de nodos, pero las características estructurales son diferentes y presentan ventajas y desventajas. Por ejemplo, en la Figura <a href="topología-1.html#fig:star">8.1</a> la mayoría de los nodos rodean a un actor en el centro de la red. Este tipo de configuración es comúnmente asociada con organizaciones jerárquicas con protocolos establecidos de comando y control. La ventaja de esta topología es un que un nodo central controla el flujo de recursos e información, en teoría haciendo la diseminación de estos más eficiente. Sin embargo, esta estructura tiene un defecto clave. ¿Qué pasa si removemos al actor central? La red se deshace por completo y el flujo es interrumpido de manera indeterminada.</p>
 <p>Ahora, en la Figura <a href="topología-1.html#fig:full">8.2</a> no encontramos una formación centrada alrededor de un actor clave. Al contrario, en este caso todos los nodos se encuentran conectados entre ellos. La ventaja es clara, no hay un solo punto de disrupción como en la Figura <a href="topología-1.html#fig:star">8.1</a>. Sin embargo, las características estructurales no sugieren un solo camino para el flujo de información o recursos, lo cual en algunas ocasiones retrasa ciertos procesos organizacionales. Es decir, si todos son líderes, nadie puede estar a cargo de dar instrucciones a los demás.</p>
+<p>Es probable que sea mejor considerear ambas configuraciones (centralizada y descentralizada) como polos opuestos de un continuo. Como tal, el nivel óptimo de centralización en dicho espectro cambiará con el tiempo y en función de las presiones ambientales <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016</a>; <a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a</a>)</span>. Por ejemplo, en un entorno hostil, la red puede priorizar la seguridad de actores clave; así, avanzando hacia una estructura más descentralizada. Es precisamente por este dinamismo intrínseco a las redes sociales que el estudio de la estructura de red debe ir acompañada con contexto en el que se encuentra incrustrada.</p>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:star"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:star"></span>
 <img src="03-topologia_files/figure-html/star-1.png" alt="Red estrella" width="70%" />
 <p class="caption">
 Figura 8.1: Red estrella
@@ -281,7 +363,7 @@ Figura 8.1: Red estrella
 </div>
 </div>
 <div class="rcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:full"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:full"></span>
 <img src="03-topologia_files/figure-html/full-1.png" alt="Red completa" width="70%" />
 <p class="caption">
 Figura 8.2: Red completa
@@ -290,16 +372,16 @@ Figura 8.2: Red completa
 </div>
 </div>
 <p>En este capítulo, examinaremos una serie de medidas que capturan características estructurales de la red completa. Comenzaremos con una serie de medidas básicas comúnmente utilizadas para describir una red como: tamaño, distancia y diámetro. Después, exploraremos dos dimensiones topológicas: interconexión y centralización. Esta discusión será complementada por una serie de medidas correspondientes. Finalmente, este capítulo concluirá con un ejercicio práctico en Gephi.</p>
-<div id="medidas-básicas-de-topología" class="section level2">
+<div id="medidas-básicas-de-topología" class="section level2" number="8.1">
 <h2><span class="header-section-number">8.1</span> Medidas Básicas de Topología</h2>
 <p>Estas proveen al analista contexto sobre la red en discusión. Aquí cubriremos: tamaño, distancia promedio, y diámetro.</p>
-<div id="tamaño" class="section level3">
+<div id="tamaño" class="section level3" number="8.1.1">
 <h3><span class="header-section-number">8.1.1</span> Tamaño</h3>
-<p>El tamaño se refiere a el número de actores en una red <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Es importante pues afecta otras medidas topológicas de la red. Por ello, conocer el tamaño de una red es importante al interpretar medidas basadas en este valor, como densidad o diámetro <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>.</p>
+<p>El tamaño se refiere a el número de actores en una red <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a</a>)</span>. Es importante pues afecta otras medidas topológicas de la red. Por ello, conocer el tamaño de una red es importante al interpretar medidas basadas en este valor, como densidad o diámetro <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016</a>)</span>.</p>
 <p>Comúnmente denotamos el tamaño de un a red con la letra <span class="math inline">\(N\)</span>. Por ejemplo, en las Figuras <a href="topología-1.html#fig:g5">8.3</a> y <a href="topología-1.html#fig:g10">8.4</a> <span class="math inline">\(N\)</span> es equivalente a 5 y 10 respectivamente.</p>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:g5"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:g5"></span>
 <img src="03-topologia_files/figure-html/g5-1.png" alt="Grafo de red, tamaño = 5" width="70%" />
 <p class="caption">
 Figura 8.3: Grafo de red, tamaño = 5
@@ -307,7 +389,7 @@ Figura 8.3: Grafo de red, tamaño = 5
 </div>
 </div>
 <div class="rcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:g10"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:g10"></span>
 <img src="03-topologia_files/figure-html/g10-1.png" alt="Grafo de red, tamaño = 10" width="70%" />
 <p class="caption">
 Figura 8.4: Grafo de red, tamaño = 10
@@ -315,18 +397,18 @@ Figura 8.4: Grafo de red, tamaño = 10
 </div>
 </div>
 </div>
-<p>En teoría, hay un límite practico a la cantidad de enlaces que puede mantener cada persona en la red, por ello, el tamaño habitualmente no es una de las medidas más interesantes sino un indicador de los límites de la red <span class="citation">(Valente, <a href="#ref-Valente2010" role="doc-biblioref">2010</a>)</span>. Es por ello, que el analista debe considerar como establecer los límites para reflejar de manera adecuada el tamaño real de la red <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>.</p>
+<p>En teoría, hay un límite practico a la cantidad de enlaces que puede mantener cada persona en la red, por ello, el tamaño habitualmente no es una de las medidas más interesantes sino un indicador de los límites de la red <span class="citation">(<a href="#ref-Valente2010" role="doc-biblioref">Valente, 2010</a>)</span>. Es por ello, que el analista debe considerar como establecer los límites para reflejar de manera adecuada el tamaño real de la red <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016</a>)</span>.</p>
 </div>
-<div id="distancia-promedio" class="section level3">
+<div id="distancia-promedio" class="section level3" number="8.1.2">
 <h3><span class="header-section-number">8.1.2</span> Distancia Promedio</h3>
-<p>La distancia promedio se refiere a la longitud promedio de todos los caminos más cortos entre todos los actores de una red <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Para un grafo no dirigido binario <span class="math inline">\(G\)</span>, definimos la distancia promedio como:</p>
+<p>La distancia promedio se refiere a la longitud promedio de todos los caminos más cortos entre todos los actores de una red <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a</a>)</span>. Para un grafo no dirigido binario <span class="math inline">\(G\)</span>, definimos la distancia promedio como:</p>
 <p><span class="math display">\[
 l_G = \frac{1}{N(N-1)}\sum\limits_{i \neq j}d(v_i,v_j)
 \]</span></p>
 <p>Examinemos esta definición, con la Figura <a href="topología-1.html#fig:circ">8.5</a>. Supongamos que el objetivo del actor 1 es transferir información a los otros actores en la red de manera más eficiente. Si <span class="math inline">\(d\)</span> es la distancia entre un par de nodos, podemos expresar la distancia entre el nodo 1 los demás de la siguiente manera:</p>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:circ"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:circ"></span>
 <img src="03-topologia_files/figure-html/circ-1.png" alt="Grafo circular" width="70%" />
 <p class="caption">
 Figura 8.5: Grafo circular
@@ -347,28 +429,28 @@ d(1, 5) = 1
 l_G = \frac{1}{5(5-1)} \times 5(1 + 2 + 2 + 1) = 1.5
 \]</span></p>
 <p>Al calcular la distancia promedio, podemos decir que en promedio todos los nodos en la Figura <a href="topología-1.html#fig:circ">8.5</a> se encuentran a 1.5 pasos entre ellos. Puesto que este es un promedio de distancias, podemos comparar este valor con el promedio de otra red.</p>
-<p>En términos prácticos, la distancia promedio es indicativa de la velocidad con la cual la información viaja a través de una red. Es decir, en una red compacta la información se debe difundir rápidamente; al contrario, en una red con una distancia promedio alta la difusión de información tomará lugar en un periodo de tiempo más amplio <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Esta interpretación no es ley, sino una supoción comúnmente hecha por analistas. Es importante considerar que en ciertas situaciones las redes con distancia promedio pequeñas no gozan de difusión rápida puesto que algunos actores tienden a retener información de sus vecinos <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. Adicionalmente, se debe recalcar que la fórmula de distancia promedio se centra en eficiencia, es decir, distancias más cortas entre nodos. Es posible que, en una red oscura donde los nodos no conozcan a sus vecinos o a los vecinos de sus vecinos, un actor envié información a través de caminos con distancias mayores al promedio. Por lo tanto, la distancia promedio solo sugiere eficiencias con base a la estructura de una red.</p>
+<p>En términos prácticos, la distancia promedio es indicativa de la velocidad con la cual la información viaja a través de una red. Es decir, en una red compacta la información se debe difundir rápidamente; al contrario, en una red con una distancia promedio alta la difusión de información tomará lugar en un periodo de tiempo más amplio <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a</a>)</span>. Esta interpretación no es ley, sino una supoción comúnmente hecha por analistas. Es importante considerar que en ciertas situaciones las redes con distancia promedio pequeñas no gozan de difusión rápida puesto que algunos actores tienden a retener información de sus vecinos <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016</a>)</span>. Adicionalmente, se debe recalcar que la fórmula de distancia promedio se centra en eficiencia, es decir, distancias más cortas entre nodos. Es posible que, en una red oscura donde los nodos no conozcan a sus vecinos o a los vecinos de sus vecinos, un actor envié información a través de caminos con distancias mayores al promedio. Por lo tanto, la distancia promedio solo sugiere eficiencias con base a la estructura de una red.</p>
 </div>
-<div id="diámetro" class="section level3">
+<div id="diámetro" class="section level3" number="8.1.3">
 <h3><span class="header-section-number">8.1.3</span> Diámetro</h3>
-<p>La distancia geodésica mayor entre todos los nodos en un grafo <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Formalmente, <span class="citation">Wasserman &amp; Faust (<a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> definen esta medida como la máxima <span class="math inline">\(d(i, j)\)</span> o <span class="math inline">\(maxd(i,j)\)</span>. Por ejemplo, podemos calcular las distancias geodésicas de la Figura <a href="topología-1.html#fig:diam">8.6</a>:</p>
-<div class="figure" style="text-align: center"><span id="fig:diam"></span>
+<p>La distancia geodésica mayor entre todos los nodos en un grafo <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a</a>)</span>. Formalmente, <span class="citation"><a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust</a> (<a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> definen esta medida como la máxima <span class="math inline">\(d(i, j)\)</span> o <span class="math inline">\(maxd(i,j)\)</span>. Por ejemplo, podemos calcular las distancias geodésicas de la Figura <a href="topología-1.html#fig:diam">8.6</a>:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:diam"></span>
 <img src="03-topologia_files/figure-html/diam-1.png" alt="Grafo ejemplo" width="70%" />
 <p class="caption">
 Figura 8.6: Grafo ejemplo
 </p>
 </div>
 <p>El diámetro del grafo es equivalente es <span class="math inline">\(max d(i,j)\)</span> = <span class="math inline">\(d(1,5)\)</span>= 3.</p>
-<p>Esta medida es importante pues cuantifica cuán lejos se encuentran los nodos más distantes entre sí <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span>. Como con la distancia promedio, consideremos una red en la cual la información viaja a través de los vínculos entre actores. Suponiendo que los mensajes siguen las rutas más cortas, tomará tiempo para que un mensaje recurra toda la red cuando el diámetro es mayor.</p>
+<p>Esta medida es importante pues cuantifica cuán lejos se encuentran los nodos más distantes entre sí <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994</a>)</span>. Como con la distancia promedio, consideremos una red en la cual la información viaja a través de los vínculos entre actores. Suponiendo que los mensajes siguen las rutas más cortas, tomará tiempo para que un mensaje recurra toda la red cuando el diámetro es mayor.</p>
 </div>
 </div>
-<div id="interconexión" class="section level2">
+<div id="interconexión" class="section level2" number="8.2">
 <h2><span class="header-section-number">8.2</span> Interconexión</h2>
-<p>En una red oscura, la interconexión entre los actores es crucial para la red como organismo dinámico. Por ejemplo, puesto que la seguridad de la organización es crucial, a menudo el reclutamiento de nuevos miembros toma lugar a través de los vínculos preexistentes de miembros de la red <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. Es por este aislamiento que las redes oscuras enfocadas en el anonimato tienden volverse cada vez más densas con vínculos entre miembros de la red y pocos enlaces al mundo exterior. Sin embargo, el cortar vínculos con el mundo exterior conlleva un costo al limitar el acceso a recursos (por ejemplo, materiales, logísticos, financieros, etc.). Es por ello, que algunos investigadores y analistas sugieren que los vínculos a actores externos a la red oscura son esenciales para acceder recursos y sobrevivir retos <span class="citation">(Uzzi, <a href="#ref-Uzzi1996" role="doc-biblioref">1996</a>)</span>.</p>
+<p>En una red oscura, la interconexión entre los actores es crucial para la red como organismo dinámico. Por ejemplo, puesto que la seguridad de la organización es crucial, a menudo el reclutamiento de nuevos miembros toma lugar a través de los vínculos preexistentes de miembros de la red <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016</a>)</span>. Es por este aislamiento que las redes oscuras enfocadas en el anonimato tienden volverse cada vez más densas con vínculos entre miembros de la red y pocos enlaces al mundo exterior. Sin embargo, el cortar vínculos con el mundo exterior conlleva un costo al limitar el acceso a recursos (por ejemplo, materiales, logísticos, financieros, etc.). Es por ello, que algunos investigadores y analistas sugieren que los vínculos a actores externos a la red oscura son esenciales para acceder recursos y sobrevivir retos <span class="citation">(<a href="#ref-Uzzi1996" role="doc-biblioref">Uzzi, 1996</a>)</span>.</p>
 <p>Esta dinámica entre acceso a recursos y seguridad, fuerza a las organizaciones y a los actores que las conforman a balancear aislamiento (por ejemplo, interconexión alta) con acceso a recursos exteriores (por ejemplo, interconexión moderada o baja). En esta sección, nos enfocamos en las medidas comúnmente utilizadas para medir este proceso, específicamente, densidad y grado medio.</p>
-<div id="densidad" class="section level3">
+<div id="densidad" class="section level3" number="8.2.1">
 <h3><span class="header-section-number">8.2.1</span> Densidad</h3>
-<p>La densidad (<span class="math inline">\(d\)</span>) es el número de enlaces en un grafo dividido por el número total posible de enlaces en el mismo <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span>. En una red no dirigida, se define como:</p>
+<p>La densidad (<span class="math inline">\(d\)</span>) es el número de enlaces en un grafo dividido por el número total posible de enlaces en el mismo <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016</a>)</span>. En una red no dirigida, se define como:</p>
 <p><span class="math display">\[
 d = \frac{L}{n(n-1)/2}
 \]</span></p>
@@ -380,7 +462,7 @@ d = \frac{L}{n(n-1)}
 <p>Pongamos esta herramienta en práctica; específicamente, con la Figura <a href="topología-1.html#fig:den">8.7</a> la cual podemos representar como matriz de adyacencia <a href="topología-1.html#eq:den">(8.1)</a>.</p>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:den"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:den"></span>
 <img src="03-topologia_files/figure-html/den-1.png" alt="Grafo no dirigido" width="70%" />
 <p class="caption">
 Figura 8.7: Grafo no dirigido
@@ -400,16 +482,16 @@ Figura 8.7: Grafo no dirigido
 </div>
 <p>El número actual (<span class="math inline">\(L\)</span>) de enlaces es seis y contamos con cuatro nodos en este gráfico. Entonces, la densidad de esta red es equivalente a <span class="math inline">\(d = \frac{6}{3}\)</span> = 0.5. Es decir, la interconexión de la red es 0.5 o solo la mitad de los actores están conectados.</p>
 </div>
-<div id="grado-medio" class="section level3">
+<div id="grado-medio" class="section level3" number="8.2.2">
 <h3><span class="header-section-number">8.2.2</span> Grado Medio</h3>
-<p>La medida de densidad está inversamente relacionada con el tamaño de la red, puesto que al agregar actores a la red, el número de vínculos posibles aumenta exponencialmente mientras que el número de vínculos que cada actor puede mantener se mantiene constante <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>. Es por ello, que a menudo las redes más grandes tendrán densidades más bajas. Con base en esta observación, los analistas de redes utilizan la medida de grado medio para comparar el nivel de interconexión entre redes de diferentes tamaños. El grado medio se define formalmente como el promedio de enlaces que tiene cada actor en la red. Si el grado de cada nodo es <span class="math inline">\(k\)</span>, entonces:</p>
+<p>La medida de densidad está inversamente relacionada con el tamaño de la red, puesto que al agregar actores a la red, el número de vínculos posibles aumenta exponencialmente mientras que el número de vínculos que cada actor puede mantener se mantiene constante <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a</a>)</span>. Es por ello, que a menudo las redes más grandes tendrán densidades más bajas. Con base en esta observación, los analistas de redes utilizan la medida de grado medio para comparar el nivel de interconexión entre redes de diferentes tamaños. El grado medio se define formalmente como el promedio de enlaces que tiene cada actor en la red. Si el grado de cada nodo es <span class="math inline">\(k\)</span>, entonces:</p>
 <p><span class="math display">\[
 \bar{k} = \frac{E}{N}
 \]</span></p>
 <p>Donde <span class="math inline">\(N\)</span> es el número de nodos y <span class="math inline">\(E\)</span> es el número de vínculos en la red. En términos prácticos, esta ecuación retorna un número promedio de vínculos para todos los actores en la red. Esto nos ayuda a comparar redes de diferentes tamaños. Por ejemplo, las redes <a href="topología-1.html#fig:avg1">8.8</a> y <a href="topología-1.html#fig:avg2">8.9</a> tienen un grado medio similar, de 1.98 y 1.99 respectivamente. La densidad es equivalente a 0.02 y a 0.01,.</p>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:avg1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:avg1"></span>
 <img src="03-topologia_files/figure-html/avg1-1.png" alt="Grafo sin escala de 100 nodos" width="70%" />
 <p class="caption">
 Figura 8.8: Grafo sin escala de 100 nodos
@@ -417,7 +499,7 @@ Figura 8.8: Grafo sin escala de 100 nodos
 </div>
 </div>
 <div class="rcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:avg2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:avg2"></span>
 <img src="03-topologia_files/figure-html/avg2-1.png" alt="Grafo sin escala de 200 nodos" width="70%" />
 <p class="caption">
 Figura 8.9: Grafo sin escala de 200 nodos
@@ -428,18 +510,18 @@ Figura 8.9: Grafo sin escala de 200 nodos
 <p>Es decir, aunque la densidad de estos gráficos es disímil podemos atribuir esta discrepancia a el número de nodos en cada red. Sin embargo, la medida más adecuada en esta situacion sería el grado medio, la cual como vemos nos permite comparar el nivel de interconexión entre redes de diferente tamaño.</p>
 </div>
 </div>
-<div id="centralización" class="section level2">
+<div id="centralización" class="section level2" number="8.3">
 <h2><span class="header-section-number">8.3</span> Centralización</h2>
-<p>Para recapitular, la eficiencia operacional de una red se ve afectada por la habilidad de esta para movilizar recursos materiales o humanos <span class="citation">(McCormick &amp; Owen, <a href="#ref-McCormick2000" role="doc-biblioref">2000</a>)</span>. Algunos sugieren que esta capacidad operacional se encuentra íntimamente relacionada con la topología de la red social; específicamente, la centralización de la red <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>; Morselli, <a href="#ref-Morselli2001" role="doc-biblioref">2009</a>)</span>. Sin embargo, las redes altamente centralizadas no son libres de desafíos. Sino que pueden ser vulnerables a la eliminación de un puñado clave de nodos <span class="citation">(Bakker, Raab, &amp; Milward, <a href="#ref-Bakker2011" role="doc-biblioref">2011</a>)</span>. Por ello, <span class="citation">Everton (<a href="#ref-Everton2012a" role="doc-biblioref">2012</a><a href="#ref-Everton2012a" role="doc-biblioref">b</a>)</span> hace el argumento “demasiado de algo bueno puede llevar a las redes a tener un rendimiento inferior … [desde la perspectiva de la red oscura] no deben encontrase demasiado centralizadas o descentralizadas, mientras que desde la nuestra así es exactamente como queremos que sean” <span class="citation">(Everton, <a href="#ref-Everton2012a" role="doc-biblioref">2012</a><a href="#ref-Everton2012a" role="doc-biblioref">b</a>)</span>.</p>
+<p>Para recapitular, la eficiencia operacional de una red se ve afectada por la habilidad de esta para movilizar recursos materiales o humanos <span class="citation">(<a href="#ref-McCormick2000" role="doc-biblioref">McCormick &amp; Owen, 2000</a>)</span>. Algunos sugieren que esta capacidad operacional se encuentra íntimamente relacionada con la topología de la red social; específicamente, la centralización de la red <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016</a>; <a href="#ref-Morselli2001" role="doc-biblioref">Morselli, 2009</a>)</span>. Sin embargo, las redes altamente centralizadas no son libres de desafíos. Sino que pueden ser vulnerables a la eliminación de un puñado clave de nodos <span class="citation">(<a href="#ref-Bakker2011" role="doc-biblioref">Bakker, Raab, &amp; Milward, 2011</a>)</span>. Por ello, <span class="citation"><a href="#ref-Everton2012a" role="doc-biblioref">Everton</a> (<a href="#ref-Everton2012a" role="doc-biblioref">2012b</a>)</span> hace el argumento “demasiado de algo bueno puede llevar a las redes a tener un rendimiento inferior … [desde la perspectiva de la red oscura] no deben encontrase demasiado centralizadas o descentralizadas, mientras que desde la nuestra así es exactamente como queremos que sean” <span class="citation">(<a href="#ref-Everton2012a" role="doc-biblioref">Everton, 2012b</a>)</span>.</p>
 <p>Es crucial que como analistas de redes sepamos como determinar el nivel de centralización de una red. En la siguiente sección presentamos la medida de centralización, la cual es comúnmente utilizada para capturar de manera cuantitativa el nivel de centralización de una red.</p>
-<div id="centralización-1" class="section level3">
+<div id="centralización-1" class="section level3" number="8.3.1">
 <h3><span class="header-section-number">8.3.1</span> Centralización</h3>
-<p>La centralización es el grado en que los vínculos de una red se centran en una persona o un conjunto de personas, de modo que en una red centralizada, una o varias personas ocupan puestos de poder y control en la red, mientras que las redes descentralizadas tienen estructuras de poder y control difusas <span class="citation">(Valente, <a href="#ref-Valente2010" role="doc-biblioref">2010</a>)</span>.</p>
-<p>Esta medida se basa en la centralidad de cada nodo en la red para calcular que tan variables o heterogéneas es la distribución de estos índices para cada actor <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span>. Podemos observar un ejemplo de red centralizada en la Figura <a href="topología-1.html#fig:star">8.1</a>. En el grafo estrella el actor uno (1) tiene contacto directo con todos los demás, los cuales no tienen contacto entre ellos. Utilizando el concepto de centralidad de grado, que es el número de vínculos que tiene cada nodo, exploremos como calcular la centralización de grado. Aquí utilizamos la definición general matemática de Freeman <span class="citation">(<a href="#ref-Freeman1979" role="doc-biblioref">1979</a>)</span> para calcular el índice de centralización de grado a nivel grupo:</p>
+<p>La centralización es el grado en que los vínculos de una red se centran en una persona o un conjunto de personas, de modo que en una red centralizada, una o varias personas ocupan puestos de poder y control en la red, mientras que las redes descentralizadas tienen estructuras de poder y control difusas <span class="citation">(<a href="#ref-Valente2010" role="doc-biblioref">Valente, 2010</a>)</span>.</p>
+<p>Esta medida se basa en la centralidad de cada nodo en la red para calcular que tan variables o heterogéneas es la distribución de estos índices para cada actor <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994</a>)</span>. Podemos observar un ejemplo de red centralizada en la Figura <a href="topología-1.html#fig:star">8.1</a>. En el grafo estrella el actor uno (1) tiene contacto directo con todos los demás, los cuales no tienen contacto entre ellos. Utilizando el concepto de centralidad de grado, que es el número de vínculos que tiene cada nodo, exploremos como calcular la centralización de grado. Aquí utilizamos la definición general matemática de Freeman <span class="citation">(<a href="#ref-Freeman1979" role="doc-biblioref">1979</a>)</span> para calcular el índice de centralización de grado a nivel grupo:</p>
 <p><span class="math display">\[
 C = \frac{\sum [C(n^*) - C(n_i)]}{max\sum [C(n^*) - C(n_i)]}
 \]</span></p>
-<p>Donde <span class="math inline">\(C(n_i)\)</span> representa el índice de centralidad de un actor y <span class="math inline">\(C(n^*)\)</span> es el mayor valor del índice de centralidad en la red. Por lo tanto, <span class="math inline">\(\sum [C(n^*) - C(n_i)]\)</span> es la suma de las diferencias entre el valor máximo y los valores observados; adicionalmente, <span class="math inline">\(max\sum [C(n^*) - C(n_i)]\)</span> es la suma teórica máxima <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span>. El producto de esta operación es un índice entre 0 y 1. Una red con un índice de centralización 0 sería aquella donde todos los actores tienen la misma centralidad. De manera opuesta, una red con índice de centralización 1 representa una configuración donde un solo actor domina el índice de centralidad comparado con los demás nodos en la red.Utilizando la fórmula de Freeman, calculemos la centralización de grado para la red estrella (ver Figura <a href="topología-1.html#fig:star">8.1</a>).</p>
+<p>Donde <span class="math inline">\(C(n_i)\)</span> representa el índice de centralidad de un actor y <span class="math inline">\(C(n^*)\)</span> es el mayor valor del índice de centralidad en la red. Por lo tanto, <span class="math inline">\(\sum [C(n^*) - C(n_i)]\)</span> es la suma de las diferencias entre el valor máximo y los valores observados; adicionalmente, <span class="math inline">\(max\sum [C(n^*) - C(n_i)]\)</span> es la suma teórica máxima <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994</a>)</span>. El producto de esta operación es un índice entre 0 y 1. Una red con un índice de centralización 0 sería aquella donde todos los actores tienen la misma centralidad. De manera opuesta, una red con índice de centralización 1 representa una configuración donde un solo actor domina el índice de centralidad comparado con los demás nodos en la red.Utilizando la fórmula de Freeman, calculemos la centralización de grado para la red estrella (ver Figura <a href="topología-1.html#fig:star">8.1</a>).</p>
 <div class="row">
 <div class="lcolumn-50">
 <p><span class="math inline">\(C_D = \frac{\sum [C(n^*) - C(n_i)]}{max\sum [C(n^*) - C(n_i)]}\)</span></p>
@@ -458,8 +540,8 @@ Nodo   &amp; Grado \\
 \end{matrix}\]</span>
 </div>
 </div>
-<p>En la red estrella la centralización de grado es 1.0 (ver ecuaciónn <a href="topología-1.html#eq:grados">(8.2)</a>). Por consiguiente, de manera matemática asumimos que los nodos en este gráfico convergen alrededor de un actor central.</p>
-<div class="figure" style="text-align: center"><span id="fig:star2"></span>
+<p>En la red estrella la centralización de grado es 1.0 (ver ecuación <a href="topología-1.html#eq:grados">(8.2)</a>). Por consiguiente, de manera matemática asumimos que los nodos en este gráfico convergen alrededor de un actor central.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:star2"></span>
 <img src="03-topologia_files/figure-html/star2-1.png" alt="Red estrella modificada" width="70%" />
 <p class="caption">
 Figura 8.10: Red estrella modificada
@@ -488,15 +570,15 @@ Nodo   &amp; Grado \\
 <p>Antes de concluir esta sección, es importante recalcar dos cosas. Primero, como se ha mencionado la centralización es un índice grupal generado a base de las medidas de centralidad para cada vértice. En los siguientes capítulos veremos múltiples medidas de centralidad que pueden servir como precursores para calcular una medida de centralización. En este capítulo solamente hemos utilizado la centralidad de grado como precursor, pero es importante tener en mente que es posible generar índices de centralización con medidas de centralidad como intermediación, cercanía, o eigenvector. Segundo, Gephi no tiene la capacidad de calcular centralización, sin embargo, otras plataformas de software (como ORA, UCInet, o igraph) tienen esta capacidad y complementan las funciones de Gephi.</p>
 </div>
 </div>
-<div id="ejercicio-práctico-4" class="section level2">
+<div id="ejercicio-práctico-4" class="section level2" number="8.4">
 <h2><span class="header-section-number">8.4</span> Ejercicio Práctico</h2>
 <p>En este ejericio consideramos varias métricas para examinar la topología de la red, por ejemplo: tamaño de la red, densidad, grado promedio, distancia promedio, diámetro y centralización. El tamaño es igual al número de actores en una red. La densidad es igual al número de enlaces dividido por el total de lazos posibles. Sin embargo, el número de enlaces posibles en una red está inversamente relacionado con el tamaño de la red (es decir, cuanto más grande es la red, menor es la densidad); por consiguiente, los investigadores usan otras medidas como el grado promedio para comparar redes de diferente tamaño. La distancia promedio de la ruta es la longitud promedio de todas las rutas más cortas (es decir, geodésicas) entre todos los actores en una red, y el diámetro es la geodésica más larga de una red. Finalmente, la centralización mide el grado en que una red se centra en un solo actor (o grupo de actores).</p>
 <p>Para este ejercicio utilizaremos un conjunto de datos con diez redes diferentes apiladas, que se encuentran ya cargadas en el archivo: <a href="https://github.com/cjcallag/arso/blob/main/data/topology/Noordin.gephi?raw=true"><code>Noordin.gephi</code></a>. <strong>Descargue y guarde el archivo, abra el archivo siguiendo los pasos que se muestran a continuación.</strong></p>
-<div id="antes-de-empezar-3" class="section level3">
+<div id="antes-de-empezar-3" class="section level3" number="8.4.1">
 <h3><span class="header-section-number">8.4.1</span> Antes de Empezar</h3>
 <p>Para este ejercicio, deberá instalar el módulo <em>Clustering Coefficient</em> (ó coeficiente de agrupación) en Gephi. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo <em>MultimodeNetworks Transformation</em> en ejercicio práctico en el capitulo <a href="derivando-datos-modo-uno-de-modo-dos.html#derivando-datos-modo-uno-de-modo-dos">Derivando Datos Modo-Uno de Modo-Dos</a>.</p>
 </div>
-<div id="topología-de-redes-en-gephi" class="section level3">
+<div id="topología-de-redes-en-gephi" class="section level3" number="8.4.2">
 <h3><span class="header-section-number">8.4.2</span> Topología de redes en Gephi</h3>
 <div class="row">
 <div class="lcolumn-20">
@@ -520,7 +602,7 @@ Nodo   &amp; Grado \\
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1"></span>
 <img src="images/02-08-01.png" alt="Ventana de descripción general, ventanilla de contexto" width="70%" />
 <p class="caption">
 Figura 8.11: Ventana de descripción general, ventanilla de contexto
@@ -536,7 +618,7 @@ Figura 8.11: Ventana de descripción general, ventanilla de contexto
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:2"></span>
 <img src="images/02-08-02.png" alt="Ventana de descripción general, pestaña Estadísticas" width="70%" />
 <p class="caption">
 Figura 8.12: Ventana de descripción general, pestaña Estadísticas
@@ -548,7 +630,7 @@ Figura 8.12: Ventana de descripción general, pestaña Estadísticas
 </div>
 <div class="rcolumn-80">
 <ol start="4" style="list-style-type: decimal">
-<li>La densidad de la red es igual a el número de enlaces dividido por todos los lazos posibles. Sin embargo, los puntajes de densidad tienden a disminuir a medida que las redes sociales se hacen más grandes porque el número de enlaces posibles aumenta exponencialmente con cada actor adicional, pero el número de lazos que cada actor puede mantener permanece relativamente constante. Por esto, la densidad de la red se debe usar para comparar redes del mismo tamaño (que hacemos aquí). Una medida alternativa a la densidad es el grado medio puesto que esta no es sensible al tamaño de la red. Por consiguiente, podemos utilizar esta segunda medida para comparar redes de diferentes tamaños. Podemos estimar el grado promedio de la red apilada haciendo clic en “Ejecutar” junto a “Grado medio” en la ventana de “Estadísticas”. En este caso, solo nos interesa la medida de grado promedio estándar en lugar de la medida de “Grado medio con pesos” porque no queremos incorporar los pesos de las conexiones. La puntuación aparecerá en la esquina superior izquierda de la ventana del informe (no se muestra). ¿Cuál es el grado promedio de la red apilada? El informe también produce un gráfico de “distribución de grados” que indica el número de actores en diferentes niveles de centralidad de grado. Si observa de cerca, verá que parece que hay un actor con un grado de centralidad de 130. Volveremos a este informe en un laboratorio posterior cuando veamos los puntajes de centralidad individuales. ¿Cuál es el grado medio de la red de amistad? ¿Comunicaciones? De las 10 redes individuales, ¿cuál tiene el grado medio más alto?</li>
+<li>La densidad de la red es igual a el número de enlaces dividido por todos los lazos posibles. Sin embargo, los puntajes de densidad tienden a disminuir a medida que las redes sociales se hacen más grandes porque el número de enlaces posibles aumenta exponencialmente con cada actor adicional, pero el número de lazos que cada actor puede mantener permanece relativamente constante. Por esto, la densidad de la red se debe usar para comparar redes del mismo tamaño (que hacemos aquí). Una medida alternativa a la densidad es el grado medio puesto que esta no es sensible al tamaño de la red. Por consiguiente, podemos utilizar esta segunda medida para comparar redes de diferentes tamaños. Podemos estimar el grado promedio de la red apilada haciendo clic en “Ejecutar” junto a “Grado medio” en la ventana de “Estadísticas.” En este caso, solo nos interesa la medida de grado promedio estándar en lugar de la medida de “Grado medio con pesos” porque no queremos incorporar los pesos de las conexiones. La puntuación aparecerá en la esquina superior izquierda de la ventana del informe (no se muestra). ¿Cuál es el grado promedio de la red apilada? El informe también produce un gráfico de “distribución de grados” que indica el número de actores en diferentes niveles de centralidad de grado. Si observa de cerca, verá que parece que hay un actor con un grado de centralidad de 130. Volveremos a este informe en un laboratorio posterior cuando veamos los puntajes de centralidad individuales. ¿Cuál es el grado medio de la red de amistad? ¿Comunicaciones? De las 10 redes individuales, ¿cuál tiene el grado medio más alto?</li>
 </ol>
 </div>
 </div>
@@ -572,7 +654,7 @@ Figura 8.12: Ventana de descripción general, pestaña Estadísticas
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:3"></span>
 <img src="images/02-08-03.png" alt="Ventana de descripción general, pestaña Estadísticas" width="70%" />
 <p class="caption">
 Figura 8.13: Ventana de descripción general, pestaña Estadísticas
@@ -582,37 +664,37 @@ Figura 8.13: Ventana de descripción general, pestaña Estadísticas
 </div>
 </div>
 </div>
-<h3> Referencias</h3>
-<div id="refs" class="references">
-<div id="ref-Bakker2011">
-<p>Bakker, R. M., Raab, J., &amp; Milward, H. B. (2011). A preliminary theory of dark network resilience. <em>Journal of Policy Analysis and Management</em>, <em>31</em>, 33–62.</p>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Bakker2011" class="csl-entry">
+Bakker, R. M., Raab, J., &amp; Milward, H. B. (2011). A preliminary theory of dark network resilience. <em>Journal of Policy Analysis and Management</em>, <em>31</em>, 33–62.
 </div>
-<div id="ref-Cunningham2016">
-<p>Cunningham, D., Everton, S. F., &amp; Murphy, P. (2016). <em>Understanding dark networks: A strategic framework for the use of social network analysis</em>. Rowman; Littlefield.</p>
+<div id="ref-Cunningham2016" class="csl-entry">
+Cunningham, D., Everton, S. F., &amp; Murphy, P. (2016). <em>Understanding dark networks: A strategic framework for the use of social network analysis</em>. Rowman; Littlefield.
 </div>
-<div id="ref-Everton2012">
-<p>Everton, S. F. (2012a). <em>Disrupting dark networks</em>. Cambridge.</p>
+<div id="ref-Everton2012a" class="csl-entry">
+Everton, S. F. (2012b). Network topography, key players and terrorist networks. <em>Connections</em>, <em>2</em>, 1–8.
 </div>
-<div id="ref-Everton2012a">
-<p>Everton, S. F. (2012b). Network topography, key players and terrorist networks. <em>Connections</em>, <em>2</em>, 1–8.</p>
+<div id="ref-Everton2012" class="csl-entry">
+Everton, S. F. (2012a). <em>Disrupting dark networks</em>. Cambridge.
 </div>
-<div id="ref-Freeman1979">
-<p>Freeman, L. C. (1979). Centrality in social networks i: Conceptual clarification. <em>Social Networks</em>, <em>1</em>, 215–239.</p>
+<div id="ref-Freeman1979" class="csl-entry">
+Freeman, S. C., &amp; Linton C, F. (1979). <em>The networkers network : A study of the impact of a new communications medium on sociometric structure</em>. School of Social Sciences Univ. of Calif.
 </div>
-<div id="ref-McCormick2000">
-<p>McCormick, G., &amp; Owen, G. (2000). Security and coordination in a clandestine organization. <em>Mathematical and Computer Modelling</em>, <em>31</em>, 175–192.</p>
+<div id="ref-McCormick2000" class="csl-entry">
+McCormick, G., &amp; Owen, G. (2000). Security and coordination in a clandestine organization. <em>Mathematical and Computer Modelling</em>, <em>31</em>, 175–192.
 </div>
-<div id="ref-Morselli2001">
-<p>Morselli, C. (2009). <em>Inside criminal networks</em>. Spinger.</p>
+<div id="ref-Morselli2001" class="csl-entry">
+Morselli, C. (2009). <em>Inside criminal networks</em>. Spinger.
 </div>
-<div id="ref-Uzzi1996">
-<p>Uzzi, B. (1996). The sources and consequences of embeddedness for the economic performance of organizations: The network effect. <em>American Sociological Review</em>, <em>61</em>, 674–698.</p>
+<div id="ref-Uzzi1996" class="csl-entry">
+Uzzi, B. (1996). The sources and consequences of embeddedness for the economic performance of organizations: The network effect. <em>American Sociological Review</em>, <em>61</em>, 674–698.
 </div>
-<div id="ref-Valente2010">
-<p>Valente, T. W. (2010). <em>Social networks and health: Models, methods, and applications</em>. Oxford.</p>
+<div id="ref-Valente2010" class="csl-entry">
+Valente, T. W. (2010). <em>Social networks and health: Models, methods, and applications</em>. Oxford.
 </div>
-<div id="ref-Wasserman1994">
-<p>Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.</p>
+<div id="ref-Wasserman1994" class="csl-entry">
+Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.
 </div>
 </div>
             </section>
@@ -644,7 +726,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/cjcallag/arso/edit/main/03-topologia.Rmd",
-"text": "Edit"
+"text": "Editar"
 },
 "history": {
 "link": null,
@@ -655,15 +737,22 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
-"css": "arso.css",
 "font_settings": {
-"theme": "white",
 "family": "sans",
+"theme": "white",
 "size": 2
+},
+"info": true,
+"toolbar": {
+"position": "fixed"
 }
 });
 });

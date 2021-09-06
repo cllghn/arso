@@ -1,6 +1,7 @@
 ---
 output: html_document
 bibliography: book.bib
+always_allow_html: yes
 ---
 
 
@@ -52,8 +53,11 @@ El objetivo es analizar la combinación de estas relaciones de manera que podamo
 
 Como hemos mencionado previamente, el recopilar información en sociomatrices es laborioso e ineficiente. Por consíguete, al recopilar múltiples tipos de relaciones es sugerible utilizar una lista de aristas, el formato básico de dos columnas puede ser expandido para incluir una columna clasificando el tipo de vínculo. Recuerde que en una lista de aristas cada fila representa un vínculo, por lo tanto, es posible apilar relaciones de la siguiente manera:
 
-<!--html_preserve--><div id="htmlwidget-38a41005a5865268ad45" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-38a41005a5865268ad45">{"x":{"filter":"none","data":[["A","A","B","D","D","E","C"],["B","C","C","E","F","F","D"],["Familiar","Familiar","Familiar","Familiar","Familiar","Familiar","Financiera"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[2]; $(row).css({'background-color':value == \"Familiar\" ? \"#e41a1c\" : value == \"Financiera\" ? \"#018571\" : null});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script><!--/html_preserve-->
+
+```{=html}
+<div id="htmlwidget-38a41005a5865268ad45" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-38a41005a5865268ad45">{"x":{"filter":"none","vertical":false,"data":[["A","A","B","D","D","E","C"],["B","C","C","E","F","F","D"],["Familiar","Familiar","Familiar","Familiar","Familiar","Familiar","Financiera"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Origen<\/th>\n      <th>Destino<\/th>\n      <th>Relación<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[2]; $(row).css({'background-color':value == \"Familiar\" ? \"#e41a1c\" : value == \"Financiera\" ? \"#018571\" : null});\n}"}},"evals":["options.rowCallback"],"jsHooks":[]}</script>
+```
 
 El incorporar múltiples relaciones en una sola lista con una variable categórica, permite la importación de datos de manera efectiva. Sin embargo, es común encontrar analistas que mantienen sus relaciones en múltiples archivos por propósitos de manipulación de datos. 
 

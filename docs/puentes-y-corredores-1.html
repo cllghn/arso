@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>11 Puentes y Corredores | Análisis de Redes Sociales Oscuras</title>
+  <title>11 Puentes y Corredores | Análisis de Redes Sociales</title>
   <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="11 Puentes y Corredores | Análisis de Redes Sociales Oscuras" />
+  <meta property="og:title" content="11 Puentes y Corredores | Análisis de Redes Sociales" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="11 Puentes y Corredores | Análisis de Redes Sociales Oscuras" />
+  <meta name="twitter:title" content="11 Puentes y Corredores | Análisis de Redes Sociales" />
   
   <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
@@ -31,8 +31,10 @@
   
   
 <link rel="prev" href="centralidad-1.html"/>
-<link rel="next" href="glosario-de-términos.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link rel="next" href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,19 +51,41 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="arso.css" type="text/css" />
 </head>
@@ -76,20 +100,21 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Análisis de Redes Sociales Oscuras</a></li>
+<li><a href="./">Análisis de Redes Sociales</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introducción</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 </ul></li>
-</ul></li>
-<li class="part"><span><b>I Introducción</b></span></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a><ul>
+<li class="part"><span><b>I ¿ Qué es el ARSo?</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a><ul>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#interdependencia-de-los-actores"><i class="fa fa-check"></i><b>1.2.1</b> Interdependencia de los Actores</a></li>
 <li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#lazos-como-conductos"><i class="fa fa-check"></i><b>1.2.2</b> Lazos como Conductos</a></li>
 <li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#estructura-social-y-formaciones-sociales-emergentes"><i class="fa fa-check"></i><b>1.2.3</b> Estructura Social y Formaciones Sociales Emergentes</a></li>
@@ -97,7 +122,8 @@
 <li class="chapter" data-level="1.2.5" data-path="introduction.html"><a href="introduction.html#redes-sociales-dinámicas"><i class="fa fa-check"></i><b>1.2.5</b> Redes sociales dinámicas</a></li>
 <li class="chapter" data-level="1.2.6" data-path="introduction.html"><a href="introduction.html#resumen-redes-sociales-agencia-humana-y-cultura"><i class="fa fa-check"></i><b>1.2.6</b> Resumen: Redes Sociales, Agencia Humana y Cultura</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a><ul>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a>
+<ul>
 <li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#actores-y-enlaces"><i class="fa fa-check"></i><b>1.3.1</b> Actores y Enlaces</a></li>
 <li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#redes-sociales"><i class="fa fa-check"></i><b>1.3.2</b> Redes Sociales</a></li>
 <li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#camino-y-distancia-de-caminos"><i class="fa fa-check"></i><b>1.3.3</b> Camino (y Distancia de Caminos)</a></li>
@@ -112,10 +138,12 @@
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#resumen-y-conclusiones"><i class="fa fa-check"></i><b>1.4</b> Resumen y Conclusiones</a></li>
 </ul></li>
 <li class="part"><span><b>II ARSo: Tecnicas</b></span></li>
-<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a><ul>
-<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
 <li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
-<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a><ul>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
 <li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
@@ -124,55 +152,68 @@
 <li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
-<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
 <li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
 <li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
-<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a><ul>
+<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a><ul>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
-<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
 <li class="chapter" data-level="4.4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#guardar-gráfico-de-red-en-gephi"><i class="fa fa-check"></i><b>4.4.2</b> Guardar Gráfico de Red en Gephi</a></li>
 <li class="chapter" data-level="4.4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#importación-de-listas-de-aristas-modo-uno"><i class="fa fa-check"></i><b>4.4.3</b> Importación de Listas de Aristas Modo-Uno</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a><ul>
+<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
 <li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
-<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
 <li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a><ul>
+<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#matrices-y-listas-de-aristas"><i class="fa fa-check"></i><b>6.1</b> Matrices y Listas de Aristas</a></li>
-<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a><ul>
+<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#apilar"><i class="fa fa-check"></i><b>6.2.1</b> Apilar</a></li>
 <li class="chapter" data-level="6.2.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#agregar"><i class="fa fa-check"></i><b>6.2.2</b> Agregar</a></li>
 <li class="chapter" data-level="6.2.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#recombinar"><i class="fa fa-check"></i><b>6.2.3</b> Recombinar</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#importar-múltiples-redes-a-gephi"><i class="fa fa-check"></i><b>6.3.1</b> Importar múltiples redes a Gephi</a></li>
 <li class="chapter" data-level="6.3.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a><ul>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
 <li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
-<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
 <li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
@@ -181,74 +222,114 @@
 </ul></li>
 </ul></li>
 <li class="part"><span><b>III ARSo: Medidas</b></span></li>
-<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a><ul>
-<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a><ul>
+<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a>
+<ul>
 <li class="chapter" data-level="8.1.1" data-path="topología-1.html"><a href="topología-1.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
 <li class="chapter" data-level="8.1.2" data-path="topología-1.html"><a href="topología-1.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
 <li class="chapter" data-level="8.1.3" data-path="topología-1.html"><a href="topología-1.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a><ul>
+<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="topología-1.html"><a href="topología-1.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
 <li class="chapter" data-level="8.2.2" data-path="topología-1.html"><a href="topología-1.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a>
+<ul>
 <li class="chapter" data-level="8.3.1" data-path="topología-1.html"><a href="topología-1.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="8.4.1" data-path="topología-1.html"><a href="topología-1.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="8.4.2" data-path="topología-1.html"><a href="topología-1.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
-<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a><ul>
+<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
 <li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
 <li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
 <li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
-<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="9.5.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.5.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="9.5.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.5.2</b> Identificación de Subgrupos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a><ul>
-<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a><ul>
+<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia"><i class="fa fa-check"></i><b>10.1.1</b> Medidas Basadas en Frecuencia</a></li>
 <li class="chapter" data-level="10.1.2" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-distancia"><i class="fa fa-check"></i><b>10.1.2</b> Medidas Basadas en Distancia</a></li>
 <li class="chapter" data-level="10.1.3" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-caminos"><i class="fa fa-check"></i><b>10.1.3</b> Medidas Basadas en Caminos</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a><ul>
+<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia-1"><i class="fa fa-check"></i><b>10.2.1</b> Medidas Basadas en Frecuencia</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="centralidad-1.html"><a href="centralidad-1.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.3.1</b> Centralidad en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
+<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puntos-de-corte"><i class="fa fa-check"></i><b>11.1</b> Puntos de Corte</a></li>
 <li class="chapter" data-level="11.2" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#bi-componentes-y-puentes"><i class="fa fa-check"></i><b>11.2</b> Bi-componentes y Puentes</a></li>
 <li class="chapter" data-level="11.3" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#intermediación-de-borde"><i class="fa fa-check"></i><b>11.3</b> Intermediación de borde</a></li>
 <li class="chapter" data-level="11.4" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#agujeros-estructurales-restricción-y-autonomía"><i class="fa fa-check"></i><b>11.4</b> Agujeros Estructurales, Restricción y Autonomía</a></li>
-<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.5.1</b> Puentes y Corredores en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
-<li class="part"><span><b>V Apéndices</b></span></li>
-<li class="chapter" data-level="12" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>12</b> Glosario de Términos</a></li>
-<li class="chapter" data-level="13" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html"><i class="fa fa-check"></i><b>13</b> Libro de Códigos</a><ul>
-<li class="chapter" data-level="13.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>13.1</b> Libro de Códigos de Muestra</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones"><i class="fa fa-check"></i><b>13.1.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.1.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-1"><i class="fa fa-check"></i><b>13.1.2</b> Atributos</a></li>
+<li class="chapter" data-level="12" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>12</b> Un Proceso de Diseño para la Investigación de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>12.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>12.1.1</b> Pregunata(s) de Investigación</a></li>
+<li class="chapter" data-level="12.1.2" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>12.1.2</b> Limites</a></li>
+<li class="chapter" data-level="12.1.3" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>12.1.3</b> Codificar Relaciones y Atributos</a></li>
+<li class="chapter" data-level="12.1.4" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>12.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
+<li class="chapter" data-level="12.1.5" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#conclusiones"><i class="fa fa-check"></i><b>12.1.5</b> Conclusiones</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>13.2</b> Libro de Códigos de Noordin Top</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones-1"><i class="fa fa-check"></i><b>13.2.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.2.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-2"><i class="fa fa-check"></i><b>13.2.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html"><i class="fa fa-check"></i><b>13</b> Ejemplos Practicos</a>
+<ul>
+<li class="chapter" data-level="" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#informe-de-la-red-criminal-en-la-república-de-panamá"><i class="fa fa-check"></i>Informe de la Red Criminal en la República de Panamá</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#libro-de-códigos"><i class="fa fa-check"></i><b>13.0.1</b> Libro de Códigos</a></li>
+<li class="chapter" data-level="13.0.2" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#mapa-de-red"><i class="fa fa-check"></i><b>13.0.2</b> Mapa de red</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>VI Referencias</b></span></li>
-<li class="chapter" data-level="14" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>14</b> Referencias</a></li>
+<li class="appendix"><span><b>Apéndices</b></span></li>
+<li class="chapter" data-level="A" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>A</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="B" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html"><i class="fa fa-check"></i><b>B</b> Libro de Códigos</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>B.1</b> Libro de Códigos de Muestra</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-2"><i class="fa fa-check"></i><b>B.1.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.1.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-3"><i class="fa fa-check"></i><b>B.1.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>B.2</b> Libro de Códigos de Noordin Top</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-3"><i class="fa fa-check"></i><b>B.2.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.2.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-4"><i class="fa fa-check"></i><b>B.2.2</b> Atributos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Referencias</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">
+Publicado con bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -258,7 +339,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales Oscuras</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales</a>
           </h1>
         </div>
 
@@ -266,22 +347,22 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="puentes-y-corredores-1" class="section level1">
+<div id="puentes-y-corredores-1" class="section level1" number="11">
 <h1><span class="header-section-number">11</span> Puentes y Corredores</h1>
 <p>En este capítulo, exploraremos una variedad de algoritmos para detectar puentes y corredores en una red: puntos y conjuntos de corte, bi-componentes y puentes, agujeros estructurales, e intermediación de borde. El tema central de este capitulo que el enfoque es localizar ubicaciones en la red valiosas en términos de flujo de recursos, materiales o información. A menudo, los analistas de redes requieren identificar un punado de estrategias para disrumpir la efectividad de una organización, aquí presentamos algunas opciones.</p>
-<p>En general, un corredor es un actor que, en virtud de su ubicación estructural, posee el poder potencial para controlar el flujo de recursos a través de una red, mientras que un puente puede considerarse como un vínculo que conecta dos subgrupos. Un bi-componente es un componente que es inmune a la eliminación de un solo nodo, mientras que un punto de corte es un nodo que, si se elimina, desconecta la red. Un bi-componente con solo dos actores se considera un puente porque si se elimina, la red se desconecta. El concepto de agujeros estructurales fue desarrollado por Ron Burt. Se basa en la noción de Mark Granovetter de “la fuerza de los vínculos débiles”, pero en lugar de centrarse en el tipo de vínculo (es decir, fuerte frente a débil), se centra en detectar las brechas (es decir, huecos) en la estructura social. Finalmente, la intermediación de los bordes identifica los bordes (en lugar de los nodos) que se encuentran entre otros bordes de la red. Asume que los bordes que obtienen un puntaje alto en la intermediación tienen más probabilidades de ser puentes que los que no lo hacen.</p>
+<p>En general, un corredor es un actor que, en virtud de su ubicación estructural, posee el poder potencial para controlar el flujo de recursos a través de una red, mientras que un puente puede considerarse como un vínculo que conecta dos subgrupos. Un bi-componente es un componente que es inmune a la eliminación de un solo nodo, mientras que un punto de corte es un nodo que, si se elimina, desconecta la red. Un bi-componente con solo dos actores se considera un puente porque si se elimina, la red se desconecta. El concepto de agujeros estructurales fue desarrollado por Ron Burt. Se basa en la noción de Mark Granovetter de “la fuerza de los vínculos débiles,” pero en lugar de centrarse en el tipo de vínculo (es decir, fuerte frente a débil), se centra en detectar las brechas (es decir, huecos) en la estructura social. Finalmente, la intermediación de los bordes identifica los bordes (en lugar de los nodos) que se encuentran entre otros bordes de la red. Asume que los bordes que obtienen un puntaje alto en la intermediación tienen más probabilidades de ser puentes que los que no lo hacen.</p>
 <p>Como en capítulos previos, comenzaremos por expandir a fondo los conceptos brevemente mencionados en el párrafo previo y concluiremos con un ejercicio practico en Gephi.</p>
-<div id="puntos-de-corte" class="section level2">
+<div id="puntos-de-corte" class="section level2" number="11.1">
 <h2><span class="header-section-number">11.1</span> Puntos de Corte</h2>
-<p>Un nodo, <span class="math inline">\(n_{i}\)</span> es punto de corte si el número de componentes en el grafo inicial es menor que el número de componentes en el subgrafo que resulta al remover dicho nodo <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, p. 139)</span>. Por ejemplo, en el grafo izquierdo de la Figura <a href="puentes-y-corredores-1.html#fig:cutpoint">11.1</a> el nodo A es un punto de corte. ¿Por qué? Como dice la definición previa, al remover A se descompone el grafo en un número mayor de componentes (<a href="puentes-y-corredores-1.html#fig:cutpoint">11.1</a> derecha).</p>
-<div class="figure" style="text-align: center"><span id="fig:cutpoint"></span>
+<p>Un nodo, <span class="math inline">\(n_{i}\)</span> es punto de corte si el número de componentes en el grafo inicial es menor que el número de componentes en el subgrafo que resulta al remover dicho nodo <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994, p. 139</a>)</span>. Por ejemplo, en el grafo izquierdo de la Figura <a href="puentes-y-corredores-1.html#fig:cutpoint">11.1</a> el nodo A es un punto de corte. ¿Por qué? Como dice la definición previa, al remover A se descompone el grafo en un número mayor de componentes (<a href="puentes-y-corredores-1.html#fig:cutpoint">11.1</a> derecha).</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cutpoint"></span>
 <img src="03-puentesycorredores_files/figure-html/cutpoint-1.png" alt="Ejemplo de punto de corte" width="70%" />
 <p class="caption">
 Figura 11.1: Ejemplo de punto de corte
 </p>
 </div>
-<p>El concepto de puntos de corte puede extenderse a un conjunto de nodos necesarios para mantener el grafo conexo, es decir un conjunto de corte <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, p. 140)</span>. De misma forma, el número de componentes en un grafo que contiene un conjunto de corte es menor que el que resulta al remover estos nodos. Por ejemplo, en la Figura <a href="puentes-y-corredores-1.html#fig:cutset">11.2</a> el conjunto de corte {A, F} contiene dos nodos que al ser removidos incrementa el numero de componentes en la red.</p>
-<div class="figure" style="text-align: center"><span id="fig:cutset"></span>
+<p>El concepto de puntos de corte puede extenderse a un conjunto de nodos necesarios para mantener el grafo conexo, es decir un conjunto de corte <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994, p. 140</a>)</span>. De misma forma, el número de componentes en un grafo que contiene un conjunto de corte es menor que el que resulta al remover estos nodos. Por ejemplo, en la Figura <a href="puentes-y-corredores-1.html#fig:cutset">11.2</a> el conjunto de corte {A, F} contiene dos nodos que al ser removidos incrementa el numero de componentes en la red.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:cutset"></span>
 <img src="03-puentesycorredores_files/figure-html/cutset-1.png" alt="Ejemplo de conjunto de corte" width="70%" />
 <p class="caption">
 Figura 11.2: Ejemplo de conjunto de corte
@@ -289,27 +370,27 @@ Figura 11.2: Ejemplo de conjunto de corte
 </div>
 <p>Los puntos y conjuntos de corte son cruciales para las redes donde el flujo de recursos, información o materiales son cruciales para el objetivo de la organización. Por ejemplo, en una red de comunicación la información suele viajar a través de estos nodos entre partes distantes de la red. Por consiguiente, el remover estos intermediadores resulta en una ruptura de comunicación. Sin embargo, cabe recalcar que no todos los nodos en un punto o conjunto de corte son creados iguales. Por ejemplo, en la Figura <a href="puentes-y-corredores-1.html#fig:cutset">11.2</a> el remover el nodo F solo desconecta al nodo G del grafo y pero crea dos componentes en el proceso. Similarmente, el remover el nodo A de manera individual genera dos componentes {B, C, D} y {E, F, G}. Sin embargo, se puede hacer un argumento que al remover A impactamos la red de mayor manera que al remover F. Es por ello, que los analistas de redes tienden a utilizar los puntos o conjuntos de corte en juntos con otras medidas de intermediación para determinar nodos o combinaciones optimas para disrumpir una red de manera eficaz.</p>
 </div>
-<div id="bi-componentes-y-puentes" class="section level2">
+<div id="bi-componentes-y-puentes" class="section level2" number="11.2">
 <h2><span class="header-section-number">11.2</span> Bi-componentes y Puentes</h2>
-<p>Un bi-componente es formalmente un componente sin punto de corte. Por lo tanto, estos son invulnerables a fragmentación en múltiples subestructuras al remover un solo punto de corte <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>, p. 265)</span>. Por ejemplo, en la Figura <a href="puentes-y-corredores-1.html#fig:bicomponents">11.3</a> encontramos tres bi-componentes: {A, B, C}, {D, E, F, G} y {F, H, I}. Note el traslapo entre componentes, por ejemplo, {D, E, F, G} y {F, H, I} comparten el nodo F, el cual es un punto de corte. De hecho, los nodos compartidos entre bi-componentes son siempre puntos de corte.</p>
-<div class="figure" style="text-align: center"><span id="fig:bicomponents"></span>
+<p>Un bi-componente es formalmente un componente sin punto de corte. Por lo tanto, estos son invulnerables a fragmentación en múltiples subestructuras al remover un solo punto de corte <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a, p. 265</a>)</span>. Por ejemplo, en la Figura <a href="puentes-y-corredores-1.html#fig:bicomponents">11.3</a> encontramos tres bi-componentes: {A, B, C}, {D, E, F, G} y {F, H, I}. Note el traslapo entre componentes, por ejemplo, {D, E, F, G} y {F, H, I} comparten el nodo F, el cual es un punto de corte. De hecho, los nodos compartidos entre bi-componentes son siempre puntos de corte.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bicomponents"></span>
 <img src="03-puentesycorredores_files/figure-html/bicomponents-1.png" alt="Análisis de bi-componentes" width="70%" />
 <p class="caption">
 Figura 11.3: Análisis de bi-componentes
 </p>
 </div>
-<p>A menudo, cuando los analistas hablan de bi-componentes se refieren a estructuras con tres o mas nodos y sin un punto de corte <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>, p. 265)</span>. Adicionalmente, de particular interés son los vínculos entre bi-componentes, como la relación en la Figura <a href="puentes-y-corredores-1.html#fig:bicomponents">11.3</a> entre los nodos C y D en rojo. Para los enlaces existe una noción análoga al punto de corte, conocida como puentes. De acuerdo con <span class="citation">Wasserman &amp; Faust (<a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> un puente es “una línea que hace que el grafo que contiene esta línea tenga menos componentes que el subgrafo que resulta una vez que se quita la línea (los nodos incidentes con la línea siguen estando en el subgrafo)” <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, p. 140)</span>. Otros autores definen los puentes como bi-componentes de dos nodos que al ser removidos desconectan la red <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>, p. 265)</span>. Ambas definiciones capturan un punto clave, los puentes son enlaces claves que conectan regiones de la red, sin ellos el flujo efectivo de recursos, ideas o materiales es imposible.</p>
+<p>A menudo, cuando los analistas hablan de bi-componentes se refieren a estructuras con tres o mas nodos y sin un punto de corte <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a, p. 265</a>)</span>. Adicionalmente, de particular interés son los vínculos entre bi-componentes, como la relación en la Figura <a href="puentes-y-corredores-1.html#fig:bicomponents">11.3</a> entre los nodos C y D en rojo. Para los enlaces existe una noción análoga al punto de corte, conocida como puentes. De acuerdo con <span class="citation"><a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust</a> (<a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> un puente es “una línea que hace que el grafo que contiene esta línea tenga menos componentes que el subgrafo que resulta una vez que se quita la línea (los nodos incidentes con la línea siguen estando en el subgrafo)” <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994, p. 140</a>)</span>. Otros autores definen los puentes como bi-componentes de dos nodos que al ser removidos desconectan la red <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a, p. 265</a>)</span>. Ambas definiciones capturan un punto clave, los puentes son enlaces claves que conectan regiones de la red, sin ellos el flujo efectivo de recursos, ideas o materiales es imposible.</p>
 </div>
-<div id="intermediación-de-borde" class="section level2">
+<div id="intermediación-de-borde" class="section level2" number="11.3">
 <h2><span class="header-section-number">11.3</span> Intermediación de borde</h2>
-<p>La intermediación de bordes es definida de manera similar a la intermediación de nodos (ver <a href="centralidad-1.html#centralidad-de-intermediación">Centralidad de Intermediación</a>). <span class="citation">Borgatti et al. (<a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span> la definen como un recuento del número de veces que un enlace se encuentra en una ruta geodésica entre un par de vértices <span class="citation">(Borgatti et al., <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>, p. 221)</span>. De manera formal podemos definir este índice con la misma notación desarrollada por Brandes <span class="citation">(<a href="#ref-Brandes2001" role="doc-biblioref">2001</a>)</span> y utilizada por Hashimoto y col. <span class="citation">(<a href="#ref-Hashimoto2009" role="doc-biblioref">2009</a>)</span> para describir la intermediación de bordes. Donde la intermediación de un borde <span class="math inline">\(e\)</span> en el grafo <span class="math inline">\(G\)</span>, se denota como <span class="math inline">\(I(e)\)</span> y mide la frecuencia en la que <span class="math inline">\(e\)</span> aparece en el camino más corto (geodésico) entre dos distintos nodos <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>. Aquí <span class="math inline">\(\sigma_{ab}\)</span> es el número de geodésicos entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> en un grafo <span class="math inline">\(G\)</span>. Mientras que <span class="math inline">\(\sigma_{ab}(e)\)</span> es el número de geodésicos entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que contienen <span class="math inline">\(e\)</span>. Entonces, la intermediación de bordes seria:</p>
+<p>La intermediación de bordes es definida de manera similar a la intermediación de nodos (ver <a href="centralidad-1.html#centralidad-de-intermediación">Centralidad de Intermediación</a>). <span class="citation"><a href="#ref-Borgatti2018" role="doc-biblioref">Borgatti, Everett, &amp; Johnson</a> (<a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span> la definen como un recuento del número de veces que un enlace se encuentra en una ruta geodésica entre un par de vértices <span class="citation">(<a href="#ref-Borgatti2018" role="doc-biblioref">Borgatti, Everett, &amp; Johnson, 2018, p. 221</a>)</span>. De manera formal podemos definir este índice con la misma notación desarrollada por Brandes <span class="citation">(<a href="#ref-Brandes2001" role="doc-biblioref">2001</a>)</span> y utilizada por Hashimoto y col. <span class="citation">(<a href="#ref-Hashimoto2009" role="doc-biblioref">2009</a>)</span> para describir la intermediación de bordes. Donde la intermediación de un borde <span class="math inline">\(e\)</span> en el grafo <span class="math inline">\(G\)</span>, se denota como <span class="math inline">\(I(e)\)</span> y mide la frecuencia en la que <span class="math inline">\(e\)</span> aparece en el camino más corto (geodésico) entre dos distintos nodos <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>. Aquí <span class="math inline">\(\sigma_{ab}\)</span> es el número de geodésicos entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> en un grafo <span class="math inline">\(G\)</span>. Mientras que <span class="math inline">\(\sigma_{ab}(e)\)</span> es el número de geodésicos entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> que contienen <span class="math inline">\(e\)</span>. Entonces, la intermediación de bordes seria:</p>
 <p><span class="math display">\[
 I(e) = \sum\limits_{a, b}\frac{\sigma_{ab}(e)}{\sigma_{ab}}
 \]</span></p>
 <p>Donde la operación toma en cuenta todas combinaciones distintas de nodos <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> en <span class="math inline">\(G\)</span>. El resultado de esta operación es un índice numérico de intermediación para cada vinculo en la red.</p>
-<p>La medida fue desarrollada por Girvan y Newman <span class="citation">(<a href="#ref-Girvan2002" role="doc-biblioref">2002</a>)</span> con el propósito localizar vínculos entre comunidades. De acuerdo con los autores, si una red contiene comunidades conectadas a través de un numero escaso de vínculos intergrupales, entonces las rutas geodésicas entre estas comunidades deben atravesar estos enlaces <span class="citation">(Girvan &amp; Newman, <a href="#ref-Girvan2002" role="doc-biblioref">2002</a>)</span>. Por consiguiente, estos enlaces entre comunidades deberán tener un índice alto de intermediación de borde.</p>
+<p>La medida fue desarrollada por Girvan y Newman <span class="citation">(<a href="#ref-Girvan2002" role="doc-biblioref">2002</a>)</span> con el propósito localizar vínculos entre comunidades. De acuerdo con los autores, si una red contiene comunidades conectadas a través de un numero escaso de vínculos intergrupales, entonces las rutas geodésicas entre estas comunidades deben atravesar estos enlaces <span class="citation">(<a href="#ref-Girvan2002" role="doc-biblioref">Girvan &amp; Newman, 2002</a>)</span>. Por consiguiente, estos enlaces entre comunidades deberán tener un índice alto de intermediación de borde.</p>
 <p>Por ejemplo, en la Figura <a href="puentes-y-corredores-1.html#fig:edgebetween">11.4</a> los bordes han sido ponderados con base al índice de intermediación de cada enlace. En esta red los actores en cada subconjunto, {A, B, C, D} y {E, F, G, H}, se encuentran densamente interconectados internamente. Adicionalmente, el subconjunto {E, F, G, H} es adyacente a un nodo pendiente, I, El único camino entre estos subconjuntos consiste en el vínculo entre D y E. Por ello si un nodo en el subconjunto {A, B, C, D} desea compartir información con alguien en el subconjunto {E, F, G, H} o con I esta debe fluir a través de el vinculo con mayor intermediación, es decir el camino más corto más a menudo.</p>
-<div class="figure" style="text-align: center"><span id="fig:edgebetween"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:edgebetween"></span>
 <img src="03-puentesycorredores_files/figure-html/edgebetween-1.png" alt="Representación esquemática de una red con dos comunidades densamente enlazadas entre si por vínculos con alta intermediación (rojo)." width="70%" />
 <p class="caption">
 Figura 11.4: Representación esquemática de una red con dos comunidades densamente enlazadas entre si por vínculos con alta intermediación (rojo).
@@ -320,25 +401,25 @@ Figura 11.4: Representación esquemática de una red con dos comunidades densame
 </div>
 <p>En términos prácticos, esta medida es utiliza a menudo en combinación con los puntos de corte y los puentes para iluminar caminos entre comunidades. A diferencia de los puentes, esta medida le provee al analista un índice continuo de valores. Es decir, a diferencia de una medida binaria esta presenta un rango de valores para que el analista decida que vínculos son más importantes y que diferencia cuantitativa existe entre estos.</p>
 </div>
-<div id="agujeros-estructurales-restricción-y-autonomía" class="section level2">
+<div id="agujeros-estructurales-restricción-y-autonomía" class="section level2" number="11.4">
 <h2><span class="header-section-number">11.4</span> Agujeros Estructurales, Restricción y Autonomía</h2>
 <p>La ultima medida de corretaje que cubriremos en este capítulo es autonomía. Sin embargo, para poder entender esta medida es importante presentar el contexto teórico y matemático presentados por el autor de este índice, Ronald Burt.</p>
-<p>La teoría de los agujeros estructurales de Burt <span class="citation">(<a href="#ref-Burt1992" role="doc-biblioref">1992</a>)</span> propone que las personas acumulan recursos sociales, o capital social, el cual pueden invertir en ciertos contextos sociales para generar una ganancia. Un agujero estructural es una ubicación dentro de la red donde los actores se encuentran desconectados. Por consiguiente, esto agujeros presentan oportunidades donde los actores en la red pueden invertir dicho capital social y cerrar estas aperturas conectando a dos o más actores adyacentes <span class="citation">(Monge &amp; Contractor, <a href="#ref-Monge2003" role="doc-biblioref">2003</a>, p. 143)</span>. Otra manera de pensar en el valor de los agujeros estructurales es que estos permiten que un actor funcione como intermediador o corredor entre otros nodos no-conexos entre sí. Por lo tanto, con base a su posición en la red el corredor tiene la habilidad de influenciar el flujo de información, es decir, puede mantener un agujero estructural abierto y continuar como intermediario o puede cerrarlo.</p>
+<p>La teoría de los agujeros estructurales de Burt <span class="citation">(<a href="#ref-Burt1992" role="doc-biblioref">1992</a>)</span> propone que las personas acumulan recursos sociales, o capital social, el cual pueden invertir en ciertos contextos sociales para generar una ganancia. Un agujero estructural es una ubicación dentro de la red donde los actores se encuentran desconectados. Por consiguiente, esto agujeros presentan oportunidades donde los actores en la red pueden invertir dicho capital social y cerrar estas aperturas conectando a dos o más actores adyacentes <span class="citation">(<a href="#ref-Monge2003" role="doc-biblioref">Monge &amp; Contractor, 2003, p. 143</a>)</span>. Otra manera de pensar en el valor de los agujeros estructurales es que estos permiten que un actor funcione como intermediador o corredor entre otros nodos no-conexos entre sí. Por lo tanto, con base a su posición en la red el corredor tiene la habilidad de influenciar el flujo de información, es decir, puede mantener un agujero estructural abierto y continuar como intermediario o puede cerrarlo.</p>
 <p>Por ejemplo, en la Figura <a href="puentes-y-corredores-1.html#fig:holes">11.5</a> el actor A se localiza entre tres agujeros estructurales, estos son lo espacios abiertos entre los nodos {B, H, F}. Estos tres agujeros ponen a A en una posición de corretaje donde esta puede coordinar el intercambio de información, materiales o recursos entre {B, H, F}. Adicionalmente, A se encuentra conectado a una variedad de círculos sociales, por lo tanto, tiene mayor acceso a recursos, información o materiales de cada grupo. En contraste, los nodos en cada comunidad periferia ({B, C, D}, {H, I, J} y {F, E, G}) tienen menor acceso a información no redundante puesto que cada grupo se encuentra esencialmente aislado.</p>
-<div class="figure" style="text-align: center"><span id="fig:holes"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:holes"></span>
 <img src="03-puentesycorredores_files/figure-html/holes-1.png" alt="Red social hipotética donde a se encuentra entre tres agujeros estructurales" width="70%" />
 <p class="caption">
 Figura 11.5: Red social hipotética donde a se encuentra entre tres agujeros estructurales
 </p>
 </div>
-<p>Para construir un índice que captura las propiedades de los agujeros estructurales, Burt utiliza como base la red el ego para cada actor, es decir, las triadas en las que se encuentra incrustado cada actor <span class="citation">(Cunningham et al., <a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>, p. 181)</span>. Para ilustrar este punto, examinemos la Figura <a href="puentes-y-corredores-1.html#fig:triads">11.6</a> que contiene cuatro posibles cuatro configuraciones posibles de la misa triada de actores ({A, B, C}). La primera triada (1) es una cerrada o completa; por consiguiente, ningún nodo se localiza entre agujeros estructurales y por extensión goza de una posición de corretaje. Las otras tres triadas (2 a 4), son abiertas y cada una contiene un agujero estructural y un nodo en posición de corredor. En esta Figura el ego, actor A, a sido coloreado de rojo mientras que los alternos se encuentran en azul. Burt sostiene que los alternos no conectados ofrecen recursos diferentes al ego <span class="citation">(Burt, <a href="#ref-Burt1992" role="doc-biblioref">1992</a>)</span>. Por lo tanto, desde la perspectiva del ego la configuración preferible es aquella que observamos en la segunda triada (2), donde el ego se encuentra en una posición de corretaje.</p>
-<div class="figure" style="text-align: center"><span id="fig:triads"></span>
+<p>Para construir un índice que captura las propiedades de los agujeros estructurales, Burt utiliza como base la red el ego para cada actor, es decir, las triadas en las que se encuentra incrustado cada actor <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016, p. 181</a>)</span>. Para ilustrar este punto, examinemos la Figura <a href="puentes-y-corredores-1.html#fig:triads">11.6</a> que contiene cuatro posibles cuatro configuraciones posibles de la misa triada de actores ({A, B, C}). La primera triada (1) es una cerrada o completa; por consiguiente, ningún nodo se localiza entre agujeros estructurales y por extensión goza de una posición de corretaje. Las otras tres triadas (2 a 4), son abiertas y cada una contiene un agujero estructural y un nodo en posición de corredor. En esta Figura el ego, actor A, a sido coloreado de rojo mientras que los alternos se encuentran en azul. Burt sostiene que los alternos no conectados ofrecen recursos diferentes al ego <span class="citation">(<a href="#ref-Burt1992" role="doc-biblioref">Burt, 1992</a>)</span>. Por lo tanto, desde la perspectiva del ego la configuración preferible es aquella que observamos en la segunda triada (2), donde el ego se encuentra en una posición de corretaje.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:triads"></span>
 <img src="03-puentesycorredores_files/figure-html/triads-1.png" alt="Cuatro tipos de triadas" width="70%" />
 <p class="caption">
 Figura 11.6: Cuatro tipos de triadas
 </p>
 </div>
-<p>El índice desarrollado para localizar nodos en con poco grado de intermediación es la restricción. Esta mide cuantos alternos al ego tienen enlaces entre sí, lo cual determina el grado en que el ego invierte tiempo y energía en alternos que se conocen entre sí <span class="citation">(Borgatti et al., <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>. Otra manera de pensar en restricción es pensar en la triada cerrada ((1) en la Figura <a href="puentes-y-corredores-1.html#fig:triads">11.6</a>). Esta es la triada con la mayor restricción para el ego. Por lo tanto, la acciones y percepciones del ego son controladas por sus alternos. De manera opuesta, en una red del ego sin restricción ((2) en la Figura <a href="puentes-y-corredores-1.html#fig:triads">11.6</a>) los alteres no están conectados entre sí, por ello estos no pueden coludir entre si para influenciar las acciones o el acceso a recursos de ego <span class="citation">(Valente, <a href="#ref-Valente2010" role="doc-biblioref">2010</a>, p. 70)</span>.</p>
+<p>El índice desarrollado para localizar nodos en con poco grado de intermediación es la restricción. Esta mide cuantos alternos al ego tienen enlaces entre sí, lo cual determina el grado en que el ego invierte tiempo y energía en alternos que se conocen entre sí <span class="citation">(<a href="#ref-Borgatti2018" role="doc-biblioref">Borgatti, Everett, &amp; Johnson, 2018</a>)</span>. Otra manera de pensar en restricción es pensar en la triada cerrada ((1) en la Figura <a href="puentes-y-corredores-1.html#fig:triads">11.6</a>). Esta es la triada con la mayor restricción para el ego. Por lo tanto, la acciones y percepciones del ego son controladas por sus alternos. De manera opuesta, en una red del ego sin restricción ((2) en la Figura <a href="puentes-y-corredores-1.html#fig:triads">11.6</a>) los alteres no están conectados entre sí, por ello estos no pueden coludir entre si para influenciar las acciones o el acceso a recursos de ego <span class="citation">(<a href="#ref-Valente2010" role="doc-biblioref">Valente, 2010, p. 70</a>)</span>.</p>
 <p>Note que la medida de restricción no mide de manera directa el numero de agujeros estructurales. De lo contrario, un nodo con alta restricción se encontrará a menudo entre pocos agujeros estructurales. Por lo tanto, a diferencia de otros índices del vértice, actores con baja restricción son aquellos en una posición beneficiosa.</p>
 <p>De manera formal, podemos definir la restricción de cada nodo <span class="math inline">\(i\)</span> como:</p>
 <p><span class="math display">\[
@@ -348,7 +429,7 @@ C_{i} = (p_{ij} + \sum p_{iq}p_{qj})^2, q \neq, i, j
 <p>Pongamos en práctica esta formula con un ejemplo sencillo, proporcionado por Ruqin Ren <a href="https://ruqinren.wordpress.com/2018/03/01/hand-calculation-of-burts-constraint-in-networks/">aquí</a>. En la Figura <a href="puentes-y-corredores-1.html#fig:practice">11.7</a> vemos una red de 5 nodos. Como práctica, calculemos la restricción de el nodo A a mano.</p>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:practice"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:practice"></span>
 <img src="03-puentesycorredores_files/figure-html/practice-1.png" alt="Red pequeña" width="70%" />
 <p class="caption">
 Figura 11.7: Red pequeña
@@ -383,8 +464,8 @@ A            &amp; B           &amp; \frac{1}{2} = 0.5 &amp; \frac{1}{2} = 0.5  
 C_A = C_{AB} + C_{AC} = (0.5 + (0.5 \times 0.25))^2 + (0.5 + (0.5 \times 0.5))^2 = 0.953
 \]</span></p>
 <p>En términos prácticos, el software calculara este índice de manera eficaz. Sin embargo, es importante entender un poco sobre las mecánicas de este algoritmo y los índices resultantes. El valor máximo de restricción es 1.125, por lo tanto, en el ejemplo previo suponemos que el nodo A tiene una restricción alta y por lo tanto pocas opciones de corretaje.</p>
-<p><span class="citation">Cunningham et al. (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> proponen invertir el índice de restricción para generar un valor de “autonomía”, es decir, el antónimo matemático. La autonomía se calcula restando el índice de restricción para cada nodo del valor máximo teorético de restricción (1.125). El valor resultante indica un valor potencial de corretaje, donde puntajes altos reflejan un alto potencial. Por ejemplo, el índice de restricción para el nodo A es 0.953, por lo tanto, su autonomía sería equivalente a 0.172. En otras palabras, A no se encuentra en una posición de corretaje. Contrastemos esta observación con la autonomía del nodo C, el cual tiene un índice de restricción de 0.406. Por lo tanto, su autonomía es equivalente a 0.718. Como notara en la Figura <a href="puentes-y-corredores-1.html#fig:practice">11.7</a>, el nodo C se encuentra entre múltiples agujeros estructurales y su autonomía indica un potencial de corretaje es moderadamente alto.</p>
-<div class="figure" style="text-align: center"><span id="fig:autonomy"></span>
+<p><span class="citation"><a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy</a> (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> proponen invertir el índice de restricción para generar un valor de “autonomía,” es decir, el antónimo matemático. La autonomía se calcula restando el índice de restricción para cada nodo del valor máximo teorético de restricción (1.125). El valor resultante indica un valor potencial de corretaje, donde puntajes altos reflejan un alto potencial. Por ejemplo, el índice de restricción para el nodo A es 0.953, por lo tanto, su autonomía sería equivalente a 0.172. En otras palabras, A no se encuentra en una posición de corretaje. Contrastemos esta observación con la autonomía del nodo C, el cual tiene un índice de restricción de 0.406. Por lo tanto, su autonomía es equivalente a 0.718. Como notara en la Figura <a href="puentes-y-corredores-1.html#fig:practice">11.7</a>, el nodo C se encuentra entre múltiples agujeros estructurales y su autonomía indica un potencial de corretaje es moderadamente alto.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:autonomy"></span>
 <img src="03-puentesycorredores_files/figure-html/autonomy-1.png" alt="Red con nodos dimensionados por autonomía" width="70%" />
 <p class="caption">
 Figura 11.8: Red con nodos dimensionados por autonomía
@@ -392,12 +473,12 @@ Figura 11.8: Red con nodos dimensionados por autonomía
 </div>
 <p>Puesto que la idea de autonomía es una medida más intuitiva que la restricción, muchos analistas tienden a utilizarla a menudo para diferenciar de manera visual o cuantitativa los nodos con un potencial de corretaje alto (vea Figura <a href="puentes-y-corredores-1.html#fig:autonomy">11.8</a>). Sin embargo, ambos índices son valiosos en el contexto adecuado.</p>
 </div>
-<div id="ejercicio-práctico-7" class="section level2">
+<div id="ejercicio-práctico-7" class="section level2" number="11.5">
 <h2><span class="header-section-number">11.5</span> Ejercicio Práctico</h2>
 <p>Desafortunadamente, por el momento Gephi solo calcula una de estas métricas: centralidad de puente, y deberá descargar el complemento Bridging Centrality para calcularlo.</p>
 <p>Para este ejercicio usaremos la red de comunicación de la planta de procesamiento de madera donde los trabajadores rechazaron un nuevo paquete de compensación y finalmente se declararon en huelga. Por ello, la gerencia contrató a un consultor externo para analizar la estructura de comunicación del empleado porque consideró que los negociadores sindicales no estaban comunicando eficazmente la información sobre el paquete a todos los empleados. El consultor externo pidió a todos los empleados que indicaran, en una escala de 5 puntos, la frecuencia con la que hablaban de la huelga con cada uno de sus colegas, desde ‘casi nunca’ (menos de una vez por semana) a ‘muy a menudo’ (varias veces por día). El consultor utilizó 3 como valor de corte para identificar un vínculo entre dos empleados. Si al menos una de las dos personas indicaron que hablaron sobre el trabajo con una frecuencia de tres o más, se incluyó un vínculo entre ellos en la red.</p>
 <p>La red se encuentra clasificada en grupos por edad e idioma: empleados hispanohablantes de 30 años o menos, empleados angloparlantes de 37 años o menos y empleados angloparlantes de 38 años o más. Todos los vínculos entre grupos tienen antecedentes especiales. Entre los hispanos, Alejandro es el más competente en inglés y Bob habla algo de español, por lo que existe un vínculo entre ellos. Bob le debe a Norm por conseguir su trabajo y Ozzie es el padre de Karl, lo que ayuda a explicar sus lazos. Sam y Wendle son los negociadores sindicales y fueron los encargados de explicar el nuevo programa propuesto por los gerentes.</p>
-<div id="puentes-y-corredores-en-gephi" class="section level3">
+<div id="puentes-y-corredores-en-gephi" class="section level3" number="11.5.1">
 <h3><span class="header-section-number">11.5.1</span> Puentes y Corredores en Gephi</h3>
 <div class="row">
 <div class="lcolumn-20">
@@ -410,7 +491,7 @@ Figura 11.8: Red con nodos dimensionados por autonomía
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1"></span>
 <img src="images/03-11-01.PNG" alt="Cuadro de diálogo Importación de Gephi " width="70%" />
 <p class="caption">
 Figura 8.11: Cuadro de diálogo Importación de Gephi
@@ -427,7 +508,7 @@ Figura 8.11: Cuadro de diálogo Importación de Gephi
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:2"></span>
 <img src="images/03-11-02.PNG" alt="Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde" width="70%" />
 <p class="caption">
 Figura 8.12: Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde
@@ -471,11 +552,11 @@ Figura 8.12: Red Huelga, Color = Strike Groups, Peso del borde = Intermediación
 </div>
 <div class="rcolumn-80">
 <ol start="6" style="list-style-type: decimal">
-<li>A continuación, en la pestaña <em>Estadísticas</em> en la ventana <em>Visión general de la red</em>, <em>Ejecute</em> la función <em>Bridging Centrality</em>. Esto genera un informe, que puede cerrar. También calcula tres métricas: centralidad de intermediación, coeficiente de vinculación (agrupamiento) y centralidad de vinculación, siendo esta última el producto de las dos primeras. Primero, ajuste el tamaño de los nodos en términos de centralidad de intermediación. <strong>¿Existe alguna asociación entre la centralidad de intermediación y qué nodos son puntos de corte?</strong> A continuación, ajuste el tamaño de los nodos en términos de coeficiente de puenteo (agrupamiento). <strong>¿Qué sucedió?</strong> Por último, ajuste el tamaño de los nodos en términos de centralidad de puenteo (Figura <a href="topología-1.html#fig:3">8.13</a>). <strong>¿Se compara esta medida con qué nodos son puntos de corte? ¿Cómo se compara con la centralidad de intermediación?</strong> Recuerde, puede verificar las puntuaciones de centralidad de intermediación y puente en la ventana “Laboratorio de datos”.</li>
+<li>A continuación, en la pestaña <em>Estadísticas</em> en la ventana <em>Visión general de la red</em>, <em>Ejecute</em> la función <em>Bridging Centrality</em>. Esto genera un informe, que puede cerrar. También calcula tres métricas: centralidad de intermediación, coeficiente de vinculación (agrupamiento) y centralidad de vinculación, siendo esta última el producto de las dos primeras. Primero, ajuste el tamaño de los nodos en términos de centralidad de intermediación. <strong>¿Existe alguna asociación entre la centralidad de intermediación y qué nodos son puntos de corte?</strong> A continuación, ajuste el tamaño de los nodos en términos de coeficiente de puenteo (agrupamiento). <strong>¿Qué sucedió?</strong> Por último, ajuste el tamaño de los nodos en términos de centralidad de puenteo (Figura <a href="topología-1.html#fig:3">8.13</a>). <strong>¿Se compara esta medida con qué nodos son puntos de corte? ¿Cómo se compara con la centralidad de intermediación?</strong> Recuerde, puede verificar las puntuaciones de centralidad de intermediación y puente en la ventana “Laboratorio de datos.”</li>
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:3"></span>
 <img src="images/03-11-03.PNG" alt="Red Huelga: puntos de corte, bi-componentes y centralidad de puente" width="70%" />
 <p class="caption">
 Figura 8.13: Red Huelga: puntos de corte, bi-componentes y centralidad de puente
@@ -491,13 +572,13 @@ Figura 8.13: Red Huelga: puntos de corte, bi-componentes y centralidad de puente
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:4"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:4"></span>
 <img src="images/03-11-04.PNG" alt="Red Huelga: puntos de corte, bi-componentes y puntajes de corretaje G&amp;F" width="70%" />
 <p class="caption">
 Figura 9.13: Red Huelga: puntos de corte, bi-componentes y puntajes de corretaje G&amp;F
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:5"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:5"></span>
 <img src="images/03-11-05.PNG" alt="Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt" width="70%" />
 <p class="caption">
 Figura 11.9: Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt
@@ -511,41 +592,37 @@ Figura 11.9: Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt
 
 
 </div>
-
-
-
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Borgatti2018" class="csl-entry">
+Borgatti, S. P., Everett, M. G., &amp; Johnson, J. C. (2018). <em>Analyzing social networks</em>. Sage.
 </div>
-<h3> Referencias</h3>
-<div id="refs" class="references">
-<div id="ref-Borgatti2018">
-<p>Borgatti, S. P., Everett, M. G., &amp; Johnson, J. C. (2018). <em>Analyzing social networks</em>. Sage.</p>
+<div id="ref-Brandes2001" class="csl-entry">
+Brandes, U. (2001). A faster algorithm for betweenness centrality. <em>Journal of Mathematical Sociology</em>, <em>25</em>, 163–177.
 </div>
-<div id="ref-Brandes2001">
-<p>Brandes, U. (2001). A faster algorithm for betweenness centrality. <em>Journal of Mathematical Sociology</em>, <em>25</em>, 163–177.</p>
+<div id="ref-Burt1992" class="csl-entry">
+Burt, R. (1992). <em>Structural holes: The social structure of competition</em>. Harvard University Press.
 </div>
-<div id="ref-Burt1992">
-<p>Burt, R. (1992). <em>Structural holes: The social structure of competition</em>. Harvard University Press.</p>
+<div id="ref-Cunningham2016" class="csl-entry">
+Cunningham, D., Everton, S. F., &amp; Murphy, P. (2016). <em>Understanding dark networks: A strategic framework for the use of social network analysis</em>. Rowman; Littlefield.
 </div>
-<div id="ref-Cunningham2016">
-<p>Cunningham, D., Everton, S. F., &amp; Murphy, P. (2016). <em>Understanding dark networks: A strategic framework for the use of social network analysis</em>. Rowman; Littlefield.</p>
+<div id="ref-Everton2012" class="csl-entry">
+Everton, S. F. (2012a). <em>Disrupting dark networks</em>. Cambridge.
 </div>
-<div id="ref-Everton2012">
-<p>Everton, S. F. (2012a). <em>Disrupting dark networks</em>. Cambridge.</p>
+<div id="ref-Girvan2002" class="csl-entry">
+Girvan, M., &amp; Newman, M. (2002). Community structure in social and biological networks. <em>PNAS</em>, <em>99</em>, 7821–7826.
 </div>
-<div id="ref-Girvan2002">
-<p>Girvan, M., &amp; Newman, M. (2002). Community structure in social and biological networks. <em>PNAS</em>, <em>99</em>(12), 7821–7826.</p>
+<div id="ref-Hashimoto2009" class="csl-entry">
+Hashimoto, T. B., Nagasaki, M., Kojima, K., &amp; Miyano, S. (2009). BFL: A node and edge betweenness based fast layout algorithm for large scale networks. <em>BMC Bioinformatics</em>, <em>10</em>, 1471–2105.
 </div>
-<div id="ref-Hashimoto2009">
-<p>Hashimoto, T. B., Nagasaki, M., Kojima, K., &amp; Miyano, S. (2009). BFL: A node and edge betweenness based fast layout algorithm for large scale networks. <em>BMC Bioinformatics</em>, <em>10</em>, 1471–2105.</p>
+<div id="ref-Monge2003" class="csl-entry">
+Monge, P. R., &amp; Contractor, N. S. (2003). <em>Theories of communication networks</em>. Oxford University Press.
 </div>
-<div id="ref-Monge2003">
-<p>Monge, P. R., &amp; Contractor, N. S. (2003). <em>Theories of communication networks</em>. Oxford University Press.</p>
+<div id="ref-Valente2010" class="csl-entry">
+Valente, T. W. (2010). <em>Social networks and health: Models, methods, and applications</em>. Oxford.
 </div>
-<div id="ref-Valente2010">
-<p>Valente, T. W. (2010). <em>Social networks and health: Models, methods, and applications</em>. Oxford.</p>
-</div>
-<div id="ref-Wasserman1994">
-<p>Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.</p>
+<div id="ref-Wasserman1994" class="csl-entry">
+Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.
 </div>
 </div>
             </section>
@@ -554,7 +631,7 @@ Figura 11.9: Red Huelga: puntos de corte, bi-componentes y la autonomía de Burt
         </div>
       </div>
 <a href="centralidad-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="glosario-de-términos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -577,7 +654,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/cjcallag/arso/edit/main/03-puentesycorredores.Rmd",
-"text": "Edit"
+"text": "Editar"
 },
 "history": {
 "link": null,
@@ -588,15 +665,22 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
-"css": "arso.css",
 "font_settings": {
-"theme": "white",
 "family": "sans",
+"theme": "white",
 "size": 2
+},
+"info": true,
+"toolbar": {
+"position": "fixed"
 }
 });
 });

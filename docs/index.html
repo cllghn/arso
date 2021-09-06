@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Análisis de Redes Sociales Oscuras</title>
+  <title>Análisis de Redes Sociales</title>
   <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Análisis de Redes Sociales Oscuras" />
+  <meta property="og:title" content="Análisis de Redes Sociales" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Análisis de Redes Sociales Oscuras" />
+  <meta name="twitter:title" content="Análisis de Redes Sociales" />
   
   <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
@@ -32,7 +32,9 @@
   
 
 <link rel="next" href="introduction.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,19 +51,41 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="arso.css" type="text/css" />
 </head>
@@ -76,20 +100,21 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Análisis de Redes Sociales Oscuras</a></li>
+<li><a href="./">Análisis de Redes Sociales</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introducción</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 </ul></li>
-</ul></li>
-<li class="part"><span><b>I Introducción</b></span></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a><ul>
+<li class="part"><span><b>I ¿ Qué es el ARSo?</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a><ul>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#interdependencia-de-los-actores"><i class="fa fa-check"></i><b>1.2.1</b> Interdependencia de los Actores</a></li>
 <li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#lazos-como-conductos"><i class="fa fa-check"></i><b>1.2.2</b> Lazos como Conductos</a></li>
 <li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#estructura-social-y-formaciones-sociales-emergentes"><i class="fa fa-check"></i><b>1.2.3</b> Estructura Social y Formaciones Sociales Emergentes</a></li>
@@ -97,7 +122,8 @@
 <li class="chapter" data-level="1.2.5" data-path="introduction.html"><a href="introduction.html#redes-sociales-dinámicas"><i class="fa fa-check"></i><b>1.2.5</b> Redes sociales dinámicas</a></li>
 <li class="chapter" data-level="1.2.6" data-path="introduction.html"><a href="introduction.html#resumen-redes-sociales-agencia-humana-y-cultura"><i class="fa fa-check"></i><b>1.2.6</b> Resumen: Redes Sociales, Agencia Humana y Cultura</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a><ul>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a>
+<ul>
 <li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#actores-y-enlaces"><i class="fa fa-check"></i><b>1.3.1</b> Actores y Enlaces</a></li>
 <li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#redes-sociales"><i class="fa fa-check"></i><b>1.3.2</b> Redes Sociales</a></li>
 <li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#camino-y-distancia-de-caminos"><i class="fa fa-check"></i><b>1.3.3</b> Camino (y Distancia de Caminos)</a></li>
@@ -112,10 +138,12 @@
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#resumen-y-conclusiones"><i class="fa fa-check"></i><b>1.4</b> Resumen y Conclusiones</a></li>
 </ul></li>
 <li class="part"><span><b>II ARSo: Tecnicas</b></span></li>
-<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a><ul>
-<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
 <li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
-<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a><ul>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
 <li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
@@ -124,55 +152,68 @@
 <li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
-<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
 <li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
 <li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
-<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a><ul>
+<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a><ul>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
-<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
 <li class="chapter" data-level="4.4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#guardar-gráfico-de-red-en-gephi"><i class="fa fa-check"></i><b>4.4.2</b> Guardar Gráfico de Red en Gephi</a></li>
 <li class="chapter" data-level="4.4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#importación-de-listas-de-aristas-modo-uno"><i class="fa fa-check"></i><b>4.4.3</b> Importación de Listas de Aristas Modo-Uno</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a><ul>
+<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
 <li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
-<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
 <li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a><ul>
+<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#matrices-y-listas-de-aristas"><i class="fa fa-check"></i><b>6.1</b> Matrices y Listas de Aristas</a></li>
-<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a><ul>
+<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#apilar"><i class="fa fa-check"></i><b>6.2.1</b> Apilar</a></li>
 <li class="chapter" data-level="6.2.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#agregar"><i class="fa fa-check"></i><b>6.2.2</b> Agregar</a></li>
 <li class="chapter" data-level="6.2.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#recombinar"><i class="fa fa-check"></i><b>6.2.3</b> Recombinar</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#importar-múltiples-redes-a-gephi"><i class="fa fa-check"></i><b>6.3.1</b> Importar múltiples redes a Gephi</a></li>
 <li class="chapter" data-level="6.3.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a><ul>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
 <li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
-<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
 <li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
@@ -181,74 +222,114 @@
 </ul></li>
 </ul></li>
 <li class="part"><span><b>III ARSo: Medidas</b></span></li>
-<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a><ul>
-<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a><ul>
+<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a>
+<ul>
 <li class="chapter" data-level="8.1.1" data-path="topología-1.html"><a href="topología-1.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
 <li class="chapter" data-level="8.1.2" data-path="topología-1.html"><a href="topología-1.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
 <li class="chapter" data-level="8.1.3" data-path="topología-1.html"><a href="topología-1.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a><ul>
+<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="topología-1.html"><a href="topología-1.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
 <li class="chapter" data-level="8.2.2" data-path="topología-1.html"><a href="topología-1.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a>
+<ul>
 <li class="chapter" data-level="8.3.1" data-path="topología-1.html"><a href="topología-1.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="8.4.1" data-path="topología-1.html"><a href="topología-1.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="8.4.2" data-path="topología-1.html"><a href="topología-1.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
-<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a><ul>
+<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
 <li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
 <li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
 <li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
-<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="9.5.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.5.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="9.5.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.5.2</b> Identificación de Subgrupos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a><ul>
-<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a><ul>
+<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia"><i class="fa fa-check"></i><b>10.1.1</b> Medidas Basadas en Frecuencia</a></li>
 <li class="chapter" data-level="10.1.2" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-distancia"><i class="fa fa-check"></i><b>10.1.2</b> Medidas Basadas en Distancia</a></li>
 <li class="chapter" data-level="10.1.3" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-caminos"><i class="fa fa-check"></i><b>10.1.3</b> Medidas Basadas en Caminos</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a><ul>
+<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia-1"><i class="fa fa-check"></i><b>10.2.1</b> Medidas Basadas en Frecuencia</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="centralidad-1.html"><a href="centralidad-1.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.3.1</b> Centralidad en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
+<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puntos-de-corte"><i class="fa fa-check"></i><b>11.1</b> Puntos de Corte</a></li>
 <li class="chapter" data-level="11.2" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#bi-componentes-y-puentes"><i class="fa fa-check"></i><b>11.2</b> Bi-componentes y Puentes</a></li>
 <li class="chapter" data-level="11.3" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#intermediación-de-borde"><i class="fa fa-check"></i><b>11.3</b> Intermediación de borde</a></li>
 <li class="chapter" data-level="11.4" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#agujeros-estructurales-restricción-y-autonomía"><i class="fa fa-check"></i><b>11.4</b> Agujeros Estructurales, Restricción y Autonomía</a></li>
-<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.5.1</b> Puentes y Corredores en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
-<li class="part"><span><b>V Apéndices</b></span></li>
-<li class="chapter" data-level="12" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>12</b> Glosario de Términos</a></li>
-<li class="chapter" data-level="13" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html"><i class="fa fa-check"></i><b>13</b> Libro de Códigos</a><ul>
-<li class="chapter" data-level="13.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>13.1</b> Libro de Códigos de Muestra</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones"><i class="fa fa-check"></i><b>13.1.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.1.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-1"><i class="fa fa-check"></i><b>13.1.2</b> Atributos</a></li>
+<li class="chapter" data-level="12" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>12</b> Un Proceso de Diseño para la Investigación de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>12.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>12.1.1</b> Pregunata(s) de Investigación</a></li>
+<li class="chapter" data-level="12.1.2" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>12.1.2</b> Limites</a></li>
+<li class="chapter" data-level="12.1.3" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>12.1.3</b> Codificar Relaciones y Atributos</a></li>
+<li class="chapter" data-level="12.1.4" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>12.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
+<li class="chapter" data-level="12.1.5" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#conclusiones"><i class="fa fa-check"></i><b>12.1.5</b> Conclusiones</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>13.2</b> Libro de Códigos de Noordin Top</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones-1"><i class="fa fa-check"></i><b>13.2.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.2.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-2"><i class="fa fa-check"></i><b>13.2.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html"><i class="fa fa-check"></i><b>13</b> Ejemplos Practicos</a>
+<ul>
+<li class="chapter" data-level="" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#informe-de-la-red-criminal-en-la-república-de-panamá"><i class="fa fa-check"></i>Informe de la Red Criminal en la República de Panamá</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#libro-de-códigos"><i class="fa fa-check"></i><b>13.0.1</b> Libro de Códigos</a></li>
+<li class="chapter" data-level="13.0.2" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#mapa-de-red"><i class="fa fa-check"></i><b>13.0.2</b> Mapa de red</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>VI Referencias</b></span></li>
-<li class="chapter" data-level="14" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>14</b> Referencias</a></li>
+<li class="appendix"><span><b>Apéndices</b></span></li>
+<li class="chapter" data-level="A" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>A</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="B" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html"><i class="fa fa-check"></i><b>B</b> Libro de Códigos</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>B.1</b> Libro de Códigos de Muestra</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-2"><i class="fa fa-check"></i><b>B.1.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.1.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-3"><i class="fa fa-check"></i><b>B.1.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>B.2</b> Libro de Códigos de Noordin Top</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-3"><i class="fa fa-check"></i><b>B.2.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.2.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-4"><i class="fa fa-check"></i><b>B.2.2</b> Atributos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Referencias</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">
+Publicado con bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -258,7 +339,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales Oscuras</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales</a>
           </h1>
         </div>
 
@@ -267,18 +348,20 @@
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Análisis de Redes Sociales Oscuras</h1>
+<h1 class="title">Análisis de Redes Sociales</h1>
 <p class="author"><em>CORE Lab + ESGE-EPG</em></p>
 </div>
-<div id="bienvenida" class="section level1 unnumbered">
-<h1>Bienvenida</h1>
-<p>Este manual electrónico le enseñará los conceptos basicos del ARSo y su aplicación en diversas areas.</p>
+<div id="introducción" class="section level1 unnumbered">
+<h1>Introducción</h1>
+<p>El objetivo de este manual es enseñarle los conceptos básicos del análisis de redes sociales (ARSo) y cómo estos métodos pueden ser utilizados para comprender dichas redes, asimismo crear estrategias para empoderar o socavarlas. Este proyecto cubre los puntos de vista de los autores sobre la introducción al estudio de las redes oscuras como elementos de análisis clave para todo analista de inteligencia y elementos operativos de fuerzas especiales. De tal manera que, los ejemplos prácticos y el marco teórico en que están integrados giran alrededor de las redes oscuras, definidas como redes encubiertas (o clandestinas) e ilegales <span class="citation">(<a href="#ref-Raab2003" role="doc-biblioref">Raab &amp; Milward, 2003</a>)</span>. Este es un término que puede incluir redes terroristas, criminales e insurgentes. El término “oscura” busca capturar el hecho de que las redes oscuras son aquellas que, por definición, intentan permanecer encubiertas tras ocultar sus actividades de las autoridades <span class="citation">(<a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy, 2016</a>; <a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a</a>)</span>.</p>
+<p>Este manual se divide en cuatro secciones. La primera consiste de una introducción a ARSo, que aborda una breve reseña histórica, las diferencias entre este y otros campos de estudio, y los términos, conceptos y supuestos básicos que forman la base de este campo. La siguiente sección cambia el enfoque de los conceptos a la práctica. Es decir, se centra en la recopilación, codificación y manipulación de los datos necesarios para el análisis. En la tercera sección, los autores presentan varias “familias” de métricas, comúnmente utilizadas en el análisis exploratorio de redes. Finalmente, la última sección destaca ejemplos del uso de los métodos presentados en este documento por analistas de inteligencia y equipos de Asuntos Civiles y Operaciones Psicológicas.</p>
 <p>El contenido de este manual fue diseñado conjuntamente entre el <a href="https://nps.edu/web/core">Ambiente Común de Investigación Operativa (CORE Lab, por sus siglas en inglés)</a> de la <a href="https://nps.edu/">Escuela Naval de Post Grado (NPS, por sus siglas en inglés)</a> y la <a href="http://esge.edu.pe/esge-epg/">Escuela Superior de Guerra del Ejército, Escuela de Post Grado (ESGE-EPG), Lima, Perú</a>.</p>
 <p><br/></p>
 <p><img src="images/core-esge.png" width="75%" style="display: block; margin: auto;" /></p>
 <div id="patrocinio" class="section level2 unnumbered">
 <h2>Patrocinio</h2>
-<p>El desarrollo de este manual fue posible gracias al patrocinio del <a href="https://dsca.mil/programs/combating-terrorism-and-irregular-warfare-fellowship-program-ctiwfp">Programa de Becas de Defensa Regional (RDFP, pos sus siglas en inglés)</a> de la <a href="https://dsca.mil/">Agencia de Cooperación para la Seguridad de la Defensa (DSCA, por sus siglas en inglés)</a> con el propósito de apoyar el plan de estudios de ESGE-EPG.</p>
+<p>El desarrollo de este manual fue posible gracias al patrocinio del <a href="https://samm.dsca.mil/glossary/combating-terrorism-fellowship-program-ctfp">Programa de Becas de Defensa Regional (RDFP, pos sus siglas en inglés)</a> de la <a href="hhttps://samm.dsca.mil/">Agencia de Cooperación para la Seguridad de la Defensa (DSCA, por sus siglas en inglés)</a> con el propósito de apoyar el plan de estudios de ESGE-EPG.</p>
+<p><img src="images/CTFP.jpg" width="50%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="misión-educativa" class="section level2 unnumbered">
 <h2>Misión educativa</h2>
@@ -286,20 +369,31 @@
 <p><strong>El material contenido en este manual se realizó con el propósito de revisión y discusión entre colegas para para su posterior aplicación y no necesariamente refleja las opiniones del Departamento de Marina (en inglés Department of the Navy) o del Departamento de Defensa (en inglés Department of Defense) de los Estados Unidos y la Escuela Superior de Guerra - Escuela de Post Grado del Ejército de Perú.</strong></p>
 </div>
 </div>
-<div id="colaboradores" class="section level2 unnumbered">
-<h2>Colaboradores</h2>
-<div id="editores" class="section level3 unnumbered">
-<h3>Editores</h3>
+<div id="editores" class="section level2 unnumbered">
+<h2>Editores</h2>
 <p><strong>Christopher J. Callaghan</strong> es un investigador asociado en el CORE Lab en el <a href="https://nps.edu/web/da">Departamento de Análisis de Defensa</a> en NPS. Su trabajo aprovecha el análisis de datos de código abierto para comprender y modelar una variedad de problemas de seguridad nacional e internacional. Antes de unirse al NPS, se desempeñó como investigador asociado en el Instituto Middlebury de Estudios Internacionales (MIIS, por sus sus siglas en inglés) en Monterey California, donde trabajó en múltiples esfuerzos relacionados con la “ciudadanía” local e internacional.</p>
 <p><strong>Sean F. Everton</strong> es un Profesor en el <a href="https://nps.edu/web/da">Departamento de Análisis de Defensa</a> y Codirector del CORE Lab de NPS. Ha publicado en las áreas de análisis de redes sociales, sociología de la religión, sociología económica y sociología política y se especializa en el uso del análisis de redes sociales para rastrear e interrumpir redes oscuras (por ejemplo, redes criminales y terroristas). Su primer libro, <a href="https://www.amazon.com/Disrupting-Networks-Structural-Analysis-Sciences/dp/1107606683"><em>Disrupting Dark Networks</em></a>, fue publicado por Cambridge University Press en 2012, y su segundo libro, <a href="https://www.amazon.com/Understanding-Dark-Networks-Daniel-Cunningham/dp/1442249447/ref=pd_lpo_14_img_1/145-9289795-0957343?_encoding=UTF8&amp;pd_rd_i=1442249447&amp;pd_rd_r=a7b19253-9be1-42b7-a6fa-e4ee67f7e2f5&amp;pd_rd_w=kcb7y&amp;pd_rd_wg=Oq37r&amp;pf_rd_p=7b36d496-f366-4631-94d3-61b87b52511b&amp;pf_rd_r=3KX19ZDD20YZ1H2BTMTN&amp;psc=1&amp;refRID=3KX19ZDD20YZ1H2BTMTN"><em>Understanding Dark Networks</em></a> fue publicado por Rowman y Littlefield en 2016. Su libro más reciente , <a href="https://www.amazon.com/Networks-Religion-Build-up-Structural-Analysis/dp/1108404073/ref=pd_bxgy_img_3/145-9289795-0957343?_encoding=UTF8&amp;pd_rd_i=1108404073&amp;pd_rd_r=d71cd43b-1c10-4abc-bb64-7049818d0f1a&amp;pd_rd_w=FSY0j&amp;pd_rd_wg=Wa7Wy&amp;pf_rd_p=ce6c479b-ef53-49a6-845b-bbbf35c28dd3&amp;pf_rd_r=AH007P8AR7HCWFKEP88J&amp;psc=1&amp;refRID=AH007P8AR7HCWFKEP88J"><em>Networks and Religion</em></a>, que explora la interacción de las redes y la religión, fue publicado por Cambridge University Press en 2018.</p>
 <p><strong>Gral. de Brig. EP (R) Augusto Manuel E. Álvarez Torres</strong> ostenta los títulos académicos de Maestro en Seguridad, Defensa y Desarrollo Nacional y en Ciencias Militares con mención en Planeamiento Estratégico y Toma de Decisiones, es egresado de la Escuela de Post Grado de Ciencias Políticas de las Universidad Ricardo Pala, ha seguido cursos de Terrorismo e Insurgencia, Crimen Organizado, Políticas y Estrategias de Seguridad, Estrategia y Seguridad Internacional, Relaciones Político, Civil, Militar y Liderazgo Estratégico, Estrategia de Seguridad y Defensa frente a las Amenazas Complejas en la UND/CHDS- EE. UU. Los cursos de Análisis de redes Nivel I y II, en la Escuela Naval de Post Grado en Monterey, California EE. UU. Actualmente se desempeña como Catedrático en el <a href="https://www.caen.edu.pe/wordpress/">Centro de Altos Estudios Nacionales (CAEN)</a>, Profesor Principal de la Catedra de Historia Militar y Profesor Adjunto en la <a href="https://www.socom.mil/JSOU/Pages/default.aspx">Universidad Conjunta de Operaciones Especiales en Florida, EE. UU</a>.</p>
+<p><strong>Sally Baho</strong> …</p>
+<!-- ## Colaboradores {-} -->
 
 </div>
 </div>
+
+
+
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Cunningham2016" class="csl-entry">
+Cunningham, D., Everton, S. F., &amp; Murphy, P. (2016). <em>Understanding dark networks: A strategic framework for the use of social network analysis</em>. Rowman; Littlefield.
 </div>
-
-
-
+<div id="ref-Everton2012" class="csl-entry">
+Everton, S. F. (2012a). <em>Disrupting dark networks</em>. Cambridge.
+</div>
+<div id="ref-Raab2003" class="csl-entry">
+Raab, J., &amp; Milward, H. B. (2003). Dark networks as problems. <em>Journal of Public Administration Research and Theory</em>, <em>13</em>, 413–39.
+</div>
+</div>
             </section>
 
           </div>
@@ -329,7 +423,7 @@ gitbook.start({
 },
 "edit": {
 "link": "https://github.com/cjcallag/arso/edit/main/index.Rmd",
-"text": "Edit"
+"text": "Editar"
 },
 "history": {
 "link": null,
@@ -340,15 +434,22 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
-"css": "arso.css",
 "font_settings": {
-"theme": "white",
 "family": "sans",
+"theme": "white",
 "size": 2
+},
+"info": true,
+"toolbar": {
+"position": "fixed"
 }
 });
 });

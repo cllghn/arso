@@ -16,7 +16,7 @@ Hoy en día existen múltiples paquetes de software desarrollados para asistir a
 
 ## Gephi
 
-De acuerdo con los autores de Gephi, la plataforma es “una herramienta para analistas de datos y científicos interesados en explorar y comprender gráficos ... [Donde] el usuario interactúa con la representación, manipula las estructuras, formas y colores para revelar patrones ocultos. El objetivo es ayudar a los analistas de datos a hacer hipótesis, descubrir patrones intuitivamente, aislar singularidades o fallas de estructura durante la recopilación de datos” [@gephi]. Para nuestros propósitos utilizaremos esta interfaz para complementar el material y facilitar nuestro un análisis exploratorio. Antes de comenzar los siguientes capítulos, descargue gratuitamente la herramienta desde [el sitio web de Gephi.](https://gephi.org/)
+De acuerdo con los autores de Gephi, la plataforma es “una herramienta para analistas de datos y científicos interesados en explorar y comprender gráficos ... [Donde] el usuario interactúa con la representación, manipula las estructuras, formas y colores para revelar patrones ocultos. El objetivo es ayudar a los analistas de datos a formular hipótesis, descubrir patrones intuitivamente, aislar singularidades o fallas de estructura durante la recopilación de datos” [@gephi]. Para nuestros propósitos utilizaremos esta interfaz para complementar el material y facilitar nuestro un análisis exploratorio. Antes de comenzar los siguientes capítulos, descargue gratuitamente la herramienta desde [el sitio web de Gephi.](https://gephi.org/)
 
 Como todas las herramientas de software, esta tiene ventajas y desventajas. Es importante explicar por qué hemos elegido esta herramienta sobre algunas de las demás:
   

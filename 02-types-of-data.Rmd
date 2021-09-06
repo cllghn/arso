@@ -94,19 +94,19 @@ Las relaciones **modo-dos** son aquellas, que a diferencia de las modo-uno, cons
 
 $$
 \begin{matrix}
-   & A & B & C & D & E & F & E1 & E2 & E3 & E4 \\
-A  & - & 0 & 0 & 0 & 0 & 0 & 1  & 0  & 0  & 0  \\
-B  & 0 & - & 0 & 0 & 0 & 0 & 1  & 0  & 0  & 0  \\
-C  & 0 & 0 & - & 0 & 0 & 0 & 1  & 1  & 0  & 0  \\
-D  & 0 & 0 & 0 & - & 0 & 0 & 0  & 1  & 1  & 1  \\
-E  & 0 & 0 & 0 & 0 & - & 0 & 0  & 0  & 1  & 0  \\
-F  & 0 & 0 & 0 & 0 & 0 & - & 0  & 0  & 0  & 1  \\
-E1 & 1 & 1 & 1 & 0 & 0 & 0 & -  & 0  & 0  & 0  \\
-E2 & 0 & 0 & 1 & 1 & 0 & 0 & 0  & -  & 0  & 0  \\
-E3 & 0 & 0 & 0 & 1 & 1 & 0 & 0  & 0  & -  & 0  \\
-E4 & 0 & 0 & 0 & 1 & 0 & 1 & 0  & 0  & 0  & -  \\
-\end{matrix}
+   & A & B & C & D & E & F & E1 & E2 & E3 & E4\cr
+A  & - & 0 & 0 & 0 & 0 & 0 & 1  & 0  & 0  & 0 \cr
+B  & 0 & - & 0 & 0 & 0 & 0 & 1  & 0  & 0  & 0 \cr
+C  & 0 & 0 & - & 0 & 0 & 0 & 1  & 1  & 0  & 0 \cr
+D  & 0 & 0 & 0 & - & 0 & 0 & 0  & 1  & 1  & 1 \cr
+E  & 0 & 0 & 0 & 0 & - & 0 & 0  & 0  & 1  & 0 \cr
+F  & 0 & 0 & 0 & 0 & 0 & - & 0  & 0  & 0  & 1 \cr
+E1 & 1 & 1 & 1 & 0 & 0 & 0 & -  & 0  & 0  & 0 \cr
+E2 & 0 & 0 & 1 & 1 & 0 & 0 & 0  & -  & 0  & 0 \cr
+E3 & 0 & 0 & 0 & 1 & 1 & 0 & 0  & 0  & -  & 0 \cr
+E4 & 0 & 0 & 0 & 1 & 0 & 1 & 0  & 0  & 0  & - \cr
 (\#eq:bip)
+\end{matrix}
 $$
 
 ¿Qué patrones puede ver en la matriz previa \@ref(eq:bip)? Primero, note la simetría de la matriz, es decir que los datos son simétricos.  Al sumar las filas o columnas, notamos que el evento mas asistido es el primer evento (E1) con tres personas. Adicionalmente, la persona con mayor asistencia a eventos es el actor D (3 eventos). La Figura \@ref(fig:bip) es un sociograma de estos datos, en este las personas y eventos han sido dibujados con dos diferentes tipos de íconos para diferenciar entre las clases de nodos, sin embargo, esta diferenciación es puramente cosmética.
@@ -127,7 +127,7 @@ Una vez más, veamos algunos ejemplos de redes modo-dos utilizadas para mapear J
 | Vínculo | Tipo(s) de Actor(es) | Definición |
 |---------|----------------------|------------|
 | Afiliación educativa | Persona y Organización | Las relaciones educativas se definen como escuelas donde las personas reciben educación formal, sirven como empleados (maestro, miembro administrativo, etc.) o participan en instrucción educativa o religiosa adicional en la institución. |
-| Afiliación Organizacional  | Persona y Evento | Una organización terrorista/insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas/insurgentes, que consiste en miembros voluntariamente afiliados.  | 
+| Afiliación Organizacional  | Persona y Evento | Una organización terrorista/insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas/insurgentes, que consiste en miembros voluntariamente afiliados.  |
 | Eventos de Formación | Persona y Evento | Participación en cualquier actividad específicamente designada que enseñe el conocimiento, las habilidades y las competencias del terrorismo y la insurgencia. La capacitación no incluye la participación en un acto patrocinado por terroristas [...]. |
 
 ## Datos de Atributos
@@ -136,6 +136,7 @@ Aunque no son el enfoque principal de ARSo, los datos de atributo se utilizan a 
 
 :::: {.row}
 :::: {.lcolumn-50}
+$$
 \begin{matrix}
   & A & B & C & D & E & F \\
 A & - & 1 & 1 & 0 & 0 & 0 \\
@@ -146,10 +147,12 @@ E & 0 & 0 & 0 & 1 & - & 1 \\
 F & 0 & 0 & 0 & 1 & 1 & - \\
 (\#eq:small-matrix)
 \end{matrix}
+$$
 ::::
 
 :::: {.rcolumn-50}
 \begin{matrix}
+$$
   & Género    & Edad \\
 A & Masculino & 20 \\
 B & Femenino  & 20 \\
@@ -159,6 +162,7 @@ E & Masculino & 20 \\
 F & Masculino & 25 \\
 (\#eq:attribute-matrix)
 \end{matrix}
+$$
 ::::
 ::::
 

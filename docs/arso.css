@@ -32,6 +32,15 @@
   border-radius: 10px;
 }
 
+.showbox {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: rgba(253,245,237,0.5) 5px center/3em no-repeat;
+  color: #505050;
+  border: 2px solid #ffefef;
+  border-radius: 10px;
+}
+
 .center {
   text-align: center;
 }
@@ -48,6 +57,16 @@
 .rcolumn-50 {
   float: right;
   width: 50%;
+}
+
+.lcolumn-30 {
+  float: left;
+  width: 30%;
+}
+
+.rcolumn-70 {
+  float: right;
+  width: 70%;
 }
 
 .row:after {
@@ -82,6 +101,6 @@
   border: 3px solid black;
   margin: 0px auto;
   width: 100%;
-  padding: 1em 1em 1em 1em;
-  border-radius: 10px;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border-radius: 5px;
 }
