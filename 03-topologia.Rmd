@@ -10,11 +10,13 @@ library(igraph)
 
 # Topología
 
-La topología consta de una familia de medidas que son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación cuantitativa sobre la estructura de esta [@Valente2010]. Es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros [@McCormick2000]; asimismo, esta configuración hace a la red más vulnerable a disrupción al remover un puñado de actores clave. 
+La topología consta de una familia de medidas que son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación cuantitativa sobre la estructura de esta [@Valente2010]. Es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros [@McCormick2000]; asimismo, esta configuración hace a la red más vulnerable a disrupción al remover un puñado de actores clave. De manera opuesta, las redes altamente descentralizadas son relativamente invulnerables a la eliminación de actores clave, pueden tener dificultades para movilizar recursos [@Cunningham2016].
 
 Observe las Figuras \@ref(fig:star) y \@ref(fig:full), ambas tienen la misma cantidad de nodos, pero las características estructurales son diferentes y presentan ventajas y desventajas. Por ejemplo, en la Figura \@ref(fig:star) la mayoría de los nodos rodean a un actor en el centro de la red. Este tipo de configuración es comúnmente asociada con organizaciones jerárquicas con protocolos establecidos de comando y control. La ventaja de esta topología es un que un nodo central controla el flujo de recursos e información, en teoría haciendo la diseminación de estos más eficiente. Sin embargo, esta estructura tiene un defecto clave. ¿Qué pasa si removemos al actor central? La red se deshace por completo y el flujo es interrumpido de manera indeterminada.
 
 Ahora, en la Figura \@ref(fig:full) no encontramos una formación centrada alrededor de un actor clave. Al contrario, en este caso todos los nodos se encuentran conectados entre ellos. La ventaja es clara, no hay un solo punto de disrupción como en la Figura \@ref(fig:star). Sin embargo, las características estructurales no sugieren un solo camino para el flujo de información o recursos, lo cual en algunas ocasiones retrasa ciertos procesos organizacionales. Es decir, si todos son líderes, nadie puede estar a cargo de dar instrucciones a los demás. 
+
+Es probable que sea mejor considerear ambas configuraciones (centralizada y descentralizada) como polos opuestos de un continuo. Como tal, el nivel óptimo de centralización en dicho espectro cambiará con el tiempo y en función de las presiones ambientales [@Cunningham2016; @Everton2012]. Por ejemplo, en un entorno hostil, la red puede priorizar la seguridad de actores clave; así, avanzando hacia una estructura más descentralizada. Es precisamente por este dinamismo intrínseco a las redes sociales que el estudio de la estructura de red debe ir acompañada con contexto en el que se encuentra incrustrada.
 
 ::::{.row}
 ::::{.lcolumn-50}
@@ -252,7 +254,7 @@ Nodo   & Grado \\
 ::::
 ::::
 
-En la red estrella la centralización de grado es 1.0 (ver ecuaciónn \@ref(eq:grados)). Por consiguiente, de manera matemática asumimos que los nodos en este gráfico convergen alrededor de un actor central.
+En la red estrella la centralización de grado es 1.0 (ver ecuación \@ref(eq:grados)). Por consiguiente, de manera matemática asumimos que los nodos en este gráfico convergen alrededor de un actor central.
 
 ```{r star2, fig.cap="Red estrella modificada"}
 g <- data.frame(from = c(1, 1, 1, 1, 2),

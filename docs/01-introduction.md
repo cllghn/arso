@@ -2,7 +2,7 @@
 output: html_document
 ---
 
-# (PART) Introducción {-}
+# (PART) ¿ Qué es el ARSo? {-}
 
 # Análisis de Redes Sociales: Una (Breve) Introducción {#introduction}
 

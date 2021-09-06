@@ -1,6 +1,7 @@
 ---
 output: html_document
 bibliography: book.bib
+always_allow_html: yes
 ---
 
 
@@ -25,16 +26,15 @@ El encontrar datos de modo-dos en ARSo es común. Tradicionalmente el objetivo d
 Para lograr esto, retornaremos a la multiplicación de matrices. Primero, examine la matriz de adyacencia \@ref(eq:bip-adj) con los datos de la Figura \@ref(fig:bip). Note que los vínculos solo conectan personan con eventos, por consiguiente, asumimos que lo que tenemos es una red bipartita. 
 
 \begin{matrix}
-   & A & B & C & D & E1 & E2 & E3 \\
-A  & - & 0 & 0 & 0 & 1  & 0  & 0  \\
-B  & 0 & - & 0 & 0 & 1  & 0  & 0  \\
-C  & 0 & 0 & - & 0 & 1  & 1  & 0  \\
-D  & 0 & 0 & 0 & - & 0  & 1  & 1  \\
-E1 & 1 & 1 & 1 & 0 & -  & 0  & 0  \\
-E2 & 0 & 0 & 1 & 1 & 0  & -  & 0  \\
-E3 & 0 & 0 & 0 & 1 & 0  & 0  & -  \\
-
-(\#eq:bip-adj)
+    & A & B & C & D & E1 & E2 & E3 \\
+  A  & - & 0 & 0 & 0 & 1  & 0  & 0  \\
+  B  & 0 & - & 0 & 0 & 1  & 0  & 0  \\
+  C  & 0 & 0 & - & 0 & 1  & 1  & 0  \\
+  D  & 0 & 0 & 0 & - & 0  & 1  & 1  \\
+  E1 & 1 & 1 & 1 & 0 & -  & 0  & 0  \\
+  E2 & 0 & 0 & 1 & 1 & 0  & -  & 0  \\
+  E3 & 0 & 0 & 0 & 1 & 0  & 0  & -  \\
+  (\#eq:bip-adj)
 \end{matrix}
 
 Otra forma de representar los datos de una red bipartita, además de una lista de arista, es una matriz de incidencia. En esta, vemos las que las filas y las columnas contienen las diferentes clases. Por ejemplo, en la matriz de incidencia \@ref(eq:bip-inc) encontramos los eventos como columnas y las personas como filas. 
@@ -328,8 +328,11 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 ::::
 
 
-<!--html_preserve--><div id="htmlwidget-fe47e9e6e87dda4b00e5" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-fe47e9e6e87dda4b00e5">{"x":{"filter":"none","data":[["Left Matrix","Right Matrix"],["Person - Event","Event - Person"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+
+```{=html}
+<div id="htmlwidget-fe47e9e6e87dda4b00e5" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fe47e9e6e87dda4b00e5">{"x":{"filter":"none","vertical":false,"data":[["Left Matrix","Right Matrix"],["Person - Event","Event - Person"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+```
 
 ::::{.row}
 ::::{.lcolumn-20}
@@ -378,8 +381,11 @@ Los datos que usaremos en este ejercicio se les conoce como los datos de Davis: 
 ::::
 ::::
 
-<!--html_preserve--><div id="htmlwidget-fe47e9e6e87dda4b00e5" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-fe47e9e6e87dda4b00e5">{"x":{"filter":"none","data":[["Left Matrix","Right Matrix"],["Event - Person","Person - Event"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+
+```{=html}
+<div id="htmlwidget-daaedeaf95eaf5df96c8" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-daaedeaf95eaf5df96c8">{"x":{"filter":"none","vertical":false,"data":[["Left Matrix","Right Matrix"],["Event - Person","Person - Event"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th><\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"t","ordering":false,"order":[],"autoWidth":false,"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}]}},"evals":[],"jsHooks":[]}</script>
+```
 
 ::::{.row}
 ::::{.lcolumn-20}

@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>9 Subgrupos Cohesivos | Análisis de Redes Sociales Oscuras</title>
+  <title>9 Subgrupos Cohesivos | Análisis de Redes Sociales</title>
   <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="9 Subgrupos Cohesivos | Análisis de Redes Sociales Oscuras" />
+  <meta property="og:title" content="9 Subgrupos Cohesivos | Análisis de Redes Sociales" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="9 Subgrupos Cohesivos | Análisis de Redes Sociales Oscuras" />
+  <meta name="twitter:title" content="9 Subgrupos Cohesivos | Análisis de Redes Sociales" />
   
   <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
@@ -32,7 +32,9 @@
   
 <link rel="prev" href="topología-1.html"/>
 <link rel="next" href="centralidad-1.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,19 +51,41 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="arso.css" type="text/css" />
 </head>
@@ -76,20 +100,21 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Análisis de Redes Sociales Oscuras</a></li>
+<li><a href="./">Análisis de Redes Sociales</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introducción</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 </ul></li>
-</ul></li>
-<li class="part"><span><b>I Introducción</b></span></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a><ul>
+<li class="part"><span><b>I ¿ Qué es el ARSo?</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a><ul>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#interdependencia-de-los-actores"><i class="fa fa-check"></i><b>1.2.1</b> Interdependencia de los Actores</a></li>
 <li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#lazos-como-conductos"><i class="fa fa-check"></i><b>1.2.2</b> Lazos como Conductos</a></li>
 <li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#estructura-social-y-formaciones-sociales-emergentes"><i class="fa fa-check"></i><b>1.2.3</b> Estructura Social y Formaciones Sociales Emergentes</a></li>
@@ -97,7 +122,8 @@
 <li class="chapter" data-level="1.2.5" data-path="introduction.html"><a href="introduction.html#redes-sociales-dinámicas"><i class="fa fa-check"></i><b>1.2.5</b> Redes sociales dinámicas</a></li>
 <li class="chapter" data-level="1.2.6" data-path="introduction.html"><a href="introduction.html#resumen-redes-sociales-agencia-humana-y-cultura"><i class="fa fa-check"></i><b>1.2.6</b> Resumen: Redes Sociales, Agencia Humana y Cultura</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a><ul>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a>
+<ul>
 <li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#actores-y-enlaces"><i class="fa fa-check"></i><b>1.3.1</b> Actores y Enlaces</a></li>
 <li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#redes-sociales"><i class="fa fa-check"></i><b>1.3.2</b> Redes Sociales</a></li>
 <li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#camino-y-distancia-de-caminos"><i class="fa fa-check"></i><b>1.3.3</b> Camino (y Distancia de Caminos)</a></li>
@@ -112,10 +138,12 @@
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#resumen-y-conclusiones"><i class="fa fa-check"></i><b>1.4</b> Resumen y Conclusiones</a></li>
 </ul></li>
 <li class="part"><span><b>II ARSo: Tecnicas</b></span></li>
-<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a><ul>
-<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
 <li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
-<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a><ul>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
 <li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
@@ -124,55 +152,68 @@
 <li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
-<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
 <li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
 <li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
-<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a><ul>
+<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a><ul>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
-<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
 <li class="chapter" data-level="4.4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#guardar-gráfico-de-red-en-gephi"><i class="fa fa-check"></i><b>4.4.2</b> Guardar Gráfico de Red en Gephi</a></li>
 <li class="chapter" data-level="4.4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#importación-de-listas-de-aristas-modo-uno"><i class="fa fa-check"></i><b>4.4.3</b> Importación de Listas de Aristas Modo-Uno</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a><ul>
+<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
 <li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
-<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
 <li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a><ul>
+<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#matrices-y-listas-de-aristas"><i class="fa fa-check"></i><b>6.1</b> Matrices y Listas de Aristas</a></li>
-<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a><ul>
+<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#apilar"><i class="fa fa-check"></i><b>6.2.1</b> Apilar</a></li>
 <li class="chapter" data-level="6.2.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#agregar"><i class="fa fa-check"></i><b>6.2.2</b> Agregar</a></li>
 <li class="chapter" data-level="6.2.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#recombinar"><i class="fa fa-check"></i><b>6.2.3</b> Recombinar</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#importar-múltiples-redes-a-gephi"><i class="fa fa-check"></i><b>6.3.1</b> Importar múltiples redes a Gephi</a></li>
 <li class="chapter" data-level="6.3.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a><ul>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
 <li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
-<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
 <li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
@@ -181,74 +222,114 @@
 </ul></li>
 </ul></li>
 <li class="part"><span><b>III ARSo: Medidas</b></span></li>
-<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a><ul>
-<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a><ul>
+<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a>
+<ul>
 <li class="chapter" data-level="8.1.1" data-path="topología-1.html"><a href="topología-1.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
 <li class="chapter" data-level="8.1.2" data-path="topología-1.html"><a href="topología-1.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
 <li class="chapter" data-level="8.1.3" data-path="topología-1.html"><a href="topología-1.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a><ul>
+<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="topología-1.html"><a href="topología-1.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
 <li class="chapter" data-level="8.2.2" data-path="topología-1.html"><a href="topología-1.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a>
+<ul>
 <li class="chapter" data-level="8.3.1" data-path="topología-1.html"><a href="topología-1.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="8.4.1" data-path="topología-1.html"><a href="topología-1.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="8.4.2" data-path="topología-1.html"><a href="topología-1.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
-<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a><ul>
+<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
 <li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
 <li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
 <li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
-<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="9.5.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.5.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="9.5.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.5.2</b> Identificación de Subgrupos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a><ul>
-<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a><ul>
+<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia"><i class="fa fa-check"></i><b>10.1.1</b> Medidas Basadas en Frecuencia</a></li>
 <li class="chapter" data-level="10.1.2" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-distancia"><i class="fa fa-check"></i><b>10.1.2</b> Medidas Basadas en Distancia</a></li>
 <li class="chapter" data-level="10.1.3" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-caminos"><i class="fa fa-check"></i><b>10.1.3</b> Medidas Basadas en Caminos</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a><ul>
+<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia-1"><i class="fa fa-check"></i><b>10.2.1</b> Medidas Basadas en Frecuencia</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="centralidad-1.html"><a href="centralidad-1.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.3.1</b> Centralidad en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
+<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puntos-de-corte"><i class="fa fa-check"></i><b>11.1</b> Puntos de Corte</a></li>
 <li class="chapter" data-level="11.2" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#bi-componentes-y-puentes"><i class="fa fa-check"></i><b>11.2</b> Bi-componentes y Puentes</a></li>
 <li class="chapter" data-level="11.3" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#intermediación-de-borde"><i class="fa fa-check"></i><b>11.3</b> Intermediación de borde</a></li>
 <li class="chapter" data-level="11.4" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#agujeros-estructurales-restricción-y-autonomía"><i class="fa fa-check"></i><b>11.4</b> Agujeros Estructurales, Restricción y Autonomía</a></li>
-<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.5.1</b> Puentes y Corredores en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
-<li class="part"><span><b>V Apéndices</b></span></li>
-<li class="chapter" data-level="12" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>12</b> Glosario de Términos</a></li>
-<li class="chapter" data-level="13" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html"><i class="fa fa-check"></i><b>13</b> Libro de Códigos</a><ul>
-<li class="chapter" data-level="13.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>13.1</b> Libro de Códigos de Muestra</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones"><i class="fa fa-check"></i><b>13.1.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.1.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-1"><i class="fa fa-check"></i><b>13.1.2</b> Atributos</a></li>
+<li class="chapter" data-level="12" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>12</b> Un Proceso de Diseño para la Investigación de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>12.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>12.1.1</b> Pregunata(s) de Investigación</a></li>
+<li class="chapter" data-level="12.1.2" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>12.1.2</b> Limites</a></li>
+<li class="chapter" data-level="12.1.3" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>12.1.3</b> Codificar Relaciones y Atributos</a></li>
+<li class="chapter" data-level="12.1.4" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>12.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
+<li class="chapter" data-level="12.1.5" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#conclusiones"><i class="fa fa-check"></i><b>12.1.5</b> Conclusiones</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>13.2</b> Libro de Códigos de Noordin Top</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones-1"><i class="fa fa-check"></i><b>13.2.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.2.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-2"><i class="fa fa-check"></i><b>13.2.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html"><i class="fa fa-check"></i><b>13</b> Ejemplos Practicos</a>
+<ul>
+<li class="chapter" data-level="" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#informe-de-la-red-criminal-en-la-república-de-panamá"><i class="fa fa-check"></i>Informe de la Red Criminal en la República de Panamá</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#libro-de-códigos"><i class="fa fa-check"></i><b>13.0.1</b> Libro de Códigos</a></li>
+<li class="chapter" data-level="13.0.2" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#mapa-de-red"><i class="fa fa-check"></i><b>13.0.2</b> Mapa de red</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>VI Referencias</b></span></li>
-<li class="chapter" data-level="14" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>14</b> Referencias</a></li>
+<li class="appendix"><span><b>Apéndices</b></span></li>
+<li class="chapter" data-level="A" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>A</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="B" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html"><i class="fa fa-check"></i><b>B</b> Libro de Códigos</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>B.1</b> Libro de Códigos de Muestra</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-2"><i class="fa fa-check"></i><b>B.1.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.1.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-3"><i class="fa fa-check"></i><b>B.1.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>B.2</b> Libro de Códigos de Noordin Top</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-3"><i class="fa fa-check"></i><b>B.2.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.2.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-4"><i class="fa fa-check"></i><b>B.2.2</b> Atributos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Referencias</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">
+Publicado con bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -258,7 +339,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales Oscuras</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales</a>
           </h1>
         </div>
 
@@ -266,17 +347,17 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="subgrupos-cohesivos" class="section level1">
+<div id="subgrupos-cohesivos" class="section level1" number="9">
 <h1><span class="header-section-number">9</span> Subgrupos Cohesivos</h1>
-<p>En este capítulo, exploraremos algunos (pero no todos) métodos para hallar subgrupos cohesivos de actores dentro de una red social. Los subgrupos cohesivos son subconjuntos de actores entre los cuales existen fuertes lazos, por ello los métodos que utilizaremos formalizan la existencia de un grupo social a través de características estructurales de una red <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span>.</p>
+<p>En este capítulo, exploraremos algunos (pero no todos) métodos para hallar subgrupos cohesivos de actores dentro de una red social. Los subgrupos cohesivos son subconjuntos de actores entre los cuales existen fuertes lazos, por ello los métodos que utilizaremos formalizan la existencia de un grupo social a través de características estructurales de una red <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994</a>)</span>.</p>
 <p>En esta breve introducción cubriremos: componentes, núcleos (k-core), grupos Girvan-Newman y de Louvain. Para poner este nuevo conocimiento en práctica, el capítulo concluye con un ejercicio práctico de como implementar estas medidas en Gephi.</p>
-<div id="componentes" class="section level2">
+<div id="componentes" class="section level2" number="9.1">
 <h2><span class="header-section-number">9.1</span> Componentes</h2>
-<p>Estos son la forma más simple de subgrupos cohesivos en ARSo. Representan subredes en las cuales los miembros están conectados los unos a los otros (directa o indirectamente) pero no a miembros de otras subredes <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>, p. 171)</span>. Los componentes pueden ser divididos en dos campos, fuertes o débiles.</p>
-<div id="componentes-débiles" class="section level3">
+<p>Estos son la forma más simple de subgrupos cohesivos en ARSo. Representan subredes en las cuales los miembros están conectados los unos a los otros (directa o indirectamente) pero no a miembros de otras subredes <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a, p. 171</a>)</span>. Los componentes pueden ser divididos en dos campos, fuertes o débiles.</p>
+<div id="componentes-débiles" class="section level3" number="9.1.1">
 <h3><span class="header-section-number">9.1.1</span> Componentes Débiles</h3>
-<p>Los nodos en un grafo desconectado se pueden dividir en dos o más subconjuntos de manera que no haya caminos entre los nodos en diferentes conjuntos <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span>, estos subconjuntos del grafo se llaman componentes débiles. Localizar componentes débiles es apropiado para datos dirigidos o no dirigidos, puesto que el objetivo es localizar subconjuntos conectados. Tome por ejemplo la Figura <a href="subgrupos-cohesivos.html#fig:weakcomp">9.1</a>. En esta imagen, el color de los nodos denota el componente débil al que pertenecen. Como puede observar, encontramos tres componentes débiles en dicho gráfico, uno con cinco actores, una diada, y un aislado.</p>
-<div class="figure" style="text-align: center"><span id="fig:weakcomp"></span>
+<p>Los nodos en un grafo desconectado se pueden dividir en dos o más subconjuntos de manera que no haya caminos entre los nodos en diferentes conjuntos <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994</a>)</span>, estos subconjuntos del grafo se llaman componentes débiles. Localizar componentes débiles es apropiado para datos dirigidos o no dirigidos, puesto que el objetivo es localizar subconjuntos conectados. Tome por ejemplo la Figura <a href="subgrupos-cohesivos.html#fig:weakcomp">9.1</a>. En esta imagen, el color de los nodos denota el componente débil al que pertenecen. Como puede observar, encontramos tres componentes débiles en dicho gráfico, uno con cinco actores, una diada, y un aislado.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:weakcomp"></span>
 <img src="03-subgrupos_files/figure-html/weakcomp-1.png" alt="Red con múltiples componentes débiles" width="70%" />
 <p class="caption">
 Figura 9.1: Red con múltiples componentes débiles
@@ -284,10 +365,10 @@ Figura 9.1: Red con múltiples componentes débiles
 </div>
 <p>El detectar componentes débiles no solo sirve para colorear los grafos, de hecho, una de las aplicaciones más comunes es el aislar componentes. Por ejemplo, la densidad de el grafo en la Figura <a href="subgrupos-cohesivos.html#fig:weakcomp">9.1</a> es 0.25. Este índice sugiere una red escarza, sin embargo, de manera visual podemos ver que algunos componentes son más densos que otros. El componente principal, aquel de mayor tamaño, aparenta ser más denso. Es por ello que podemos aislar este componente principal y al ejecutar la medida de densidad vemos un valor de 0.6. Este proceso nos permite enfocarnos en diferentes subconjuntos del grafo en nuestro análisis.</p>
 </div>
-<div id="componentes-fuertes" class="section level3">
+<div id="componentes-fuertes" class="section level3" number="9.1.2">
 <h3><span class="header-section-number">9.1.2</span> Componentes Fuertes</h3>
-<p>Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. <span class="citation">Easley &amp; Kleinberg (<a href="#ref-Easley2010" role="doc-biblioref">2010</a>)</span> define los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre sí y (B) el subconjunto no es parte de un conjunto mayor con la propiedad que los nodos pueden llegar a todos los demás. Por ejemplo, en la Figura <a href="subgrupos-cohesivos.html#fig:strongcomp">9.2</a> el color de los nodos denota membresía a un subcomponente fuerte.</p>
-<div class="figure" style="text-align: center"><span id="fig:strongcomp"></span>
+<p>Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. <span class="citation"><a href="#ref-Easley2010" role="doc-biblioref">Easley &amp; Kleinberg</a> (<a href="#ref-Easley2010" role="doc-biblioref">2010</a>)</span> define los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre sí y (B) el subconjunto no es parte de un conjunto mayor con la propiedad que los nodos pueden llegar a todos los demás. Por ejemplo, en la Figura <a href="subgrupos-cohesivos.html#fig:strongcomp">9.2</a> el color de los nodos denota membresía a un subcomponente fuerte.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:strongcomp"></span>
 <img src="03-subgrupos_files/figure-html/strongcomp-1.png" alt="Red con múltiples componentes fuertes" width="70%" />
 <p class="caption">
 Figura 9.2: Red con múltiples componentes fuertes
@@ -297,12 +378,12 @@ Figura 9.2: Red con múltiples componentes fuertes
 <p>Como puede ver, los componentes fuertes son mas restrictivos que los componentes débiles. Sin embargo, son útilices al trabajar con datos dirigidos puesto que permiten el análisis de subconjuntos donde todos los nodos pueden alcanzarse entre sí tomando en cuenta la direccionalidad de vínculos dirigidos y el flujo potencial de información y/o recursos.</p>
 </div>
 </div>
-<div id="k-cores" class="section level2">
+<div id="k-cores" class="section level2" number="9.2">
 <h2><span class="header-section-number">9.2</span> K-cores</h2>
-<p>Otra forma de localizar subgrupos cohesivos en una red es basándose en grados nodales; específicamente, utilizando k-cores (o k-núcleos) que se definen en términos del grado mínimo. Donde <em>k</em>, en un subgrafo es el número mínimo de nodos adyacentes <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span> . Por ejemplo, la Figura <a href="subgrupos-cohesivos.html#fig:kcore">9.3</a> representa un grafo completo, es decir, 0-core. En este, vemos nodos aislados con cero enlaces, nodos pendientes con un solo vínculo y nodos con una variedad de grados de centralidad. Un 1-core incluye todos los nodos conectados al menos a una persona (ver Figura <a href="subgrupos-cohesivos.html#fig:kcore1">9.4</a>). Similarmente, un 2-core incluye nodos conectados al menos dos otros nodos (ver Figura <a href="subgrupos-cohesivos.html#fig:kcore2">9.5</a>). De igual manera podemos definir un 3-core como nodos con tres o más vínculos (ver Figura <a href="subgrupos-cohesivos.html#fig:kcore3">9.6</a>). Al aumentar <em>k</em> comenzamos a localizar el núcleo de actores más interconectados de la red, de igual manera el subconjunto restante aumentará en densidad <span class="citation">(Valente, <a href="#ref-Valente2010" role="doc-biblioref">2010</a>)</span>.</p>
+<p>Otra forma de localizar subgrupos cohesivos en una red es basándose en grados nodales; específicamente, utilizando k-cores (o k-núcleos) que se definen en términos del grado mínimo. Donde <em>k</em>, en un subgrafo es el número mínimo de nodos adyacentes <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994</a>)</span> . Por ejemplo, la Figura <a href="subgrupos-cohesivos.html#fig:kcore">9.3</a> representa un grafo completo, es decir, 0-core. En este, vemos nodos aislados con cero enlaces, nodos pendientes con un solo vínculo y nodos con una variedad de grados de centralidad. Un 1-core incluye todos los nodos conectados al menos a una persona (ver Figura <a href="subgrupos-cohesivos.html#fig:kcore1">9.4</a>). Similarmente, un 2-core incluye nodos conectados al menos dos otros nodos (ver Figura <a href="subgrupos-cohesivos.html#fig:kcore2">9.5</a>). De igual manera podemos definir un 3-core como nodos con tres o más vínculos (ver Figura <a href="subgrupos-cohesivos.html#fig:kcore3">9.6</a>). Al aumentar <em>k</em> comenzamos a localizar el núcleo de actores más interconectados de la red, de igual manera el subconjunto restante aumentará en densidad <span class="citation">(<a href="#ref-Valente2010" role="doc-biblioref">Valente, 2010</a>)</span>.</p>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:kcore"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:kcore"></span>
 <img src="03-subgrupos_files/figure-html/kcore-1.png" alt="Red completa" width="70%" />
 <p class="caption">
 Figura 9.3: Red completa
@@ -310,7 +391,7 @@ Figura 9.3: Red completa
 </div>
 </div>
 <div class="rcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:kcore1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:kcore1"></span>
 <img src="03-subgrupos_files/figure-html/kcore1-1.png" alt="1k-core" width="70%" />
 <p class="caption">
 Figura 9.4: 1k-core
@@ -320,7 +401,7 @@ Figura 9.4: 1k-core
 </div>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:kcore2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:kcore2"></span>
 <img src="03-subgrupos_files/figure-html/kcore2-1.png" alt="2k-core" width="70%" />
 <p class="caption">
 Figura 9.5: 2k-core
@@ -328,7 +409,7 @@ Figura 9.5: 2k-core
 </div>
 </div>
 <div class="rcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:kcore3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:kcore3"></span>
 <img src="03-subgrupos_files/figure-html/kcore3-1.png" alt="3k-core" width="70%" />
 <p class="caption">
 Figura 9.6: 3k-core
@@ -338,12 +419,12 @@ Figura 9.6: 3k-core
 </div>
 <p>El remover nodos incrementando <em>k</em> es una estrategia comúnmente utilizada por analistas de redes para describir la estructura de la red. Específicamente, para aislar el núcleo de la periferia, o los actores más activos de los actores con pocas conexiones.</p>
 </div>
-<div id="girvan-newman" class="section level2">
+<div id="girvan-newman" class="section level2" number="9.3">
 <h2><span class="header-section-number">9.3</span> Girvan-Newman</h2>
 <p>El algoritmo de Girvan y Newman <span class="citation">(<a href="#ref-Newman2004" role="doc-biblioref">2004</a>)</span> detecta subcomunidades enfocándose en remover vínculos intermediarios entre subconjuntos de nodos con el propósito de localizar subcomponentes. Por ejemplo, en la red <a href="subgrupos-cohesivos.html#fig:bowtie">9.7</a> vemos dos triadas cerradas conectadas a través de un puente. En este gráfico los vínculos han sido dibujados de manera ponderada con base en la intermediación de cada enlace. El algoritmo de Girvan y Newman comienza por calcular la intermediación de los enlaces, remueve de manera sistemática aquellos con el mayor índice de intermediación y procede a recalcularla y remover enlaces con alto valor de manera iterativa. Supongamos que ejecutamos este algoritmos por un ciclo, entonces al remover el puente entre traídas se produce dos subconjuntos, mejor descritos como componentes débiles (ver, <a href="subgrupos-cohesivos.html#fig:bowtie2">9.8</a>).</p>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:bowtie"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bowtie"></span>
 <img src="03-subgrupos_files/figure-html/bowtie-1.png" alt="Red hipotética" width="70%" />
 <p class="caption">
 Figura 9.7: Red hipotética
@@ -351,7 +432,7 @@ Figura 9.7: Red hipotética
 </div>
 </div>
 <div class="rcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:bowtie2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bowtie2"></span>
 <img src="03-subgrupos_files/figure-html/bowtie2-1.png" alt="Componentes débiles" width="70%" />
 <p class="caption">
 Figura 9.8: Componentes débiles
@@ -360,13 +441,13 @@ Figura 9.8: Componentes débiles
 </div>
 </div>
 <p>En práctica, el algoritmo ejecuta este proceso y retorna un valor categórico correspondiente a la subcomunidad a la que pertenece cada nodo. Por lo tanto, el gráfico original no se ve afectado y el analista gana información sobre la comunidad Girvan-Newman correspondiente para cada nodo. Por ejemplo, la Figura <a href="subgrupos-cohesivos.html#fig:gn">9.9</a> contiene la red previa con comunidades Girvan-Newman resaltadas.</p>
-<div class="figure" style="text-align: center"><span id="fig:gn"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:gn"></span>
 <img src="03-subgrupos_files/figure-html/gn-1.png" alt="Comunidades Girvan-Newman y puentes resalatdos." width="70%" />
 <p class="caption">
 Figura 9.9: Comunidades Girvan-Newman y puentes resalatdos.
 </p>
 </div>
-<p>El algoritmo de Girvan-Newman provee una forma de generar particiones de la red a grupos mutuamente exclusivos y un índice que mide la adecuación de estas particiones, de tal forma que el analista puede elegir entre estas particiones en busca de la más adecuada conforme a los datos de la red <span class="citation">(Valente, <a href="#ref-Valente2010" role="doc-biblioref">2010</a>, p. 106)</span>. Normalmente, la partición de la red que genera el índice de modularidad más alto es considerado el punto óptimo <span class="citation">(Everton, <a href="#ref-Everton2012" role="doc-biblioref">2012</a><a href="#ref-Everton2012" role="doc-biblioref">a</a>)</span>.</p>
+<p>El algoritmo de Girvan-Newman provee una forma de generar particiones de la red a grupos mutuamente exclusivos y un índice que mide la adecuación de estas particiones, de tal forma que el analista puede elegir entre estas particiones en busca de la más adecuada conforme a los datos de la red <span class="citation">(<a href="#ref-Valente2010" role="doc-biblioref">Valente, 2010, p. 106</a>)</span>. Normalmente, la partición de la red que genera el índice de modularidad más alto es considerado el punto óptimo <span class="citation">(<a href="#ref-Everton2012" role="doc-biblioref">Everton, 2012a</a>)</span>.</p>
 <!-- ```{r} -->
 <!-- gn <- g %>% cluster_edge_betweenness()  -->
 <!-- gn %>% plot_dendrogram(mode = "auto", use.modularity = FALSE) -->
@@ -387,7 +468,7 @@ Q = \frac{1}{2m} \sum_{i, j}[A_{ij} – \frac{k_{i}k_{j}}{2m}]\delta(c_i, c_j)
 <p>El siguiente es un ejemplo de cómo calcular la modularidad de una red a mano a se base en el <a href="https://www.researchgate.net/post/Can_anyone_provide_a_short_example_of_how_the_modularity_is_being_calculated_in_networks">ejemplo de Matthew Joseph</a> en ResearchGate y <a href="https://medium.com/walmartglobaltech/demystifying-louvains-algorithm-and-its-implementation-in-gpu-9a07cdd3b010">luego Abhishek Mishra</a>. Empecemos con nuestra pequeña red <a href="subgrupos-cohesivos.html#fig:tie3">9.10</a> y su matriz de adyacencia <a href="subgrupos-cohesivos.html#eq:tiemat">(9.1)</a>.</p>
 <div class="row">
 <div class="lcolumn-50">
-<div class="figure" style="text-align: center"><span id="fig:tie3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:tie3"></span>
 <img src="03-subgrupos_files/figure-html/tie3-1.png" alt="Red hipotética" width="70%" />
 <p class="caption">
 Figura 9.10: Red hipotética
@@ -441,32 +522,32 @@ F &amp;  2    \\
 <p>La modularidad con los nodos {A,B,C} y {D, E, F} en particiones separadas es igual a <span class="math inline">\(Q\)</span> = 0.3571. En este ejemplo no continuaremos removiendo enlaces y asignando nuevas particiones, como lo haría el algoritmo Girvan-Newman. El objetivo de este ejercicio breve es presentarle en mayor detalle el mecanismo utilizado para calcular la modularidad de una red y determinar el número óptimo de subcomunidades.</p>
 </div>
 </div>
-<div id="louvain" class="section level2">
+<div id="louvain" class="section level2" number="9.4">
 <h2><span class="header-section-number">9.4</span> Louvain</h2>
-<p>Publicado originalmente en 2008, el método Louvain es un método de optimización codicioso que intenta optimizar la modularidad de las particiones de la red. Esencialmente, la optimización se lleva a cabo en dos pasos. Primero, el método encuentra pequeñas comunidades locales optimizando la modularidad. Luego, agrega nodos que pertenecen a las comunidades identificadas y construye una nueva red con esos nodos colapsados. El proceso continúa hasta que se identifique la máxima modularidad y se produzca una jerarquía de comunidades <span class="citation">(Blondel, Guillaume, Lambiotte, &amp; Lefebvre, <a href="#ref-Blondel2008" role="doc-biblioref">2008</a>)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:process"></span>
+<p>Publicado originalmente en 2008, el método Louvain es un método de optimización codicioso que intenta optimizar la modularidad de las particiones de la red. Esencialmente, la optimización se lleva a cabo en dos pasos. Primero, el método encuentra pequeñas comunidades locales optimizando la modularidad. Luego, agrega nodos que pertenecen a las comunidades identificadas y construye una nueva red con esos nodos colapsados. El proceso continúa hasta que se identifique la máxima modularidad y se produzca una jerarquía de comunidades <span class="citation">(<a href="#ref-Blondel2008" role="doc-biblioref">Blondel, Guillaume, Lambiotte, &amp; Lefebvre, 2008</a>)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:process"></span>
 <img src="03-subgrupos_files/figure-html/process-1.png" alt="Visualización de los pasos en el algoritmo" width="100%" />
 <p class="caption">
 Figura 9.11: Visualización de los pasos en el algoritmo
 </p>
 </div>
-<p>La Figura <a href="subgrupos-cohesivos.html#fig:process">9.11</a> es una representación gráfica de una sola ronda en el proceso. Sin embargo, en términos prácticos, el proceso resulta en particiones que denotan las subcomunidades a las que pertenece cada nodo. La red izquierda de la Figura <a href="subgrupos-cohesivos.html#fig:bigone">9.12</a> consta de 100 nodos, a su derecha vemos las subcomunidades óptimas detectadas por el algoritmo de Louvain. Es importante recalcar que el objetivo del algoritmo es optimizar la modularidad y por consiguiente los grupos resultantes son una representación matemática de lo patrones de enlaces en el gráfico. Sin embargo, este tipo de herramienta analítica es útil en localizar comunidades cohesivas donde los miembros tienen normas, valores o aptitudes similares. Otra manera de pensar en esto es que los nodos dentro de cada grupo pueden seleccionarse a si mismos como parte del grupo o las presiones sociales del grupo pueden persuadir a los nuevos miembros para que adopten normas o valores del grupo <span class="citation">(Valente, <a href="#ref-Valente2010" role="doc-biblioref">2010</a>, p. 108)</span>.</p>
-<div class="figure" style="text-align: center"><span id="fig:bigone"></span>
+<p>La Figura <a href="subgrupos-cohesivos.html#fig:process">9.11</a> es una representación gráfica de una sola ronda en el proceso. Sin embargo, en términos prácticos, el proceso resulta en particiones que denotan las subcomunidades a las que pertenece cada nodo. La red izquierda de la Figura <a href="subgrupos-cohesivos.html#fig:bigone">9.12</a> consta de 100 nodos, a su derecha vemos las subcomunidades óptimas detectadas por el algoritmo de Louvain. Es importante recalcar que el objetivo del algoritmo es optimizar la modularidad y por consiguiente los grupos resultantes son una representación matemática de lo patrones de enlaces en el gráfico. Sin embargo, este tipo de herramienta analítica es útil en localizar comunidades cohesivas donde los miembros tienen normas, valores o aptitudes similares. Otra manera de pensar en esto es que los nodos dentro de cada grupo pueden seleccionarse a si mismos como parte del grupo o las presiones sociales del grupo pueden persuadir a los nuevos miembros para que adopten normas o valores del grupo <span class="citation">(<a href="#ref-Valente2010" role="doc-biblioref">Valente, 2010, p. 108</a>)</span>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bigone"></span>
 <img src="03-subgrupos_files/figure-html/bigone-1.png" alt="Red sin escala (izquierda) y red sin escala con particiones (derecha)" width="100%" />
 <p class="caption">
 Figura 9.12: Red sin escala (izquierda) y red sin escala con particiones (derecha)
 </p>
 </div>
 </div>
-<div id="ejercicio-práctico-5" class="section level2">
+<div id="ejercicio-práctico-5" class="section level2" number="9.5">
 <h2><span class="header-section-number">9.5</span> Ejercicio Práctico</h2>
-<p>Los científicos sociales generalmente asumen que “la interacción social es la base de la solidaridad, las normas compartidas, la identidad y el comportamiento colectivo, por lo que es probable que las personas que interactúan intensamente se consideren parte de un grupo social”. Por lo tanto, una herramienta principal del análisis de redes sociales es identificar grupos densos de actores “entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos”. Por lo general, se denominan “subgrupos cohesivos”, “subredes” o “subgrupos”. Una forma de agrupar a los actores se basa en atributos compartidos (por ejemplo, raza, género, etc.). Otro es utilizar el patrón de vínculos entre actores.</p>
+<p>Los científicos sociales generalmente asumen que “la interacción social es la base de la solidaridad, las normas compartidas, la identidad y el comportamiento colectivo, por lo que es probable que las personas que interactúan intensamente se consideren parte de un grupo social.” Por lo tanto, una herramienta principal del análisis de redes sociales es identificar grupos densos de actores “entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos.” Por lo general, se denominan “subgrupos cohesivos,” “subredes” o “subgrupos.” Una forma de agrupar a los actores se basa en atributos compartidos (por ejemplo, raza, género, etc.). Otro es utilizar el patrón de vínculos entre actores.</p>
 <p>En un mundo ideal, habría un solo algoritmo para identificar subgrupos cohesivos, pero este no es un mundo ideal, por lo que los analistas de redes sociales han desarrollado una variedad de algoritmos para identificar subredes. No los consideraremos todos aquí; simplemente hay demasiados. En cambio, nos centraremos en algunos. En Gephi consideraremos componentes, k-cores y algoritmos de detección de comunidades; y en snExplorer veremos brevemente los recuentos de componentes, k-núcleos y camarillas.</p>
-<div id="antes-de-empezar-4" class="section level3">
+<div id="antes-de-empezar-4" class="section level3" number="9.5.1">
 <h3><span class="header-section-number">9.5.1</span> Antes de Empezar</h3>
 <p>Para este ejercicio vamos a necesitar el módulo <em>Newman-Girvan</em> clustering antes de comenzar Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo <em>MultimodeNetworks Transformation</em> en ejercicio práctico en el capitulo <a href="derivando-datos-modo-uno-de-modo-dos.html#derivando-datos-modo-uno-de-modo-dos">Derivando Datos Modo-Uno de Modo-Dos</a>.</p>
 </div>
-<div id="identificación-de-subgrupos-en-gephi" class="section level3">
+<div id="identificación-de-subgrupos-en-gephi" class="section level3" number="9.5.2">
 <h3><span class="header-section-number">9.5.2</span> Identificación de Subgrupos en Gephi</h3>
 <div class="row">
 <div class="lcolumn-20">
@@ -490,13 +571,13 @@ Figura 9.12: Red sin escala (izquierda) y red sin escala con particiones (derech
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:1"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1"></span>
 <img src="images/03-09-01.png" alt="Reporte de Componentes Conectados en Gephi" width="70%" />
 <p class="caption">
 Figura 8.11: Reporte de Componentes Conectados en Gephi
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:2"></span>
 <img src="images/03-09-02.png" alt="Red de confianza con actores vivos, color por componente" width="70%" />
 <p class="caption">
 Figura 8.12: Red de confianza con actores vivos, color por componente
@@ -526,7 +607,7 @@ Figura 8.12: Red de confianza con actores vivos, color por componente
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:3"></span>
 <img src="images/03-09-03.png" alt="Red de confianza con actores vivos, componente principal" width="70%" />
 <p class="caption">
 Figura 8.13: Red de confianza con actores vivos, componente principal
@@ -552,7 +633,7 @@ Figura 8.13: Red de confianza con actores vivos, componente principal
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:4"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:4"></span>
 <img src="images/03-09-04.png" alt="Red de confianza con actores vivos, 7-core" width="70%" />
 <p class="caption">
 Figura 9.13: Red de confianza con actores vivos, 7-core
@@ -623,25 +704,25 @@ Figura 9.13: Red de confianza con actores vivos, 7-core
 </div>
 </div>
 </div>
-<h3> Referencias</h3>
-<div id="refs" class="references">
-<div id="ref-Blondel2008">
-<p>Blondel, V. D., Guillaume, J.-L., Lambiotte, R., &amp; Lefebvre, E. (2008). Fast unfolding of communities in large networks. <em>Journal of Statistical Mechanics: Theory and Experiment</em>, <em>2008</em>(10), P10008. IOP Publishing. Retrieved from <a href="https://doi.org/10.1088%2F1742-5468%2F2008%2F10%2Fp10008">https://doi.org/10.1088%2F1742-5468%2F2008%2F10%2Fp10008</a></p>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Blondel2008" class="csl-entry">
+Blondel, V. D., Guillaume, J.-L., Lambiotte, R., &amp; Lefebvre, E. (2008). Fast unfolding of communities in large networks. <em>Journal of Statistical Mechanics: Theory and Experiment</em>, <em>2008</em>(10), P10008. <span>IOP</span> Publishing. Retrieved from <a href="https://doi.org/10.1088%2F1742-5468%2F2008%2F10%2Fp10008">https://doi.org/10.1088%2F1742-5468%2F2008%2F10%2Fp10008</a>
 </div>
-<div id="ref-Easley2010">
-<p>Easley, D., &amp; Kleinberg, J. (2010). <em>Networks, crowds, and markets: Reasoning about a highly connected world</em>. Cambridge.</p>
+<div id="ref-Easley2010" class="csl-entry">
+Easley, D., &amp; Kleinberg, J. (2010). <em>Networks, crowds, and markets: Reasoning about a highly connected world</em>. Cambridge.
 </div>
-<div id="ref-Everton2012">
-<p>Everton, S. F. (2012a). <em>Disrupting dark networks</em>. Cambridge.</p>
+<div id="ref-Everton2012" class="csl-entry">
+Everton, S. F. (2012a). <em>Disrupting dark networks</em>. Cambridge.
 </div>
-<div id="ref-Newman2004">
-<p>Newman, M., &amp; Girvan, M. (2004). Finding and evaluating community structure in networks. <em>Physics Review</em>, <em>69</em>, 1–16.</p>
+<div id="ref-Newman2004" class="csl-entry">
+Newman, M., &amp; Girvan, M. (2004). Finding and evaluating community structure in networks. <em>Physics Review</em>, <em>69</em>, 1–16.
 </div>
-<div id="ref-Valente2010">
-<p>Valente, T. W. (2010). <em>Social networks and health: Models, methods, and applications</em>. Oxford.</p>
+<div id="ref-Valente2010" class="csl-entry">
+Valente, T. W. (2010). <em>Social networks and health: Models, methods, and applications</em>. Oxford.
 </div>
-<div id="ref-Wasserman1994">
-<p>Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.</p>
+<div id="ref-Wasserman1994" class="csl-entry">
+Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.
 </div>
 </div>
             </section>
@@ -672,8 +753,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cjcallag/arso/edit/main/03-subgrupos.Rmd",
-"text": "Edit"
+"link": "https://github.com/cjcallag/arso/edit/editing/03-subgrupos.Rmd",
+"text": "Editar"
 },
 "history": {
 "link": null,
@@ -684,15 +765,22 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
-"css": "arso.css",
 "font_settings": {
-"theme": "white",
 "family": "sans",
+"theme": "white",
 "size": 2
+},
+"info": true,
+"toolbar": {
+"position": "fixed"
 }
 });
 });

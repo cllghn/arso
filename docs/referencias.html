@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>14 Referencias | Análisis de Redes Sociales Oscuras</title>
+  <title>Referencias | Análisis de Redes Sociales</title>
   <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="14 Referencias | Análisis de Redes Sociales Oscuras" />
+  <meta property="og:title" content="Referencias | Análisis de Redes Sociales" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="14 Referencias | Análisis de Redes Sociales Oscuras" />
+  <meta name="twitter:title" content="Referencias | Análisis de Redes Sociales" />
   
   <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
@@ -30,9 +30,11 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="libro-de-códigos.html"/>
+<link rel="prev" href="libro-de-códigos-1.html"/>
 
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,19 +51,41 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="arso.css" type="text/css" />
 </head>
@@ -76,20 +100,21 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Análisis de Redes Sociales Oscuras</a></li>
+<li><a href="./">Análisis de Redes Sociales</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introducción</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 </ul></li>
-</ul></li>
-<li class="part"><span><b>I Introducción</b></span></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a><ul>
+<li class="part"><span><b>I ¿ Qué es el ARSo?</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a><ul>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#interdependencia-de-los-actores"><i class="fa fa-check"></i><b>1.2.1</b> Interdependencia de los Actores</a></li>
 <li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#lazos-como-conductos"><i class="fa fa-check"></i><b>1.2.2</b> Lazos como Conductos</a></li>
 <li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#estructura-social-y-formaciones-sociales-emergentes"><i class="fa fa-check"></i><b>1.2.3</b> Estructura Social y Formaciones Sociales Emergentes</a></li>
@@ -97,7 +122,8 @@
 <li class="chapter" data-level="1.2.5" data-path="introduction.html"><a href="introduction.html#redes-sociales-dinámicas"><i class="fa fa-check"></i><b>1.2.5</b> Redes sociales dinámicas</a></li>
 <li class="chapter" data-level="1.2.6" data-path="introduction.html"><a href="introduction.html#resumen-redes-sociales-agencia-humana-y-cultura"><i class="fa fa-check"></i><b>1.2.6</b> Resumen: Redes Sociales, Agencia Humana y Cultura</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a><ul>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a>
+<ul>
 <li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#actores-y-enlaces"><i class="fa fa-check"></i><b>1.3.1</b> Actores y Enlaces</a></li>
 <li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#redes-sociales"><i class="fa fa-check"></i><b>1.3.2</b> Redes Sociales</a></li>
 <li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#camino-y-distancia-de-caminos"><i class="fa fa-check"></i><b>1.3.3</b> Camino (y Distancia de Caminos)</a></li>
@@ -112,10 +138,12 @@
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#resumen-y-conclusiones"><i class="fa fa-check"></i><b>1.4</b> Resumen y Conclusiones</a></li>
 </ul></li>
 <li class="part"><span><b>II ARSo: Tecnicas</b></span></li>
-<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a><ul>
-<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
 <li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
-<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a><ul>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
 <li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
@@ -124,55 +152,68 @@
 <li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
-<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
 <li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
 <li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
-<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a><ul>
+<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a><ul>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
-<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
 <li class="chapter" data-level="4.4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#guardar-gráfico-de-red-en-gephi"><i class="fa fa-check"></i><b>4.4.2</b> Guardar Gráfico de Red en Gephi</a></li>
 <li class="chapter" data-level="4.4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#importación-de-listas-de-aristas-modo-uno"><i class="fa fa-check"></i><b>4.4.3</b> Importación de Listas de Aristas Modo-Uno</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a><ul>
+<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
 <li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
-<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
 <li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a><ul>
+<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#matrices-y-listas-de-aristas"><i class="fa fa-check"></i><b>6.1</b> Matrices y Listas de Aristas</a></li>
-<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a><ul>
+<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#apilar"><i class="fa fa-check"></i><b>6.2.1</b> Apilar</a></li>
 <li class="chapter" data-level="6.2.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#agregar"><i class="fa fa-check"></i><b>6.2.2</b> Agregar</a></li>
 <li class="chapter" data-level="6.2.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#recombinar"><i class="fa fa-check"></i><b>6.2.3</b> Recombinar</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#importar-múltiples-redes-a-gephi"><i class="fa fa-check"></i><b>6.3.1</b> Importar múltiples redes a Gephi</a></li>
 <li class="chapter" data-level="6.3.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a><ul>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
 <li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
-<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
 <li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
@@ -181,74 +222,114 @@
 </ul></li>
 </ul></li>
 <li class="part"><span><b>III ARSo: Medidas</b></span></li>
-<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a><ul>
-<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a><ul>
+<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a>
+<ul>
 <li class="chapter" data-level="8.1.1" data-path="topología-1.html"><a href="topología-1.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
 <li class="chapter" data-level="8.1.2" data-path="topología-1.html"><a href="topología-1.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
 <li class="chapter" data-level="8.1.3" data-path="topología-1.html"><a href="topología-1.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a><ul>
+<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="topología-1.html"><a href="topología-1.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
 <li class="chapter" data-level="8.2.2" data-path="topología-1.html"><a href="topología-1.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a>
+<ul>
 <li class="chapter" data-level="8.3.1" data-path="topología-1.html"><a href="topología-1.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="8.4.1" data-path="topología-1.html"><a href="topología-1.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="8.4.2" data-path="topología-1.html"><a href="topología-1.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
-<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a><ul>
+<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
 <li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
 <li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
 <li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
-<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="9.5.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.5.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="9.5.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.5.2</b> Identificación de Subgrupos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a><ul>
-<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a><ul>
+<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia"><i class="fa fa-check"></i><b>10.1.1</b> Medidas Basadas en Frecuencia</a></li>
 <li class="chapter" data-level="10.1.2" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-distancia"><i class="fa fa-check"></i><b>10.1.2</b> Medidas Basadas en Distancia</a></li>
 <li class="chapter" data-level="10.1.3" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-caminos"><i class="fa fa-check"></i><b>10.1.3</b> Medidas Basadas en Caminos</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a><ul>
+<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia-1"><i class="fa fa-check"></i><b>10.2.1</b> Medidas Basadas en Frecuencia</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="centralidad-1.html"><a href="centralidad-1.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.3.1</b> Centralidad en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
+<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puntos-de-corte"><i class="fa fa-check"></i><b>11.1</b> Puntos de Corte</a></li>
 <li class="chapter" data-level="11.2" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#bi-componentes-y-puentes"><i class="fa fa-check"></i><b>11.2</b> Bi-componentes y Puentes</a></li>
 <li class="chapter" data-level="11.3" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#intermediación-de-borde"><i class="fa fa-check"></i><b>11.3</b> Intermediación de borde</a></li>
 <li class="chapter" data-level="11.4" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#agujeros-estructurales-restricción-y-autonomía"><i class="fa fa-check"></i><b>11.4</b> Agujeros Estructurales, Restricción y Autonomía</a></li>
-<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.5.1</b> Puentes y Corredores en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
-<li class="part"><span><b>V Apéndices</b></span></li>
-<li class="chapter" data-level="12" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>12</b> Glosario de Términos</a></li>
-<li class="chapter" data-level="13" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html"><i class="fa fa-check"></i><b>13</b> Libro de Códigos</a><ul>
-<li class="chapter" data-level="13.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>13.1</b> Libro de Códigos de Muestra</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones"><i class="fa fa-check"></i><b>13.1.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.1.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-1"><i class="fa fa-check"></i><b>13.1.2</b> Atributos</a></li>
+<li class="chapter" data-level="12" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>12</b> Un Proceso de Diseño para la Investigación de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>12.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>12.1.1</b> Pregunata(s) de Investigación</a></li>
+<li class="chapter" data-level="12.1.2" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>12.1.2</b> Limites</a></li>
+<li class="chapter" data-level="12.1.3" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>12.1.3</b> Codificar Relaciones y Atributos</a></li>
+<li class="chapter" data-level="12.1.4" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>12.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
+<li class="chapter" data-level="12.1.5" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#conclusiones"><i class="fa fa-check"></i><b>12.1.5</b> Conclusiones</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>13.2</b> Libro de Códigos de Noordin Top</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones-1"><i class="fa fa-check"></i><b>13.2.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.2.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-2"><i class="fa fa-check"></i><b>13.2.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html"><i class="fa fa-check"></i><b>13</b> Ejemplos Practicos</a>
+<ul>
+<li class="chapter" data-level="" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#informe-de-la-red-criminal-en-la-república-de-panamá"><i class="fa fa-check"></i>Informe de la Red Criminal en la República de Panamá</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#libro-de-códigos"><i class="fa fa-check"></i><b>13.0.1</b> Libro de Códigos</a></li>
+<li class="chapter" data-level="13.0.2" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#mapa-de-red"><i class="fa fa-check"></i><b>13.0.2</b> Mapa de red</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>VI Referencias</b></span></li>
-<li class="chapter" data-level="14" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>14</b> Referencias</a></li>
+<li class="appendix"><span><b>Apéndices</b></span></li>
+<li class="chapter" data-level="A" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>A</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="B" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html"><i class="fa fa-check"></i><b>B</b> Libro de Códigos</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>B.1</b> Libro de Códigos de Muestra</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-2"><i class="fa fa-check"></i><b>B.1.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.1.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-3"><i class="fa fa-check"></i><b>B.1.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>B.2</b> Libro de Códigos de Noordin Top</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-3"><i class="fa fa-check"></i><b>B.2.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.2.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-4"><i class="fa fa-check"></i><b>B.2.2</b> Atributos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Referencias</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">
+Publicado con bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -258,7 +339,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales Oscuras</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales</a>
           </h1>
         </div>
 
@@ -266,270 +347,286 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="referencias" class="section level1">
-<h1><span class="header-section-number">14</span> Referencias</h1>
+<div id="referencias" class="section level1 unnumbered">
+<h1>Referencias</h1>
+<hr/>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div class="csl-entry">
+Asch, S. E. (1951). Effects of group pressure upon the modification and distortion of judgment. In H. S. Guetzkow (Ed.), <em>Groups, leadership and men</em>. Pittsburgh, PA: Carnegie Press.
+</div>
+<div class="csl-entry">
+Azarian, G. R. (2005). <em>The general sociology of harrison c. White: Chaos and order in networks</em>. New York: Palgrave Macmillan.
+</div>
+<div class="csl-entry">
+Bakker, R. M., Raab, J., &amp; Milward, H. B. (2011). A preliminary theory of dark network resilience. <em>Journal of Policy Analysis and Management</em>, <em>31</em>, 33–62.
+</div>
+<div class="csl-entry">
+Bastian, M., Heymann, S., &amp; Jacomy, M. (2009). Gephi: An open source software for exploring and manipulating networks. Retrieved from <a href="http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154">http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154</a>
+</div>
+<div class="csl-entry">
+Becker, G. S. (1976). <em>The economic approach to human behaviour</em>. Chicago: University of Chicago Press.
+</div>
+<div class="csl-entry">
+Blondel, V. D., Guillaume, J.-L., Lambiotte, R., &amp; Lefebvre, E. (2008). Fast unfolding of communities in large networks. <em>Journal of Statistical Mechanics: Theory and Experiment</em>, <em>2008</em>(10), P10008. <span>IOP</span> Publishing. Retrieved from <a href="https://doi.org/10.1088%2F1742-5468%2F2008%2F10%2Fp10008">https://doi.org/10.1088%2F1742-5468%2F2008%2F10%2Fp10008</a>
+</div>
+<div class="csl-entry">
+Bonacich, P. (1987). Power and centrality: A family of measures. <em>American Journal of Sociology</em>, <em>92</em>, 1170–1182.
+</div>
+<div class="csl-entry">
+Boorman, S. A., &amp; White, H. C. (1976). Social structure for multiple netorks II: Role structures. <em>American Journal of Sociology</em>, <em>81</em>(6), 1384–1446.
+</div>
+<div class="csl-entry">
+Borgatti, S. P., Everett, M. G., &amp; Johnson, J. C. (2018). <em>Analyzing social networks</em>. Sage.
+</div>
+<div class="csl-entry">
+Brandes, U. (2001). A faster algorithm for betweenness centrality. <em>Journal of Mathematical Sociology</em>, <em>25</em>, 163–177.
+</div>
+<div class="csl-entry">
+Burns, T., &amp; Stalker, G. M. (1961). <em>The management of innovation</em>. London: Tavistock.
+</div>
+<div class="csl-entry">
+Burt, R. (1992). <em>Structural holes: The social structure of competition</em>. Harvard University Press.
+</div>
+<div class="csl-entry">
+Cañizales, A. (2015). ’Calitín’ les dio duro a los narcos. <em>El Siglo de Panamá</em>. Retrieved from <a href="http://elsiglo.com.pa/cronica-roja/calitin-duro-narcos/23854072">http://elsiglo.com.pa/cronica-roja/calitin-duro-narcos/23854072</a>
+</div>
+<div class="csl-entry">
+Chaudhary, A., Mittal, H., &amp; Arora, A. (2019). Anomaly detection using graph neural networks. Retrieved from <a href="https://ieeexplore.ieee.org/abstract/document/7877466/citations#citations">https://ieeexplore.ieee.org/abstract/document/7877466/citations#citations</a>
+</div>
+<div class="csl-entry">
+Chavez, M. (1961). <em>Ordaining women: Culture and conflict in religious organizations</em>. Cambridge, MA: Harvard University Press.
+</div>
+<div class="csl-entry">
+Cunningham, D., Everton, S. F., &amp; Murphy, P. (2016). <em>Understanding dark networks: A strategic framework for the use of social network analysis</em>. Rowman; Littlefield.
+</div>
+<div class="csl-entry">
+Davies, A., Gardner, B. B., &amp; Gardner, M. R. (1941). <em>Deep south: A social-anthropological study of caste and class</em>. University of Chicago Press.
+</div>
+<div class="csl-entry">
+Davis, J. (1979). The davis/holland/leinhardt studies: An overview. In P. W. Holland &amp; S. Leinhardt (Eds.), <em>Perspectives on social network research</em> (pp. 51–62). New York: Academic Press.
+</div>
+<div class="csl-entry">
+DiMaggio, P. J., &amp; Powell, W. W. (1983). The iron cage revisited: Institutional isomorphism and collective rationality in organizational fields. <em>American Sociological Review</em>, <em>48</em>, 147–160.
+</div>
+<div class="csl-entry">
+Doreian, P., &amp; Stockman, F. N. (1997). <em>EEvolution of social networks</em>. Amsterdam: Gordon; Breach Publishers.
+</div>
+<div class="csl-entry">
+Easley, D., &amp; Kleinberg, J. (2010). <em>Networks, crowds, and markets: Reasoning about a highly connected world</em>. Cambridge.
+</div>
+<div class="csl-entry">
+Elena, V. (2017). Cabecillas e integrante de la banda <span>‘calor calor’</span> condenados a prisión. <em>Panamá America</em>. Retrieved from <a href="https://www.panamaamerica.com.pa/provincias/cabecillas-e-integrante-de-la-banda-calor-calor-condenados-prision-1084936">https://www.panamaamerica.com.pa/provincias/cabecillas-e-integrante-de-la-banda-calor-calor-condenados-prision-1084936</a>
+</div>
+<div class="csl-entry">
+Emirbayer, M., &amp; Goodwin, J. (1994). Network analysis, culture and the problem of agency. <em>American Journal of Sociology</em>, <em>99</em>(6), 1411–1455.
+</div>
+<div class="csl-entry">
+Everton, S. F. (2012b). Network topography, key players and terrorist networks. <em>Connections</em>, <em>2</em>, 1–8.
+</div>
+<div class="csl-entry">
+Everton, S. F. (2012a). <em>Disrupting dark networks</em>. Cambridge.
+</div>
+<div class="csl-entry">
+Freeman, S. C., &amp; Linton C, F. (1979). <em>The networkers network : A study of the impact of a new communications medium on sociometric structure</em>. School of Social Sciences Univ. of Calif.
+</div>
+<div class="csl-entry">
+Girvan, M., &amp; Newman, M. (2002). Community structure in social and biological networks. <em>PNAS</em>, <em>99</em>, 7821–7826.
+</div>
+<div class="csl-entry">
+Gould, R. V. (1991). Multiple networks and mobilization in the paris commune, 1871. <em>American Sociological Review</em>, <em>56</em>, 716–729.
+</div>
+<div class="csl-entry">
+Gould, R. V. (1993). Trade cohesion, class unity, and urban insurrection: Artisanal activism in the paris commune. <em>American Journal Of Sociology</em>, <em>98</em>(4), 721–754.
+</div>
+<div class="csl-entry">
+Granovetter, M. (1973). The strength of weak ties. <em>American Journal of Sociology</em>, <em>73</em>(6), 1360–1380.
+</div>
+<div class="csl-entry">
+Granovetter, M. (1983). The strength of weak ties: A network theory revisited. <em>Social Theory</em>, <em>1</em>, 201–233.
+</div>
+<div class="csl-entry">
+Grupos de panamá: Calor calor. (2020). Insight Crime. Retrieved from <a href="https://es.insightcrime.org/noticias-crimen-organizado-panama/calor-calor/">https://es.insightcrime.org/noticias-crimen-organizado-panama/calor-calor/</a>
+</div>
+<div class="csl-entry">
+Hanneman, R. A., &amp; Riddle, M. (2005). <em>Introduction to social network methods</em>. University of California.
+</div>
+<div class="csl-entry">
+Hashimoto, T. B., Nagasaki, M., Kojima, K., &amp; Miyano, S. (2009). BFL: A node and edge betweenness based fast layout algorithm for large scale networks. <em>BMC Bioinformatics</em>, <em>10</em>, 1471–2105.
+</div>
+<div class="csl-entry">
+Iannaccone, L. R. (1995). Risk, rationality, and religious portfolios. <em>Economic Inquiry</em>, <em>38</em>(2), 285–295.
+</div>
+<div class="csl-entry">
+International Crisis Group. (2006). <em>Terrorism in indonesia: Noordin’s networks</em>. Brussels, Belgium: International Crisis Group.
+</div>
+<div class="csl-entry">
+International Crisis Group. (2009). <em>Indonesia: Noordin top’s support base</em>. Brussels, Belgium: International Crisis Group.
+</div>
+<div class="csl-entry">
+Jacomy, M. (2011, June). ForceAtlas2, the new version of our home-brew layout. <em>Gephi</em>. Retrieved from <a href="https://gephi.wordpress.com">https://gephi.wordpress.com</a>
+</div>
+<div class="csl-entry">
+Kleinberg, J. (1999). Authoritative sources in a hyperlinked environment. <em>Journal of the ACM</em>, <em>46</em>, 604–632.
+</div>
+<div class="csl-entry">
+Knoke, D. (1990). <em>Political networks: The structural perspective</em>. Cambridge University Press.
+</div>
+<div class="csl-entry">
+Knoke, D., &amp; Yang, S. (2007). <em>Social netork analysis</em>. Sage Publications, Inc.
+</div>
+<div class="csl-entry">
+Knuth, D. E. (1993). <em>The stanford GraphBase: A platform for combinatorial computing</em>. Addison-Wesley.
+</div>
+<div class="csl-entry">
+Krackhardt, D. (1992). The strength of strong ties: The importance of philos in organizations. In N. Nohria &amp; R. G. Eccles (Eds.), <em>Networks and organizations: Structure, form and action</em> (pp. 261–239). Boston: Harvard University Press.
+</div>
+<div class="csl-entry">
+Krackhardt, D. (1994). Graph theoretical dimensions of informal organizations. In K. M. Carley &amp; M. J. Prietula (Eds.), <em>Computational organization theory</em> (pp. 89–111). Hillsdale, NJ: L. Erlbaum Associates.
+</div>
+<div class="csl-entry">
+Levitt, S. D., &amp; Dubner, S. J. (2005). <em>Freakanomics: A rogue economist explores the hidden side of everything</em>. Harper Collins.
+</div>
+<div class="csl-entry">
+Lin, N. (2001). <em>Social captial</em>. Cambridge University Press.
+</div>
+<div class="csl-entry">
+Lofland, J., &amp; Stark, R. (1965). Ecoming a world-saver: A theory of conversion to a deviant perspective. <em>American Sociological Review</em>, <em>30</em>, 862–875.
+</div>
+<div class="csl-entry">
+Marshall tendrá que pasar 25 años en la celda fría. (2020). <em>El Siglo de Panamá</em>. Retrieved from <a href="https://www.pressreader.com/panama/el-siglo/20200801/281479278750886">https://www.pressreader.com/panama/el-siglo/20200801/281479278750886</a>
+</div>
+<div class="csl-entry">
+Mayhew, B. (1980). Structuralism versus individualism: Part i, shadowboxing in the dark. <em>Social Forces</em>, <em>59</em>(2), 355–374.
+</div>
+<div class="csl-entry">
+Mayhew, B. (1981). Structuralism versus individualism: Part II, ideological and other obfuscations. <em>Social Forces</em>, <em>59</em>(3), 627–648.
+</div>
+<div class="csl-entry">
+Mayoría de detenidos en punta coco, ligada a clan úsuga y cartel de sinaloa. (2019). <em>La Prensa de Panamá</em>. Retrieved from <a href="https://www.prensa.com/impresa/panorama/Mayoria-Punta-Coco-Usuga-Sinaloa_0_5234476558.html">https://www.prensa.com/impresa/panorama/Mayoria-Punta-Coco-Usuga-Sinaloa_0_5234476558.html</a>
+</div>
+<div class="csl-entry">
+McAdam, D. (1986). Recruitment to high risk activism: The case of freedom summer. <em>American Journal of Sociology</em>, <em>92</em>, 64–90.
+</div>
+<div class="csl-entry">
+McAdam, D. (1988b). Micromobilization contexts and recruitment to activism. <em>International Social Movement Research</em>, <em>1</em>, 125–154.
+</div>
+<div class="csl-entry">
+McAdam, D. (1988a). <em>Freedom summer</em>. Oxford University Press.
+</div>
+<div class="csl-entry">
+McCormick, G., &amp; Owen, G. (2000). Security and coordination in a clandestine organization. <em>Mathematical and Computer Modelling</em>, <em>31</em>, 175–192.
+</div>
+<div class="csl-entry">
+McCulloh, I., &amp; Carley, K. M. (2011). Detecting change in longitudinal social networks. <em>Journal of Social Structure</em>.
+</div>
+<div class="csl-entry">
+Meghanathan, N. (2016). Assortativity analysis of real-world network graphs based on centrality metrics. <em>Computer and Information Science</em>, <em>9</em>, 7–25.
+</div>
+<div class="csl-entry">
+Meyer, J. W., Boli, J., Thomas, G. M., &amp; Ramirez, F. O. (1997). World society and the nation-state. <em>American Journal of Sociology</em>, <em>103</em>(1), 144–181.
+</div>
+<div class="csl-entry">
+Meyer, J. W., &amp; Rowan, B. (1977). Institutionalized organizations: Formal structure as myth and ceremony. <em>American Journal of Sociology</em>, <em>83</em>(2), 340–363.
+</div>
+<div class="csl-entry">
+Milgram, S. (1974). <em>Obedience to authority</em>. Princeton, NJ: Princeton University Press.
+</div>
+<div class="csl-entry">
+Monge, P. R., &amp; Contractor, N. S. (2003). <em>Theories of communication networks</em>. Oxford University Press.
+</div>
+<div class="csl-entry">
+Morselli, C. (2009). <em>Inside criminal networks</em>. Spinger.
+</div>
+<div class="csl-entry">
+Newman, M., &amp; Girvan, M. (2004). Finding and evaluating community structure in networks. <em>Physics Review</em>, <em>69</em>, 1–16.
+</div>
+<div class="csl-entry">
+Nohria, N. (1992). Is the network perspective a useful way of studying organizations? In N. Nohria &amp; R. G. Eccles (Eds.), <em>Networks and organizations: Structure, form, and action</em> (pp. 1–22). Boston, MA: Harvard Business School Press.
+</div>
+<div class="csl-entry">
+Nooy, W. de. (2011). Networks of action and events over time: A multilevel discrete-time event history model for longitudinal network data. <em>Social Networks</em>, <em>33</em>(1), 31–40.
+</div>
+<div class="csl-entry">
+Nooy, W. de, Mrvar, A., &amp; Batagelj, V. (2005). <em>Exploratory social network analysis with pajek</em>. Cambridge, U.K.: Cambridge University Press.
+</div>
+<div class="csl-entry">
+Ognyavanova, K. (2016). Network visualization with gephi. <em>Sunbelt 2016</em>.
+</div>
+<div class="csl-entry">
+Pescolindo, B. A., &amp; Georgianna, S. (1989). Durkheim, suicide, and religion: Toward a network theory of suicide. <em>American Sociological Review</em>, <em>54</em>(1), 33–48.
+</div>
+<div class="csl-entry">
+Podolny, J. M., &amp; Page, K. L. (1998). Network forms of organization. <em>Annual Review of Sociology</em>, 57–76.
+</div>
+<div class="csl-entry">
+Powell, W. W. (1990). Neither market nor hierarchy: Network forms of orgnanization. In B. M. Staw &amp; L. L. Cummings (Eds.), <em>Research in organizational behavior: An annual series of analytical essays and critical reviews</em> (pp. 295–336). Greenwich, CT: JAI Press, Inc.
+</div>
+<div class="csl-entry">
+Powell, W. W., &amp; Smith-Doerr, L. (1994). Networks and economic life. In N. J. Smelser &amp; R. Swedberg (Eds.), <em>The handbook of economic sociology</em> (pp. 268–402). Princeton, NJ: Princeton University Press.
+</div>
+<div class="csl-entry">
+Raab, J., &amp; Milward, H. B. (2003). Dark networks as problems. <em>Journal of Public Administration Research and Theory</em>, <em>13</em>, 413–39.
+</div>
+<div class="csl-entry">
+Roberts, N., Everton, S. F., &amp; Cunningham, D. (2014). The noordin top network.
+</div>
+<div class="csl-entry">
+Ronfeldt, D., &amp; Arquilla, J. (2001). What next for networks and netwars? In D. Ronfeldt &amp; J. Arquilla (Eds.), <em>Networks and netwars</em> (pp. 311–361). Santa Monica, CA: RAND.
+</div>
+<div class="csl-entry">
+Scott, J., &amp; Carrington, P. J. (2011). <em>The SAGE handbook of social network analysis</em>. SAGE Publications Ltd.
+</div>
+<div class="csl-entry">
+Simmel, G. (1950). <em>The sociology of georg simmel</em>. (K. H. Wolf, Ed.). The Free Press.
+</div>
+<div class="csl-entry">
+Smith, C. S. (2010). <em>What is a person? Rethinking humanity, social life, and the moral good from the person up</em>. Chicago; London: The University of Chicago Press.
+</div>
+<div class="csl-entry">
+Snijders, T. A. B., Bunt, G. G. van de, &amp; Steglich, C. (2010). Introduction to stochastic actor-based models for network dynamics. <em>Social Networks</em>, <em>32</em>(1), 44–60.
+</div>
+<div class="csl-entry">
+Snow, D. A., Zurcher, L. A., &amp; Ekland-olson, S. (1980). Social networks and social movements: A microstructural approach to differential recruitment. <em>American Sociological Review</em>, <em>45</em>, 787–801.
+</div>
+<div class="csl-entry">
+Stark, R., &amp; Bainbridge, W. S. (1980). Networks of faith: Interpersonal bonds and recruitment to cults and sects. <em>American Journal of Sociology</em>, <em>85</em>(6), 13767395.
+</div>
+<div class="csl-entry">
+Turner, J. H. (2006). <em>Sociology</em>. Pearson Prentice Hall.
+</div>
+<div class="csl-entry">
+Uzzi, B. (1996). The sources and consequences of embeddedness for the economic performance of organizations: The network effect. <em>American Sociological Review</em>, <em>61</em>, 674–698.
+</div>
+<div class="csl-entry">
+Uzzi, B., &amp; Spiro, J. (2005). Collaboration and creativity: The small world problem. <em>American Journal of Sociology</em>, <em>11</em>(2), 447–504.
+</div>
+<div class="csl-entry">
+Valente, T. W. (2010). <em>Social networks and health: Models, methods, and applications</em>. Oxford.
+</div>
+<div class="csl-entry">
+Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.
+</div>
+<div class="csl-entry">
+White, H. C. (1992). <em>Identity and control: A structural theory of social action</em>. Princeton, NJ: Princeton University Press.
+</div>
+<div class="csl-entry">
+White, H. C. (2008). <em>Identity and control: How social formations emerge</em>. Princeton, NJ: Princeton University Press.
+</div>
+<div class="csl-entry">
+White, H. C., Boorman, S. A., &amp; Breiger, R. L. (1976). Social structure from multiple networks i: Blockmodels of roles and positions. <em>American Journal of Sociology</em>, <em>81</em>, 730–780.
+</div>
+<div class="csl-entry">
+Zimbardo, P. G. (1972). Pathology of imprisonment. <em>Society</em>, <em>9</em>, 4–6.
+</div>
+</div>
 
-<div id="refs" class="references">
-<div>
-<p>Asch, S. E. (1951). Effects of group pressure upon the modification and distortion of judgment. In H. S. Guetzkow (Ed.), <em>Groups, leadership and men</em>. Pittsburgh, PA: Carnegie Press.</p>
-</div>
-<div>
-<p>Azarian, G. R. (2005). <em>The general sociology of harrison c. White: Chaos and order in networks</em>. New York: Palgrave Macmillan.</p>
-</div>
-<div>
-<p>Bakker, R. M., Raab, J., &amp; Milward, H. B. (2011). A preliminary theory of dark network resilience. <em>Journal of Policy Analysis and Management</em>, <em>31</em>, 33–62.</p>
-</div>
-<div>
-<p>Bastian, M., Heymann, S., &amp; Jacomy, M. (2009). Gephi: An open source software for exploring and manipulating networks. Retrieved from <a href="http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154">http://www.aaai.org/ocs/index.php/ICWSM/09/paper/view/154</a></p>
-</div>
-<div>
-<p>Becker, G. S. (1976). <em>The economic approach to human behaviour</em>. Chicago: University of Chicago Press.</p>
-</div>
-<div>
-<p>Blondel, V. D., Guillaume, J.-L., Lambiotte, R., &amp; Lefebvre, E. (2008). Fast unfolding of communities in large networks. <em>Journal of Statistical Mechanics: Theory and Experiment</em>, <em>2008</em>(10), P10008. IOP Publishing. Retrieved from <a href="https://doi.org/10.1088%2F1742-5468%2F2008%2F10%2Fp10008">https://doi.org/10.1088%2F1742-5468%2F2008%2F10%2Fp10008</a></p>
-</div>
-<div>
-<p>Bonacich, P. (1987). Power and centrality: A family of measures. <em>American Journal of Sociology</em>, <em>92</em>, 1170–1182.</p>
-</div>
-<div>
-<p>Boorman, S. A., &amp; White, H. C. (1976). Social structure for multiple netorks ii: Role structures. <em>American Journal of Sociology</em>, <em>81</em>(6), 1384–1446.</p>
-</div>
-<div>
-<p>Borgatti, S. P., Everett, M. G., &amp; Johnson, J. C. (2018). <em>Analyzing social networks</em>. Sage.</p>
-</div>
-<div>
-<p>Brandes, U. (2001). A faster algorithm for betweenness centrality. <em>Journal of Mathematical Sociology</em>, <em>25</em>, 163–177.</p>
-</div>
-<div>
-<p>Burns, T., &amp; Stalker, G. M. (1961). <em>The management of innovation</em>. London: Tavistock.</p>
-</div>
-<div>
-<p>Burt, R. (1992). <em>Structural holes: The social structure of competition</em>. Harvard University Press.</p>
-</div>
-<div>
-<p>Chaudhary, A., Mittal, H., &amp; Arora, A. (2019). Anomaly detection using graph neural networks. Retrieved from <a href="https://ieeexplore.ieee.org/abstract/document/7877466/citations#citations">https://ieeexplore.ieee.org/abstract/document/7877466/citations#citations</a></p>
-</div>
-<div>
-<p>Chavez, M. (1961). <em>Ordaining women: Culture and conflict in religious organizations</em>. Cambridge, MA: Harvard University Press.</p>
-</div>
-<div>
-<p>Cunningham, D., Everton, S. F., &amp; Murphy, P. (2016). <em>Understanding dark networks: A strategic framework for the use of social network analysis</em>. Rowman; Littlefield.</p>
-</div>
-<div>
-<p>Davies, A., Gardner, B. B., &amp; Gardner, M. R. (1941). <em>Deep south: A social-anthropological study of caste and class</em>. University of Chicago Press.</p>
-</div>
-<div>
-<p>Davis, J. (1979). The davis/holland/leinhardt studies: An overview. In P. W. Holland &amp; S. Leinhardt (Eds.), <em>Perspectives on social network research</em> (pp. 51–62). New York: Academic Press.</p>
-</div>
-<div>
-<p>DiMaggio, P. J., &amp; Powell, W. W. (1983). The iron cage revisited: Institutional isomorphism and collective rationality in organizational fields. <em>American Sociological Review</em>, <em>48</em>, 147–160.</p>
-</div>
-<div>
-<p>Doreian, P., &amp; Stockman, F. N. (1997). <em>EEvolution of social networks</em>. Amsterdam: Gordon; Breach Publishers.</p>
-</div>
-<div>
-<p>Easley, D., &amp; Kleinberg, J. (2010). <em>Networks, crowds, and markets: Reasoning about a highly connected world</em>. Cambridge.</p>
-</div>
-<div>
-<p>Emirbayer, M., &amp; Goodwin, J. (1994). Network analysis, culture and the problem of agency. <em>American Journal of Sociology</em>, <em>99</em>(6), 1411–1455.</p>
-</div>
-<div>
-<p>Everton, S. F. (2012a). <em>Disrupting dark networks</em>. Cambridge.</p>
-</div>
-<div>
-<p>Everton, S. F. (2012b). Network topography, key players and terrorist networks. <em>Connections</em>, <em>2</em>, 1–8.</p>
-</div>
-<div>
-<p>Freeman, L. C. (1979). Centrality in social networks i: Conceptual clarification. <em>Social Networks</em>, <em>1</em>, 215–239.</p>
-</div>
-<div>
-<p>Girvan, M., &amp; Newman, M. (2002). Community structure in social and biological networks. <em>PNAS</em>, <em>99</em>(12), 7821–7826.</p>
-</div>
-<div>
-<p>Gould, R. V. (1991). Multiple networks and mobilization in the paris commune, 1871. <em>American Sociological Review</em>, <em>56</em>, 716–729.</p>
-</div>
-<div>
-<p>Gould, R. V. (1993). Trade cohesion, class unity, and urban insurrection: Artisanal activism in the paris commune. <em>American Journal Of Sociology</em>, <em>98</em>(4), 721–754.</p>
-</div>
-<div>
-<p>Granovetter, M. (1973). The strength of weak ties. <em>American Journal of Sociology</em>, <em>73</em>(6), 1360–1380.</p>
-</div>
-<div>
-<p>Granovetter, M. (1983). The strength of weak ties: A network theory revisited. <em>Social Theory</em>, <em>1</em>, 201–233.</p>
-</div>
-<div>
-<p>Hanneman, R. A., &amp; Riddle, M. (2005). <em>Introduction to social network methods</em>. University of California.</p>
-</div>
-<div>
-<p>Hashimoto, T. B., Nagasaki, M., Kojima, K., &amp; Miyano, S. (2009). BFL: A node and edge betweenness based fast layout algorithm for large scale networks. <em>BMC Bioinformatics</em>, <em>10</em>, 1471–2105.</p>
-</div>
-<div>
-<p>Iannaccone, L. R. (1995). Risk, rationality, and religious portfolios. <em>Economic Inquiry</em>, <em>38</em>(2), 285–295.</p>
-</div>
-<div>
-<p>International Crisis Group. (2006). <em>Terrorism in indonesia: Noordin’s networks</em>. Brussels, Belgium: International Crisis Group.</p>
-</div>
-<div>
-<p>International Crisis Group. (2009). <em>Indonesia: Noordin top’s support base</em>. Brussels, Belgium: International Crisis Group.</p>
-</div>
-<div>
-<p>Jacomy, M. (2011, June). ForceAtlas2, the new version of our home-brew layout. <em>Gephi</em>. Retrieved from <a href="https://gephi.wordpress.com">https://gephi.wordpress.com</a></p>
-</div>
-<div>
-<p>Kleinberg, J. (1999). Authoritative sources in a hyperlinked environment. <em>Journal of the ACM</em>, <em>46</em>, 604–632.</p>
-</div>
-<div>
-<p>Knoke, D. (1990). <em>Political networks: The structural perspective</em>. Cambridge University Press.</p>
-</div>
-<div>
-<p>Knoke, D., &amp; Yang, S. (2007). <em>Social netork analysis</em>. Sage Publications, Inc.</p>
-</div>
-<div>
-<p>Knuth, D. E. (1993). <em>The stanford graphbase: A platform for combinatorial computing</em>. Addison-Wesley.</p>
-</div>
-<div>
-<p>Krackhardt, D. (1992). The strength of strong ties: The importance of philos in organizations. In N. Nohria &amp; R. G. Eccles (Eds.), <em>Networks and organizations: Structure, form and action</em> (pp. 261–239). Boston: Harvard University Press.</p>
-</div>
-<div>
-<p>Krackhardt, D. (1994). Graph theoretical dimensions of informal organizations. In K. M. Carley &amp; M. J. Prietula (Eds.), <em>Computational organization theory</em> (pp. 89–111). Hillsdale, NJ: L. Erlbaum Associates.</p>
-</div>
-<div>
-<p>Levitt, S. D., &amp; Dubner, S. J. (2005). <em>Freakanomics: A rogue economist explores the hidden side of everything</em>. Harper Collins.</p>
-</div>
-<div>
-<p>Lin, N. (2001). <em>Social captial</em>. Cambridge University Press.</p>
-</div>
-<div>
-<p>Lofland, J., &amp; Stark, R. (1965). Ecoming a world-saver: A theory of conversion to a deviant perspective. <em>American Sociological Review</em>, <em>30</em>, 862–875.</p>
-</div>
-<div>
-<p>Mayhew, B. (1980). Structuralism versus individualism: Part i, shadowboxing in the dark. <em>Social Forces</em>, <em>59</em>(2), 355–374.</p>
-</div>
-<div>
-<p>Mayhew, B. (1981). Structuralism versus individualism: Part ii, ideological and other obfuscations. <em>Social Forces</em>, <em>59</em>(3), 627–648.</p>
-</div>
-<div>
-<p>McAdam, D. (1986). Recruitment to high risk activism: The case of freedom summer. <em>American Journal of Sociology</em>, <em>92</em>, 64–90.</p>
-</div>
-<div>
-<p>McAdam, D. (1988a). <em>Freedom summer</em>. Oxford University Press.</p>
-</div>
-<div>
-<p>McAdam, D. (1988b). Micromobilization contexts and recruitment to activism. <em>International Social Movement Research</em>, <em>1</em>, 125–154.</p>
-</div>
-<div>
-<p>McCormick, G., &amp; Owen, G. (2000). Security and coordination in a clandestine organization. <em>Mathematical and Computer Modelling</em>, <em>31</em>, 175–192.</p>
-</div>
-<div>
-<p>McCulloh, I., &amp; Carley, K. M. (2011). Detecting change in longitudinal social networks. <em>Journal of Social Structure</em>.</p>
-</div>
-<div>
-<p>Meghanathan, N. (2016). Assortativity analysis of real-world network graphs based on centrality metrics. <em>Computer and Information Science</em>, <em>9</em>, 7–25.</p>
-</div>
-<div>
-<p>Meyer, J. W., Boli, J., Thomas, G. M., &amp; Ramirez, F. O. (1997). World society and the nation-state. <em>American Journal of Sociology</em>, <em>103</em>(1), 144–181.</p>
-</div>
-<div>
-<p>Meyer, J. W., &amp; Rowan, B. (1977). Institutionalized organizations: Formal structure as myth and ceremony. <em>American Journal of Sociology</em>, <em>83</em>(2), 340–363.</p>
-</div>
-<div>
-<p>Milgram, S. (1974). <em>Obedience to authority</em>. Princeton, NJ: Princeton University Press.</p>
-</div>
-<div>
-<p>Monge, P. R., &amp; Contractor, N. S. (2003). <em>Theories of communication networks</em>. Oxford University Press.</p>
-</div>
-<div>
-<p>Morselli, C. (2009). <em>Inside criminal networks</em>. Spinger.</p>
-</div>
-<div>
-<p>Newman, M., &amp; Girvan, M. (2004). Finding and evaluating community structure in networks. <em>Physics Review</em>, <em>69</em>, 1–16.</p>
-</div>
-<div>
-<p>Nohria, N. (1992). Is the network perspective a useful way of studying organizations? In N. Nohria &amp; R. G. Eccles (Eds.), <em>Networks and organizations: Structure, form, and action</em> (pp. 1–22). Boston, MA: Harvard Business School Press.</p>
-</div>
-<div>
-<p>Nooy, W. de. (2011). Networks of action and events over time: A multilevel discrete-time event history model for longitudinal network data. <em>Social Networks</em>, <em>33</em>(1), 31–40.</p>
-</div>
-<div>
-<p>Nooy, W. de, Mrvar, A., &amp; Batagelj, V. (2005). <em>Exploratory social network analysis with pajek</em>. Cambridge, U.K.: Cambridge University Press.</p>
-</div>
-<div>
-<p>Ognyavanova, K. (2016). Network visualization with gephi. In <em>Sunbelt 2016</em>.</p>
-</div>
-<div>
-<p>Pescolindo, B. A., &amp; Georgianna, S. (1989). Durkheim, suicide, and religion: Toward a network theory of suicide. <em>American Sociological Review</em>, <em>54</em>(1), 33–48.</p>
-</div>
-<div>
-<p>Podolny, J. M., &amp; Page, K. L. (1998). Network forms of organization. <em>Annual Review of Sociology</em>, 57–76.</p>
-</div>
-<div>
-<p>Powell, W. W. (1990). Neither market nor hierarchy: Network forms of orgnanization. In B. M. Staw &amp; L. L. Cummings (Eds.), <em>Research in organizational behavior: An annual series of analytical essays and critical reviews</em> (pp. 295–336). Greenwich, CT: JAI Press, Inc.</p>
-</div>
-<div>
-<p>Powell, W. W., &amp; Smith-Doerr, L. (1994). Networks and economic life. In N. J. Smelser &amp; R. Swedberg (Eds.), <em>The handbook of economic sociology</em> (pp. 268–402). Princeton, NJ: Princeton University Press.</p>
-</div>
-<div>
-<p>Raab, J., &amp; Milward, H. B. (2003). Dark networks as problems. <em>Journal of Public Administration Research and Theory</em>, <em>13</em>, 413–39.</p>
-</div>
-<div>
-<p>Roberts, N., Everton, S. F., &amp; Cunningham, D. (2014). The noordin top network.</p>
-</div>
-<div>
-<p>Ronfeldt, D., &amp; Arquilla, J. (2001). What next for networks and netwars? In D. Ronfeldt &amp; J. Arquilla (Eds.), <em>Networks and netwars</em> (pp. 311–361). Santa Monica, CA: RAND.</p>
-</div>
-<div>
-<p>Scott, J., &amp; Carrington, P. J. (2011). <em>The sage handbook of social network analysis</em>. SAGE Publications Ltd.</p>
-</div>
-<div>
-<p>Simmel, G. (1950). <em>The sociology of georg simmel</em>. (K. H. Wolf, Ed.). The Free Press.</p>
-</div>
-<div>
-<p>Smith, C. S. (2010). <em>What is a person? Rethinking humanity, social life, and the moral good from the person up</em>. Chicago; London: The University of Chicago Press.</p>
-</div>
-<div>
-<p>Snijders, T. A. B., Bunt, G. G. van de, &amp; Steglich, C. (2010). Introduction to stochastic actor-based models for network dynamics. <em>Social Networks</em>, <em>32</em>(1), 44–60.</p>
-</div>
-<div>
-<p>Snow, D. A., Zurcher, L. A., &amp; Ekland-olson, S. (1980). Social networks and social movements: A microstructural approach to differential recruitment. <em>American Sociological Review</em>, <em>45</em>, 787–801.</p>
-</div>
-<div>
-<p>Stark, R., &amp; Bainbridge, W. S. (1980). Networks of faith: Interpersonal bonds and recruitment to cults and sects. <em>American Journal of Sociology</em>, <em>85</em>(6), 13767395.</p>
-</div>
-<div>
-<p>Turner, J. H. (2006). <em>Sociology</em>. Pearson Prentice Hall.</p>
-</div>
-<div>
-<p>Uzzi, B. (1996). The sources and consequences of embeddedness for the economic performance of organizations: The network effect. <em>American Sociological Review</em>, <em>61</em>, 674–698.</p>
-</div>
-<div>
-<p>Uzzi, B., &amp; Spiro, J. (2005). Collaboration and creativity: The small world problem. <em>American Journal of Sociology</em>, <em>11</em>(2), 447–504.</p>
-</div>
-<div>
-<p>Valente, T. W. (2010). <em>Social networks and health: Models, methods, and applications</em>. Oxford.</p>
-</div>
-<div>
-<p>Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.</p>
-</div>
-<div>
-<p>White, H. C. (1992). <em>Identity and control: A structural theory of social action</em>. Princeton, NJ: Princeton University Press.</p>
-</div>
-<div>
-<p>White, H. C. (2008). <em>Identity and control: How social formations emerge</em>. Princeton, NJ: Princeton University Press.</p>
-</div>
-<div>
-<p>White, H. C., Boorman, S. A., &amp; Breiger, R. L. (1976). Social structure from multiple networks i: Blockmodels of roles and positions. <em>American Journal of Sociology</em>, <em>81</em>, 730–780.</p>
-</div>
-<div>
-<p>Zimbardo, P. G. (1972). Pathology of imprisonment. <em>Society</em>, <em>9</em>, 4–6.</p>
-</div>
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="libro-de-códigos.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="libro-de-códigos-1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -552,8 +649,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cjcallag/arso/edit/main/06-references.Rmd",
-"text": "Edit"
+"link": "https://github.com/cjcallag/arso/edit/editing/06-references.Rmd",
+"text": "Editar"
 },
 "history": {
 "link": null,
@@ -564,15 +661,22 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
-"css": "arso.css",
 "font_settings": {
-"theme": "white",
 "family": "sans",
+"theme": "white",
 "size": 2
+},
+"info": true,
+"toolbar": {
+"position": "fixed"
 }
 });
 });

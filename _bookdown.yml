@@ -3,6 +3,10 @@ output_dir: docs
 language:
   label:
     fig: "Figura "
+    tab: "Tabla "
+    eq: "Equación"
+  ui:
+    edit: Editar
 
 rmd_files: ["index.Rmd", 
             "01-introduction.Rmd",
@@ -19,6 +23,8 @@ rmd_files: ["index.Rmd",
             "03-centralidad.Rmd",
             "03-puentesycorredores.Rmd",
             "04-applications.Rmd",
+            "04-trabajos.Rmd",
+            "04-trabajos-grupales.Rmd",
             "05-apendices.Rmd",
             "05-glossary.Rmd",
             "05-codigos.Rmd",

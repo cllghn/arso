@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Grabación y Recopilación | Análisis de Redes Sociales Oscuras</title>
+  <title>4 Grabación y Recopilación | Análisis de Redes Sociales</title>
   <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Grabación y Recopilación | Análisis de Redes Sociales Oscuras" />
+  <meta property="og:title" content="4 Grabación y Recopilación | Análisis de Redes Sociales" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Grabación y Recopilación | Análisis de Redes Sociales Oscuras" />
+  <meta name="twitter:title" content="4 Grabación y Recopilación | Análisis de Redes Sociales" />
   
   <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
@@ -32,7 +32,9 @@
   
 <link rel="prev" href="tipos-de-datos-de-redes-sociales.html"/>
 <link rel="next" href="derivando-datos-modo-uno-de-modo-dos.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,19 +51,41 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="arso.css" type="text/css" />
 </head>
@@ -76,20 +100,21 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Análisis de Redes Sociales Oscuras</a></li>
+<li><a href="./">Análisis de Redes Sociales</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introducción</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 </ul></li>
-</ul></li>
-<li class="part"><span><b>I Introducción</b></span></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a><ul>
+<li class="part"><span><b>I ¿ Qué es el ARSo?</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a><ul>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#interdependencia-de-los-actores"><i class="fa fa-check"></i><b>1.2.1</b> Interdependencia de los Actores</a></li>
 <li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#lazos-como-conductos"><i class="fa fa-check"></i><b>1.2.2</b> Lazos como Conductos</a></li>
 <li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#estructura-social-y-formaciones-sociales-emergentes"><i class="fa fa-check"></i><b>1.2.3</b> Estructura Social y Formaciones Sociales Emergentes</a></li>
@@ -97,7 +122,8 @@
 <li class="chapter" data-level="1.2.5" data-path="introduction.html"><a href="introduction.html#redes-sociales-dinámicas"><i class="fa fa-check"></i><b>1.2.5</b> Redes sociales dinámicas</a></li>
 <li class="chapter" data-level="1.2.6" data-path="introduction.html"><a href="introduction.html#resumen-redes-sociales-agencia-humana-y-cultura"><i class="fa fa-check"></i><b>1.2.6</b> Resumen: Redes Sociales, Agencia Humana y Cultura</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a><ul>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a>
+<ul>
 <li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#actores-y-enlaces"><i class="fa fa-check"></i><b>1.3.1</b> Actores y Enlaces</a></li>
 <li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#redes-sociales"><i class="fa fa-check"></i><b>1.3.2</b> Redes Sociales</a></li>
 <li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#camino-y-distancia-de-caminos"><i class="fa fa-check"></i><b>1.3.3</b> Camino (y Distancia de Caminos)</a></li>
@@ -112,10 +138,12 @@
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#resumen-y-conclusiones"><i class="fa fa-check"></i><b>1.4</b> Resumen y Conclusiones</a></li>
 </ul></li>
 <li class="part"><span><b>II ARSo: Tecnicas</b></span></li>
-<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a><ul>
-<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
 <li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
-<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a><ul>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
 <li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
@@ -124,55 +152,68 @@
 <li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
-<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
 <li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
 <li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
-<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a><ul>
+<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a><ul>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
-<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
 <li class="chapter" data-level="4.4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#guardar-gráfico-de-red-en-gephi"><i class="fa fa-check"></i><b>4.4.2</b> Guardar Gráfico de Red en Gephi</a></li>
 <li class="chapter" data-level="4.4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#importación-de-listas-de-aristas-modo-uno"><i class="fa fa-check"></i><b>4.4.3</b> Importación de Listas de Aristas Modo-Uno</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a><ul>
+<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
 <li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
-<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
 <li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a><ul>
+<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#matrices-y-listas-de-aristas"><i class="fa fa-check"></i><b>6.1</b> Matrices y Listas de Aristas</a></li>
-<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a><ul>
+<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#apilar"><i class="fa fa-check"></i><b>6.2.1</b> Apilar</a></li>
 <li class="chapter" data-level="6.2.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#agregar"><i class="fa fa-check"></i><b>6.2.2</b> Agregar</a></li>
 <li class="chapter" data-level="6.2.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#recombinar"><i class="fa fa-check"></i><b>6.2.3</b> Recombinar</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#importar-múltiples-redes-a-gephi"><i class="fa fa-check"></i><b>6.3.1</b> Importar múltiples redes a Gephi</a></li>
 <li class="chapter" data-level="6.3.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a><ul>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
 <li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
-<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
 <li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
@@ -181,74 +222,114 @@
 </ul></li>
 </ul></li>
 <li class="part"><span><b>III ARSo: Medidas</b></span></li>
-<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a><ul>
-<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a><ul>
+<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a>
+<ul>
 <li class="chapter" data-level="8.1.1" data-path="topología-1.html"><a href="topología-1.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
 <li class="chapter" data-level="8.1.2" data-path="topología-1.html"><a href="topología-1.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
 <li class="chapter" data-level="8.1.3" data-path="topología-1.html"><a href="topología-1.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a><ul>
+<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="topología-1.html"><a href="topología-1.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
 <li class="chapter" data-level="8.2.2" data-path="topología-1.html"><a href="topología-1.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a>
+<ul>
 <li class="chapter" data-level="8.3.1" data-path="topología-1.html"><a href="topología-1.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="8.4.1" data-path="topología-1.html"><a href="topología-1.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="8.4.2" data-path="topología-1.html"><a href="topología-1.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
-<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a><ul>
+<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
 <li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
 <li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
 <li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
-<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="9.5.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.5.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="9.5.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.5.2</b> Identificación de Subgrupos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a><ul>
-<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a><ul>
+<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia"><i class="fa fa-check"></i><b>10.1.1</b> Medidas Basadas en Frecuencia</a></li>
 <li class="chapter" data-level="10.1.2" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-distancia"><i class="fa fa-check"></i><b>10.1.2</b> Medidas Basadas en Distancia</a></li>
 <li class="chapter" data-level="10.1.3" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-caminos"><i class="fa fa-check"></i><b>10.1.3</b> Medidas Basadas en Caminos</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a><ul>
+<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia-1"><i class="fa fa-check"></i><b>10.2.1</b> Medidas Basadas en Frecuencia</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="centralidad-1.html"><a href="centralidad-1.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.3.1</b> Centralidad en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
+<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puntos-de-corte"><i class="fa fa-check"></i><b>11.1</b> Puntos de Corte</a></li>
 <li class="chapter" data-level="11.2" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#bi-componentes-y-puentes"><i class="fa fa-check"></i><b>11.2</b> Bi-componentes y Puentes</a></li>
 <li class="chapter" data-level="11.3" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#intermediación-de-borde"><i class="fa fa-check"></i><b>11.3</b> Intermediación de borde</a></li>
 <li class="chapter" data-level="11.4" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#agujeros-estructurales-restricción-y-autonomía"><i class="fa fa-check"></i><b>11.4</b> Agujeros Estructurales, Restricción y Autonomía</a></li>
-<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.5.1</b> Puentes y Corredores en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
-<li class="part"><span><b>V Apéndices</b></span></li>
-<li class="chapter" data-level="12" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>12</b> Glosario de Términos</a></li>
-<li class="chapter" data-level="13" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html"><i class="fa fa-check"></i><b>13</b> Libro de Códigos</a><ul>
-<li class="chapter" data-level="13.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>13.1</b> Libro de Códigos de Muestra</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones"><i class="fa fa-check"></i><b>13.1.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.1.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-1"><i class="fa fa-check"></i><b>13.1.2</b> Atributos</a></li>
+<li class="chapter" data-level="12" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>12</b> Un Proceso de Diseño para la Investigación de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>12.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>12.1.1</b> Pregunata(s) de Investigación</a></li>
+<li class="chapter" data-level="12.1.2" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>12.1.2</b> Limites</a></li>
+<li class="chapter" data-level="12.1.3" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>12.1.3</b> Codificar Relaciones y Atributos</a></li>
+<li class="chapter" data-level="12.1.4" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>12.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
+<li class="chapter" data-level="12.1.5" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#conclusiones"><i class="fa fa-check"></i><b>12.1.5</b> Conclusiones</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>13.2</b> Libro de Códigos de Noordin Top</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones-1"><i class="fa fa-check"></i><b>13.2.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.2.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-2"><i class="fa fa-check"></i><b>13.2.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html"><i class="fa fa-check"></i><b>13</b> Ejemplos Practicos</a>
+<ul>
+<li class="chapter" data-level="" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#informe-de-la-red-criminal-en-la-república-de-panamá"><i class="fa fa-check"></i>Informe de la Red Criminal en la República de Panamá</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#libro-de-códigos"><i class="fa fa-check"></i><b>13.0.1</b> Libro de Códigos</a></li>
+<li class="chapter" data-level="13.0.2" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#mapa-de-red"><i class="fa fa-check"></i><b>13.0.2</b> Mapa de red</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>VI Referencias</b></span></li>
-<li class="chapter" data-level="14" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>14</b> Referencias</a></li>
+<li class="appendix"><span><b>Apéndices</b></span></li>
+<li class="chapter" data-level="A" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>A</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="B" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html"><i class="fa fa-check"></i><b>B</b> Libro de Códigos</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>B.1</b> Libro de Códigos de Muestra</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-2"><i class="fa fa-check"></i><b>B.1.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.1.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-3"><i class="fa fa-check"></i><b>B.1.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>B.2</b> Libro de Códigos de Noordin Top</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-3"><i class="fa fa-check"></i><b>B.2.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.2.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-4"><i class="fa fa-check"></i><b>B.2.2</b> Atributos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Referencias</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">
+Publicado con bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -258,7 +339,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales Oscuras</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales</a>
           </h1>
         </div>
 
@@ -266,14 +347,14 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="grabación-y-recopilación" class="section level1">
+<div id="grabación-y-recopilación" class="section level1" number="4">
 <h1><span class="header-section-number">4</span> Grabación y Recopilación</h1>
 <p>Hasta este punto hemos descrito los datos una red. Por lo que en esta sección, explicaremos cómo recopilar datos e importarlos a Gephi. Estas estrategias igualmente funcionaran con otras plataformas de software. Comenzaremos describiendo sociomatrices. Después, veremos otra manera de codificar relaciones como listas de aristas. Luego, exploramos cómo codificar características no relacionales en listas de nodos. Finalmente, tendrá la oportunidad de poner en práctica este conocimiento a través de un ejercicio práctico en Gephi.</p>
-<div id="matrices" class="section level2">
+<div id="matrices" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> Matrices</h2>
-<div id="qué-son" class="section level3">
+<div id="qué-son" class="section level3" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> ¿Qué son?</h3>
-<p>Comenzamos con la recopilación de datos de red en una matriz. Como señala Hanneman, la forma más común de matriz en ARSo es una matriz cuadrada con número de filas y columnas como actores en nuestro conjunto de datos, en este modelo los valores en las celdas de la matriz registran información sobre los vínculos entre cada par de actores <span class="citation">(Hanneman &amp; Riddle, <a href="#ref-Hanneman2005" role="doc-biblioref">2005</a>)</span>. Por ejemplo, la matriz <a href="grabación-y-recopilación.html#eq:simple-matrix">(4.1)</a> representa la forma más simple y común de codificar datos relacionales en forma de matriz binaria. En este caso, vemos un 1 si existe un vínculo, de lo contrario vemos un 0.</p>
+<p>Comenzamos con la recopilación de datos de red en una matriz. Como señala Hanneman, la forma más común de matriz en ARSo es una matriz cuadrada con número de filas y columnas como actores en nuestro conjunto de datos, en este modelo los valores en las celdas de la matriz registran información sobre los vínculos entre cada par de actores <span class="citation">(<a href="#ref-Hanneman2005" role="doc-biblioref">Hanneman &amp; Riddle, 2005</a>)</span>. Por ejemplo, la matriz <a href="grabación-y-recopilación.html#eq:simple-matrix">(4.1)</a> representa la forma más simple y común de codificar datos relacionales en forma de matriz binaria. En este caso, vemos un 1 si existe un vínculo, de lo contrario vemos un 0.</p>
 <p><span class="math display" id="eq:simple-matrix">\[
 \begin{matrix}
   &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F \\
@@ -287,13 +368,13 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; - \\
 \end{matrix}
 \]</span></p>
 <p>Como se ha de imaginar, las matrices no siempre son binarias. De hecho, es apropiado y común el recopilar datos de magnitud para un vínculo. Por ejemplo, se puede medir la fuerza de una relación a nivel ordinal o de intervalo. Igualmente, se pueden recaudar datos relacionales con números positivos y negativos, donde los números positivos corresponden a relaciones positivas, el cero es un punto medio neutral y las relaciones negativas tienen valores menores a cero.</p>
-<p>Recuerde que como habíamos visto previamente, los datos codificados en matrices pueden ser simétricos o asimétricos, dirigidos o no dirigidos. Por consiguiente, tradicionalmente es de buena educación ser explícito al mencionar el tipo de matriz que se esta trabajando; por ejemplo, “matriz simétrica binaria modo-uno” o “matriz asimétrica ponderada modo-uno”.</p>
+<p>Recuerde que como habíamos visto previamente, los datos codificados en matrices pueden ser simétricos o asimétricos, dirigidos o no dirigidos. Por consiguiente, tradicionalmente es de buena educación ser explícito al mencionar el tipo de matriz que se esta trabajando; por ejemplo, “matriz simétrica binaria modo-uno” o “matriz asimétrica ponderada modo-uno.”</p>
 <p>En esta sección, nos enfocamos en matrices de relaciones modo-uno por su simplicidad, pero cabe recalcar que las matrices pueden ser de relación modo-dos. La mayoría de los analistas de redes trabajan con relaciones de modo-uno, sin importar si estas han sido derivadas de una relación modo-dos. Es por ello que retornaremos a las matrices modo-dos cuando toquemos el tema de derivar relaciones modo-uno de modo-dos.</p>
 </div>
-<div id="por-qué-usarlas-o-no" class="section level3">
+<div id="por-qué-usarlas-o-no" class="section level3" number="4.1.2">
 <h3><span class="header-section-number">4.1.2</span> ¿Por qué usarlas o no?</h3>
-<p>Las matrices tienen múltiples ventajas en ARSo. Primero, son simples de entender. Sin embargo, la razón clave por la cual se utilizan habitualmente es porque se pueden realizar cálculos matemáticos con estas para resumir la información de la red e ilustrar patrones relacionales <span class="citation">(Borgatti et al., <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>.</p>
-<p>Al trabajar con múltiples matrices de datos modo-uno con las mismas dimensiones, podemos producir una tercera matriz con el mismo número de dimensiones utilizado el producto Hadamard (operación por elementos). Por ejemplo, tomemos dos matrices con el mismo número de dimensiones una representando amistades y la otra con vínculos de negocios. Con estas podemos producir una tercera relación con las mismas dimensiones la cual nombremos “amigos en negocios”, la ecuación <a href="grabación-y-recopilación.html#eq:mat-op1">(4.2)</a> ilustra esta operación de matrices por elemento.</p>
+<p>Las matrices tienen múltiples ventajas en ARSo. Primero, son simples de entender. Sin embargo, la razón clave por la cual se utilizan habitualmente es porque se pueden realizar cálculos matemáticos con estas para resumir la información de la red e ilustrar patrones relacionales <span class="citation">(<a href="#ref-Borgatti2018" role="doc-biblioref">Borgatti, Everett, &amp; Johnson, 2018</a>)</span>.</p>
+<p>Al trabajar con múltiples matrices de datos modo-uno con las mismas dimensiones, podemos producir una tercera matriz con el mismo número de dimensiones utilizado el producto Hadamard (operación por elementos). Por ejemplo, tomemos dos matrices con el mismo número de dimensiones una representando amistades y la otra con vínculos de negocios. Con estas podemos producir una tercera relación con las mismas dimensiones la cual nombremos “amigos en negocios,” la ecuación <a href="grabación-y-recopilación.html#eq:mat-op1">(4.2)</a> ilustra esta operación de matrices por elemento.</p>
 <p><span class="math display" id="eq:mat-op1">\[\begin{equation}
 \begin{matrix}
   &amp; A &amp; B &amp; C \\
@@ -330,7 +411,7 @@ C &amp; 0 &amp; 0 &amp; 0 \\
 \end{matrix}
 \tag{4.2}
 \end{equation}\]</span></p>
-<p>Adicionalmente, podemos multiplicar matrices “conformables”; es decir, el número de filas en la primera matriz es igual a el número de columnas en la segunda. Las matrices cuadradas de modo-uno son conformables puesto que tienen el mismo numero de filas y columnas, por lo cual las podemos multiplicar <span class="citation">(Hanneman &amp; Riddle, <a href="#ref-Hanneman2005" role="doc-biblioref">2005</a>)</span>. A diferencia de el producto Hadamard, en la multiplicación de matrices el orden de estas impacta los resultados. Supongamos que trabajamos con dos matrices de modo-uno (<span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>), si multiplico <span class="math inline">\(AxB\)</span> el producto no es equivalente a <span class="math inline">\(BxA\)</span> (<span class="math inline">\(AxB \neq BxA\)</span>). La ecuación <a href="grabación-y-recopilación.html#eq:mat-op2">(4.3)</a> illustra el proceso de multiplicar matrices <span class="math inline">\(AxB\)</span>. Empezamos con la parte superior izquierda de la primera matriz y multiplicamos cada valor en la primera fila por los valores de la primera columna de la segunda matriz. Los elementos de una fila de la primera matriz y de una columna de la segunda se multiplican y se suman para producir un solo producto.</p>
+<p>Adicionalmente, podemos multiplicar matrices “conformables”; es decir, el número de filas en la primera matriz es igual a el número de columnas en la segunda. Las matrices cuadradas de modo-uno son conformables puesto que tienen el mismo numero de filas y columnas, por lo cual las podemos multiplicar <span class="citation">(<a href="#ref-Hanneman2005" role="doc-biblioref">Hanneman &amp; Riddle, 2005</a>)</span>. A diferencia de el producto Hadamard, en la multiplicación de matrices el orden de estas impacta los resultados. Supongamos que trabajamos con dos matrices de modo-uno (<span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span>), si multiplico <span class="math inline">\(AxB\)</span> el producto no es equivalente a <span class="math inline">\(BxA\)</span> (<span class="math inline">\(AxB \neq BxA\)</span>). La ecuación <a href="grabación-y-recopilación.html#eq:mat-op2">(4.3)</a> illustra el proceso de multiplicar matrices <span class="math inline">\(AxB\)</span>. Empezamos con la parte superior izquierda de la primera matriz y multiplicamos cada valor en la primera fila por los valores de la primera columna de la segunda matriz. Los elementos de una fila de la primera matriz y de una columna de la segunda se multiplican y se suman para producir un solo producto.</p>
 <p><span class="math display" id="eq:mat-op2">\[\begin{equation}
 \begin{matrix}
   &amp; A &amp; B &amp; C \\
@@ -410,7 +491,7 @@ C &amp; (1x0)+(0x1)+(0x0) &amp; (1x1)+(0x0)+(0x1) &amp; (1x0)+(0x1)+(0x0) \\
 \end{matrix}
 \tag{4.4}
 \end{equation}\]</span></p>
-<p>En términos prácticos, <span class="citation">Borgatti et al. (<a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span> presentan el siguiente ejemplo, <span class="math inline">\(A\)</span> es una matriz de adyacencia que representa la ‘relación de amistad’ y <span class="math inline">\(B\)</span> es la relación de ‘jefe de’. Entonces si tengo una relación <span class="math inline">\(AxB\)</span> con un nodo, este es el jefe de al menos uno de mis amigos. En contraste, si tengo una relación de <span class="math inline">\(BxA\)</span> con un nodo, entonces este es amigo de mi jefe <span class="citation">(Borgatti et al., <a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span>. Como puede ver, estas son relaciones muy diferentes producidas al multiplicar las mismas matrices.</p>
+<p>En términos prácticos, <span class="citation"><a href="#ref-Borgatti2018" role="doc-biblioref">Borgatti, Everett, &amp; Johnson</a> (<a href="#ref-Borgatti2018" role="doc-biblioref">2018</a>)</span> presentan el siguiente ejemplo, <span class="math inline">\(A\)</span> es una matriz de adyacencia que representa la ‘relación de amistad’ y <span class="math inline">\(B\)</span> es la relación de ‘jefe de.’ Entonces si tengo una relación <span class="math inline">\(AxB\)</span> con un nodo, este es el jefe de al menos uno de mis amigos. En contraste, si tengo una relación de <span class="math inline">\(BxA\)</span> con un nodo, entonces este es amigo de mi jefe <span class="citation">(<a href="#ref-Borgatti2018" role="doc-biblioref">Borgatti, Everett, &amp; Johnson, 2018</a>)</span>. Como puede ver, estas son relaciones muy diferentes producidas al multiplicar las mismas matrices.</p>
 <p>Ya que hemos recalcado las ventajas de utilizar matrices, es esencial entender algunas de las desventajas clave:</p>
 <ul>
 <li>Cada matriz representa un solo tipo de relación. Supongamos que el análisis requiere combinar relaciones familiares y financieras. Para esto, necesitariamos recopilar dos matrices individuales antes de manipularlas. Además, el formato de matriz no permite el agregar metadatos sobre las relaciones, por ejemplo: procedencia de un dato, fecha en que ha ocurrido, entre otros.</li>
@@ -420,9 +501,9 @@ C &amp; (1x0)+(0x1)+(0x0) &amp; (1x1)+(0x0)+(0x1) &amp; (1x0)+(0x1)+(0x0) \\
 <p>Como puede ver, las matrices (como todas las estructuras de recopilación de datos) tienen ventajas y desventajas. El álgebra de matrices es la base de la mayoría de los algoritmos utilizados por analistas de redes, por consiguiente, es esencial entender estas estructuras. Sin embargo, las desventajas mencionadas previamente son la razón por la cual los analistas de redes tienen a mantener sus datos relacionales en otros formatos más eficientes y permisibles. En la siguiente sección cubriremos uno de estos formatos llamado lista de aristas.</p>
 </div>
 </div>
-<div id="lista-de-aristas" class="section level2">
+<div id="lista-de-aristas" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> Lista de Aristas</h2>
-<div id="qué-son-1" class="section level3">
+<div id="qué-son-1" class="section level3" number="4.2.1">
 <h3><span class="header-section-number">4.2.1</span> ¿Qué son?</h3>
 <p>Son una de las estructuras más económicas en la recopilación de datos. Las listas de aristas solo consideran los vínculos existentes y excluyen lo demás. Por ejemplo, la matriz <a href="grabación-y-recopilación.html#eq:mat">(4.5)</a> puede ser colapsada como lista de aristas <a href="grabación-y-recopilación.html#eq:el">(4.6)</a>.</p>
 <div class="row">
@@ -459,15 +540,15 @@ F      &amp; E      \\
 \end{matrix}\]</span>
 </div>
 </div>
-<p>Esencialmente, una lista de aristas es un rectángulo con un mínimo de dos columnas, cada fila representa una combinación de nodos vinculados. <span class="citation">Cunningham et al. (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> mencionan que aunque las listas de aristas pueden ser dirigidas o no dirigidas, es decir, contienen arcos o bordes, las columnas denotan un actor que “envía” el enlace y otro que “recibe” el enlace. En Gephi, el software denota estas posiciones con nombres obligatorios; es decir, que en términos de Gephi, la columna de “envía” siempre aparecerá nombrada “Origen” (o “Source” en Inglés). Similarmente, la columna “recibe” siempre aparecerá como “Destino” (o “Target” en Inglés).</p>
+<p>Esencialmente, una lista de aristas es un rectángulo con un mínimo de dos columnas, cada fila representa una combinación de nodos vinculados. <span class="citation"><a href="#ref-Cunningham2016" role="doc-biblioref">Cunningham, Everton, &amp; Murphy</a> (<a href="#ref-Cunningham2016" role="doc-biblioref">2016</a>)</span> mencionan que aunque las listas de aristas pueden ser dirigidas o no dirigidas, es decir, contienen arcos o bordes, las columnas denotan un actor que “envía” el enlace y otro que “recibe” el enlace. En Gephi, el software denota estas posiciones con nombres obligatorios; es decir, que en términos de Gephi, la columna de “envía” siempre aparecerá nombrada “Origen” (o “Source” en Inglés). Similarmente, la columna “recibe” siempre aparecerá como “Destino” (o “Target” en Inglés).</p>
 <p>Tradicionalmente, los analistas de ARSo tienden a mantener sus listas de aristas en software como Microsoft Excel. Sin embargo, es posible integrar tablas de bases de datos (por ejemplo, SQL) como precursores.</p>
 </div>
-<div id="por-qué-usarlas-o-no-1" class="section level3">
+<div id="por-qué-usarlas-o-no-1" class="section level3" number="4.2.2">
 <h3><span class="header-section-number">4.2.2</span> ¿Por qué usarlas o no?</h3>
 <p>Las listas de aristas son comúnmente utilizadas por su simplicidad, eficiencia y versatilidad. Son eficientes pues no incluyen espacios vacíos para vínculos faltantes. Asimismo, el mantenerlas es simple pues cada fila representa una relación. Adicionalmente son versátiles pues proveen flexibilidad en el número y tipo de características de un vínculo que se pueden incluir. Como se ha mencionado previamente, el formato básico de una lista de aristas incluye dos columnas, sin embargo, no hay límite a la cantidad de variables que podemos agregar para describir cada vínculo, por ejemplo: dirigido/no dirigido, fecha, intensidad, tipo, peso, fuente de procedencia, etc.</p>
 <p>Las Tablas <a href="grabación-y-recopilación.html#tab:el1">4.1</a>, <a href="grabación-y-recopilación.html#tab:el2">4.2</a> y <a href="grabación-y-recopilación.html#tab:el3">4.3</a> son ejemplos de listas de aristas. La primera lista de aristas, Tabla <a href="grabación-y-recopilación.html#tab:el1">4.1</a>, contiene los elementos mínimos requeridos; es decir, dos columnas nombradas que representan los dos vértices conectados por un vínculo relacional. Cada fila representa una relación, sin embargo, no hay manera de diferenciar si estas relaciones son dirigidas/no dirigidas o si ambos vínculos representan el mismo tipo de relaciones (por ejemplo, familiares, financieras, románticas, etc.). Es por ello que la segunda lista, Tabla <a href="grabación-y-recopilación.html#tab:el2">4.2</a>, expande sobre la primera al agregar un par de variables. En este ejemplo, las nuevas columnas permiten diferenciar el tipo de relación e incluso agregan información temporal y pesos a cada enlace. La última lista, Tabla <a href="grabación-y-recopilación.html#tab:el3">4.3</a>, continúa expandiendo la lista de aristas previa ya que presenta relaciones multimodo. Es decir, algunas relaciones son modo-uno, mientras que otras son modo-dos.</p>
 <table>
-<caption><span id="tab:el1">Table 4.1: </span>Lista de Aristas Básica</caption>
+<caption><span id="tab:el1">Tabla 4.1: </span>Lista de Aristas Básica</caption>
 <thead>
 <tr class="header">
 <th align="left">Origen</th>
@@ -486,7 +567,7 @@ F      &amp; E      \\
 </tbody>
 </table>
 <table>
-<caption><span id="tab:el2">Table 4.2: </span>Lista de Aristas Expandida</caption>
+<caption><span id="tab:el2">Tabla 4.2: </span>Lista de Aristas Expandida</caption>
 <thead>
 <tr class="header">
 <th align="left">Origen</th>
@@ -517,7 +598,7 @@ F      &amp; E      \\
 </tbody>
 </table>
 <table>
-<caption><span id="tab:el3">Table 4.3: </span>Lista de Aristas Expandida y Multimodo</caption>
+<caption><span id="tab:el3">Tabla 4.3: </span>Lista de Aristas Expandida y Multimodo</caption>
 <thead>
 <tr class="header">
 <th align="left">Origen</th>
@@ -557,7 +638,7 @@ F      &amp; E      \\
 </table>
 </div>
 </div>
-<div id="lista-de-nodos" class="section level2">
+<div id="lista-de-nodos" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> Lista de Nodos</h2>
 <p>La lista de nodos, a diferencia de la lista de aristas, contiene los datos no relacionales de cada nodo en un sociograma. Por consiguiente, ambas listas sean mantenidas de manera independiente.</p>
 <p>Es decir, en una lista de aristas es probable que un nodo aparezca de manera repetida, puesto que es común que cada actor en una red este atado a múltiples otros. En contraste, en una lista de nodos es recomendable el tener a un solo registro por actor. Por ejemplo, en la lista de aristas <a href="grabación-y-recopilación.html#eq:el4">(4.7)</a> vemos cuatro nodos {A, B, C, D} conectados por tres diferentes tipos de relaciones. La lista de nodos correspondiente <a href="grabación-y-recopilación.html#eq:nl1">(4.8)</a> incluye información de estos nodos como género y edad, estas son características no relacionales de aquellos nodos en la red. Aunque podemos repetir el registro de cada actor, no es necesario normalmente el software solo toma en cuenta un registro, normalmente el último en la lista.</p>
@@ -584,7 +665,7 @@ D  &amp; Masculino &amp; 29 \\
 </div>
 <p>Por su parte, Gephi es capaz de ingerir listas de nodos. Para ello, requiere que esta tabla contenga el nombre de columna <code>Id</code>. Esta variable representa la columna que el software tomará en cuenta como fuente de identificadores únicos para los nodos en una red. Por ejemplo, en la lista de nodos <a href="grabación-y-recopilación.html#eq:nl1">(4.8)</a> vemos entradas correspondientes a los identificadores de cada nodo en la lista de aristas.</p>
 </div>
-<div id="ejercicio-práctico" class="section level2">
+<div id="ejercicio-práctico" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> Ejercicio Práctico</h2>
 <p>Este ejercicio tiene dos propósitos:</p>
 <ol style="list-style-type: decimal">
@@ -592,11 +673,11 @@ D  &amp; Masculino &amp; 29 \\
 <li>Importar y manipular datos de modo-uno a Gephi</li>
 </ol>
 <p>Las redes de modo-uno consistende un conjunto único de actores, estos pueden ser personas, grupos, organizaciones, corporaciones, naciones, etc. Los lazos entre estos pueden ser lazos de amistado parentesco, transacciones materiales (por ejemplo, transacciones comerciales), redes de comunicación (por ejemplo, élenvió o la recepción de mensajes), etc. En este laboratorio, utilizaremos los datos recopilados por Stuart Koschade de la célula terrorista Jemaah Islamiyah (JI) responsable del atentado terrorista en Bali del 2002. Todos los datos requeridos en este ejercicio deberán ser primero generados por el usuario y luego descargados.</p>
-<p>El segundo propósito de esta actividad es presentarle algunas de las funciones de la plataforma Gephi. Específicamente, nos centraremos en visualizar redes. Estos gráficos son importantes porque pueden ayudarnos a rastrear y detectar patrones de relaciones en una red social determinada. Sin embargo, puesto que el ojo humano puede ser engañado fácilmente, los analistas de redes sociales confían en algoritmos de dibujo de gráficos que colocan sistemáticamente a los actores en el “espacio social”.</p>
-<div id="preparar-y-visualizar-redes-de-modo-uno-en-gephi" class="section level3">
+<p>El segundo propósito de esta actividad es presentarle algunas de las funciones de la plataforma Gephi. Específicamente, nos centraremos en visualizar redes. Estos gráficos son importantes porque pueden ayudarnos a rastrear y detectar patrones de relaciones en una red social determinada. Sin embargo, puesto que el ojo humano puede ser engañado fácilmente, los analistas de redes sociales confían en algoritmos de dibujo de gráficos que colocan sistemáticamente a los actores en el “espacio social.”</p>
+<div id="preparar-y-visualizar-redes-de-modo-uno-en-gephi" class="section level3" number="4.4.1">
 <h3><span class="header-section-number">4.4.1</span> Preparar y Visualizar Redes de Modo-Uno en Gephi</h3>
 <p>Localice el artículo de Stuart Koschade, <a href="https://www.tandfonline.com/doi/full/10.1080/10576100600798418">aquí</a>. La única versión disponible es en inglés, por consiguiente, no es requerido que lea el texto. Utilizando Excel (u otro programa con hojas de cálculo) registre los datos de redes sociales que figuran en la Tabla 2 en el artículo de Koschade. Su matriz debe ser similar a la Figura <a href="grabación-y-recopilación.html#fig:koschade">4.1</a> a continuación.</p>
-<div class="figure" style="text-align: center"><span id="fig:koschade"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:koschade"></span>
 <img src="images/02-Fig_1_Matrix_Excel.png" alt="Hoja de cálculo de Excel que muestra la matriz de datos en Koschade" width="100%" />
 <p class="caption">
 Figura 4.1: Hoja de cálculo de Excel que muestra la matriz de datos en Koschade
@@ -608,11 +689,11 @@ Figura 4.1: Hoja de cálculo de Excel que muestra la matriz de datos en Koschade
 </div>
 <div class="rcolumn-80">
 <ol style="list-style-type: decimal">
-<li>Abra Gephi y seleccione la opción <em>Nuevo proyecto</em> en la pantalla de “Bienvenido a Gephi”. Asegúrese de estar en la ventana “Vista general” en la esquina superior izquierda de la interfaz. Una vez allí, su interfaz deberá parecerse a la Figura <a href="grabación-y-recopilación.html#fig:gv">4.2</a>.</li>
+<li>Abra Gephi y seleccione la opción <em>Nuevo proyecto</em> en la pantalla de “Bienvenido a Gephi.” Asegúrese de estar en la ventana “Vista general” en la esquina superior izquierda de la interfaz. Una vez allí, su interfaz deberá parecerse a la Figura <a href="grabación-y-recopilación.html#fig:gv">4.2</a>.</li>
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:gv"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:gv"></span>
 <img src="images/02-Fig_2_General_View.png" alt="Ventana 'Vista general' en Gephi" width="100%" />
 <p class="caption">
 Figura 4.2: Ventana ‘Vista general’ en Gephi
@@ -628,7 +709,7 @@ Figura 4.2: Ventana ‘Vista general’ en Gephi
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:import"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:import"></span>
 <img src="images/02-Fig_3_Importing_Gephi.png" alt="Ventana de Importación en Gephi" width="70%" />
 <p class="caption">
 Figura 4.3: Ventana de Importación en Gephi
@@ -645,7 +726,7 @@ Figura 4.3: Ventana de Importación en Gephi
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:import-report"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:import-report"></span>
 <img src="images/02-Fig_4_Importing_Report.png" alt="Reporte de Importación Gephi" width="70%" />
 <p class="caption">
 Figura 4.4: Reporte de Importación Gephi
@@ -661,7 +742,7 @@ Figura 4.4: Reporte de Importación Gephi
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:apariencia"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:apariencia"></span>
 <img src="images/02-Fig-5_apariencia.png" alt="Pestaña de Apariencia " width="50%" />
 <p class="caption">
 Figura 2.4: Pestaña de Apariencia
@@ -677,7 +758,7 @@ Figura 2.4: Pestaña de Apariencia
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:diseno"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:diseno"></span>
 <img src="images/02-Fig_6_Layout.png" alt="Pestaña de Diseño" width="50%" />
 <p class="caption">
 Figura 4.5: Pestaña de Diseño
@@ -693,7 +774,7 @@ Figura 4.5: Pestaña de Diseño
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:botones"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:botones"></span>
 <img src="images/01-botones_gephi.png" alt="Botones en Gephi" width="70%" />
 <p class="caption">
 Figura 4.6: Botones en Gephi
@@ -709,13 +790,13 @@ Figura 4.6: Botones en Gephi
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:globales"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:globales"></span>
 <img src="images/01-botones_gephi2.png" alt="Pestaña de Controles Globales en Gephi" width="70%" />
 <p class="caption">
 Figura 4.7: Pestaña de Controles Globales en Gephi
 </p>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:globales2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:globales2"></span>
 <img src="images/01-botones_gephi3.png" alt="Pestaña de Control de Aristas" width="70%" />
 <p class="caption">
 Figura 4.8: Pestaña de Control de Aristas
@@ -731,7 +812,7 @@ Figura 4.8: Pestaña de Control de Aristas
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:globales3"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:globales3"></span>
 <img src="images/01-botones_gephi4.png" alt="Panel de Control de Etiquetas en Gephi" width="70%" />
 <p class="caption">
 Figura 4.9: Panel de Control de Etiquetas en Gephi
@@ -759,7 +840,7 @@ Figura 4.9: Panel de Control de Etiquetas en Gephi
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:ego"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:ego"></span>
 <img src="images/02-Fig_10_Patek_Ego.png" alt="Red con Patek Resaltado" width="75%" />
 <p class="caption">
 Figura 4.10: Red con Patek Resaltado
@@ -776,7 +857,7 @@ Figura 4.10: Red con Patek Resaltado
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:edges-table"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:edges-table"></span>
 <img src="images/02-Fig_11_Gephi_Edge_List.png" alt="Lista de Aristas en la Table de Datos" width="75%" />
 <p class="caption">
 Figura 2.16: Lista de Aristas en la Table de Datos
@@ -794,7 +875,7 @@ Figura 2.16: Lista de Aristas en la Table de Datos
 </div>
 </div>
 </div>
-<div id="guardar-gráfico-de-red-en-gephi" class="section level3">
+<div id="guardar-gráfico-de-red-en-gephi" class="section level3" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> Guardar Gráfico de Red en Gephi</h3>
 <div class="row">
 <div class="lcolumn-20">
@@ -806,7 +887,7 @@ Figura 2.16: Lista de Aristas en la Table de Datos
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:preview"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:preview"></span>
 <img src="images/02-Fig-12_preview.png" alt="Ventana de Previsualización" width="75%" />
 <p class="caption">
 Figura 2.18: Ventana de Previsualización
@@ -843,7 +924,7 @@ Figura 2.18: Ventana de Previsualización
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:preview2"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:preview2"></span>
 <img src="images/02-Fig-13_preview.png" alt="Ventana de Previsualización con Ajustes" width="75%" />
 <p class="caption">
 Figura 4.11: Ventana de Previsualización con Ajustes
@@ -860,7 +941,7 @@ Figura 4.11: Ventana de Previsualización con Ajustes
 </div>
 </div>
 </div>
-<div id="importación-de-listas-de-aristas-modo-uno" class="section level3">
+<div id="importación-de-listas-de-aristas-modo-uno" class="section level3" number="4.4.3">
 <h3><span class="header-section-number">4.4.3</span> Importación de Listas de Aristas Modo-Uno</h3>
 <div class="row">
 <div class="lcolumn-20">
@@ -873,7 +954,7 @@ Figura 4.11: Ventana de Previsualización con Ajustes
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:importacion"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:importacion"></span>
 <img src="images/01-impotacion.png" alt="Cuadro de Diálogo de Importación" width="70%" />
 <p class="caption">
 Figura 4.12: Cuadro de Diálogo de Importación
@@ -941,7 +1022,7 @@ Figura 4.12: Cuadro de Diálogo de Importación
 </ol>
 </div>
 </div>
-<div class="figure" style="text-align: center"><span id="fig:rol"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:rol"></span>
 <img src="images/01-rol.png" alt="Red Koschade, Color de Nodos = Rol" width="70%" />
 <p class="caption">
 Figura 4.13: Red Koschade, Color de Nodos = Rol
@@ -951,16 +1032,16 @@ Figura 4.13: Red Koschade, Color de Nodos = Rol
 </div>
 </div>
 </div>
-<h3> Referencias</h3>
-<div id="refs" class="references">
-<div id="ref-Borgatti2018">
-<p>Borgatti, S. P., Everett, M. G., &amp; Johnson, J. C. (2018). <em>Analyzing social networks</em>. Sage.</p>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Borgatti2018" class="csl-entry">
+Borgatti, S. P., Everett, M. G., &amp; Johnson, J. C. (2018). <em>Analyzing social networks</em>. Sage.
 </div>
-<div id="ref-Cunningham2016">
-<p>Cunningham, D., Everton, S. F., &amp; Murphy, P. (2016). <em>Understanding dark networks: A strategic framework for the use of social network analysis</em>. Rowman; Littlefield.</p>
+<div id="ref-Cunningham2016" class="csl-entry">
+Cunningham, D., Everton, S. F., &amp; Murphy, P. (2016). <em>Understanding dark networks: A strategic framework for the use of social network analysis</em>. Rowman; Littlefield.
 </div>
-<div id="ref-Hanneman2005">
-<p>Hanneman, R. A., &amp; Riddle, M. (2005). <em>Introduction to social network methods</em>. University of California.</p>
+<div id="ref-Hanneman2005" class="csl-entry">
+Hanneman, R. A., &amp; Riddle, M. (2005). <em>Introduction to social network methods</em>. University of California.
 </div>
 </div>
             </section>
@@ -991,8 +1072,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cjcallag/arso/edit/main/02-recording-data.Rmd",
-"text": "Edit"
+"link": "https://github.com/cjcallag/arso/edit/editing/02-recording-data.Rmd",
+"text": "Editar"
 },
 "history": {
 "link": null,
@@ -1003,15 +1084,22 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
-"css": "arso.css",
 "font_settings": {
-"theme": "white",
 "family": "sans",
+"theme": "white",
 "size": 2
+},
+"info": true,
+"toolbar": {
+"position": "fixed"
 }
 });
 });

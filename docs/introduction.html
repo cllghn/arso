@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Análisis de Redes Sociales: Una (Breve) Introducción | Análisis de Redes Sociales Oscuras</title>
+  <title>1 Análisis de Redes Sociales: Una (Breve) Introducción | Análisis de Redes Sociales</title>
   <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
-  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Análisis de Redes Sociales: Una (Breve) Introducción | Análisis de Redes Sociales Oscuras" />
+  <meta property="og:title" content="1 Análisis de Redes Sociales: Una (Breve) Introducción | Análisis de Redes Sociales" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Análisis de Redes Sociales: Una (Breve) Introducción | Análisis de Redes Sociales Oscuras" />
+  <meta name="twitter:title" content="1 Análisis de Redes Sociales: Una (Breve) Introducción | Análisis de Redes Sociales" />
   
   <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
@@ -32,7 +32,9 @@
   
 <link rel="prev" href="index.html"/>
 <link rel="next" href="trabajando-con-gephi.html"/>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,19 +51,41 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
-<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
 <link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.16/datatables.js"></script>
+<script src="libs/datatables-binding-0.19/datatables.js"></script>
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.1.0.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.0.1/js/crosstalk.min.js"></script>
+<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
 
 
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="arso.css" type="text/css" />
 </head>
@@ -76,20 +100,21 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Análisis de Redes Sociales Oscuras</a></li>
+<li><a href="./">Análisis de Redes Sociales</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Bienvenida</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introducción</a>
+<ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#colaboradores"><i class="fa fa-check"></i>Colaboradores</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 </ul></li>
-</ul></li>
-<li class="part"><span><b>I Introducción</b></span></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a><ul>
+<li class="part"><span><b>I ¿ Qué es el ARSo?</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
+<ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
-<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a><ul>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a>
+<ul>
 <li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#interdependencia-de-los-actores"><i class="fa fa-check"></i><b>1.2.1</b> Interdependencia de los Actores</a></li>
 <li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#lazos-como-conductos"><i class="fa fa-check"></i><b>1.2.2</b> Lazos como Conductos</a></li>
 <li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#estructura-social-y-formaciones-sociales-emergentes"><i class="fa fa-check"></i><b>1.2.3</b> Estructura Social y Formaciones Sociales Emergentes</a></li>
@@ -97,7 +122,8 @@
 <li class="chapter" data-level="1.2.5" data-path="introduction.html"><a href="introduction.html#redes-sociales-dinámicas"><i class="fa fa-check"></i><b>1.2.5</b> Redes sociales dinámicas</a></li>
 <li class="chapter" data-level="1.2.6" data-path="introduction.html"><a href="introduction.html#resumen-redes-sociales-agencia-humana-y-cultura"><i class="fa fa-check"></i><b>1.2.6</b> Resumen: Redes Sociales, Agencia Humana y Cultura</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a><ul>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a>
+<ul>
 <li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#actores-y-enlaces"><i class="fa fa-check"></i><b>1.3.1</b> Actores y Enlaces</a></li>
 <li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#redes-sociales"><i class="fa fa-check"></i><b>1.3.2</b> Redes Sociales</a></li>
 <li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#camino-y-distancia-de-caminos"><i class="fa fa-check"></i><b>1.3.3</b> Camino (y Distancia de Caminos)</a></li>
@@ -112,10 +138,12 @@
 <li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#resumen-y-conclusiones"><i class="fa fa-check"></i><b>1.4</b> Resumen y Conclusiones</a></li>
 </ul></li>
 <li class="part"><span><b>II ARSo: Tecnicas</b></span></li>
-<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a><ul>
-<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
 <li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
-<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a><ul>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a>
+<ul>
 <li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
 <li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
@@ -124,55 +152,68 @@
 <li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a><ul>
-<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a><ul>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a>
+<ul>
 <li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
 <li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
 </ul></li>
 <li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
 <li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a><ul>
-<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a><ul>
+<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a>
+<ul>
 <li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
-<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a><ul>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a>
+<ul>
 <li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
 <li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
 </ul></li>
 <li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
-<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
 <li class="chapter" data-level="4.4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#guardar-gráfico-de-red-en-gephi"><i class="fa fa-check"></i><b>4.4.2</b> Guardar Gráfico de Red en Gephi</a></li>
 <li class="chapter" data-level="4.4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#importación-de-listas-de-aristas-modo-uno"><i class="fa fa-check"></i><b>4.4.3</b> Importación de Listas de Aristas Modo-Uno</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a><ul>
+<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a>
+<ul>
 <li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
 <li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
-<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
 <li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a><ul>
+<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a>
+<ul>
 <li class="chapter" data-level="6.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#matrices-y-listas-de-aristas"><i class="fa fa-check"></i><b>6.1</b> Matrices y Listas de Aristas</a></li>
-<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a><ul>
+<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a>
+<ul>
 <li class="chapter" data-level="6.2.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#apilar"><i class="fa fa-check"></i><b>6.2.1</b> Apilar</a></li>
 <li class="chapter" data-level="6.2.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#agregar"><i class="fa fa-check"></i><b>6.2.2</b> Agregar</a></li>
 <li class="chapter" data-level="6.2.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#recombinar"><i class="fa fa-check"></i><b>6.2.3</b> Recombinar</a></li>
 </ul></li>
-<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="6.3.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#importar-múltiples-redes-a-gephi"><i class="fa fa-check"></i><b>6.3.1</b> Importar múltiples redes a Gephi</a></li>
 <li class="chapter" data-level="6.3.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a><ul>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a>
+<ul>
 <li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
 <li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
-<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
 <li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
 <li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
@@ -181,74 +222,114 @@
 </ul></li>
 </ul></li>
 <li class="part"><span><b>III ARSo: Medidas</b></span></li>
-<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a><ul>
-<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a><ul>
+<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a>
+<ul>
 <li class="chapter" data-level="8.1.1" data-path="topología-1.html"><a href="topología-1.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
 <li class="chapter" data-level="8.1.2" data-path="topología-1.html"><a href="topología-1.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
 <li class="chapter" data-level="8.1.3" data-path="topología-1.html"><a href="topología-1.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
 </ul></li>
-<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a><ul>
+<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a>
+<ul>
 <li class="chapter" data-level="8.2.1" data-path="topología-1.html"><a href="topología-1.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
 <li class="chapter" data-level="8.2.2" data-path="topología-1.html"><a href="topología-1.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a><ul>
+<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a>
+<ul>
 <li class="chapter" data-level="8.3.1" data-path="topología-1.html"><a href="topología-1.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="8.4.1" data-path="topología-1.html"><a href="topología-1.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="8.4.2" data-path="topología-1.html"><a href="topología-1.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a><ul>
-<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a><ul>
+<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a>
+<ul>
 <li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
 <li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
 <li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
 <li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
-<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="9.5.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.5.1</b> Antes de Empezar</a></li>
 <li class="chapter" data-level="9.5.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.5.2</b> Identificación de Subgrupos en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a><ul>
-<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a><ul>
+<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a>
+<ul>
 <li class="chapter" data-level="10.1.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia"><i class="fa fa-check"></i><b>10.1.1</b> Medidas Basadas en Frecuencia</a></li>
 <li class="chapter" data-level="10.1.2" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-distancia"><i class="fa fa-check"></i><b>10.1.2</b> Medidas Basadas en Distancia</a></li>
 <li class="chapter" data-level="10.1.3" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-caminos"><i class="fa fa-check"></i><b>10.1.3</b> Medidas Basadas en Caminos</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a><ul>
+<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a>
+<ul>
 <li class="chapter" data-level="10.2.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia-1"><i class="fa fa-check"></i><b>10.2.1</b> Medidas Basadas en Frecuencia</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="10.3.1" data-path="centralidad-1.html"><a href="centralidad-1.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.3.1</b> Centralidad en Gephi</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a><ul>
+<li class="chapter" data-level="11" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html"><i class="fa fa-check"></i><b>11</b> Puentes y Corredores</a>
+<ul>
 <li class="chapter" data-level="11.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puntos-de-corte"><i class="fa fa-check"></i><b>11.1</b> Puntos de Corte</a></li>
 <li class="chapter" data-level="11.2" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#bi-componentes-y-puentes"><i class="fa fa-check"></i><b>11.2</b> Bi-componentes y Puentes</a></li>
 <li class="chapter" data-level="11.3" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#intermediación-de-borde"><i class="fa fa-check"></i><b>11.3</b> Intermediación de borde</a></li>
 <li class="chapter" data-level="11.4" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#agujeros-estructurales-restricción-y-autonomía"><i class="fa fa-check"></i><b>11.4</b> Agujeros Estructurales, Restricción y Autonomía</a></li>
-<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a><ul>
+<li class="chapter" data-level="11.5" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#ejercicio-práctico-7"><i class="fa fa-check"></i><b>11.5</b> Ejercicio Práctico</a>
+<ul>
 <li class="chapter" data-level="11.5.1" data-path="puentes-y-corredores-1.html"><a href="puentes-y-corredores-1.html#puentes-y-corredores-en-gephi"><i class="fa fa-check"></i><b>11.5.1</b> Puentes y Corredores en Gephi</a></li>
 </ul></li>
 </ul></li>
 <li class="part"><span><b>IV Aplicaciones</b></span></li>
-<li class="part"><span><b>V Apéndices</b></span></li>
-<li class="chapter" data-level="12" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>12</b> Glosario de Términos</a></li>
-<li class="chapter" data-level="13" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html"><i class="fa fa-check"></i><b>13</b> Libro de Códigos</a><ul>
-<li class="chapter" data-level="13.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>13.1</b> Libro de Códigos de Muestra</a><ul>
-<li class="chapter" data-level="13.1.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones"><i class="fa fa-check"></i><b>13.1.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.1.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-1"><i class="fa fa-check"></i><b>13.1.2</b> Atributos</a></li>
+<li class="chapter" data-level="12" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>12</b> Un Proceso de Diseño para la Investigación de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>12.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>12.1.1</b> Pregunata(s) de Investigación</a></li>
+<li class="chapter" data-level="12.1.2" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>12.1.2</b> Limites</a></li>
+<li class="chapter" data-level="12.1.3" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>12.1.3</b> Codificar Relaciones y Atributos</a></li>
+<li class="chapter" data-level="12.1.4" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>12.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
+<li class="chapter" data-level="12.1.5" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#conclusiones"><i class="fa fa-check"></i><b>12.1.5</b> Conclusiones</a></li>
 </ul></li>
-<li class="chapter" data-level="13.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>13.2</b> Libro de Códigos de Noordin Top</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones-1"><i class="fa fa-check"></i><b>13.2.1</b> Relaciones</a></li>
-<li class="chapter" data-level="13.2.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-2"><i class="fa fa-check"></i><b>13.2.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html"><i class="fa fa-check"></i><b>13</b> Ejemplos Practicos</a>
+<ul>
+<li class="chapter" data-level="" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#informe-de-la-red-criminal-en-la-república-de-panamá"><i class="fa fa-check"></i>Informe de la Red Criminal en la República de Panamá</a>
+<ul>
+<li class="chapter" data-level="13.0.1" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#libro-de-códigos"><i class="fa fa-check"></i><b>13.0.1</b> Libro de Códigos</a></li>
+<li class="chapter" data-level="13.0.2" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html#mapa-de-red"><i class="fa fa-check"></i><b>13.0.2</b> Mapa de red</a></li>
 </ul></li>
 </ul></li>
-<li class="part"><span><b>VI Referencias</b></span></li>
-<li class="chapter" data-level="14" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>14</b> Referencias</a></li>
+<li class="appendix"><span><b>Apéndices</b></span></li>
+<li class="chapter" data-level="A" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>A</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="B" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html"><i class="fa fa-check"></i><b>B</b> Libro de Códigos</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>B.1</b> Libro de Códigos de Muestra</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-2"><i class="fa fa-check"></i><b>B.1.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.1.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-3"><i class="fa fa-check"></i><b>B.1.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>B.2</b> Libro de Códigos de Noordin Top</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#relaciones-3"><i class="fa fa-check"></i><b>B.2.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.2.2" data-path="libro-de-códigos-1.html"><a href="libro-de-códigos-1.html#atributos-4"><i class="fa fa-check"></i><b>B.2.2</b> Atributos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Referencias</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">
+Publicado con bookdown</a></li>
+
 </ul>
 
       </nav>
@@ -258,7 +339,7 @@
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales Oscuras</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales</a>
           </h1>
         </div>
 
@@ -266,37 +347,37 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="introduction" class="section level1">
+<div id="introduction" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> Análisis de Redes Sociales: Una (Breve) Introducción</h1>
-<p>Georg Simmel <span class="citation">(Simmel, <a href="#ref-Simmel1950" role="doc-biblioref">1950</a>)</span> es visto generalmente como el precursor intelectual del análisis de redes sociales (ARSo). Argumentó que para comprender el comportamiento social, debemos estudiar los patrones de interacción, y sus estudios ofrecieron conocimientos penetrantes, por ejemplo, sobre la naturaleza de las sociedades secretas, la dinámica de las díadas y tríadas, y cómo la creciente complejidad social ha llevado a mayores niveles de individualismo. Los estudios de Simmel continúan influyendo la disciplina la actualmente, sin embargo, podemos rastrear el surgimiento del análisis de redes sociales a dos corrientes principales de pensamiento: el trabajo de los psicólogos y los antropólogos sociales. La primera corriente enfatizó cómo los patrones organizados dan forma a la forma en que vemos e interpretamos el mundo, mientras que la segunda se centró en la relación entre los patrones y la estructura sociales. Ambas ayudaron a sentar la base para el desarrollo formal de ARSo en Harvard en las décadas de 1960 y 1970, dirigido por el sociólogo Harrison White <span class="citation">(White, <a href="#ref-White2008" role="doc-biblioref">2008</a>)</span> y sus estudiantes (por ejemplo, Ronald Breiger, Kathleen Carley, Bonnie Erickson, Ivan Chase, Mark Granovetter, Michael Schwartz y Barry Wellman). White, quien obtuvo su doctorado en física teórica, argumentó que la sociología, a pesar de su pretensión de estudiar los fenómenos sociales, estaba en deuda con formas individualistas de análisis basadas en las características agregadas de los individuos, a menudo con la ayuda del análisis estadístico de los datos de encuestas. En respuesta, desarrolló un enfoque basado en estudios centrados en las relaciones sociales y los patrones que surgieron de ellas.</p>
+<p>Georg Simmel <span class="citation">(<a href="#ref-Simmel1950" role="doc-biblioref">Simmel, 1950</a>)</span> es visto generalmente como el precursor intelectual del análisis de redes sociales (ARSo). Argumentó que para comprender el comportamiento social, debemos estudiar los patrones de interacción, y sus estudios ofrecieron conocimientos penetrantes, por ejemplo, sobre la naturaleza de las sociedades secretas, la dinámica de las díadas y tríadas, y cómo la creciente complejidad social ha llevado a mayores niveles de individualismo. Los estudios de Simmel continúan influyendo la disciplina la actualmente, sin embargo, podemos rastrear el surgimiento del análisis de redes sociales a dos corrientes principales de pensamiento: el trabajo de los psicólogos y los antropólogos sociales. La primera corriente enfatizó cómo los patrones organizados dan forma a la forma en que vemos e interpretamos el mundo, mientras que la segunda se centró en la relación entre los patrones y la estructura sociales. Ambas ayudaron a sentar la base para el desarrollo formal de ARSo en Harvard en las décadas de 1960 y 1970, dirigido por el sociólogo Harrison White <span class="citation">(<a href="#ref-White2008" role="doc-biblioref">White, 2008</a>)</span> y sus estudiantes (por ejemplo, Ronald Breiger, Kathleen Carley, Bonnie Erickson, Ivan Chase, Mark Granovetter, Michael Schwartz y Barry Wellman). White, quien obtuvo su doctorado en física teórica, argumentó que la sociología, a pesar de su pretensión de estudiar los fenómenos sociales, estaba en deuda con formas individualistas de análisis basadas en las características agregadas de los individuos, a menudo con la ayuda del análisis estadístico de los datos de encuestas. En respuesta, desarrolló un enfoque basado en estudios centrados en las relaciones sociales y los patrones que surgieron de ellas.</p>
 <p>Los esfuerzos de White no ocurrieron en el vacío. Otras tradiciones teóricas también informaron el desarrollo del ARSo, como la teoría de grafos, la teoría del intercambio y la investigación sobre el reclutamiento de individuos para movimientos religiosos y sociales. En los últimos años, los economistas se han interesado cada vez más en las redes sociales, al igual que los físicos y otros científicos. Esto ha llevado a un mayor interés en el ARSo, atrayendo a investigadores de diversas disciplinas y generando varios estudios altamente creativos.</p>
 <p>¿Qué es el análisis de redes sociales? En pocas palabras, es una colección de teorías y métodos que asume que el comportamiento de los actores se ve afectado por sus vínculos con los demás y las redes en las que están integrados. En lugar de asumir que los actores no son afectados por quienes los rodean, ARSo asume que los patrones de interacción afectan lo que dicen, hacen y creen los actores. Aunque algunas interacciones son al azar, muchas no lo son. Es decir, los actores tienden a interactuar con otros similares, y la interacción repetida puede conducir al surgimiento de la formación social a nivel micro (por ejemplo, individual), meso (por ejemplo, grupo) y macro (por ejemplo, instituciones, naciones) que pueden ser la unidad de análisis. El ARSo se diferencia de otros enfoques cuantitativos tradicionales, que tienden a centrarse en los atributos de los actores (por ejemplo, género, raza, educación), pues el ARSo se centra en cómo los patrones de interacción afectan el comportamiento. Debido a que los atributos no cambian en los contextos sociales, no pueden explicar ninguna variación en el comportamiento de un actor, lo que sugiere que los patrones de interacción son tan (o quizás más) importantes para comprender el comportamiento que los atributos:</p>
 <blockquote>
-<p>Una mujer que tiene un trabajo servil que requiere poca iniciativa en una oficina puede ser una líder dinámica de una asociación de vecinos y una participante asertiva de la asociación de padres de familia. Esas diferencias de comportamiento son difíciles de reconciliar con atributos inmutables de género, edad y estatus, pero son comprensibles al reconocer que las relaciones estructurales de las personas pueden variar notablemente en los contextos sociales – <span class="citation">(Knoke &amp; Yang, <a href="#ref-Knoke2007" role="doc-biblioref">2007</a>, p. 5)</span>.</p>
+<p>Una mujer que tiene un trabajo servil que requiere poca iniciativa en una oficina puede ser una líder dinámica de una asociación de vecinos y una participante asertiva de la asociación de padres de familia. Esas diferencias de comportamiento son difíciles de reconciliar con atributos inmutables de género, edad y estatus, pero son comprensibles al reconocer que las relaciones estructurales de las personas pueden variar notablemente en los contextos sociales – <span class="citation">(<a href="#ref-Knoke2007" role="doc-biblioref">Knoke &amp; Yang, 2007, p. 5</a>)</span>.</p>
 </blockquote>
-<p>Consecuentemente, un objetivo principal del ARSo ha sido desarrollar métricas para ayudar a los analistas a comprender mejor las características estructurales de una red en particular. Esta metodología se ha utilizado con éxito para explicar variedades de comportamiento principalmente porque obliga a los investigadores a “pensar en términos de restricciones y opciones inherentes a la forma en que se organizan las relaciones sociales” <span class="citation">(Raab &amp; Milward, <a href="#ref-Raab2003" role="doc-biblioref">2003</a>)</span>. El resto de este capítulo presenta los términos, conceptos y suposiciones básicas de ARSo. Sin embargo, antes de hacerlo, señalamos brevemente algunos de los conceptos erróneos que rodean al ARSo.</p>
-<div id="conceptos-erróneos-y-diferencias" class="section level2">
+<p>Consecuentemente, un objetivo principal del ARSo ha sido desarrollar métricas para ayudar a los analistas a comprender mejor las características estructurales de una red en particular. Esta metodología se ha utilizado con éxito para explicar variedades de comportamiento principalmente porque obliga a los investigadores a “pensar en términos de restricciones y opciones inherentes a la forma en que se organizan las relaciones sociales” <span class="citation">(<a href="#ref-Raab2003" role="doc-biblioref">Raab &amp; Milward, 2003</a>)</span>. El resto de este capítulo presenta los términos, conceptos y suposiciones básicas de ARSo. Sin embargo, antes de hacerlo, señalamos brevemente algunos de los conceptos erróneos que rodean al ARSo.</p>
+<div id="conceptos-erróneos-y-diferencias" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> Conceptos Erróneos y Diferencias</h2>
 <p>El termino análisis de redes sociales a veces se confunde con medios sociales y análisis de medios sociales. Es decir, cuando las personas escuchan que van a aprender el análisis de redes sociales, a menudo piensan que aprenderán a extraer datos de medio sociales como Facebook y Twitter. ARSo es una colección de teorías y métodos que se han desarrollado para comprender la estructura de las redes sociales. Por el contrario, los medios sociales constan de plataformas y contenido generado por el usuario que puede incluir texto, imágenes, videos, conexiones entre usuarios y enlaces a sitios web. El hecho de que el contenido de los medios sociales es a menudo relacional puede aumentar la confusión. Para clarificar, los analistas pueden extraer datos de los medios sociales y, posteriormente, utilizar ARSo para comprender ciertos aspectos de estas redes sociales (por ejemplo, seguidores en una red de Twitter de usuario a usuario). Sin embargo, es importante hacer la diferenciación.</p>
-<p>La forma en que algunos usan el término “red” también puede resultar confusa. Algunos lo usan para referirse a tipos de organizaciones descentralizadas, informales y/u orgánicas <span class="citation">(Burns &amp; Stalker, <a href="#ref-Burns1961" role="doc-biblioref">1961</a>; Podolny &amp; Page, <a href="#ref-Podolny1998" role="doc-biblioref">1998</a>; Powell, <a href="#ref-Powell1990" role="doc-biblioref">1990</a>; Powell &amp; Smith-Doerr, <a href="#ref-Powell1994" role="doc-biblioref">1994</a>; Ronfeldt &amp; Arquilla, <a href="#ref-Ronfeldt2001" role="doc-biblioref">2001</a>)</span>. Esta distinción puede ser útil, pero dentro del mundo del análisis de redes sociales, todas las organizaciones son redes. Algunas pueden ser más jerárquicas que otras, pero siguen siendo redes <span class="citation">(Nohria, <a href="#ref-Nohria1992" role="doc-biblioref">1992</a>)</span>. Es por ello que los analistas de redes sociales han desarrollado algoritmos que miden el grado en que una red en particular es jerárquica o no (ver, por ejemplo, <span class="citation">Davis (<a href="#ref-Davis1979" role="doc-biblioref">1979</a>)</span>; <span class="citation">Nooy, Mrvar, &amp; Batagelj (<a href="#ref-deNooy2005" role="doc-biblioref">2005</a>)</span>; <span class="citation">Krackhardt (<a href="#ref-Krackhardt1994" role="doc-biblioref">1994</a>)</span>).</p>
+<p>La forma en que algunos usan el término “red” también puede resultar confusa. Algunos lo usan para referirse a tipos de organizaciones descentralizadas, informales y/u orgánicas <span class="citation">(<a href="#ref-Burns1961" role="doc-biblioref">Burns &amp; Stalker, 1961</a>; <a href="#ref-Podolny1998" role="doc-biblioref">Podolny &amp; Page, 1998</a>; <a href="#ref-Powell1990" role="doc-biblioref">Powell, 1990</a>; <a href="#ref-Powell1994" role="doc-biblioref">Powell &amp; Smith-Doerr, 1994</a>; <a href="#ref-Ronfeldt2001" role="doc-biblioref">Ronfeldt &amp; Arquilla, 2001</a>)</span>. Esta distinción puede ser útil, pero dentro del mundo del análisis de redes sociales, todas las organizaciones son redes. Algunas pueden ser más jerárquicas que otras, pero siguen siendo redes <span class="citation">(<a href="#ref-Nohria1992" role="doc-biblioref">Nohria, 1992</a>)</span>. Es por ello que los analistas de redes sociales han desarrollado algoritmos que miden el grado en que una red en particular es jerárquica o no (ver, por ejemplo, <span class="citation"><a href="#ref-Davis1979" role="doc-biblioref">Davis</a> (<a href="#ref-Davis1979" role="doc-biblioref">1979</a>)</span>; <span class="citation"><a href="#ref-deNooy2005" role="doc-biblioref">Nooy, Mrvar, &amp; Batagelj</a> (<a href="#ref-deNooy2005" role="doc-biblioref">2005</a>)</span>; <span class="citation"><a href="#ref-Krackhardt1994" role="doc-biblioref">Krackhardt</a> (<a href="#ref-Krackhardt1994" role="doc-biblioref">1994</a>)</span>).</p>
 <p>Finalmente, el ARSo a veces se confunde con el análisis de enlaces, una metodología relacionada pero distinta que examina los patrones relacionales de varios objetos. Una diferencia fundamental entre los dos es que, si bien los diagramas de análisis de enlaces a menudo incluyen diferentes tipos de objetos (por ejemplo, individuos, automóviles, teléfonos celulares, etc.) y los vínculos entre ellos, los diagramas de redes sociales solo incluyen vínculos entre tipos similares de objetos. Tomemos, por ejemplo, un diagrama de análisis de vínculos en el que dos individuos (A y B) tienen vínculos con otros cinco objetos, pero los objetos con los que tienen vínculos difieren entre sí (Figura <a href="introduction.html#fig:links">1.1</a>). En este ejemplo, la persona A está vinculada a la persona B, así como a una bomba, un teléfono celular, una casa y un automóvil, mientras que la persona B está vinculada a cuatro personas (A, C, D y E) y un teléfono celular. Si bien ambos tienen cinco vínculos (que es la definición de grado de centralidad; consulte la discusión sobre centralidad a continuación), no podemos comparar de manera significativa el número de vínculos de estos dos individuos porque son de diferentes tipos de objetos. Sería como comparar manzanas y naranjas.</p>
-<div class="figure" style="text-align: center"><span id="fig:links"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:links"></span>
 <img src="images/01-links.png" alt="Ejemplo de un análisis de enlaces" width="70%" />
 <p class="caption">
 Figura 1.1: Ejemplo de un análisis de enlaces
 </p>
 </div>
 <p>En el ARSo, los actores tienen vínculos con objetos similares, lo que hace significativa la comparación directa del número de vínculos. Esto se ilustra en la Figura <a href="introduction.html#fig:arso">1.2</a> donde en el panel de la izquierda, los individuos A y B tienen cada uno cinco vínculos con otros cinco individuos, mientras que en el derecho, tienen cinco vínculos con cinco escuelas diferentes. En ambos casos, los lazos de A son comparables a los de B porque son del mismo tipo de objeto. Aunque los analistas de redes sociales están interesados en más que el recuento de los lazos de los actores, otros algoritmos de análisis de redes sociales generalmente asumen que los lazos se dan entre tipos similares de objetos.</p>
-<div class="figure" style="text-align: center"><span id="fig:arso"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:arso"></span>
 <img src="images/01-arso.png" alt="Ejemplo de diagramas de red" width="70%" />
 <p class="caption">
 Figura 1.2: Ejemplo de diagramas de red
 </p>
 </div>
 </div>
-<div id="suposiciones" class="section level2">
+<div id="suposiciones" class="section level2" number="1.2">
 <h2><span class="header-section-number">1.2</span> Suposiciones</h2>
-<p>La mayoría de las teorías y métodos de ARSo se basan en un conjunto común de suposiciones <span class="citation">(Azarian, <a href="#ref-Azarian2005" role="doc-biblioref">2005</a>; Knoke &amp; Yang, <a href="#ref-Knoke2007" role="doc-biblioref">2007</a>; Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>)</span>:</p>
+<p>La mayoría de las teorías y métodos de ARSo se basan en un conjunto común de suposiciones <span class="citation">(<a href="#ref-Azarian2005" role="doc-biblioref">Azarian, 2005</a>; <a href="#ref-Knoke2007" role="doc-biblioref">Knoke &amp; Yang, 2007</a>; <a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994</a>)</span>:</p>
 <ul>
 <li>Los actores y sus acciones relacionadas son interdependientes, en lugar de independientes, con otros actores</li>
 <li>Los vínculos entre actores son conductos para la transferencia o el flujo de diversos tipos de bienes o recursos materiales y/o no materiales (por ejemplo, fondos, creencias, confianza, etc.)</li>
@@ -305,84 +386,84 @@ Figura 1.2: Ejemplo de diagramas de red
 <li>La ubicación de los actores en la estructura social (es decir, su ubicación estructural) impacta sus creencias, normas y comportamiento observado</li>
 <li>Las redes sociales son entidades dinámicas que cambian a medida que los actores, subgrupos y vínculos entre actores entran, se forman, salen o se eliminan de la red</li>
 </ul>
-<div id="interdependencia-de-los-actores" class="section level3">
+<div id="interdependencia-de-los-actores" class="section level3" number="1.2.1">
 <h3><span class="header-section-number">1.2.1</span> Interdependencia de los Actores</h3>
 <p>El ARSo asume que los actores no toman decisiones de forma autónoma, sino que están sustancialmente influenciados por el comportamiento y las decisiones de otros actores. Esta suposición difiere de la perspectiva de elección racional “pura” en la que los actores actúan independientemente de aquellos con quienes interactúan. Estudios como los experimentos de conformidad social de Solomon Asch <span class="citation">(<a href="#ref-Asch1951" role="doc-biblioref">1951</a>)</span>, los experimentos de obediencia a la autoridad de Stanley Milgram <span class="citation">(<a href="#ref-Milgram1974" role="doc-biblioref">1974</a>)</span> y el experimento de la prisión de Philip Zimbardo <span class="citation">(<a href="#ref-Zimbardo1972" role="doc-biblioref">1972</a>)</span> destacan cómo las redes en las que están inmersos los actores pueden influir en su comportamiento. Estos estudios sugieren que, en lugar de actuar independientemente de quienes los rodean, las personas hacen lo contrario. Los sujetos en el experimento de Asch optaron por estar de acuerdo con la multitud frente a la presión de los compañeros, incluso cuando la respuesta correcta era obvia. Los sujetos de Milgram tomaron decisiones en presencia de autoridad que probablemente no habrían hecho en un contexto diferente. Y en solo unos días, los guardias de Zimbardo adquirieron un sorprendente nivel de brutalidad, que presagió las actividades que tomaron lugar en la prisión de Abu Ghraib y el debacle que consiguió treinta años después.</p>
-<p>Los individuos no son los únicos actores influenciados por otros actores. Por ejemplo, John Meyer, Woody Powell y Paul DiMaggio (y numerosos colegas) han demostrado que los grupos, corporaciones y estados-nación no tienen más probabilidades de actuar de forma autónoma que los individuos (ver, por ejemplo, <span class="citation">DiMaggio &amp; Powell (<a href="#ref-DiMaggio1983" role="doc-biblioref">1983</a>)</span>; <span class="citation">Meyer, Boli, Thomas, &amp; Ramirez (<a href="#ref-Meyer1997" role="doc-biblioref">1997</a>)</span>; <span class="citation">Meyer &amp; Rowan (<a href="#ref-Meyer1977" role="doc-biblioref">1977</a>)</span>). Cuanto más interactúan entre sí, más se parecen con el tiempo. Lo hacen no necesariamente por razones instrumentales, sino para mantener su legitimidad a los ojos de otros actores similares.</p>
+<p>Los individuos no son los únicos actores influenciados por otros actores. Por ejemplo, John Meyer, Woody Powell y Paul DiMaggio (y numerosos colegas) han demostrado que los grupos, corporaciones y estados-nación no tienen más probabilidades de actuar de forma autónoma que los individuos (ver, por ejemplo, <span class="citation"><a href="#ref-DiMaggio1983" role="doc-biblioref">DiMaggio &amp; Powell</a> (<a href="#ref-DiMaggio1983" role="doc-biblioref">1983</a>)</span>; <span class="citation"><a href="#ref-Meyer1997" role="doc-biblioref">Meyer, Boli, Thomas, &amp; Ramirez</a> (<a href="#ref-Meyer1997" role="doc-biblioref">1997</a>)</span>; <span class="citation"><a href="#ref-Meyer1977" role="doc-biblioref">Meyer &amp; Rowan</a> (<a href="#ref-Meyer1977" role="doc-biblioref">1977</a>)</span>). Cuanto más interactúan entre sí, más se parecen con el tiempo. Lo hacen no necesariamente por razones instrumentales, sino para mantener su legitimidad a los ojos de otros actores similares.</p>
 <blockquote>
-<p>Cuando una práctica o estructura organizacional se entiende comúnmente como una característica definitoria de una organización ‘legítima’ de cierto tipo, las élites de la organización se sienten presionados para instituir esa práctica o estructura. Si hay una norma cultural que dice: “Para que una organización sea una buena organización, debe tener la característica X”, las organizaciones se sienten presionadas para instituir la característica X – <span class="citation">(Chavez, <a href="#ref-Chavez1997" role="doc-biblioref">1961</a>, pp. 32–33)</span>.</p>
+<p>Cuando una práctica o estructura organizacional se entiende comúnmente como una característica definitoria de una organización ‘legítima’ de cierto tipo, las élites de la organización se sienten presionados para instituir esa práctica o estructura. Si hay una norma cultural que dice: “Para que una organización sea una buena organización, debe tener la característica X,” las organizaciones se sienten presionadas para instituir la característica X – <span class="citation">(<a href="#ref-Chavez1997" role="doc-biblioref">Chavez, 1961, pp. 32–33</a>)</span>.</p>
 </blockquote>
 </div>
-<div id="lazos-como-conductos" class="section level3">
+<div id="lazos-como-conductos" class="section level3" number="1.2.2">
 <h3><span class="header-section-number">1.2.2</span> Lazos como Conductos</h3>
 <p>Otra suposición es que los lazos (es decir, las relaciones) entre actores funcionan como conductos para el flujo de varios tipos de “bienes” materiales y no materiales, como información, sentimientos, recursos financieros, normas, enfermedades, opiniones y confianza. Quizás, el ejemplo más conocido de esto es el estudio de Granovetter <span class="citation">(<a href="#ref-Granovetter1973" role="doc-biblioref">1973</a>)</span> sobre cómo las personas encuentran sus trabajos actuales. Granovetter descubrió que era mucho más probable que las personas utilizaran contactos personales en comparación a otros medios cuando se trataba de encontrar trabajo. De aquellos que encontraron su trabajo a través de contactos personales, la mayoría de esos contactos eran débiles (es decir, conocidos) en lugar de lazos fuertes (es decir, amigos cercanos). ¿Por qué? Porque es menos probable que nuestros lazos débiles se involucren socialmente entre sí que nuestros lazos fuertes. Por ello, el conjunto de personas que componen nuestra red de conocidos tiende a ser relativamente escaso, mientras que el grupo de personas que componen nuestra red de amigos cercanos tiende a ser denso. Considere el patrón de lazos sociales sugerido por este argumento (Figura <a href="introduction.html#fig:strongweak">1.3</a>. La mayoría de las personas tendrán algunos amigos cercanos, la mayoría de los cuales se conocen entre sí. Probablemente también tengan varios conocidos, pocos de los cuales se conocen entre sí. Sin embargo, es probable que cada uno de estos conocidos tenga amigos cercanos propios, por lo que también es probable que estén integrados en sus propias redes altamente interconectadas, pero separadas de nuestro individuo original. Según Granovetter, los lazos débiles son importantes en términos de la estructura general de una red porque forman los puentes cruciales que unen a grupos de personas densamente unidas. De hecho, sin ellos, estos grupos no estarían conectados en absoluto.</p>
-<div class="figure" style="text-align: center"><span id="fig:strongweak"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:strongweak"></span>
 <img src="01-introduction_files/figure-html/strongweak-1.png" alt="Lazos fuertes y débiles" width="70%" />
 <p class="caption">
 Figura 1.3: Lazos fuertes y débiles
 </p>
 </div>
-<p>Esto llevó a Granovetter a argumentar que “cualquier cosa que se difunda”, ya sea información laboral, influencia, recursos, confianza, etc., “llegará a un mayor número de personas y viajará una mayor distancia […] cuando pasa por lazos débiles en lugar de fuertes” <span class="citation">(Granovetter, <a href="#ref-Granovetter1973" role="doc-biblioref">1973</a>, p. 1366)</span>. Debido a esto, es más probable que los actores con pocos lazos débiles “se limiten a las noticias provinciales y las opiniones de sus amigos cercanos” <span class="citation">(Granovetter, <a href="#ref-Granovetter1983" role="doc-biblioref">1983</a>, p. 2002)</span>. Además, los grupos o comunidades cuyos miembros carecen de vínculos débiles encontrarán más dificultades para movilizarse por una causa. Por ejemplo, al comparar dos intentos de organización comunitaria, uno que tuvo éxito y otro que no, Granovetter <span class="citation">(<a href="#ref-Granovetter1973" role="doc-biblioref">1973</a>, pp. 1373–1376)</span> argumentó que una diferencia crítica entre los dos era que el que no tuvo éxito carecía de los lazos débiles que necesitaba para unir sus diversos círculos sociales.</p>
+<p>Esto llevó a Granovetter a argumentar que “cualquier cosa que se difunda,” ya sea información laboral, influencia, recursos, confianza, etc., “llegará a un mayor número de personas y viajará una mayor distancia […] cuando pasa por lazos débiles en lugar de fuertes” <span class="citation">(<a href="#ref-Granovetter1973" role="doc-biblioref">Granovetter, 1973, p. 1366</a>)</span>. Debido a esto, es más probable que los actores con pocos lazos débiles “se limiten a las noticias provinciales y las opiniones de sus amigos cercanos” <span class="citation">(<a href="#ref-Granovetter1983" role="doc-biblioref">Granovetter, 1983, p. 2002</a>)</span>. Además, los grupos o comunidades cuyos miembros carecen de vínculos débiles encontrarán más dificultades para movilizarse por una causa. Por ejemplo, al comparar dos intentos de organización comunitaria, uno que tuvo éxito y otro que no, Granovetter <span class="citation">(<a href="#ref-Granovetter1973" role="doc-biblioref">1973, pp. 1373–1376</a>)</span> argumentó que una diferencia crítica entre los dos era que el que no tuvo éxito carecía de los lazos débiles que necesitaba para unir sus diversos círculos sociales.</p>
 <p>Esto no significa que los lazos fuertes tienen poco o ningún valor. Es más probable que los sentimientos de confianza y solidaridad se compartan entre lazos fuertes que entre los débiles. Así, mientras que los vínculos débiles brindan a las personas acceso a información y recursos más allá de sus círculos sociales inmediatos, los vínculos fuertes suelen ser fuentes de apoyo en tiempos de incertidumbre. De hecho, es más probable que las personas con numerosos vínculos fuertes sean más felices y disfruten de una mejor salud.</p>
 </div>
-<div id="estructura-social-y-formaciones-sociales-emergentes" class="section level3">
+<div id="estructura-social-y-formaciones-sociales-emergentes" class="section level3" number="1.2.3">
 <h3><span class="header-section-number">1.2.3</span> Estructura Social y Formaciones Sociales Emergentes</h3>
-<p>Los científicos sociales se refieren con frecuencia al concepto de estructura social. Con este término, generalmente tienen en mente los patrones durables de comportamiento y las relaciones dentro de los sistemas sociales (por ejemplo, los roles) o las instituciones y normas sociales que se han integrado en los sistemas sociales de tal manera que dan forma al comportamiento. Las estructuras sociales “restringen quién está presente, dónde se encuentran, qué pueden hacer y cómo se relacionan entre sí. Esta estructura es tan real como los edificios que ocupan las personas” <span class="citation">(Turner, <a href="#ref-Turner2006" role="doc-biblioref">2006</a>, p. 88)</span>. Sin embargo, es notoriamente difícil de captar la estructura social empíricamente, por lo que muchos encuentran atractivo el ARSo. Esta metodología conceptualiza las estructuras sociales en términos de patrones perdurables de vínculos entre actores. Por tanto, proporciona un método para estudiar de forma sistemática y empírica las causas y consecuencias de la estructura social.</p>
-<p>La mayoría de los analistas de redes sociales también sostienen que las interacciones repetidas entre actores (por ejemplo, individuos) pueden dar lugar a formaciones sociales emergentes (por ejemplo, grupos, organizaciones formales, naciones) que siguen su propia lógica y no pueden reducirse ni explicarse por sus partes constituyentes, incluso aunque siguen dependiendo de esas partes <span class="citation">(White, <a href="#ref-White2008" role="doc-biblioref">2008</a>)</span>. Los ejemplos de emergencia abundan en el mundo físico, como la combinación de hidrógeno (H) y oxígeno (O) en agua (H20). Como el agua no puede reducirse o explicarse completamente por sus átomos subyacentes, las formaciones sociales emergentes son productos de interacciones entre actores que no pueden explicarse por completo únicamente por las características de esos actores <span class="citation">(Smith, <a href="#ref-Smith2010" role="doc-biblioref">2010</a>, p. 27)</span>. En cambio, toman vida propia, lo que significa que los actores de todos los tipos y niveles ya sean individuos, grupos, organizaciones o naciones, pueden ser examinados utilizando el ARSo sin la necesidad de explorar los componentes subyacentes.</p>
+<p>Los científicos sociales se refieren con frecuencia al concepto de estructura social. Con este término, generalmente tienen en mente los patrones durables de comportamiento y las relaciones dentro de los sistemas sociales (por ejemplo, los roles) o las instituciones y normas sociales que se han integrado en los sistemas sociales de tal manera que dan forma al comportamiento. Las estructuras sociales “restringen quién está presente, dónde se encuentran, qué pueden hacer y cómo se relacionan entre sí. Esta estructura es tan real como los edificios que ocupan las personas” <span class="citation">(<a href="#ref-Turner2006" role="doc-biblioref">Turner, 2006, p. 88</a>)</span>. Sin embargo, es notoriamente difícil de captar la estructura social empíricamente, por lo que muchos encuentran atractivo el ARSo. Esta metodología conceptualiza las estructuras sociales en términos de patrones perdurables de vínculos entre actores. Por tanto, proporciona un método para estudiar de forma sistemática y empírica las causas y consecuencias de la estructura social.</p>
+<p>La mayoría de los analistas de redes sociales también sostienen que las interacciones repetidas entre actores (por ejemplo, individuos) pueden dar lugar a formaciones sociales emergentes (por ejemplo, grupos, organizaciones formales, naciones) que siguen su propia lógica y no pueden reducirse ni explicarse por sus partes constituyentes, incluso aunque siguen dependiendo de esas partes <span class="citation">(<a href="#ref-White2008" role="doc-biblioref">White, 2008</a>)</span>. Los ejemplos de emergencia abundan en el mundo físico, como la combinación de hidrógeno (H) y oxígeno (O) en agua (H20). Como el agua no puede reducirse o explicarse completamente por sus átomos subyacentes, las formaciones sociales emergentes son productos de interacciones entre actores que no pueden explicarse por completo únicamente por las características de esos actores <span class="citation">(<a href="#ref-Smith2010" role="doc-biblioref">Smith, 2010, p. 27</a>)</span>. En cambio, toman vida propia, lo que significa que los actores de todos los tipos y niveles ya sean individuos, grupos, organizaciones o naciones, pueden ser examinados utilizando el ARSo sin la necesidad de explorar los componentes subyacentes.</p>
 </div>
-<div id="ubicación-estructural-creencias-normas-intenciones-comportamiento-e-identidad" class="section level3">
+<div id="ubicación-estructural-creencias-normas-intenciones-comportamiento-e-identidad" class="section level3" number="1.2.4">
 <h3><span class="header-section-number">1.2.4</span> Ubicación Estructural: Creencias, Normas, Intenciones, Comportamiento e Identidad</h3>
-<p>Las formaciones sociales emergentes pueden ejercer lo que se llama causalidad descendente, razón por la cual el ARSo asume que las actitudes, creencias, intenciones, comportamiento e incluso sus identidades de los actores están determinadas principalmente por su ubicación en la estructura social. Por ejemplo, la investigación ha encontrado repetidamente que las personas ubicadas estructuralmente (es decir, socialmente) cerca de un movimiento particular, religioso o de otro tipo, tienen una mayor probabilidad de unirse a ese movimiento que aquellas que no lo están <span class="citation">(Lofland &amp; Stark, <a href="#ref-Lofland1965" role="doc-biblioref">1965</a>; McAdam, <a href="#ref-McAdam1986" role="doc-biblioref">1986</a> ; Snow, Zurcher, &amp; Ekland-olson, <a href="#ref-Snow1980" role="doc-biblioref">1980</a>; Stark &amp; Bainbridge, <a href="#ref-Stark1980" role="doc-biblioref">1980</a>)</span>. En otras palabras, las personas tienden a no unirse a grupos al azar. En cambio, es más probable que se unan a los grupos en los que conocen a alguien.</p>
+<p>Las formaciones sociales emergentes pueden ejercer lo que se llama causalidad descendente, razón por la cual el ARSo asume que las actitudes, creencias, intenciones, comportamiento e incluso sus identidades de los actores están determinadas principalmente por su ubicación en la estructura social. Por ejemplo, la investigación ha encontrado repetidamente que las personas ubicadas estructuralmente (es decir, socialmente) cerca de un movimiento particular, religioso o de otro tipo, tienen una mayor probabilidad de unirse a ese movimiento que aquellas que no lo están <span class="citation">(<a href="#ref-Lofland1965" role="doc-biblioref">Lofland &amp; Stark, 1965</a>; <a href="#ref-McAdam1986" role="doc-biblioref">McAdam, 1986</a> ; <a href="#ref-Snow1980" role="doc-biblioref">Snow, Zurcher, &amp; Ekland-olson, 1980</a>; <a href="#ref-Stark1980" role="doc-biblioref">Stark &amp; Bainbridge, 1980</a>)</span>. En otras palabras, las personas tienden a no unirse a grupos al azar. En cambio, es más probable que se unan a los grupos en los que conocen a alguien.</p>
 </div>
-<div id="redes-sociales-dinámicas" class="section level3">
+<div id="redes-sociales-dinámicas" class="section level3" number="1.2.5">
 <h3><span class="header-section-number">1.2.5</span> Redes sociales dinámicas</h3>
-<p>Finalmente, el análisis de redes sociales asume que las redes son dinámicas. Siempre están cambiando a medida que los actores entran y salen de la red y a medida que se forman y se disuelven los lazos. Pueden crecer o encogerse de tamaño, volverse más o menos fragmentados o aumentar o disminuir su nivel de centralización. Los grupos de actores pueden agruparse o disolverse iterativamente, y los actores centrales pueden convertirse en actores periféricos (y viceversa). Para complicar las cosas, los actores también se mueven de una ubicación geográfica a otra, lo que podría afectar las operaciones de una red. Históricamente, los datos de redes longitudinales han sido difíciles de obtener y los métodos para examinarlos no han sido desarrollados. De hecho, el texto clásico del ARSo de Wasserman y Faust hace poca mención a las redes longitudinales. Afortunadamente, eso está cambiando. Gran parte del análisis hasta la fecha ha sido principalmente descriptivo, pero en los últimos años los analistas de redes sociales han desarrollado numerosos enfoques para descubrir patrones y procesos a partir de datos longitudinales <span class="citation">(Doreian &amp; Stockman, <a href="#ref-Doreian1997" role="doc-biblioref">1997</a>; McCulloh &amp; Carley, <a href="#ref-McCulloh2011" role="doc-biblioref">2011</a>; Nooy, <a href="#ref-deNooy2011" role="doc-biblioref">2011</a>; Snijders, Bunt, &amp; Steglich, <a href="#ref-Snijders2010" role="doc-biblioref">2010</a>)</span></p>
+<p>Finalmente, el análisis de redes sociales asume que las redes son dinámicas. Siempre están cambiando a medida que los actores entran y salen de la red y a medida que se forman y se disuelven los lazos. Pueden crecer o encogerse de tamaño, volverse más o menos fragmentados o aumentar o disminuir su nivel de centralización. Los grupos de actores pueden agruparse o disolverse iterativamente, y los actores centrales pueden convertirse en actores periféricos (y viceversa). Para complicar las cosas, los actores también se mueven de una ubicación geográfica a otra, lo que podría afectar las operaciones de una red. Históricamente, los datos de redes longitudinales han sido difíciles de obtener y los métodos para examinarlos no han sido desarrollados. De hecho, el texto clásico del ARSo de Wasserman y Faust hace poca mención a las redes longitudinales. Afortunadamente, eso está cambiando. Gran parte del análisis hasta la fecha ha sido principalmente descriptivo, pero en los últimos años los analistas de redes sociales han desarrollado numerosos enfoques para descubrir patrones y procesos a partir de datos longitudinales <span class="citation">(<a href="#ref-Doreian1997" role="doc-biblioref">Doreian &amp; Stockman, 1997</a>; <a href="#ref-McCulloh2011" role="doc-biblioref">McCulloh &amp; Carley, 2011</a>; <a href="#ref-deNooy2011" role="doc-biblioref">Nooy, 2011</a>; <a href="#ref-Snijders2010" role="doc-biblioref">Snijders, Bunt, &amp; Steglich, 2010</a>)</span></p>
 </div>
-<div id="resumen-redes-sociales-agencia-humana-y-cultura" class="section level3">
+<div id="resumen-redes-sociales-agencia-humana-y-cultura" class="section level3" number="1.2.6">
 <h3><span class="header-section-number">1.2.6</span> Resumen: Redes Sociales, Agencia Humana y Cultura</h3>
-<p>La prioridad que da el ARSo a las relaciones entre los actores sobre los atributos individuales conduce inevitablemente a preguntas sobre la agencia humana y la cultura. Específicamente, ¿el ARSo deja espacio para el libre albedrío de los actores y los efectos de la cultura? La respuesta corta es, sí y no. Algunas corrientes académicas dan espacio la cultura y la agencia de los actores, otras no. <span class="citation">(Emirbayer &amp; Goodwin, <a href="#ref-Emirbayer1994" role="doc-biblioref">1994</a>, pp. 1424–1436)</span> han identificado tres paradigmas de redes sociales a los que se adhieren la mayoría de los analistas de redes sociales: determinismo estructural, instrumentalismo estructural y construccionismo estructural. El determinismo estructural ignora por completo (o descarta) el posible papel causal que juegan las creencias, valores y compromisos de los actores en términos de procesos sociales y cambio histórico. Los primeros escritos de Harrison White <span class="citation">(Boorman &amp; White, <a href="#ref-Boorman1976" role="doc-biblioref">1976</a>; White, Boorman, &amp; Breiger, <a href="#ref-White1976" role="doc-biblioref">1976</a>)</span> reflejan este punto de vista, al igual que los del primer teórico de redes, Bruce Mayhew <span class="citation">(<a href="#ref-Mayhew1980" role="doc-biblioref">1980</a>, <a href="#ref-Mayhew1981" role="doc-biblioref">1981</a>)</span>. Mayhew, de hecho, creía que la conciencia humana era irrelevante para comprender el mundo social.</p>
-<p>Por el contrario, el instrumentalismo estructural deja espacio para la acción humana, pero lo enmarca únicamente en términos de elección racional, acción instrumental y maximización de la utilidad. El análisis de Roger Gould de la Comuna de París <span class="citation">(<a href="#ref-Gould1991" role="doc-biblioref">1991</a>, <a href="#ref-Gould1993" role="doc-biblioref">1993</a>)</span> y el trabajo de Nan Lin sobre capital social <span class="citation">(Lin, <a href="#ref-Lin2001" role="doc-biblioref">2001</a>)</span> son ejemplos. Dado que existe una amplia evidencia que respalda la premisa de que los actores responden a los incentivos (ver, por ejemplo, <span class="citation">Becker (<a href="#ref-Becker1976" role="doc-biblioref">1976</a>)</span>; <span class="citation">Iannaccone (<a href="#ref-Iannaccone1995" role="doc-biblioref">1995</a>)</span>; <span class="citation">Levitt &amp; Dubner (<a href="#ref-Levitt2005" role="doc-biblioref">2005</a>)</span>), este enfoque es más comprensivo que el anterior. Sin embargo, esta teoría no es libre críticas.</p>
-<p>El construccionismo estructural, como el instrumentalismo estructural, se toma en serio el papel de la agencia humana. Sin embargo, ve a los actores motivados por preocupaciones adicionales, tales como normas, valores, compromisos culturales e identidades colectivas e individuales. Por ejemplo, David Knoke argumenta, “una comprensión sofisticada de… acción requiere combinar restricciones culturales, racionales y estructurales en especificaciones complejas para problemas sustantivos dados <span class="citation">(Knoke, <a href="#ref-Knoke1990" role="doc-biblioref">1990</a>, p. 19)</span>. Los estudios de Doug McAdam sobre Freedom Summer <span class="citation">(McAdam, <a href="#ref-McAdam1986" role="doc-biblioref">1986</a>, <a href="#ref-McAdam1988a" role="doc-biblioref">1988</a><a href="#ref-McAdam1988a" role="doc-biblioref">a</a>, <a href="#ref-McAdam1988b" role="doc-biblioref">1988</a><a href="#ref-McAdam1988b" role="doc-biblioref">b</a>)</span> ilustran este enfoque, al igual que los escritos posteriores de <span class="citation">(White, <a href="#ref-White1992" role="doc-biblioref">1992</a>, <a href="#ref-White2008" role="doc-biblioref">2008</a>)</span>, que enfatizan la importancia de las narrativas, historias y redes de significado.</p>
+<p>La prioridad que da el ARSo a las relaciones entre los actores sobre los atributos individuales conduce inevitablemente a preguntas sobre la agencia humana y la cultura. Específicamente, ¿el ARSo deja espacio para el libre albedrío de los actores y los efectos de la cultura? La respuesta corta es, sí y no. Algunas corrientes académicas dan espacio la cultura y la agencia de los actores, otras no. <span class="citation">(<a href="#ref-Emirbayer1994" role="doc-biblioref">Emirbayer &amp; Goodwin, 1994, pp. 1424–1436</a>)</span> han identificado tres paradigmas de redes sociales a los que se adhieren la mayoría de los analistas de redes sociales: determinismo estructural, instrumentalismo estructural y construccionismo estructural. El determinismo estructural ignora por completo (o descarta) el posible papel causal que juegan las creencias, valores y compromisos de los actores en términos de procesos sociales y cambio histórico. Los primeros escritos de Harrison White <span class="citation">(<a href="#ref-Boorman1976" role="doc-biblioref">Boorman &amp; White, 1976</a>; <a href="#ref-White1976" role="doc-biblioref">White, Boorman, &amp; Breiger, 1976</a>)</span> reflejan este punto de vista, al igual que los del primer teórico de redes, Bruce Mayhew <span class="citation">(<a href="#ref-Mayhew1980" role="doc-biblioref">1980</a>, <a href="#ref-Mayhew1981" role="doc-biblioref">1981</a>)</span>. Mayhew, de hecho, creía que la conciencia humana era irrelevante para comprender el mundo social.</p>
+<p>Por el contrario, el instrumentalismo estructural deja espacio para la acción humana, pero lo enmarca únicamente en términos de elección racional, acción instrumental y maximización de la utilidad. El análisis de Roger Gould de la Comuna de París <span class="citation">(<a href="#ref-Gould1991" role="doc-biblioref">1991</a>, <a href="#ref-Gould1993" role="doc-biblioref">1993</a>)</span> y el trabajo de Nan Lin sobre capital social <span class="citation">(<a href="#ref-Lin2001" role="doc-biblioref">Lin, 2001</a>)</span> son ejemplos. Dado que existe una amplia evidencia que respalda la premisa de que los actores responden a los incentivos (ver, por ejemplo, <span class="citation"><a href="#ref-Becker1976" role="doc-biblioref">Becker</a> (<a href="#ref-Becker1976" role="doc-biblioref">1976</a>)</span>; <span class="citation"><a href="#ref-Iannaccone1995" role="doc-biblioref">Iannaccone</a> (<a href="#ref-Iannaccone1995" role="doc-biblioref">1995</a>)</span>; <span class="citation"><a href="#ref-Levitt2005" role="doc-biblioref">Levitt &amp; Dubner</a> (<a href="#ref-Levitt2005" role="doc-biblioref">2005</a>)</span>), este enfoque es más comprensivo que el anterior. Sin embargo, esta teoría no es libre críticas.</p>
+<p>El construccionismo estructural, como el instrumentalismo estructural, se toma en serio el papel de la agencia humana. Sin embargo, ve a los actores motivados por preocupaciones adicionales, tales como normas, valores, compromisos culturales e identidades colectivas e individuales. Por ejemplo, David Knoke argumenta, “una comprensión sofisticada de… acción requiere combinar restricciones culturales, racionales y estructurales en especificaciones complejas para problemas sustantivos dados <span class="citation">(<a href="#ref-Knoke1990" role="doc-biblioref">Knoke, 1990, p. 19</a>)</span>. Los estudios de Doug McAdam sobre Freedom Summer <span class="citation">(<a href="#ref-McAdam1986" role="doc-biblioref">McAdam, 1986</a>, <a href="#ref-McAdam1988a" role="doc-biblioref">1988a</a>, <a href="#ref-McAdam1988b" role="doc-biblioref">1988b</a>)</span> ilustran este enfoque, al igual que los escritos posteriores de <span class="citation">(<a href="#ref-White1992" role="doc-biblioref">White, 1992</a>, <a href="#ref-White2008" role="doc-biblioref">2008</a>)</span>, que enfatizan la importancia de las narrativas, historias y redes de significado.</p>
 <p>Si bien las metodologías de redes sociales tienden a ser agnósticas en cuestiones de estructura, cultura y agencia humana, a menudo ayuda hacer distinciones analíticas entre las influencias culturales, los compromisos normativos y las preocupaciones instrumentales de los actores. Considere, por ejemplo, los problemas relacionados con la recopilación de datos de redes de parentesco. Lo que constituye una red de parentesco en Occidente puede diferir considerablemente de lo que constituye una en algunas culturas de Oriente Medio y Asia. Por lo tanto, si un analista codificara una red de parentesco de Oriente Medio guiada por supuestos occidentales, los datos resultantes podrían resultar completamente inútiles. Además, dado que los vínculos instrumentales pueden tener efectos diferentes a los vínculos culturales, tiene sentido metodológico explicarlos por separado.</p>
 </div>
 </div>
-<div id="términos-y-conceptos-básicos" class="section level2">
+<div id="términos-y-conceptos-básicos" class="section level2" number="1.3">
 <h2><span class="header-section-number">1.3</span> Términos y Conceptos Básicos</h2>
-<div id="actores-y-enlaces" class="section level3">
+<div id="actores-y-enlaces" class="section level3" number="1.3.1">
 <h3><span class="header-section-number">1.3.1</span> Actores y Enlaces</h3>
-<p>Como se señaló anteriormente, los actores pueden tener diversas formas y tamaños (por ejemplo, individuos, grupos, organizaciones, denominaciones y naciones). Lo mismo puede decirse de los lazos. Pueden definirse en términos de tipo, fuerza y direccionalidad. Los tipos de vínculos incluyen, pero no se limitan a, vínculos de sentimiento (por ejemplo, amistad, conocido, agrado y desagrado), biología (por ejemplo, cónyuge, hermano, primo), afiliación compartida (por ejemplo, miembros de la misma iglesia, mezquita, sinagoga u organización ecuménica), comunicación (por ejemplo, cadenas de oración, llamadas telefónicas, correo electrónico, tweets), etc. Como se señaló previamente, los lazos pueden variar de fuertes a débiles. Sin embargo, la distinción entre un lazo fuerte y uno débil no siempre es obvio, ni tampoco lo es la distinción entre un lazo débil y los numerosos encuentros aleatorios y usualmente no repetidos que ocurren diariamente <span class="citation">(Azarian, <a href="#ref-Azarian2005" role="doc-biblioref">2005</a>, p. 37)</span>. Los lazos también pueden tener direccionalidad y capturar el flujo de recursos de un actor a otro, la comunicación entre actores (por ejemplo, el actor A puede enviar correos electrónicos repetidamente al actor B, pero B no corresponde), qué actores buscan consejo de otros actores <span class="citation">(Krackhardt, <a href="#ref-Krackhardt1992" role="doc-biblioref">1992</a>)</span>, y así sucesivamente. Finalmente, la mayoría de los actores están conectados a otros por múltiples vínculos; de hecho, uno de los desafíos del ARSo es determinar qué vínculos deben modelarse.</p>
+<p>Como se señaló anteriormente, los actores pueden tener diversas formas y tamaños (por ejemplo, individuos, grupos, organizaciones, denominaciones y naciones). Lo mismo puede decirse de los lazos. Pueden definirse en términos de tipo, fuerza y direccionalidad. Los tipos de vínculos incluyen, pero no se limitan a, vínculos de sentimiento (por ejemplo, amistad, conocido, agrado y desagrado), biología (por ejemplo, cónyuge, hermano, primo), afiliación compartida (por ejemplo, miembros de la misma iglesia, mezquita, sinagoga u organización ecuménica), comunicación (por ejemplo, cadenas de oración, llamadas telefónicas, correo electrónico, tweets), etc. Como se señaló previamente, los lazos pueden variar de fuertes a débiles. Sin embargo, la distinción entre un lazo fuerte y uno débil no siempre es obvio, ni tampoco lo es la distinción entre un lazo débil y los numerosos encuentros aleatorios y usualmente no repetidos que ocurren diariamente <span class="citation">(<a href="#ref-Azarian2005" role="doc-biblioref">Azarian, 2005, p. 37</a>)</span>. Los lazos también pueden tener direccionalidad y capturar el flujo de recursos de un actor a otro, la comunicación entre actores (por ejemplo, el actor A puede enviar correos electrónicos repetidamente al actor B, pero B no corresponde), qué actores buscan consejo de otros actores <span class="citation">(<a href="#ref-Krackhardt1992" role="doc-biblioref">Krackhardt, 1992</a>)</span>, y así sucesivamente. Finalmente, la mayoría de los actores están conectados a otros por múltiples vínculos; de hecho, uno de los desafíos del ARSo es determinar qué vínculos deben modelarse.</p>
 </div>
-<div id="redes-sociales" class="section level3">
+<div id="redes-sociales" class="section level3" number="1.3.2">
 <h3><span class="header-section-number">1.3.2</span> Redes Sociales</h3>
-<p>Una red social es simplemente “un conjunto finito o conjuntos de actores” ligados entre sí <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, p. 20)</span>. La Figura <a href="introduction.html#fig:hypothetical">1.4</a> muestra una red social hipotética donde los círculos representan actores y las líneas representan vínculos o relaciones. Como ilustra, los actores a menudo se agrupan en subgrupos relativamente distintos. Además, algunos están incrustados en el centro de estos subgrupos, mientras que otros se encuentran más en la periferia, a veces sirven como puentes entre subgrupos.</p>
-<div class="figure" style="text-align: center"><span id="fig:hypothetical"></span>
+<p>Una red social es simplemente “un conjunto finito o conjuntos de actores” ligados entre sí <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994, p. 20</a>)</span>. La Figura <a href="introduction.html#fig:hypothetical">1.4</a> muestra una red social hipotética donde los círculos representan actores y las líneas representan vínculos o relaciones. Como ilustra, los actores a menudo se agrupan en subgrupos relativamente distintos. Además, algunos están incrustados en el centro de estos subgrupos, mientras que otros se encuentran más en la periferia, a veces sirven como puentes entre subgrupos.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hypothetical"></span>
 <img src="01-introduction_files/figure-html/hypothetical-1.png" alt="Red social hipotética" width="70%" />
 <p class="caption">
 Figura 1.4: Red social hipotética
 </p>
 </div>
 </div>
-<div id="camino-y-distancia-de-caminos" class="section level3">
+<div id="camino-y-distancia-de-caminos" class="section level3" number="1.3.3">
 <h3><span class="header-section-number">1.3.3</span> Camino (y Distancia de Caminos)</h3>
 <p>Un camino se define como una caminata (es decir, una secuencia de actores y vínculos) en la que ningún actor entre el primer y el último actor de la caminata ocurre más de una vez, mientras que la distancia de la ruta entre dos actores es el número de pasos entre los dos. Por ejemplo, En la Figura <a href="introduction.html#fig:hypothetical">1.4</a> puede trazar un camino desde los actores R, S, y T al actor M a través del actor Q. La distancia entre los actores es dos (es decir, dos pasos).</p>
 <p>Es bastante común que haya numerosos caminos entre actores. La ruta más corta entre dos actores se llama geodésica y la geodésica más larga de una red se considera el diámetro de la red. Se considera que los actores que pueden llegar entre sí a través de una ruta están en el mismo componente. Las redes pueden tener varios componentes y, en tales casos, se considera que están desconectados. El componente más pequeño que puede tener una red es un solo actor sin vínculos con otros actores, que se denominan aislados.</p>
 </div>
-<div id="topología" class="section level3">
+<div id="topología" class="section level3" number="1.3.4">
 <h3><span class="header-section-number">1.3.4</span> Topología</h3>
 <p>La topología de una red puede variar. Por ejemplo, los analistas pueden medir el tamaño de una red (la cantidad de actores en una red), su distancia promedio (la longitud promedio de las geodésicas entre todos los actores en una red) y su diámetro. Dos de las medidas topográficas más comunes son la densidad y la centralización. La densidad captura la interconexión de una red y es igual a la relación entre vínculos reales y vínculos posibles. Desafortunadamente, la medida formal de densidad está inversamente relacionada con el tamaño de la red (es decir, si todo lo demás es igual, la densidad de las redes más grandes tiende a ser menor que la densidad de las redes más pequeñas). Por lo tanto, los analistas de redes sociales a menudo recurren a medidas alternativas para capturar la interconexión de una red, como el grado de centralidad promedio, el coeficiente de agrupamiento y la cohesión/fragmentación. La centralización mide el grado en que una red está centralizada en torno a uno o un puñado de actores. Existen múltiples medidas de centralización, y varían en términos de qué medida de centralidad se utiliza. La métrica de centralización estándar calcula una puntuación de varianza basada en la diferencia entre la puntuación de centralidad de cada actor y la puntuación de centralidad más alta de la red. Una medida alternativa calcula una puntuación de varianza basada en la diferencia entre la puntuación de centralidad de cada actor y la puntuación de centralidad promedio en la red. Para ambas, cuanto mayor es el nivel de varianza, mayor es el grado de centralización.</p>
-<p>Las redes densas suelen estar formadas por numerosos vínculos fuertes y muy pocos débiles, mientras que las redes dispersas son todo lo contrario. Las primeras a veces se denominan redes provinciales, mientras que las segundas se denominan cosmopolitas, y la evidencia sugiere que las redes con una densidad entre los dos extremos son más eficaces o resistentes <span class="citation">(Pescolindo &amp; Georgianna, <a href="#ref-Pescolindo1989" role="doc-biblioref">1989</a>; Uzzi, <a href="#ref-Uzzi1996" role="doc-biblioref">1996</a> ; Uzzi &amp; Spiro, <a href="#ref-Uzzi2005" role="doc-biblioref">2005</a>)</span>. De manera similar, los estudios académicos indican que las redes ni demasiado centralizadas o descentralizadas son más efectivas que las que se encuentran en los extremos. ¿Por qué? Por un lado, un alto nivel de centralización puede proporcionar a las organizaciones un comando y control sustanciales, lo que las hace lentas para adaptarse a un entorno cambiante. Por otro lado, las organizaciones descentralizadas pueden cambiar de rumbo rápidamente, pero pueden carecer del comando y el control necesarios para que todos estén en la misma página.</p>
+<p>Las redes densas suelen estar formadas por numerosos vínculos fuertes y muy pocos débiles, mientras que las redes dispersas son todo lo contrario. Las primeras a veces se denominan redes provinciales, mientras que las segundas se denominan cosmopolitas, y la evidencia sugiere que las redes con una densidad entre los dos extremos son más eficaces o resistentes <span class="citation">(<a href="#ref-Pescolindo1989" role="doc-biblioref">Pescolindo &amp; Georgianna, 1989</a>; <a href="#ref-Uzzi1996" role="doc-biblioref">Uzzi, 1996</a> ; <a href="#ref-Uzzi2005" role="doc-biblioref">Uzzi &amp; Spiro, 2005</a>)</span>. De manera similar, los estudios académicos indican que las redes ni demasiado centralizadas o descentralizadas son más efectivas que las que se encuentran en los extremos. ¿Por qué? Por un lado, un alto nivel de centralización puede proporcionar a las organizaciones un comando y control sustanciales, lo que las hace lentas para adaptarse a un entorno cambiante. Por otro lado, las organizaciones descentralizadas pueden cambiar de rumbo rápidamente, pero pueden carecer del comando y el control necesarios para que todos estén en la misma página.</p>
 </div>
-<div id="subgrupos-cluster-subredes" class="section level3">
+<div id="subgrupos-cluster-subredes" class="section level3" number="1.3.5">
 <h3><span class="header-section-number">1.3.5</span> Subgrupos (Cluster, subredes)</h3>
-<p>Un enfoque significativo del SNA es identificar subgrupos de actores “entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos” <span class="citation">(Wasserman &amp; Faust, <a href="#ref-Wasserman1994" role="doc-biblioref">1994</a>, p. 249)</span>. Al igual que la topografía de la red, existen numerosos métodos para identificar grupos de actores. Sin embargo, todos asumen que los vínculos entre los miembros del subgrupo deberían ser más numerosos que los vínculos entre los miembros de otros grupos. La Figura <a href="introduction.html#fig:subs">1.5</a> presenta un grafo donde usamos lo que se conoce como un algoritmo de detección de comunidad para identificar subgrupos dentro de la red. Aunque, aquí, probablemente no necesitábamos un algoritmo para identificar estos subgrupos, a menudo no es tan sencillo, por lo que los algoritmos de agrupación en clústeres pueden ser muy valiosos. Los algoritmos más comunes son componentes (débiles y fuertes), camarillas, núcleos k y algoritmos de detección de comunidades.</p>
-<div class="figure" style="text-align: center"><span id="fig:subs"></span>
+<p>Un enfoque significativo del SNA es identificar subgrupos de actores “entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos” <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994, p. 249</a>)</span>. Al igual que la topografía de la red, existen numerosos métodos para identificar grupos de actores. Sin embargo, todos asumen que los vínculos entre los miembros del subgrupo deberían ser más numerosos que los vínculos entre los miembros de otros grupos. La Figura <a href="introduction.html#fig:subs">1.5</a> presenta un grafo donde usamos lo que se conoce como un algoritmo de detección de comunidad para identificar subgrupos dentro de la red. Aunque, aquí, probablemente no necesitábamos un algoritmo para identificar estos subgrupos, a menudo no es tan sencillo, por lo que los algoritmos de agrupación en clústeres pueden ser muy valiosos. Los algoritmos más comunes son componentes (débiles y fuertes), camarillas, núcleos k y algoritmos de detección de comunidades.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:subs"></span>
 <img src="01-introduction_files/figure-html/subs-1.png" alt="Red hipotética con comunidades demarcadas" width="70%" />
 <p class="caption">
 Figura 1.5: Red hipotética con comunidades demarcadas
 </p>
 </div>
 </div>
-<div id="centralidad" class="section level3">
+<div id="centralidad" class="section level3" number="1.3.6">
 <h3><span class="header-section-number">1.3.6</span> Centralidad</h3>
 <p>La mayoría de las redes sociales contienen personas u organizaciones que son más centrales que otras. Debido a esto, a menudo disfrutan de un mejor acceso a los recursos y están en mejores condiciones para difundir información. Los analistas de redes sociales han desarrollado varias medidas de centralidad, cada una basada en diferentes supuestos de lo que significa que un actor sea central. Cuatro de las medidas más comunes son:</p>
 <ul>
@@ -392,17 +473,17 @@ Figura 1.5: Red hipotética con comunidades demarcadas
 <li>Centralidad del eigenvector, que asume que los vínculos con actores muy centrales son más importantes que los vínculos con actores periféricos, por lo que pondera los vínculos de un actor por la centralidad de actores adyacentes.</li>
 </ul>
 </div>
-<div id="puentes-y-corredores" class="section level3">
+<div id="puentes-y-corredores" class="section level3" number="1.3.7">
 <h3><span class="header-section-number">1.3.7</span> Puentes y Corredores</h3>
 <p>Los puentes son lazos que cubren las brechas en una red social, mientras que los corredores son actores que se sientan a un lado de esos puentes. En la Figura <a href="introduction.html#fig:hypothetical">1.4</a> anterior, los bordes entre el actor Q y M o G y B podrían considerarse puentes, mientras que los cuatro actores serían considerados intermediarios. De hecho, si removemos uno o múltiples de los intermediarios de la red, esta se fragmentaría en redes separadas. En lugar de adivinar qué actores son intermediarios y qué vínculos son puentes, se han desarrollado numerosos algoritmos para detectarlos. En la Figura <a href="introduction.html#fig:bb">1.6</a>, el tamaño del nodo refleja la medida de huecos estructurales de Ron Burt <span class="citation">(<a href="#ref-Burt1992" role="doc-biblioref">1992</a>)</span>, quizás la medida de intermediación más conocida, y el grosor de los lazos refleja la centralidad de intermediación de los bordes, que algunos utilizan para identificar puentes entre subgrupos. Cuanto más grande es el nodo, más potencial de intermediación posee, mientras que cuanto más grueso es el lazo, más probable es que sea un puente. Aquí podemos ver que los actores G y M tienen un potencial de intermediación considerable. El vínculo entre los actores B y G parece más crucial que entre M y Q. El actor L también está en una posición de intermediación, principalmente debido a sus vínculos con el actor P.</p>
-<div class="figure" style="text-align: center"><span id="fig:bb"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bb"></span>
 <img src="01-introduction_files/figure-html/bb-1.png" alt="Red hipotética, bordes ponderados por intermediación y nodos dimensionados por autonomía. " width="70%" />
 <p class="caption">
 Figura 1.6: Red hipotética, bordes ponderados por intermediación y nodos dimensionados por autonomía.
 </p>
 </div>
 </div>
-<div id="funciones-y-posiciones" class="section level3">
+<div id="funciones-y-posiciones" class="section level3" number="1.3.8">
 <h3><span class="header-section-number">1.3.8</span> Funciones y Posiciones</h3>
 <p>Los analistas de redes sociales generalmente analizan los datos de la red de una de dos maneras:</p>
 <ol style="list-style-type: decimal">
@@ -411,18 +492,18 @@ Figura 1.6: Red hipotética, bordes ponderados por intermediación y nodos dimen
 </ol>
 <p>El primero se centra en los vínculos directos e indirectos entre actores y busca explicar el comportamiento y los procesos sociales a la luz de esos vínculos. De manera opuesta, el segundo enfoque tiene como objetivo identificar actores estructuralmente equivalentes, es decir, actores que pueden o no tener vínculos entre sí pero que ocupan posiciones similares dentro de una red (por ejemplo, comandantes de diferentes batallones). Este enfoque asume que es probable que los actores estructuralmente equivalentes se comporten de manera similar, independientemente de si existe un vínculo entre ellos. Los analistas han desarrollado varios algoritmos para identificar actores estructurales equivalentes (por ejemplo, equivalencia estructural, equivalencia automórfica, equivalencia regular), y existen múltiples variaciones de estos.</p>
 </div>
-<div id="análisis-exploratorio-y-explicativo-de-redes-sociales" class="section level3">
+<div id="análisis-exploratorio-y-explicativo-de-redes-sociales" class="section level3" number="1.3.9">
 <h3><span class="header-section-number">1.3.9</span> Análisis Exploratorio y Explicativo de Redes Sociales</h3>
 <p>Podemos clasificar los métodos de redes sociales en dos amplias categorías: exploratorias y explicativas. Los métodos exploratorios pueden ayudar a los analistas a identificar actores centrales, resaltar aspectos sobre la estructura de una red, ubicar subgrupos, iluminar intermediarios y puentes, y encontrar actores estructuralmente equivalentes. Aunque estos métodos son bastante útiles, solo nos ayudan a describir los datos de la red. No nos permiten identificar las causas subyacentes de los patrones y tendencias observadas. Por el contrario, los métodos explicativos se centran más en verificar los hallazgos que surgen de los análisis exploratorios y cualitativos. Una forma de pensarlo es que los análisis exploratorios pueden ayudarnos a desarrollar hipótesis, mientras que los enfoques explicativos, como QAP, ERGM y SAOM, pueden ayudarnos a probarlos.</p>
 <p>Debido a que los datos de las redes sociales rara vez son aleatorios y “violan” (por definición) el supuesto de independencia observacional, los analistas de redes sociales han desarrollado varios modelos que toman en cuenta las características únicas de los datos de redes sociales. Los tres más comunes son el procedimiento de asignación cuadrática (QAP en inglés), los modelos de gráficos aleatorios exponenciales (ERGM en inglés) y los modelos estocásticos orientados al actor (SAOM en inglés). QAP es similar a los modelos de regresión estándar, excepto que utiliza un método análogo al bootstrapping para estimar los errores estándar y la significancia estadística. Los ERGM y SAOM son únicos en el sentido de que examinan cómo una red social observada es una función de patrones subyacentes de vínculos (por ejemplo, díadas, triángulos abiertos y cerrados, etc.). Los ERGM se utilizan generalmente para una red social estática, mientras que los SAOM están diseñados para datos longitudinales.</p>
 </div>
-<div id="atributos" class="section level3">
+<div id="atributos" class="section level3" number="1.3.10">
 <h3><span class="header-section-number">1.3.10</span> Atributos</h3>
 <p>Si bien el análisis de redes sociales se centra principalmente en el patrón de vínculos entre actores, la mayoría de los analistas de redes sociales no ignoran por completo los datos de atributos. Si los actores de una red son individuos, entonces los datos de atributos incluyen características como género, raza, etnia, años de educación, nivel de ingresos, edad, etc. Si son organizaciones, las variables de atributo pueden ser aquellas que indiquen el tamaño (por ejemplo, número de empleados), edad, tipo, etc. Y si los actores son países, las variables de atributo incluirían medidas como el PIB per cápita o el tamaño de la población.</p>
 <p>A veces, el límite entre atributos y afiliaciones puede ser algo difuso. Como regla general, algo es una afiliación si la participación compartida de dos actores indica una relación (por ejemplo, co-membresía en una organización voluntaria). Aún así, una afiliación también puede funcionar como un atributo.</p>
 </div>
 </div>
-<div id="resumen-y-conclusiones" class="section level2">
+<div id="resumen-y-conclusiones" class="section level2" number="1.4">
 <h2><span class="header-section-number">1.4</span> Resumen y Conclusiones</h2>
 <p>Este capítulo ha proporcionado una descripción general del ARSO, cómo se diferencia de otros enfoques analíticos, los términos y conceptos básicos que emplea y los supuestos fundamentales que subyacen en gran parte del trabajo de los analistas de redes. Este capítulo también exploró los problemas relacionados con la cultura y la agencia humana y el grado en que influyen en el comportamiento humano.</p>
 
@@ -432,169 +513,169 @@ Figura 1.6: Red hipotética, bordes ponderados por intermediación y nodos dimen
 
 
 </div>
-<h3> Referencias</h3>
-<div id="refs" class="references">
-<div id="ref-Asch1951">
-<p>Asch, S. E. (1951). Effects of group pressure upon the modification and distortion of judgment. In H. S. Guetzkow (Ed.), <em>Groups, leadership and men</em>. Pittsburgh, PA: Carnegie Press.</p>
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Asch1951" class="csl-entry">
+Asch, S. E. (1951). Effects of group pressure upon the modification and distortion of judgment. In H. S. Guetzkow (Ed.), <em>Groups, leadership and men</em>. Pittsburgh, PA: Carnegie Press.
 </div>
-<div id="ref-Azarian2005">
-<p>Azarian, G. R. (2005). <em>The general sociology of harrison c. White: Chaos and order in networks</em>. New York: Palgrave Macmillan.</p>
+<div id="ref-Azarian2005" class="csl-entry">
+Azarian, G. R. (2005). <em>The general sociology of harrison c. White: Chaos and order in networks</em>. New York: Palgrave Macmillan.
 </div>
-<div id="ref-Becker1976">
-<p>Becker, G. S. (1976). <em>The economic approach to human behaviour</em>. Chicago: University of Chicago Press.</p>
+<div id="ref-Becker1976" class="csl-entry">
+Becker, G. S. (1976). <em>The economic approach to human behaviour</em>. Chicago: University of Chicago Press.
 </div>
-<div id="ref-Boorman1976">
-<p>Boorman, S. A., &amp; White, H. C. (1976). Social structure for multiple netorks ii: Role structures. <em>American Journal of Sociology</em>, <em>81</em>(6), 1384–1446.</p>
+<div id="ref-Boorman1976" class="csl-entry">
+Boorman, S. A., &amp; White, H. C. (1976). Social structure for multiple netorks II: Role structures. <em>American Journal of Sociology</em>, <em>81</em>(6), 1384–1446.
 </div>
-<div id="ref-Burns1961">
-<p>Burns, T., &amp; Stalker, G. M. (1961). <em>The management of innovation</em>. London: Tavistock.</p>
+<div id="ref-Burns1961" class="csl-entry">
+Burns, T., &amp; Stalker, G. M. (1961). <em>The management of innovation</em>. London: Tavistock.
 </div>
-<div id="ref-Burt1992">
-<p>Burt, R. (1992). <em>Structural holes: The social structure of competition</em>. Harvard University Press.</p>
+<div id="ref-Burt1992" class="csl-entry">
+Burt, R. (1992). <em>Structural holes: The social structure of competition</em>. Harvard University Press.
 </div>
-<div id="ref-Chavez1997">
-<p>Chavez, M. (1961). <em>Ordaining women: Culture and conflict in religious organizations</em>. Cambridge, MA: Harvard University Press.</p>
+<div id="ref-Chavez1997" class="csl-entry">
+Chavez, M. (1961). <em>Ordaining women: Culture and conflict in religious organizations</em>. Cambridge, MA: Harvard University Press.
 </div>
-<div id="ref-Davis1979">
-<p>Davis, J. (1979). The davis/holland/leinhardt studies: An overview. In P. W. Holland &amp; S. Leinhardt (Eds.), <em>Perspectives on social network research</em> (pp. 51–62). New York: Academic Press.</p>
+<div id="ref-Davis1979" class="csl-entry">
+Davis, J. (1979). The davis/holland/leinhardt studies: An overview. In P. W. Holland &amp; S. Leinhardt (Eds.), <em>Perspectives on social network research</em> (pp. 51–62). New York: Academic Press.
 </div>
-<div id="ref-DiMaggio1983">
-<p>DiMaggio, P. J., &amp; Powell, W. W. (1983). The iron cage revisited: Institutional isomorphism and collective rationality in organizational fields. <em>American Sociological Review</em>, <em>48</em>, 147–160.</p>
+<div id="ref-DiMaggio1983" class="csl-entry">
+DiMaggio, P. J., &amp; Powell, W. W. (1983). The iron cage revisited: Institutional isomorphism and collective rationality in organizational fields. <em>American Sociological Review</em>, <em>48</em>, 147–160.
 </div>
-<div id="ref-Doreian1997">
-<p>Doreian, P., &amp; Stockman, F. N. (1997). <em>EEvolution of social networks</em>. Amsterdam: Gordon; Breach Publishers.</p>
+<div id="ref-Doreian1997" class="csl-entry">
+Doreian, P., &amp; Stockman, F. N. (1997). <em>EEvolution of social networks</em>. Amsterdam: Gordon; Breach Publishers.
 </div>
-<div id="ref-Emirbayer1994">
-<p>Emirbayer, M., &amp; Goodwin, J. (1994). Network analysis, culture and the problem of agency. <em>American Journal of Sociology</em>, <em>99</em>(6), 1411–1455.</p>
+<div id="ref-Emirbayer1994" class="csl-entry">
+Emirbayer, M., &amp; Goodwin, J. (1994). Network analysis, culture and the problem of agency. <em>American Journal of Sociology</em>, <em>99</em>(6), 1411–1455.
 </div>
-<div id="ref-Gould1991">
-<p>Gould, R. V. (1991). Multiple networks and mobilization in the paris commune, 1871. <em>American Sociological Review</em>, <em>56</em>, 716–729.</p>
+<div id="ref-Gould1991" class="csl-entry">
+Gould, R. V. (1991). Multiple networks and mobilization in the paris commune, 1871. <em>American Sociological Review</em>, <em>56</em>, 716–729.
 </div>
-<div id="ref-Gould1993">
-<p>Gould, R. V. (1993). Trade cohesion, class unity, and urban insurrection: Artisanal activism in the paris commune. <em>American Journal Of Sociology</em>, <em>98</em>(4), 721–754.</p>
+<div id="ref-Gould1993" class="csl-entry">
+Gould, R. V. (1993). Trade cohesion, class unity, and urban insurrection: Artisanal activism in the paris commune. <em>American Journal Of Sociology</em>, <em>98</em>(4), 721–754.
 </div>
-<div id="ref-Granovetter1973">
-<p>Granovetter, M. (1973). The strength of weak ties. <em>American Journal of Sociology</em>, <em>73</em>(6), 1360–1380.</p>
+<div id="ref-Granovetter1973" class="csl-entry">
+Granovetter, M. (1973). The strength of weak ties. <em>American Journal of Sociology</em>, <em>73</em>(6), 1360–1380.
 </div>
-<div id="ref-Granovetter1983">
-<p>Granovetter, M. (1983). The strength of weak ties: A network theory revisited. <em>Social Theory</em>, <em>1</em>, 201–233.</p>
+<div id="ref-Granovetter1983" class="csl-entry">
+Granovetter, M. (1983). The strength of weak ties: A network theory revisited. <em>Social Theory</em>, <em>1</em>, 201–233.
 </div>
-<div id="ref-Iannaccone1995">
-<p>Iannaccone, L. R. (1995). Risk, rationality, and religious portfolios. <em>Economic Inquiry</em>, <em>38</em>(2), 285–295.</p>
+<div id="ref-Iannaccone1995" class="csl-entry">
+Iannaccone, L. R. (1995). Risk, rationality, and religious portfolios. <em>Economic Inquiry</em>, <em>38</em>(2), 285–295.
 </div>
-<div id="ref-Knoke1990">
-<p>Knoke, D. (1990). <em>Political networks: The structural perspective</em>. Cambridge University Press.</p>
+<div id="ref-Knoke1990" class="csl-entry">
+Knoke, D. (1990). <em>Political networks: The structural perspective</em>. Cambridge University Press.
 </div>
-<div id="ref-Knoke2007">
-<p>Knoke, D., &amp; Yang, S. (2007). <em>Social netork analysis</em>. Sage Publications, Inc.</p>
+<div id="ref-Knoke2007" class="csl-entry">
+Knoke, D., &amp; Yang, S. (2007). <em>Social netork analysis</em>. Sage Publications, Inc.
 </div>
-<div id="ref-Krackhardt1992">
-<p>Krackhardt, D. (1992). The strength of strong ties: The importance of philos in organizations. In N. Nohria &amp; R. G. Eccles (Eds.), <em>Networks and organizations: Structure, form and action</em> (pp. 261–239). Boston: Harvard University Press.</p>
+<div id="ref-Krackhardt1992" class="csl-entry">
+Krackhardt, D. (1992). The strength of strong ties: The importance of philos in organizations. In N. Nohria &amp; R. G. Eccles (Eds.), <em>Networks and organizations: Structure, form and action</em> (pp. 261–239). Boston: Harvard University Press.
 </div>
-<div id="ref-Krackhardt1994">
-<p>Krackhardt, D. (1994). Graph theoretical dimensions of informal organizations. In K. M. Carley &amp; M. J. Prietula (Eds.), <em>Computational organization theory</em> (pp. 89–111). Hillsdale, NJ: L. Erlbaum Associates.</p>
+<div id="ref-Krackhardt1994" class="csl-entry">
+Krackhardt, D. (1994). Graph theoretical dimensions of informal organizations. In K. M. Carley &amp; M. J. Prietula (Eds.), <em>Computational organization theory</em> (pp. 89–111). Hillsdale, NJ: L. Erlbaum Associates.
 </div>
-<div id="ref-Levitt2005">
-<p>Levitt, S. D., &amp; Dubner, S. J. (2005). <em>Freakanomics: A rogue economist explores the hidden side of everything</em>. Harper Collins.</p>
+<div id="ref-Levitt2005" class="csl-entry">
+Levitt, S. D., &amp; Dubner, S. J. (2005). <em>Freakanomics: A rogue economist explores the hidden side of everything</em>. Harper Collins.
 </div>
-<div id="ref-Lin2001">
-<p>Lin, N. (2001). <em>Social captial</em>. Cambridge University Press.</p>
+<div id="ref-Lin2001" class="csl-entry">
+Lin, N. (2001). <em>Social captial</em>. Cambridge University Press.
 </div>
-<div id="ref-Lofland1965">
-<p>Lofland, J., &amp; Stark, R. (1965). Ecoming a world-saver: A theory of conversion to a deviant perspective. <em>American Sociological Review</em>, <em>30</em>, 862–875.</p>
+<div id="ref-Lofland1965" class="csl-entry">
+Lofland, J., &amp; Stark, R. (1965). Ecoming a world-saver: A theory of conversion to a deviant perspective. <em>American Sociological Review</em>, <em>30</em>, 862–875.
 </div>
-<div id="ref-Mayhew1980">
-<p>Mayhew, B. (1980). Structuralism versus individualism: Part i, shadowboxing in the dark. <em>Social Forces</em>, <em>59</em>(2), 355–374.</p>
+<div id="ref-Mayhew1980" class="csl-entry">
+Mayhew, B. (1980). Structuralism versus individualism: Part i, shadowboxing in the dark. <em>Social Forces</em>, <em>59</em>(2), 355–374.
 </div>
-<div id="ref-Mayhew1981">
-<p>Mayhew, B. (1981). Structuralism versus individualism: Part ii, ideological and other obfuscations. <em>Social Forces</em>, <em>59</em>(3), 627–648.</p>
+<div id="ref-Mayhew1981" class="csl-entry">
+Mayhew, B. (1981). Structuralism versus individualism: Part II, ideological and other obfuscations. <em>Social Forces</em>, <em>59</em>(3), 627–648.
 </div>
-<div id="ref-McAdam1986">
-<p>McAdam, D. (1986). Recruitment to high risk activism: The case of freedom summer. <em>American Journal of Sociology</em>, <em>92</em>, 64–90.</p>
+<div id="ref-McAdam1986" class="csl-entry">
+McAdam, D. (1986). Recruitment to high risk activism: The case of freedom summer. <em>American Journal of Sociology</em>, <em>92</em>, 64–90.
 </div>
-<div id="ref-McAdam1988a">
-<p>McAdam, D. (1988a). <em>Freedom summer</em>. Oxford University Press.</p>
+<div id="ref-McAdam1988b" class="csl-entry">
+McAdam, D. (1988b). Micromobilization contexts and recruitment to activism. <em>International Social Movement Research</em>, <em>1</em>, 125–154.
 </div>
-<div id="ref-McAdam1988b">
-<p>McAdam, D. (1988b). Micromobilization contexts and recruitment to activism. <em>International Social Movement Research</em>, <em>1</em>, 125–154.</p>
+<div id="ref-McAdam1988a" class="csl-entry">
+McAdam, D. (1988a). <em>Freedom summer</em>. Oxford University Press.
 </div>
-<div id="ref-McCulloh2011">
-<p>McCulloh, I., &amp; Carley, K. M. (2011). Detecting change in longitudinal social networks. <em>Journal of Social Structure</em>.</p>
+<div id="ref-McCulloh2011" class="csl-entry">
+McCulloh, I., &amp; Carley, K. M. (2011). Detecting change in longitudinal social networks. <em>Journal of Social Structure</em>.
 </div>
-<div id="ref-Meyer1997">
-<p>Meyer, J. W., Boli, J., Thomas, G. M., &amp; Ramirez, F. O. (1997). World society and the nation-state. <em>American Journal of Sociology</em>, <em>103</em>(1), 144–181.</p>
+<div id="ref-Meyer1997" class="csl-entry">
+Meyer, J. W., Boli, J., Thomas, G. M., &amp; Ramirez, F. O. (1997). World society and the nation-state. <em>American Journal of Sociology</em>, <em>103</em>(1), 144–181.
 </div>
-<div id="ref-Meyer1977">
-<p>Meyer, J. W., &amp; Rowan, B. (1977). Institutionalized organizations: Formal structure as myth and ceremony. <em>American Journal of Sociology</em>, <em>83</em>(2), 340–363.</p>
+<div id="ref-Meyer1977" class="csl-entry">
+Meyer, J. W., &amp; Rowan, B. (1977). Institutionalized organizations: Formal structure as myth and ceremony. <em>American Journal of Sociology</em>, <em>83</em>(2), 340–363.
 </div>
-<div id="ref-Milgram1974">
-<p>Milgram, S. (1974). <em>Obedience to authority</em>. Princeton, NJ: Princeton University Press.</p>
+<div id="ref-Milgram1974" class="csl-entry">
+Milgram, S. (1974). <em>Obedience to authority</em>. Princeton, NJ: Princeton University Press.
 </div>
-<div id="ref-Nohria1992">
-<p>Nohria, N. (1992). Is the network perspective a useful way of studying organizations? In N. Nohria &amp; R. G. Eccles (Eds.), <em>Networks and organizations: Structure, form, and action</em> (pp. 1–22). Boston, MA: Harvard Business School Press.</p>
+<div id="ref-Nohria1992" class="csl-entry">
+Nohria, N. (1992). Is the network perspective a useful way of studying organizations? In N. Nohria &amp; R. G. Eccles (Eds.), <em>Networks and organizations: Structure, form, and action</em> (pp. 1–22). Boston, MA: Harvard Business School Press.
 </div>
-<div id="ref-deNooy2011">
-<p>Nooy, W. de. (2011). Networks of action and events over time: A multilevel discrete-time event history model for longitudinal network data. <em>Social Networks</em>, <em>33</em>(1), 31–40.</p>
+<div id="ref-deNooy2011" class="csl-entry">
+Nooy, W. de. (2011). Networks of action and events over time: A multilevel discrete-time event history model for longitudinal network data. <em>Social Networks</em>, <em>33</em>(1), 31–40.
 </div>
-<div id="ref-deNooy2005">
-<p>Nooy, W. de, Mrvar, A., &amp; Batagelj, V. (2005). <em>Exploratory social network analysis with pajek</em>. Cambridge, U.K.: Cambridge University Press.</p>
+<div id="ref-deNooy2005" class="csl-entry">
+Nooy, W. de, Mrvar, A., &amp; Batagelj, V. (2005). <em>Exploratory social network analysis with pajek</em>. Cambridge, U.K.: Cambridge University Press.
 </div>
-<div id="ref-Pescolindo1989">
-<p>Pescolindo, B. A., &amp; Georgianna, S. (1989). Durkheim, suicide, and religion: Toward a network theory of suicide. <em>American Sociological Review</em>, <em>54</em>(1), 33–48.</p>
+<div id="ref-Pescolindo1989" class="csl-entry">
+Pescolindo, B. A., &amp; Georgianna, S. (1989). Durkheim, suicide, and religion: Toward a network theory of suicide. <em>American Sociological Review</em>, <em>54</em>(1), 33–48.
 </div>
-<div id="ref-Podolny1998">
-<p>Podolny, J. M., &amp; Page, K. L. (1998). Network forms of organization. <em>Annual Review of Sociology</em>, 57–76.</p>
+<div id="ref-Podolny1998" class="csl-entry">
+Podolny, J. M., &amp; Page, K. L. (1998). Network forms of organization. <em>Annual Review of Sociology</em>, 57–76.
 </div>
-<div id="ref-Powell1990">
-<p>Powell, W. W. (1990). Neither market nor hierarchy: Network forms of orgnanization. In B. M. Staw &amp; L. L. Cummings (Eds.), <em>Research in organizational behavior: An annual series of analytical essays and critical reviews</em> (pp. 295–336). Greenwich, CT: JAI Press, Inc.</p>
+<div id="ref-Powell1990" class="csl-entry">
+Powell, W. W. (1990). Neither market nor hierarchy: Network forms of orgnanization. In B. M. Staw &amp; L. L. Cummings (Eds.), <em>Research in organizational behavior: An annual series of analytical essays and critical reviews</em> (pp. 295–336). Greenwich, CT: JAI Press, Inc.
 </div>
-<div id="ref-Powell1994">
-<p>Powell, W. W., &amp; Smith-Doerr, L. (1994). Networks and economic life. In N. J. Smelser &amp; R. Swedberg (Eds.), <em>The handbook of economic sociology</em> (pp. 268–402). Princeton, NJ: Princeton University Press.</p>
+<div id="ref-Powell1994" class="csl-entry">
+Powell, W. W., &amp; Smith-Doerr, L. (1994). Networks and economic life. In N. J. Smelser &amp; R. Swedberg (Eds.), <em>The handbook of economic sociology</em> (pp. 268–402). Princeton, NJ: Princeton University Press.
 </div>
-<div id="ref-Raab2003">
-<p>Raab, J., &amp; Milward, H. B. (2003). Dark networks as problems. <em>Journal of Public Administration Research and Theory</em>, <em>13</em>, 413–39.</p>
+<div id="ref-Raab2003" class="csl-entry">
+Raab, J., &amp; Milward, H. B. (2003). Dark networks as problems. <em>Journal of Public Administration Research and Theory</em>, <em>13</em>, 413–39.
 </div>
-<div id="ref-Ronfeldt2001">
-<p>Ronfeldt, D., &amp; Arquilla, J. (2001). What next for networks and netwars? In D. Ronfeldt &amp; J. Arquilla (Eds.), <em>Networks and netwars</em> (pp. 311–361). Santa Monica, CA: RAND.</p>
+<div id="ref-Ronfeldt2001" class="csl-entry">
+Ronfeldt, D., &amp; Arquilla, J. (2001). What next for networks and netwars? In D. Ronfeldt &amp; J. Arquilla (Eds.), <em>Networks and netwars</em> (pp. 311–361). Santa Monica, CA: RAND.
 </div>
-<div id="ref-Simmel1950">
-<p>Simmel, G. (1950). <em>The sociology of georg simmel</em>. (K. H. Wolf, Ed.). The Free Press.</p>
+<div id="ref-Simmel1950" class="csl-entry">
+Simmel, G. (1950). <em>The sociology of georg simmel</em>. (K. H. Wolf, Ed.). The Free Press.
 </div>
-<div id="ref-Smith2010">
-<p>Smith, C. S. (2010). <em>What is a person? Rethinking humanity, social life, and the moral good from the person up</em>. Chicago; London: The University of Chicago Press.</p>
+<div id="ref-Smith2010" class="csl-entry">
+Smith, C. S. (2010). <em>What is a person? Rethinking humanity, social life, and the moral good from the person up</em>. Chicago; London: The University of Chicago Press.
 </div>
-<div id="ref-Snijders2010">
-<p>Snijders, T. A. B., Bunt, G. G. van de, &amp; Steglich, C. (2010). Introduction to stochastic actor-based models for network dynamics. <em>Social Networks</em>, <em>32</em>(1), 44–60.</p>
+<div id="ref-Snijders2010" class="csl-entry">
+Snijders, T. A. B., Bunt, G. G. van de, &amp; Steglich, C. (2010). Introduction to stochastic actor-based models for network dynamics. <em>Social Networks</em>, <em>32</em>(1), 44–60.
 </div>
-<div id="ref-Snow1980">
-<p>Snow, D. A., Zurcher, L. A., &amp; Ekland-olson, S. (1980). Social networks and social movements: A microstructural approach to differential recruitment. <em>American Sociological Review</em>, <em>45</em>, 787–801.</p>
+<div id="ref-Snow1980" class="csl-entry">
+Snow, D. A., Zurcher, L. A., &amp; Ekland-olson, S. (1980). Social networks and social movements: A microstructural approach to differential recruitment. <em>American Sociological Review</em>, <em>45</em>, 787–801.
 </div>
-<div id="ref-Stark1980">
-<p>Stark, R., &amp; Bainbridge, W. S. (1980). Networks of faith: Interpersonal bonds and recruitment to cults and sects. <em>American Journal of Sociology</em>, <em>85</em>(6), 13767395.</p>
+<div id="ref-Stark1980" class="csl-entry">
+Stark, R., &amp; Bainbridge, W. S. (1980). Networks of faith: Interpersonal bonds and recruitment to cults and sects. <em>American Journal of Sociology</em>, <em>85</em>(6), 13767395.
 </div>
-<div id="ref-Turner2006">
-<p>Turner, J. H. (2006). <em>Sociology</em>. Pearson Prentice Hall.</p>
+<div id="ref-Turner2006" class="csl-entry">
+Turner, J. H. (2006). <em>Sociology</em>. Pearson Prentice Hall.
 </div>
-<div id="ref-Uzzi1996">
-<p>Uzzi, B. (1996). The sources and consequences of embeddedness for the economic performance of organizations: The network effect. <em>American Sociological Review</em>, <em>61</em>, 674–698.</p>
+<div id="ref-Uzzi1996" class="csl-entry">
+Uzzi, B. (1996). The sources and consequences of embeddedness for the economic performance of organizations: The network effect. <em>American Sociological Review</em>, <em>61</em>, 674–698.
 </div>
-<div id="ref-Uzzi2005">
-<p>Uzzi, B., &amp; Spiro, J. (2005). Collaboration and creativity: The small world problem. <em>American Journal of Sociology</em>, <em>11</em>(2), 447–504.</p>
+<div id="ref-Uzzi2005" class="csl-entry">
+Uzzi, B., &amp; Spiro, J. (2005). Collaboration and creativity: The small world problem. <em>American Journal of Sociology</em>, <em>11</em>(2), 447–504.
 </div>
-<div id="ref-Wasserman1994">
-<p>Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.</p>
+<div id="ref-Wasserman1994" class="csl-entry">
+Wasserman, S., &amp; Faust, K. (1994). <em>Social network analysis: Methods and applications</em>. Cambridge University Press.
 </div>
-<div id="ref-White1992">
-<p>White, H. C. (1992). <em>Identity and control: A structural theory of social action</em>. Princeton, NJ: Princeton University Press.</p>
+<div id="ref-White1992" class="csl-entry">
+White, H. C. (1992). <em>Identity and control: A structural theory of social action</em>. Princeton, NJ: Princeton University Press.
 </div>
-<div id="ref-White2008">
-<p>White, H. C. (2008). <em>Identity and control: How social formations emerge</em>. Princeton, NJ: Princeton University Press.</p>
+<div id="ref-White2008" class="csl-entry">
+White, H. C. (2008). <em>Identity and control: How social formations emerge</em>. Princeton, NJ: Princeton University Press.
 </div>
-<div id="ref-White1976">
-<p>White, H. C., Boorman, S. A., &amp; Breiger, R. L. (1976). Social structure from multiple networks i: Blockmodels of roles and positions. <em>American Journal of Sociology</em>, <em>81</em>, 730–780.</p>
+<div id="ref-White1976" class="csl-entry">
+White, H. C., Boorman, S. A., &amp; Breiger, R. L. (1976). Social structure from multiple networks i: Blockmodels of roles and positions. <em>American Journal of Sociology</em>, <em>81</em>, 730–780.
 </div>
-<div id="ref-Zimbardo1972">
-<p>Zimbardo, P. G. (1972). Pathology of imprisonment. <em>Society</em>, <em>9</em>, 4–6.</p>
+<div id="ref-Zimbardo1972" class="csl-entry">
+Zimbardo, P. G. (1972). Pathology of imprisonment. <em>Society</em>, <em>9</em>, 4–6.
 </div>
 </div>
             </section>
@@ -625,8 +706,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/cjcallag/arso/edit/main/01-introduction.Rmd",
-"text": "Edit"
+"link": "https://github.com/cjcallag/arso/edit/editing/01-introduction.Rmd",
+"text": "Editar"
 },
 "history": {
 "link": null,
@@ -637,15 +718,22 @@ gitbook.start({
 "text": null
 },
 "download": null,
+"search": {
+"engine": "lunr",
+"options": null
+},
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
 },
-"css": "arso.css",
 "font_settings": {
-"theme": "white",
 "family": "sans",
+"theme": "white",
 "size": 2
+},
+"info": true,
+"toolbar": {
+"position": "fixed"
 }
 });
 });
