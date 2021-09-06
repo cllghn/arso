@@ -4,7 +4,7 @@ bookdown::gitbook:
     # css: arso.cssboo
     download: null
     edit:
-      link: https://github.com/cjcallag/arso/edit/main/%s
+      link: https://github.com/cjcallag/arso/edit/editing/%s
       test: "Editar"
     font_settings: 
       family: sans
