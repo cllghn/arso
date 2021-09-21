@@ -24,7 +24,7 @@ coords <- layout_with_kk(g)
 ```
 
 
-**Actores** (*Actors*): Se refiere a todo tipo de entidatedes incluidas en la red, tales como: individuos, grupos, etc. Sinónimos incluyen *nodos* or *vértices*.
+**Actores** (*Actors*): Se refiere a todo tipo de entidades incluidas en la red, tales como: individuos, grupos, etc. Sinónimos incluyen *nodos* or *vértices*.
 
 ```{r, fig.cap= "Actores"}
 random.graph.game(n = 10, p.or.m = 0) %>%
@@ -102,9 +102,9 @@ plot.igraph(g,
             vertex.size = scales::rescale(get.vertex.attribute(g, name = "degree"), to = c(1, 15)))
 ```
 
-**Centralización** (*Centralization*): La centralización utiliza la variación en la centralidad todos los actores dentro de la red para medir el nivel de centralización. Más variación produce puntuaciones más altas de centralización de red; menos variación produce puntuaciones más bajos. En general, cuanto más grande es un índice de centralización, más probable es que un solo actor sea muy central.
+**Centralización** (*Centralization*): La centralización utiliza la variación en la centralidad de todos los actores dentro de la red para medir el nivel de centralización. Más variación produce puntuaciones más altas de centralización de red; menos variación produce puntuaciones más bajos. En general, cuanto más grande es un índice de centralización, más probable es que un solo actor sea muy central.
 
-**Datos de atributos** (*Attribure data*): Características (no-relacionales) de un actor en particulaers como identidad étnica, raza, años de educación, edad, nivel de salario, etc.
+**Datos de atributos** (*Attribure data*): Características (no-relacionales) de un actor en particular como identidad étnica, raza, años de educación, edad, nivel de salario, etc.
 
 ```{r, fig.cap = "Nodos coloreados por atributo"}
 random.graph.game(n = 10, p.or.m = 0.3) %>%
