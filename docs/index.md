@@ -46,7 +46,7 @@ El desarrollo de este manual fue posible gracias al patrocinio del [Programa de 
 
 **Gral. de Brig. EP (R) Augusto Manuel E. Álvarez Torres** ostenta los títulos académicos de Maestro en Seguridad, Defensa y Desarrollo Nacional y en Ciencias Militares con mención en Planeamiento Estratégico y Toma de Decisiones, es egresado de la Escuela de Post Grado de Ciencias Políticas de las Universidad Ricardo Pala, ha seguido cursos de Terrorismo e Insurgencia, Crimen Organizado, Políticas y Estrategias  de Seguridad, Estrategia y Seguridad Internacional, Relaciones Político, Civil, Militar y Liderazgo Estratégico, Estrategia de Seguridad y Defensa frente a las Amenazas Complejas en la UND/CHDS- EE. UU. Los cursos de Análisis de redes Nivel I y II, en la Escuela Naval de Post Grado en Monterey, California, EE. UU. Actualmente se desempeña como Catedrático en el [Centro de Altos Estudios Nacionales (CAEN)](https://www.caen.edu.pe/wordpress/), Profesor Principal de la Catedra de Historia Militar y Profesor Adjunto en la [Universidad Conjunta de Operaciones Especiales en Florida, EE. UU](https://www.socom.mil/JSOU/Pages/default.aspx).
 
-**Sally Baho** ...
+<!-- **Sally Baho** ... -->
 
 <!-- ## Colaboradores {-} -->
 
