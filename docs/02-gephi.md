@@ -16,7 +16,7 @@ Hoy en día existen múltiples paquetes de software desarrollados para asistir a
 
 ## Gephi
 
-De acuerdo con los autores de Gephi, la plataforma es “una herramienta para analistas de datos y científicos interesados en explorar y comprender gráficos ... [Donde] el usuario interactúa con la representación, manipula las estructuras, formas y colores para revelar patrones ocultos. El objetivo es ayudar a los analistas de datos a formular hipótesis, descubrir patrones intuitivamente, aislar singularidades o fallas de estructura durante la recopilación de datos” [@gephi]. Para nuestros propósitos utilizaremos esta interfaz para complementar el material y facilitar nuestro un análisis exploratorio. Antes de comenzar los siguientes capítulos, descargue gratuitamente la herramienta desde [el sitio web de Gephi.](https://gephi.org/)
+De acuerdo con los autores de Gephi, la plataforma es “una herramienta para analistas de datos y científicos interesados en explorar y comprender gráficos ... [Donde] el usuario interactúa con la representación, manipula las estructuras, formas y colores para revelar patrones ocultos. El objetivo es ayudar a los analistas de datos a formular hipótesis, descubrir patrones intuitivamente, aislar singularidades o fallas de estructura durante la recopilación de datos” [@gephi]. Para nuestros propósitos utilizaremos esta interfaz para complementar el material y facilitar nuestro análisis exploratorio. Antes de comenzar los siguientes capítulos, descargue gratuitamente la herramienta desde [el sitio web de Gephi.](https://gephi.org/)
 
 Como todas las herramientas de software, esta tiene ventajas y desventajas. Es importante explicar por qué hemos elegido esta herramienta sobre algunas de las demás:
   
@@ -55,7 +55,7 @@ Para esta breve instrucción al software, vamos a usar uno de los conjuntos de d
 
 ### Vista General
 
-Esta es la ventana que utilizará más a menudo, ver Figura \@ref(fig:overview). Aquí podrá tomar diferentes acciones para manipular la aparencia sus gráficos, filtrar información y calcular medidas de red, arista, o nodo.
+Esta es la ventana que utilizará más a menudo, ver Figura \@ref(fig:overview). Aquí podrá tomar diferentes acciones para manipular la aparencia sus gráficos, filtrar información y calcular medidas de red, arista o nodo.
 
 <div class="figure" style="text-align: center">
 <img src="images/01-overview.png" alt="Gephi: Vista General" width="100%" />
@@ -231,7 +231,7 @@ Si desea remover el filtro, presione el botón *Auto aplicar* en la parte inferi
 
 #### Grafo
 
-La última sección que cubriremos en esta esta introducción a la *Vista General* es el *Grafo* y algunas de las funciones asociadas con esta ventana. En el lado izquierdo e inferior del panel, encontrará las herramientas básicas para interactuar manualmente con el gráfico y editar algunos de los atributos visuales. En esta breve introducción, los definiremos de manera general, pero no entraremos en demasiados detalles, ya que los usaremos más adelante en el manual según sea necesario.
+La última sección que cubriremos en esta introducción a la *Vista General* es el *Grafo* y algunas de las funciones asociadas con esta ventana. En el lado izquierdo e inferior del panel, encontrará las herramientas básicas para interactuar manualmente con el gráfico y editar algunos de los atributos visuales. En esta breve introducción, los definiremos de manera general, pero no entraremos en demasiados detalles, ya que los usaremos más adelante en el manual según sea necesario.
 
 
 <div class="figure" style="text-align: center">
@@ -296,7 +296,7 @@ A la medida que se agregan atributos de nodo al gráfico, en esta tabla deberán
 
 Al igual que la tabla de nodos, la tabla de aristas incluye información clave del gráfico de red; específicamente, los datos relacionales. Esta información está codificada en siete columnas definidas a continuación:
 
-  - `Origen` y `Destino`:  Todas las relaciones en un grafo vinculan un nodo inicial y un nodo final. Por ejemplo, si el nodo A está vinculado al nodo B, dibujaríamos un vínculo entre estos dos. Gephi codifica esto en dos columnas `Origen` y `Destino`, por lo que  si A y B están conectados, pondríamos A en la columna `Origen` y B en la columna `Destino` o viceversa.
+  - `Origen` y `Destino`:  Todas las relaciones en un grafo vinculan un nodo inicial y un nodo final. Por ejemplo, si el nodo A está vinculado al nodo B, dibujaríamos un vínculo entre estos dos. Gephi codifica esto en dos columnas `Origen` y `Destino`, por lo que si A y B están conectados, pondríamos A en la columna `Origen` y B en la columna `Destino` o viceversa.
   - `Tipo`: Denota el tipo de relación entre los nodos en las columnas `Origen` y `Destino`. Los valores pueden ser `Dirigida` o` No dirigida`. Si el tipo es `Dirigida` la relación es un arco o arista, de lo contrario, si es tipo es `No Dirigida` el vínculo es un borde.
   - `Id`: Un identificador único para el vínculo. Usualmente asignado por Gephi al importar datos.
   - `Label`: Etiqueta del vínculo. 

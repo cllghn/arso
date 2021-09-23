@@ -109,7 +109,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 </ul></li>
-<li class="part"><span><b>I ¿ Qué es el ARSo?</b></span></li>
+<li class="part"><span><b>I ¿Qué es el ARSo?</b></span></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
@@ -353,7 +353,7 @@ Publicado con bookdown</a></li>
 <p>Por consiguiente, los analistas de redes trabajan con múltiples relaciones para poder abarcar la gama de interacciones en un sistema social. En este capítulo, cubriéremos algunas técnicas utilizadas al trabajar con múltiples tipos de relaciones, tomando pauta para recalcar las ventajas y desventajas de diferentes enfoques. Concluiremos con un ejercicio práctico en Gephi que le dará la oportunidad de utilizar estos conceptos.</p>
 <div id="matrices-y-listas-de-aristas" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> Matrices y Listas de Aristas</h2>
-<p>Empecemos por considerar como trabajar con múltiples relaciones utilizando matrices. Las matrices subsecuentes (<a href="múltiples-relaciones.html#eq:mat1">(6.1)</a> y <a href="múltiples-relaciones.html#eq:mat2">(6.2)</a>) representan dos relaciones diferentes, la matriz izquierda contiene relaciones familiares y la matriz derecha financieras. Por separado, cuentan unan historia diferente de los miembros de la red.</p>
+<p>Empecemos por considerar como trabajar con múltiples relaciones utilizando matrices. Las matrices subsecuentes (<a href="múltiples-relaciones.html#eq:mat1">(6.1)</a> y <a href="múltiples-relaciones.html#eq:mat2">(6.2)</a>) representan dos relaciones diferentes, la matriz izquierda contiene relaciones familiares y la matriz derecha financieras. Por separado, cuentan una historia diferente de los miembros de la red.</p>
 <div class="row">
 <div class="lcolumn-50">
 <span class="math display" id="eq:mat1">\[\begin{matrix}
@@ -380,7 +380,7 @@ F &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
 \end{matrix}\]</span>
 </div>
 </div>
-<p>El objetivo es analizar la combinación de estas relaciones de manera que podamos identificar los límites de la red. La Figura <a href="múltiples-relaciones.html#fig:combined">6.1</a> es una representación de los datos descritos previamente en formato de sociomatriz. El grafo incluye dos triadas cerradas que consisten de miembros familiares, los cuales se unen por unarelación financiera.</p>
+<p>El objetivo es analizar la combinación de estas relaciones de manera que podamos identificar los límites de la red. La Figura <a href="múltiples-relaciones.html#fig:combined">6.1</a> es una representación de los datos descritos previamente en formato de sociomatriz. El grafo incluye dos triadas cerradas que consisten de miembros familiares, los cuales se unen por una relación financiera.</p>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:combined"></span>
 <img src="02-multiple-networks_files/figure-html/combined-1.png" alt="Múltiples Relaciones" width="70%" />
 <p class="caption">
@@ -602,7 +602,7 @@ Operativo &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 
 \end{matrix}
 
 \end{equation}\]</span></p>
-<p>El proceso es simple, primero cada matriz de incidencia (<a href="múltiples-relaciones.html#eq:mat7">(6.8)</a> y <a href="múltiples-relaciones.html#eq:mat8">(6.9)</a>) para recombinar se debe multiplicar por su matriz equivalente transpuesta, como se presento en la sección de <a href="derivando-datos-modo-uno-de-modo-dos.html#proyección">Proyección</a>. Puesto que el objetivo es recombinar lo enlaces, el siguiente paso es multiplicar las matrices resultantes utilizando el producto Hadamard (operación por elementos) que vimos previamente. Esta última operación genera una sociomatriz modo-uno donde los nodos se encuentran enlazados si viven en la misma ubicación y comparten el mismo rol operacional (ver <a href="múltiples-relaciones.html#eq:hadd">(6.10)</a> y <a href="múltiples-relaciones.html#fig:recombinar">6.4</a>).</p>
+<p>El proceso es simple, primero cada matriz de incidencia (<a href="múltiples-relaciones.html#eq:mat7">(6.8)</a> y <a href="múltiples-relaciones.html#eq:mat8">(6.9)</a>) para recombinar se debe multiplicar por su matriz equivalente transpuesta, como se presento en la sección de <a href="derivando-datos-modo-uno-de-modo-dos.html#proyección">Proyección</a>. Puesto que el objetivo es recombinar los enlaces, el siguiente paso es multiplicar las matrices resultantes utilizando el producto Hadamard (operación por elementos) que vimos previamente. Esta última operación genera una sociomatriz modo-uno donde los nodos se encuentran enlazados si viven en la misma ubicación y comparten el mismo rol operacional (ver <a href="múltiples-relaciones.html#eq:hadd">(6.10)</a> y <a href="múltiples-relaciones.html#fig:recombinar">6.4</a>).</p>
 <span class="math display" id="eq:hadd">\[\begin{matrix}
   &amp; A &amp; B &amp; C &amp; D &amp; E &amp; F &amp; G &amp; H &amp; I &amp; J &amp; K \\
 A &amp; - &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\

@@ -8,7 +8,7 @@ bibliography: book.bib
 
 
 
-**Actores** (*Actors*): Se refiere a todo tipo de entidatedes incluidas en la red, tales como: individuos, grupos, etc. Sinónimos incluyen *nodos* or *vértices*.
+**Actores** (*Actors*): Se refiere a todo tipo de entidades incluidas en la red, tales como: individuos, grupos, etc. Sinónimos incluyen *nodos* or *vértices*.
 
 <div class="figure" style="text-align: center">
 <img src="05-glossary_files/figure-html/unnamed-chunk-1-1.png" alt="Actores" width="70%" />
@@ -52,9 +52,9 @@ bibliography: book.bib
 <p class="caption">(\#fig:unnamed-chunk-6)Nodos dimensionados por grado</p>
 </div>
 
-**Centralización** (*Centralization*): La centralización utiliza la variación en la centralidad todos los actores dentro de la red para medir el nivel de centralización. Más variación produce puntuaciones más altas de centralización de red; menos variación produce puntuaciones más bajos. En general, cuanto más grande es un índice de centralización, más probable es que un solo actor sea muy central.
+**Centralización** (*Centralization*): La centralización utiliza la variación en la centralidad de todos los actores dentro de la red para medir el nivel de centralización. Más variación produce puntuaciones más altas de centralización de red; menos variación produce puntuaciones más bajos. En general, cuanto más grande es un índice de centralización, más probable es que un solo actor sea muy central.
 
-**Datos de atributos** (*Attribure data*): Características (no-relacionales) de un actor en particulaers como identidad étnica, raza, años de educación, edad, nivel de salario, etc.
+**Datos de atributos** (*Attribure data*): Características (no-relacionales) de un actor en particular como identidad étnica, raza, años de educación, edad, nivel de salario, etc.
 
 <div class="figure" style="text-align: center">
 <img src="05-glossary_files/figure-html/unnamed-chunk-7-1.png" alt="Nodos coloreados por atributo" width="70%" />

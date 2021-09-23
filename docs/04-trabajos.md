@@ -13,12 +13,12 @@ Esta sección del manual se divide en dos partes. La primera como desarrollar un
 
 ## Desarrollar un Proyecto Investigativo de Redes Sociales
 
-A continuación se presenta un order sugerido de cómo abordar un problema. Sin embargo, de acuerdo con el criterio del analista podrá utilizar los insumos de la manera que contribuya a su trabajo.
+A continuación se presenta un orden sugerido de cómo abordar un problema. Sin embargo, de acuerdo con el criterio del analista podrá utilizar los insumos de la manera que contribuya a su trabajo.
 
 
 ### Pregunata(s) de Investigación
 
-Todo analista debe poder contestar brevemente ¿qué red, grupo o individuo se abordará en la investigación? y ¿Por qué? Este punto de partida puede ser por elección propia o debido a ordenes de un superior. El contestar esta breve interrogante previene que el processo cambie y pierda su trajectoria. @Cunningham2016 nos proveé el siguiente ejemplo sobre la importancia del tener un punto de partida claro:
+Un analista debe poder contestar brevemente ¿qué red, grupo o individuo se abordará en la investigación? y ¿Por qué? Este punto de partida puede ser por elección propia o debido a ordenes de un superior. El contestar esta breve interrogante previene que el processo cambie y pierda su trajectoria. @Cunningham2016 nos proveé el siguiente ejemplo sobre la importancia de tener un punto de partida claro:
 
 > ... Un comandante militar puede solicitar que los analistas examinen la "red de apoyo" de una red oscura en particular basándose en una brecha de información. El término "red de apoyo" es importante y no debe asumirse su significado. [...] ¿"Red de apoyo", en este caso, indica activo, pasivo o alguna combinación? ¿Cómo deberían definir el apoyo pasivo frente al apoyo activo? ¿En qué momento el apoyo pasivo se convierte en apoyo activo? -- [@Cunningham2016, 37]
       
@@ -34,7 +34,7 @@ En este documento nos hemos centrado en explorar redes a través del prisma de e
       - ¿A qué tipología corresponde (por ejemplo, mundo pequeño, sin escala, aleatoria)? Con base en esta tipología, ¿qué tipo de estrategia podemos tomar para fragmentar la red?
   - ¿Hay algunos vínculos que parecen ser más importantes que otros para la estructura general de la red?
   - ¿Hay subredes? ¿Hay uniones entre estas que puedan explotarse?
-  - ¿Hay actores o vínculos clave cuya eliminación o aislamiento hará que la red sea menos efectiva?
+  - ¿Hay actores o vínculos claves cuyas eliminación o aislamiento hará que la red sea menos efectiva?
   - ¿Hay nodos que aparentan ser más relevantes? 
     - ¿Qué tipo de relevancia (intermediación, actividad, etc.)? 
     
@@ -43,7 +43,7 @@ En este documento nos hemos centrado en explorar redes a través del prisma de e
 
 La cita anterior enfatizó la importancia de aclarar los términos centrales como un paso integral en el diseño de una investigación de redes sociales. Igual de importante es comprender los bordes del análisis. Dado que este análisis se centra en los actores y las relaciones, una consideración clave es definir qué datos se incluirán. Una vez más, @Cunningham2016 proporciona una excelente guía para especificar límites, por ello la lista de preguntas que sigue fueron adaptadas de su libro:
 
-  - ¿Cómo se define la población a sí misma? En términos de atributos, tipos de relaciones, participación en eventos o una cobinación de estos. Por ejemplo, miembros de un cartel pueden identificarse como parte de dicha red con base en atributos característicos (tatuajes, roles, etcétera), un objetivo compartido y participación en eventos. 
+  - ¿Cómo se define la población a sí misma? En términos de atributos, tipos de relaciones, participación en eventos o una combinación de estos. Por ejemplo, miembros de un cartel pueden identificarse como parte de dicha red con base en atributos característicos (tatuajes, roles, etc.), un objetivo compartido y participación en eventos. 
   - ¿Cómo defino la relevancia de un actor para el análisis?
     - Si el investigador se enfoca en attributos, puede preguntarse ¿son los actores relevantes porque poseen algún tipo de característica o conjunto de características, como un rol, afiliación organizacional y función logística? Por ejemplo, al mapear una red de communicación entre líderes de una organizacíon, el analista puede definir attributos como títulos (General, Comandante) como límite.
     - De otra manera, si los limites se definen con base en las relaciones, se puede preguntar ¿son relevantes los actores porque están incrustados en un tipo particular de relación? Por ejemplo, los actores dentro de una red financiera son parte de esta por sus vínculos a otros. 
@@ -78,10 +78,10 @@ Supongamos que un investigador de redes sociales está estudiando los lazos "fin
 
 #### Cuestionarios
 
-Para el analista de redes, como para otros investigadores trabajando en proyectos de ciencias sociales, el cuestionario suele contenter preguntas sobre los lazos del un actor, aquí un informante, a otros. Por ejemplo, un informante puede proporcionar datos sobre con quién se comunica o de quién busca información. @Wasserman1994 proporcionan un esquema de los tipos de preguntas que se pueden utilizar en un cuestionario, el siguente es un resumen de los puntos hechos por los autores:
+Para el analista de redes, como para otros investigadores trabajando en proyectos de ciencias sociales, el cuestionario suele contener preguntas sobre los lazos del actor, aquí un informante, a otros. Por ejemplo, un informante puede proporcionar datos sobre con quién se comunica o de quién busca información. @Wasserman1994 proporcionan un esquema de los tipos de preguntas que se pueden utilizar en un cuestionario, el siguente es un resumen de los puntos hechos por los autores:
 
   - Un listado de personas frente a evocar libremente: Cuando el investigador conoce los miembros de la red antes de desarrollar un cuestionario para capturar las relaciones entre estos mismos, se puede presentar un listado de los demás actores para que los informates seleccionen. Ejemplos de este enfoque se pueden encontrar en el trabajo de David Krackhardt (p. Ej. Krackhardt1992 o Krackhardt1994). Alternativamente, el investigador puede no presentar una listado y solicitarle al informate que evoque libremente a otros actores con los que comparten un tipo particular de vínculo.
-  - Elección libre frente a elección fija: El solicitar del informate un número específico de relaciones con otros actores en un cuetionario se conoce como elección fija. Este parámetro establece un número máximo de vínculos que un actor determinado puede tener en la red. Alternativamente, el no especificar un número de vínculos del informate se conoce como elección libre. Ambos enfoques tienen ventajas y desventajas, los investigadores interesados en esta forma de diseño de cuestionarios pueden consultar la literatura. 
+  - Elección libre frente a elección fija: El solicitar del informate un número específico de relaciones con otros actores en un cuestionario se conoce como elección fija. Este parámetro establece un número máximo de vínculos que un actor determinado puede tener en la red. Alternativamente, el no especificar un número de vínculos del informate se conoce como elección libre. Ambos enfoques tienen ventajas y desventajas, los investigadores interesados en esta forma de diseño de cuestionarios pueden consultar la literatura. 
   - Puntuaciones frente a ordenaciones: Una forma de medir la intensidad de los lazos es el requerir que los actores punteen u ordenen a los demás actores de la red. Las ordenaciones requiren que los informantes ordenen sus lazos con otros. El asignar puntuaciones implica que cada actor de un valor a cada relación. 
 
 Cabe recalcar que el utilizar questionarios es poco común para recopilar datos de las redes oscuras ya que, por definición, los miembros de estas buscan permanecer ocultos. Sin embargo, cuando posible, deben ser considerados ya que brindan datos de primera mano sobre las relaciones dentro de una red.

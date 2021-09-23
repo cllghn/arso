@@ -11,7 +11,7 @@ La centralidad es uno de los conceptos más antiguos del ARSo. Un actor central 
 
 Por supuesto, hay más de cuatro medidas de centralidad. UCINET implementa más de 20, el programa R CINNA incluye más de 40, y [David Schoch ha creado una tabla periódica interactiva de más de 100 medidas de centralidad](http://schochastics.net/sna/periodic.html).
 
-Aquí discutiremos las tres centralidades más comunes, originalmente desarrolladas por Freeman [-@Freeman1979], es decir: grado, cercanía e intermediación. Además, otras medidas importantes serán introducidas como eigenvector [@Bonacich1987], grados de entrada y salida [@Wasserman1994] y centros de actividad y autoridades [@Kleinberg1999]. Para diferenciar entre medidas destinadas para datos dirigidos y no-dirigidos, dividiremos el capitulo en dos secciones. Adicionalmente, utilizaremos el marco teórico, originalmente postulado por Freeman [-@Freeman1979], utilizado en @Cunningham2016 para clasificar las medidas de centralidad en tres familias: medidas basadas en frecuencia, medidas basadas en distancia y medidas basadas en caminos. Como en todos los capítulos, este concluirá con un ejercicio práctico en Gephi. 
+Aquí discutiremos las tres centralidades más comunes, originalmente desarrolladas por Freeman [-@Freeman1979], es decir: grado, cercanía e intermediación. Además, otras medidas importantes serán introducidas como eigenvector [@Bonacich1987], grados de entrada y salida [@Wasserman1994] y centros de actividad y autoridades [@Kleinberg1999]. Para diferenciar entre medidas destinadas para datos dirigidos y no-dirigidos, dividiremos el capítulo en dos secciones. Adicionalmente, utilizaremos el marco teórico, originalmente postulado por Freeman [-@Freeman1979], utilizado en @Cunningham2016 para clasificar las medidas de centralidad en tres familias: medidas basadas en frecuencia, medidas basadas en distancia y medidas basadas en caminos. Como en todos los capítulos, este concluirá con un ejercicio práctico en Gephi. 
 
 ## Datos No Dirigidos: Centralidad y Poder 
 
@@ -476,7 +476,7 @@ Note que algunos nodos no reciben ningún enlace, por ejemplo, E tiene un grado 
 
 #### Centros de Actividad y Autoridades
 
-El ultimo algoritmo que exploraremos en esta sección es centros de actividad, o hubs, y autoridades, comúnmente conocido como “hubs and authorities” en inglés o simplemente HITS. Su autor, Kleinberg [-@Kleinberg1999], originalmente desarrollo esta rutina para clasificar sitios de web. Este algoritmo es similar a la centralidad de eigenvector [@Cunningham2016], sin embargo, tiene diferencias cruciales. Fue diseñado para trabajar con datos dirigido, por lo tanto, genera dos medidas un índice de centro de actividad y otro de autoridad. 
+El último algoritmo que exploraremos en esta sección es centros de actividad, o hubs, y autoridades, comúnmente conocido como “hubs and authorities” en inglés o simplemente HITS. Su autor, Kleinberg [-@Kleinberg1999], originalmente desarrollo esta rutina para clasificar sitios de web. Este algoritmo es similar a la centralidad de eigenvector [@Cunningham2016], sin embargo, tiene diferencias cruciales. Fue diseñado para trabajar con datos dirigidos, por lo tanto, genera dos medidas un índice de centro de actividad y otro de autoridad. 
 
 Kleinberg [-@Kleinberg1999] postula que un centro de actividad sería un nodo enlazado a múltiples autoridades. Es decir, los centros de autoridad actúan como portales que dirigen el trafico de enlaces hacia nodos eminentes en un tema. Estos últimos son las autoridades, quienes reciben el tráfico de las autoridades [@Monge2003]. Recuerde que este algoritmo fue diseñado para categorizar sitos de web, por ello que podemos pensar en centros de actividad como sitios de web a los que acuden las personas buscando información sobre un tema, por ejemplo, Wikipedia. Las autoridades en este contexto serian los sitios de web en la sección de referencias de un tema. 
 
@@ -610,7 +610,7 @@ H & \frac{2}{3.6056} = 0.5467 & \frac{0}{13.1909} = 0 \\
 <!-- (\#eq:hits5) -->
 <!-- \end{equation} -->
 
-El siguiente ciclo $k=2$, comenzara utilizando los valores de centros de actividad ($h^1$) y autoridades ($a^1$) del ciclo previo. El proceso re repite una y otra vez dependiente en el numero de iteraciones.
+El siguiente ciclo $k=2$, comenzara utilizando los valores de centros de actividad ($h^1$) y autoridades ($a^1$) del ciclo previo. El proceso repite una y otra vez dependiente en el numero de iteraciones.
 
 Los resultados previos deben corresponder con nuestra intuición, E y F son los nodos mas autoritarios, puesto que reciben la mayoría de los enlaces de entrada. Similarmente, B y C son los centros de autoridad más activos pues envían la mayor porción de vínculos. Sin embargo, el algoritmo HITS nos permite cuantificar que nodos ocupan que posición. 
 

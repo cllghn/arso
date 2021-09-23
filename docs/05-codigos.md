@@ -22,7 +22,7 @@ Las siguientes definiciones son ejemplos de relaciones de modo-uno entre persona
 
   - **Comunicación** (persona-a-persona): definida como la transmisión directa, en persona, de mensajes o información entre individuos o mediante algún tipo de medio, como un teléfono celular o un correo electrónico.
 
-  - **Financieras** (persona a persona): definido como dos actores, en informes o inteligencia, que se declaran explícitamente como transfiriendo fondos entre sí para cualquier propósito, legal o ilegal. Esta relación, sin embargo, NO incluye la compensación normal entre empleador y empleado.
+  - **Financieras** (persona-a-persona): definido como dos actores, en informes o inteligencia, que se declaran explícitamente como transfiriendo fondos entre sí para cualquier propósito, legal o ilegal. Esta relación, sin embargo, NO incluye la compensación normal entre empleador y empleado.
 
  - **Reclutador** (persona-a-persona): se define como el contacto entre dos personas con el fin de reclutar nuevos miembros para actividades relacionadas con una organización.
  
@@ -88,7 +88,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
 ### Relaciones
 
-  - **Afiliación Organizacional** (modo-dos 237 x 32): Una organización terrorista/insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas/insurgentes, que consiste en miembros voluntariamente afiliados. A los efectos de este ejercicio, las facciones se considerarán separados de su organización principal para evitar que se codifiquen vínculos redundantes. En otras palabras, la mayoría de las afiliaciones de nivel micro están codificadas, mientras que un individuo solo se codifica en la organización principal si no figura como afiliado a una organización secundaria. Las organizaciones afiliadas terroristas / insurgentes, también están codificadas en esta matriz.
+  - **Afiliación Organizacional** (modo-dos 237 x 32): Una organización terrorista/insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas/insurgentes, que consiste en miembros voluntariamente afiliados. A los efectos de este ejercicio, las facciones se considerarán separados de su organización principal para evitar que se codifiquen vínculos redundantes. En otras palabras, la mayoría de las afiliaciones de nivel micro están codificadas, mientras que un individuo solo se codifica en la organización principal si no figura como afiliado a una organización secundaria. Las organizaciones afiliadas terroristas/insurgentes, también están codificadas en esta matriz.
 
   - **Afiliación Educativa** (modo-dos 237 x 25): Las relaciones educativas se definen como escuelas donde las personas reciben educación formal, sirven como empleados (maestro, administrador, etc.) y/o participan en instrucción educativa o religiosa adicional en la institución.
   
