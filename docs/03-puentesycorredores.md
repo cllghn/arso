@@ -57,8 +57,8 @@ La medida fue desarrollada por Girvan y Newman [-@Girvan2002] con el propósito 
 Por ejemplo, en la Figura \@ref(fig:edgebetween) los bordes han sido ponderados con base al índice de intermediación de cada enlace. En esta red los actores en cada subconjunto, {A, B, C, D} y {E, F, G, H}, se encuentran densamente interconectados internamente. Adicionalmente, el subconjunto {E, F, G, H} es adyacente a un nodo pendiente, I, El único camino entre estos subconjuntos consiste en el vínculo entre D y E. Por ello si un nodo en el subconjunto {A, B, C, D} desea compartir información con alguien en el subconjunto {E, F, G, H} o con I esta debe fluir a través de el vinculo con mayor intermediación, es decir el camino más corto más a menudo. 
 
 <div class="figure" style="text-align: center">
-<img src="03-puentesycorredores_files/figure-html/edgebetween-1.png" alt="Representación esquemática de una red con dos comunidades densamente enlazadas entre si por vínculos con alta intermediación (rojo)." width="70%" />
-<p class="caption">(\#fig:edgebetween)Representación esquemática de una red con dos comunidades densamente enlazadas entre si por vínculos con alta intermediación (rojo).</p>
+<img src="03-puentesycorredores_files/figure-html/edgebetween-1.png" alt="Representación esquemática de una red con dos comunidades densamente enlazadas entre si por vínculos con alta intermediación." width="70%" />
+<p class="caption">(\#fig:edgebetween)Representación esquemática de una red con dos comunidades densamente enlazadas entre si por vínculos con alta intermediación.</p>
 </div>
 
 :::: {.infobox .note data-latex="note"}

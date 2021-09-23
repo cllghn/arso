@@ -151,8 +151,8 @@ $$
 ::::
 
 :::: {.rcolumn-50}
-\begin{matrix}
 $$
+\begin{matrix}
   & Género    & Edad \\
 A & Masculino & 20 \\
 B & Femenino  & 20 \\
