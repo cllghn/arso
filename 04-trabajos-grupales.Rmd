@@ -49,7 +49,7 @@ La banda criminal “Calor Calor” se dedica a actividades tales como:
   - Tráfico de Droga: Se han dedicado al trafico internacional de drogas desde Colombia para transportarla hasta las costas y puertos de Panamá para luego llevarlas a los carteles de Sinaloa, México [@prensa].
   - Pandillerismo: Sus actividades de pandillerismo se han extendido a provincias centrales [@Valdez].
 
-El (los) objetivo(s) del grupo de investigadores fue definir la estructura  de la red y comenzar a cuantificar los lazos ilícitos que unen a miembros de esta organización criminal, Calor Calor, dentro del área de operaciones de la República de Panamá. Este estudio aprovechó los datos de código abierto para los años 2000 a 2020.  
+El (los) objetivo(s) del grupo de investigadores fue definir la estructura de la red y comenzar a cuantificar los lazos ilícitos que unen a miembros de esta organización criminal, Calor Calor, dentro del área de operaciones de la República de Panamá. Este estudio aprovechó los datos de código abierto para los años 2000 a 2020.  
 
 ### Libro de Códigos
 
@@ -66,7 +66,7 @@ Todas la relaciones (modo-uno o dos) han sido ponderadas en este analysis, defin
     - Robo
     - Blanqueo de Capitales
     - Pandillerismo
-    - Trafico Ilegal de Armas
+    - Tráfico Ilegal de Armas
     - Evasión de Centros Penitenciarios
     - Colaboración desconocida
 
@@ -87,14 +87,14 @@ Todas la relaciones (modo-uno o dos) han sido ponderadas en este analysis, defin
     - Robo
     - Blanqueo de Capitales
     - Pandillerismo
-    - Trafico Ilegal de Armas
+    - Tráfico Ilegal de Armas
     - Evasión de Centros Penitenciarios
     - Colaboración desconocida
     
 #### Atributos
 
   -	Tipo de Actor
-    - Personas:  Se considera a un ser que pertenece a la especie del tipo humano. 
+    - Personas: Se considera a un ser que pertenece a la especie del tipo humano. 
     - Evento: Se refiere a cualquier acto que vaya en contra las normas jurídicas en donde se comete un delito. 
   
   - Rol de Persona:

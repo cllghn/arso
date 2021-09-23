@@ -7,7 +7,7 @@ bibliography: book.bib
 
 # Tipos de Datos de Redes Sociales
 
-Tradicionalmente los analistas de redes sociales trabajan con tres tipos de datos: modo-uno, modo-dos, y atributos [@Everton2012]. En esta sección exploraremos estos tipos de datos en más detalle. El objetivo es definir y compararlos antes de empezar a recopilar y manipular estos datos.
+Tradicionalmente los analistas de redes sociales trabajan con tres tipos de datos: modo-uno, modo-dos y atributos [@Everton2012]. En esta sección exploraremos estos tipos de datos en más detalle. El objetivo es definir y compararlos antes de empezar a recopilar y manipular estos datos.
 
 ## Datos de Modo-Uno
 

@@ -14,7 +14,7 @@ Por consiguiente, los analistas de redes trabajan con múltiples relaciones para
 
 ## Matrices y Listas de Aristas
 
-Empecemos por considerar como trabajar con múltiples relaciones utilizando matrices. Las matrices subsecuentes (\@ref(eq:mat1) y \@ref(eq:mat2)) representan dos relaciones diferentes, la matriz izquierda contiene relaciones familiares y la matriz derecha financieras. Por separado, cuentan unan historia diferente de los miembros de la red.
+Empecemos por considerar como trabajar con múltiples relaciones utilizando matrices. Las matrices subsecuentes (\@ref(eq:mat1) y \@ref(eq:mat2)) representan dos relaciones diferentes, la matriz izquierda contiene relaciones familiares y la matriz derecha financieras. Por separado, cuentan una historia diferente de los miembros de la red.
 
 :::: {.row}
 :::: {.lcolumn-50}
@@ -44,7 +44,7 @@ F & 0 & 0 & 0 & 0 & 0 & 0 \\
 ::::
 ::::
 
-El objetivo es analizar la combinación de estas relaciones de manera que podamos identificar los límites de la red. La Figura \@ref(fig:combined) es una representación de los datos descritos previamente en formato de sociomatriz. El grafo incluye dos triadas cerradas que consisten de miembros familiares, los cuales se unen por unarelación financiera. 
+El objetivo es analizar la combinación de estas relaciones de manera que podamos identificar los límites de la red. La Figura \@ref(fig:combined) es una representación de los datos descritos previamente en formato de sociomatriz. El grafo incluye dos triadas cerradas que consisten de miembros familiares, los cuales se unen por una relación financiera. 
 
 <div class="figure" style="text-align: center">
 <img src="02-multiple-networks_files/figure-html/combined-1.png" alt="Múltiples Relaciones" width="70%" />
@@ -285,7 +285,7 @@ Operativo & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0
 
 \end{equation}
 
-El proceso es simple, primero cada matriz de incidencia (\@ref(eq:mat7) y \@ref(eq:mat8)) para recombinar se debe multiplicar por su matriz equivalente transpuesta, como se presento en la sección de [Proyección]. Puesto que el objetivo es recombinar lo enlaces, el siguiente paso es multiplicar las matrices resultantes utilizando el producto Hadamard (operación por elementos) que vimos previamente. Esta última operación genera una sociomatriz modo-uno donde los nodos se encuentran enlazados si viven en la misma ubicación y comparten el mismo rol operacional (ver \@ref(eq:hadd) y \@ref(fig:recombinar)).
+El proceso es simple, primero cada matriz de incidencia (\@ref(eq:mat7) y \@ref(eq:mat8)) para recombinar se debe multiplicar por su matriz equivalente transpuesta, como se presento en la sección de [Proyección]. Puesto que el objetivo es recombinar los enlaces, el siguiente paso es multiplicar las matrices resultantes utilizando el producto Hadamard (operación por elementos) que vimos previamente. Esta última operación genera una sociomatriz modo-uno donde los nodos se encuentran enlazados si viven en la misma ubicación y comparten el mismo rol operacional (ver \@ref(eq:hadd) y \@ref(fig:recombinar)).
 
 \begin{matrix}
   & A & B & C & D & E & F & G & H & I & J & K \\
