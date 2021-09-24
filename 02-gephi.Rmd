@@ -66,15 +66,15 @@ La característica más obvia de esta ventana es el gráfico prominente en el ce
 El cuadro de apariencia le permite cambiar las características visuales de los nodos, aristas y etiquetas [@kateto2016]. Las opciones se bifurcan para trabajar en la apariencia de nodos y aristas, accesibles a través de las pestañas correspondientes (*Nodos* y *Aristas*). Para editar nodos o aristas se le presenta una serie de opciones en el lado derecho de este cuadro, divididas de tal manera (ver Figura \@ref(fig:apariencia)):
 
   - *Nodos*:
-    - *Color* (1): Modificar el color de los nodos
-    - *Tamaño* (2): Modificar el tamaño de cada nodo
-    - *Color de etiqueta* (3): Modificar el color de las etiquetas de los nodos
-    - *Tamaño de etiqueta* (4): Modificar el color de las etiquetas de los nodos
+    1. *Color*: Modificar el color de los nodos
+    2. *Tamaño*: Modificar el tamaño de cada nodo
+    3. *Color de etiqueta*: Modificar el color de las etiquetas de los nodos
+    4. *Tamaño de etiqueta*: Modificar el color de las etiquetas de los nodos
   
   - *Aristas*:
-    - *Color* (5): Modificar el color de las aristas
-    - *Color de etiqueta* (6): Modificar el color de las etiquetas de las aristas
-    - *Tamaño de etiqueta* (7): Modificar el tamaño de las etiquetas de las aristas
+    5. *Color*: Modificar el color de las aristas
+    6. *Color de etiqueta*: Modificar el color de las etiquetas de las aristas
+    7. *Tamaño de etiqueta*: Modificar el tamaño de las etiquetas de las aristas
 
 ```{r apariencia, out.width = "100%", fig.cap =  "Gephi: Apariencia"}
 knitr::include_graphics("images/01-apariencia.png")
@@ -89,7 +89,7 @@ Cada sección contendrá de dos a tres pestañas: *Único*, *Partición* y *Rank
 *Aristas > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*
 ::::
 ::::{.rcolumn-80}
- *Único* cambia los elementos de manera uniforme por color o tamaño seleccionado. Por consiguiente, para modificar el color de los nodos en gráfico, proceda a seleccionar *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. Si desea modificar el color de las aristas para que reflejen un valor único, seleccione *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. En la Figura \@ref(fig:color-unique) los nodos han sido coloreados de negro (`#000000`) y las aristas de gris (`#adadad`). Note que Gephi define colores utilizando una combinación hexademicial de números y letras definida por su mezcla de rojo, verde y azul.
+ *Único* cambia los elementos de manera uniforme por color o tamaño seleccionado. Por consiguiente, para modificar el color de los nodos en gráfico, proceda a seleccionar *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. Si desea modificar el color de las aristas para que reflejen un valor único, seleccione *Aristas > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. En la Figura \@ref(fig:color-unique) los nodos han sido coloreados de negro (`#000000`) y las aristas de gris (`#adadad`). Note que Gephi define colores utilizando una combinación hexademicial de números y letras definida por su mezcla de rojo, verde y azul.
 ::::
 ::::
 
