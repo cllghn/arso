@@ -159,6 +159,8 @@ fig:practice
 eq:constraint
 fig:autonomy
 fig:5
+fig:dimensions
+fig:mix
 fig:unnamed-chunk-1
 fig:unnamed-chunk-2
 fig:unnamed-chunk-3
@@ -298,6 +300,10 @@ intermediación-de-borde
 agujeros-estructurales-restricción-y-autonomía
 ejercicio-práctico-7
 puentes-y-corredores-en-gephi
+redes-oscuras-en-el-perú
+análisis-de-redes-oscuras
+por-qué-el-análisis-de-redes-oscuras
+conclusiones
 un-proceso-de-diseño-para-la-investigación-de-redes-sociales
 desarrollar-un-proyecto-investigativo-de-redes-sociales
 pregunatas-de-investigación
@@ -311,7 +317,7 @@ entrevistas
 observación-directa
 recopilación-de-datos-de-archivo
 registros-propios
-conclusiones
+conclusiones-1
 ejemplos-practicos
 libro-de-códigos
 relaciones-1
