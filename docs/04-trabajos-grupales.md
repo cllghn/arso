@@ -6,17 +6,18 @@ output: html_document
 
 Lo que sigue es una serie de descripciones generales de proyectos de análisis de redes generadas por los estudiantes que han participado en clases realizadas conjuntamente por NPS y ESGE.
 
-::::{.showbox}
+:::{.showbox}
 ## Informe de la Red Criminal en la República de Panamá {-}
 
-::::{.row}
-::::{.lcolumn-30}
+:::{.row}
+:::{.lcolumn-30}
 La red identificada cuyo nombre es “Calor Calor”, la cual mantiene con organizaciones criminales en Colombia y México. Esta organización opera principalmente en Panamá, Centroamérica y Suramérica. 
-::::
-::::{.rcolumn-70}
-<img src="04-trabajos-grupales_files/figure-html/unnamed-chunk-1-1.png" width="70%" style="display: block; margin: auto;" />
-::::
-::::
+:::
+
+:::{.rcolumn-70}
+<img src="04-trabajos-grupales_files/figure-html/unnamed-chunk-1-1.png" width="100%" style="display: block; margin: auto;" />
+:::
+:::
 
 La banda criminal “Calor Calor” se dedica a actividades tales como:
 
@@ -90,7 +91,7 @@ El siguiente sociograma de red es el resultado de proyectar datos de dos modos y
 Los nodos se han sido coloreado de acuerdo con la función de cada persona dentro de la red. Los nodos morados son "operadores", los "líderes" son verdes y los "colaboradores" son rojos. Los datos registrados sugieren que la red Calor Calor está conectada por un conjunto de nodos con alta centralidad de intermediación. Estos nodos parecen formar el tejido conectivo central que une múltiples subconjuntos en la periferia.
 
 <img src="04-trabajos-grupales_files/figure-html/unnamed-chunk-2-1.png" width="100%" style="display: block; margin: auto;" />
-::::
+:::
 
 
 

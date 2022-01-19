@@ -8,10 +8,11 @@ knitr::opts_chunk$set(
   fig.align = 'center',
   fig.width = 6,
   fig.asp = 0.618,  # 1 / phi
-  fig.show = "hold",
+  fig.show = "asis",
+  # fig.keep = "all",
   message = FALSE,
-  out.width = "70%",
-  warnings = FALSE
+  out.width = "100%", #"70%"
+  warning = FALSE
 )
 
 options(dplyr.print_min = 6, dplyr.print_max = 6)
@@ -20,7 +21,7 @@ options(dplyr.print_min = 6, dplyr.print_max = 6)
 options(crayon.enabled = FALSE)
 
 library(igraph)
-my_igraph <- function(g, .layout = "layout_with_kk", ...) {
+my_igraph <- function(g, .layout = "layout_with_kk", .vertex.size = 30, ...) {
   stopifnot("Must be igraph" = igraph::is.igraph(g))
   stopifnot("Must be character" = is.character(.layout))
   igraph::plot.igraph(g,
@@ -28,7 +29,7 @@ my_igraph <- function(g, .layout = "layout_with_kk", ...) {
                       layout       = eval(as.name(.layout)),
                       # Vertex:
                       vertex.color = "lightblue",
-                      vertex.size   = 30,
+                      vertex.size   = .vertex.size,
                       # Edges:
                       edges.color  = "grey",
                       # Catch all

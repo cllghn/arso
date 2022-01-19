@@ -1,5 +1,7 @@
 ---
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 # Trabajando con Gephi
@@ -39,34 +41,34 @@ Si bien no hay requisitos mínimos de hardware, el rendimiento es una función d
 
 ### Inicie Gephi
 
-Empiece por localizar y abrir el programa. Lo primero que vera es una ventanilla de Bienvenida, vea la Figura \@ref(fig:bienvenida). 
+Empiece por localizar y abrir el programa. Lo primero que vera es una ventanilla de Bienvenida, vea la Figura \@ref(fig:2-1-bienvenida). 
 
 <div class="figure" style="text-align: center">
 <img src="images/01-gephi.png" alt="Menú de Bienvenida en Gephi" width="100%" />
-<p class="caption">(\#fig:bienvenida)Menú de Bienvenida en Gephi</p>
+<p class="caption">(\#fig:2-1-bienvenida)Menú de Bienvenida en Gephi</p>
 </div>
 
-Para esta breve instrucción al software, vamos a usar uno de los conjuntos de datos proporcionados por el software, `Les Misrables.gexf` [@Knuth1993]. Localice este en la parte inferior derecha de la ventanilla de bienvenida. Al seleccionar esta opción aparecerá una nueva ventanilla, subsecuentemente explicaremos más acerca de las opciones en este espacio, por ahora seleccione el botón *Aceptar*. ¡Listo! Con el conjunto de datos cargado (Figura Figura \@ref(fig:les-mis)), podemos empezar a explorar Gephi.
+Para esta breve instrucción al software, vamos a usar uno de los conjuntos de datos proporcionados por el software, `Les Misrables.gexf` [@Knuth1993]. Localice este en la parte inferior derecha de la ventanilla de bienvenida. Al seleccionar esta opción aparecerá una nueva ventanilla, subsecuentemente explicaremos más acerca de las opciones en este espacio, por ahora seleccione el botón *Aceptar*. ¡Listo! Con el conjunto de datos cargado (Figura Figura \@ref(fig:2-1-les-mis)), podemos empezar a explorar Gephi.
 
 <div class="figure" style="text-align: center">
 <img src="images/01-lesmis.png" alt="Datos Les Misrables Cargados" width="100%" />
-<p class="caption">(\#fig:les-mis)Datos Les Misrables Cargados</p>
+<p class="caption">(\#fig:2-1-les-mis)Datos Les Misrables Cargados</p>
 </div>
 
 ### Vista General
 
-Esta es la ventana que utilizará más a menudo, ver Figura \@ref(fig:overview). Aquí podrá tomar diferentes acciones para manipular la aparencia sus gráficos, filtrar información y calcular medidas de red, arista o nodo.
+Esta es la ventana que utilizará más a menudo, ver Figura \@ref(fig:2-1-overview). Aquí podrá tomar diferentes acciones para manipular la aparencia sus gráficos, filtrar información y calcular medidas de red, arista o nodo.
 
 <div class="figure" style="text-align: center">
 <img src="images/01-overview.png" alt="Gephi: Vista General" width="100%" />
-<p class="caption">(\#fig:overview)Gephi: Vista General</p>
+<p class="caption">(\#fig:2-1-overview)Gephi: Vista General</p>
 </div>
 
 La característica más obvia de esta ventana es el gráfico prominente en el centro; sin embargo, hay varias ventanillas relevantes; aquí, las cubriremos en orden alfabético.
 
 #### Apariencia
 
-El cuadro de apariencia le permite cambiar las características visuales de los nodos, aristas y etiquetas [@kateto2016]. Las opciones se bifurcan para trabajar en la apariencia de nodos y aristas, accesibles a través de las pestañas correspondientes (*Nodos* y *Aristas*). Para editar nodos o aristas se le presenta una serie de opciones en el lado derecho de este cuadro, divididas de tal manera (ver Figura \@ref(fig:apariencia)):
+El cuadro de apariencia le permite cambiar las características visuales de los nodos, aristas y etiquetas [@kateto2016]. Las opciones se bifurcan para trabajar en la apariencia de nodos y aristas, accesibles a través de las pestañas correspondientes (*Nodos* y *Aristas*). Para editar nodos o aristas se le presenta una serie de opciones en el lado derecho de este cuadro, divididas de tal manera (ver Figura \@ref(fig:2-1-apariencia)):
 
   - *Nodos*:
     1. *Color*: Modificar el color de los nodos
@@ -81,68 +83,92 @@ El cuadro de apariencia le permite cambiar las características visuales de los 
 
 <div class="figure" style="text-align: center">
 <img src="images/01-apariencia.png" alt="Gephi: Apariencia" width="100%" />
-<p class="caption">(\#fig:apariencia)Gephi: Apariencia</p>
+<p class="caption">(\#fig:2-1-apariencia)Gephi: Apariencia</p>
 </div>
 
 Cada sección contendrá de dos a tres pestañas: *Único*, *Partición* y *Ranking*. Veamos como funcionan utilizando el software:
 
-::::{.row}
-::::{.lcolumn-20}
+:::{.row}
+:::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
 *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*
 
 *Aristas > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*
-::::
-::::{.rcolumn-80}
- *Único* cambia los elementos de manera uniforme por color o tamaño seleccionado. Por consiguiente, para modificar el color de los nodos en gráfico, proceda a seleccionar *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. Si desea modificar el color de las aristas para que reflejen un valor único, seleccione *Aristas > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. En la Figura \@ref(fig:color-unique) los nodos han sido coloreados de negro (`#000000`) y las aristas de gris (`#adadad`). Note que Gephi define colores utilizando una combinación hexademicial de números y letras definida por su mezcla de rojo, verde y azul.
-::::
-::::
+:::
+
+:::{.col data-latex="{0.04\\textwidth}"}
+\ <!-- an empty Div (with a white space), serving as
+a column separator for tex -->
+:::
+
+:::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
+ *Único* cambia los elementos de manera uniforme por color o tamaño seleccionado. Por consiguiente, para modificar el color de los nodos en gráfico, proceda a seleccionar *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. Si desea modificar el color de las aristas para que reflejen un valor único, seleccione *Aristas > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. En la Figura \@ref(fig:2-1-color-unique) los nodos han sido coloreados de negro (`#000000`) y las aristas de gris (`#adadad`). Note que Gephi define colores utilizando una combinación hexademicial de números y letras definida por su mezcla de rojo, verde y azul.
+:::
+:::
 
 <div class="figure" style="text-align: center">
 <img src="images/01-color_unique.png" alt="Nodos y Aristas con Colores Únicos" width="100%" />
-<p class="caption">(\#fig:color-unique)Nodos y Aristas con Colores Únicos</p>
+<p class="caption">(\#fig:2-1-color-unique)Nodos y Aristas con Colores Únicos</p>
 </div>
 
-::::{.row}
-::::{.lcolumn-20}
+:::{.row}
+:::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
 *Nodos > Tamaño > Único > 20 > Aplicar*
-::::
-::::{.rcolumn-80}
-Para modificar el tamaño de los nodos, igualmente usaremos la opción *Único*. Sin embargo, en esta secuencia modificaremos los pasos de la siguiente manera: *Nodos > Tamaño > Único > 20 > Aplicar*. Como verá en la Figura \@ref(fig:size-unique) todos los nodos en el gráfico aparecen con el mismo tamaño. 
-::::
-::::
+:::
+
+:::{.col data-latex="{0.04\\textwidth}"}
+\ <!-- an empty Div (with a white space), serving as
+a column separator for tex -->
+:::
+
+:::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
+Para modificar el tamaño de los nodos, igualmente usaremos la opción *Único*. Sin embargo, en esta secuencia modificaremos los pasos de la siguiente manera: *Nodos > Tamaño > Único > 20 > Aplicar*. Como verá en la Figura \@ref(fig:2-1-size-unique) todos los nodos en el gráfico aparecen con el mismo tamaño. 
+:::
+:::
 
 <div class="figure" style="text-align: center">
 <img src="images/01-size_unique.png" alt="Nodos con Tamaño Único" width="100%" />
-<p class="caption">(\#fig:size-unique)Nodos con Tamaño Único</p>
+<p class="caption">(\#fig:2-1-size-unique)Nodos con Tamaño Único</p>
 </div>
 
 
-::::{.row}
-::::{.lcolumn-20}
+:::{.row}
+:::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
 *Nodos > Color > Partición > --Escoge un atributo > Modularity Class > Aplicar*
-::::
-::::{.rcolumn-80}
+:::
+
+:::{.col data-latex="{0.04\\textwidth}"}
+\ <!-- an empty Div (with a white space), serving as
+a column separator for tex -->
+:::
+
+:::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
 La *Partición* cambia todos los elementos visibles utilizando valores de atributos categóricos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo categórico, `modularidad`, que representa el subgrupo al que pertenece cada nodo. Usando este atributo podemos cambiar el color de los nodos seleccionando *Nodos > Color > Partición > --Escoge un atributo > Modularity Class > Aplicar*. Una vez hecho, los colores de los nodos deberían permitirle entender qué nodos pertenecen a las misma comunidades. De manera similar, podríamos intentar cambiar los colores de las aristas basándonos en un atributo categórico; sin embargo, el conjunto de datos de ejemplo no incluye dicho tipo de variable.
-::::
-::::
+:::
+:::
 
 <div class="figure" style="text-align: center">
 <img src="images/01-color_partition.png" alt="Nodos Coloreados por Atributos Categóricos." width="100%" />
-<p class="caption">(\#fig:color-partition)Nodos Coloreados por Atributos Categóricos.</p>
+<p class="caption">(\#fig:2-1-color-partition)Nodos Coloreados por Atributos Categóricos.</p>
 </div>
 
-::::{.row}
-::::{.lcolumn-20}
+:::{.row}
+:::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
 *Nodos > Tamaño > Ranking > --Escoge un atributo > Grado > Aplicar*
-::::
-::::{.rcolumn-80}
+:::
+
+:::{.col data-latex="{0.04\\textwidth}"}
+\ <!-- an empty Div (with a white space), serving as
+a column separator for tex -->
+:::
+
+:::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
 El *Ranking* cambia todos los elementos visibles utilizando valores de atributos continuos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo continuo, `grado`, que representa el numero de enlaces que tiene cada nodo. Usando este atributo podemos cambiar el tamaño de los nodos seleccionando *Nodos > Tamaño > Ranking > --Escoge un atributo > Grado > Aplicar*. Ahora deberá ver que algunos nodos aparecen mucho más grandes que otros, esto se debe a que algunos tienen más conexiones. Más adelante en el manual ampliaremos el significado de esta medida y presentaremos otras. Quizás se este preguntando, ¿es posible cambiar el grosor de las aristas en función de una variable continua? La respuesta es sí, pero hacerlo requiere un menú diferente, por lo que abordaremos esta acción más adelante.
-::::
-::::
+:::
+:::
 
 <div class="figure" style="text-align: center">
 <img src="images/01-size-ranking.png" alt="Nodos Dimensionados por Variable Continua." width="100%" />
-<p class="caption">(\#fig:size-ranking)Nodos Dimensionados por Variable Continua.</p>
+<p class="caption">(\#fig:2-1-size-ranking)Nodos Dimensionados por Variable Continua.</p>
 </div>
 
 
@@ -154,37 +180,49 @@ Esta sección proporciona información sobre las propiedades básicas del gráfi
 
 ARSo depende en gran medida de la exploración de datos a través de buena visualización. Esta es una de las características clave de Gephi, contiene una buena cantidad de algoritmos de diseño de gráficos y los ejecuta rápido (todo dependiendo de la potencia de su procesador). La ventana *Distribuición* le permite al usuario seleccionar entre una serie de algoritmos de diseño de gráficos y modificar los parámetros preestablecidos según sea necesario. En esta sección exploraremos algunos de los algoritmos gráficos más notables incluidos con la instalación base de Gephi.
 
-::::{.row}
-::::{.lcolumn-20}
+:::{.row}
+:::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
 *Elije una distribuición > Force Atlas > Ejecutar*
-::::
-::::{.rcolumn-80}
+:::
+
+:::{.col data-latex="{0.04\\textwidth}"}
+\ <!-- an empty Div (with a white space), serving as
+a column separator for tex -->
+:::
+
+:::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
 *Force Atlas* y *Force Atlas 2* son algoritmos de diseño dirigidos por fuerza, producidos por los desarrolladores de Gephi, que permiten visualizar efectivamente gráficos de tamaño pequeño a mediano [@Jacomy2011]. Estos son algoritmos continuos, es decir que le permiten al analista editar al gráfico mientras el algoritmo dibuja. Además de *Ejecutar* el algoritmo hay que seleccionar *Parar* cuando uno este satisfecho con el diseño. Veamos como funciona este algoritmo, para ello en la sección de *Distribución* seleccione *Elije una distribuición > Force Atlas > Ejecutar*. Después de un par de minutos, recuerde en dar clic sobre el botón *Parar*. Como puede ver, el algoritmo a contraído los nodos. Esta es una característica de los algoritmos dirigidos por fuerza donde los nodos vinculados se atraen entre sí y los nodos no vinculados se repelen.
-::::
-::::
+:::
+:::
 
 <div class="figure" style="text-align: center">
 <img src="images/01-force_atlas.PNG" alt="Gráfico dibujado con Force Atlas" width="100%" />
-<p class="caption">(\#fig:force-atlas)Gráfico dibujado con Force Atlas</p>
+<p class="caption">(\#fig:2-1-force-atlas)Gráfico dibujado con Force Atlas</p>
 </div>
 
 
-::::{.row}
-::::{.lcolumn-20}
+:::{.row}
+:::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
 *Elije una distribuición > Expansión  > Ejecutar*
 
 *Elije una distribuición > Contracción  > Ejecutar*
-::::
-::::{.rcolumn-80}
+:::
+
+:::{.col data-latex="{0.04\\textwidth}"}
+\ <!-- an empty Div (with a white space), serving as
+a column separator for tex -->
+:::
+
+:::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
 Uno de los algoritmos de diseño más útiles es *Expansión*, el cual aumenta el tamaño de la red pero mantiene la ubicación relativa de los nodos constante. El polo opuesto de esta opción es *Contracción*, que permite compactar la red manteniendo la ubicación relativa de los nodos. Ambas opciones son ejecutadas de manera instantánea, por consiguiente, no hay que detener el algoritmo.
 
-Por ejemplo, la Figura \@ref(fig:expansion) es una versión expandida de a Figura \@ref(fig:force-atlas). Podría decirse que es más fácil observar los patrones en este gráfico editado. Para expandir el gráfico seleccione *Elije una distribuición > Expansión  > Ejecutar*. De clic en *Ejecutar* un par de veces, si sobrepasa el punto deseado seleccione *Elije una distribuición > Contracción  > Ejecutar* para contraer el gráfico. 
-::::
-::::
+Por ejemplo, la Figura \@ref(fig:2-1-expansion) es una versión expandida de a Figura \@ref(fig:2-1-force-atlas). Podría decirse que es más fácil observar los patrones en este gráfico editado. Para expandir el gráfico seleccione *Elije una distribuición > Expansión  > Ejecutar*. De clic en *Ejecutar* un par de veces, si sobrepasa el punto deseado seleccione *Elije una distribuición > Contracción  > Ejecutar* para contraer el gráfico. 
+:::
+:::
 
 <div class="figure" style="text-align: center">
 <img src="images/01-expansion.PNG" alt="Gráfico dibujado con Force Atlas y Expandido" width="100%" />
-<p class="caption">(\#fig:expansion)Gráfico dibujado con Force Atlas y Expandido</p>
+<p class="caption">(\#fig:2-1-expansion)Gráfico dibujado con Force Atlas y Expandido</p>
 </div>
 
 Por ahora, solo cubriremos estas tres opciones de diseño. Más adelante utilizaremos algoritmos de diseño de manera orgánica. Le recomendamos que juegue con otras opciones, eche un vistazo a cómo se ven los gráficos resultantes, pero tenga en cuenta que algunos algoritmos no se detendrán por sí mismos, por lo que es posible que deba detenerlos manualmente.
@@ -193,40 +231,52 @@ Por ahora, solo cubriremos estas tres opciones de diseño. Más adelante utiliza
 
 Además de utilizar visualizaciones, los analistas de ARSo dependen a menudo de medidas estadísticas utilizadas para comprender las características estructurales de la red a fondo. Gephi proporciona una cantidad limitada, pero suficiente de medidas estadísticas al descargar el software. La pestaña de *Estadísticas* sirve como ubicación principal para encontrar las medidas. Localícela a mano derecha del *Grafo*, es posible que tenga que seleccionar la pestaña ya que comparte el mismo espacio con *Filtros*.
 
-::::{.row}
-::::{.lcolumn-20}
+:::{.row}
+:::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
 *Visión general de la red > Grado medio > Ejecutar*
-::::
-::::{.rcolumn-80}
+:::
+
+:::{.col data-latex="{0.04\\textwidth}"}
+\ <!-- an empty Div (with a white space), serving as
+a column separator for tex -->
+:::
+
+:::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
 Para ejecutar una medida, seleccione el botón *Ejecutar* a un lado de dicha opción. En capítulos posteriores explicaremos la gran mayoría de las medidas presentes, por ahora, visitemos la medida de grado. Esta se refiere al número de aristas adjuntas al nodo. Para calcular esta medida, seleccione *Visión general de la red > Grado medio > Ejecutar*.
 
-Esta selección debe generar un informe HTML que muestre la distribución de grados del gráfico, consulte la Figura \@ref(fig:degree). Además de este reporte, esta acción agregará valores de centralidad de grado a cada nodo en la tabla de aristas situada en el *Laboratorio de Datos*. Proceda a cerrar este cuadro de diálogo, si desea volver a abrirlo repita los pasos previos. 
-::::
-::::
+Esta selección debe generar un informe HTML que muestre la distribución de grados del gráfico, consulte la Figura \@ref(fig:2-1-degree). Además de este reporte, esta acción agregará valores de centralidad de grado a cada nodo en la tabla de aristas situada en el *Laboratorio de Datos*. Proceda a cerrar este cuadro de diálogo, si desea volver a abrirlo repita los pasos previos. 
+:::
+:::
 
 <div class="figure" style="text-align: center">
 <img src="images/01-degree.PNG" alt="Ejecutando Estadística de Grado" width="100%" />
-<p class="caption">(\#fig:degree)Ejecutando Estadística de Grado</p>
+<p class="caption">(\#fig:2-1-degree)Ejecutando Estadística de Grado</p>
 </div>
 
 #### Filtros
 
 A menudo tendremos que modificar nuestros datos en Gephi, dentro de la *Vista General* encontrara la pestaña de *Filtros* a un costado del *Grafo*. Esta contiene una variedad de parámetros para filtrar los datos presentados con base a características (variables continuas o categóricas) de los nodos o las aristas. Puede aplicar uno o varios filtros a un gráfico para descubrir características ocultas o refinar la cantidad de información que se muestra en un grafo.
 
-::::{.row}
-::::{.lcolumn-20}
+:::{.row}
+:::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
 *Arrastrar a Consultas > Rango (Grado) Configuración = 2-36 > Filtrar*
-::::
-::::{.rcolumn-80}
+:::
+
+:::{.col data-latex="{0.04\\textwidth}"}
+\ <!-- an empty Div (with a white space), serving as
+a column separator for tex -->
+:::
+
+:::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
 Para filtrar el grafo con base al número de enlaces, por ejemplo, remover los nodos pendientes, vaya a *Biblioteca* de filtros localice *Atributos > Rango > Grado*, arrastre el filtro de rango al cuadro de la sección de *Consultas*. Al agregar el filtro en *Consultas* notará que en la parte inferior del cuadro aparecerá un rango de `1` a `36`. Modifique el rango para que el número mínimo de enlaces sea `2` y su rango lea de `2` a `36`. Es decir, filtraremos los nodos de manera que solo aquellos con 2 o más enlaces permanezcan en la red. Por último, de clic en el botón *Filtrar*. Note los cambios en las ventanillas de *Grafo* y *Contexto*, deberá ver un menor número de nodos y aristas.
 
 Si desea remover el filtro, presione el botón *Auto aplicar* en la parte inferior derecha (que solía leer *Filtrar*). Al hacer esto, sus datos volverán a aparecer. 
-::::
-::::
+:::
+:::
 
 <div class="figure" style="text-align: center">
 <img src="images/01-filter.PNG" alt="Filtrando por Grado" width="100%" />
-<p class="caption">(\#fig:filter)Filtrando por Grado</p>
+<p class="caption">(\#fig:2-1-filter)Filtrando por Grado</p>
 </div>
 
 #### Grafo
@@ -236,11 +286,11 @@ La última sección que cubriremos en esta introducción a la *Vista General* es
 
 <div class="figure" style="text-align: center">
 <img src="images/01-grafo.png" alt="Ventanilla de Grafo" width="100%" />
-<p class="caption">(\#fig:grafo)Ventanilla de Grafo</p>
+<p class="caption">(\#fig:2-1-grafo)Ventanilla de Grafo</p>
 </div>
 
 
-A continuación se presenta una lista de nombres de comandos y funciones en orden secuencial, ver Figura \@ref(fig:grafo):
+A continuación se presenta una lista de nombres de comandos y funciones en orden secuencial, ver Figura \@ref(fig:2-1-grafo):
 
  1.	 *Selección directa* – elegir un nodo a la vez
  2.	 *Selección rectangular* – elegir uno o múltiples nodos en un área rectangular
@@ -274,11 +324,11 @@ A continuación se presenta una lista de nombres de comandos y funciones en orde
 
 ### Laboratorio de Datos
 
-El *Laboratorio de datos* contiene tablas de los datos de nodos (Figura \@ref(fig:data-lab) izquireda) y aristas (Figura \@ref(fig:data-lab) derecha). Estas tablas permiten a los analistas interactuar con la información y editar valores directamente o mediante la serie de comandos en la parte inferior de la pantalla (Figura \@ref(fig:data-lab) abajo). Esta es una descripción muy simplificada de las capacidades de esta sección, nos centraremos en las características clave de alto nivel.
+El *Laboratorio de datos* contiene tablas de los datos de nodos (Figura \@ref(fig:2-1-data-lab) izquireda) y aristas (Figura \@ref(fig:2-1-data-lab) derecha). Estas tablas permiten a los analistas interactuar con la información y editar valores directamente o mediante la serie de comandos en la parte inferior de la pantalla (Figura \@ref(fig:2-1-data-lab) abajo). Esta es una descripción muy simplificada de las capacidades de esta sección, nos centraremos en las características clave de alto nivel.
 
 <div class="figure" style="text-align: center">
 <img src="images/01-data_lab.png" alt="Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas" width="100%" />
-<p class="caption">(\#fig:data-lab)Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas</p>
+<p class="caption">(\#fig:2-1-data-lab)Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas</p>
 </div>
 
 #### Tabla de Datos: Nodos
@@ -287,7 +337,7 @@ La tabla de nodos contiene un identificador único para cada nodo en el gráfico
 
 <div class="figure" style="text-align: center">
 <img src="images/01-nodes_table.png" alt="Laboratorio de datos, Tabla de Nodos" width="100%" />
-<p class="caption">(\#fig:nodes-table)Laboratorio de datos, Tabla de Nodos</p>
+<p class="caption">(\#fig:2-1-nodes-table)Laboratorio de datos, Tabla de Nodos</p>
 </div>
 
 A la medida que se agregan atributos de nodo al gráfico, en esta tabla deberán aparecer nuevas columnas con estos valores. De manera similar, dentro de Gephi, los analistas a menudo ejecutan diferentes métricas a nivel nodo, estos valores se agregarán a cada registro (fila) en una nueva variable (columna).
@@ -305,7 +355,7 @@ Al igual que la tabla de nodos, la tabla de aristas incluye información clave d
 
 <div class="figure" style="text-align: center">
 <img src="images/01-edges_table.png" alt="Laboratorio de datos, Tabla de Aristas" width="100%" />
-<p class="caption">(\#fig:edges-table)Laboratorio de datos, Tabla de Aristas</p>
+<p class="caption">(\#fig:2-1-edges-table)Laboratorio de datos, Tabla de Aristas</p>
 </div>
 
 #### Menú Inferior
@@ -314,14 +364,14 @@ Esta última sección permite a los usuarios agregar, borrar o eliminar columnas
 
 <div class="figure" style="text-align: center">
 <img src="images/01-lower_bar.png" alt="Laboratorio de datos, Opciones" width="100%" />
-<p class="caption">(\#fig:lower-bar)Laboratorio de datos, Opciones</p>
+<p class="caption">(\#fig:2-1-lower-bar)Laboratorio de datos, Opciones</p>
 </div>
 
 ### Previsualización
 
 *Previsualización* es donde se refina la visualización para fines de exportación. Esta sección es diferente de la *Vista General* en que uno no puede interactuar dinámicamente con los datos a través de filtros, colores o diseño. El valor agregado de esta sección es enfocar la atención del analista en generar gráficos para publicación y por ello las opciones son limitadas.
 
-Aquí nos centraremos en 4 secciones clave (indicadas en la Figura \@ref(fig:preview)):
+Aquí nos centraremos en 4 secciones clave (indicadas en la Figura \@ref(fig:2-1-preview)):
 
   -	Configuración de Previsualización (1) - Proporciona un conjunto de configuraciones de gráficos preestablecidos y permite al usuario guardar los ajustes preestablecidos para uso futuro.
   -	Parámetros (2) – Ajusta a la configuración de visualización como:
@@ -332,7 +382,7 @@ Aquí nos centraremos en 4 secciones clave (indicadas en la Figura \@ref(fig:pre
 
 <div class="figure" style="text-align: center">
 <img src="images/01-preview.png" alt="Previsualización" width="100%" />
-<p class="caption">(\#fig:preview)Previsualización</p>
+<p class="caption">(\#fig:2-1-preview)Previsualización</p>
 </div>
 
 ### Errores Comunes

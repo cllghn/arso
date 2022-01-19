@@ -2,10 +2,10 @@
 output: html_document
 ---
 
+
 ```{r setup, include=FALSE}
 library(igraph)
 library(knitr)
-library(kableExtra)
 ```
 
 # Redes Oscuras en el Perú
@@ -46,9 +46,9 @@ En términos prácticos, el análisis de redes oscuras nos permite de manera sis
 
 Puesto a que las propiedades de las organizaciones terroristas o del COT varían con base a el contexto social, histórico y geográfico de cada nación, el análisis de redes  es una herramienta interesante y necesaria para toda agencia de Inteligencia o Policial . Las conexiones entre nodos en una red sociales son mantenidas entre dos o más nodos, los nodos pueden ser personas, grupos, organizaciones, estados, etc. Traducido a términos relevantes al analista de Inteligencia , Fuerzas Especiales y Policiales podemos contextualizar los nodos como sujetos estratégicos. 
 
-Como ha sugerido este autor, la estrategia del analista debe basarse en el contexto de la red, así como la estructura de esta. La Figura \@ref(fig:dimensions),  adaptada de una conferencia sobre Redes Sociales a cargo de la Doctora Nancy Roberts de la Escuela Naval de Postgrado, presenta la estructura de redes como polos opuestos [@Roberts2014a]. Esta dicotomía se basa en el estudio de organizaciones, la cual separa las jerarquías de las redes. Asimismo, compartimenta características, asociando las redes con estructuras sociales informales, igualitarias y de gobernanza compartida; igualmente, asume que las organizaciones jerárquicas son formales, estructuradas y con gobernanza centralizada [@Everton2012]. 
+Como ha sugerido este autor, la estrategia del analista debe basarse en el contexto de la red, así como la estructura de esta. La Figura \@ref(fig:4-1-dimensions),  adaptada de una conferencia sobre Redes Sociales a cargo de la Doctora Nancy Roberts de la Escuela Naval de Postgrado, presenta la estructura de redes como polos opuestos [@Roberts2014a]. Esta dicotomía se basa en el estudio de organizaciones, la cual separa las jerarquías de las redes. Asimismo, compartimenta características, asociando las redes con estructuras sociales informales, igualitarias y de gobernanza compartida; igualmente, asume que las organizaciones jerárquicas son formales, estructuradas y con gobernanza centralizada [@Everton2012]. 
 
-```{r dimensions, fig.cap = "Dimensiones de Organizaciones"}
+```{r 4-1-dimensions, fig.cap = "Dimensiones de Organizaciones"}
 knitr::include_graphics("images/04-dimensions.png")
 ```
 
@@ -66,21 +66,19 @@ Esta definición nuevamente retorna el enfoque a la estructura de la red, pero i
 
 El ejemplo previo de Sendero Luminoso recalca una de las cualidades adicionales de la guerra en red, según Arquilla y Ronfeldt, una red se compone de muchas piezas pequeñas y dispersas, las cuales comparten conjuntos de ideas y están interconectadas para lograr un fin común [@Arquilla2001]. Nuevamente, Arquilla y Ronfeldt presentan tres tipos de topologías de redes que podemos ver en la siguiente tabla: 
 
-```{r tabla}
+```{r 4-1-tabla}
 data.frame("Tipo" = c("Cadena", "Estrella", "Malla"),
            "Explicación"= c("Como en una cadena de contrabando de personas, bienes, o información donde estos se mueven a lo largo de la línea de contactos  y donde la comunicación de un extremo a otro viaja únicamente por nodos aledaños.",
                             "Donde un conjunto de actores está ligado con un nodo central o actor, para comunicarse entre sí o coordinarse deben atravesar el nodo central.",
                             "Una estructura de red en la que todo el mundo está conectado."),
-           "Dibujo" = c("images/04-cadema.png", "images/04-estrella.png", "images/04-malla.png")) %>%
-  dplyr::mutate(Dibujo = pander::pandoc.image.return(Dibujo)) %>%
+           "Dibujo" = c("images/04-cade2a.png", "images/04-estrella2.png", "images/04-malla2.png")) %>%
+  dplyr::mutate(Dibujo = sprintf("![%s](%s)", "", Dibujo)) %>%
   pander::pander()
 ```
 
+En una red oscura, la composición estructural puede contener una mezcla de estas tipologías (Figura \@ref(fig:4-1-mix)). Por ejemplo, el núcleo de la red puede estar organizado como malla, pero en estrellas o cadenas en otras partes de la red como en los comandos operativos [@Arquilla2001]. Más aun, los actores generalmente están conectados entre sí de varias maneras, y estas conexiones pueden empujarlos en direcciones múltiples y a veces contradictorias [@Cunningham2016]. Por ejemplo, la mayoría de los individuos tienen lazos de intercambio, amistad y parentesco; las organizaciones criminales y terroristas generalmente, intercambian personal, armas, dinero, información y forman alianzas entre ellos. 
 
-
-En una red oscura, la composición estructural puede contener una mezcla de estas tipologías (Figura \@ref(fig:mix)). Por ejemplo, el núcleo de la red puede estar organizado como malla, pero en estrellas o cadenas en otras partes de la red como en los comandos operativos [@Arquilla2001]. Más aun, los actores generalmente están conectados entre sí de varias maneras, y estas conexiones pueden empujarlos en direcciones múltiples y a veces contradictorias [@Cunningham2016]. Por ejemplo, la mayoría de los individuos tienen lazos de intercambio, amistad y parentesco; las organizaciones criminales y terroristas generalmente, intercambian personal, armas, dinero, información y forman alianzas entre ellos. 
-
-```{r mix, fig.cap = "Red hipotética, mezcla de cadenas, estrellas y mallas", fig.height = 12}
+```{r 4-1-mix, fig.cap = "Red hipotética, mezcla de cadenas, estrellas y mallas", fig.height = 12}
 data.frame(from = c("A", "B", "C",
                           "D", "D", "D", "F", "H", "H",
                           "H", "H", "H",

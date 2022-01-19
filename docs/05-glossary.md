@@ -11,14 +11,14 @@ bibliography: book.bib
 **Actores** (*Actors*): Se refiere a todo tipo de entidades incluidas en la red, tales como: individuos, grupos, etc. Sinónimos incluyen *nodos* or *vértices*.
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-1-1.png" alt="Actores" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-1-1.png" alt="Actores" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-1)Actores</p>
 </div>
 
 **Actores Aislados** (*Isolates*): Actores que not tienen conexión con otros actores. Ejemplo, actor en rojo:
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-2-1.png" alt="Aislados" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-2-1.png" alt="Aislados" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-2)Aislados</p>
 </div>
 
@@ -27,28 +27,28 @@ bibliography: book.bib
 **Centralidad de cercanía** (*Closeness centrality*): La centralidad de la cercanía captura qué tan cerca (en términos de la más corta distancia de ruta) cada actor es a todos los demás actores de una red. Ejemplo, red con nodos dimensionados por centralidad de cercanía:
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-3-1.png" alt="Nodos dimensionados por cercanía" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-3-1.png" alt="Nodos dimensionados por cercanía" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-3)Nodos dimensionados por cercanía</p>
 </div>
 
 **Centralidad de eigenvector** (*Eigenvector centrality*): La centralidad de eigenvector supone que los vínculos con los actores centrales son más importantes que los vínculos con los actores periféricos y, por lo tanto, pondera las conexiones sumadas de cada actor con los demás por sus puntajes de centralidad. Ejemplo, red con nodos dimensionados por centralidad de eigenvector:
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-4-1.png" alt="Nodos dimensionados por eigenvector" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-4-1.png" alt="Nodos dimensionados por eigenvector" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-4)Nodos dimensionados por eigenvector</p>
 </div>
 
 **Centralidad de intermediación** (*Betweenness centrality*): La centralidad de intermediación mide la medida en que cada actor se encuentra en el camino más corto entre todos los demás actores de una red. Ejemplo, red con nodos dimensionados por centralidad de intermediación:
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-5-1.png" alt="Nodos dimensionados por intermediación" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-5-1.png" alt="Nodos dimensionados por intermediación" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-5)Nodos dimensionados por intermediación</p>
 </div>
 
 **Centralidad de grado** (*Degree centrality*): Formalmente, el grado de centralidad de un actor es igual al número de vínculos incidentes ó el número de lazos de un actor. Ejemplo, red con nodos dimensionados por centralidad de grado:
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-6-1.png" alt="Nodos dimensionados por grado" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-6-1.png" alt="Nodos dimensionados por grado" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-6)Nodos dimensionados por grado</p>
 </div>
 
@@ -57,7 +57,7 @@ bibliography: book.bib
 **Datos de atributos** (*Attribure data*): Características (no-relacionales) de un actor en particular como identidad étnica, raza, años de educación, edad, nivel de salario, etc.
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-7-1.png" alt="Nodos coloreados por atributo" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-7-1.png" alt="Nodos coloreados por atributo" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-7)Nodos coloreados por atributo</p>
 </div>
 
@@ -68,7 +68,7 @@ bibliography: book.bib
   + Relaciones de grupo a grupo.
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-8-1.png" alt="Red modo uno" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-8-1.png" alt="Red modo uno" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-8)Red modo uno</p>
 </div>
 
@@ -79,7 +79,7 @@ bibliography: book.bib
   + Relaciones de grupo a nación.
   
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-9-1.png" alt="Red modo dos" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-9-1.png" alt="Red modo dos" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-9)Red modo dos</p>
 </div>
 
@@ -100,7 +100,7 @@ bibliography: book.bib
 **Tipos de relación** (*Types of relationships*): Valor categorico de vínculo entre un grupo de actores, como: amistad (en rojo), familia (en azul), etc.
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-10-1.png" alt="Relaciones apiladas" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-10-1.png" alt="Relaciones apiladas" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-10)Relaciones apiladas</p>
 </div>
 
@@ -109,6 +109,6 @@ bibliography: book.bib
 **Vínculos** (*Ties*): La relación entre dos nodos. Un vínculo puede ser direccionado (llamado *arco*, por ejemplo: **<--** | **-->** | **<->**) o no direccionado (llamado *borde*, por ejemplo: **---**). 
 
 <div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-11-1.png" alt="Red no dirigida (izquierda) y red dirigida (derecha)" width="70%" />
+<img src="05-glossary_files/figure-html/unnamed-chunk-11-1.png" alt="Red no dirigida (izquierda) y red dirigida (derecha)" width="100%" />
 <p class="caption">(\#fig:unnamed-chunk-11)Red no dirigida (izquierda) y red dirigida (derecha)</p>
 </div>

@@ -2,3 +2,4 @@ base
 igraph
 data.table
 DT
+kableExtra
