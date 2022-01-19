@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>B Libro de Códigos | Análisis de Redes Sociales</title>
+  <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="B Libro de Códigos | Análisis de Redes Sociales" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
+  <meta name="github-repo" content="cjcallag/arso" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="B Libro de Códigos | Análisis de Redes Sociales" />
+  
+  <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
+  
+
+<meta name="author" content="CORE Lab + ESGE-EPG" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="glosario-de-términos.html"/>
+<link rel="next" href="referencias.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+
+
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="arso.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Análisis de Redes Sociales</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introducción</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#patrocinio"><i class="fa fa-check"></i>Patrocinio</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#misión-educativa"><i class="fa fa-check"></i>Misión educativa</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
+</ul></li>
+<li class="part"><span><b>I ¿Qué es el ARSo?</b></span></li>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
+<li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="introduction.html"><a href="introduction.html#interdependencia-de-los-actores"><i class="fa fa-check"></i><b>1.2.1</b> Interdependencia de los Actores</a></li>
+<li class="chapter" data-level="1.2.2" data-path="introduction.html"><a href="introduction.html#lazos-como-conductos"><i class="fa fa-check"></i><b>1.2.2</b> Lazos como Conductos</a></li>
+<li class="chapter" data-level="1.2.3" data-path="introduction.html"><a href="introduction.html#estructura-social-y-formaciones-sociales-emergentes"><i class="fa fa-check"></i><b>1.2.3</b> Estructura Social y Formaciones Sociales Emergentes</a></li>
+<li class="chapter" data-level="1.2.4" data-path="introduction.html"><a href="introduction.html#ubicación-estructural-creencias-normas-intenciones-comportamiento-e-identidad"><i class="fa fa-check"></i><b>1.2.4</b> Ubicación Estructural: Creencias, Normas, Intenciones, Comportamiento e Identidad</a></li>
+<li class="chapter" data-level="1.2.5" data-path="introduction.html"><a href="introduction.html#redes-sociales-dinámicas"><i class="fa fa-check"></i><b>1.2.5</b> Redes sociales dinámicas</a></li>
+<li class="chapter" data-level="1.2.6" data-path="introduction.html"><a href="introduction.html#resumen-redes-sociales-agencia-humana-y-cultura"><i class="fa fa-check"></i><b>1.2.6</b> Resumen: Redes Sociales, Agencia Humana y Cultura</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="introduction.html"><a href="introduction.html#términos-y-conceptos-básicos"><i class="fa fa-check"></i><b>1.3</b> Términos y Conceptos Básicos</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="introduction.html"><a href="introduction.html#actores-y-enlaces"><i class="fa fa-check"></i><b>1.3.1</b> Actores y Enlaces</a></li>
+<li class="chapter" data-level="1.3.2" data-path="introduction.html"><a href="introduction.html#redes-sociales"><i class="fa fa-check"></i><b>1.3.2</b> Redes Sociales</a></li>
+<li class="chapter" data-level="1.3.3" data-path="introduction.html"><a href="introduction.html#camino-y-distancia-de-caminos"><i class="fa fa-check"></i><b>1.3.3</b> Camino (y Distancia de Caminos)</a></li>
+<li class="chapter" data-level="1.3.4" data-path="introduction.html"><a href="introduction.html#topología"><i class="fa fa-check"></i><b>1.3.4</b> Topología</a></li>
+<li class="chapter" data-level="1.3.5" data-path="introduction.html"><a href="introduction.html#subgrupos-cluster-subredes"><i class="fa fa-check"></i><b>1.3.5</b> Subgrupos (Cluster, subredes)</a></li>
+<li class="chapter" data-level="1.3.6" data-path="introduction.html"><a href="introduction.html#centralidad"><i class="fa fa-check"></i><b>1.3.6</b> Centralidad</a></li>
+<li class="chapter" data-level="1.3.7" data-path="introduction.html"><a href="introduction.html#puentes-y-corredores"><i class="fa fa-check"></i><b>1.3.7</b> Puentes y Corredores</a></li>
+<li class="chapter" data-level="1.3.8" data-path="introduction.html"><a href="introduction.html#funciones-y-posiciones"><i class="fa fa-check"></i><b>1.3.8</b> Funciones y Posiciones</a></li>
+<li class="chapter" data-level="1.3.9" data-path="introduction.html"><a href="introduction.html#análisis-exploratorio-y-explicativo-de-redes-sociales"><i class="fa fa-check"></i><b>1.3.9</b> Análisis Exploratorio y Explicativo de Redes Sociales</a></li>
+<li class="chapter" data-level="1.3.10" data-path="introduction.html"><a href="introduction.html#atributos"><i class="fa fa-check"></i><b>1.3.10</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="introduction.html"><a href="introduction.html#resumen-y-conclusiones"><i class="fa fa-check"></i><b>1.4</b> Resumen y Conclusiones</a></li>
+</ul></li>
+<li class="part"><span><b>II ARSo: Tecnicas</b></span></li>
+<li class="chapter" data-level="2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html"><i class="fa fa-check"></i><b>2</b> Trabajando con Gephi</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#introducción-1"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi"><i class="fa fa-check"></i><b>2.2</b> Gephi</a></li>
+<li class="chapter" data-level="2.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#gephi-para-principiantes"><i class="fa fa-check"></i><b>2.3</b> Gephi Para Principiantes</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#antes-de-empezar"><i class="fa fa-check"></i><b>2.3.1</b> Antes de Empezar</a></li>
+<li class="chapter" data-level="2.3.2" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#inicie-gephi"><i class="fa fa-check"></i><b>2.3.2</b> Inicie Gephi</a></li>
+<li class="chapter" data-level="2.3.3" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#vista-general"><i class="fa fa-check"></i><b>2.3.3</b> Vista General</a></li>
+<li class="chapter" data-level="2.3.4" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#laboratorio-de-datos"><i class="fa fa-check"></i><b>2.3.4</b> Laboratorio de Datos</a></li>
+<li class="chapter" data-level="2.3.5" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#previsualización"><i class="fa fa-check"></i><b>2.3.5</b> Previsualización</a></li>
+<li class="chapter" data-level="2.3.6" data-path="trabajando-con-gephi.html"><a href="trabajando-con-gephi.html#errores-comunes"><i class="fa fa-check"></i><b>2.3.6</b> Errores Comunes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-uno"><i class="fa fa-check"></i><b>3.1</b> Datos de Modo-Uno</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-simétricos"><i class="fa fa-check"></i><b>3.1.1</b> Modo-uno: Simétricos</a></li>
+<li class="chapter" data-level="3.1.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#modo-uno-asimétricos"><i class="fa fa-check"></i><b>3.1.2</b> Modo-uno: Asimétricos</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-modo-dos"><i class="fa fa-check"></i><b>3.2</b> Datos de Modo-Dos</a></li>
+<li class="chapter" data-level="3.3" data-path="tipos-de-datos-de-redes-sociales.html"><a href="tipos-de-datos-de-redes-sociales.html#datos-de-atributos"><i class="fa fa-check"></i><b>3.3</b> Datos de Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html"><i class="fa fa-check"></i><b>4</b> Grabación y Recopilación</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#matrices"><i class="fa fa-check"></i><b>4.1</b> Matrices</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son"><i class="fa fa-check"></i><b>4.1.1</b> ¿Qué son?</a></li>
+<li class="chapter" data-level="4.1.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no"><i class="fa fa-check"></i><b>4.1.2</b> ¿Por qué usarlas o no?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-aristas"><i class="fa fa-check"></i><b>4.2</b> Lista de Aristas</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#qué-son-1"><i class="fa fa-check"></i><b>4.2.1</b> ¿Qué son?</a></li>
+<li class="chapter" data-level="4.2.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#por-qué-usarlas-o-no-1"><i class="fa fa-check"></i><b>4.2.2</b> ¿Por qué usarlas o no?</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#lista-de-nodos"><i class="fa fa-check"></i><b>4.3</b> Lista de Nodos</a></li>
+<li class="chapter" data-level="4.4" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#ejercicio-práctico"><i class="fa fa-check"></i><b>4.4</b> Ejercicio Práctico</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#preparar-y-visualizar-redes-de-modo-uno-en-gephi"><i class="fa fa-check"></i><b>4.4.1</b> Preparar y Visualizar Redes de Modo-Uno en Gephi</a></li>
+<li class="chapter" data-level="4.4.2" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#guardar-gráfico-de-red-en-gephi"><i class="fa fa-check"></i><b>4.4.2</b> Guardar Gráfico de Red en Gephi</a></li>
+<li class="chapter" data-level="4.4.3" data-path="grabación-y-recopilación.html"><a href="grabación-y-recopilación.html#importación-de-listas-de-aristas-modo-uno"><i class="fa fa-check"></i><b>4.4.3</b> Importación de Listas de Aristas Modo-Uno</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html"><i class="fa fa-check"></i><b>5</b> Derivando Datos Modo-Uno de Modo-Dos</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#modo-dos-qué-es"><i class="fa fa-check"></i><b>5.1</b> Modo-Dos, ¿Qué es?</a></li>
+<li class="chapter" data-level="5.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#proyección"><i class="fa fa-check"></i><b>5.2</b> Proyección</a></li>
+<li class="chapter" data-level="5.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#ejercicio-práctico-1"><i class="fa fa-check"></i><b>5.3</b> Ejercicio Práctico</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#antes-de-empezar-1"><i class="fa fa-check"></i><b>5.3.1</b> Antes de empezar</a></li>
+<li class="chapter" data-level="5.3.2" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas"><i class="fa fa-check"></i><b>5.3.2</b> Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas</a></li>
+<li class="chapter" data-level="5.3.3" data-path="derivando-datos-modo-uno-de-modo-dos.html"><a href="derivando-datos-modo-uno-de-modo-dos.html#plegar-redes-de-modo-dos-en-gephi"><i class="fa fa-check"></i><b>5.3.3</b> Plegar Redes de Modo-dos en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html"><i class="fa fa-check"></i><b>6</b> Múltiples Relaciones</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#matrices-y-listas-de-aristas"><i class="fa fa-check"></i><b>6.1</b> Matrices y Listas de Aristas</a></li>
+<li class="chapter" data-level="6.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#combinar"><i class="fa fa-check"></i><b>6.2</b> Combinar</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#apilar"><i class="fa fa-check"></i><b>6.2.1</b> Apilar</a></li>
+<li class="chapter" data-level="6.2.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#agregar"><i class="fa fa-check"></i><b>6.2.2</b> Agregar</a></li>
+<li class="chapter" data-level="6.2.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#recombinar"><i class="fa fa-check"></i><b>6.2.3</b> Recombinar</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#ejercicio-práctico-2"><i class="fa fa-check"></i><b>6.3</b> Ejercicio Práctico</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#importar-múltiples-redes-a-gephi"><i class="fa fa-check"></i><b>6.3.1</b> Importar múltiples redes a Gephi</a></li>
+<li class="chapter" data-level="6.3.2" data-path="múltiples-relaciones.html"><a href="múltiples-relaciones.html#extrayendo-y-visualizando-múltiples-lazos-en-gephi"><i class="fa fa-check"></i><b>6.3.2</b> Extrayendo y visualizando múltiples lazos en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html"><i class="fa fa-check"></i><b>7</b> Extraer y Simplificar Redes</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extraer"><i class="fa fa-check"></i><b>7.1</b> Extraer</a></li>
+<li class="chapter" data-level="7.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificar"><i class="fa fa-check"></i><b>7.2</b> Simplificar</a></li>
+<li class="chapter" data-level="7.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#ejercicio-práctico-3"><i class="fa fa-check"></i><b>7.3</b> Ejercicio Práctico</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#antes-de-empezar-2"><i class="fa fa-check"></i><b>7.3.1</b> Antes de empezar</a></li>
+<li class="chapter" data-level="7.3.2" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#importar-redes-y-atributos-en-gephi"><i class="fa fa-check"></i><b>7.3.2</b> Importar redes y atributos en Gephi</a></li>
+<li class="chapter" data-level="7.3.3" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#uso-de-atributos-de-nodo-en-visualizaciones-de-red"><i class="fa fa-check"></i><b>7.3.3</b> Uso de atributos de nodo en visualizaciones de red</a></li>
+<li class="chapter" data-level="7.3.4" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#simplificación-colapso-reducción-en-gephi"><i class="fa fa-check"></i><b>7.3.4</b> Simplificación (colapso / reducción) en Gephi</a></li>
+<li class="chapter" data-level="7.3.5" data-path="extraer-y-simplificar-redes.html"><a href="extraer-y-simplificar-redes.html#extracción-en-gephi"><i class="fa fa-check"></i><b>7.3.5</b> Extracción en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III ARSo: Medidas</b></span></li>
+<li class="chapter" data-level="8" data-path="topología-1.html"><a href="topología-1.html"><i class="fa fa-check"></i><b>8</b> Topología</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="topología-1.html"><a href="topología-1.html#medidas-básicas-de-topología"><i class="fa fa-check"></i><b>8.1</b> Medidas Básicas de Topología</a>
+<ul>
+<li class="chapter" data-level="8.1.1" data-path="topología-1.html"><a href="topología-1.html#tamaño"><i class="fa fa-check"></i><b>8.1.1</b> Tamaño</a></li>
+<li class="chapter" data-level="8.1.2" data-path="topología-1.html"><a href="topología-1.html#distancia-promedio"><i class="fa fa-check"></i><b>8.1.2</b> Distancia Promedio</a></li>
+<li class="chapter" data-level="8.1.3" data-path="topología-1.html"><a href="topología-1.html#diámetro"><i class="fa fa-check"></i><b>8.1.3</b> Diámetro</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="topología-1.html"><a href="topología-1.html#interconexión"><i class="fa fa-check"></i><b>8.2</b> Interconexión</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="topología-1.html"><a href="topología-1.html#densidad"><i class="fa fa-check"></i><b>8.2.1</b> Densidad</a></li>
+<li class="chapter" data-level="8.2.2" data-path="topología-1.html"><a href="topología-1.html#grado-medio"><i class="fa fa-check"></i><b>8.2.2</b> Grado Medio</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="topología-1.html"><a href="topología-1.html#centralización"><i class="fa fa-check"></i><b>8.3</b> Centralización</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="topología-1.html"><a href="topología-1.html#centralización-1"><i class="fa fa-check"></i><b>8.3.1</b> Centralización</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="topología-1.html"><a href="topología-1.html#ejercicio-práctico-4"><i class="fa fa-check"></i><b>8.4</b> Ejercicio Práctico</a>
+<ul>
+<li class="chapter" data-level="8.4.1" data-path="topología-1.html"><a href="topología-1.html#antes-de-empezar-3"><i class="fa fa-check"></i><b>8.4.1</b> Antes de Empezar</a></li>
+<li class="chapter" data-level="8.4.2" data-path="topología-1.html"><a href="topología-1.html#topología-de-redes-en-gephi"><i class="fa fa-check"></i><b>8.4.2</b> Topología de redes en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html"><i class="fa fa-check"></i><b>9</b> Subgrupos Cohesivos</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes"><i class="fa fa-check"></i><b>9.1</b> Componentes</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-débiles"><i class="fa fa-check"></i><b>9.1.1</b> Componentes Débiles</a></li>
+<li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
+<li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#modularidad"><i class="fa fa-check"></i><b>9.3.1</b> Modularidad</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
+<li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#antes-de-empezar-4"><i class="fa fa-check"></i><b>9.5.1</b> Antes de Empezar</a></li>
+<li class="chapter" data-level="9.5.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#identificación-de-subgrupos-en-gephi"><i class="fa fa-check"></i><b>9.5.2</b> Identificación de Subgrupos en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="centralidad-1.html"><a href="centralidad-1.html"><i class="fa fa-check"></i><b>10</b> Centralidad</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-no-dirigidos-centralidad-y-poder"><i class="fa fa-check"></i><b>10.1</b> Datos No Dirigidos: Centralidad y Poder</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia"><i class="fa fa-check"></i><b>10.1.1</b> Medidas Basadas en Frecuencia</a></li>
+<li class="chapter" data-level="10.1.2" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-distancia"><i class="fa fa-check"></i><b>10.1.2</b> Medidas Basadas en Distancia</a></li>
+<li class="chapter" data-level="10.1.3" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-caminos"><i class="fa fa-check"></i><b>10.1.3</b> Medidas Basadas en Caminos</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="centralidad-1.html"><a href="centralidad-1.html#datos-dirigidos-centralidad-y-prestigio"><i class="fa fa-check"></i><b>10.2</b> Datos Dirigidos: Centralidad y Prestigio</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="centralidad-1.html"><a href="centralidad-1.html#medidas-basadas-en-frecuencia-1"><i class="fa fa-check"></i><b>10.2.1</b> Medidas Basadas en Frecuencia</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="centralidad-1.html"><a href="centralidad-1.html#ejercicio-práctico-6"><i class="fa fa-check"></i><b>10.3</b> Ejercicio Práctico</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="centralidad-1.html"><a href="centralidad-1.html#centralidad-en-gephi"><i class="fa fa-check"></i><b>10.3.1</b> Centralidad en Gephi</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>IV Aplicaciones</b></span></li>
+<li class="chapter" data-level="11" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>11</b> Un Proceso de Diseño para la Investigación de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>11.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>11.1.1</b> Pregunata(s) de Investigación</a></li>
+<li class="chapter" data-level="11.1.2" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>11.1.2</b> Limites</a></li>
+<li class="chapter" data-level="11.1.3" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>11.1.3</b> Codificar Relaciones y Atributos</a></li>
+<li class="chapter" data-level="11.1.4" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>11.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
+<li class="chapter" data-level="11.1.5" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#conclusiones"><i class="fa fa-check"></i><b>11.1.5</b> Conclusiones</a></li>
+</ul></li>
+</ul></li>
+<li class="appendix"><span><b>Apéndices</b></span></li>
+<li class="chapter" data-level="A" data-path="glosario-de-términos.html"><a href="glosario-de-términos.html"><i class="fa fa-check"></i><b>A</b> Glosario de Términos</a></li>
+<li class="chapter" data-level="B" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html"><i class="fa fa-check"></i><b>B</b> Libro de Códigos</a>
+<ul>
+<li class="chapter" data-level="B.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-muestra"><i class="fa fa-check"></i><b>B.1</b> Libro de Códigos de Muestra</a>
+<ul>
+<li class="chapter" data-level="B.1.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones-1"><i class="fa fa-check"></i><b>B.1.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.1.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-2"><i class="fa fa-check"></i><b>B.1.2</b> Atributos</a></li>
+</ul></li>
+<li class="chapter" data-level="B.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#libro-de-códigos-de-noordin-top"><i class="fa fa-check"></i><b>B.2</b> Libro de Códigos de Noordin Top</a>
+<ul>
+<li class="chapter" data-level="B.2.1" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#relaciones-2"><i class="fa fa-check"></i><b>B.2.1</b> Relaciones</a></li>
+<li class="chapter" data-level="B.2.2" data-path="libro-de-códigos.html"><a href="libro-de-códigos.html#atributos-3"><i class="fa fa-check"></i><b>B.2.2</b> Atributos</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>V Referencias</b></span></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown">
+Publicado con bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Análisis de Redes Sociales</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="libro-de-códigos" class="section level1" number="13">
+<h1><span class="header-section-number">B</span> Libro de Códigos</h1>
+<div id="libro-de-códigos-de-muestra" class="section level2" number="13.1">
+<h2><span class="header-section-number">B.1</span> Libro de Códigos de Muestra</h2>
+<p>El propósito de este documento es establecer un libro de códigos para estudiantes aprendiendo a estandarizar relaciones.</p>
+<div id="relaciones-1" class="section level3" number="13.1.1">
+<h3><span class="header-section-number">B.1.1</span> Relaciones</h3>
+<div id="persona-a-persona-modo-uno" class="section level4 unnumbered">
+<h4>Persona-a-persona (modo-uno)</h4>
+<p>Las siguientes definiciones son ejemplos de relaciones de modo-uno entre personas. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para adaptarlo a su investigación.</p>
+<ul>
+<li><p><strong>Amistad</strong> (persona-a-persona): definida como dos personas que se declaran explícitamente como amigos, o que se conocen explícitamente como confidentes de confianza, en informes o en documentación de inteligencia. Los casos de relaciones familiares autoidentificables en las que dos o más personas se consideran familiares, pero que no están relacionadas por sangre, matrimonio o adopción, también se consideran un ejemplo de este tipo de relación.</p></li>
+<li><p><strong>Asociado criminal</strong> (persona-a-persona): definido como dos individuos que colaboran, ayudan o participan directamente en actividades ilícitas, incluidas acciones criminales fuera de línea y en línea, como compartir sustancias y / o transferir material ilegal.</p></li>
+<li><p><strong>Compañeros de clase</strong> (persona-a-persona): dos personas que asisten, como estudiantes, a la misma institución académica, al mismo tiempo. Una institución académica se define como cualquier institución dedicada a proporcionar educación. Los ejemplos pueden incluir, entre otros, cursos de capacitación, escuelas primarias, escuelas intermedias, escuelas secundarias y colegios y universidades.</p></li>
+<li><p><strong>Comunicación</strong> (persona-a-persona): definida como la transmisión directa, en persona, de mensajes o información entre individuos o mediante algún tipo de medio, como un teléfono celular o un correo electrónico.</p></li>
+<li><p><strong>Financieras</strong> (persona-a-persona): definido como dos actores, en informes o inteligencia, que se declaran explícitamente como transfiriendo fondos entre sí para cualquier propósito, legal o ilegal. Esta relación, sin embargo, NO incluye la compensación normal entre empleador y empleado.</p></li>
+<li><p><strong>Reclutador</strong> (persona-a-persona): se define como el contacto entre dos personas con el fin de reclutar nuevos miembros para actividades relacionadas con una organización.</p></li>
+<li><p><strong>Relaciones Superior-Subordinado</strong> (persona-a-persona) - Definidas como relaciones entre superiores inmediatos y subordinados en una organización. Esta relación explica los lazos formales / jerárquicos dentro de las organizaciones ilegítimas.</p></li>
+<li><p><strong>Romance</strong> (persona-a-persona): definido como una relación cariñosa y romántica entre dos o más personas. Los ejemplos de esta categoría incluyen las relaciones no matrimoniales, como una en la que dos personas tienen un hijo (o hijos) juntos, que están involucrados en relaciones sexuales entre ellos y aquellos que están saliendo o cortejándose.</p></li>
+</ul>
+</div>
+<div id="persona-a-evento-modo-dos" class="section level4 unnumbered">
+<h4>Persona-a-Evento (modo-dos)</h4>
+<p>Las siguientes definiciones son ejemplos de relaciones de modo-dos entre personas y eventos. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para adaptarlo a su investigación.</p>
+<ul>
+<li><p><strong>Evento criminal</strong> (persona-a-evento): definido como la participación de una persona en un evento, reunión, suceso o incidente en el que el propósito, las metas o los resultados del evento relacionados con, o que resultaron en actividades criminales. Esta definición incluye personas que son testigos, perpetradores, co-arrestados y víctimas de incidentes criminales. Los ejemplos pueden incluir, entre otros, crímenes violentos, reuniones formales / informales y eventos de capacitación relacionados con actividades criminales o que resultaron en ellas.</p></li>
+<li><p><strong>Evento no-criminal</strong> (persona-a-evento): definido como la participación de una persona un evento, reunión, evento o incidente en el que el propósito del evento no se relaciona con actividades delictivas. Los ejemplos pueden incluir, entre otros, reuniones sociales, reuniones formales / informales, eventos comunitarios y eventos de capacitación que no están relacionados con actividades delictivas.</p></li>
+</ul>
+</div>
+<div id="persona-a-locación-or-material-modo-dos" class="section level4 unnumbered">
+<h4>Persona-a-Locación or Material (modo-dos)</h4>
+<p>Las siguientes definiciones son ejemplos de relaciones de modo-dos entre personas y locaciones or materiales. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para adaptarlo a su investigación.</p>
+<ul>
+<li><p><strong>Evidencia</strong> (persona-a-material): definida como la relación física o la asociación directa de un individuo con un elemento de evidencia, como la posesión o el control individual de narcóticos, armas, documentos, etc.</p></li>
+<li><p><strong>Residencia</strong> (persona-a-locación): definida como la propiedad, el alquiler una persona a una casa, un apartamento, un condominio, un piso, una casa de seguridad o cualquier otro tipo de residencia. Esta opción también puede incluir la propiedad, el alquiler y las visitas a residencias en el pasado.</p></li>
+</ul>
+</div>
+<div id="persona-a-organización-modo-dos" class="section level4 unnumbered">
+<h4>Persona-a-Organización (modo-dos)</h4>
+<p>Las siguientes definiciones son ejemplos de relaciones de modo-dos entre personas y organizaciones. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para adaptarlo a su investigación.</p>
+<ul>
+<li><p><strong>Afiliación con organizaciones ilegítimas</strong> (persona-a-organización): definida como la propiedad, el empleo y / o la membresía de una persona en una organización ilegítima. Una organización ilegítima se define como un grupo u organización cuyos objetivos son de naturaleza criminal (terrorista), o que voluntariamente obtiene recursos materiales y / o no materiales a través de actividades delictivas.</p></li>
+<li><p><strong>Afiliación con organizaciones legítimas</strong> (persona-a-organización): definida como la propiedad, el empleo y / o la membresía de una persona en una organización legítima. Una organización legítima se define como aquella que se abstiene de participar, apoyar o estar involucrada en actividades delictivas. Los ejemplos incluyen, entre otros, las siguientes organizaciones: organizaciones comunitarias, con fines de lucro, organizaciones sin fines de lucro, organizaciones políticas, organizaciones religiosas, e instituciones académicas.</p></li>
+</ul>
+</div>
+</div>
+<div id="atributos-2" class="section level3" number="13.1.2">
+<h3><span class="header-section-number">B.1.2</span> Atributos</h3>
+<p>Esta sección describe y define los atributos (es decir, las características) de los actores.</p>
+<ul>
+<li><p><strong>Afiliación con organizaciones ilegítimas</strong>: definida como la propiedad, el empleo y / o la membresía de una persona en una organización ilegítima. Una organización ilegítima se define como un grupo u organización cuyos objetivos son de naturaleza nefasta (es decir, criminal) o que voluntariamente obtiene recursos materiales y / o no materiales a través de actividades ilegales.</p></li>
+<li><p><strong>Afiliación con organizaciones legítimas</strong>: definida como la propiedad, el empleo y / o la membresía de una persona en una organización legítima. Una organización legítima se define como aquella que se abstiene de participar, apoyar o estar involucrada en actividades delictivas.</p></li>
+<li><p><strong>Dirección</strong>: la (s) ubicación (es) específica (s) en la que reside una persona.</p></li>
+<li><p><strong>Raza / origen étnico</strong>: definido como el grupo racial o étnico con el que el individuo se identifica. Un grupo étnico es un grupo social al que pertenece una persona y que comparte una cultura, religión o idioma común y distintivo.</p></li>
+<li><p><strong>Ideología / creencia:</strong> definida como el sistema de ideas y creencias de un individuo, incluidas las creencias políticas y económicas.</p></li>
+<li><p><strong>Ocupación</strong>: definida como el título funcional actual de empleo de un individuo.</p></li>
+<li><p><strong>Rol</strong>: definido como un rol que un individuo asume en una organización legítima o ilegítima. Los codificadores de datos pueden registrar varios roles dado que la mayoría de los actores tienen más de un rol.</p></li>
+<li><p><strong>Habilidades (tecnológicas)</strong>: definidas como habilidades especiales relacionadas con la tecnología, independientemente del dominio o campo que posea (por ejemplo, piratería informática).</p></li>
+<li><p><strong>Habilidades (no tecnológicas)</strong>: definidas como habilidades especiales NO relacionadas con la tecnología, independientemente del dominio o campo que posea (por ejemplo, habilidades de las personas).</p></li>
+<li><p><strong>Estado</strong>: definido como la condición física del individuo. El valor predeterminado es “Vivo y libre” si falta información o si el estado físico de un actor es “desconocido.” Por ejemplo:</p>
+<ul>
+<li>Vivo y libre</li>
+<li>Encarcelado / detenido</li>
+<li>Muerto</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="libro-de-códigos-de-noordin-top" class="section level2" number="13.2">
+<h2><span class="header-section-number">B.2</span> Libro de Códigos de Noordin Top</h2>
+<p>El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts, el Profesor Sean Everton y Dan Cunningham en Laboratorio CORE <span class="citation">(<a href="#ref-Roberts2014" role="doc-biblioref">Roberts, Everton, &amp; Cunningham, 2014</a>)</span>. El libro de códigos corresponde a los datos de las redes de Nordin Top y sus colaboradores en el grupo terrorista Jemaah Islamiya. Estos datos se obtuvieron principalmente de dos informes de International Crisis Group (ICG): “Terrorism in Indonesia: Noordin’s Networks” <span class="citation">(<a href="#ref-ICG2006" role="doc-biblioref">International Crisis Group, 2006</a>)</span> e “Indonesia: Noordin Top’s Support Base” <span class="citation">(<a href="#ref-ICG2009" role="doc-biblioref">International Crisis Group, 2009</a>)</span>. Los dos informes del ICG sobre Noordin contienen datos valiosos de modo-uno y dos sobre una variedad de relaciones y afiliaciones (amistad, parentesco, reuniones, etc.) junto con datos de atributos importantes (educación, pertenencia al grupo, estado físico, etc.). Los datos fueron inicialmente estructurados y analizados por estudiantes de la Escuela de Postgrado Naval en el curso “Seguimiento y Disrupción de las Redes Oscuras” bajo la dirección del Profesor Sean Everton, Co-Director del Laboratorio CORE y la Profesora Nancy Roberts y luego expandidos y limpiados por la Facultad Asociada para Instrucción, Dan Cunningham.</p>
+<div id="relaciones-2" class="section level3" number="13.2.1">
+<h3><span class="header-section-number">B.2.1</span> Relaciones</h3>
+<ul>
+<li><p><strong>Afiliación Organizacional</strong> (modo-dos 237 x 32): Una organización terrorista/insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas/insurgentes, que consiste en miembros voluntariamente afiliados. A los efectos de este ejercicio, las facciones se considerarán separados de su organización principal para evitar que se codifiquen vínculos redundantes. En otras palabras, la mayoría de las afiliaciones de nivel micro están codificadas, mientras que un individuo solo se codifica en la organización principal si no figura como afiliado a una organización secundaria. Las organizaciones afiliadas terroristas/insurgentes, también están codificadas en esta matriz.</p></li>
+<li><p><strong>Afiliación Educativa</strong> (modo-dos 237 x 25): Las relaciones educativas se definen como escuelas donde las personas reciben educación formal, sirven como empleados (maestro, administrador, etc.) y/o participan en instrucción educativa o religiosa adicional en la institución.</p></li>
+<li><p><strong>Compañeros de clase/colegas educativos</strong> (modo-uno 237 x 237): Los compañeros de clase/colegas educativos se definen como personas que reciben educación formal, sirven como empleados (maestro, administrador, etc.) y/o participan en instrucción educativa o religiosa adicional en la misma institución y al mismo tiempo. Es más probable que esta relación refleje relaciones precisas que la matriz de “afiliación educativa” de dos modos, ya que considera el tiempo en el que las personas están presentes en una escuela.</p></li>
+</ul>
+<div class="infobox note">
+<p><strong>Nota de autor:</strong> La codificación en la hoja maestra será diferente de la codificación basada únicamente en el informe del ICG. El primero utilizó información fuera del informe “Noordin’s Networks” del ICG para establecer si las personas podían considerarse compañeros de clase/colegas educativos según la definición.</p>
+</div>
+<ul>
+<li><p><strong>Lazos de Comunicación</strong> (modo-uno 237 x 237): La comunicación interna se define como la transmisión de mensajes entre individuos y/o grupos dentro de la red a través de algún tipo de medio.</p></li>
+<li><p><strong>Medio para comunicación externa</strong> (modo-dos 237 x 5): El medio de comunicación externa se define como los diversos medios utilizados para transmitir información entre personas dentro y fuera de la red. Estos son:</p>
+<ul>
+<li>Mensajes de computadora, como sitios web (www.anshar.net), cafés de red y correo electrónico.</li>
+<li>Medios impresos, como la revista KOMPAK</li>
+<li>Material de apoyo (códigos y contraseñas): para enviar material desde la prisión</li>
+<li>Desconocido: cualquier tipo de comunicación no definido pero referenciado entre miembros</li>
+<li>Vídeos: para la fabricación de bombas y la formación para reclutar miembros externos</li>
+</ul></li>
+<li><p><strong>Lazos de parentesco</strong> (modo-uno 237 x 237): El parentesco se define como cualquier vínculo familiar, como hermano, cuñado, sobrino, etc. El parentesco también incluirá los matrimonios actuales y los matrimonios pasados ​​debido a divorcios y/o muertes.</p></li>
+<li><p><strong>Eventos de Entrenamiento</strong> (modo-dos 237 x 15): Participación en cualquier actividad específicamente designada para enseñar el conocimiento, las habilidades y las competencias del terrorismo y la insurgencia. El entrenamiento no incluye la participación en un acto patrocinado por terroristas o actividad muyahidín en lugares como Afganistán, Bosnia, Chechenia o Irak, a menos que la presencia de las personas fuera para participar en un campo de entrenamiento o base específicamente designado en una de estas áreas.</p></li>
+</ul>
+<p>:::{.infobox .note data-latex = "“}
+<strong>Nota de autor:</strong> Las personas que participaron en la”Capacitación religiosa de la embajada de Australia" y/o la “Capacitación para Bali II en el restaurante ‘Selera’” pueden reflejar vínculos redundantes con la “Red de operaciones,” ya que algunas personas participaron en estas capacitaciones específicas de la Embajada de Australia (04 de septiembre) y las operaciones de Bali II (05 de octubre).
+:::</p>
+<ul>
+<li><strong>Lazos de reclutamiento</strong> (modo-uno 237 x 237): Contacto entre dos personas con el fin de reclutar nuevos miembros para actividades relacionadas con el terrorismo o la insurgencia. Las relaciones de reclutamiento solo son relevantes cuando el intento de reclutar miembros ha tenido éxito. No se incluyen los intentos de reclutamiento fallidos.</li>
+</ul>
+<p>:::{.infobox .note data-latex = ""}
+<strong>Nota de autor:</strong> Estos lazos crean una red dirigida y no deben ser simétricos en la matriz. Además, los reclutadores están en las filas mientras que los reclutados están en las columnas.
+:::</p>
+<ul>
+<li><p><strong>Afiliaciones comerciales</strong> (modo-dos 237 x 11): Definidas como organizaciones con y sin fines de lucro que emplean personas.</p></li>
+<li><p><strong>Afiliaciones de negocios y finanzas</strong> (modo-dos 237 x 12): Definidas como organizaciones con y sin fines de lucro que emplean a personas (incluye la Fundación Durassalam).</p></li>
+<li><p><strong>Tipo de financiación</strong> (modo-dos 237 x 5): Las relaciones financieras se definen como la provisión de fondos (legales e ilegales) para respaldar, mantener y realizar operaciones para la red.</p></li>
+<li><p><strong>Operaciones</strong> (modo-dos 237 x 14): Las relaciones operativas se definen como personas que participan en la preparación, ejecución yo prestación de apoyo posoperatorio. La preparación debe relacionarse directamente con la operación y puede incluir objetivos reconocimiento, proporcionar refugio seguro para la preparación, contribuir al entrenamiento religioso y/o físico y participar en un robo donde las ganancias financian un ataque posterior. La prestación de apoyo posterior a la operación, como la ocultación de fugitivos y la eliminación de explosivos, también debe estar directamente relacionada con la operación.</p></li>
+<li><p><strong>Amistad</strong> (modo-uno 237 x 237): Las relaciones de amistad se definen como vínculos estrechos a través del afecto o la estima entre dos personas. Los lazos de amistad no se definen únicamente como reuniones y/o vínculos escolares.</p></li>
+</ul>
+<p>:::{.infobox .note data-latex = ""}
+<strong>Nota de autor:</strong> Las relaciones de amistad pueden ser extremadamente subjetivas si no se establecen explícitamente en el documento. Normalmente, las relaciones implícitas se basan en relaciones estrechas y coherentes a lo largo del tiempo. La relación entre Noordin Top y Azhari Husin, por ejemplo, no se declara explícitamente como una amistad en el documento, pero fueron colaboradores cercanos durante muchos años.
+:::</p>
+<ul>
+<li><p><strong>Afiliación religiosa</strong> (modo-dos 237 x 8): Las relaciones religiosas se definen como una asociación con una mezquita, iglesia, sinagoga o círculo de estudio religioso. Los círculos de estudio religioso solo se codifican si están separados de otras entidades religiosas (es decir, mezquita). No incluimos las escuelas islámicas aunque asumimos que las escuelas tienen mezquitas. No utilizar las escuelas evita la duplicación de esfuerzos con el equipo que construye los lazos escolares. Además, enumeramos las mezquitas por la ciudad en la que se encuentra. Si había más de uno en una ciudad, agregamos un identificador numérico más el nombre de la ubicación más cercana.</p></li>
+<li><p><strong>Almas gemelas</strong> (modo-uno 237 x 237): Las relaciones de alma gemela se definen como personas que están afiliadas a la misma institución religiosa al mismo tiempo. Es más probable que esta relación indique vínculos religiosos precisos que la “afiliación religiosa,” ya que considera los períodos de tiempo en los que las personas están afiliadas a instituciones religiosas.</p></li>
+</ul>
+<p>:::{.infobox .note data-latex = ""}
+<strong>Nota de autor:</strong> La codificación en la hoja maestra diferirá considerablemente de la codificación basada únicamente en el informe del ICG. El primero utilizó información fuera del informe del ICG para determinar los plazos en los que las personas estaban afiliadas a una institución religiosa.
+:::</p>
+<ul>
+<li><p><strong>Lugar logistico</strong> (modo-dos 237 x 35): Las relaciones logísticas se definen como un lugar clave dentro del archipiélago donde ocurrió la actividad logística. La actividad logística se define como proporcionar “casas seguras” para reunirse/esconderse, brindar apoyo material en términos de explosivos, proporcionar armamento o facilitar el transporte de personal o equipo.</p></li>
+<li><p><strong>Función logística</strong> (modo-dos 237 x 4): Las funciones logísticas se definen como el apoyo a operaciones terroristas/insurgentes proporcionando materiales, armas, transporte y refugios.</p></li>
+<li><p><strong>Lazos de mentores: ideológicos, supervisorese y tecnológicos</strong> (modo-uno 237 x 237): Las subredes ideológicas, de supervisión y técnicas identifican a las personas en la red de Noordin que poseen la autoridad para dar el “Cómo,” el “Qué” y el “Por qué” al resto de la red. Sentimos que la autoridad religiosa, la habilidad técnica como la fabricación de bombas o la habilidad informática, y el liderazgo comprobado eran habilidades que no se podían transferir fácilmente y valdría la pena centrarse en interrumpir la red.</p></li>
+</ul>
+<p>:::{.infobox .note data-latex = ""}
+<strong>Nota de autor:</strong> Estas redes son dirigidas y no deben ser simétricas. Además, los mentores están en las filas mientras que los mentoreados están en las columnas.
+:::</p>
+<ul>
+<li><p><strong>Rol</strong> (modo-dos 237 x 16): Definido como el papel que asume un individuo en la red terrorista/insurgencia. Codificado como datos de dos modos (ver también datos de atributos de función principal a continuación) porque algunas personas cumplen más de una función. La presencia de un rol por parte de un individuo se codificó como 1 y la ausencia como 0.</p></li>
+<li><p><strong>Reuniones</strong> (modo-dos 237 x 20): Un evento coordinado y planificado de antemano entre dos o más personas. Las reuniones no incluyen todos los estilos de comunicación. Por el contrario, reunión se refiere a un lugar determinado en una fecha determinada con personas específicas. Las reuniones infieren la necesidad de una decisión, pero los datos no identifican específicamente la decisión o el tema de la reunión.</p></li>
+<li><p><strong>Entidades diversas</strong> (modo-dos 237 x 10): Estas relaciones indican afiliación, pero no entran dentro de la definición de otras relaciones. Estas entidades van desde sitios web hasta campamentos militares y organizaciones políticas.</p></li>
+</ul>
+</div>
+<div id="atributos-3" class="section level3" number="13.2.2">
+<h3><span class="header-section-number">B.2.2</span> Atributos</h3>
+<ul>
+<li><strong>Nivel de educación</strong>: definido como el título más alto alcanzado, el nivel en el que se enseñó, estudió, participó o asistió. El siguiente es el esquema de códigos:</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Desconocido</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Educación Primaria</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Pesantren</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Escuela secundaria estatal</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Algo de universidad</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Universidad</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Algo de maestría</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Maestría</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Doctorado</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Contacto con personas fuera de Indonesia:</strong> definido como contacto con personas en diferentes países fuera de Indonesia.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Desconocido</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Afganistán</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Australia</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Malasia</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Pakistán</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Filipinas</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Singapur</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Tailandia</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Reino Unido</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Afganistán y Malasia</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Afganistán y Filipinas</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Afganistán y Pakistán</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>Afganistán, Malasia y Filipinas</td>
+</tr>
+<tr class="even">
+<td>13</td>
+<td>Australia y Malasia</td>
+</tr>
+<tr class="odd">
+<td>14</td>
+<td>Filipinas y Malasia</td>
+</tr>
+<tr class="even">
+<td>15</td>
+<td>Afganistán, Pakistán y Egipto</td>
+</tr>
+<tr class="odd">
+<td>16</td>
+<td>Irak, Afganistán y Pakistán</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Entrenamiento militar:</strong> definido como el país donde un individuo recibió entrenamiento militar y alcanzó el estatus de veterano en la lucha en guerras insurgentes/convencionales conocidas.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Desconocido</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Afganistán</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Australia</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Indonesia</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Malasia</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Filipinas</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Singapur</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Afganistán e Indonesia</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Afganistán y Filipinas</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Indonesia y Malasia</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Indonesia y Filipinas</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Afganistán e Irak</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Nacionalidad de la persona:</strong> definida como país de nacimiento, ciudadanía o residencia.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Afganistán</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Australia</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Indonesia</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Malasia</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Filipinas</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Singapur</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Arabia Saudita</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Jordania</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Egipto</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Estado actual según el artículo del ICG:</strong> definido como la condición física del individuo.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Muerto</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Vivo</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Encarcelado</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Rol (Original):</strong> definido como el rol que asume un individuo en la red terrorista/insurgente.</li>
+</ul>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Sin información/poca claridad</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Estratega: Planificador de alto nivel de una red terrorista/insurgente</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Fabricante de bombas: Individuo que construye bombas</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Bombardero/combatiente: Individuo que participa en ataques con bombas o que se describe como un combatiente</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Entrenador/instructor: Individuo que entrena o instruye a nuevos miembros de una red terrorista</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Terrorista suicida: Individuo que planea o ya ha realizado un ataque suicida</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Reconocimiento y vigilancia: Participa en la vigilancia y reconocimiento de objetivos</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Reclutador: Se dedica a identificar y reclutar nuevos miembros (para incluir bombarderos)</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Mensajero /Intermediario: Facilita las comunicaciones entre miembros</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>Propagandista: Desarrolló campañas de información</td>
+</tr>
+<tr class="odd">
+<td>10</td>
+<td>Facilitador: Asistido en el funcionamiento de la red (especialmente con materiales y finanzas)</td>
+</tr>
+<tr class="even">
+<td>11</td>
+<td>Líder religioso: Se le proporcionó formación y apoyo religiosos</td>
+</tr>
+<tr class="odd">
+<td>12</td>
+<td>Comandante/Líder táctico: A cargo de las operaciones a nivel local/táctico</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Rol ampliado (primario y secundario):</strong> Definido como el rol que asume un individuo en la red terrorista/insurgente (incluye roles primarios y secundarios).</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Fabricante de bombas</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Bombardero</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Mensajero</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Facilitador</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Líder</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Enlace</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Líder local</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Propagandista</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Reclutador</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Líder religioso</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Maestro religioso, mentor, motivador</td>
+</tr>
+<tr class="even">
+<td>12</td>
+<td>Proveedor de recursos</td>
+</tr>
+<tr class="odd">
+<td>13</td>
+<td>Estratega</td>
+</tr>
+<tr class="even">
+<td>14</td>
+<td>Bombardero suicida</td>
+</tr>
+<tr class="odd">
+<td>15</td>
+<td>Simpatizante</td>
+</tr>
+<tr class="even">
+<td>16</td>
+<td>Entrenador</td>
+</tr>
+<tr class="odd">
+<td>99</td>
+<td>No hay datos</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Función logística:</strong> definida como la provisión de casas seguras, armas, transporte y/o material a la red operativa.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Proporcionar una casa segura</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Suministro de armas</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Proporcionar transporte</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Suministro de material</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Suministro de armas, transporte y material</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Suministro de armas, material</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Suministro de transporte, material</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Proporcionar refugio y transporte</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Proporcionar refugio, transporte, material</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Proporcionar refugio, armas, material</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Habilidades técnicas:</strong> elegimos codificar los atributos técnicos en función de los conjuntos de habilidades explícitos mencionados en el informe del ICG. En contraste con un atributo como “rol,” elegimos solo codificar las habilidades técnicas específicas que se enumeran a continuación y no consideramos cosas como “líder de celda” o “financiero” como un rol técnico. Básicamente, estábamos buscando habilidades relacionadas con la electrónica, fabricación de bombas, diseño de páginas web, etc. A continuación se muestra una lista de los roles y el número correspondiente que recibió cada individuo. En los casos en que alguien tenía múltiples habilidades técnicas, elegimos codificar la que es subjetivamente más relevante para las operaciones terroristas. Por ejemplo, Azhari Husin tiene experiencia en ingeniería mecánica pero también tiene entrenamiento en explosivos. Lo codificaríamos como “fabricación de bombas.” Aquellos sin habilidades técnicas identificadas reciben un 0 en la matriz.</li>
+</ul>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Fabricación de bombas</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Propaganda (producción de videos y CD de video, revistas, diseño de páginas web, etc.)</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Instrucción de habilidades militares (artes marciales, tiro, etc.)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Otro conocimiento avanzado (ingeniería mecánica, agricultura, etc.)</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Instrucción religiosa</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Afiliación de grupo principal:</strong> definida como la afiliación de grupo principal de cada miembro de la red, en general.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Ninguno (Noordin)</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Darul Islam (DI)</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>KOMPAK</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Jemaah Islamiyah (JI)</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>Ring Banten Group (DI)</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Al-Qaeda</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Red de Noordin:</strong> un individuo que se considera miembro del grupo de Noordin (Tanzim Qaedat al-Jihad - Organización para la base del Jihad), en lugar de simplemente estar vinculado. Igualmente, si el individuo participó en una operación dirigida por Noordin durante cualquier etapa. Finalmente, si él o ella se declara explícitamente como miembro del círculo íntimo de Noordin y/o está vinculado a Noordin por parentesco o amistad.</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>No es miembro</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Miembro</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Original 79:</strong> Definido como las 79 personas enumeradas en el apéndice del Informe del ICG de 2006, “Noordin’s Networks”</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Código</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>No incluido en el Apéndice</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Incluido en el Apéndice</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+
+
+
+<h3>Referencias</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-ICG2006" class="csl-entry">
+International Crisis Group. (2006). <em>Terrorism in indonesia: Noordin’s networks</em>. Brussels, Belgium: International Crisis Group.
+</div>
+<div id="ref-ICG2009" class="csl-entry">
+International Crisis Group. (2009). <em>Indonesia: Noordin top’s support base</em>. Brussels, Belgium: International Crisis Group.
+</div>
+<div id="ref-Roberts2014" class="csl-entry">
+Roberts, N., Everton, S. F., &amp; Cunningham, D. (2014). The noordin top network.
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="glosario-de-términos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/cjcallag/arso/edit/editing/05-codigos.Rmd",
+"text": "Editar"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf"],
+"search": {
+"engine": "lunr",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"font_settings": {
+"family": "sans",
+"theme": "white",
+"size": 2
+},
+"info": true,
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
