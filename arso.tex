@@ -1,0 +1,65 @@
+\usepackage{tcolorbox}
+\usepackage{caption}
+\usepackage{amsmath}
+
+% Add required stuff for kableExtra
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
+
+\setlength{\fboxsep}{.8em}
+
+\newtcolorbox{infobox}{
+  colback = lightgray,
+  colframe = black,
+  coltext = black,
+  boxsep = 5pt,
+  arc = 4pt
+  }
+
+\newenvironment{row}[1][]{}{}
+
+
+\newenvironment{col}[1]{\begin{minipage}[t]{#1}\ignorespaces}{%
+\end{minipage}
+\ifhmode\unskip\fi
+\aftergroup\useignorespacesandallpars}
+
+\def\useignorespacesandallpars#1\ignorespaces\fi{%
+#1\fi\ignorespacesandallpars}
+
+\makeatletter
+\def\ignorespacesandallpars{%
+  \@ifnextchar\par
+    {\expandafter\ignorespacesandallpars\@gobble}%
+    {}%
+}
+\makeatother
+
+\newenvironment{lcolumn-20}[1]{\col{#1}}{\endcol}
+\newenvironment{rcolumn-80}[1]{\col{#1}}{\endcol}
+\newenvironment{lcolumn-50}[1]{\col{#1}}{\endcol}
+\newenvironment{rcolumn-50}[1]{\col{#1}}{\endcol}
+% Extra template...
+% \newenvironment{col}[1]{\template{#1}}{\endtemplate}
+
+%% change fontsize of R code
+%\let\oldShaded\Shaded
+%\let\endoldShaded\endShaded
+%\renewenvironment{Shaded}{\footnotesize\oldShaded}{\endoldShaded}
+
+%% change fontsize of output
+%\let\oldverbatim\verbatim
+%\let\endoldverbatim\endverbatim
+%\renewenvironment{verbatim}{\footnotesize\oldverbatim}{\endoldverbatim}

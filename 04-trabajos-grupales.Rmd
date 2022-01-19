@@ -6,14 +6,15 @@ output: html_document
 
 Lo que sigue es una serie de descripciones generales de proyectos de análisis de redes generadas por los estudiantes que han participado en clases realizadas conjuntamente por NPS y ESGE.
 
-::::{.showbox}
+:::{.showbox}
 ## Informe de la Red Criminal en la República de Panamá {-}
 
-::::{.row}
-::::{.lcolumn-30}
+:::{.row}
+:::{.lcolumn-30}
 La red identificada cuyo nombre es “Calor Calor”, la cual mantiene con organizaciones criminales en Colombia y México. Esta organización opera principalmente en Panamá, Centroamérica y Suramérica. 
-::::
-::::{.rcolumn-70}
+:::
+
+:::{.rcolumn-70}
 ```{r, echo = FALSE}
 library(ggplot2)
 library(ggspatial)
@@ -38,8 +39,8 @@ ggplot(data = countries) +
         axis.ticks = element_blank(),
         plot.margin = grid::unit(c(0,0,0,0), "mm"))
 ```
-::::
-::::
+:::
+:::
 
 La banda criminal “Calor Calor” se dedica a actividades tales como:
 
@@ -143,7 +144,7 @@ plot(g,
      rescale = TRUE
      )
 ```
-::::
+:::
 
 
 

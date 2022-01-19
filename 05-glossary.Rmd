@@ -191,7 +191,7 @@ random.graph.game(n = 10, p.or.m = 0.5) %>%
 **Vínculos** (*Ties*): La relación entre dos nodos. Un vínculo puede ser direccionado (llamado *arco*, por ejemplo: **<--** | **-->** | **<->**) o no direccionado (llamado *borde*, por ejemplo: **---**). 
 
 ```{r, fig.cap = "Red no dirigida (izquierda) y red dirigida (derecha)"}
-par(mfrow=c(1,2), mar=c(5,1,1,1))
+par(mfrow = c(1, 2), mar = c(5, 1, 1, 1))
 g <- make_star(5, mode = "in")
 plot(g,
   vertex.border.color = "black",

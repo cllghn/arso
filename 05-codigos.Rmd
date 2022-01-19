@@ -94,9 +94,9 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
   
   - **Compañeros de clase/colegas educativos** (modo-uno 237 x 237): Los compañeros de clase/colegas educativos se definen como personas que reciben educación formal, sirven como empleados (maestro, administrador, etc.) y/o participan en instrucción educativa o religiosa adicional en la misma institución y al mismo tiempo. Es más probable que esta relación refleje relaciones precisas que la matriz de "afiliación educativa" de dos modos, ya que considera el tiempo en el que las personas están presentes en una escuela.
   
-::::{.infobox .note data-latex="note"}
+:::{.infobox .note data-latex=""}
 **Nota de autor:** La codificación en la hoja maestra será diferente de la codificación basada únicamente en el informe del ICG. El primero utilizó información fuera del informe "Noordin’s Networks" del ICG para establecer si las personas podían considerarse compañeros de clase/colegas educativos según la definición.
-::::
+:::
 
   - **Lazos de Comunicación** (modo-uno 237 x 237): La comunicación interna se define como la transmisión de mensajes entre individuos y/o grupos dentro de la red a través de algún tipo de medio.
   
@@ -111,15 +111,15 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
   
   - **Eventos de Entrenamiento** (modo-dos 237 x 15): Participación en cualquier actividad específicamente designada para enseñar el conocimiento, las habilidades y las competencias del terrorismo y la insurgencia. El entrenamiento no incluye la participación en un acto patrocinado por terroristas o actividad muyahidín en lugares como Afganistán, Bosnia, Chechenia o Irak, a menos que la presencia de las personas fuera para participar en un campo de entrenamiento o base específicamente designado en una de estas áreas.
 
-::::{.infobox .note data-latex="note"}
+:::{.infobox .note data-latex=""}
 **Nota de autor:** Las personas que participaron en la "Capacitación religiosa de la embajada de Australia" y/o la "Capacitación para Bali II en el restaurante 'Selera'" pueden reflejar vínculos redundantes con la "Red de operaciones", ya que algunas personas participaron en estas capacitaciones específicas de la Embajada de Australia (04 de septiembre) y las operaciones de Bali II (05 de octubre).
-::::
+:::
 
   - **Lazos de reclutamiento** (modo-uno 237 x 237): Contacto entre dos personas con el fin de reclutar nuevos miembros para actividades relacionadas con el terrorismo o la insurgencia. Las relaciones de reclutamiento solo son relevantes cuando el intento de reclutar miembros ha tenido éxito. No se incluyen los intentos de reclutamiento fallidos.
   
-::::{.infobox .note data-latex="note"}
+:::{.infobox .note data-latex=""}
 **Nota de autor:** Estos lazos crean una red dirigida y no deben ser simétricos en la matriz. Además, los reclutadores están en las filas mientras que los reclutados están en las columnas.
-::::
+:::
 
   - **Afiliaciones comerciales** (modo-dos 237 x 11): Definidas como organizaciones con y sin fines de lucro que emplean personas.
   
@@ -131,17 +131,17 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
   
   - **Amistad** (modo-uno 237 x 237): Las relaciones de amistad se definen como vínculos estrechos a través del afecto o la estima entre dos personas. Los lazos de amistad no se definen únicamente como reuniones y/o vínculos escolares.
   
-::::{.infobox .note data-latex="note"}
+:::{.infobox .note data-latex=""}
 **Nota de autor:** Las relaciones de amistad pueden ser extremadamente subjetivas si no se establecen explícitamente en el documento. Normalmente, las relaciones implícitas se basan en relaciones estrechas y coherentes a lo largo del tiempo. La relación entre Noordin Top y Azhari Husin, por ejemplo, no se declara explícitamente como una amistad en el documento, pero fueron colaboradores cercanos durante muchos años.
-::::
+:::
 
   - **Afiliación religiosa** (modo-dos 237 x 8): Las relaciones religiosas se definen como una asociación con una mezquita, iglesia, sinagoga o círculo de estudio religioso. Los círculos de estudio religioso solo se codifican si están separados de otras entidades religiosas (es decir, mezquita). No incluimos las escuelas islámicas aunque asumimos que las escuelas tienen mezquitas. No utilizar las escuelas evita la duplicación de esfuerzos con el equipo que construye los lazos escolares. Además, enumeramos las mezquitas por la ciudad en la que se encuentra. Si había más de uno en una ciudad, agregamos un identificador numérico más el nombre de la ubicación más cercana.
   
   - **Almas gemelas** (modo-uno 237  x 237): Las relaciones de alma gemela se definen como personas que están afiliadas a la misma institución religiosa al mismo tiempo. Es más probable que esta relación indique vínculos religiosos precisos que la “afiliación religiosa”, ya que considera los períodos de tiempo en los que las personas están afiliadas a instituciones religiosas.
   
-::::{.infobox .note data-latex="note"}
+:::{.infobox .note data-latex=""}
 **Nota de autor:** La codificación en la hoja maestra diferirá considerablemente de la codificación basada únicamente en el informe del ICG. El primero utilizó información fuera del informe del ICG para determinar los plazos en los que las personas estaban afiliadas a una institución religiosa.
-::::
+:::
 
   - **Lugar logistico** (modo-dos 237 x 35): Las relaciones logísticas se definen como un lugar clave dentro del archipiélago donde ocurrió la actividad logística. La actividad logística se define como proporcionar "casas seguras" para reunirse/esconderse, brindar apoyo material en términos de explosivos, proporcionar armamento o facilitar el transporte de personal o equipo.
 
@@ -149,9 +149,9 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
   
   - **Lazos de mentores: ideológicos, supervisorese y tecnológicos** (modo-uno 237 x 237): Las subredes ideológicas, de supervisión y técnicas identifican a las personas en la red de Noordin que poseen la autoridad para dar el "Cómo", el "Qué" y el "Por qué" al resto de la red. Sentimos que la autoridad religiosa, la habilidad técnica como la fabricación de bombas o la habilidad informática, y el liderazgo comprobado eran habilidades que no se podían transferir fácilmente y valdría la pena centrarse en interrumpir la red.
   
-::::{.infobox .note data-latex="note"}
+:::{.infobox .note data-latex=""}
 **Nota de autor:** Estas redes son dirigidas y no deben ser simétricas. Además, los mentores están en las filas mientras que los mentoreados están en las columnas.
-::::
+:::
 
   - **Rol** (modo-dos 237 x 16): Definido como el papel que asume un individuo en la red terrorista/insurgencia. Codificado como datos de dos modos (ver también datos de atributos de función principal a continuación) porque algunas personas cumplen más de una función. La presencia de un rol por parte de un individuo se codificó como 1 y la ausencia como 0.
 

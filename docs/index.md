@@ -13,15 +13,13 @@ always_allow_html: yes
 
 # Introducción {-}
 
+<img src="images/core-esge.png" width="75%" style="display: block; margin: auto;" />
+
 El objetivo de este manual es enseñarle los conceptos básicos del análisis de redes sociales (ARSo) y cómo estos métodos pueden ser utilizados para comprender dichas redes, asimismo crear estrategias para empoderar o socavarlas. Este proyecto cubre los puntos de vista de los autores sobre la introducción al estudio de las redes oscuras como elementos de análisis clave para todo analista de inteligencia y elementos operativos de fuerzas especiales. De tal manera que, los ejemplos prácticos y el marco teórico en que están integrados giran alrededor de las redes oscuras, definidas como redes encubiertas (o clandestinas) e ilegales [@Raab2003]. Este es un término que puede incluir redes terroristas, criminales e insurgentes. El término "oscura" busca capturar el hecho de que las redes oscuras son aquellas que, por definición, intentan permanecer encubiertas tras ocultar sus actividades de las autoridades [@Cunningham2016; @Everton2012].
 
 Este manual se divide en cuatro secciones. La primera consiste de una introducción a ARSo, que aborda una breve reseña histórica, las diferencias entre este y otros campos de estudio, y los términos, conceptos y supuestos básicos que forman la base de este campo. La siguiente sección cambia el enfoque de los conceptos a la práctica. Es decir, se centra en la recopilación, codificación y manipulación de los datos necesarios para el análisis. En la tercera sección, los autores presentan varias "familias" de métricas, comúnmente utilizadas en el análisis exploratorio de redes. Finalmente, la última sección destaca ejemplos del uso de los métodos presentados en este documento por analistas de inteligencia y equipos de Asuntos Civiles y Operaciones Psicológicas.
 
 El contenido de este manual fue diseñado conjuntamente entre el [Ambiente Común de Investigación Operativa (CORE Lab, por sus siglas en inglés)](https://nps.edu/web/core) de la [Escuela Naval de Post Grado (NPS, por sus siglas en inglés)](https://nps.edu/) y la [Escuela Superior de Guerra del Ejército, Escuela de Post Grado (ESGE-EPG), Lima, Perú](http://esge.edu.pe/esge-epg/).
-
-<br/>
-
-<img src="images/core-esge.png" width="75%" style="display: block; margin: auto;" />
 
 
 ## Patrocinio {-}

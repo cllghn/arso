@@ -4,6 +4,7 @@ output: html_document
 
 
 
+
 # Redes Oscuras en el Perú
 
 Este proyecto de tener una doctrina propia, que se adapte a la realidad del Perú es un punto de vista del autor sobre la introducción al estudio de las redes oscuras como elemento de análisis clave para todo analista de inteligencia y elementos operativos de fuerzas especiales, basados en el estudio analítico de la interacción de las redes sociales.
@@ -42,11 +43,11 @@ En términos prácticos, el análisis de redes oscuras nos permite de manera sis
 
 Puesto a que las propiedades de las organizaciones terroristas o del COT varían con base a el contexto social, histórico y geográfico de cada nación, el análisis de redes  es una herramienta interesante y necesaria para toda agencia de Inteligencia o Policial . Las conexiones entre nodos en una red sociales son mantenidas entre dos o más nodos, los nodos pueden ser personas, grupos, organizaciones, estados, etc. Traducido a términos relevantes al analista de Inteligencia , Fuerzas Especiales y Policiales podemos contextualizar los nodos como sujetos estratégicos. 
 
-Como ha sugerido este autor, la estrategia del analista debe basarse en el contexto de la red, así como la estructura de esta. La Figura \@ref(fig:dimensions),  adaptada de una conferencia sobre Redes Sociales a cargo de la Doctora Nancy Roberts de la Escuela Naval de Postgrado, presenta la estructura de redes como polos opuestos [@Roberts2014a]. Esta dicotomía se basa en el estudio de organizaciones, la cual separa las jerarquías de las redes. Asimismo, compartimenta características, asociando las redes con estructuras sociales informales, igualitarias y de gobernanza compartida; igualmente, asume que las organizaciones jerárquicas son formales, estructuradas y con gobernanza centralizada [@Everton2012]. 
+Como ha sugerido este autor, la estrategia del analista debe basarse en el contexto de la red, así como la estructura de esta. La Figura \@ref(fig:4-1-dimensions),  adaptada de una conferencia sobre Redes Sociales a cargo de la Doctora Nancy Roberts de la Escuela Naval de Postgrado, presenta la estructura de redes como polos opuestos [@Roberts2014a]. Esta dicotomía se basa en el estudio de organizaciones, la cual separa las jerarquías de las redes. Asimismo, compartimenta características, asociando las redes con estructuras sociales informales, igualitarias y de gobernanza compartida; igualmente, asume que las organizaciones jerárquicas son formales, estructuradas y con gobernanza centralizada [@Everton2012]. 
 
 <div class="figure" style="text-align: center">
-<img src="images/04-dimensions.png" alt="Dimensiones de Organizaciones" width="70%" />
-<p class="caption">(\#fig:dimensions)Dimensiones de Organizaciones</p>
+<img src="images/04-dimensions.png" alt="Dimensiones de Organizaciones" width="100%" />
+<p class="caption">(\#fig:4-1-dimensions)Dimensiones de Organizaciones</p>
 </div>
 
 Al analizar redes oscuras es importante preguntarse si esta distinción es útil. Algunos [@Everton2012] argumentan que la distinción es apropiada en algunos contextos, pero desde la perspectiva del análisis de redes  esta división es inapropiada [@Everton2012]. Esto es puesto que tanto en las organizaciones jerárquicas como en las redes el análisis se basa en las relaciones entre actores, el entendimiento sobre las propiedades organizacionales de la red se determina por medidas estructurales que cuantifican la jerarquía o heterarquía de dicha red. En este manual, hemos explorado las medidas estructurales de las redes en el Capítulo 8 “Topología”. 
@@ -64,37 +65,35 @@ Esta definición nuevamente retorna el enfoque a la estructura de la red, pero i
 El ejemplo previo de Sendero Luminoso recalca una de las cualidades adicionales de la guerra en red, según Arquilla y Ronfeldt, una red se compone de muchas piezas pequeñas y dispersas, las cuales comparten conjuntos de ideas y están interconectadas para lograr un fin común [@Arquilla2001]. Nuevamente, Arquilla y Ronfeldt presentan tres tipos de topologías de redes que podemos ver en la siguiente tabla: 
 
 
--------------------------------------------------------------------------
-   Tipo              Explicación                       Dibujo            
----------- -------------------------------- -----------------------------
-  Cadena        Como en una cadena de         ![](images/04-cadema.png)  
-               contrabando de personas,                                  
-             bienes, o información donde                                 
-            estos se mueven a lo largo de                                
-            la línea de contactos y donde                                
-            la comunicación de un extremo                                
-             a otro viaja únicamente por                                 
-                   nodos aledaños.                                       
+--------------------------------------------------------------------------
+   Tipo              Explicación                        Dibujo            
+---------- -------------------------------- ------------------------------
+  Cadena        Como en una cadena de         ![](images/04-cade2a.png)   
+               contrabando de personas,                                   
+             bienes, o información donde                                  
+            estos se mueven a lo largo de                                 
+            la línea de contactos y donde                                 
+            la comunicación de un extremo                                 
+             a otro viaja únicamente por                                  
+                   nodos aledaños.                                        
 
- Estrella    Donde un conjunto de actores    ![](images/04-estrella.png) 
-               está ligado con un nodo                                   
-                central o actor, para                                    
-                comunicarse entre sí o                                   
-            coordinarse deben atravesar el                               
-                    nodo central.                                        
+ Estrella    Donde un conjunto de actores    ![](images/04-estrella2.png) 
+               está ligado con un nodo                                    
+                central o actor, para                                     
+                comunicarse entre sí o                                    
+            coordinarse deben atravesar el                                
+                    nodo central.                                         
 
-  Malla      Una estructura de red en la      ![](images/04-malla.png)   
-                que todo el mundo está                                   
-                      conectado.                                         
--------------------------------------------------------------------------
+  Malla      Una estructura de red en la      ![](images/04-malla2.png)   
+                que todo el mundo está                                    
+                      conectado.                                          
+--------------------------------------------------------------------------
 
-
-
-En una red oscura, la composición estructural puede contener una mezcla de estas tipologías (Figura \@ref(fig:mix)). Por ejemplo, el núcleo de la red puede estar organizado como malla, pero en estrellas o cadenas en otras partes de la red como en los comandos operativos [@Arquilla2001]. Más aun, los actores generalmente están conectados entre sí de varias maneras, y estas conexiones pueden empujarlos en direcciones múltiples y a veces contradictorias [@Cunningham2016]. Por ejemplo, la mayoría de los individuos tienen lazos de intercambio, amistad y parentesco; las organizaciones criminales y terroristas generalmente, intercambian personal, armas, dinero, información y forman alianzas entre ellos. 
+En una red oscura, la composición estructural puede contener una mezcla de estas tipologías (Figura \@ref(fig:4-1-mix)). Por ejemplo, el núcleo de la red puede estar organizado como malla, pero en estrellas o cadenas en otras partes de la red como en los comandos operativos [@Arquilla2001]. Más aun, los actores generalmente están conectados entre sí de varias maneras, y estas conexiones pueden empujarlos en direcciones múltiples y a veces contradictorias [@Cunningham2016]. Por ejemplo, la mayoría de los individuos tienen lazos de intercambio, amistad y parentesco; las organizaciones criminales y terroristas generalmente, intercambian personal, armas, dinero, información y forman alianzas entre ellos. 
 
 <div class="figure" style="text-align: center">
-<img src="04-redes_oscuras_en_el_peru_files/figure-html/mix-1.png" alt="Red hipotética, mezcla de cadenas, estrellas y mallas" width="70%" />
-<p class="caption">(\#fig:mix)Red hipotética, mezcla de cadenas, estrellas y mallas</p>
+<img src="04-redes_oscuras_en_el_peru_files/figure-html/4-1-mix-1.png" alt="Red hipotética, mezcla de cadenas, estrellas y mallas" width="100%" />
+<p class="caption">(\#fig:4-1-mix)Red hipotética, mezcla de cadenas, estrellas y mallas</p>
 </div>
 
 En el Perú, el análisis de redes oscuras nos ha permitido mapear, degradar, y neutralizar redes criminales como la red criminal “Los cuellos blancos del Puerto”, la facción de Sendero Luminoso denominada Línea Oportunista de Derecha (LOD), entre otras (ver Capitulo 13, “Ejemplos Prácticos” de este manual). El análisis de redes oscuras también se ha utilizado para verificar la convergencia que existe entre las organizaciones criminales y los partidos políticos, tema de alta importancia pues en los últimos años hemos presenciado en el mundo y especialmente en la región Sudamericana, el surgimiento de redes de actores, dedicados a limitar las acciones de fuerza de diversos gobiernos, así como activistas que reclaman la no contaminación del medio ambiente, la movilización en los conflictos sociales contra las asimetrías de poder, terroristas en convergencia con partidos políticos de ideología radical a fin de derrocar a un gobierno legítimamente constituido, organizándose en redes inmensas formadas por poblaciones interconectadas por múltiples canales, apoyándose en la internet, desde donde se han apoyado, coordinado y organizado [@Arquilla2001].

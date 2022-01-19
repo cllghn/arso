@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1 Análisis de Redes Sociales: Una (Breve) Introducción | Análisis de Redes Sociales</title>
+  <title>1 ARSo: Una (Breve) Introducción | Análisis de Redes Sociales</title>
   <meta name="description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1 Análisis de Redes Sociales: Una (Breve) Introducción | Análisis de Redes Sociales" />
+  <meta property="og:title" content="1 ARSo: Una (Breve) Introducción | Análisis de Redes Sociales" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="cjcallag/arso" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1 Análisis de Redes Sociales: Una (Breve) Introducción | Análisis de Redes Sociales" />
+  <meta name="twitter:title" content="1 ARSo: Una (Breve) Introducción | Análisis de Redes Sociales" />
   
   <meta name="twitter:description" content="Un manual práctico para analistas de redes sociales de habla hispana." />
   
@@ -53,14 +53,8 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-<script src="libs/datatables-binding-0.19/datatables.js"></script>
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-<script src="libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-<link href="libs/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-<script src="libs/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
@@ -110,7 +104,7 @@ div.csl-indent {
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#editores"><i class="fa fa-check"></i>Editores</a></li>
 </ul></li>
 <li class="part"><span><b>I ¿Qué es el ARSo?</b></span></li>
-<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Análisis de Redes Sociales: Una (Breve) Introducción</a>
+<li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> ARSo: Una (Breve) Introducción</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#conceptos-erróneos-y-diferencias"><i class="fa fa-check"></i><b>1.1</b> Conceptos Erróneos y Diferencias</a></li>
 <li class="chapter" data-level="1.2" data-path="introduction.html"><a href="introduction.html#suposiciones"><i class="fa fa-check"></i><b>1.2</b> Suposiciones</a>
@@ -253,7 +247,10 @@ div.csl-indent {
 <li class="chapter" data-level="9.1.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#componentes-fuertes"><i class="fa fa-check"></i><b>9.1.2</b> Componentes Fuertes</a></li>
 </ul></li>
 <li class="chapter" data-level="9.2" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#k-cores"><i class="fa fa-check"></i><b>9.2</b> K-cores</a></li>
-<li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a></li>
+<li class="chapter" data-level="9.3" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#girvan-newman"><i class="fa fa-check"></i><b>9.3</b> Girvan-Newman</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#modularidad"><i class="fa fa-check"></i><b>9.3.1</b> Modularidad</a></li>
+</ul></li>
 <li class="chapter" data-level="9.4" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#louvain"><i class="fa fa-check"></i><b>9.4</b> Louvain</a></li>
 <li class="chapter" data-level="9.5" data-path="subgrupos-cohesivos.html"><a href="subgrupos-cohesivos.html#ejercicio-práctico-5"><i class="fa fa-check"></i><b>9.5</b> Ejercicio Práctico</a>
 <ul>
@@ -296,15 +293,15 @@ div.csl-indent {
 <li class="chapter" data-level="12.2" data-path="redes-oscuras-en-el-perú.html"><a href="redes-oscuras-en-el-perú.html#por-qué-el-análisis-de-redes-oscuras"><i class="fa fa-check"></i><b>12.2</b> ¿Por qué el Análisis de Redes Oscuras?</a></li>
 <li class="chapter" data-level="12.3" data-path="redes-oscuras-en-el-perú.html"><a href="redes-oscuras-en-el-perú.html#conclusiones"><i class="fa fa-check"></i><b>12.3</b> Conclusiones</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>13</b> Un Proceso de Diseño para la Investigación de Redes Sociales</a>
+<li class="chapter" data-level="13" data-path="un-proceso-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-para-la-investigación-de-redes-sociales.html"><i class="fa fa-check"></i><b>13</b> Un Proceso para la Investigación de Redes Sociales</a>
 <ul>
-<li class="chapter" data-level="13.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>13.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
+<li class="chapter" data-level="13.1" data-path="un-proceso-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-para-la-investigación-de-redes-sociales.html#desarrollar-un-proyecto-investigativo-de-redes-sociales"><i class="fa fa-check"></i><b>13.1</b> Desarrollar un Proyecto Investigativo de Redes Sociales</a>
 <ul>
-<li class="chapter" data-level="13.1.1" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>13.1.1</b> Pregunata(s) de Investigación</a></li>
-<li class="chapter" data-level="13.1.2" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>13.1.2</b> Limites</a></li>
-<li class="chapter" data-level="13.1.3" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>13.1.3</b> Codificar Relaciones y Atributos</a></li>
-<li class="chapter" data-level="13.1.4" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>13.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
-<li class="chapter" data-level="13.1.5" data-path="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-de-diseño-para-la-investigación-de-redes-sociales.html#conclusiones-1"><i class="fa fa-check"></i><b>13.1.5</b> Conclusiones</a></li>
+<li class="chapter" data-level="13.1.1" data-path="un-proceso-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-para-la-investigación-de-redes-sociales.html#pregunatas-de-investigación"><i class="fa fa-check"></i><b>13.1.1</b> Pregunata(s) de Investigación</a></li>
+<li class="chapter" data-level="13.1.2" data-path="un-proceso-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-para-la-investigación-de-redes-sociales.html#limites"><i class="fa fa-check"></i><b>13.1.2</b> Limites</a></li>
+<li class="chapter" data-level="13.1.3" data-path="un-proceso-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-para-la-investigación-de-redes-sociales.html#codificar-relaciones-y-atributos"><i class="fa fa-check"></i><b>13.1.3</b> Codificar Relaciones y Atributos</a></li>
+<li class="chapter" data-level="13.1.4" data-path="un-proceso-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-para-la-investigación-de-redes-sociales.html#fuentes-de-datos-y-métodos-de-recopilación"><i class="fa fa-check"></i><b>13.1.4</b> Fuentes de Datos y Métodos de Recopilación</a></li>
+<li class="chapter" data-level="13.1.5" data-path="un-proceso-para-la-investigación-de-redes-sociales.html"><a href="un-proceso-para-la-investigación-de-redes-sociales.html#conclusiones-1"><i class="fa fa-check"></i><b>13.1.5</b> Conclusiones</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="ejemplos-practicos.html"><a href="ejemplos-practicos.html"><i class="fa fa-check"></i><b>14</b> Ejemplos Practicos</a>
@@ -354,7 +351,7 @@ Publicado con bookdown</a></li>
 
             <section class="normal" id="section-">
 <div id="introduction" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> Análisis de Redes Sociales: Una (Breve) Introducción</h1>
+<h1><span class="header-section-number">1</span> ARSo: Una (Breve) Introducción</h1>
 <p>Georg Simmel <span class="citation">(<a href="#ref-Simmel1950" role="doc-biblioref">Simmel, 1950</a>)</span> es visto generalmente como el precursor intelectual del análisis de redes sociales (ARSo). Argumentó que para comprender el comportamiento social, debemos estudiar los patrones de interacción, y sus estudios ofrecieron conocimientos penetrantes, por ejemplo, sobre la naturaleza de las sociedades secretas, la dinámica de las díadas y tríadas, y cómo la creciente complejidad social ha llevado a mayores niveles de individualismo. Los estudios de Simmel continúan influyendo la disciplina actualmente, sin embargo, podemos rastrear el surgimiento del análisis de redes sociales a dos corrientes principales de pensamiento: el trabajo de los psicólogos y los antropólogos sociales. La primera corriente enfatizó cómo los patrones organizados dan forma a la forma en que vemos e interpretamos el mundo, mientras que la segunda se centró en la relación entre los patrones y la estructura sociales. Ambas ayudaron a sentar la base para el desarrollo formal de ARSo en Harvard en las décadas de 1960 y 1970, dirigido por el sociólogo Harrison White <span class="citation">(<a href="#ref-White2008" role="doc-biblioref">White, 2008</a>)</span> y sus estudiantes (por ejemplo, Ronald Breiger, Kathleen Carley, Bonnie Erickson, Ivan Chase, Mark Granovetter, Michael Schwartz y Barry Wellman). White, quien obtuvo su doctorado en física teórica, argumentó que la sociología, a pesar de su pretensión de estudiar los fenómenos sociales, estaba en deuda con formas individualistas de análisis basadas en las características agregadas de los individuos, a menudo con la ayuda del análisis estadístico de los datos de encuestas. En respuesta, desarrolló un enfoque basado en estudios centrados en las relaciones sociales y los patrones que surgieron de ellas.</p>
 <p>Los esfuerzos de White no ocurrieron en el vacío. Otras tradiciones teóricas también informaron el desarrollo del ARSo, como la teoría de grafos, la teoría del intercambio y la investigación sobre el reclutamiento de individuos para movimientos religiosos y sociales. En los últimos años, los economistas se han interesado cada vez más en las redes sociales, al igual que los físicos y otros científicos. Esto ha llevado a un mayor interés en el ARSo, atrayendo a investigadores de diversas disciplinas y generando varios estudios altamente creativos.</p>
 <p>¿Qué es el análisis de redes sociales? En pocas palabras, es una colección de teorías y métodos que asume que el comportamiento de los actores se ve afectado por sus vínculos con los demás y las redes en las que están integrados. En lugar de asumir que los actores no son afectados por quienes los rodean, ARSo asume que los patrones de interacción afectan lo que dicen, hacen y creen los actores. Aunque algunas interacciones son al azar, muchas no lo son. Es decir, los actores tienden a interactuar con otros similares, y la interacción repetida puede conducir al surgimiento de la formación social a nivel micro (por ejemplo, individual), meso (por ejemplo, grupo) y macro (por ejemplo, instituciones, naciones) que pueden ser la unidad de análisis. El ARSo se diferencia de otros enfoques cuantitativos tradicionales, que tienden a centrarse en los atributos de los actores (por ejemplo, género, raza, educación), pues el ARSo se centra en cómo los patrones de interacción afectan el comportamiento. Debido a que los atributos no cambian en los contextos sociales, no pueden explicar ninguna variación en el comportamiento de un actor, lo que sugiere que los patrones de interacción son tan (o quizás más) importantes para comprender el comportamiento que los atributos:</p>
@@ -366,16 +363,16 @@ Publicado con bookdown</a></li>
 <h2><span class="header-section-number">1.1</span> Conceptos Erróneos y Diferencias</h2>
 <p>El termino análisis de redes sociales a veces se confunde con medios sociales y análisis de medios sociales. Es decir, cuando las personas escuchan que van a aprender el análisis de redes sociales, a menudo piensan que aprenderán a extraer datos de medio sociales como Facebook y Twitter. ARSo es una colección de teorías y métodos que se han desarrollado para comprender la estructura de las redes sociales. Por el contrario, los medios sociales constan de plataformas y contenido generado por el usuario que puede incluir texto, imágenes, videos, conexiones entre usuarios y enlaces a sitios web. El hecho de que el contenido de los medios sociales es a menudo relacional puede aumentar la confusión. Para clarificar, los analistas pueden extraer datos de los medios sociales y, posteriormente, utilizar ARSo para comprender ciertos aspectos de estas redes sociales (por ejemplo, seguidores en una red de Twitter de usuario a usuario). Sin embargo, es importante hacer la diferenciación.</p>
 <p>La forma en que algunos usan el término “red” también puede resultar confusa. Algunos lo usan para referirse a tipos de organizaciones descentralizadas, informales y/u orgánicas <span class="citation">(<a href="#ref-Burns1961" role="doc-biblioref">Burns &amp; Stalker, 1961</a>; <a href="#ref-Podolny1998" role="doc-biblioref">Podolny &amp; Page, 1998</a>; <a href="#ref-Powell1990" role="doc-biblioref">Powell, 1990</a>; <a href="#ref-Powell1994" role="doc-biblioref">Powell &amp; Smith-Doerr, 1994</a>; <a href="#ref-Ronfeldt2001" role="doc-biblioref">Ronfeldt &amp; Arquilla, 2001</a>)</span>. Esta distinción puede ser útil, pero dentro del mundo del análisis de redes sociales, todas las organizaciones son redes. Algunas pueden ser más jerárquicas que otras, pero siguen siendo redes <span class="citation">(<a href="#ref-Nohria1992" role="doc-biblioref">Nohria, 1992</a>)</span>. Es por ello que los analistas de redes sociales han desarrollado algoritmos que miden el grado en que una red en particular es jerárquica o no (ver, por ejemplo, <span class="citation"><a href="#ref-Davis1979" role="doc-biblioref">Davis</a> (<a href="#ref-Davis1979" role="doc-biblioref">1979</a>)</span>; <span class="citation"><a href="#ref-deNooy2005" role="doc-biblioref">Nooy, Mrvar, &amp; Batagelj</a> (<a href="#ref-deNooy2005" role="doc-biblioref">2005</a>)</span>; <span class="citation"><a href="#ref-Krackhardt1994" role="doc-biblioref">Krackhardt</a> (<a href="#ref-Krackhardt1994" role="doc-biblioref">1994</a>)</span>).</p>
-<p>Finalmente, el ARSo a veces se confunde con el análisis de enlaces, una metodología relacionada pero distinta que examina los patrones relacionales de varios objetos. Una diferencia fundamental entre los dos es que, si bien los diagramas de análisis de enlaces a menudo incluyen diferentes tipos de objetos (por ejemplo, individuos, automóviles, teléfonos celulares, etc.) y los vínculos entre ellos, los diagramas de redes sociales solo incluyen vínculos entre tipos similares de objetos. Tomemos, por ejemplo, un diagrama de análisis de vínculos en el que dos individuos (A y B) tienen vínculos con otros cinco objetos, pero los objetos con los que tienen vínculos difieren entre sí (Figura <a href="introduction.html#fig:links">1.1</a>). En este ejemplo, la persona A está vinculada a la persona B, así como a una bomba, un teléfono celular, una casa y un automóvil, mientras que la persona B está vinculada a cuatro personas (A, C, D y E) y un teléfono celular. Si bien ambos tienen cinco vínculos (que es la definición de grado de centralidad; consulte la discusión sobre centralidad a continuación), no podemos comparar de manera significativa el número de vínculos de estos dos individuos porque son de diferentes tipos de objetos. Sería como comparar manzanas y naranjas.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:links"></span>
-<img src="images/01-links.png" alt="Ejemplo de un análisis de enlaces" width="70%" />
+<p>Finalmente, el ARSo a veces se confunde con el análisis de enlaces, una metodología relacionada pero distinta que examina los patrones relacionales de varios objetos. Una diferencia fundamental entre los dos es que, si bien los diagramas de análisis de enlaces a menudo incluyen diferentes tipos de objetos (por ejemplo, individuos, automóviles, teléfonos celulares, etc.) y los vínculos entre ellos, los diagramas de redes sociales solo incluyen vínculos entre tipos similares de objetos. Tomemos, por ejemplo, un diagrama de análisis de vínculos en el que dos individuos (A y B) tienen vínculos con otros cinco objetos, pero los objetos con los que tienen vínculos difieren entre sí (Figura <a href="introduction.html#fig:1-links">1.1</a>). En este ejemplo, la persona A está vinculada a la persona B, así como a una bomba, un teléfono celular, una casa y un automóvil, mientras que la persona B está vinculada a cuatro personas (A, C, D y E) y un teléfono celular. Si bien ambos tienen cinco vínculos (que es la definición de grado de centralidad; consulte la discusión sobre centralidad a continuación), no podemos comparar de manera significativa el número de vínculos de estos dos individuos porque son de diferentes tipos de objetos. Sería como comparar manzanas y naranjas.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1-links"></span>
+<img src="images/01-links.png" alt="Ejemplo de un análisis de enlaces" width="100%" />
 <p class="caption">
 Figura 1.1: Ejemplo de un análisis de enlaces
 </p>
 </div>
-<p>En el ARSo, los actores tienen vínculos con objetos similares, lo que hace significativa la comparación directa del número de vínculos. Esto se ilustra en la Figura <a href="introduction.html#fig:arso">1.2</a> donde en el panel de la izquierda, los individuos A y B tienen cada uno cinco vínculos con otros cinco individuos, mientras que en el derecho, tienen cinco vínculos con cinco escuelas diferentes. En ambos casos, los lazos de A son comparables a los de B porque son del mismo tipo de objeto. Aunque los analistas de redes sociales están interesados en más que el recuento de los lazos de los actores, otros algoritmos de análisis de redes sociales generalmente asumen que los lazos se dan entre tipos similares de objetos.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:arso"></span>
-<img src="images/01-arso.png" alt="Ejemplo de diagramas de red" width="70%" />
+<p>En el ARSo, los actores tienen vínculos con objetos similares, lo que hace significativa la comparación directa del número de vínculos. Esto se ilustra en la Figura <a href="introduction.html#fig:1-arso">1.2</a> donde en el panel de la izquierda, los individuos A y B tienen cada uno cinco vínculos con otros cinco individuos, mientras que en el derecho, tienen cinco vínculos con cinco escuelas diferentes. En ambos casos, los lazos de A son comparables a los de B porque son del mismo tipo de objeto. Aunque los analistas de redes sociales están interesados en más que el recuento de los lazos de los actores, otros algoritmos de análisis de redes sociales generalmente asumen que los lazos se dan entre tipos similares de objetos.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1-arso"></span>
+<img src="images/01-arso.png" alt="Ejemplo de diagramas de red" width="100%" />
 <p class="caption">
 Figura 1.2: Ejemplo de diagramas de red
 </p>
@@ -402,9 +399,9 @@ Figura 1.2: Ejemplo de diagramas de red
 </div>
 <div id="lazos-como-conductos" class="section level3" number="1.2.2">
 <h3><span class="header-section-number">1.2.2</span> Lazos como Conductos</h3>
-<p>Otra suposición es que los lazos (es decir, las relaciones) entre actores funcionan como conductos para el flujo de varios tipos de “bienes” materiales y no materiales, como información, sentimientos, recursos financieros, normas, enfermedades, opiniones y confianza. Quizás, el ejemplo más conocido de esto es el estudio de Granovetter <span class="citation">(<a href="#ref-Granovetter1973" role="doc-biblioref">1973</a>)</span> sobre cómo las personas encuentran sus trabajos actuales. Granovetter descubrió que era mucho más probable que las personas utilizaran contactos personales en comparación a otros medios cuando se trataba de encontrar trabajo. De aquellos que encontraron su trabajo a través de contactos personales, la mayoría de esos contactos eran débiles (es decir, conocidos) en lugar de lazos fuertes (es decir, amigos cercanos). ¿Por qué? Porque es menos probable que nuestros lazos débiles se involucren socialmente entre sí que nuestros lazos fuertes. Por ello, el conjunto de personas que componen nuestra red de conocidos tiende a ser relativamente escaso, mientras que el grupo de personas que componen nuestra red de amigos cercanos tiende a ser denso. Considere el patrón de lazos sociales sugerido por este argumento (Figura <a href="introduction.html#fig:strongweak">1.3</a>. La mayoría de las personas tendrán algunos amigos cercanos, la mayoría de los cuales se conocen entre sí. Probablemente también tengan varios conocidos, pocos de los cuales se conocen entre sí. Sin embargo, es probable que cada uno de estos conocidos tenga amigos cercanos propios, por lo que también es probable que estén integrados en sus propias redes altamente interconectadas, pero separadas de nuestro individuo original. Según Granovetter, los lazos débiles son importantes en términos de la estructura general de una red porque forman los puentes cruciales que unen a grupos de personas densamente unidas. De hecho, sin ellos, estos grupos no estarían conectados en absoluto.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:strongweak"></span>
-<img src="01-introduction_files/figure-html/strongweak-1.png" alt="Lazos fuertes y débiles" width="70%" />
+<p>Otra suposición es que los lazos (es decir, las relaciones) entre actores funcionan como conductos para el flujo de varios tipos de “bienes” materiales y no materiales, como información, sentimientos, recursos financieros, normas, enfermedades, opiniones y confianza. Quizás, el ejemplo más conocido de esto es el estudio de Granovetter <span class="citation">(<a href="#ref-Granovetter1973" role="doc-biblioref">1973</a>)</span> sobre cómo las personas encuentran sus trabajos actuales. Granovetter descubrió que era mucho más probable que las personas utilizaran contactos personales en comparación a otros medios cuando se trataba de encontrar trabajo. De aquellos que encontraron su trabajo a través de contactos personales, la mayoría de esos contactos eran débiles (es decir, conocidos) en lugar de lazos fuertes (es decir, amigos cercanos). ¿Por qué? Porque es menos probable que nuestros lazos débiles se involucren socialmente entre sí que nuestros lazos fuertes. Por ello, el conjunto de personas que componen nuestra red de conocidos tiende a ser relativamente escaso, mientras que el grupo de personas que componen nuestra red de amigos cercanos tiende a ser denso. Considere el patrón de lazos sociales sugerido por este argumento (Figura <a href="introduction.html#fig:1-strongweak">1.3</a>. La mayoría de las personas tendrán algunos amigos cercanos, la mayoría de los cuales se conocen entre sí. Probablemente también tengan varios conocidos, pocos de los cuales se conocen entre sí. Sin embargo, es probable que cada uno de estos conocidos tenga amigos cercanos propios, por lo que también es probable que estén integrados en sus propias redes altamente interconectadas, pero separadas de nuestro individuo original. Según Granovetter, los lazos débiles son importantes en términos de la estructura general de una red porque forman los puentes cruciales que unen a grupos de personas densamente unidas. De hecho, sin ellos, estos grupos no estarían conectados en absoluto.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1-strongweak"></span>
+<img src="01-introduction_files/figure-html/1-strongweak-1.png" alt="Lazos fuertes y débiles" width="100%" />
 <p class="caption">
 Figura 1.3: Lazos fuertes y débiles
 </p>
@@ -441,9 +438,9 @@ Figura 1.3: Lazos fuertes y débiles
 </div>
 <div id="redes-sociales" class="section level3" number="1.3.2">
 <h3><span class="header-section-number">1.3.2</span> Redes Sociales</h3>
-<p>Una red social es simplemente “un conjunto finito o conjuntos de actores” ligados entre sí <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994, p. 20</a>)</span>. La Figura <a href="introduction.html#fig:hypothetical">1.4</a> muestra una red social hipotética donde los círculos representan actores y las líneas representan vínculos o relaciones. Como ilustra, los actores a menudo se agrupan en subgrupos relativamente distintos. Además, algunos están incrustados en el centro de estos subgrupos, mientras que otros se encuentran más en la periferia, a veces sirven como puentes entre subgrupos.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hypothetical"></span>
-<img src="01-introduction_files/figure-html/hypothetical-1.png" alt="Red social hipotética" width="70%" />
+<p>Una red social es simplemente “un conjunto finito o conjuntos de actores” ligados entre sí <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994, p. 20</a>)</span>. La Figura <a href="introduction.html#fig:1-hypothetical">1.4</a> muestra una red social hipotética donde los círculos representan actores y las líneas representan vínculos o relaciones. Como ilustra, los actores a menudo se agrupan en subgrupos relativamente distintos. Además, algunos están incrustados en el centro de estos subgrupos, mientras que otros se encuentran más en la periferia, a veces sirven como puentes entre subgrupos.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1-hypothetical"></span>
+<img src="01-introduction_files/figure-html/1-hypothetical-1.png" alt="Red social hipotética" width="100%" />
 <p class="caption">
 Figura 1.4: Red social hipotética
 </p>
@@ -451,7 +448,7 @@ Figura 1.4: Red social hipotética
 </div>
 <div id="camino-y-distancia-de-caminos" class="section level3" number="1.3.3">
 <h3><span class="header-section-number">1.3.3</span> Camino (y Distancia de Caminos)</h3>
-<p>Un camino se define como una caminata (es decir, una secuencia de actores y vínculos) en la que ningún actor entre el primer y el último actor de la caminata ocurre más de una vez, mientras que la distancia de la ruta entre dos actores es el número de pasos entre los dos. Por ejemplo, En la Figura <a href="introduction.html#fig:hypothetical">1.4</a> puede trazar un camino desde los actores R, S, y T al actor M a través del actor Q. La distancia entre los actores es dos (es decir, dos pasos).</p>
+<p>Un camino se define como una caminata (es decir, una secuencia de actores y vínculos) en la que ningún actor entre el primer y el último actor de la caminata ocurre más de una vez, mientras que la distancia de la ruta entre dos actores es el número de pasos entre los dos. Por ejemplo, En la Figura <a href="introduction.html#fig:1-hypothetical">1.4</a> puede trazar un camino desde los actores R, S, y T al actor M a través del actor Q. La distancia entre los actores es dos (es decir, dos pasos).</p>
 <p>Es bastante común que haya numerosos caminos entre actores. La ruta más corta entre dos actores se llama geodésica y la geodésica más larga de una red se considera el diámetro de la red. Se considera que los actores que pueden llegar entre sí a través de una ruta están en el mismo componente. Las redes pueden tener varios componentes y, en tales casos, se considera que están desconectados. El componente más pequeño que puede tener una red es un solo actor sin vínculos con otros actores, que se denominan aislados.</p>
 </div>
 <div id="topología" class="section level3" number="1.3.4">
@@ -461,9 +458,9 @@ Figura 1.4: Red social hipotética
 </div>
 <div id="subgrupos-cluster-subredes" class="section level3" number="1.3.5">
 <h3><span class="header-section-number">1.3.5</span> Subgrupos (Cluster, subredes)</h3>
-<p>Un enfoque significativo del SNA es identificar subgrupos de actores “entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos” <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994, p. 249</a>)</span>. Al igual que la topografía de la red, existen numerosos métodos para identificar grupos de actores. Sin embargo, todos asumen que los vínculos entre los miembros del subgrupo deberían ser más numerosos que los vínculos entre los miembros de otros grupos. La Figura <a href="introduction.html#fig:subs">1.5</a> presenta un grafo donde usamos lo que se conoce como un algoritmo de detección de comunidad para identificar subgrupos dentro de la red. Aunque, aquí, probablemente no necesitábamos un algoritmo para identificar estos subgrupos, a menudo no es tan sencillo, por lo que los algoritmos de agrupación en clústeres pueden ser muy valiosos. Los algoritmos más comunes son componentes (débiles y fuertes), camarillas, núcleos k y algoritmos de detección de comunidades.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:subs"></span>
-<img src="01-introduction_files/figure-html/subs-1.png" alt="Red hipotética con comunidades demarcadas" width="70%" />
+<p>Un enfoque significativo del SNA es identificar subgrupos de actores “entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos” <span class="citation">(<a href="#ref-Wasserman1994" role="doc-biblioref">Wasserman &amp; Faust, 1994, p. 249</a>)</span>. Al igual que la topografía de la red, existen numerosos métodos para identificar grupos de actores. Sin embargo, todos asumen que los vínculos entre los miembros del subgrupo deberían ser más numerosos que los vínculos entre los miembros de otros grupos. La Figura <a href="introduction.html#fig:1-subs">1.5</a> presenta un grafo donde usamos lo que se conoce como un algoritmo de detección de comunidad para identificar subgrupos dentro de la red. Aunque, aquí, probablemente no necesitábamos un algoritmo para identificar estos subgrupos, a menudo no es tan sencillo, por lo que los algoritmos de agrupación en clústeres pueden ser muy valiosos. Los algoritmos más comunes son componentes (débiles y fuertes), camarillas, núcleos k y algoritmos de detección de comunidades.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1-subs"></span>
+<img src="01-introduction_files/figure-html/1-subs-1.png" alt="Red hipotética con comunidades demarcadas" width="100%" />
 <p class="caption">
 Figura 1.5: Red hipotética con comunidades demarcadas
 </p>
@@ -481,9 +478,9 @@ Figura 1.5: Red hipotética con comunidades demarcadas
 </div>
 <div id="puentes-y-corredores" class="section level3" number="1.3.7">
 <h3><span class="header-section-number">1.3.7</span> Puentes y Corredores</h3>
-<p>Los puentes son lazos que cubren las brechas en una red social, mientras que los corredores son actores que se sientan a un lado de esos puentes. En la Figura <a href="introduction.html#fig:hypothetical">1.4</a> anterior, los bordes entre el actor Q y M o G y B podrían considerarse puentes, mientras que los cuatro actores serían considerados intermediarios. De hecho, si removemos uno o múltiples de los intermediarios de la red, esta se fragmentaría en redes separadas. En lugar de adivinar qué actores son intermediarios y qué vínculos son puentes, se han desarrollado numerosos algoritmos para detectarlos. En la Figura <a href="introduction.html#fig:bb">1.6</a>, el tamaño del nodo refleja la medida de huecos estructurales de Ron Burt <span class="citation">(<a href="#ref-Burt1992" role="doc-biblioref">1992</a>)</span>, quizás la medida de intermediación más conocida, y el grosor de los lazos refleja la centralidad de intermediación de los bordes, que algunos utilizan para identificar puentes entre subgrupos. Cuanto más grande es el nodo, más potencial de intermediación posee, mientras que cuanto más grueso es el lazo, más probable es que sea un puente. Aquí podemos ver que los actores G y M tienen un potencial de intermediación considerable. El vínculo entre los actores B y G parece más crucial que entre M y Q. El actor L también está en una posición de intermediación, principalmente debido a sus vínculos con el actor P.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bb"></span>
-<img src="01-introduction_files/figure-html/bb-1.png" alt="Red hipotética, bordes ponderados por intermediación y nodos dimensionados por autonomía. " width="70%" />
+<p>Los puentes son lazos que cubren las brechas en una red social, mientras que los corredores son actores que se sientan a un lado de esos puentes. En la Figura <a href="introduction.html#fig:1-hypothetical">1.4</a> anterior, los bordes entre el actor Q y M o G y B podrían considerarse puentes, mientras que los cuatro actores serían considerados intermediarios. De hecho, si removemos uno o múltiples de los intermediarios de la red, esta se fragmentaría en redes separadas. En lugar de adivinar qué actores son intermediarios y qué vínculos son puentes, se han desarrollado numerosos algoritmos para detectarlos. En la Figura <a href="introduction.html#fig:1-bb">1.6</a>, el tamaño del nodo refleja la medida de huecos estructurales de Ron Burt <span class="citation">(<a href="#ref-Burt1992" role="doc-biblioref">1992</a>)</span>, quizás la medida de intermediación más conocida, y el grosor de los lazos refleja la centralidad de intermediación de los bordes, que algunos utilizan para identificar puentes entre subgrupos. Cuanto más grande es el nodo, más potencial de intermediación posee, mientras que cuanto más grueso es el lazo, más probable es que sea un puente. Aquí podemos ver que los actores G y M tienen un potencial de intermediación considerable. El vínculo entre los actores B y G parece más crucial que entre M y Q. El actor L también está en una posición de intermediación, principalmente debido a sus vínculos con el actor P.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:1-bb"></span>
+<img src="01-introduction_files/figure-html/1-bb-1.png" alt="Red hipotética, bordes ponderados por intermediación y nodos dimensionados por autonomía. " width="100%" />
 <p class="caption">
 Figura 1.6: Red hipotética, bordes ponderados por intermediación y nodos dimensionados por autonomía.
 </p>
@@ -723,7 +720,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf"],
 "search": {
 "engine": "lunr",
 "options": null
@@ -739,7 +736,8 @@ gitbook.start({
 },
 "info": true,
 "toolbar": {
-"position": "fixed"
+"position": "fixed",
+"download": "docs/_main.pdf"
 }
 });
 });

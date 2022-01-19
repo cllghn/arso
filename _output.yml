@@ -21,6 +21,7 @@ bookdown::gitbook:
       scroll_highlight: yes
     toolbar:
       position: fixed
+      download: 'docs/_main.pdf'
     search: 
       engine: lunr
       options: null
@@ -30,3 +31,10 @@ bookdown::gitbook:
     Este proyecto de tener una doctrina propia, que se adapte a la realidad del Perú, es un punto de vista de los autores sobre la introducción a el estudio de las redes oscuras como elemento clave para todo analista de inteligencia y elementos operativos de las fuerzas armadas.Este manual electrónico le enseñará los conceptos basicos del análisis de redes sociales y su aplicación.
   github-repo: https://github.com/cjcallag/arso
   split_by: chapter
+bookdown::pdf_book:
+  config:
+   toc: true
+  includes:
+    in_header: arso.tex
+    fig_caption: yes
+  header-includes: \usepackage{caption}

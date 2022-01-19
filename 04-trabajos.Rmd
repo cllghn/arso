@@ -2,7 +2,7 @@
 output: html_document
 ---
 
-# Un Proceso de Diseño para la Investigación de Redes Sociales
+# Un Proceso para la Investigación de Redes Sociales
 
 Después de leer y trabajar con el material de las secciones anteriores, la pregunta por contestar es ¿para qué sirve todo esto? Podemos hacer un intento de responder; diciendo que todos estos datos sirven para que el analista pueda diseñar una estrategia de interrupción o empoderamiento de la red y presentarla para la toma de decisiones. 
 
