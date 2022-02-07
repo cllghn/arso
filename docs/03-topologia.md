@@ -15,12 +15,12 @@ Ahora, en la Figura \@ref(fig:3-1-full) no encontramos una formación centrada a
 Es probable que sea mejor considerear ambas configuraciones (centralizada y descentralizada) como polos opuestos de un continuo. Como tal, el nivel óptimo de centralización en dicho espectro cambiará con el tiempo y en función de las presiones ambientales [@Cunningham2016; @Everton2012]. Por ejemplo, en un entorno hostil, la red puede priorizar la seguridad de actores clave; así, avanzando hacia una estructura más descentralizada. Es precisamente por este dinamismo intrínseco a las redes sociales que el estudio de la estructura de red debe ir acompañada con contexto en el que se encuentra incrustrada.
 
 <div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-star-1.pdf" alt="Red estrella" width="100%" />
+<img src="03-topologia_files/figure-html/3-1-star-1.png" alt="Red estrella" width="100%" />
 <p class="caption">(\#fig:3-1-star)Red estrella</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-full-1.pdf" alt="Red completa" width="100%" />
+<img src="03-topologia_files/figure-html/3-1-full-1.png" alt="Red completa" width="100%" />
 <p class="caption">(\#fig:3-1-full)Red completa</p>
 </div>
 

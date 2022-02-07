@@ -178,8 +178,9 @@ fig:3-4-cuatro
 fig:3-4-cinco
 fig:4-1-dimensions
 fig:4-1-mix
-fig:unnamed-chunk-1
 fig:unnamed-chunk-2
+fig:4-3-grafo
+fig:unnamed-chunk-1
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 fig:unnamed-chunk-5
@@ -322,7 +323,7 @@ redes-oscuras-en-el-perú
 análisis-de-redes-oscuras
 por-qué-el-análisis-de-redes-oscuras
 conclusiones
-un-proceso-para-la-investigación-de-redes-sociales
+proceso-para-la-investigación-de-redes-sociales
 desarrollar-un-proyecto-investigativo-de-redes-sociales
 pregunatas-de-investigación
 limites
@@ -337,6 +338,7 @@ recopilación-de-datos-de-archivo
 registros-propios
 conclusiones-1
 ejemplos-practicos
+informe-de-la-red-criminal-en-la-república-de-panamá
 libro-de-códigos
 relaciones-1
 persona-a-persona-modo-uno
@@ -344,11 +346,16 @@ persona-a-ubicación-modo-dos
 persona-a-evento-modo-dos
 atributos-2
 mapa-de-red
-glosario-de-términos
+informe-de-la-red-oscura-inkaslam
 libro-de-códigos-1
-libro-de-códigos-de-muestra
 relaciones-2
 atributos-3
-libro-de-códigos-de-noordin-top
+mapa-de-red-1
+glosario-de-términos
+libro-de-códigos-2
+libro-de-códigos-de-muestra
 relaciones-3
 atributos-4
+libro-de-códigos-de-noordin-top
+relaciones-4
+atributos-5

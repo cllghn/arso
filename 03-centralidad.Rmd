@@ -1,5 +1,7 @@
 ---
-output: html_document
+output:
+  word_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -286,9 +288,10 @@ Nodo        & A     & B     & C     & D     & E \\
 Eigenvector & 0.537 & 0.475 & 0.537 & 0.407 & 0.179
 \end{matrix}
 \\
-&Vector\ normalizado = 2.641186
-(\#eq:3-3-evprocess)
+&Vector\ normalizado = 2.641186 
+\\
 \end{split}
+(\#eq:3-3-evprocess)
 $$
 
 Como puede ver, el método de las potencias es un proceso iterativo. Comienza al multiplicar la matriz por un vector con valores de uno, el cual produce el grado de centralidad. Normalizamos los valores de dicho vector, en la primera ronda 5.6569, y dividimos el producto de la multiplicación de matriz por el valor normalizado, esto produce un eigenvector tentativo. La siguiente ronda comienza multiplicando la matriz de adyacencia por el eigenvector tentativo de la ronda previa. Una vez más normalizamos el vector resultante de la multiplicación y dividimos dichos valores por el valor normalizado. Esencialmente este proceso continua hasta que el producto de la normalización del vector converge [@Meghanathan2016]. En el ejemplo previo, este proceso toma 19 iteraciones para concluir. Sin embargo, alrededor de la cuarta iteración empezamos a ver un valor similar a valor convergente de en la última y penúltima ronda.

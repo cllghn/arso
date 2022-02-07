@@ -1,0 +1,21 @@
+Id,Label,timeset,tipo de nodo,pais,clasificación,degree,weighted degree,Eccentricity,closnesscentrality,harmonicclosnesscentrality,betweenesscentrality
+EQ,Edy,,Persona,Perú,Político,14,19,2,0.655172,0.736842,0.188268
+MR,Mohsen Rabanni,,Persona,Irán,Terrorista,11,12,3,0.527778,0.622807,0.027843
+AH,Abel,,Persona,Perú,Político,7,7,3,0.527778,0.587719,0.032485
+OH,Oscar,,Persona,Perú,Político,9,10,3,0.575758,0.649123,0.041733
+PC,Piero,,Persona,Perú,Político,11,21,2,0.678571,0.763158,0.129602
+VC,Victor,,Persona,Perú,Político,13,30,2,0.703704,0.789474,0.202746
+MO,Marcelo,,Persona,Brasil,Empresario,5,5,3,0.452381,0.535088,0.010234
+EM,Esteban,,Persona,Bolivia,Político,20,22,2,0.678571,0.763158,0.216019
+AV,Augusto,,Persona,Perú,Agitador,3,5,3,0.422222,0.473684,0
+HC,Hugo,,Persona,Venezuela,Político,11,14,3,0.575758,0.666667,0.030393
+NM,Nicolás,,Persona,Venezuela,Político,7,9,2,0.575758,0.631579,0.005457
+RC,Rafael,,Persona,Ecuador,Político,8,8,3,0.487179,0.596491,0.008868
+CF,Cristina,,Persona,Argentina,Político,5,5,3,0.452381,0.535088,0.00117
+AC,Arturo,,Persona,Perú,Criminal,7,10,3,0.513514,0.614035,0
+WV,Waldys,,Persona,Perú,Criminal,6,8,3,0.513514,0.614035,0
+JB,José,,Persona,Perú,Criminal,6,8,3,0.513514,0.614035,0
+ER,Eduardo,,Persona,Perú,Criminal,6,18,3,0.513514,0.614035,0
+GB,Gerardo,,Persona,Perú,Político,9,15,3,0.575758,0.684211,0.051705
+CJ,Camara J,,Persona,Perú,Terrorista,3,3,3,0.452381,0.5,0
+NH,Nadia,,Persona,Perú,Político,5,7,3,0.527778,0.587719,0.018389

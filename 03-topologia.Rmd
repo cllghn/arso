@@ -17,7 +17,7 @@ Ahora, en la Figura \@ref(fig:3-1-full) no encontramos una formación centrada a
 
 Es probable que sea mejor considerear ambas configuraciones (centralizada y descentralizada) como polos opuestos de un continuo. Como tal, el nivel óptimo de centralización en dicho espectro cambiará con el tiempo y en función de las presiones ambientales [@Cunningham2016; @Everton2012]. Por ejemplo, en un entorno hostil, la red puede priorizar la seguridad de actores clave; así, avanzando hacia una estructura más descentralizada. Es precisamente por este dinamismo intrínseco a las redes sociales que el estudio de la estructura de red debe ir acompañada con contexto en el que se encuentra incrustrada.
 
-```{r 3-1-star, fig.cap="Red estrella", dev = 'pdf'}
+```{r 3-1-star, fig.cap="Red estrella"}
 g <- igraph::make_star(n = 5, mode = "undirected")
 coords <- layout_with_kk(g)
 g %>% plot.igraph(layout     = coords,
@@ -27,7 +27,7 @@ g %>% plot.igraph(layout     = coords,
                   edges.color  = "grey")
 ```
 
-```{r 3-1-full, fig.cap="Red completa", dev = 'pdf'}
+```{r 3-1-full, fig.cap="Red completa"}
 igraph::make_full_graph(n = 5, directed = FALSE) %>%
   plot.igraph(layout      = coords,
               edge.curved = 0.25,

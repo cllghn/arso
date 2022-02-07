@@ -1,0 +1,84 @@
+Source,Target,Type,Id,Label,timeset,Weight,relation,MMNT-EdgeType
+EQ,AV,Undirected,119,Persona-Persona,,3,,Persona<--->Persona
+EQ,NM,Undirected,71,,,1,Ideología,
+EQ,EM,Undirected,69,,,2,Ideología,
+EQ,AH,Undirected,67,,,1,Ideología,
+EQ,MR,Undirected,66,,,1,Ideología,
+EQ,EM,Undirected,46,,,1,Amistad,
+EQ,MR,Undirected,45,,,2,Amistad,
+EQ,EM,Undirected,25,,,2,Simpatía,
+EQ,CJ,Undirected,24,,,1,Simpatía,
+EQ,GB,Undirected,23,,,1,Simpatía,
+EQ,VC,Undirected,22,,,1,Simpatía,
+EQ,PC,Undirected,21,,,1,Simpatía,
+EQ,AH,Undirected,20,,,1,Simpatía,
+MR,EQ,Undirected,51,,,1,Influencia Religiosa,
+MR,CF,Undirected,57,,,1,Influencia Religiosa,
+MR,RC,Undirected,56,,,1,Influencia Religiosa,
+MR,NM,Undirected,55,,,1,Influencia Religiosa,
+MR,HC,Undirected,54,,,1,Influencia Religiosa,
+MR,EM,Undirected,53,,,1,Influencia Religiosa,
+MR,EM,Undirected,28,,,1,Simpatía,
+MR,RC,Undirected,27,,,1,Simpatía,
+MR,HC,Undirected,26,,,1,Simpatía,
+AH,OH,Undirected,117,,,1,Vinculo Familiar,
+AH,AV,Undirected,73,,,1,Ideología,
+AH,AV,Undirected,47,,,1,Amistad,
+AH,PC,Undirected,29,,,1,Simpatía,
+OH,AH,Undirected,86,,,1,Vinculo Criminal,
+OH,VC,Undirected,120,Persona-Persona,,2,,Persona<--->Persona
+OH,NH,Undirected,118,,,1,Vinculo Familiar,
+OH,HC,Undirected,84,,,1,Ideología,
+OH,EM,Undirected,83,,,1,Ideología,
+OH,RC,Undirected,32,,,1,Simpatía,
+OH,HC,Undirected,31,,,1,Simpatía,
+OH,EM,Undirected,30,,,1,Simpatía,
+PC,GB,Undirected,125,Persona-Persona,,3,,Persona<--->Persona
+PC,ER,Undirected,124,Persona-Persona,,3,,Persona<--->Persona
+PC,JB,Undirected,123,Persona-Persona,,3,,Persona<--->Persona
+PC,WV,Undirected,122,Persona-Persona,,3,,Persona<--->Persona
+PC,AC,Undirected,121,Persona-Persona,,3,,Persona<--->Persona
+PC,EM,Undirected,76,,,1,Ideología,
+PC,NM,Undirected,35,,,1,Simpatía,
+PC,EM,Undirected,34,,,1,Simpatía,
+PC,VC,Undirected,33,,,1,Simpatía,
+VC,NH,Undirected,129,Persona-Persona,,2,,Persona<--->Persona
+VC,GB,Undirected,128,Persona-Persona,,5,,Persona<--->Persona
+VC,ER,Undirected,127,Persona-Persona,,11,,Persona<--->Persona
+VC,HC,Undirected,126,Persona-Persona,,1,,Persona<--->Persona
+VC,JB,Undirected,114,,,1,Vinculo Criminal,
+VC,WV,Undirected,113,,,1,Vinculo Criminal,
+VC,AC,Undirected,112,,,1,Vinculo Criminal,
+VC,EM,Undirected,78,,,1,Ideología,
+VC,EM,Undirected,36,,,1,Simpatía,
+AC,VC,Undirected,49,,,2,Amistad,
+MO,NH,Undirected,90,,,1,Vinculo Criminal,
+MO,EM,Undirected,89,,,1,Vinculo Criminal,
+MO,CF,Undirected,64,,,1,Financiamiento,
+MO,RC,Undirected,63,,,1,Financiamiento,
+MO,NH,Undirected,62,,,1,Financiamiento,
+EM,CF,Undirected,85,,,1,Ideología,
+EM,NM,Undirected,82,,,1,Ideología,
+EM,RC,Undirected,81,,,1,Ideología,
+EM,HC,Undirected,80,,,1,Ideología,
+EM,CF,Undirected,40,,,1,Simpatía,
+EM,RC,Undirected,39,,,1,Simpatía,
+EM,NM,Undirected,38,,,1,Simpatía,
+EM,HC,Undirected,37,,,1,Simpatía,
+HC,NH,Undirected,130,Persona-Persona,,2,,Persona<--->Persona
+HC,NM,Undirected,48,,,2,Amistad,
+HC,RC,Undirected,42,,,1,Simpatía,
+HC,NM,Undirected,41,,,2,Simpatía,
+RC,CF,Undirected,43,,,1,Simpatía,
+AC,GB,Undirected,131,Persona-Persona,,1,,Persona<--->Persona
+AC,ER,Undirected,105,,,1,Vinculo Criminal,
+AC,JB,Undirected,104,,,1,Vinculo Criminal,
+AC,WV,Undirected,102,,,1,Vinculo Criminal,
+WV,GB,Undirected,132,Persona-Persona,,1,,Persona<--->Persona
+WV,ER,Undirected,108,,,1,Vinculo Criminal,
+WV,JB,Undirected,107,,,1,Vinculo Criminal,
+JB,GB,Undirected,133,Persona-Persona,,1,,Persona<--->Persona
+JB,ER,Undirected,111,,,1,Vinculo Criminal,
+ER,GB,Undirected,134,Persona-Persona,,1,,Persona<--->Persona
+GB,CJ,Undirected,116,,,1,Vinculo Criminal,
+GB,CJ,Undirected,44,,,1,Simpatía,
