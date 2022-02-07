@@ -20,6 +20,17 @@
 
 \setlength{\fboxsep}{.8em}
 
+% make it spanish
+\ifxetex
+  \usepackage{polyglossia}
+  \setmainlanguage{spanish}
+  % Tabla en lugar de cuadro
+  \gappto\captionsspanish{\renewcommand{\tablename}{Tabla}  
+          \renewcommand{\listtablename}{Índice de tablas}}
+\else
+  \usepackage[spanish,es-tabla]{babel}
+\fi
+
 \newtcolorbox{infobox}{
   colback = lightgray,
   colframe = black,

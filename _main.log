@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.14)  19 JAN 2022 14:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.26)  26 JAN 2022 11:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **_main.tex
 (./_main.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-12> (c:/Users/localuser/AppData/Roaming/TinyTeX/t
+L3 programming layer <2022-01-21> (c:/Users/localuser/AppData/Roaming/TinyTeX/t
 exmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/bk10.clo
@@ -887,47 +887,84 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \c@nlinenum=\count325
 \TeXr@lab=\toks46
 )
+(c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.
+sty
+Package: babel 2021/12/30 3.69 The Babel package
+\babel@savecnt=\count326
+\U@D=\dimen294
+\l@unhyphenated=\language3
+
+(c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbab
+el.def)
+\bbl@readstream=\read4
+\bbl@dirlevel=\count327
+
+(c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-spanis
+h/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Spanish' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 51.
+
+Package babel Info: Hyphen rules for 'spanish' set to \l@english
+(babel)             (\language0). Reported on input line 52.
+\es@quottoks=\toks47
+\es@quotdepth=\count328
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
 \cslhangindent=\skip69
 \csllabelwidth=\skip70
 
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3ba
 ckend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count326
+\l__color_backend_stack_int=\count329
 \l__pdf_internal_box=\box88
-) (./_main.aux)
+) (./_main.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+
+LaTeX Warning: Label `fig:unnamed-chunk-2' multiply defined.
+
+)
 \openout1 = `_main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Info: Redefining \microtypecontext on input line 164.
-Package microtype Info: Applying patch `item' on input line 164.
-Package microtype Info: Applying patch `toc' on input line 164.
-Package microtype Info: Applying patch `eqnum' on input line 164.
-Package microtype Info: Applying patch `footnote' on input line 164.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 175.
+LaTeX Font Info:    ... okay on input line 175.
+LaTeX Info: Redefining \microtypecontext on input line 175.
+Package microtype Info: Applying patch `item' on input line 175.
+Package microtype Info: Applying patch `toc' on input line 175.
+Package microtype Info: Applying patch `eqnum' on input line 175.
+Package microtype Info: Applying patch `footnote' on input line 175.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 164.
+LaTeX Info: Redefining \showhyphens on input line 175.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -940,15 +977,24 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/e
 pstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/grfext/grfext.
+sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/ep
 stopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 164.
+Package hyperref Info: Link coloring OFF on input line 175.
 
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/namer
 ef.sty
@@ -962,11 +1008,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ng/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count327
+\c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 164.
-LaTeX Info: Redefining \pageref on input line 164.
-LaTeX Info: Redefining \nameref on input line 164.
+LaTeX Info: Redefining \ref on input line 175.
+LaTeX Info: Redefining \pageref on input line 175.
+LaTeX Info: Redefining \nameref on input line 175.
 (./_main.out) (./_main.out)
 \@outlinefile=\write4
 \openout4 = `_main.out'.
@@ -976,33 +1022,35 @@ Package caption Info: float package is loaded.
 Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-66.
+77.
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-66.
+77.
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-166.
+177.
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-166.
+177.
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 166.
+(Font)              <12> on input line 177.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 166.
+(Font)              <8> on input line 177.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 166.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 166
+(Font)              <6> on input line 177.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 177
 .
 
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.
@@ -1013,7 +1061,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 sa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 166
+LaTeX Font Info:    Trying to load font information for U+msb on input line 177
 .
 
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.
@@ -1030,1097 +1078,1248 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 dftex.map}] [2
 
 ] (./_main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 2.
+(Font)              <10> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 2.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 2.
-[3] [4])
+(Font)              <5> on input line 3.
+[3]
+LaTeX Info: Redefining \. on input line 141.
+LaTeX Info: Redefining \% on input line 141.
+[4])
 \tf@toc=\write5
 \openout5 = `_main.toc'.
 
-[5] [6
+LaTeX Info: Redefining \. on input line 183.
+LaTeX Info: Redefining \% on input line 183.
+[5]
+LaTeX Info: Redefining \. on input line 183.
+LaTeX Info: Redefining \% on input line 183.
+[6
 
 ]
-<images/core-esge.png, id=407, 504.4446pt x 145.5036pt>
+<images/core-esge.png, id=417, 504.4446pt x 145.5036pt>
 File: images/core-esge.png Graphic file (type png)
 <use images/core-esge.png>
-Package pdftex.def Info: images/core-esge.png  used on input line 175.
+Package pdftex.def Info: images/core-esge.png  used on input line 186.
 (pdftex.def)             Requested size: 258.74889pt x 74.63434pt.
 [7 <./images/core-esge.png>]
-<images/CTFP.jpg, id=429, 722.7pt x 542.025pt>
+<images/CTFP.jpg, id=439, 722.7pt x 542.025pt>
 File: images/CTFP.jpg Graphic file (type jpg)
 <use images/CTFP.jpg>
-Package pdftex.def Info: images/CTFP.jpg  used on input line 189.
+Package pdftex.def Info: images/CTFP.jpg  used on input line 202.
 (pdftex.def)             Requested size: 172.49214pt x 129.36911pt.
-[8 <./images/CTFP.jpg>] [9] [10
+LaTeX Info: Redefining \. on input line 215.
+LaTeX Info: Redefining \% on input line 215.
+[8 <./images/CTFP.jpg>]
+LaTeX Info: Redefining \. on input line 221.
+LaTeX Info: Redefining \% on input line 221.
+[9]
+LaTeX Info: Redefining \. on input line 221.
+LaTeX Info: Redefining \% on input line 221.
+[10
 
 ] [11] [12]
-Chapter 1.
+Cap\'{\i }tulo 1.
 [13
 
-] [14]
-<images/01-links.png, id=502, 293.22047pt x 205.1414pt>
+]
+LaTeX Info: Redefining \. on input line 242.
+LaTeX Info: Redefining \% on input line 242.
+[14]
+<images/01-links.png, id=514, 293.22047pt x 205.1414pt>
 File: images/01-links.png Graphic file (type png)
 <use images/01-links.png>
-Package pdftex.def Info: images/01-links.png  used on input line 236.
+Package pdftex.def Info: images/01-links.png  used on input line 249.
 (pdftex.def)             Requested size: 293.21974pt x 205.1409pt.
-[15]
-<images/01-arso.png, id=520, 421.575pt x 144.54pt>
+<images/01-arso.png, id=516, 421.575pt x 144.54pt>
 File: images/01-arso.png Graphic file (type png)
 <use images/01-arso.png>
-Package pdftex.def Info: images/01-arso.png  used on input line 247.
+Package pdftex.def Info: images/01-arso.png  used on input line 260.
 (pdftex.def)             Requested size: 345.00543pt x 118.28755pt.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-62.
-(c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [16 <./images/01-links.png> <./images/01-arso.png>] [17]
-<01-introduction_files/figure-latex/1-strongweak-1.pdf, id=559, 469.755pt x 290
+LaTeX Info: Redefining \. on input line 265.
+LaTeX Info: Redefining \% on input line 265.
+[15]
+LaTeX Info: Redefining \. on input line 281.
+LaTeX Info: Redefining \% on input line 281.
+[16 <./images/01-links.png> <./images/01-arso.png>]
+LaTeX Info: Redefining \. on input line 300.
+LaTeX Info: Redefining \% on input line 300.
+[17]
+<01-introduction_files/figure-latex/1-strongweak-1.pdf, id=571, 469.755pt x 290
 .08376pt>
 File: 01-introduction_files/figure-latex/1-strongweak-1.pdf Graphic file (type 
 pdf)
 <use 01-introduction_files/figure-latex/1-strongweak-1.pdf>
 Package pdftex.def Info: 01-introduction_files/figure-latex/1-strongweak-1.pdf 
- used on input line 293.
+ used on input line 306.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[18] [19 <./01-introduction_files/figure-latex/1-strongweak-1.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Info: Redefining \. on input line 321.
+LaTeX Info: Redefining \% on input line 321.
+[18]
+LaTeX Info: Redefining \. on input line 323.
+LaTeX Info: Redefining \% on input line 323.
+[19 <./01-introduction_files/figure-latex/1-strongweak-1.pdf>]
+LaTeX Info: Redefining \. on input line 338.
+LaTeX Info: Redefining \% on input line 338.
+[20]
+Underfull \vbox (badness 2698) has occurred while \output is active []
 
-[20] [21]
-<01-introduction_files/figure-latex/1-hypothetical-1.pdf, id=662, 469.755pt x 2
+LaTeX Info: Redefining \. on input line 352.
+LaTeX Info: Redefining \% on input line 352.
+[21]
+<01-introduction_files/figure-latex/1-hypothetical-1.pdf, id=674, 469.755pt x 2
 90.08376pt>
 File: 01-introduction_files/figure-latex/1-hypothetical-1.pdf Graphic file (typ
 e pdf)
 <use 01-introduction_files/figure-latex/1-hypothetical-1.pdf>
 Package pdftex.def Info: 01-introduction_files/figure-latex/1-hypothetical-1.pd
-f  used on input line 347.
+f  used on input line 360.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[22] [23 <./01-introduction_files/figure-latex/1-hypothetical-1.pdf>]
-<01-introduction_files/figure-latex/1-subs-1.pdf, id=694, 469.755pt x 290.08376
+LaTeX Info: Redefining \. on input line 373.
+LaTeX Info: Redefining \% on input line 373.
+[22]
+LaTeX Info: Redefining \. on input line 378.
+LaTeX Info: Redefining \% on input line 378.
+[23 <./01-introduction_files/figure-latex/1-hypothetical-1.pdf>]
+<01-introduction_files/figure-latex/1-subs-1.pdf, id=705, 469.755pt x 290.08376
 pt>
 File: 01-introduction_files/figure-latex/1-subs-1.pdf Graphic file (type pdf)
 <use 01-introduction_files/figure-latex/1-subs-1.pdf>
 Package pdftex.def Info: 01-introduction_files/figure-latex/1-subs-1.pdf  used 
-on input line 375.
+on input line 388.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[24] [25 <./01-introduction_files/figure-latex/1-subs-1.pdf>]
-<01-introduction_files/figure-latex/1-bb-1.pdf, id=727, 469.755pt x 290.08376pt
+LaTeX Info: Redefining \. on input line 409.
+LaTeX Info: Redefining \% on input line 409.
+[24]
+LaTeX Info: Redefining \. on input line 416.
+LaTeX Info: Redefining \% on input line 416.
+[25 <./01-introduction_files/figure-latex/1-subs-1.pdf>]
+<01-introduction_files/figure-latex/1-bb-1.pdf, id=739, 469.755pt x 290.08376pt
 >
 File: 01-introduction_files/figure-latex/1-bb-1.pdf Graphic file (type pdf)
 <use 01-introduction_files/figure-latex/1-bb-1.pdf>
 Package pdftex.def Info: 01-introduction_files/figure-latex/1-bb-1.pdf  used on
- input line 406.
+ input line 419.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[26 <./01-introduction_files/figure-latex/1-bb-1.pdf>] [27] [28] [29
+
+Underfull \vbox (badness 1052) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 446.
+LaTeX Info: Redefining \% on input line 446.
+[26 <./01-introduction_files/figure-latex/1-bb-1.pdf>]
+Underfull \vbox (badness 6876) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 460.
+LaTeX Info: Redefining \% on input line 460.
+[27]
+LaTeX Info: Redefining \. on input line 462.
+LaTeX Info: Redefining \% on input line 462.
+[28] [29
 
 ] [30]
-Chapter 2.
+Cap\'{\i }tulo 2.
 [31
 
 ]
-Underfull \hbox (badness 1112) in paragraph at lines 480--482
+Underfull \hbox (badness 1112) in paragraph at lines 493--495
 []\T1/lmr/m/n/10 (+20) Existe una gran co-mu-nidad de usuar-ios y de-sar-rol-la
 dores quienes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 480--482
+Underfull \hbox (badness 10000) in paragraph at lines 493--495
 
  []
 
+LaTeX Info: Redefining \. on input line 513.
+LaTeX Info: Redefining \% on input line 513.
 [32]
-<images/01-gephi.png, id=804, 1442.01234pt x 782.17218pt>
+<images/01-gephi.png, id=815, 1442.01234pt x 782.17218pt>
 File: images/01-gephi.png Graphic file (type png)
 <use images/01-gephi.png>
-Package pdftex.def Info: images/01-gephi.png  used on input line 506.
+Package pdftex.def Info: images/01-gephi.png  used on input line 519.
 (pdftex.def)             Requested size: 344.98987pt x 187.1284pt.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-13.
+26.
 (c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<images/01-lesmis.png, id=807, 1445.4pt x 781.79578pt>
+<images/01-lesmis.png, id=818, 1445.4pt x 781.79578pt>
 File: images/01-lesmis.png Graphic file (type png)
 <use images/01-lesmis.png>
-Package pdftex.def Info: images/01-lesmis.png  used on input line 517.
+Package pdftex.def Info: images/01-lesmis.png  used on input line 530.
 (pdftex.def)             Requested size: 344.9843pt x 186.59697pt.
-<images/01-overview.png, id=809, 2890.8pt x 1563.59157pt>
+<images/01-overview.png, id=820, 2890.8pt x 1563.59157pt>
 File: images/01-overview.png Graphic file (type png)
 <use images/01-overview.png>
-Package pdftex.def Info: images/01-overview.png  used on input line 531.
+Package pdftex.def Info: images/01-overview.png  used on input line 544.
 (pdftex.def)             Requested size: 344.9843pt x 186.59697pt.
-
-Underfull \vbox (badness 1460) has occurred while \output is active []
-
-[33 <./images/01-gephi.PNG>] [34 <./images/01-lesmis.PNG> <./images/01-overview
-.PNG>]
-<images/01-apariencia.png, id=833, 549.7338pt x 282.3348pt>
+LaTeX Info: Redefining \. on input line 557.
+LaTeX Info: Redefining \% on input line 557.
+[33 <./images/01-gephi.PNG>]
+LaTeX Info: Redefining \. on input line 557.
+LaTeX Info: Redefining \% on input line 557.
+[34 <./images/01-lesmis.PNG> <./images/01-overview.PNG>]
+<images/01-apariencia.png, id=846, 549.7338pt x 282.3348pt>
 File: images/01-apariencia.png Graphic file (type png)
 <use images/01-apariencia.png>
-Package pdftex.def Info: images/01-apariencia.png  used on input line 580.
+Package pdftex.def Info: images/01-apariencia.png  used on input line 593.
 (pdftex.def)             Requested size: 345.0004pt x 177.18686pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
-\T1/lmr/m/it/10 (+20) > Único >
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
-[]\T1/lmr/m/it/10 (+20) Aristas >
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 592--593
-\T1/lmr/m/it/10 (+20) Color >
- []
-
-
-Underfull \hbox (badness 6493) in paragraph at lines 592--593
-\T1/lmr/m/it/10 (+20) sostenido so-
- []
-
-<images/01-color_unique.png, id=835, 963.6pt x 391.4625pt>
+<images/01-color_unique.png, id=848, 963.6pt x 391.4625pt>
 File: images/01-color_unique.png Graphic file (type png)
 <use images/01-color_unique.png>
-Package pdftex.def Info: images/01-color_unique.png  used on input line 608.
+Package pdftex.def Info: images/01-color_unique.png  used on input line 621.
 (pdftex.def)             Requested size: 344.99901pt x 140.15584pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 627.
+LaTeX Info: Redefining \% on input line 627.
 [35 <./images/01-apariencia.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 616--617
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
 []\T1/lmr/m/it/10 (+20) Nodos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 616--617
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
 \T1/lmr/m/it/10 (+20) Tamaño >
  []
 
-<images/01-size_unique.png, id=852, 963.6pt x 391.4625pt>
+<images/01-size_unique.png, id=863, 963.6pt x 391.4625pt>
 File: images/01-size_unique.png Graphic file (type png)
 <use images/01-size_unique.png>
-Package pdftex.def Info: images/01-size_unique.png  used on input line 632.
+Package pdftex.def Info: images/01-size_unique.png  used on input line 645.
 (pdftex.def)             Requested size: 344.99901pt x 140.15584pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
-\T1/lmr/m/it/10 (+20) > Par-ti-ción
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+\T1/lmr/m/it/10 (+20) atrib-u-to >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
-\T1/lmr/m/it/10 (+20) > --Escoge
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+\T1/lmr/m/it/10 (+20) Mod-u-lar-i-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
-\T1/lmr/m/it/10 (+20) un atrib-uto
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
+\T1/lmr/m/it/10 (+20) ty Class >
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
-\T1/lmr/m/it/10 (+20) > Mod-u-lar-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
-\T1/lmr/m/it/10 (+20) ity Class >
- []
-
-<images/01-color_partition.png, id=853, 964.35281pt x 395.22656pt>
+<images/01-color_partition.png, id=864, 964.35281pt x 395.22656pt>
 File: images/01-color_partition.png Graphic file (type png)
 <use images/01-color_partition.png>
-Package pdftex.def Info: images/01-color_partition.png  used on input line 656.
+Package pdftex.def Info: images/01-color_partition.png  used on input line 669.
 
 (pdftex.def)             Requested size: 344.98895pt x 141.3889pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 675.
+LaTeX Info: Redefining \% on input line 675.
 [36 <./images/01-color_unique.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 664--665
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
 []\T1/lmr/m/it/10 (+20) Nodos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 664--665
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
 \T1/lmr/m/it/10 (+20) Tamaño >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 664--665
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
 \T1/lmr/m/it/10 (+20) Rank-ing >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 664--665
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
 \T1/lmr/m/it/10 (+20) --Escoge un
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 664--665
-\T1/lmr/m/it/10 (+20) atrib-uto >
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
+\T1/lmr/m/it/10 (+20) atrib-u-to >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 664--665
-\T1/lmr/m/it/10 (+20) Grado >
+Underfull \hbox (badness 10000) in paragraph at lines 677--678
+\T1/lmr/m/it/10 (+20) Gra-do >
  []
 
-<images/01-size-ranking.png, id=861, 964.35281pt x 395.22656pt>
+<images/01-size-ranking.png, id=872, 964.35281pt x 395.22656pt>
 File: images/01-size-ranking.png Graphic file (type png)
 <use images/01-size-ranking.png>
-Package pdftex.def Info: images/01-size-ranking.png  used on input line 680.
+Package pdftex.def Info: images/01-size-ranking.png  used on input line 693.
 (pdftex.def)             Requested size: 344.98895pt x 141.3889pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 699.
+LaTeX Info: Redefining \% on input line 699.
 [37 <./images/01-size_unique.PNG> <./images/01-color_partition.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 698--699
+Underfull \hbox (badness 10000) in paragraph at lines 711--712
 []\T1/lmr/m/it/10 (+20) Elije una
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 698--699
+Underfull \hbox (badness 10000) in paragraph at lines 711--712
 \T1/lmr/m/it/10 (+20) dis-tribuición
  []
 
-<images/01-force_atlas.png, id=871, 963.6pt x 391.4625pt>
+<images/01-force_atlas.png, id=882, 963.6pt x 391.4625pt>
 File: images/01-force_atlas.png Graphic file (type png)
 <use images/01-force_atlas.png>
-Package pdftex.def Info: images/01-force_atlas.png  used on input line 714.
+Package pdftex.def Info: images/01-force_atlas.png  used on input line 727.
 (pdftex.def)             Requested size: 344.99901pt x 140.15584pt.
+LaTeX Info: Redefining \. on input line 733.
+LaTeX Info: Redefining \% on input line 733.
 [38 <./images/01-size-ranking.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 722--723
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
 []\T1/lmr/m/it/10 (+20) Elije una
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 722--723
+Underfull \hbox (badness 10000) in paragraph at lines 735--736
 \T1/lmr/m/it/10 (+20) dis-tribuición
  []
 
 
-Underfull \hbox (badness 7944) in paragraph at lines 722--723
+Underfull \hbox (badness 7944) in paragraph at lines 735--736
 \T1/lmr/m/it/10 (+20) > Ex-pan-sión
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--725
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
 []\T1/lmr/m/it/10 (+20) Elije una
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 724--725
+Underfull \hbox (badness 10000) in paragraph at lines 737--738
 \T1/lmr/m/it/10 (+20) dis-tribuición
  []
 
-<images/01-expansion.png, id=884, 963.6pt x 391.4625pt>
+<images/01-expansion.png, id=896, 963.6pt x 391.4625pt>
 File: images/01-expansion.png Graphic file (type png)
 <use images/01-expansion.png>
-Package pdftex.def Info: images/01-expansion.png  used on input line 742.
+Package pdftex.def Info: images/01-expansion.png  used on input line 755.
 (pdftex.def)             Requested size: 344.99901pt x 140.15584pt.
+LaTeX Info: Redefining \. on input line 763.
+LaTeX Info: Redefining \% on input line 763.
 [39 <./images/01-force_atlas.PNG>]
-Underfull \hbox (badness 2856) in paragraph at lines 757--758
+Underfull \hbox (badness 2856) in paragraph at lines 770--771
 \T1/lmr/m/it/10 (+20) de la red >
  []
 
-<images/01-degree.png, id=894, 963.6pt x 391.4625pt>
+<images/01-degree.png, id=906, 963.6pt x 391.4625pt>
 File: images/01-degree.png Graphic file (type png)
 <use images/01-degree.png>
-Package pdftex.def Info: images/01-degree.png  used on input line 775.
+Package pdftex.def Info: images/01-degree.png  used on input line 788.
 (pdftex.def)             Requested size: 344.99901pt x 140.15584pt.
+LaTeX Info: Redefining \. on input line 799.
+LaTeX Info: Redefining \% on input line 799.
 [40 <./images/01-expansion.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 788--789
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
 []\T1/lmr/m/it/10 (+20) Arrastrar a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 788--789
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
 \T1/lmr/m/it/10 (+20) Con-sul-tas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 788--789
-\T1/lmr/m/it/10 (+20) > Rango
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
+\T1/lmr/m/it/10 (+20) > Ran-go
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 788--789
+Underfull \hbox (badness 10000) in paragraph at lines 801--802
 \T1/lmr/m/it/10 (+20) fig-u-ración =
  []
 
-<images/01-filter.png, id=906, 963.6pt x 391.4625pt>
+<images/01-filter.png, id=917, 963.6pt x 391.4625pt>
 File: images/01-filter.png Graphic file (type png)
 <use images/01-filter.png>
-Package pdftex.def Info: images/01-filter.png  used on input line 806.
+Package pdftex.def Info: images/01-filter.png  used on input line 819.
 (pdftex.def)             Requested size: 344.99901pt x 140.15584pt.
-<images/01-grafo.png, id=907, 777.6252pt x 403.2666pt>
+<images/01-grafo.png, id=918, 777.6252pt x 403.2666pt>
 File: images/01-grafo.png Graphic file (type png)
 <use images/01-grafo.png>
-Package pdftex.def Info: images/01-grafo.png  used on input line 820.
+Package pdftex.def Info: images/01-grafo.png  used on input line 833.
 (pdftex.def)             Requested size: 345.00388pt x 178.91464pt.
-[41 <./images/01-degree.PNG>] [42 <./images/01-filter.PNG> <./images/01-grafo.P
-NG>]
-<images/01-data_lab.png, id=927, 775.698pt x 211.5102pt>
+LaTeX Info: Redefining \. on input line 848.
+LaTeX Info: Redefining \% on input line 848.
+[41 <./images/01-degree.PNG>]
+LaTeX Info: Redefining \. on input line 848.
+LaTeX Info: Redefining \% on input line 848.
+[42 <./images/01-filter.PNG> <./images/01-grafo.PNG>]
+<images/01-data_lab.png, id=938, 775.698pt x 211.5102pt>
 File: images/01-data_lab.png Graphic file (type png)
 <use images/01-data_lab.png>
-Package pdftex.def Info: images/01-data_lab.png  used on input line 897.
+Package pdftex.def Info: images/01-data_lab.png  used on input line 910.
 (pdftex.def)             Requested size: 345.00105pt x 94.0717pt.
+LaTeX Info: Redefining \. on input line 921.
+LaTeX Info: Redefining \% on input line 921.
 [43]
-<images/01-nodes_table.png, id=965, 1422.43922pt x 609.40172pt>
+<images/01-nodes_table.png, id=976, 1422.43922pt x 609.40172pt>
 File: images/01-nodes_table.png Graphic file (type png)
 <use images/01-nodes_table.png>
-Package pdftex.def Info: images/01-nodes_table.png  used on input line 911.
+Package pdftex.def Info: images/01-nodes_table.png  used on input line 924.
 (pdftex.def)             Requested size: 344.99536pt x 147.80298pt.
+LaTeX Info: Redefining \. on input line 943.
+LaTeX Info: Redefining \% on input line 943.
 [44 <./images/01-data_lab.png> <./images/01-nodes_table.png>]
-<images/01-edges_table.png, id=976, 1430.34375pt x 605.63765pt>
+<images/01-edges_table.png, id=987, 1430.34375pt x 605.63765pt>
 File: images/01-edges_table.png Graphic file (type png)
 <use images/01-edges_table.png>
-Package pdftex.def Info: images/01-edges_table.png  used on input line 943.
+Package pdftex.def Info: images/01-edges_table.png  used on input line 956.
 (pdftex.def)             Requested size: 344.99188pt x 146.07681pt.
-<images/01-lower_bar.png, id=977, 1318.17468pt x 92.59593pt>
+<images/01-lower_bar.png, id=988, 1318.17468pt x 92.59593pt>
 File: images/01-lower_bar.png Graphic file (type png)
 <use images/01-lower_bar.png>
-Package pdftex.def Info: images/01-lower_bar.png  used on input line 957.
+Package pdftex.def Info: images/01-lower_bar.png  used on input line 970.
 (pdftex.def)             Requested size: 344.99019pt x 24.23402pt.
 
 Underfull \vbox (badness 7869) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 981.
+LaTeX Info: Redefining \% on input line 981.
 [45 <./images/01-edges_table.PNG> <./images/01-lower_bar.png>]
-<images/01-preview.png, id=990, 854.2314pt x 364.2408pt>
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 9
+94.
+(c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+<images/01-preview.png, id=1001, 854.2314pt x 364.2408pt>
 File: images/01-preview.png Graphic file (type png)
 <use images/01-preview.png>
-Package pdftex.def Info: images/01-preview.png  used on input line 993.
+Package pdftex.def Info: images/01-preview.png  used on input line 1006.
 (pdftex.def)             Requested size: 344.99727pt x 147.10544pt.
-[46 <./images/01-preview.PNG>] [47] [48
+LaTeX Info: Redefining \. on input line 1024.
+LaTeX Info: Redefining \% on input line 1024.
+[46 <./images/01-preview.PNG>]
+LaTeX Info: Redefining \. on input line 1038.
+LaTeX Info: Redefining \% on input line 1038.
+[47]
+LaTeX Info: Redefining \. on input line 1038.
+LaTeX Info: Redefining \% on input line 1038.
+[48
 
 ]
-Chapter 3.
-<02-types-of-data_files/figure-latex/2-2-undirected-1.pdf, id=1015, 469.755pt x
+Cap\'{\i }tulo 3.
+<02-types-of-data_files/figure-latex/2-2-undirected-1.pdf, id=1028, 469.755pt x
  290.08376pt>
 File: 02-types-of-data_files/figure-latex/2-2-undirected-1.pdf Graphic file (ty
 pe pdf)
 <use 02-types-of-data_files/figure-latex/2-2-undirected-1.pdf>
 Package pdftex.def Info: 02-types-of-data_files/figure-latex/2-2-undirected-1.p
-df  used on input line 1043.
+df  used on input line 1056.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[49] [50 <./02-types-of-data_files/figure-latex/2-2-undirected-1.pdf>]
+[49]
+LaTeX Info: Redefining \. on input line 1077.
+LaTeX Info: Redefining \% on input line 1077.
+[50 <./02-types-of-data_files/figure-latex/2-2-undirected-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 1097.
+LaTeX Info: Redefining \% on input line 1097.
 [51]
-<02-types-of-data_files/figure-latex/2-2-directed-1.pdf, id=1048, 469.755pt x 2
+<02-types-of-data_files/figure-latex/2-2-directed-1.pdf, id=1060, 469.755pt x 2
 90.08376pt>
 File: 02-types-of-data_files/figure-latex/2-2-directed-1.pdf Graphic file (type
  pdf)
 <use 02-types-of-data_files/figure-latex/2-2-directed-1.pdf>
 Package pdftex.def Info: 02-types-of-data_files/figure-latex/2-2-directed-1.pdf
-  used on input line 1095.
+  used on input line 1108.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[52] [53 <./02-types-of-data_files/figure-latex/2-2-directed-1.pdf>]
-<02-types-of-data_files/figure-latex/2-2-bips-1.pdf, id=1082, 469.755pt x 290.0
+LaTeX Info: Redefining \. on input line 1131.
+LaTeX Info: Redefining \% on input line 1131.
+[52]
+LaTeX Info: Redefining \. on input line 1148.
+LaTeX Info: Redefining \% on input line 1148.
+[53 <./02-types-of-data_files/figure-latex/2-2-directed-1.pdf>]
+<02-types-of-data_files/figure-latex/2-2-bips-1.pdf, id=1094, 469.755pt x 290.0
 8376pt>
 File: 02-types-of-data_files/figure-latex/2-2-bips-1.pdf Graphic file (type pdf
 )
 <use 02-types-of-data_files/figure-latex/2-2-bips-1.pdf>
 Package pdftex.def Info: 02-types-of-data_files/figure-latex/2-2-bips-1.pdf  us
-ed on input line 1156.
+ed on input line 1169.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[54 <./02-types-of-data_files/figure-latex/2-2-bips-1.pdf>] [55]
+LaTeX Info: Redefining \. on input line 1177.
+LaTeX Info: Redefining \% on input line 1177.
+[54 <./02-types-of-data_files/figure-latex/2-2-bips-1.pdf>]
+LaTeX Info: Redefining \. on input line 1194.
+LaTeX Info: Redefining \% on input line 1194.
+[55]
 
-LaTeX Warning: Command \' invalid in math mode on input line 1212.
+LaTeX Warning: Command \' invalid in math mode on input line 1225.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1226
+Underfull \hbox (badness 10000) in paragraph at lines 1201--1239
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 1240.
+LaTeX Info: Redefining \% on input line 1240.
 [56]
-<02-types-of-data_files/figure-latex/2-2-attrs-1.pdf, id=1111, 469.755pt x 290.
+<02-types-of-data_files/figure-latex/2-2-attrs-1.pdf, id=1123, 469.755pt x 290.
 08376pt>
 File: 02-types-of-data_files/figure-latex/2-2-attrs-1.pdf Graphic file (type pd
 f)
 <use 02-types-of-data_files/figure-latex/2-2-attrs-1.pdf>
 Package pdftex.def Info: 02-types-of-data_files/figure-latex/2-2-attrs-1.pdf  u
-sed on input line 1231.
+sed on input line 1244.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[57 <./02-types-of-data_files/figure-latex/2-2-attrs-1.pdf>] [58
+LaTeX Info: Redefining \. on input line 1257.
+LaTeX Info: Redefining \% on input line 1257.
+[57 <./02-types-of-data_files/figure-latex/2-2-attrs-1.pdf>]
+LaTeX Info: Redefining \. on input line 1257.
+LaTeX Info: Redefining \% on input line 1257.
+[58
 
 ]
-Chapter 4.
-[59] [60] [61]
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1455
+Cap\'{\i }tulo 4.
+[59]
+LaTeX Info: Redefining \. on input line 1329.
+LaTeX Info: Redefining \% on input line 1329.
+[60]
+LaTeX Info: Redefining \. on input line 1407.
+LaTeX Info: Redefining \% on input line 1407.
+[61]
+Underfull \hbox (badness 10000) in paragraph at lines 1422--1468
+
+ []
+
+LaTeX Info: Redefining \. on input line 1470.
+LaTeX Info: Redefining \% on input line 1470.
+[62]
+LaTeX Info: Redefining \. on input line 1527.
+LaTeX Info: Redefining \% on input line 1527.
+[63]
+
+LaTeX Warning: Command \' invalid in math mode on input line 1533.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 1551.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1530--1563
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[62] [63] [64]
-
-LaTeX Warning: Command \' invalid in math mode on input line 1520.
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 1538.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1517--1550
-
- []
-
-<images/02-Fig_1_Matrix_Excel.png, id=1196, 913.16156pt x 459.21562pt>
+LaTeX Info: Redefining \. on input line 1575.
+LaTeX Info: Redefining \% on input line 1575.
+[64]
+<images/02-Fig_1_Matrix_Excel.png, id=1209, 913.16156pt x 459.21562pt>
 File: images/02-Fig_1_Matrix_Excel.png Graphic file (type png)
 <use images/02-Fig_1_Matrix_Excel.png>
 Package pdftex.def Info: images/02-Fig_1_Matrix_Excel.png  used on input line 1
-578.
+591.
 (pdftex.def)             Requested size: 344.99855pt x 173.49472pt.
 
-Underfull \hbox (badness 5008) in paragraph at lines 1586--1587
-[][]\T1/lmr/m/it/10 (+20) Vista gen-eral[]
+Underfull \hbox (badness 5008) in paragraph at lines 1599--1600
+[][]\T1/lmr/m/it/10 (+20) Vista gen-er-al[]
  []
 
-<images/02-Fig_2_General_View.png, id=1199, 1407.75937pt x 782.925pt>
+<images/02-Fig_2_General_View.png, id=1212, 1407.75937pt x 782.925pt>
 File: images/02-Fig_2_General_View.png Graphic file (type png)
 <use images/02-Fig_2_General_View.png>
 Package pdftex.def Info: images/02-Fig_2_General_View.png  used on input line 1
-608.
+621.
 (pdftex.def)             Requested size: 345.00073pt x 191.87206pt.
-[65]
-Underfull \hbox (badness 10000) in paragraph at lines 1616--1617
+
+Underfull \hbox (badness 10000) in paragraph at lines 1629--1630
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
-<images/02-Fig_3_Importing_Gephi.png, id=1211, 588.69937pt x 366.61969pt>
+<images/02-Fig_3_Importing_Gephi.png, id=1214, 588.69937pt x 366.61969pt>
 File: images/02-Fig_3_Importing_Gephi.png Graphic file (type png)
 <use images/02-Fig_3_Importing_Gephi.png>
 Package pdftex.def Info: images/02-Fig_3_Importing_Gephi.png  used on input lin
-e 1639.
+e 1652.
 (pdftex.def)             Requested size: 345.00307pt x 214.85484pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1649--1650
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 1658.
+LaTeX Info: Redefining \% on input line 1658.
+[65]
+LaTeX Info: Redefining \. on input line 1658.
+LaTeX Info: Redefining \% on input line 1658.
+[66 <./images/02-Fig_1_Matrix_Excel.png> <./images/02-Fig_2_General_View.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1662--1663
 []\T1/lmr/m/it/10 (+20) Mas op-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1649--1650
+Underfull \hbox (badness 10000) in paragraph at lines 1662--1663
 \T1/lmr/m/it/10 (+20) ciones...
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1649--1650
+Underfull \hbox (badness 10000) in paragraph at lines 1662--1663
 \T1/lmr/m/it/10 (+20) > Es-trate-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1649--1650
+Underfull \hbox (badness 10000) in paragraph at lines 1662--1663
 \T1/lmr/m/it/10 (+20) gias para
  []
 
-<images/02-Fig_4_Importing_Report.png, id=1213, 488.57532pt x 414.04688pt>
+<images/02-Fig_4_Importing_Report.png, id=1233, 488.57532pt x 414.04688pt>
 File: images/02-Fig_4_Importing_Report.png Graphic file (type png)
 <use images/02-Fig_4_Importing_Report.png>
 Package pdftex.def Info: images/02-Fig_4_Importing_Report.png  used on input li
-ne 1672.
+ne 1685.
 (pdftex.def)             Requested size: 345.00478pt x 292.3769pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[66 <./images/02-Fig_1_Matrix_Excel.png>] [67 <./images/02-Fig_2_General_View.p
-ng> <./images/02-Fig_3_Importing_Gephi.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1680--1681
-[]\T1/lmr/m/it/10 (+20) Apariencia
+LaTeX Info: Redefining \. on input line 1691.
+LaTeX Info: Redefining \% on input line 1691.
+[67 <./images/02-Fig_3_Importing_Gephi.png>]
+Underfull \hbox (badness 1917) in paragraph at lines 1693--1694
+[]\T1/lmr/m/it/10 (+20) Apariencia >
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1680--1681
-\T1/lmr/m/it/10 (+20) > No-dos >
- []
-
-<images/02-Fig-5_apariencia.png, id=1231, 173.9298pt x 166.221pt>
+<images/02-Fig-5_apariencia.png, id=1243, 173.9298pt x 166.221pt>
 File: images/02-Fig-5_apariencia.png Graphic file (type png)
 <use images/02-Fig-5_apariencia.png>
-Package pdftex.def Info: images/02-Fig-5_apariencia.png  used on input line 170
-3.
+Package pdftex.def Info: images/02-Fig-5_apariencia.png  used on input line 171
+6.
 (pdftex.def)             Requested size: 172.50684pt x 164.86108pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 1722.
+LaTeX Info: Redefining \% on input line 1722.
 [68 <./images/02-Fig_4_Importing_Report.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1711--1712
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
 []\T1/lmr/m/it/10 (+20) Distribuicion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1711--1712
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
 \T1/lmr/m/it/10 (+20) >Fruchter-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1711--1712
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
 \T1/lmr/m/it/10 (+20) Force At-las,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1711--1712
+Underfull \hbox (badness 10000) in paragraph at lines 1724--1725
 \T1/lmr/m/it/10 (+20) Ex-pan-sion,
  []
 
-<images/02-Fig_6_Layout.png, id=1241, 280.04625pt x 405.76593pt>
+<images/02-Fig_6_Layout.png, id=1253, 280.04625pt x 405.76593pt>
 File: images/02-Fig_6_Layout.png Graphic file (type png)
 <use images/02-Fig_6_Layout.png>
-Package pdftex.def Info: images/02-Fig_6_Layout.png  used on input line 1734.
+Package pdftex.def Info: images/02-Fig_6_Layout.png  used on input line 1747.
 (pdftex.def)             Requested size: 172.5073pt x 249.9501pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 1753.
+LaTeX Info: Redefining \% on input line 1753.
 [69 <./images/02-Fig-5_apariencia.png>]
-<images/01-botones_gephi.png, id=1251, 703.87968pt x 391.4625pt>
+<images/01-botones_gephi.png, id=1263, 703.87968pt x 391.4625pt>
 File: images/01-botones_gephi.png Graphic file (type png)
 <use images/01-botones_gephi.png>
-Package pdftex.def Info: images/01-botones_gephi.png  used on input line 1765.
+Package pdftex.def Info: images/01-botones_gephi.png  used on input line 1778.
 (pdftex.def)             Requested size: 345.00072pt x 191.87206pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 1784.
+LaTeX Info: Redefining \% on input line 1784.
 [70 <./images/02-Fig_6_Layout.png>]
-<images/01-botones_gephi2.png, id=1261, 479.16516pt x 390.70969pt>
+<images/01-botones_gephi2.png, id=1273, 479.16516pt x 390.70969pt>
 File: images/01-botones_gephi2.png Graphic file (type png)
 <use images/01-botones_gephi2.png>
-Package pdftex.def Info: images/01-botones_gephi2.png  used on input line 1796.
+Package pdftex.def Info: images/01-botones_gephi2.png  used on input line 1809.
 
 (pdftex.def)             Requested size: 344.99864pt x 281.31075pt.
-<images/01-botones_gephi3.png, id=1262, 479.16516pt x 390.70969pt>
+<images/01-botones_gephi3.png, id=1274, 479.16516pt x 390.70969pt>
 File: images/01-botones_gephi3.png Graphic file (type png)
 <use images/01-botones_gephi3.png>
-Package pdftex.def Info: images/01-botones_gephi3.png  used on input line 1805.
+Package pdftex.def Info: images/01-botones_gephi3.png  used on input line 1818.
 
 (pdftex.def)             Requested size: 344.99864pt x 281.31075pt.
-<images/01-botones_gephi4.png, id=1267, 479.16516pt x 390.70969pt>
+<images/01-botones_gephi4.png, id=1279, 479.16516pt x 390.70969pt>
 File: images/01-botones_gephi4.png Graphic file (type png)
 <use images/01-botones_gephi4.png>
-Package pdftex.def Info: images/01-botones_gephi4.png  used on input line 1836.
+Package pdftex.def Info: images/01-botones_gephi4.png  used on input line 1849.
 
 (pdftex.def)             Requested size: 344.99864pt x 281.31075pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[71 <./images/01-botones_gephi.png>] [72 <./images/01-botones_gephi2.png>] [73 
-<./images/01-botones_gephi3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1843--1866
+LaTeX Info: Redefining \. on input line 1855.
+LaTeX Info: Redefining \% on input line 1855.
+[71 <./images/01-botones_gephi.png>]
+LaTeX Info: Redefining \. on input line 1855.
+LaTeX Info: Redefining \% on input line 1855.
+[72 <./images/01-botones_gephi2.png>]
+LaTeX Info: Redefining \. on input line 1855.
+LaTeX Info: Redefining \% on input line 1855.
+[73 <./images/01-botones_gephi3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1856--1879
 
  []
 
-<images/02-Fig_10_Patek_Ego.png, id=1291, 958.3303pt x 781.41937pt>
+<images/02-Fig_10_Patek_Ego.png, id=1303, 958.3303pt x 781.41937pt>
 File: images/02-Fig_10_Patek_Ego.png Graphic file (type png)
 <use images/02-Fig_10_Patek_Ego.png>
-Package pdftex.def Info: images/02-Fig_10_Patek_Ego.png  used on input line 189
-1.
+Package pdftex.def Info: images/02-Fig_10_Patek_Ego.png  used on input line 190
+4.
 (pdftex.def)             Requested size: 258.75264pt x 210.98605pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[74] [75 <./images/01-botones_gephi4.png>]
-<images/02-Fig_11_Gephi_Edge_List.png, id=1305, 958.3303pt x 781.41937pt>
+LaTeX Info: Redefining \. on input line 1910.
+LaTeX Info: Redefining \% on input line 1910.
+[74]
+LaTeX Info: Redefining \. on input line 1910.
+LaTeX Info: Redefining \% on input line 1910.
+[75 <./images/01-botones_gephi4.png>]
+<images/02-Fig_11_Gephi_Edge_List.png, id=1317, 958.3303pt x 781.41937pt>
 File: images/02-Fig_11_Gephi_Edge_List.png Graphic file (type png)
 <use images/02-Fig_11_Gephi_Edge_List.png>
 Package pdftex.def Info: images/02-Fig_11_Gephi_Edge_List.png  used on input li
-ne 1924.
+ne 1937.
 (pdftex.def)             Requested size: 258.75264pt x 210.98605pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 1969.
+LaTeX Info: Redefining \% on input line 1969.
 [76 <./images/02-Fig_10_Patek_Ego.png>]
-Overfull \hbox (6.47346pt too wide) in paragraph at lines 1959--1960
+Overfull \hbox (6.47346pt too wide) in paragraph at lines 1972--1973
 [][]\T1/lmr/m/it/10 (-20) Previsualización[] 
  []
 
-<images/02-Fig-12_preview.png, id=1319, 339.28864pt x 275.38673pt>
+<images/02-Fig-12_preview.png, id=1331, 339.28864pt x 275.38673pt>
 File: images/02-Fig-12_preview.png Graphic file (type png)
 <use images/02-Fig-12_preview.png>
-Package pdftex.def Info: images/02-Fig-12_preview.png  used on input line 1981.
+Package pdftex.def Info: images/02-Fig-12_preview.png  used on input line 1994.
 
 (pdftex.def)             Requested size: 258.7525pt x 210.01884pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1989--1990
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2003
 []\T1/lmr/m/it/10 (+20) Etiquetas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1989--1990
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2003
 \T1/lmr/m/it/10 (+20) de no-dos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1989--1990
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2003
 \T1/lmr/m/it/10 (+20) > Mostrar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1989--1990
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2003
 \T1/lmr/m/it/10 (+20) eti-que-tas,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1989--1990
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2003
 \T1/lmr/m/it/10 (+20) Tamaño pro-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1989--1990
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2003
 \T1/lmr/m/it/10 (+20) por-cional,
  []
 
 
-Underfull \hbox (badness 1546) in paragraph at lines 2005--2006
-[]\T1/lmr/m/n/10 (+20) Definitivamente debe-mos hacer al-gunos ajustes en
- []
-
-
-Underfull \hbox (badness 1253) in paragraph at lines 2005--2006
-\T1/lmr/m/n/10 (+20) de-s-e-lec-cionar la op-ción \T1/lmr/m/it/10 (+20) Tamaño 
-pro-por-cional \T1/lmr/m/n/10 (+20) (esta
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2005--2006
+Underfull \hbox (badness 10000) in paragraph at lines 2018--2019
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1988--2011
+Underfull \hbox (badness 10000) in paragraph at lines 2001--2024
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 2025.
+LaTeX Info: Redefining \% on input line 2025.
 [77 <./images/02-Fig_11_Gephi_Edge_List.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2013--2014
+Underfull \hbox (badness 10000) in paragraph at lines 2026--2027
 []\T1/lmr/m/it/10 (+20) Aristas >
  []
 
 
-Underfull \hbox (badness 2538) in paragraph at lines 2013--2014
+Underfull \hbox (badness 2538) in paragraph at lines 2026--2027
 \T1/lmr/m/it/10 (+20) Mostrar aris-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2012--2035
+Underfull \hbox (badness 10000) in paragraph at lines 2025--2048
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2037--2038
-[]\T1/lmr/m/it/10 (+20) Aristas >
- []
-
-<images/02-Fig-13_preview.png, id=1332, 338.5279pt x 276.14748pt>
+<images/02-Fig-13_preview.png, id=1344, 338.5279pt x 276.14748pt>
 File: images/02-Fig-13_preview.png Graphic file (type png)
 <use images/02-Fig-13_preview.png>
-Package pdftex.def Info: images/02-Fig-13_preview.png  used on input line 2060.
+Package pdftex.def Info: images/02-Fig-13_preview.png  used on input line 2073.
 
 (pdftex.def)             Requested size: 258.76636pt x 211.08357pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 2079.
+LaTeX Info: Redefining \% on input line 2079.
 [78 <./images/02-Fig-12_preview.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2068--2069
+Underfull \hbox (badness 10000) in paragraph at lines 2081--2082
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2095--2096
+Underfull \hbox (badness 10000) in paragraph at lines 2108--2109
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
-<images/01-impotacion.png, id=1343, 588.69937pt x 366.61969pt>
+<images/01-impotacion.png, id=1355, 588.69937pt x 366.61969pt>
 File: images/01-impotacion.png Graphic file (type png)
 <use images/01-impotacion.png>
-Package pdftex.def Info: images/01-impotacion.png  used on input line 2117.
+Package pdftex.def Info: images/01-impotacion.png  used on input line 2130.
 (pdftex.def)             Requested size: 345.00307pt x 214.85484pt.
 
 Underfull \vbox (badness 2837) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 2136.
+LaTeX Info: Redefining \% on input line 2136.
 [79 <./images/02-Fig-13_preview.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2124--2149
+Underfull \hbox (badness 10000) in paragraph at lines 2137--2162
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 2163.
+LaTeX Info: Redefining \% on input line 2163.
 [80 <./images/01-impotacion.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2150--2175
+Underfull \hbox (badness 10000) in paragraph at lines 2163--2188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2179--2180
+Underfull \hbox (badness 10000) in paragraph at lines 2192--2193
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2176--2201
+Underfull \hbox (badness 10000) in paragraph at lines 2189--2214
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2202--2239
+Underfull \hbox (badness 10000) in paragraph at lines 2215--2252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2243--2245
+Underfull \hbox (badness 10000) in paragraph at lines 2256--2258
 []\T1/lmr/m/it/10 (+20) Apariencia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2243--2245
+Underfull \hbox (badness 10000) in paragraph at lines 2256--2258
 \T1/lmr/m/it/10 (+20) > --Escoge
  []
 
-<images/01-rol.png, id=1369, 963.6pt x 782.925pt>
+<images/01-rol.png, id=1381, 963.6pt x 782.925pt>
 File: images/01-rol.png Graphic file (type png)
 <use images/01-rol.png>
-Package pdftex.def Info: images/01-rol.png  used on input line 2267.
+Package pdftex.def Info: images/01-rol.png  used on input line 2280.
 (pdftex.def)             Requested size: 344.99901pt x 280.31169pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[81] [82 <./images/01-rol.png>]
-Chapter 5.
-<02-twomode-to-one_files/figure-latex/2-4-bip-1.pdf, id=1391, 469.755pt x 290.0
+LaTeX Info: Redefining \. on input line 2286.
+LaTeX Info: Redefining \% on input line 2286.
+[81]
+LaTeX Info: Redefining \. on input line 2288.
+LaTeX Info: Redefining \% on input line 2288.
+[82 <./images/01-rol.png>]
+Cap\'{\i }tulo 5.
+<02-twomode-to-one_files/figure-latex/2-4-bip-1.pdf, id=1403, 469.755pt x 290.0
 8376pt>
 File: 02-twomode-to-one_files/figure-latex/2-4-bip-1.pdf Graphic file (type pdf
 )
 <use 02-twomode-to-one_files/figure-latex/2-4-bip-1.pdf>
 Package pdftex.def Info: 02-twomode-to-one_files/figure-latex/2-4-bip-1.pdf  us
-ed on input line 2286.
+ed on input line 2299.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
 [83
 
-] [84 <./02-twomode-to-one_files/figure-latex/2-4-bip-1.pdf>] [85]
-<02-twomode-to-one_files/figure-latex/2-4-projected1-1.pdf, id=1427, 469.755pt 
+]
+LaTeX Info: Redefining \. on input line 2341.
+LaTeX Info: Redefining \% on input line 2341.
+[84 <./02-twomode-to-one_files/figure-latex/2-4-bip-1.pdf>]
+LaTeX Info: Redefining \. on input line 2397.
+LaTeX Info: Redefining \% on input line 2397.
+[85]
+<02-twomode-to-one_files/figure-latex/2-4-projected1-1.pdf, id=1439, 469.755pt 
 x 290.08376pt>
 File: 02-twomode-to-one_files/figure-latex/2-4-projected1-1.pdf Graphic file (t
 ype pdf)
 <use 02-twomode-to-one_files/figure-latex/2-4-projected1-1.pdf>
 Package pdftex.def Info: 02-twomode-to-one_files/figure-latex/2-4-projected1-1.
-pdf  used on input line 2388.
+pdf  used on input line 2401.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 2450.
+LaTeX Info: Redefining \% on input line 2450.
 [86 <./02-twomode-to-one_files/figure-latex/2-4-projected1-1.pdf>]
-<02-twomode-to-one_files/figure-latex/2-4-projected2-1.pdf, id=1440, 469.755pt 
+<02-twomode-to-one_files/figure-latex/2-4-projected2-1.pdf, id=1452, 469.755pt 
 x 290.08376pt>
 File: 02-twomode-to-one_files/figure-latex/2-4-projected2-1.pdf Graphic file (t
 ype pdf)
 <use 02-twomode-to-one_files/figure-latex/2-4-projected2-1.pdf>
 Package pdftex.def Info: 02-twomode-to-one_files/figure-latex/2-4-projected2-1.
-pdf  used on input line 2443.
+pdf  used on input line 2456.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 2471.
+LaTeX Info: Redefining \% on input line 2471.
 [87 <./02-twomode-to-one_files/figure-latex/2-4-projected2-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 2463--2464
+Underfull \hbox (badness 10000) in paragraph at lines 2476--2477
 []\T1/lmr/m/it/10 (+20) Herramientas
  []
 
-<images/02-05-01_installed.png, id=1453, 666.99188pt x 417.05812pt>
+<images/02-05-01_installed.png, id=1465, 666.99188pt x 417.05812pt>
 File: images/02-05-01_installed.png Graphic file (type png)
 <use images/02-05-01_installed.png>
-Package pdftex.def Info: images/02-05-01_installed.png  used on input line 2485
+Package pdftex.def Info: images/02-05-01_installed.png  used on input line 2498
 .
 (pdftex.def)             Requested size: 258.75183pt x 161.7929pt.
-<images/02-05-02_available.png, id=1455, 378.432pt x 238.8195pt>
+<images/02-05-02_available.png, id=1467, 378.432pt x 238.8195pt>
 File: images/02-05-02_available.png Graphic file (type png)
 <use images/02-05-02_available.png>
-Package pdftex.def Info: images/02-05-02_available.png  used on input line 2516
+Package pdftex.def Info: images/02-05-02_available.png  used on input line 2529
 .
 (pdftex.def)             Requested size: 258.7624pt x 163.29883pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2524--2525
+Underfull \hbox (badness 10000) in paragraph at lines 2537--2538
 []\T1/lmr/m/it/10 (+20) Ventana >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2524--2525
+Underfull \hbox (badness 10000) in paragraph at lines 2537--2538
 \T1/lmr/m/it/10 (+20) Mul-ti-mode
  []
 
-<images/02-05-03_pestana.png, id=1457, 540.51938pt x 391.4625pt>
+<images/02-05-03_pestana.png, id=1469, 540.51938pt x 391.4625pt>
 File: images/02-05-03_pestana.png Graphic file (type png)
 <use images/02-05-03_pestana.png>
-Package pdftex.def Info: images/02-05-03_pestana.png  used on input line 2547.
+Package pdftex.def Info: images/02-05-03_pestana.png  used on input line 2560.
 (pdftex.def)             Requested size: 258.75354pt x 187.3981pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 2566.
+LaTeX Info: Redefining \% on input line 2566.
 [88 <./images/02-05-01_installed.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2558--2559
+Underfull \hbox (badness 10000) in paragraph at lines 2571--2572
 []\T1/lmr/m/it/10 (+20) Ventana >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2558--2559
+Underfull \hbox (badness 10000) in paragraph at lines 2571--2572
 \T1/lmr/m/it/10 (+20) Mul-ti-mode
  []
 
-<images/02-05-04_importar.png, id=1471, 673.01437pt x 365.86688pt>
+<images/02-05-04_importar.png, id=1483, 673.01437pt x 365.86688pt>
 File: images/02-05-04_importar.png Graphic file (type png)
 <use images/02-05-04_importar.png>
-Package pdftex.def Info: images/02-05-04_importar.png  used on input line 2580.
+Package pdftex.def Info: images/02-05-04_importar.png  used on input line 2593.
 
 (pdftex.def)             Requested size: 258.74677pt x 140.661pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 2599.
+LaTeX Info: Redefining \% on input line 2599.
 [89 <./images/02-05-02_available.png> <./images/02-05-03_pestana.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2588--2589
+Underfull \hbox (badness 10000) in paragraph at lines 2601--2602
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
-<images/02-05-04_nodos.png, id=1483, 487.06969pt x 413.29407pt>
+<images/02-05-04_nodos.png, id=1495, 487.06969pt x 413.29407pt>
 File: images/02-05-04_nodos.png Graphic file (type png)
 <use images/02-05-04_nodos.png>
-Package pdftex.def Info: images/02-05-04_nodos.png  used on input line 2611.
+Package pdftex.def Info: images/02-05-04_nodos.png  used on input line 2624.
 (pdftex.def)             Requested size: 258.7477pt x 219.55562pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2618--2641
+Underfull \hbox (badness 10000) in paragraph at lines 2631--2654
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2643--2644
+Underfull \hbox (badness 10000) in paragraph at lines 2656--2657
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
-<images/02-05-06_aristas.png, id=1485, 487.06969pt x 413.29407pt>
+<images/02-05-06_aristas.png, id=1497, 487.06969pt x 413.29407pt>
 File: images/02-05-06_aristas.png Graphic file (type png)
 <use images/02-05-06_aristas.png>
-Package pdftex.def Info: images/02-05-06_aristas.png  used on input line 2666.
+Package pdftex.def Info: images/02-05-06_aristas.png  used on input line 2679.
 (pdftex.def)             Requested size: 258.7477pt x 219.55562pt.
 
 Underfull \vbox (badness 1087) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 2685.
+LaTeX Info: Redefining \% on input line 2685.
 [90 <./images/02-05-04_importar.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2690--2691
+Underfull \hbox (badness 10000) in paragraph at lines 2703--2704
 
  []
 
-<images/02-05-07_bip_data.png, id=1497, 963.6pt x 782.925pt>
+<images/02-05-07_bip_data.png, id=1509, 963.6pt x 782.925pt>
 File: images/02-05-07_bip_data.png Graphic file (type png)
 <use images/02-05-07_bip_data.png>
-Package pdftex.def Info: images/02-05-07_bip_data.png  used on input line 2697.
+Package pdftex.def Info: images/02-05-07_bip_data.png  used on input line 2710.
 
 (pdftex.def)             Requested size: 258.74925pt x 210.23376pt.
 
-Underfull \hbox (badness 1917) in paragraph at lines 2707--2708
+Underfull \hbox (badness 1917) in paragraph at lines 2720--2721
 []\T1/lmr/m/it/10 (+20) Apariencia >
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[91 <./images/02-05-04_nodos.png>] [92 <./images/02-05-06_aristas.png> <./image
-s/02-05-07_bip_data.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2734--2735
+LaTeX Info: Redefining \. on input line 2742.
+LaTeX Info: Redefining \% on input line 2742.
+[91 <./images/02-05-04_nodos.png>]
+LaTeX Info: Redefining \. on input line 2742.
+LaTeX Info: Redefining \% on input line 2742.
+[92 <./images/02-05-06_aristas.png> <./images/02-05-07_bip_data.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 2747--2748
 []\T1/lmr/m/it/10 (+20) MulitMode
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2734--2735
+Underfull \hbox (badness 10000) in paragraph at lines 2747--2748
 \T1/lmr/m/it/10 (+20) At-tributes >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2731--2755
+Underfull \hbox (badness 10000) in paragraph at lines 2744--2768
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2757--2759
+Underfull \hbox (badness 10000) in paragraph at lines 2770--2772
 []\T1/lmr/m/it/10 (+20) Left ma-trix
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2757--2759
+Underfull \hbox (badness 10000) in paragraph at lines 2770--2772
 \T1/lmr/m/it/10 (+20) > Person--
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2757--2759
+Underfull \hbox (badness 10000) in paragraph at lines 2770--2772
 \T1/lmr/m/it/10 (+20) Event Right
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2757--2759
+Underfull \hbox (badness 10000) in paragraph at lines 2770--2772
 \T1/lmr/m/it/10 (+20) ma-trix >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2756--2782
+Underfull \hbox (badness 10000) in paragraph at lines 2769--2795
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2784--2785
+Underfull \hbox (badness 10000) in paragraph at lines 2797--2798
 []\T1/lmr/m/it/10 (+20) Filtros >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2784--2785
+Underfull \hbox (badness 10000) in paragraph at lines 2797--2798
 \T1/lmr/m/it/10 (+20) Atrib-u-tos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2784--2785
+Underfull \hbox (badness 10000) in paragraph at lines 2797--2798
 \T1/lmr/m/it/10 (+20) Par-ti-ción >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2786--2787
+Underfull \hbox (badness 10000) in paragraph at lines 2799--2800
 []\T1/lmr/m/it/10 (+20) Consultas >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2786--2787
+Underfull \hbox (badness 10000) in paragraph at lines 2799--2800
 \T1/lmr/m/it/10 (+20) Per-son >
  []
 
-<images/02-05-09_bip_data_3.png, id=1519, 481.8pt x 391.4625pt>
+<images/02-05-09_bip_data_3.png, id=1531, 481.8pt x 391.4625pt>
 File: images/02-05-09_bip_data_3.png Graphic file (type png)
 <use images/02-05-09_bip_data_3.png>
-Package pdftex.def Info: images/02-05-09_bip_data_3.png  used on input line 280
-9.
+Package pdftex.def Info: images/02-05-09_bip_data_3.png  used on input line 282
+2.
 (pdftex.def)             Requested size: 258.75659pt x 210.23973pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2817--2818
+Underfull \hbox (badness 10000) in paragraph at lines 2830--2831
 []\T1/lmr/m/it/10 (+20) Apariencia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2817--2818
+Underfull \hbox (badness 10000) in paragraph at lines 2830--2831
 \T1/lmr/m/it/10 (+20) > No-dos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2817--2818
+Underfull \hbox (badness 10000) in paragraph at lines 2830--2831
 \T1/lmr/m/it/10 (+20) Tamaño >
  []
 
-<images/02-05-09_bip_data_4.png, id=1521, 963.6pt x 782.925pt>
+<images/02-05-09_bip_data_4.png, id=1533, 963.6pt x 782.925pt>
 File: images/02-05-09_bip_data_4.png Graphic file (type png)
 <use images/02-05-09_bip_data_4.png>
-Package pdftex.def Info: images/02-05-09_bip_data_4.png  used on input line 284
-0.
+Package pdftex.def Info: images/02-05-09_bip_data_4.png  used on input line 285
+3.
 (pdftex.def)             Requested size: 258.74925pt x 210.23376pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 2859.
+LaTeX Info: Redefining \% on input line 2859.
 [93]
-Underfull \hbox (badness 10000) in paragraph at lines 2848--2849
+Underfull \hbox (badness 10000) in paragraph at lines 2861--2862
 []\T1/lmr/m/it/10 (+20) MultiMode
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2848--2849
+Underfull \hbox (badness 10000) in paragraph at lines 2861--2862
 \T1/lmr/m/it/10 (+20) Net-works
  []
 
 
-Underfull \hbox (badness 6526) in paragraph at lines 2850--2852
+Underfull \hbox (badness 6526) in paragraph at lines 2863--2865
 []\T1/lmr/m/it/10 (+20) Right ma-trix
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2850--2852
+Underfull \hbox (badness 10000) in paragraph at lines 2863--2865
 \T1/lmr/m/it/10 (+20) > Event--
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2850--2852
+Underfull \hbox (badness 10000) in paragraph at lines 2863--2865
 \T1/lmr/m/it/10 (+20) Person Left
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2850--2852
+Underfull \hbox (badness 10000) in paragraph at lines 2863--2865
 \T1/lmr/m/it/10 (+20) ma-trix >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2847--2875
+Underfull \hbox (badness 10000) in paragraph at lines 2860--2888
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2877--2878
+Underfull \hbox (badness 10000) in paragraph at lines 2890--2891
 []\T1/lmr/m/it/10 (+20) Filtros >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2877--2878
+Underfull \hbox (badness 10000) in paragraph at lines 2890--2891
 \T1/lmr/m/it/10 (+20) Atrib-u-tos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2877--2878
+Underfull \hbox (badness 10000) in paragraph at lines 2890--2891
 \T1/lmr/m/it/10 (+20) Par-ti-ción >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2879--2880
+Underfull \hbox (badness 10000) in paragraph at lines 2892--2893
 []\T1/lmr/m/it/10 (+20) Consultas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2879--2880
+Underfull \hbox (badness 10000) in paragraph at lines 2892--2893
 \T1/lmr/m/it/10 (+20) > Event >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2876--2901
+Underfull \hbox (badness 10000) in paragraph at lines 2889--2914
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 2915.
+LaTeX Info: Redefining \% on input line 2915.
 [94 <./images/02-05-09_bip_data_3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 2903--2904
+Underfull \hbox (badness 10000) in paragraph at lines 2916--2917
 []\T1/lmr/m/it/10 (+20) Filtros >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2903--2904
+Underfull \hbox (badness 10000) in paragraph at lines 2916--2917
 \T1/lmr/m/it/10 (+20) Atrib-u-tos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2903--2904
+Underfull \hbox (badness 10000) in paragraph at lines 2916--2917
 \T1/lmr/m/it/10 (+20) Par-ti-ción >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2905--2906
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2919
 []\T1/lmr/m/it/10 (+20) Consultas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2905--2906
+Underfull \hbox (badness 10000) in paragraph at lines 2918--2919
 \T1/lmr/m/it/10 (+20) > Event >
  []
 
-<images/02-05-09_bip_data_5.png, id=1543, 963.6pt x 782.925pt>
+<images/02-05-09_bip_data_5.png, id=1555, 963.6pt x 782.925pt>
 File: images/02-05-09_bip_data_5.png Graphic file (type png)
 <use images/02-05-09_bip_data_5.png>
-Package pdftex.def Info: images/02-05-09_bip_data_5.png  used on input line 292
-8.
+Package pdftex.def Info: images/02-05-09_bip_data_5.png  used on input line 294
+1.
 (pdftex.def)             Requested size: 258.74925pt x 210.23376pt.
-[95 <./images/02-05-09_bip_data_4.png>] [96 <./images/02-05-09_bip_data_5.png>]
-Chapter 6.
+LaTeX Info: Redefining \. on input line 2949.
+LaTeX Info: Redefining \% on input line 2949.
+[95 <./images/02-05-09_bip_data_4.png>]
+LaTeX Info: Redefining \. on input line 2949.
+LaTeX Info: Redefining \% on input line 2949.
+[96 <./images/02-05-09_bip_data_5.png>]
+Cap\'{\i }tulo 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2947--2985
+Underfull \hbox (badness 10000) in paragraph at lines 2960--2998
 
  []
 
@@ -2130,1775 +2329,2107 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 [97
 
 ]
-<02-multiple-networks_files/figure-latex/2-5-combined-1.pdf, id=1568, 469.755pt
+<02-multiple-networks_files/figure-latex/2-5-combined-1.pdf, id=1580, 469.755pt
  x 290.08376pt>
 File: 02-multiple-networks_files/figure-latex/2-5-combined-1.pdf Graphic file (
 type pdf)
 <use 02-multiple-networks_files/figure-latex/2-5-combined-1.pdf>
 Package pdftex.def Info: 02-multiple-networks_files/figure-latex/2-5-combined-1
-.pdf  used on input line 2990.
+.pdf  used on input line 3003.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 3033.
+LaTeX Info: Redefining \% on input line 3033.
 [98 <./02-multiple-networks_files/figure-latex/2-5-combined-1.pdf>]
-<02-multiple-networks_files/figure-latex/2-5-apiladas-1.pdf, id=1585, 469.755pt
+<02-multiple-networks_files/figure-latex/2-5-apiladas-1.pdf, id=1597, 469.755pt
  x 290.08376pt>
 File: 02-multiple-networks_files/figure-latex/2-5-apiladas-1.pdf Graphic file (
 type pdf)
 <use 02-multiple-networks_files/figure-latex/2-5-apiladas-1.pdf>
 Package pdftex.def Info: 02-multiple-networks_files/figure-latex/2-5-apiladas-1
-.pdf  used on input line 3068.
+.pdf  used on input line 3081.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 3094.
+LaTeX Info: Redefining \% on input line 3094.
 [99]
-Underfull \hbox (badness 10000) in paragraph at lines 3082--3120
+Underfull \hbox (badness 10000) in paragraph at lines 3095--3133
 
  []
 
+LaTeX Info: Redefining \. on input line 3161.
+LaTeX Info: Redefining \% on input line 3161.
 [100 <./02-multiple-networks_files/figure-latex/2-5-apiladas-1.pdf>]
-<02-multiple-networks_files/figure-latex/2-5-agregadas-1.pdf, id=1615, 469.755p
+<02-multiple-networks_files/figure-latex/2-5-agregadas-1.pdf, id=1627, 469.755p
 t x 290.08376pt>
 File: 02-multiple-networks_files/figure-latex/2-5-agregadas-1.pdf Graphic file 
 (type pdf)
 <use 02-multiple-networks_files/figure-latex/2-5-agregadas-1.pdf>
 Package pdftex.def Info: 02-multiple-networks_files/figure-latex/2-5-agregadas-
-1.pdf  used on input line 3152.
+1.pdf  used on input line 3165.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 3180.
+LaTeX Info: Redefining \% on input line 3180.
 [101 <./02-multiple-networks_files/figure-latex/2-5-agregadas-1.pdf>]
 
-LaTeX Warning: Command \' invalid in math mode on input line 3195.
+LaTeX Warning: Command \' invalid in math mode on input line 3208.
 
 
-Overfull \hbox (9.38632pt too wide) in paragraph at lines 3168--3212
+Overfull \hbox (9.38632pt too wide) in paragraph at lines 3181--3225
 [][][][]\T1/lmr/m/n/10 (-20) El
  []
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 3241.
+LaTeX Warning: Command \' invalid in math mode on input line 3254.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 3256.
+LaTeX Warning: Command \' invalid in math mode on input line 3269.
 
+LaTeX Info: Redefining \. on input line 3275.
+LaTeX Info: Redefining \% on input line 3275.
 [102]
-<02-multiple-networks_files/figure-latex/2-5-recombinar-1.pdf, id=1641, 469.755
+<02-multiple-networks_files/figure-latex/2-5-recombinar-1.pdf, id=1653, 469.755
 pt x 290.08376pt>
 File: 02-multiple-networks_files/figure-latex/2-5-recombinar-1.pdf Graphic file
  (type pdf)
 <use 02-multiple-networks_files/figure-latex/2-5-recombinar-1.pdf>
 Package pdftex.def Info: 02-multiple-networks_files/figure-latex/2-5-recombinar
--1.pdf  used on input line 3281.
+-1.pdf  used on input line 3294.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 3307.
+LaTeX Info: Redefining \% on input line 3307.
 [103 <./02-multiple-networks_files/figure-latex/2-5-recombinar-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 3303--3306
+Underfull \hbox (badness 10000) in paragraph at lines 3316--3319
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
 
-Underfull \hbox (badness 4647) in paragraph at lines 3303--3306
+Underfull \hbox (badness 4647) in paragraph at lines 3316--3319
 \T1/lmr/m/it/10 (+20) Abrir Im-por-
  []
 
 
-Underfull \hbox (badness 7081) in paragraph at lines 3303--3306
-\T1/lmr/m/it/10 (+20) tar como >
+Underfull \hbox (badness 7081) in paragraph at lines 3316--3319
+\T1/lmr/m/it/10 (+20) tar co-mo >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3303--3306
+Underfull \hbox (badness 10000) in paragraph at lines 3316--3319
 \T1/lmr/m/it/10 (+20) Sep-a-rador >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3300--3326
+Underfull \hbox (badness 10000) in paragraph at lines 3313--3339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3330--3333
+Underfull \hbox (badness 10000) in paragraph at lines 3343--3346
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
 
-Underfull \hbox (badness 4647) in paragraph at lines 3330--3333
+Underfull \hbox (badness 4647) in paragraph at lines 3343--3346
 \T1/lmr/m/it/10 (+20) Abrir Im-por-
  []
 
 
-Underfull \hbox (badness 7081) in paragraph at lines 3330--3333
-\T1/lmr/m/it/10 (+20) tar como >
+Underfull \hbox (badness 7081) in paragraph at lines 3343--3346
+\T1/lmr/m/it/10 (+20) tar co-mo >
  []
 
-<images/02-06-01_aristas.png, id=1660, 662.475pt x 365.86688pt>
+<images/02-06-01_aristas.png, id=1673, 662.475pt x 365.86688pt>
 File: images/02-06-01_aristas.png Graphic file (type png)
 <use images/02-06-01_aristas.png>
-Package pdftex.def Info: images/02-06-01_aristas.png  used on input line 3355.
+Package pdftex.def Info: images/02-06-01_aristas.png  used on input line 3368.
 (pdftex.def)             Requested size: 344.99442pt x 190.531pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 3374.
+LaTeX Info: Redefining \% on input line 3374.
 [104]
-<images/02-06-02_reporte.png, id=1669, 487.06969pt x 413.29407pt>
+<images/02-06-02_reporte.png, id=1681, 487.06969pt x 413.29407pt>
 File: images/02-06-02_reporte.png Graphic file (type png)
 <use images/02-06-02_reporte.png>
-Package pdftex.def Info: images/02-06-02_reporte.png  used on input line 3364.
+Package pdftex.def Info: images/02-06-02_reporte.png  used on input line 3377.
 (pdftex.def)             Requested size: 344.99692pt x 292.74083pt.
 
-Underfull \hbox (badness 4886) in paragraph at lines 3388--3389
-[]\T1/lmr/m/n/10 (+20) Repita el pro-ceso para im-por-tar las nueve lis-
+Underfull \hbox (badness 4886) in paragraph at lines 3401--3402
+[]\T1/lmr/m/n/10 (+20) Repita el pro-ce-so para im-por-tar las nueve lis-
  []
 
 
-Underfull \hbox (badness 4792) in paragraph at lines 3388--3389
+Underfull \hbox (badness 4792) in paragraph at lines 3401--3402
 \T1/lmr/m/n/10 (+20) tas de aris-tas restantes (descar-gue-las in-di-vid-ual-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3388--3389
+Underfull \hbox (badness 1946) in paragraph at lines 3401--3402
+\T1/lmr/m/n/10 (+20) mente: []\T1/lmtt/m/n/10 blame.csv[]\T1/lmr/m/n/10 (+20) ,
+ []\T1/lmtt/m/n/10 dislike.csv[]\T1/lmr/m/n/10 (+20) , []\T1/lmtt/m/n/10 high_e
+steem.csv[]\T1/lmr/m/n/10 (+20) ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3401--3402
 []\T1/lmtt/m/n/10 liking_2.csv[]\T1/lmr/m/n/10 (+20) , []\T1/lmtt/m/n/10 linkin
 g_3.csv[]\T1/lmr/m/n/10 (+20) , []\T1/lmtt/m/n/10 low_esteem.csv[]\T1/lmr/m/n/1
 0 (+20) ,
  []
 
 
-Underfull \hbox (badness 1824) in paragraph at lines 3388--3389
+Underfull \hbox (badness 3557) in paragraph at lines 3401--3402
 []\T1/lmtt/m/n/10 negative_influence.csv[]\T1/lmr/m/n/10 (+20) , []\T1/lmtt/m/n
 /10 positive_influence.csv[]\T1/lmr/m/n/10 (+20) ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3371--3394
+Underfull \hbox (badness 10000) in paragraph at lines 3384--3407
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[105 <./images/02-06-01_aristas.png>] [106 <./images/02-06-02_reporte.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 3398--3401
-\T1/lmr/m/it/10 (+20) Edges Color
+LaTeX Info: Redefining \. on input line 3407.
+LaTeX Info: Redefining \% on input line 3407.
+[105 <./images/02-06-01_aristas.png>]
+LaTeX Info: Redefining \. on input line 3407.
+LaTeX Info: Redefining \% on input line 3407.
+[106 <./images/02-06-02_reporte.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3411--3414
+\T1/lmr/m/it/10 (+20) Edges Col-or
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3398--3401
+Underfull \hbox (badness 10000) in paragraph at lines 3411--3414
 \T1/lmr/m/it/10 (+20) > Par-ti-ción
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3398--3401
+Underfull \hbox (badness 10000) in paragraph at lines 3411--3414
 \T1/lmr/m/it/10 (+20) --Escoge un
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3398--3401
+Underfull \hbox (badness 10000) in paragraph at lines 3411--3414
 \T1/lmr/m/it/10 (+20) atribute >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3398--3401
+Underfull \hbox (badness 10000) in paragraph at lines 3411--3414
 \T1/lmr/m/it/10 (+20) re-la-tion >
  []
 
-<images/02-06-03_apilada.png, id=1694, 1192.455pt x 782.925pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 3415--3416
+[]\T1/lmr/m/it/10 (+20) Paleta... >
+ []
+
+<images/02-06-03_apilada.png, id=1706, 1192.455pt x 782.925pt>
 File: images/02-06-03_apilada.png Graphic file (type png)
 <use images/02-06-03_apilada.png>
-Package pdftex.def Info: images/02-06-03_apilada.png  used on input line 3425.
+Package pdftex.def Info: images/02-06-03_apilada.png  used on input line 3438.
 (pdftex.def)             Requested size: 345.0025pt x 226.51678pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3460--3461
+Underfull \hbox (badness 10000) in paragraph at lines 3473--3474
 []\T1/lmr/m/it/10 (+20) Filtros >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3460--3461
+Underfull \hbox (badness 10000) in paragraph at lines 3473--3474
 \T1/lmr/m/it/10 (+20) Atrib-u-tos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3462--3463
+Underfull \hbox (badness 10000) in paragraph at lines 3475--3476
 []\T1/lmr/m/it/10 (+20) Consultas >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3462--3463
+Underfull \hbox (badness 10000) in paragraph at lines 3475--3476
 \T1/lmr/m/it/10 (+20) Par-ti-ción >
  []
 
 
-Underfull \hbox (badness 1377) in paragraph at lines 3462--3463
-\T1/lmr/m/it/10 (+20) fil-trado a un
+Underfull \hbox (badness 1377) in paragraph at lines 3475--3476
+\T1/lmr/m/it/10 (+20) fil-tra-do a un
  []
 
-<images/02-06-04_positivos.png, id=1696, 1192.455pt x 782.925pt>
+<images/02-06-04_positivos.png, id=1708, 1192.455pt x 782.925pt>
 File: images/02-06-04_positivos.png Graphic file (type png)
 <use images/02-06-04_positivos.png>
-Package pdftex.def Info: images/02-06-04_positivos.png  used on input line 3484
+Package pdftex.def Info: images/02-06-04_positivos.png  used on input line 3497
 .
 (pdftex.def)             Requested size: 345.0025pt x 226.51678pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 3503.
+LaTeX Info: Redefining \% on input line 3503.
 [107]
-Underfull \hbox (badness 10000) in paragraph at lines 3494--3496
+Underfull \hbox (badness 10000) in paragraph at lines 3507--3509
 []\T1/lmr/m/it/10 (+20) Espacio de
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3494--3496
-\T1/lmr/m/it/10 (+20) Tra-bajo >
+Underfull \hbox (badness 10000) in paragraph at lines 3507--3509
+\T1/lmr/m/it/10 (+20) Tra-ba-jo >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3494--3496
+Underfull \hbox (badness 10000) in paragraph at lines 3507--3509
 \T1/lmr/m/it/10 (+20) Renom-brar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3494--3496
+Underfull \hbox (badness 10000) in paragraph at lines 3507--3509
 \T1/lmr/m/it/10 (+20) Dis-eño >
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[108 <./images/02-06-03_apilada.png>] [109 <./images/02-06-04_positivos.png>] [
-110
+LaTeX Info: Redefining \. on input line 3530.
+LaTeX Info: Redefining \% on input line 3530.
+[108 <./images/02-06-03_apilada.png>]
+LaTeX Info: Redefining \. on input line 3530.
+LaTeX Info: Redefining \% on input line 3530.
+[109 <./images/02-06-04_positivos.png>]
+LaTeX Info: Redefining \. on input line 3530.
+LaTeX Info: Redefining \% on input line 3530.
+[110
 
 ]
-Chapter 7.
-<02-extract-simplify_files/figure-latex/2-6-pandilleros-1.pdf, id=1731, 469.755
+Cap\'{\i }tulo 7.
+<02-extract-simplify_files/figure-latex/2-6-pandilleros-1.pdf, id=1743, 469.755
 pt x 290.08376pt>
 File: 02-extract-simplify_files/figure-latex/2-6-pandilleros-1.pdf Graphic file
  (type pdf)
 <use 02-extract-simplify_files/figure-latex/2-6-pandilleros-1.pdf>
 Package pdftex.def Info: 02-extract-simplify_files/figure-latex/2-6-pandilleros
--1.pdf  used on input line 3528.
+-1.pdf  used on input line 3541.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<02-extract-simplify_files/figure-latex/2-6-vivos-1.pdf, id=1733, 469.755pt x 2
+<02-extract-simplify_files/figure-latex/2-6-vivos-1.pdf, id=1745, 469.755pt x 2
 90.08376pt>
 File: 02-extract-simplify_files/figure-latex/2-6-vivos-1.pdf Graphic file (type
  pdf)
 <use 02-extract-simplify_files/figure-latex/2-6-vivos-1.pdf>
 Package pdftex.def Info: 02-extract-simplify_files/figure-latex/2-6-vivos-1.pdf
-  used on input line 3539.
+  used on input line 3552.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[111] [112 <./02-extract-simplify_files/figure-latex/2-6-pandilleros-1.pdf> <./
-02-extract-simplify_files/figure-latex/2-6-vivos-1.pdf>]
-<02-extract-simplify_files/figure-latex/2-6-fin-1.pdf, id=1752, 469.755pt x 290
+[111]
+LaTeX Info: Redefining \. on input line 3560.
+LaTeX Info: Redefining \% on input line 3560.
+[112 <./02-extract-simplify_files/figure-latex/2-6-pandilleros-1.pdf> <./02-ext
+ract-simplify_files/figure-latex/2-6-vivos-1.pdf>]
+<02-extract-simplify_files/figure-latex/2-6-fin-1.pdf, id=1764, 469.755pt x 290
 .08376pt>
 File: 02-extract-simplify_files/figure-latex/2-6-fin-1.pdf Graphic file (type p
 df)
 <use 02-extract-simplify_files/figure-latex/2-6-fin-1.pdf>
 Package pdftex.def Info: 02-extract-simplify_files/figure-latex/2-6-fin-1.pdf  
-used on input line 3550.
+used on input line 3563.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<02-extract-simplify_files/figure-latex/2-6-pos-1.pdf, id=1756, 469.755pt x 290
+<02-extract-simplify_files/figure-latex/2-6-pos-1.pdf, id=1768, 469.755pt x 290
 .08376pt>
 File: 02-extract-simplify_files/figure-latex/2-6-pos-1.pdf Graphic file (type p
 df)
 <use 02-extract-simplify_files/figure-latex/2-6-pos-1.pdf>
 Package pdftex.def Info: 02-extract-simplify_files/figure-latex/2-6-pos-1.pdf  
-used on input line 3566.
+used on input line 3579.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<02-extract-simplify_files/figure-latex/2-6-collapsed-1.pdf, id=1758, 469.755pt
+<02-extract-simplify_files/figure-latex/2-6-collapsed-1.pdf, id=1770, 469.755pt
  x 290.08376pt>
 File: 02-extract-simplify_files/figure-latex/2-6-collapsed-1.pdf Graphic file (
 type pdf)
 <use 02-extract-simplify_files/figure-latex/2-6-collapsed-1.pdf>
 Package pdftex.def Info: 02-extract-simplify_files/figure-latex/2-6-collapsed-1
-.pdf  used on input line 3577.
+.pdf  used on input line 3590.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[113 <./02-extract-simplify_files/figure-latex/2-6-fin-1.pdf>] [114 <./02-extra
-ct-simplify_files/figure-latex/2-6-pos-1.pdf> <./02-extract-simplify_files/figu
-re-latex/2-6-collapsed-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 3602--3604
+LaTeX Info: Redefining \. on input line 3606.
+LaTeX Info: Redefining \% on input line 3606.
+[113 <./02-extract-simplify_files/figure-latex/2-6-fin-1.pdf>]
+LaTeX Info: Redefining \. on input line 3606.
+LaTeX Info: Redefining \% on input line 3606.
+[114 <./02-extract-simplify_files/figure-latex/2-6-pos-1.pdf> <./02-extract-sim
+plify_files/figure-latex/2-6-collapsed-1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 3615--3617
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
 
-Underfull \hbox (badness 4647) in paragraph at lines 3602--3604
+Underfull \hbox (badness 4647) in paragraph at lines 3615--3617
 \T1/lmr/m/it/10 (+20) Abrir Im-por-
  []
 
 
-Underfull \hbox (badness 7081) in paragraph at lines 3602--3604
-\T1/lmr/m/it/10 (+20) tar como >
+Underfull \hbox (badness 7081) in paragraph at lines 3615--3617
+\T1/lmr/m/it/10 (+20) tar co-mo >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3599--3624
+Underfull \hbox (badness 10000) in paragraph at lines 3612--3637
 
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 3642--3643
-[]\T1/lmr/m/n/10 (+20) En la sigu-iente pan-talla de im-portación (Figura
+Underfull \hbox (badness 10000) in paragraph at lines 3655--3656
+\T1/lmtt/m/n/10 Level\T1/lmr/m/n/10 (+20) , \T1/lmtt/m/n/10 Contact with People
+\T1/lmr/m/n/10 (+20) , \T1/lmtt/m/n/10 Current Status
  []
 
 
-Underfull \hbox (badness 7981) in paragraph at lines 3642--3643
-[]\T1/lmr/m/n/10 (+20) 7.7[]) vera que se ha de-tec-tado una se-rie de
+Underfull \hbox (badness 10000) in paragraph at lines 3655--3656
+\T1/lmtt/m/n/10 (ICG Article)\T1/lmr/m/n/10 (+20) , \T1/lmtt/m/n/10 Military Tr
+aining\T1/lmr/m/n/10 (+20) , \T1/lmtt/m/n/10 Nationality\T1/lmr/m/n/10 (+20) ,
  []
 
-
-Underfull \hbox (badness 6220) in paragraph at lines 3642--3643
-\T1/lmtt/m/n/10 Nationality\T1/lmr/m/n/10 (+20) , \T1/lmtt/m/n/10 Noordin's Net
-work\T1/lmr/m/n/10 (+20) , \T1/lmtt/m/n/10 Primary Group
- []
-
-<images/02-07-01.png, id=1787, 726.46407pt x 366.61969pt>
+<images/02-07-01.png, id=1800, 726.46407pt x 366.61969pt>
 File: images/02-07-01.png Graphic file (type png)
 <use images/02-07-01.png>
-Package pdftex.def Info: images/02-07-01.png  used on input line 3649.
+Package pdftex.def Info: images/02-07-01.png  used on input line 3662.
 (pdftex.def)             Requested size: 345.0075pt x 174.1126pt.
-<images/02-07-02.png, id=1788, 726.46407pt x 366.61969pt>
+<images/02-07-02.png, id=1801, 726.46407pt x 366.61969pt>
 File: images/02-07-02.png Graphic file (type png)
 <use images/02-07-02.png>
-Package pdftex.def Info: images/02-07-02.png  used on input line 3658.
+Package pdftex.def Info: images/02-07-02.png  used on input line 3671.
 (pdftex.def)             Requested size: 345.0075pt x 174.1126pt.
-<images/02-07-03.png, id=1790, 488.57532pt x 414.04688pt>
+<images/02-07-03.png, id=1803, 488.57532pt x 414.04688pt>
 File: images/02-07-03.png Graphic file (type png)
 <use images/02-07-03.png>
-Package pdftex.def Info: images/02-07-03.png  used on input line 3689.
+Package pdftex.def Info: images/02-07-03.png  used on input line 3702.
 (pdftex.def)             Requested size: 345.00478pt x 292.3769pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3699--3701
+Underfull \hbox (badness 10000) in paragraph at lines 3712--3714
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3699--3701
+Underfull \hbox (badness 10000) in paragraph at lines 3712--3714
 \T1/lmr/m/it/10 (+20) Abrir Im-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3699--3701
-\T1/lmr/m/it/10 (+20) por-tar como
+Underfull \hbox (badness 10000) in paragraph at lines 3712--3714
+\T1/lmr/m/it/10 (+20) por-tar co-mo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3699--3701
+Underfull \hbox (badness 10000) in paragraph at lines 3712--3714
 \T1/lmr/m/it/10 (+20) > Tabla de
  []
 
-<images/02-07-04.png, id=1794, 720.44156pt x 366.61969pt>
+
+Underfull \hbox (badness 1137) in paragraph at lines 3729--3730
+[]\T1/lmtt/m/n/10 Operational (Edge List).csv[]\T1/lmr/m/n/10 (+20) , us-an-do 
+el co-man-do
+ []
+
+<images/02-07-04.png, id=1807, 720.44156pt x 366.61969pt>
 File: images/02-07-04.png Graphic file (type png)
 <use images/02-07-04.png>
-Package pdftex.def Info: images/02-07-04.png  used on input line 3723.
+Package pdftex.def Info: images/02-07-04.png  used on input line 3736.
 (pdftex.def)             Requested size: 344.99452pt x 175.56148pt.
 
-Underfull \vbox (badness 7326) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[115] [116 <./images/02-07-01.png> <./images/02-07-02.png>] [117 <./images/02-0
-7-03.png>]
-<images/02-07-05.png, id=1824, 488.57532pt x 414.04688pt>
+LaTeX Info: Redefining \. on input line 3742.
+LaTeX Info: Redefining \% on input line 3742.
+[115]
+LaTeX Info: Redefining \. on input line 3742.
+LaTeX Info: Redefining \% on input line 3742.
+[116 <./images/02-07-01.png> <./images/02-07-02.png>]
+LaTeX Info: Redefining \. on input line 3742.
+LaTeX Info: Redefining \% on input line 3742.
+[117 <./images/02-07-03.png>]
+<images/02-07-05.png, id=1836, 488.57532pt x 414.04688pt>
 File: images/02-07-05.png Graphic file (type png)
 <use images/02-07-05.png>
-Package pdftex.def Info: images/02-07-05.png  used on input line 3754.
+Package pdftex.def Info: images/02-07-05.png  used on input line 3767.
 (pdftex.def)             Requested size: 345.00478pt x 292.3769pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3767--3768
+Underfull \hbox (badness 10000) in paragraph at lines 3780--3781
 []\T1/lmr/m/it/10 (+20) Apariencia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3767--3768
+Underfull \hbox (badness 10000) in paragraph at lines 3780--3781
 \T1/lmr/m/it/10 (+20) > No-dos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3767--3768
+Underfull \hbox (badness 10000) in paragraph at lines 3780--3781
 \T1/lmr/m/it/10 (+20) Par-ti-ción >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3767--3768
+Underfull \hbox (badness 10000) in paragraph at lines 3780--3781
 \T1/lmr/m/it/10 (+20) --Escoge un
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3767--3768
-\T1/lmr/m/it/10 (+20) atrib-uto >
+Underfull \hbox (badness 10000) in paragraph at lines 3780--3781
+\T1/lmr/m/it/10 (+20) atrib-u-to >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3764--3788
+Underfull \hbox (badness 10000) in paragraph at lines 3777--3801
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[118 <./images/02-07-04.png>] [119 <./images/02-07-05.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 3792--3793
+LaTeX Info: Redefining \. on input line 3801.
+LaTeX Info: Redefining \% on input line 3801.
+[118 <./images/02-07-04.png>]
+LaTeX Info: Redefining \. on input line 3801.
+LaTeX Info: Redefining \% on input line 3801.
+[119 <./images/02-07-05.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3805--3806
 []\T1/lmr/m/it/10 (+20) Apariencia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3792--3793
+Underfull \hbox (badness 10000) in paragraph at lines 3805--3806
 \T1/lmr/m/it/10 (+20) > No-dos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3792--3793
+Underfull \hbox (badness 10000) in paragraph at lines 3805--3806
 \T1/lmr/m/it/10 (+20) Par-ti-ción >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3792--3793
+Underfull \hbox (badness 10000) in paragraph at lines 3805--3806
 \T1/lmr/m/it/10 (+20) --Escoge un
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3792--3793
-\T1/lmr/m/it/10 (+20) atrib-uto >
+Underfull \hbox (badness 10000) in paragraph at lines 3805--3806
+\T1/lmr/m/it/10 (+20) atrib-u-to >
  []
 
-<images/02-07-06.png, id=1843, 289.08pt x 297.36093pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 3807--3808
+[]\T1/lmr/m/it/10 (+20) Paleta... >
+ []
+
+<images/02-07-06.png, id=1855, 289.08pt x 297.36093pt>
 File: images/02-07-06.png Graphic file (type png)
 <use images/02-07-06.png>
-Package pdftex.def Info: images/02-07-06.png  used on input line 3817.
+Package pdftex.def Info: images/02-07-06.png  used on input line 3830.
 (pdftex.def)             Requested size: 289.09251pt x 297.37381pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3827--3828
+Underfull \hbox (badness 10000) in paragraph at lines 3840--3841
 []\T1/lmr/m/it/10 (+20) Apariencia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3827--3828
+Underfull \hbox (badness 10000) in paragraph at lines 3840--3841
 \T1/lmr/m/it/10 (+20) > No-dos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3827--3828
+Underfull \hbox (badness 10000) in paragraph at lines 3840--3841
 \T1/lmr/m/it/10 (+20) Tamaño >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3827--3828
+Underfull \hbox (badness 10000) in paragraph at lines 3840--3841
 \T1/lmr/m/it/10 (+20) Rank-ing >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3827--3828
-\T1/lmr/m/it/10 (+20) At-trib-uto >
+Underfull \hbox (badness 10000) in paragraph at lines 3840--3841
+\T1/lmr/m/it/10 (+20) At-trib-u-to >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3827--3828
+Underfull \hbox (badness 10000) in paragraph at lines 3840--3841
 \T1/lmr/m/it/10 (+20) Ed-u-ca-tion
  []
 
-<images/02-07-07.png, id=1846, 963.6pt x 782.925pt>
+<images/02-07-07.png, id=1858, 963.6pt x 782.925pt>
 File: images/02-07-07.png Graphic file (type png)
 <use images/02-07-07.png>
-Package pdftex.def Info: images/02-07-07.png  used on input line 3850.
+Package pdftex.def Info: images/02-07-07.png  used on input line 3863.
 (pdftex.def)             Requested size: 344.99901pt x 280.31169pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[120] [121 <./images/02-07-06.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 3860--3882
+LaTeX Info: Redefining \. on input line 3869.
+LaTeX Info: Redefining \% on input line 3869.
+[120]
+LaTeX Info: Redefining \. on input line 3869.
+LaTeX Info: Redefining \% on input line 3869.
+[121 <./images/02-07-06.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 3873--3895
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3886--3887
+Underfull \hbox (badness 10000) in paragraph at lines 3899--3900
 []\T1/lmr/m/it/10 (+20) Herramientas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3886--3887
+Underfull \hbox (badness 10000) in paragraph at lines 3899--3900
 \T1/lmr/m/it/10 (+20) > Gen-er-ate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3886--3887
+Underfull \hbox (badness 10000) in paragraph at lines 3899--3900
 \T1/lmr/m/it/10 (+20) groups by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3883--3908
+Underfull \hbox (badness 10000) in paragraph at lines 3896--3921
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[122] [123 <./images/02-07-07.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Info: Redefining \. on input line 3965.
+LaTeX Info: Redefining \% on input line 3965.
+[122]
+LaTeX Info: Redefining \. on input line 3965.
+LaTeX Info: Redefining \% on input line 3965.
+[123 <./images/02-07-07.png>]
+Underfull \vbox (badness 6412) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 3968.
+LaTeX Info: Redefining \% on input line 3968.
 [124]
-<images/02-07-08.png, id=1886, 963.6pt x 782.925pt>
+<images/02-07-08.png, id=1898, 963.6pt x 782.925pt>
 File: images/02-07-08.png Graphic file (type png)
 <use images/02-07-08.png>
-Package pdftex.def Info: images/02-07-08.png  used on input line 3958.
+Package pdftex.def Info: images/02-07-08.png  used on input line 3971.
 (pdftex.def)             Requested size: 344.99901pt x 280.31169pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3968--3969
+Underfull \hbox (badness 10000) in paragraph at lines 3981--3982
 []\T1/lmr/m/it/10 (+20) Nodos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 3968--3969
+Underfull \hbox (badness 10000) in paragraph at lines 3981--3982
 \T1/lmr/m/it/10 (+20) Tamaño >
  []
 
-<images/02-07-09.png, id=1889, 963.6pt x 782.925pt>
+<images/02-07-09.png, id=1901, 963.6pt x 782.925pt>
 File: images/02-07-09.png Graphic file (type png)
 <use images/02-07-09.png>
-Package pdftex.def Info: images/02-07-09.png  used on input line 3991.
+Package pdftex.def Info: images/02-07-09.png  used on input line 4004.
 (pdftex.def)             Requested size: 344.99901pt x 280.31169pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 4010.
+LaTeX Info: Redefining \% on input line 4010.
 [125 <./images/02-07-08.png>]
-<images/02-07-10.png, id=1897, 963.6pt x 782.925pt>
+<images/02-07-10.png, id=1909, 963.6pt x 782.925pt>
 File: images/02-07-10.png Graphic file (type png)
 <use images/02-07-10.png>
-Package pdftex.def Info: images/02-07-10.png  used on input line 4022.
+Package pdftex.def Info: images/02-07-10.png  used on input line 4035.
 (pdftex.def)             Requested size: 344.99901pt x 280.31169pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 4041.
+LaTeX Info: Redefining \% on input line 4041.
 [126 <./images/02-07-09.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 4035--4036
+Underfull \hbox (badness 10000) in paragraph at lines 4048--4049
 []\T1/lmr/m/it/10 (+20) Filtros >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4035--4036
+Underfull \hbox (badness 10000) in paragraph at lines 4048--4049
 \T1/lmr/m/it/10 (+20) Atrib-u-tos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4035--4036
+Underfull \hbox (badness 10000) in paragraph at lines 4048--4049
 \T1/lmr/m/it/10 (+20) Par-ti-ción >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4037--4038
+Underfull \hbox (badness 10000) in paragraph at lines 4050--4051
 []\T1/lmr/m/it/10 (+20) Consultas >
  []
 
 
-Underfull \hbox (badness 1377) in paragraph at lines 4039--4040
-\T1/lmr/m/it/10 (+20) fil-trado a un
+Underfull \hbox (badness 1377) in paragraph at lines 4052--4053
+\T1/lmr/m/it/10 (+20) fil-tra-do a un
  []
 
-<images/02-07-11.png, id=1907, 481.8pt x 391.4625pt>
+<images/02-07-11.png, id=1919, 481.8pt x 391.4625pt>
 File: images/02-07-11.png Graphic file (type png)
 <use images/02-07-11.png>
-Package pdftex.def Info: images/02-07-11.png  used on input line 4061.
+Package pdftex.def Info: images/02-07-11.png  used on input line 4074.
 (pdftex.def)             Requested size: 345.00635pt x 280.31766pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 4080.
+LaTeX Info: Redefining \% on input line 4080.
 [127 <./images/02-07-10.png>]
-<images/02-07-12.png, id=1918, 963.6pt x 782.925pt>
+<images/02-07-12.png, id=1931, 963.6pt x 782.925pt>
 File: images/02-07-12.png Graphic file (type png)
 <use images/02-07-12.png>
-Package pdftex.def Info: images/02-07-12.png  used on input line 4092.
+Package pdftex.def Info: images/02-07-12.png  used on input line 4105.
 (pdftex.def)             Requested size: 344.99901pt x 280.31169pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[128 <./images/02-07-11.png>] [129 <./images/02-07-12.png>] [130
+LaTeX Info: Redefining \. on input line 4111.
+LaTeX Info: Redefining \% on input line 4111.
+[128 <./images/02-07-11.png>]
+LaTeX Info: Redefining \. on input line 4113.
+LaTeX Info: Redefining \% on input line 4113.
+[129 <./images/02-07-12.png>]
+LaTeX Info: Redefining \. on input line 4113.
+LaTeX Info: Redefining \% on input line 4113.
+[130
 
 ] [131] [132]
-Chapter 8.
+Cap\'{\i }tulo 8.
 [133
 
 ]
-<03-topologia_files/figure-latex/3-1-star-1.pdf, id=1968, 469.755pt x 290.08376
+<03-topologia_files/figure-latex/3-1-star-1.pdf, id=1980, 469.755pt x 290.08376
 pt>
 File: 03-topologia_files/figure-latex/3-1-star-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-star-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-star-1.pdf  used o
-n input line 4115.
+n input line 4128.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<03-topologia_files/figure-latex/3-1-full-1.pdf, id=1969, 469.755pt x 290.08376
+<03-topologia_files/figure-latex/3-1-full-1.pdf, id=1981, 469.755pt x 290.08376
 pt>
 File: 03-topologia_files/figure-latex/3-1-full-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-full-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-full-1.pdf  used o
-n input line 4124.
+n input line 4137.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 4155.
+LaTeX Info: Redefining \% on input line 4155.
 [134 <./03-topologia_files/figure-latex/3-1-star-1.pdf>]
-<03-topologia_files/figure-latex/3-1-g5-1.pdf, id=1986, 469.755pt x 290.08376pt
+<03-topologia_files/figure-latex/3-1-g5-1.pdf, id=1998, 469.755pt x 290.08376pt
 >
 File: 03-topologia_files/figure-latex/3-1-g5-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-g5-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-g5-1.pdf  used on 
-input line 4147.
+input line 4160.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<03-topologia_files/figure-latex/3-1-g10-1.pdf, id=1987, 469.755pt x 290.08376p
+<03-topologia_files/figure-latex/3-1-g10-1.pdf, id=1999, 469.755pt x 290.08376p
 t>
 File: 03-topologia_files/figure-latex/3-1-g10-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-g10-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-g10-1.pdf  used on
- input line 4156.
+ input line 4169.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<03-topologia_files/figure-latex/3-1-circ-1.pdf, id=1992, 469.755pt x 290.08376
+<03-topologia_files/figure-latex/3-1-circ-1.pdf, id=2004, 469.755pt x 290.08376
 pt>
 File: 03-topologia_files/figure-latex/3-1-circ-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-circ-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-circ-1.pdf  used o
-n input line 4178.
+n input line 4191.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[135 <./03-topologia_files/figure-latex/3-1-full-1.pdf>] [136 <./03-topologia_f
-iles/figure-latex/3-1-g5-1.pdf> <./03-topologia_files/figure-latex/3-1-g10-1.pd
-f>] [137 <./03-topologia_files/figure-latex/3-1-circ-1.pdf>]
-<03-topologia_files/figure-latex/3-1-diam-1.pdf, id=2042, 469.755pt x 290.08376
+LaTeX Info: Redefining \. on input line 4199.
+LaTeX Info: Redefining \% on input line 4199.
+[135 <./03-topologia_files/figure-latex/3-1-full-1.pdf>]
+LaTeX Info: Redefining \. on input line 4199.
+LaTeX Info: Redefining \% on input line 4199.
+[136 <./03-topologia_files/figure-latex/3-1-g5-1.pdf> <./03-topologia_files/fig
+ure-latex/3-1-g10-1.pdf>]
+LaTeX Info: Redefining \. on input line 4217.
+LaTeX Info: Redefining \% on input line 4217.
+[137 <./03-topologia_files/figure-latex/3-1-circ-1.pdf>]
+<03-topologia_files/figure-latex/3-1-diam-1.pdf, id=2054, 469.755pt x 290.08376
 pt>
 File: 03-topologia_files/figure-latex/3-1-diam-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-diam-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-diam-1.pdf  used o
-n input line 4212.
+n input line 4225.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 4235.
+LaTeX Info: Redefining \% on input line 4235.
 [138 <./03-topologia_files/figure-latex/3-1-diam-1.pdf>]
-<03-topologia_files/figure-latex/3-1-den-1.pdf, id=2060, 469.755pt x 290.08376p
+<03-topologia_files/figure-latex/3-1-den-1.pdf, id=2072, 469.755pt x 290.08376p
 t>
 File: 03-topologia_files/figure-latex/3-1-den-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-den-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-den-1.pdf  used on
- input line 4249.
+ input line 4262.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[139] [140 <./03-topologia_files/figure-latex/3-1-den-1.pdf>]
-<03-topologia_files/figure-latex/3-1-avg1-1.pdf, id=2087, 469.755pt x 290.08376
+LaTeX Info: Redefining \. on input line 4271.
+LaTeX Info: Redefining \% on input line 4271.
+[139]
+LaTeX Info: Redefining \. on input line 4291.
+LaTeX Info: Redefining \% on input line 4291.
+[140 <./03-topologia_files/figure-latex/3-1-den-1.pdf>]
+<03-topologia_files/figure-latex/3-1-avg1-1.pdf, id=2099, 469.755pt x 290.08376
 pt>
 File: 03-topologia_files/figure-latex/3-1-avg1-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-avg1-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-avg1-1.pdf  used o
-n input line 4284.
+n input line 4297.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<03-topologia_files/figure-latex/3-1-avg2-1.pdf, id=2088, 469.755pt x 290.08376
+<03-topologia_files/figure-latex/3-1-avg2-1.pdf, id=2100, 469.755pt x 290.08376
 pt>
 File: 03-topologia_files/figure-latex/3-1-avg2-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-avg2-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-avg2-1.pdf  used o
-n input line 4293.
+n input line 4306.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[141 <./03-topologia_files/figure-latex/3-1-avg1-1.pdf>] [142 <./03-topologia_f
-iles/figure-latex/3-1-avg2-1.pdf>]
-<03-topologia_files/figure-latex/3-1-star3-1.pdf, id=2129, 469.755pt x 290.0837
+LaTeX Info: Redefining \. on input line 4319.
+LaTeX Info: Redefining \% on input line 4319.
+[141 <./03-topologia_files/figure-latex/3-1-avg1-1.pdf>]
+LaTeX Info: Redefining \. on input line 4328.
+LaTeX Info: Redefining \% on input line 4328.
+[142 <./03-topologia_files/figure-latex/3-1-avg2-1.pdf>]
+<03-topologia_files/figure-latex/3-1-star3-1.pdf, id=2141, 469.755pt x 290.0837
 6pt>
 File: 03-topologia_files/figure-latex/3-1-star3-1.pdf Graphic file (type pdf)
 <use 03-topologia_files/figure-latex/3-1-star3-1.pdf>
 Package pdftex.def Info: 03-topologia_files/figure-latex/3-1-star3-1.pdf  used 
-on input line 4346.
+on input line 4359.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 4375.
+LaTeX Info: Redefining \% on input line 4375.
 [143]
 Underfull \vbox (badness 1389) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 4393.
+LaTeX Info: Redefining \% on input line 4393.
 [144 <./03-topologia_files/figure-latex/3-1-star3-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 4392--4394
-[][]\T1/lmr/m/it/10 (+20) Gephi[]
+Underfull \hbox (badness 10000) in paragraph at lines 4405--4407
+[][]\T1/lmr/m/it/10 (+20) Gephi[] Archi-
  []
 
 
-Overfull \hbox (0.72023pt too wide) in paragraph at lines 4392--4394
-\T1/lmr/m/it/10 (-20) Archivo>Abrir 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4391--4414
+Underfull \hbox (badness 10000) in paragraph at lines 4404--4427
 
  []
 
-<images/02-08-01.png, id=2155, 481.8pt x 391.4625pt>
+<images/02-08-01.png, id=2167, 481.8pt x 391.4625pt>
 File: images/02-08-01.png Graphic file (type png)
 <use images/02-08-01.png>
-Package pdftex.def Info: images/02-08-01.png  used on input line 4440.
+Package pdftex.def Info: images/02-08-01.png  used on input line 4453.
 (pdftex.def)             Requested size: 345.00635pt x 280.31766pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4448--4449
+Underfull \hbox (badness 10000) in paragraph at lines 4461--4462
 []\T1/lmr/m/it/10 (+20) Estadísticas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4448--4449
+Underfull \hbox (badness 10000) in paragraph at lines 4461--4462
 \T1/lmr/m/it/10 (+20) > Den-si-dad
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4448--4449
+Underfull \hbox (badness 10000) in paragraph at lines 4461--4462
 \T1/lmr/m/it/10 (+20) de grafo >
  []
 
-<images/02-08-02.png, id=2157, 481.8pt x 391.4625pt>
+<images/02-08-02.png, id=2169, 481.8pt x 391.4625pt>
 File: images/02-08-02.png Graphic file (type png)
 <use images/02-08-02.png>
-Package pdftex.def Info: images/02-08-02.png  used on input line 4471.
+Package pdftex.def Info: images/02-08-02.png  used on input line 4484.
 (pdftex.def)             Requested size: 345.00635pt x 280.31766pt.
-[145] [146 <./images/02-08-01.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 4478--4501
+LaTeX Info: Redefining \. on input line 4490.
+LaTeX Info: Redefining \% on input line 4490.
+[145]
+LaTeX Info: Redefining \. on input line 4490.
+LaTeX Info: Redefining \% on input line 4490.
+[146 <./images/02-08-01.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 4491--4514
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 4515.
+LaTeX Info: Redefining \% on input line 4515.
 [147 <./images/02-08-02.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 4503--4504
+Underfull \hbox (badness 10000) in paragraph at lines 4516--4517
 []\T1/lmr/m/it/10 (+20) Estadísticas
  []
 
 
-Underfull \hbox (badness 7963) in paragraph at lines 4503--4504
+Underfull \hbox (badness 7963) in paragraph at lines 4516--4517
 \T1/lmr/m/it/10 (+20) > Clus-ter-ing
  []
 
 
-Underfull \hbox (badness 3954) in paragraph at lines 4503--4504
+Underfull \hbox (badness 3954) in paragraph at lines 4516--4517
 \T1/lmr/m/it/10 (+20) Co-ef-fi-cient >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4502--4525
+Underfull \hbox (badness 10000) in paragraph at lines 4515--4538
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 4539.
+LaTeX Info: Redefining \% on input line 4539.
 [148]
-Underfull \hbox (badness 2913) in paragraph at lines 4527--4528
+Underfull \hbox (badness 2913) in paragraph at lines 4540--4541
 \T1/lmr/m/it/10 (+20) Lon-gi-tud me-
  []
 
-<images/02-08-03.png, id=2189, 517.935pt x 447.17062pt>
+<images/02-08-03.png, id=2201, 517.935pt x 447.17062pt>
 File: images/02-08-03.png Graphic file (type png)
 <use images/02-08-03.png>
-Package pdftex.def Info: images/02-08-03.png  used on input line 4550.
+Package pdftex.def Info: images/02-08-03.png  used on input line 4563.
 (pdftex.def)             Requested size: 345.01517pt x 297.87646pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[149] [150] [151 <./images/02-08-03.png>] [152
+LaTeX Info: Redefining \. on input line 4569.
+LaTeX Info: Redefining \% on input line 4569.
+[149]
+LaTeX Info: Redefining \. on input line 4571.
+LaTeX Info: Redefining \% on input line 4571.
+[150]
+LaTeX Info: Redefining \. on input line 4571.
+LaTeX Info: Redefining \% on input line 4571.
+[151 <./images/02-08-03.png>]
+LaTeX Info: Redefining \. on input line 4571.
+LaTeX Info: Redefining \% on input line 4571.
+[152
 
 ]
-Chapter 9.
-<03-subgrupos_files/figure-latex/3-2-weakcomp-1.pdf, id=2216, 469.755pt x 290.0
+Cap\'{\i }tulo 9.
+<03-subgrupos_files/figure-latex/3-2-weakcomp-1.pdf, id=2228, 469.755pt x 290.0
 8376pt>
 File: 03-subgrupos_files/figure-latex/3-2-weakcomp-1.pdf Graphic file (type pdf
 )
 <use 03-subgrupos_files/figure-latex/3-2-weakcomp-1.pdf>
 Package pdftex.def Info: 03-subgrupos_files/figure-latex/3-2-weakcomp-1.pdf  us
-ed on input line 4576.
+ed on input line 4589.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
 [153]
-<03-subgrupos_files/figure-latex/3-2-strongcomp-1.pdf, id=2231, 469.755pt x 290
+<03-subgrupos_files/figure-latex/3-2-strongcomp-1.pdf, id=2242, 469.755pt x 290
 .08376pt>
 File: 03-subgrupos_files/figure-latex/3-2-strongcomp-1.pdf Graphic file (type p
 df)
 <use 03-subgrupos_files/figure-latex/3-2-strongcomp-1.pdf>
 Package pdftex.def Info: 03-subgrupos_files/figure-latex/3-2-strongcomp-1.pdf  
-used on input line 4592.
+used on input line 4605.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[154 <./03-subgrupos_files/figure-latex/3-2-weakcomp-1.pdf>] [155 <./03-subgrup
-os_files/figure-latex/3-2-strongcomp-1.pdf>]
-<03-subgrupos_files/figure-latex/unnamed-chunk-1-1.pdf, id=2263, 469.755pt x 29
+LaTeX Info: Redefining \. on input line 4613.
+LaTeX Info: Redefining \% on input line 4613.
+[154 <./03-subgrupos_files/figure-latex/3-2-weakcomp-1.pdf>]
+LaTeX Info: Redefining \. on input line 4621.
+LaTeX Info: Redefining \% on input line 4621.
+[155 <./03-subgrupos_files/figure-latex/3-2-strongcomp-1.pdf>]
+<03-subgrupos_files/figure-latex/unnamed-chunk-1-1.pdf, id=2274, 469.755pt x 29
 0.08376pt>
 File: 03-subgrupos_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type 
 pdf)
 <use 03-subgrupos_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 03-subgrupos_files/figure-latex/unnamed-chunk-1-1.pdf 
- used on input line 4608.
+ used on input line 4621.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<03-subgrupos_files/figure-latex/3-2-kcore-1.pdf, id=2264, 469.755pt x 290.0837
+<03-subgrupos_files/figure-latex/3-2-kcore-1.pdf, id=2275, 469.755pt x 290.0837
 6pt>
 File: 03-subgrupos_files/figure-latex/3-2-kcore-1.pdf Graphic file (type pdf)
 <use 03-subgrupos_files/figure-latex/3-2-kcore-1.pdf>
 Package pdftex.def Info: 03-subgrupos_files/figure-latex/3-2-kcore-1.pdf  used 
-on input line 4612.
+on input line 4625.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 4638.
+LaTeX Info: Redefining \% on input line 4638.
 [156 <./03-subgrupos_files/figure-latex/unnamed-chunk-1-1.pdf> <./03-subgrupos_
 files/figure-latex/3-2-kcore-1.pdf>]
-<03-subgrupos_files/figure-latex/3-2-bowtie-1.pdf, id=2285, 469.755pt x 290.083
+<03-subgrupos_files/figure-latex/3-2-bowtie-1.pdf, id=2296, 469.755pt x 290.083
 76pt>
 File: 03-subgrupos_files/figure-latex/3-2-bowtie-1.pdf Graphic file (type pdf)
 <use 03-subgrupos_files/figure-latex/3-2-bowtie-1.pdf>
 Package pdftex.def Info: 03-subgrupos_files/figure-latex/3-2-bowtie-1.pdf  used
- on input line 4628.
+ on input line 4641.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<03-subgrupos_files/figure-latex/3-2-gn-1.pdf, id=2287, 469.755pt x 290.08376pt
+<03-subgrupos_files/figure-latex/3-2-gn-1.pdf, id=2298, 469.755pt x 290.08376pt
 >
 File: 03-subgrupos_files/figure-latex/3-2-gn-1.pdf Graphic file (type pdf)
 <use 03-subgrupos_files/figure-latex/3-2-gn-1.pdf>
 Package pdftex.def Info: 03-subgrupos_files/figure-latex/3-2-gn-1.pdf  used on 
-input line 4639.
+input line 4652.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 4665.
+LaTeX Info: Redefining \% on input line 4665.
 [157 <./03-subgrupos_files/figure-latex/3-2-bowtie-1.pdf>]
 
-LaTeX Warning: Command \textendash invalid in math mode on input line 4654.
+LaTeX Warning: Command \textendash invalid in math mode on input line 4667.
 
-<03-subgrupos_files/figure-latex/3-2-tie3-1.pdf, id=2309, 469.755pt x 290.08376
+<03-subgrupos_files/figure-latex/3-2-tie3-1.pdf, id=2320, 469.755pt x 290.08376
 pt>
 File: 03-subgrupos_files/figure-latex/3-2-tie3-1.pdf Graphic file (type pdf)
 <use 03-subgrupos_files/figure-latex/3-2-tie3-1.pdf>
 Package pdftex.def Info: 03-subgrupos_files/figure-latex/3-2-tie3-1.pdf  used o
-n input line 4663.
+n input line 4676.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[158 <./03-subgrupos_files/figure-latex/3-2-gn-1.pdf>] [159 <./03-subgrupos_fil
-es/figure-latex/3-2-tie3-1.pdf>]
+LaTeX Info: Redefining \. on input line 4694.
+LaTeX Info: Redefining \% on input line 4694.
+[158 <./03-subgrupos_files/figure-latex/3-2-gn-1.pdf>]
+LaTeX Info: Redefining \. on input line 4713.
+LaTeX Info: Redefining \% on input line 4713.
+[159 <./03-subgrupos_files/figure-latex/3-2-tie3-1.pdf>]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 4701.
+LaTeX Font Warning: Command \small invalid in math mode on input line 4714.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 4703.
+(Font)              <9> on input line 4716.
+LaTeX Info: Redefining \. on input line 4749.
+LaTeX Info: Redefining \% on input line 4749.
 [160]
-<03-subgrupos_files/figure-latex/3-2-process-1.pdf, id=2343, 469.755pt x 290.08
+<03-subgrupos_files/figure-latex/3-2-process-1.pdf, id=2354, 469.755pt x 290.08
 376pt>
 File: 03-subgrupos_files/figure-latex/3-2-process-1.pdf Graphic file (type pdf)
 
 <use 03-subgrupos_files/figure-latex/3-2-process-1.pdf>
 Package pdftex.def Info: 03-subgrupos_files/figure-latex/3-2-process-1.pdf  use
-d on input line 4747.
+d on input line 4760.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 4768.
+LaTeX Info: Redefining \% on input line 4768.
 [161 <./03-subgrupos_files/figure-latex/3-2-process-1.pdf>]
-<03-subgrupos_files/figure-latex/3-2-bigone-1.pdf, id=2361, 469.755pt x 290.083
+<03-subgrupos_files/figure-latex/3-2-bigone-1.pdf, id=2372, 469.755pt x 290.083
 76pt>
 File: 03-subgrupos_files/figure-latex/3-2-bigone-1.pdf Graphic file (type pdf)
 <use 03-subgrupos_files/figure-latex/3-2-bigone-1.pdf>
 Package pdftex.def Info: 03-subgrupos_files/figure-latex/3-2-bigone-1.pdf  used
- on input line 4758.
+ on input line 4771.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 4784.
+LaTeX Info: Redefining \% on input line 4784.
 [162 <./03-subgrupos_files/figure-latex/3-2-bigone-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 4783--4784
+Underfull \hbox (badness 10000) in paragraph at lines 4796--4797
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4798--4799
-[]\T1/lmr/m/n/10 (+20) Abra Gephi y lea el archivo
+Underfull \hbox (badness 10000) in paragraph at lines 4811--4812
+[]\T1/lmr/m/n/10 (+20) Abra Gephi y lea el archi-vo
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4798--4799
+Underfull \hbox (badness 10000) in paragraph at lines 4811--4812
 \T1/lmtt/m/n/10 alive_trust_network.gephi\T1/lmr/m/n/10 (+20) , que puede desca
 r-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4780--4804
+Underfull \hbox (badness 10000) in paragraph at lines 4793--4817
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4808--4809
+Underfull \hbox (badness 10000) in paragraph at lines 4821--4822
 \T1/lmr/m/it/10 (+20) Com-po-nentes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4808--4809
-\T1/lmr/m/it/10 (+20) conexos >
+Underfull \hbox (badness 10000) in paragraph at lines 4821--4822
+\T1/lmr/m/it/10 (+20) conex-os >
  []
 
-<images/03-09-01.png, id=2378, 516.42938pt x 575.90157pt>
+<images/03-09-01.png, id=2389, 516.42938pt x 575.90157pt>
 File: images/03-09-01.png Graphic file (type png)
 <use images/03-09-01.png>
-Package pdftex.def Info: images/03-09-01.png  used on input line 4831.
+Package pdftex.def Info: images/03-09-01.png  used on input line 4844.
 (pdftex.def)             Requested size: 345.013pt x 384.74481pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 4850.
+LaTeX Info: Redefining \% on input line 4850.
 [163]
-<images/03-09-02.png, id=2389, 1083.29718pt x 782.925pt>
+<images/03-09-02.png, id=2400, 1083.29718pt x 782.925pt>
 File: images/03-09-02.png Graphic file (type png)
 <use images/03-09-02.png>
-Package pdftex.def Info: images/03-09-02.png  used on input line 4840.
+Package pdftex.def Info: images/03-09-02.png  used on input line 4853.
 (pdftex.def)             Requested size: 344.99268pt x 249.33452pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4854--4855
-[]\T1/lmr/m/it/10 (+20) Apariencia
+Underfull \hbox (badness 1917) in paragraph at lines 4867--4868
+[]\T1/lmr/m/it/10 (+20) Apariencia >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4854--4855
-\T1/lmr/m/it/10 (+20) > No-dos
+Underfull \hbox (badness 10000) in paragraph at lines 4867--4868
+\T1/lmr/m/it/10 (+20) atrib-u-to >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4854--4855
-\T1/lmr/m/it/10 (+20) > Color >
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4854--4855
-\T1/lmr/m/it/10 (+20) Par-ti-ción >
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4854--4855
-\T1/lmr/m/it/10 (+20) --Escoge un
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4854--4855
-\T1/lmr/m/it/10 (+20) atrib-uto >
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4847--4876
+Underfull \hbox (badness 10000) in paragraph at lines 4860--4889
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4880--4881
+Underfull \hbox (badness 10000) in paragraph at lines 4893--4894
 []\T1/lmr/m/it/10 (+20) Filtros >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4880--4881
+Underfull \hbox (badness 10000) in paragraph at lines 4893--4894
 \T1/lmr/m/it/10 (+20) Atrib-u-tos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4880--4881
+Underfull \hbox (badness 10000) in paragraph at lines 4893--4894
 \T1/lmr/m/it/10 (+20) Par-ti-ción
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4880--4881
+Underfull \hbox (badness 10000) in paragraph at lines 4893--4894
 \T1/lmr/m/it/10 (+20) > Queries
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4880--4881
+Underfull \hbox (badness 10000) in paragraph at lines 4893--4894
 \T1/lmr/m/it/10 (+20) > Par-ti-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4880--4881
+Underfull \hbox (badness 10000) in paragraph at lines 4893--4894
 \T1/lmr/m/it/10 (+20) > Fil-ter >
  []
 
-<images/03-09-03.png, id=2395, 1083.29718pt x 782.925pt>
+<images/03-09-03.png, id=2406, 1083.29718pt x 782.925pt>
 File: images/03-09-03.png Graphic file (type png)
 <use images/03-09-03.png>
-Package pdftex.def Info: images/03-09-03.png  used on input line 4903.
+Package pdftex.def Info: images/03-09-03.png  used on input line 4916.
 (pdftex.def)             Requested size: 344.99268pt x 249.33452pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[164] [165 <./images/03-09-01.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 4910--4933
+LaTeX Info: Redefining \. on input line 4922.
+LaTeX Info: Redefining \% on input line 4922.
+[164]
+LaTeX Info: Redefining \. on input line 4922.
+LaTeX Info: Redefining \% on input line 4922.
+[165 <./images/03-09-01.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 4923--4946
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 4947.
+LaTeX Info: Redefining \% on input line 4947.
 [166 <./images/03-09-02.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 4935--4936
+Underfull \hbox (badness 10000) in paragraph at lines 4948--4949
 []\T1/lmr/m/it/10 (+20) Filtros >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4935--4936
+Underfull \hbox (badness 10000) in paragraph at lines 4948--4949
 \T1/lmr/m/it/10 (+20) Topología >
  []
 
-<images/03-09-04.png, id=2418, 1083.29718pt x 782.925pt>
+<images/03-09-04.png, id=2429, 1083.29718pt x 782.925pt>
 File: images/03-09-04.png Graphic file (type png)
 <use images/03-09-04.png>
-Package pdftex.def Info: images/03-09-04.png  used on input line 4958.
+Package pdftex.def Info: images/03-09-04.png  used on input line 4971.
 (pdftex.def)             Requested size: 344.99268pt x 249.33452pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 4977.
+LaTeX Info: Redefining \% on input line 4977.
 [167 <./images/03-09-03.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 4968--4969
+Underfull \hbox (badness 10000) in paragraph at lines 4981--4982
 []\T1/lmr/m/it/10 (+20) Estadísticas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4968--4969
+Underfull \hbox (badness 10000) in paragraph at lines 4981--4982
 \T1/lmr/m/it/10 (+20) > Girvan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4968--4969
+Underfull \hbox (badness 10000) in paragraph at lines 4981--4982
 \T1/lmr/m/it/10 (+20) Newman
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4968--4969
+Underfull \hbox (badness 10000) in paragraph at lines 4981--4982
 \T1/lmr/m/it/10 (+20) Clus-ter-ing >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4965--4990
+Underfull \hbox (badness 10000) in paragraph at lines 4978--5003
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 5004.
+LaTeX Info: Redefining \% on input line 5004.
 [168 <./images/03-09-04.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 4992--4993
-[]\T1/lmr/m/it/10 (+20) Apariencia
+Underfull \hbox (badness 1917) in paragraph at lines 5005--5006
+[]\T1/lmr/m/it/10 (+20) Apariencia >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4992--4993
-\T1/lmr/m/it/10 (+20) > No-dos
+Underfull \hbox (badness 10000) in paragraph at lines 5005--5006
+\T1/lmr/m/it/10 (+20) atrib-u-to >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4992--4993
-\T1/lmr/m/it/10 (+20) > Color >
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4992--4993
-\T1/lmr/m/it/10 (+20) Par-ti-ción >
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4992--4993
-\T1/lmr/m/it/10 (+20) --Escoge un
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4992--4993
-\T1/lmr/m/it/10 (+20) atrib-uto >
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4992--4993
+Underfull \hbox (badness 10000) in paragraph at lines 5005--5006
 \T1/lmr/m/it/10 (+20) Cluter-ID >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4991--5014
+Underfull \hbox (badness 10000) in paragraph at lines 5004--5027
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5015--5038
+Underfull \hbox (badness 10000) in paragraph at lines 5028--5051
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5040--5041
-[]\T1/lmr/m/it/10 (+20) Apariencia
+Underfull \hbox (badness 1917) in paragraph at lines 5053--5054
+[]\T1/lmr/m/it/10 (+20) Apariencia >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5040--5041
-\T1/lmr/m/it/10 (+20) > No-dos >
+Underfull \hbox (badness 10000) in paragraph at lines 5053--5054
+\T1/lmr/m/it/10 (+20) or>Partición
  []
 
 
-Overfull \hbox (8.08742pt too wide) in paragraph at lines 5040--5041
-\T1/lmr/m/it/10 (-20) Color>Partición
+Underfull \hbox (badness 10000) in paragraph at lines 5053--5054
+\T1/lmr/m/it/10 (+20) > --Escoge
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5040--5041
-\T1/lmr/m/it/10 (+20) atrib-uto
+Underfull \hbox (badness 10000) in paragraph at lines 5053--5054
+\T1/lmr/m/it/10 (+20) un atrib-u-to
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5040--5041
-\T1/lmr/m/it/10 (+20) >Mod-u-lar-
+Underfull \hbox (badness 10000) in paragraph at lines 5053--5054
+\T1/lmr/m/it/10 (+20) >Mod-u-lar-i-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5040--5041
-\T1/lmr/m/it/10 (+20) ity Class >
+Underfull \hbox (badness 10000) in paragraph at lines 5053--5054
+\T1/lmr/m/it/10 (+20) ty Class >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5039--5062
+Underfull \hbox (badness 10000) in paragraph at lines 5052--5075
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5064--5065
+Underfull \hbox (badness 10000) in paragraph at lines 5077--5078
 []\T1/lmr/m/it/10 (+20) Generate
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5064--5065
+Underfull \hbox (badness 10000) in paragraph at lines 5077--5078
 \T1/lmr/m/it/10 (+20) groups by
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5063--5086
+Underfull \hbox (badness 10000) in paragraph at lines 5076--5099
 
  []
 
 
-Underfull \vbox (badness 2875) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[169] [170]
-Chapter 10.
+LaTeX Info: Redefining \. on input line 5100.
+LaTeX Info: Redefining \% on input line 5100.
+[169]
+LaTeX Info: Redefining \. on input line 5123.
+LaTeX Info: Redefining \% on input line 5123.
+[170]
+Cap\'{\i }tulo 10.
 [171
 
 ]
-<03-centralidad_files/figure-latex/3-3-degree-1.pdf, id=2470, 469.755pt x 290.0
+<03-centralidad_files/figure-latex/3-3-degree-1.pdf, id=2481, 469.755pt x 290.0
 8376pt>
 File: 03-centralidad_files/figure-latex/3-3-degree-1.pdf Graphic file (type pdf
 )
 <use 03-centralidad_files/figure-latex/3-3-degree-1.pdf>
 Package pdftex.def Info: 03-centralidad_files/figure-latex/3-3-degree-1.pdf  us
-ed on input line 5148.
+ed on input line 5161.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[172] [173 <./03-centralidad_files/figure-latex/3-3-degree-1.pdf>]
-<03-centralidad_files/figure-latex/3-3-evexample-1.pdf, id=2504, 469.755pt x 29
+LaTeX Info: Redefining \. on input line 5205.
+LaTeX Info: Redefining \% on input line 5205.
+[172]
+LaTeX Info: Redefining \. on input line 5210.
+LaTeX Info: Redefining \% on input line 5210.
+[173 <./03-centralidad_files/figure-latex/3-3-degree-1.pdf>]
+<03-centralidad_files/figure-latex/3-3-evexample-1.pdf, id=2514, 469.755pt x 29
 0.08376pt>
 File: 03-centralidad_files/figure-latex/3-3-evexample-1.pdf Graphic file (type 
 pdf)
 <use 03-centralidad_files/figure-latex/3-3-evexample-1.pdf>
 Package pdftex.def Info: 03-centralidad_files/figure-latex/3-3-evexample-1.pdf 
- used on input line 5205.
+ used on input line 5218.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 5229.
+LaTeX Info: Redefining \% on input line 5229.
 [174 <./03-centralidad_files/figure-latex/3-3-evexample-1.pdf>]
-<03-centralidad_files/figure-latex/3-3-ev-1.pdf, id=2523, 469.755pt x 290.08376
+<03-centralidad_files/figure-latex/3-3-ev-1.pdf, id=2533, 469.755pt x 290.08376
 pt>
 File: 03-centralidad_files/figure-latex/3-3-ev-1.pdf Graphic file (type pdf)
 <use 03-centralidad_files/figure-latex/3-3-ev-1.pdf>
 Package pdftex.def Info: 03-centralidad_files/figure-latex/3-3-ev-1.pdf  used o
-n input line 5222.
+n input line 5235.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
 
-LaTeX Warning: Command \' invalid in math mode on input line 5253.
+LaTeX Warning: Command \' invalid in math mode on input line 5266.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5253.
+LaTeX Warning: Command \' invalid in math mode on input line 5266.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5281.
+LaTeX Warning: Command \' invalid in math mode on input line 5294.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5281.
+LaTeX Warning: Command \' invalid in math mode on input line 5294.
 
+LaTeX Info: Redefining \. on input line 5295.
+LaTeX Info: Redefining \% on input line 5295.
 [175 <./03-centralidad_files/figure-latex/3-3-ev-1.pdf>]
 
-LaTeX Warning: Command \' invalid in math mode on input line 5309.
+LaTeX Warning: Command \' invalid in math mode on input line 5322.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5309.
+LaTeX Warning: Command \' invalid in math mode on input line 5322.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5337.
+LaTeX Warning: Command \' invalid in math mode on input line 5350.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5337.
+LaTeX Warning: Command \' invalid in math mode on input line 5350.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5365.
+LaTeX Warning: Command \' invalid in math mode on input line 5378.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5365.
+LaTeX Warning: Command \' invalid in math mode on input line 5378.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5393.
+LaTeX Warning: Command \' invalid in math mode on input line 5406.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5393.
+LaTeX Warning: Command \' invalid in math mode on input line 5406.
 
+LaTeX Info: Redefining \. on input line 5407.
+LaTeX Info: Redefining \% on input line 5407.
 [176]
 
-LaTeX Warning: Command \' invalid in math mode on input line 5408.
+LaTeX Warning: Command \' invalid in math mode on input line 5421.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5408.
+LaTeX Warning: Command \' invalid in math mode on input line 5421.
 
+LaTeX Info: Redefining \. on input line 5435.
+LaTeX Info: Redefining \% on input line 5435.
 [177]
-<03-centralidad_files/figure-latex/3-3-clo-1.pdf, id=2554, 469.755pt x 290.0837
+<03-centralidad_files/figure-latex/3-3-clo-1.pdf, id=2565, 469.755pt x 290.0837
 6pt>
 File: 03-centralidad_files/figure-latex/3-3-clo-1.pdf Graphic file (type pdf)
 <use 03-centralidad_files/figure-latex/3-3-clo-1.pdf>
 Package pdftex.def Info: 03-centralidad_files/figure-latex/3-3-clo-1.pdf  used 
-on input line 5431.
+on input line 5444.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
 
-LaTeX Warning: Command \' invalid in math mode on input line 5455.
+LaTeX Warning: Command \' invalid in math mode on input line 5468.
 
-[178 <./03-centralidad_files/figure-latex/3-3-clo-1.pdf>] [179]
-<03-centralidad_files/figure-latex/3-3-betw-1.pdf, id=2588, 469.755pt x 290.083
+LaTeX Info: Redefining \. on input line 5471.
+LaTeX Info: Redefining \% on input line 5471.
+[178 <./03-centralidad_files/figure-latex/3-3-clo-1.pdf>]
+LaTeX Info: Redefining \. on input line 5486.
+LaTeX Info: Redefining \% on input line 5486.
+[179]
+<03-centralidad_files/figure-latex/3-3-betw-1.pdf, id=2599, 469.755pt x 290.083
 76pt>
 File: 03-centralidad_files/figure-latex/3-3-betw-1.pdf Graphic file (type pdf)
 <use 03-centralidad_files/figure-latex/3-3-betw-1.pdf>
 Package pdftex.def Info: 03-centralidad_files/figure-latex/3-3-betw-1.pdf  used
- on input line 5488.
+ on input line 5501.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
 
-LaTeX Warning: Command \' invalid in math mode on input line 5495.
+LaTeX Warning: Command \' invalid in math mode on input line 5508.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5497.
+LaTeX Warning: Command \' invalid in math mode on input line 5510.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5499.
+LaTeX Warning: Command \' invalid in math mode on input line 5512.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 5507.
+LaTeX Warning: Command \' invalid in math mode on input line 5520.
 
+LaTeX Info: Redefining \. on input line 5536.
+LaTeX Info: Redefining \% on input line 5536.
 [180]
 
-LaTeX Warning: Command \' invalid in math mode on input line 5529.
+LaTeX Warning: Command \' invalid in math mode on input line 5542.
 
+LaTeX Info: Redefining \. on input line 5547.
+LaTeX Info: Redefining \% on input line 5547.
 [181 <./03-centralidad_files/figure-latex/3-3-betw-1.pdf>]
-<03-centralidad_files/figure-latex/3-3-directed-1.pdf, id=2613, 469.755pt x 290
+<03-centralidad_files/figure-latex/3-3-directed-1.pdf, id=2623, 469.755pt x 290
 .08376pt>
 File: 03-centralidad_files/figure-latex/3-3-directed-1.pdf Graphic file (type p
 df)
 <use 03-centralidad_files/figure-latex/3-3-directed-1.pdf>
 Package pdftex.def Info: 03-centralidad_files/figure-latex/3-3-directed-1.pdf  
-used on input line 5550.
+used on input line 5563.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 5574.
+LaTeX Info: Redefining \% on input line 5574.
 [182]
-Underfull \vbox (badness 1231) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[183 <./03-centralidad_files/figure-latex/3-3-directed-1.pdf>] [184]
-<03-centralidad_files/figure-latex/3-3-directedg-1.pdf, id=2651, 469.755pt x 29
+LaTeX Info: Redefining \. on input line 5595.
+LaTeX Info: Redefining \% on input line 5595.
+[183 <./03-centralidad_files/figure-latex/3-3-directed-1.pdf>]
+LaTeX Info: Redefining \. on input line 5608.
+LaTeX Info: Redefining \% on input line 5608.
+[184]
+<03-centralidad_files/figure-latex/3-3-directedg-1.pdf, id=2661, 469.755pt x 29
 0.08376pt>
 File: 03-centralidad_files/figure-latex/3-3-directedg-1.pdf Graphic file (type 
 pdf)
 <use 03-centralidad_files/figure-latex/3-3-directedg-1.pdf>
 Package pdftex.def Info: 03-centralidad_files/figure-latex/3-3-directedg-1.pdf 
- used on input line 5599.
+ used on input line 5612.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[185 <./03-centralidad_files/figure-latex/3-3-directedg-1.pdf>] [186]
-Underfull \hbox (badness 5008) in paragraph at lines 5710--5712
-[][]\T1/lmr/m/it/10 (+20) Vista gen-eral[]
+LaTeX Info: Redefining \. on input line 5635.
+LaTeX Info: Redefining \% on input line 5635.
+[185 <./03-centralidad_files/figure-latex/3-3-directedg-1.pdf>]
+LaTeX Info: Redefining \. on input line 5708.
+LaTeX Info: Redefining \% on input line 5708.
+[186]
+Underfull \hbox (badness 5008) in paragraph at lines 5723--5725
+[][]\T1/lmr/m/it/10 (+20) Vista gen-er-al[]
  []
 
 
-Underfull \hbox (badness 5388) in paragraph at lines 5726--5727
+Underfull \hbox (badness 6842) in paragraph at lines 5739--5740
 []\T1/lmr/m/n/10 (+20) Abra \T1/lmtt/m/n/10 alive_combined_network.gephi\T1/lmr
 /m/n/10 (+20) , que puede
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5706--5732
+Underfull \hbox (badness 10000) in paragraph at lines 5719--5745
 
  []
 
-<images/03-10-01.png, id=2675, 1081.03876pt x 782.925pt>
+<images/03-10-01.png, id=2686, 1081.03876pt x 782.925pt>
 File: images/03-10-01.png Graphic file (type png)
 <use images/03-10-01.png>
-Package pdftex.def Info: images/03-10-01.png  used on input line 5758.
+Package pdftex.def Info: images/03-10-01.png  used on input line 5771.
 (pdftex.def)             Requested size: 344.99924pt x 249.86017pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 5777.
+LaTeX Info: Redefining \% on input line 5777.
 [187]
-Underfull \hbox (badness 10000) in paragraph at lines 5766--5767
+Underfull \hbox (badness 10000) in paragraph at lines 5779--5780
 []\T1/lmr/m/it/10 (+20) Apariencia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5766--5767
+Underfull \hbox (badness 10000) in paragraph at lines 5779--5780
 \T1/lmr/m/it/10 (+20) > No-dos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5766--5767
+Underfull \hbox (badness 10000) in paragraph at lines 5779--5780
 \T1/lmr/m/it/10 (+20) Tamaño >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5766--5767
+Underfull \hbox (badness 10000) in paragraph at lines 5779--5780
 \T1/lmr/m/it/10 (+20) Rank-ing >
  []
 
-<images/03-10-02.png, id=2687, 1081.03876pt x 782.925pt>
+<images/03-10-02.png, id=2697, 1081.03876pt x 782.925pt>
 File: images/03-10-02.png Graphic file (type png)
 <use images/03-10-02.png>
-Package pdftex.def Info: images/03-10-02.png  used on input line 5789.
+Package pdftex.def Info: images/03-10-02.png  used on input line 5802.
 (pdftex.def)             Requested size: 344.99924pt x 249.86017pt.
 
-Underfull \hbox (badness 5008) in paragraph at lines 5797--5799
-[][]\T1/lmr/m/it/10 (+20) Vista gen-eral[]
+Underfull \hbox (badness 5008) in paragraph at lines 5810--5812
+[][]\T1/lmr/m/it/10 (+20) Vista gen-er-al[]
  []
 
 
-Underfull \hbox (badness 6944) in paragraph at lines 5797--5799
-\T1/lmr/m/it/10 (+20) Grado medio
+Underfull \hbox (badness 6944) in paragraph at lines 5810--5812
+\T1/lmr/m/it/10 (+20) Gra-do medio
  []
 
 
-Underfull \hbox (badness 4013) in paragraph at lines 5797--5799
+Underfull \hbox (badness 4013) in paragraph at lines 5810--5812
 \T1/lmr/m/it/10 (+20) con pe-sos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5796--5820
+Underfull \hbox (badness 10000) in paragraph at lines 5809--5833
 
  []
 
-[188 <./images/03-10-01.png>] [189 <./images/03-10-02.png>]
-Underfull \hbox (badness 2913) in paragraph at lines 5822--5823
+LaTeX Info: Redefining \. on input line 5834.
+LaTeX Info: Redefining \% on input line 5834.
+[188 <./images/03-10-01.png>]
+LaTeX Info: Redefining \. on input line 5834.
+LaTeX Info: Redefining \% on input line 5834.
+[189 <./images/03-10-02.png>]
+Underfull \hbox (badness 2913) in paragraph at lines 5835--5836
 \T1/lmr/m/it/10 (+20) Lon-gi-tud me-
  []
 
-<images/03-10-03.png, id=2705, 423.08063pt x 249.93375pt>
+<images/03-10-03.png, id=2715, 423.08063pt x 249.93375pt>
 File: images/03-10-03.png Graphic file (type png)
 <use images/03-10-03.png>
-Package pdftex.def Info: images/03-10-03.png  used on input line 5845.
+Package pdftex.def Info: images/03-10-03.png  used on input line 5858.
 (pdftex.def)             Requested size: 345.01102pt x 203.81433pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 5853--5854
+Underfull \hbox (badness 10000) in paragraph at lines 5866--5867
 []\T1/lmr/m/it/10 (+20) Estadísticas
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5853--5854
+Underfull \hbox (badness 10000) in paragraph at lines 5866--5867
 \T1/lmr/m/it/10 (+20) del vec-tor
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 5853--5854
+Underfull \hbox (badness 10000) in paragraph at lines 5866--5867
 \T1/lmr/m/it/10 (+20) pro-pio >
  []
 
-[190] [191 <./images/03-10-03.png>] [192
+LaTeX Info: Redefining \. on input line 5888.
+LaTeX Info: Redefining \% on input line 5888.
+[190]
+LaTeX Info: Redefining \. on input line 5888.
+LaTeX Info: Redefining \% on input line 5888.
+[191 <./images/03-10-03.png>]
+LaTeX Info: Redefining \. on input line 5888.
+LaTeX Info: Redefining \% on input line 5888.
+[192
 
 ]
-Chapter 11.
+Cap\'{\i }tulo 11.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [193]
-<03-puentesycorredores_files/figure-latex/3-4-cutpoint-1.pdf, id=2733, 469.755p
+<03-puentesycorredores_files/figure-latex/3-4-cutpoint-1.pdf, id=2743, 469.755p
 t x 290.08376pt>
 File: 03-puentesycorredores_files/figure-latex/3-4-cutpoint-1.pdf Graphic file 
 (type pdf)
 <use 03-puentesycorredores_files/figure-latex/3-4-cutpoint-1.pdf>
 Package pdftex.def Info: 03-puentesycorredores_files/figure-latex/3-4-cutpoint-
-1.pdf  used on input line 5890.
+1.pdf  used on input line 5903.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<03-puentesycorredores_files/figure-latex/3-4-cutset-1.pdf, id=2736, 469.755pt 
+<03-puentesycorredores_files/figure-latex/3-4-cutset-1.pdf, id=2746, 469.755pt 
 x 290.08376pt>
 File: 03-puentesycorredores_files/figure-latex/3-4-cutset-1.pdf Graphic file (t
 ype pdf)
 <use 03-puentesycorredores_files/figure-latex/3-4-cutset-1.pdf>
 Package pdftex.def Info: 03-puentesycorredores_files/figure-latex/3-4-cutset-1.
-pdf  used on input line 5901.
+pdf  used on input line 5914.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 5922.
+LaTeX Info: Redefining \% on input line 5922.
 [194 <./03-puentesycorredores_files/figure-latex/3-4-cutpoint-1.pdf>]
-<03-puentesycorredores_files/figure-latex/3-4-bicomponents-1.pdf, id=2753, 469.
+<03-puentesycorredores_files/figure-latex/3-4-bicomponents-1.pdf, id=2763, 469.
 755pt x 290.08376pt>
 File: 03-puentesycorredores_files/figure-latex/3-4-bicomponents-1.pdf Graphic f
 ile (type pdf)
 <use 03-puentesycorredores_files/figure-latex/3-4-bicomponents-1.pdf>
 Package pdftex.def Info: 03-puentesycorredores_files/figure-latex/3-4-bicompone
-nts-1.pdf  used on input line 5917.
+nts-1.pdf  used on input line 5930.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[195 <./03-puentesycorredores_files/figure-latex/3-4-cutset-1.pdf>] [196 <./03-
-puentesycorredores_files/figure-latex/3-4-bicomponents-1.pdf>]
-<03-puentesycorredores_files/figure-latex/3-4-edgebetween-1.pdf, id=2794, 469.7
+LaTeX Info: Redefining \. on input line 5938.
+LaTeX Info: Redefining \% on input line 5938.
+[195 <./03-puentesycorredores_files/figure-latex/3-4-cutset-1.pdf>]
+LaTeX Info: Redefining \. on input line 5949.
+LaTeX Info: Redefining \% on input line 5949.
+[196 <./03-puentesycorredores_files/figure-latex/3-4-bicomponents-1.pdf>]
+<03-puentesycorredores_files/figure-latex/3-4-edgebetween-1.pdf, id=2805, 469.7
 55pt x 290.08376pt>
 File: 03-puentesycorredores_files/figure-latex/3-4-edgebetween-1.pdf Graphic fi
 le (type pdf)
 <use 03-puentesycorredores_files/figure-latex/3-4-edgebetween-1.pdf>
 Package pdftex.def Info: 03-puentesycorredores_files/figure-latex/3-4-edgebetwe
-en-1.pdf  used on input line 5943.
+en-1.pdf  used on input line 5956.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 5968.
+LaTeX Info: Redefining \% on input line 5968.
 [197 <./03-puentesycorredores_files/figure-latex/3-4-edgebetween-1.pdf>]
-<03-puentesycorredores_files/figure-latex/3-4-holes-1.pdf, id=2811, 469.755pt x
+<03-puentesycorredores_files/figure-latex/3-4-holes-1.pdf, id=2821, 469.755pt x
  290.08376pt>
 File: 03-puentesycorredores_files/figure-latex/3-4-holes-1.pdf Graphic file (ty
 pe pdf)
 <use 03-puentesycorredores_files/figure-latex/3-4-holes-1.pdf>
 Package pdftex.def Info: 03-puentesycorredores_files/figure-latex/3-4-holes-1.p
-df  used on input line 5968.
+df  used on input line 5981.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 5989.
+LaTeX Info: Redefining \% on input line 5989.
 [198]
-<03-puentesycorredores_files/figure-latex/3-4-triads-1.pdf, id=2821, 469.755pt 
+<03-puentesycorredores_files/figure-latex/3-4-triads-1.pdf, id=2831, 469.755pt 
 x 290.08376pt>
 File: 03-puentesycorredores_files/figure-latex/3-4-triads-1.pdf Graphic file (t
 ype pdf)
 <use 03-puentesycorredores_files/figure-latex/3-4-triads-1.pdf>
 Package pdftex.def Info: 03-puentesycorredores_files/figure-latex/3-4-triads-1.
-pdf  used on input line 5979.
+pdf  used on input line 5992.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 6002.
+LaTeX Info: Redefining \% on input line 6002.
 [199 <./03-puentesycorredores_files/figure-latex/3-4-holes-1.pdf>]
-<03-puentesycorredores_files/figure-latex/3-4-practice-1.pdf, id=2840, 469.755p
+<03-puentesycorredores_files/figure-latex/3-4-practice-1.pdf, id=2850, 469.755p
 t x 290.08376pt>
 File: 03-puentesycorredores_files/figure-latex/3-4-practice-1.pdf Graphic file 
 (type pdf)
 <use 03-puentesycorredores_files/figure-latex/3-4-practice-1.pdf>
 Package pdftex.def Info: 03-puentesycorredores_files/figure-latex/3-4-practice-
-1.pdf  used on input line 6002.
+1.pdf  used on input line 6015.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 6034.
+LaTeX Info: Redefining \% on input line 6034.
 [200 <./03-puentesycorredores_files/figure-latex/3-4-triads-1.pdf>]
 
-LaTeX Warning: Command \' invalid in math mode on input line 6031.
+LaTeX Warning: Command \' invalid in math mode on input line 6044.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 6031.
+LaTeX Warning: Command \' invalid in math mode on input line 6044.
 
 
-LaTeX Warning: Command \' invalid in math mode on input line 6031.
+LaTeX Warning: Command \' invalid in math mode on input line 6044.
 
+LaTeX Info: Redefining \. on input line 6058.
+LaTeX Info: Redefining \% on input line 6058.
 [201 <./03-puentesycorredores_files/figure-latex/3-4-practice-1.pdf>]
-<03-puentesycorredores_files/figure-latex/3-4-autonomy-1.pdf, id=2865, 469.755p
+<03-puentesycorredores_files/figure-latex/3-4-autonomy-1.pdf, id=2875, 469.755p
 t x 290.08376pt>
 File: 03-puentesycorredores_files/figure-latex/3-4-autonomy-1.pdf Graphic file 
 (type pdf)
 <use 03-puentesycorredores_files/figure-latex/3-4-autonomy-1.pdf>
 Package pdftex.def Info: 03-puentesycorredores_files/figure-latex/3-4-autonomy-
-1.pdf  used on input line 6050.
+1.pdf  used on input line 6063.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 6076.
+LaTeX Info: Redefining \% on input line 6076.
 [202 <./03-puentesycorredores_files/figure-latex/3-4-autonomy-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 6074--6075
+Underfull \hbox (badness 10000) in paragraph at lines 6087--6088
 []\T1/lmr/m/it/10 (+20) Archivo >
  []
 
-<images/03-11-01.png, id=2880, 587.19376pt x 365.86688pt>
+<images/03-11-01.png, id=2890, 587.19376pt x 365.86688pt>
 File: images/03-11-01.png Graphic file (type png)
 <use images/03-11-01.png>
-Package pdftex.def Info: images/03-11-01.png  used on input line 6096.
+Package pdftex.def Info: images/03-11-01.png  used on input line 6109.
 (pdftex.def)             Requested size: 344.99878pt x 214.96077pt.
-<images/03-11-02.png, id=2883, 1445.4pt x 782.925pt>
+<images/03-11-02.png, id=2893, 1445.4pt x 782.925pt>
 File: images/03-11-02.png Graphic file (type png)
 <use images/03-11-02.png>
-Package pdftex.def Info: images/03-11-02.png  used on input line 6129.
+Package pdftex.def Info: images/03-11-02.png  used on input line 6142.
 (pdftex.def)             Requested size: 344.9843pt x 186.8665pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 6148.
+LaTeX Info: Redefining \% on input line 6148.
 [203]
-Underfull \hbox (badness 10000) in paragraph at lines 6136--6159
+Underfull \hbox (badness 10000) in paragraph at lines 6149--6172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6160--6183
+Underfull \hbox (badness 10000) in paragraph at lines 6173--6196
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 6196.
+LaTeX Info: Redefining \% on input line 6196.
 [204 <./images/03-11-01.PNG>]
-Underfull \hbox (badness 1917) in paragraph at lines 6187--6188
+Underfull \hbox (badness 1917) in paragraph at lines 6200--6201
 []\T1/lmr/m/it/10 (+20) Apariencia >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6184--6209
+Underfull \hbox (badness 10000) in paragraph at lines 6197--6222
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+LaTeX Info: Redefining \. on input line 6222.
+LaTeX Info: Redefining \% on input line 6222.
 [205 <./images/03-11-02.PNG>]
-Underfull \hbox (badness 10000) in paragraph at lines 6213--6214
+Underfull \hbox (badness 10000) in paragraph at lines 6226--6227
 []\T1/lmr/m/it/10 (+20) Apariencia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6213--6214
+Underfull \hbox (badness 10000) in paragraph at lines 6226--6227
 \T1/lmr/m/it/10 (+20) > No-dos >
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6213--6214
+Underfull \hbox (badness 10000) in paragraph at lines 6226--6227
 \T1/lmr/m/it/10 (+20) Tamaño>
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6213--6214
+Underfull \hbox (badness 10000) in paragraph at lines 6226--6227
 \T1/lmr/m/it/10 (+20) Rank-ing >
  []
 
-<images/03-11-03.png, id=2910, 1445.4pt x 782.925pt>
+<images/03-11-03.png, id=2920, 1445.4pt x 782.925pt>
 File: images/03-11-03.png Graphic file (type png)
 <use images/03-11-03.png>
-Package pdftex.def Info: images/03-11-03.png  used on input line 6236.
+Package pdftex.def Info: images/03-11-03.png  used on input line 6249.
 (pdftex.def)             Requested size: 344.9843pt x 186.8665pt.
-<images/03-11-04.png, id=2913, 1445.4pt x 782.925pt>
+<images/03-11-04.png, id=2923, 1445.4pt x 782.925pt>
 File: images/03-11-04.png Graphic file (type png)
 <use images/03-11-04.png>
-Package pdftex.def Info: images/03-11-04.png  used on input line 6267.
+Package pdftex.def Info: images/03-11-04.png  used on input line 6280.
 (pdftex.def)             Requested size: 344.9843pt x 186.8665pt.
-<images/03-11-05.png, id=2914, 1445.4pt x 782.925pt>
+<images/03-11-05.png, id=2924, 1445.4pt x 782.925pt>
 File: images/03-11-05.png Graphic file (type png)
 <use images/03-11-05.png>
-Package pdftex.def Info: images/03-11-05.png  used on input line 6276.
+Package pdftex.def Info: images/03-11-05.png  used on input line 6289.
 (pdftex.def)             Requested size: 344.9843pt x 186.8665pt.
-[206] [207 <./images/03-11-03.PNG> <./images/03-11-04.PNG>] [208 <./images/03-1
-1-05.PNG>] [209
+LaTeX Info: Redefining \. on input line 6297.
+LaTeX Info: Redefining \% on input line 6297.
+[206]
+LaTeX Info: Redefining \. on input line 6297.
+LaTeX Info: Redefining \% on input line 6297.
+[207 <./images/03-11-03.PNG> <./images/03-11-04.PNG>]
+LaTeX Info: Redefining \. on input line 6297.
+LaTeX Info: Redefining \% on input line 6297.
+[208 <./images/03-11-05.PNG>] [209
 
 ] [210]
-Chapter 12.
+Cap\'{\i }tulo 12.
 [211
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 6324--6326
+Underfull \hbox (badness 10000) in paragraph at lines 6337--6339
 
  []
 
-[212] [213]
-<images/04-dimensions.png, id=2993, 459.75764pt x 163.26997pt>
+LaTeX Info: Redefining \. on input line 6339.
+LaTeX Info: Redefining \% on input line 6339.
+[212]
+LaTeX Info: Redefining \. on input line 6351.
+LaTeX Info: Redefining \% on input line 6351.
+[213]
+<images/04-dimensions.png, id=3004, 459.75764pt x 163.26997pt>
 File: images/04-dimensions.png Graphic file (type png)
 <use images/04-dimensions.png>
-Package pdftex.def Info: images/04-dimensions.png  used on input line 6347.
+Package pdftex.def Info: images/04-dimensions.png  used on input line 6360.
 (pdftex.def)             Requested size: 344.99977pt x 122.51694pt.
-[214] [215 <./images/04-dimensions.png>]
-<images/04-cade2a.png, id=3011, 45.16875pt x 45.92157pt>
+LaTeX Info: Redefining \. on input line 6368.
+LaTeX Info: Redefining \% on input line 6368.
+[214 <./images/04-dimensions.png>]
+<images/04-cade2a.png, id=3017, 45.16875pt x 45.92157pt>
 File: images/04-cade2a.png Graphic file (type png)
 <use images/04-cade2a.png>
-Package pdftex.def Info: images/04-cade2a.png  used on input line 6387.
+Package pdftex.def Info: images/04-cade2a.png  used on input line 6400.
 (pdftex.def)             Requested size: 45.16862pt x 45.92145pt.
-<images/04-estrella2.png, id=3012, 45.16875pt x 45.16875pt>
+<images/04-estrella2.png, id=3018, 45.16875pt x 45.16875pt>
 File: images/04-estrella2.png Graphic file (type png)
 <use images/04-estrella2.png>
-Package pdftex.def Info: images/04-estrella2.png  used on input line 6393.
+Package pdftex.def Info: images/04-estrella2.png  used on input line 6406.
 (pdftex.def)             Requested size: 45.16862pt x 45.16862pt.
-<images/04-malla2.png, id=3013, 45.16875pt x 45.16875pt>
+<images/04-malla2.png, id=3019, 45.16875pt x 45.16875pt>
 File: images/04-malla2.png Graphic file (type png)
 <use images/04-malla2.png>
-Package pdftex.def Info: images/04-malla2.png  used on input line 6396.
+Package pdftex.def Info: images/04-malla2.png  used on input line 6409.
 (pdftex.def)             Requested size: 45.16862pt x 45.16862pt.
-<04-redes_oscuras_en_el_peru_files/figure-latex/4-1-mix-1.pdf, id=3017, 469.755
+LaTeX Info: Redefining \. on input line 6411.
+LaTeX Info: Redefining \% on input line 6411.
+[215]
+<04-redes_oscuras_en_el_peru_files/figure-latex/4-1-mix-1.pdf, id=3029, 469.755
 pt x 290.08376pt>
 File: 04-redes_oscuras_en_el_peru_files/figure-latex/4-1-mix-1.pdf Graphic file
  (type pdf)
 <use 04-redes_oscuras_en_el_peru_files/figure-latex/4-1-mix-1.pdf>
 Package pdftex.def Info: 04-redes_oscuras_en_el_peru_files/figure-latex/4-1-mix
--1.pdf  used on input line 6404.
+-1.pdf  used on input line 6417.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 6425.
+LaTeX Info: Redefining \% on input line 6425.
 [216 <./images/04-cade2a.png> <./images/04-estrella2.png> <./images/04-malla2.p
 ng>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[217 <./04-redes_oscuras_en_el_peru_files/figure-latex/4-1-mix-1.pdf>] [218]
-Chapter 13.
+LaTeX Info: Redefining \. on input line 6439.
+LaTeX Info: Redefining \% on input line 6439.
+[217 <./04-redes_oscuras_en_el_peru_files/figure-latex/4-1-mix-1.pdf>]
+LaTeX Info: Redefining \. on input line 6449.
+LaTeX Info: Redefining \% on input line 6449.
+[218]
+Cap\'{\i }tulo 13.
 [219
 
 ]
-Overfull \hbox (45.24449pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 220 \T1/lmr/m/sl/10 CHAPTER 13.  UN PROCESO PARA LA INVESTIGACIÓ
-N DE REDES SOCIALES
+LaTeX Info: Redefining \. on input line 6487.
+LaTeX Info: Redefining \% on input line 6487.
+
+Overfull \hbox (29.65063pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 220 \T1/lmr/m/sl/10 CAPÍTULO 13.  PROCESO PARA LA INVESTIGACIÓN 
+DE REDES SOCIALES
  []
 
 [220]
-Overfull \hbox (41.21834pt too wide) has occurred while \output is active
+LaTeX Info: Redefining \. on input line 6531.
+LaTeX Info: Redefining \% on input line 6531.
+
+Overfull \hbox (39.37311pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 13.1.  DESARROLLAR UN PROYECTO INVESTIGATIVO DE REDES SOCIALES 
 \T1/lmr/m/n/10 221
  []
 
 [221]
-Overfull \hbox (45.24449pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 222 \T1/lmr/m/sl/10 CHAPTER 13.  UN PROCESO PARA LA INVESTIGACIÓ
-N DE REDES SOCIALES
+LaTeX Info: Redefining \. on input line 6571.
+LaTeX Info: Redefining \% on input line 6571.
+
+Overfull \hbox (29.65063pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 222 \T1/lmr/m/sl/10 CAPÍTULO 13.  PROCESO PARA LA INVESTIGACIÓN 
+DE REDES SOCIALES
  []
 
 [222]
-Overfull \hbox (41.21834pt too wide) has occurred while \output is active
+LaTeX Info: Redefining \. on input line 6588.
+LaTeX Info: Redefining \% on input line 6588.
+
+Overfull \hbox (39.37311pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 13.1.  DESARROLLAR UN PROYECTO INVESTIGATIVO DE REDES SOCIALES 
 \T1/lmr/m/n/10 223
  []
 
 [223]
-Overfull \hbox (45.24449pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 224 \T1/lmr/m/sl/10 CHAPTER 13.  UN PROCESO PARA LA INVESTIGACIÓ
-N DE REDES SOCIALES
+LaTeX Info: Redefining \. on input line 6607.
+LaTeX Info: Redefining \% on input line 6607.
+
+Overfull \hbox (29.65063pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 224 \T1/lmr/m/sl/10 CAPÍTULO 13.  PROCESO PARA LA INVESTIGACIÓN 
+DE REDES SOCIALES
  []
 
 [224]
-Overfull \hbox (41.21834pt too wide) has occurred while \output is active
+LaTeX Info: Redefining \. on input line 6619.
+LaTeX Info: Redefining \% on input line 6619.
+
+Overfull \hbox (39.37311pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10 13.1.  DESARROLLAR UN PROYECTO INVESTIGATIVO DE REDES SOCIALES 
 \T1/lmr/m/n/10 225
  []
 
 [225]
-Overfull \hbox (45.24449pt too wide) has occurred while \output is active
-\T1/lmr/m/n/10 226 \T1/lmr/m/sl/10 CHAPTER 13.  UN PROCESO PARA LA INVESTIGACIÓ
-N DE REDES SOCIALES
+LaTeX Info: Redefining \. on input line 6619.
+LaTeX Info: Redefining \% on input line 6619.
+
+Overfull \hbox (29.65063pt too wide) has occurred while \output is active
+\T1/lmr/m/n/10 226 \T1/lmr/m/sl/10 CAPÍTULO 13.  PROCESO PARA LA INVESTIGACIÓN 
+DE REDES SOCIALES
  []
 
 [226
 
 ]
-Chapter 14.
-<04-trabajos-grupales_files/figure-latex/unnamed-chunk-1-1.pdf, id=3138, 469.75
+Cap\'{\i }tulo 14.
+<04-trabajos-grupales_files/figure-latex/unnamed-chunk-1-1.pdf, id=3150, 469.75
 5pt x 290.08376pt>
 File: 04-trabajos-grupales_files/figure-latex/unnamed-chunk-1-1.pdf Graphic fil
 e (type pdf)
 <use 04-trabajos-grupales_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 04-trabajos-grupales_files/figure-latex/unnamed-chunk-
-1-1.pdf  used on input line 6616.
+1-1.pdf  used on input line 6628.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[227 <./04-trabajos-grupales_files/figure-latex/unnamed-chunk-1-1.pdf>] [228] [
-229]
-<04-trabajos-grupales_files/figure-latex/unnamed-chunk-2-1.pdf, id=3185, 469.75
+[227 <./04-trabajos-grupales_files/figure-latex/unnamed-chunk-1-1.pdf>]
+LaTeX Info: Redefining \. on input line 6693.
+LaTeX Info: Redefining \% on input line 6693.
+[228]
+LaTeX Info: Redefining \. on input line 6782.
+LaTeX Info: Redefining \% on input line 6782.
+
+Overfull \hbox (13.46835pt too wide) has occurred while \output is active
+\T1/lmr/m/sl/10 14.1.  INFORME DE LA RED CRIMINAL EN LA REPÚBLICA DE PANAMÁ \T1
+/lmr/m/n/10 229
+ []
+
+[229]
+<04-trabajos-grupales_files/figure-latex/unnamed-chunk-2-1.pdf, id=3197, 469.75
 5pt x 290.08376pt>
 File: 04-trabajos-grupales_files/figure-latex/unnamed-chunk-2-1.pdf Graphic fil
 e (type pdf)
 <use 04-trabajos-grupales_files/figure-latex/unnamed-chunk-2-1.pdf>
 Package pdftex.def Info: 04-trabajos-grupales_files/figure-latex/unnamed-chunk-
-2-1.pdf  used on input line 6773.
+2-1.pdf  used on input line 6787.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 6794.
+LaTeX Info: Redefining \% on input line 6794.
 [230 <./04-trabajos-grupales_files/figure-latex/unnamed-chunk-2-1.pdf>]
-Appendix A.
-<05-glossary_files/figure-latex/unnamed-chunk-1-1.pdf, id=3198, 469.755pt x 290
+<04-trabajos-grupales_files/figure-latex/unnamed-chunk-3-1.pdf, id=3209, 469.75
+5pt x 290.08376pt>
+File: 04-trabajos-grupales_files/figure-latex/unnamed-chunk-3-1.pdf Graphic fil
+e (type pdf)
+<use 04-trabajos-grupales_files/figure-latex/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: 04-trabajos-grupales_files/figure-latex/unnamed-chunk-
+3-1.pdf  used on input line 6803.
+(pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 6818.
+LaTeX Info: Redefining \% on input line 6818.
+[231 <./04-trabajos-grupales_files/figure-latex/unnamed-chunk-3-1.pdf>]
+Underfull \hbox (badness 1005) in paragraph at lines 6822--6824
+[]\T1/lmr/m/n/10 (+20) Influencia Re-li-giosa (modo-uno y -dos): Es-ta relación
+ se re-fiere a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6822--6824
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6843--6845
+
+ []
+
+LaTeX Info: Redefining \. on input line 6853.
+LaTeX Info: Redefining \% on input line 6853.
+[232]
+<04-trabajos-grupales_files/figure-latex/4-3-grafo-1.pdf, id=3234, 469.755pt x 
+290.08376pt>
+File: 04-trabajos-grupales_files/figure-latex/4-3-grafo-1.pdf Graphic file (typ
+e pdf)
+<use 04-trabajos-grupales_files/figure-latex/4-3-grafo-1.pdf>
+Package pdftex.def Info: 04-trabajos-grupales_files/figure-latex/4-3-grafo-1.pd
+f  used on input line 6857.
+(pdftex.def)             Requested size: 344.997pt x 213.043pt.
+LaTeX Info: Redefining \. on input line 6867.
+LaTeX Info: Redefining \% on input line 6867.
+[233 <./04-trabajos-grupales_files/figure-latex/4-3-grafo-1.pdf>]
+LaTeX Info: Redefining \. on input line 6867.
+LaTeX Info: Redefining \% on input line 6867.
+[234
+
+] [235] [236]
+Cap\'{\i }tulo 15.
+<05-glossary_files/figure-latex/unnamed-chunk-1-1.pdf, id=3262, 469.755pt x 290
 .08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-1-1.pdf Graphic file (type p
 df)
 <use 05-glossary_files/figure-latex/unnamed-chunk-1-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-1-1.pdf  
-used on input line 6786.
+used on input line 6876.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<05-glossary_files/figure-latex/unnamed-chunk-2-1.pdf, id=3199, 469.755pt x 290
+<05-glossary_files/figure-latex/unnamed-chunk-2-1.pdf, id=3263, 469.755pt x 290
 .08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-2-1.pdf Graphic file (type p
 df)
 <use 05-glossary_files/figure-latex/unnamed-chunk-2-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-2-1.pdf  
-used on input line 6797.
+used on input line 6887.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[231
+[237
 
  <./05-glossary_files/figure-latex/unnamed-chunk-1-1.pdf>]
-<05-glossary_files/figure-latex/unnamed-chunk-3-1.pdf, id=3208, 469.755pt x 290
+<05-glossary_files/figure-latex/unnamed-chunk-3-1.pdf, id=3273, 469.755pt x 290
 .08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type p
 df)
 <use 05-glossary_files/figure-latex/unnamed-chunk-3-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-3-1.pdf  
-used on input line 6810.
+used on input line 6900.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<05-glossary_files/figure-latex/unnamed-chunk-4-1.pdf, id=3209, 469.755pt x 290
+<05-glossary_files/figure-latex/unnamed-chunk-4-1.pdf, id=3274, 469.755pt x 290
 .08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type p
 df)
 <use 05-glossary_files/figure-latex/unnamed-chunk-4-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-4-1.pdf  
-used on input line 6821.
+used on input line 6911.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<05-glossary_files/figure-latex/unnamed-chunk-5-1.pdf, id=3210, 469.755pt x 290
+<05-glossary_files/figure-latex/unnamed-chunk-5-1.pdf, id=3275, 469.755pt x 290
 .08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type p
 df)
 <use 05-glossary_files/figure-latex/unnamed-chunk-5-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-5-1.pdf  
-used on input line 6832.
+used on input line 6922.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<05-glossary_files/figure-latex/unnamed-chunk-6-1.pdf, id=3211, 469.755pt x 290
+<05-glossary_files/figure-latex/unnamed-chunk-6-1.pdf, id=3276, 469.755pt x 290
 .08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type p
 df)
 <use 05-glossary_files/figure-latex/unnamed-chunk-6-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-6-1.pdf  
-used on input line 6843.
+used on input line 6933.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[232 <./05-glossary_files/figure-latex/unnamed-chunk-2-1.pdf>] [233 <./05-gloss
+LaTeX Info: Redefining \. on input line 6941.
+LaTeX Info: Redefining \% on input line 6941.
+[238 <./05-glossary_files/figure-latex/unnamed-chunk-2-1.pdf>] [239 <./05-gloss
 ary_files/figure-latex/unnamed-chunk-3-1.pdf> <./05-glossary_files/figure-latex
-/unnamed-chunk-4-1.pdf>] [234 <./05-glossary_files/figure-latex/unnamed-chunk-5
--1.pdf> <./05-glossary_files/figure-latex/unnamed-chunk-6-1.pdf>]
-<05-glossary_files/figure-latex/unnamed-chunk-7-1.pdf, id=3244, 469.755pt x 290
+/unnamed-chunk-4-1.pdf>]
+LaTeX Info: Redefining \. on input line 6941.
+LaTeX Info: Redefining \% on input line 6941.
+[240 <./05-glossary_files/figure-latex/unnamed-chunk-5-1.pdf> <./05-glossary_fi
+les/figure-latex/unnamed-chunk-6-1.pdf>]
+<05-glossary_files/figure-latex/unnamed-chunk-7-1.pdf, id=3310, 469.755pt x 290
 .08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type p
 df)
 <use 05-glossary_files/figure-latex/unnamed-chunk-7-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-7-1.pdf  
-used on input line 6856.
+used on input line 6946.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<05-glossary_files/figure-latex/unnamed-chunk-8-1.pdf, id=3245, 469.755pt x 290
+<05-glossary_files/figure-latex/unnamed-chunk-8-1.pdf, id=3311, 469.755pt x 290
 .08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type p
 df)
 <use 05-glossary_files/figure-latex/unnamed-chunk-8-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-8-1.pdf  
-used on input line 6877.
+used on input line 6967.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<05-glossary_files/figure-latex/unnamed-chunk-9-1.pdf, id=3246, 469.755pt x 290
+<05-glossary_files/figure-latex/unnamed-chunk-9-1.pdf, id=3312, 469.755pt x 290
 .08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type p
 df)
 <use 05-glossary_files/figure-latex/unnamed-chunk-9-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-9-1.pdf  
-used on input line 6898.
+used on input line 6988.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[235 <./05-glossary_files/figure-latex/unnamed-chunk-7-1.pdf>] [236 <./05-gloss
-ary_files/figure-latex/unnamed-chunk-8-1.pdf> <./05-glossary_files/figure-latex
-/unnamed-chunk-9-1.pdf>]
-<05-glossary_files/figure-latex/unnamed-chunk-10-1.pdf, id=3268, 469.755pt x 29
+[241 <./05-glossary_files/figure-latex/unnamed-chunk-7-1.pdf>]
+LaTeX Info: Redefining \. on input line 6996.
+LaTeX Info: Redefining \% on input line 6996.
+[242 <./05-glossary_files/figure-latex/unnamed-chunk-8-1.pdf> <./05-glossary_fi
+les/figure-latex/unnamed-chunk-9-1.pdf>]
+<05-glossary_files/figure-latex/unnamed-chunk-10-1.pdf, id=3334, 469.755pt x 29
 0.08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-10-1.pdf Graphic file (type 
 pdf)
 <use 05-glossary_files/figure-latex/unnamed-chunk-10-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-10-1.pdf 
- used on input line 6923.
+ used on input line 7013.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-<05-glossary_files/figure-latex/unnamed-chunk-11-1.pdf, id=3269, 469.755pt x 29
+<05-glossary_files/figure-latex/unnamed-chunk-11-1.pdf, id=3335, 469.755pt x 29
 0.08376pt>
 File: 05-glossary_files/figure-latex/unnamed-chunk-11-1.pdf Graphic file (type 
 pdf)
 <use 05-glossary_files/figure-latex/unnamed-chunk-11-1.pdf>
 Package pdftex.def Info: 05-glossary_files/figure-latex/unnamed-chunk-11-1.pdf 
- used on input line 6936.
+ used on input line 7026.
 (pdftex.def)             Requested size: 344.997pt x 213.043pt.
-[237] [238 <./05-glossary_files/figure-latex/unnamed-chunk-10-1.pdf> <./05-glos
-sary_files/figure-latex/unnamed-chunk-11-1.pdf>]
-Appendix B.
-[239
-
-] [240] [241] [242] [243] [244] [245] [246] [247] [248] [249] [250] [251] [252
-
-] [253] [254] [255
+[243]
+LaTeX Info: Redefining \. on input line 7034.
+LaTeX Info: Redefining \% on input line 7034.
+[244 <./05-glossary_files/figure-latex/unnamed-chunk-10-1.pdf> <./05-glossary_f
+iles/figure-latex/unnamed-chunk-11-1.pdf>]
+Cap\'{\i }tulo 16.
+[245
 
 ]
-Underfull \hbox (badness 1859) in paragraph at lines 7536--7538
-[][]\T1/lmr/m/n/10 (+20) Elena, V. (2017). Cabecil-las e in-te-grante de la ban
-da `calor calor'
+LaTeX Info: Redefining \. on input line 7087.
+LaTeX Info: Redefining \% on input line 7087.
+[246]
+LaTeX Info: Redefining \. on input line 7119.
+LaTeX Info: Redefining \% on input line 7119.
+[247]
+LaTeX Info: Redefining \. on input line 7150.
+LaTeX Info: Redefining \% on input line 7150.
+[248]
+LaTeX Info: Redefining \. on input line 7173.
+LaTeX Info: Redefining \% on input line 7173.
+[249]
+LaTeX Info: Redefining \. on input line 7213.
+LaTeX Info: Redefining \% on input line 7213.
+[250]
+LaTeX Info: Redefining \. on input line 7232.
+LaTeX Info: Redefining \% on input line 7232.
+[251]
+LaTeX Info: Redefining \. on input line 7260.
+LaTeX Info: Redefining \% on input line 7260.
+[252]
+LaTeX Info: Redefining \. on input line 7323.
+LaTeX Info: Redefining \% on input line 7323.
+[253]
+LaTeX Info: Redefining \. on input line 7412.
+LaTeX Info: Redefining \% on input line 7412.
+[254]
+LaTeX Info: Redefining \. on input line 7443.
+LaTeX Info: Redefining \% on input line 7443.
+[255]
+LaTeX Info: Redefining \. on input line 7488.
+LaTeX Info: Redefining \% on input line 7488.
+[256]
+LaTeX Info: Redefining \. on input line 7543.
+LaTeX Info: Redefining \% on input line 7543.
+[257]
+LaTeX Info: Redefining \. on input line 7543.
+LaTeX Info: Redefining \% on input line 7543.
+[258
+
+] [259] [260] [261
+
+]
+Underfull \hbox (badness 1365) in paragraph at lines 7593--7595
+[][]\T1/lmr/m/n/10 (+20) Cañizales, A. (2015). 'Cal-itín' les dio duro a los na
+r-cos. \T1/lmr/m/it/10 (+20) El Siglo de
  []
 
+[262] [263] [264] [265] [266] [267] (./_main.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+)
 
-Underfull \hbox (badness 2173) in paragraph at lines 7536--7538
-\T1/lmr/m/n/10 (+20) con-de-na-dos a prisión. \T1/lmr/m/it/10 (+20) Panamá Amer
--ica\T1/lmr/m/n/10 (+20) . Re-trieved from []$https :
- []
+LaTeX Warning: There were multiply-defined labels.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 7536--7538
-\T1/lmr/m/n/10 (+20) / / www . panamaamerica . com . pa / provincias / cabecill
-as -[] e -[] integrante -[] de -[]
- []
-
-[256] [257]
-Underfull \hbox (badness 1436) in paragraph at lines 7632--7634
-\T1/lmr/m/n/10 (+20) sinaloa. (2019). \T1/lmr/m/it/10 (+20) La Prensa de Panamá
-\T1/lmr/m/n/10 (+20) . Re-trieved from []$https :
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7632--7634
-\T1/lmr/m/n/10 (+20) / / www . prensa . com / impresa / panorama / Mayoria -[] 
-Punta -[] Coco -[] Usuga -[]
- []
-
-[258] [259] [260] [261] (./_main.aux)
 Package rerunfilecheck Info: File `_main.out' has not changed.
-(rerunfilecheck)             Checksum: CC12BBAF7E37658AFC74CF29B9540C03;11862.
+(rerunfilecheck)             Checksum: B9FB4F4FAFF3EB414D1BD84DAAD64F96;12210.
  ) 
 Here is how much of TeX's memory you used:
- 27888 strings out of 480246
- 547853 string characters out of 5894123
- 800357 words of memory out of 5000000
- 43855 multiletter control sequences out of 15000+600000
- 563290 words of font info for 243 fonts, out of 8000000 for 9000
+ 29299 strings out of 480247
+ 572020 string characters out of 5894146
+ 840533 words of memory out of 5000000
+ 45215 multiletter control sequences out of 15000+600000
+ 564037 words of font info for 250 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 83i,20n,80p,1976b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 83i,21n,80p,1976b,676s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-
 ec.enc}{c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
 m/lm-mathsy.enc}{c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/fonts/en
@@ -3927,10 +4458,10 @@ public/lm/lmsy5.pfb><c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-dist/font
 s/type1/public/lm/lmsy7.pfb><c:/Users/localuser/AppData/Roaming/TinyTeX/texmf-d
 ist/fonts/type1/public/lm/lmsy9.pfb><c:/Users/localuser/AppData/Roaming/TinyTeX
 /texmf-dist/fonts/type1/public/lm/lmtt10.pfb>
-Output written on _main.pdf (261 pages, 8319321 bytes).
+Output written on _main.pdf (267 pages, 8886897 bytes).
 PDF statistics:
- 3759 PDF objects out of 4296 (max. 8388607)
- 3122 compressed objects within 32 object streams
- 1026 named destinations out of 1200 (max. 500000)
- 50504 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 3830 PDF objects out of 4296 (max. 8388607)
+ 3183 compressed objects within 32 object streams
+ 1045 named destinations out of 1200 (max. 500000)
+ 50530 words of extra memory for PDF output out of 51595 (max. 10000000)
 

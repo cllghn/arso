@@ -1,7 +1,6 @@
 bookdown::gitbook:
   always_allow_html: yes
   config:
-    # css: arso.cssboo
     download: null
     edit:
       link: https://github.com/cjcallag/arso/edit/editing/%s
@@ -21,12 +20,12 @@ bookdown::gitbook:
       scroll_highlight: yes
     toolbar:
       position: fixed
-      download: 'docs/_main.pdf'
     search: 
       engine: lunr
       options: null
     sharing: no
   css: [arso.css]
+  download: "pdf"
   description: |
     Este proyecto de tener una doctrina propia, que se adapte a la realidad del Perú, es un punto de vista de los autores sobre la introducción a el estudio de las redes oscuras como elemento clave para todo analista de inteligencia y elementos operativos de las fuerzas armadas.Este manual electrónico le enseñará los conceptos basicos del análisis de redes sociales y su aplicación.
   github-repo: https://github.com/cjcallag/arso
@@ -37,4 +36,6 @@ bookdown::pdf_book:
   includes:
     in_header: arso.tex
     fig_caption: yes
-  header-includes: \usepackage{caption}
+  header-includes: 
+    - \usepackage{caption}
+
