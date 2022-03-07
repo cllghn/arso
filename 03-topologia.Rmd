@@ -9,13 +9,13 @@ library(igraph)
 
 # Topología
 
-La topología consta de una familia de medidas que son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación cuantitativa sobre la estructura de esta [@Valente2010]. Es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros [@McCormick2000]; asimismo, esta configuración hace a la red más vulnerable a disrupción al remover un puñado de actores clave. De manera opuesta, las redes altamente descentralizadas son relativamente invulnerables a la eliminación de actores clave, pueden tener dificultades para movilizar recursos [@Cunningham2016].
+La topología consta de una familia de medidas que son calculadas sobre el conjunto completo de datos relacionales que componen una red; por consiguiente, proveen una indicación cuantitativa sobre la estructura de esta [@Valente2010]. Es relevante puesto que ciertos estudios sugieren que redes centralizadas alrededor de un conjunto de nodos centrales tienden a ser más eficientes en movilizar recursos humanos o financieros [@McCormick2000]; asimismo, esta configuración hace a la red más vulnerable a disrupción al remover un puñado de actores clave. De manera opuesta, las redes altamente descentralizadas son relativamente invulnerables a la eliminación de actores clave, pero pueden tener dificultades para movilizar recursos [@Cunningham2016].
 
-Observe las Figuras \@ref(fig:3-1-star) y \@ref(fig:3-1-full), ambas tienen la misma cantidad de nodos, pero las características estructurales son diferentes y presentan ventajas y desventajas. Por ejemplo, en la Figura \@ref(fig:3-1-star) la mayoría de los nodos rodean a un actor en el centro de la red. Este tipo de configuración es comúnmente asociada con organizaciones jerárquicas con protocolos establecidos de comando y control. La ventaja de esta topología es un que un nodo central controla el flujo de recursos e información, en teoría haciendo la diseminación de estos más eficiente. Sin embargo, esta estructura tiene un defecto clave. ¿Qué pasa si removemos al actor central? La red se deshace por completo y el flujo es interrumpido de manera indeterminada.
+Observe las Figuras \@ref(fig:3-1-star) y \@ref(fig:3-1-full), ambas tienen la misma cantidad de nodos, pero las características estructurales son diferentes y presentan ventajas y desventajas. Por ejemplo, en la Figura \@ref(fig:3-1-star) la mayoría de los nodos rodean a un actor en el centro de la red. Este tipo de configuración es comúnmente asociada con organizaciones jerárquicas con protocolos establecidos de comando y control. La ventaja de esta topología es que un nodo central controla el flujo de recursos e información, en teoría haciendo la diseminación de estos más eficiente. Sin embargo, esta estructura tiene un defecto clave. ¿Qué pasa si removemos al actor central? La red se deshace por completo y el flujo es interrumpido de manera indeterminada.
 
 Ahora, en la Figura \@ref(fig:3-1-full) no encontramos una formación centrada alrededor de un actor clave. Al contrario, en este caso todos los nodos se encuentran conectados entre ellos. La ventaja es clara, no hay un solo punto de disrupción como en la Figura \@ref(fig:3-1-star). Sin embargo, las características estructurales no sugieren un solo camino para el flujo de información o recursos, lo cual en algunas ocasiones retrasa ciertos procesos organizacionales. Es decir, si todos son líderes, nadie puede estar a cargo de dar instrucciones a los demás. 
 
-Es probable que sea mejor considerear ambas configuraciones (centralizada y descentralizada) como polos opuestos de un continuo. Como tal, el nivel óptimo de centralización en dicho espectro cambiará con el tiempo y en función de las presiones ambientales [@Cunningham2016; @Everton2012]. Por ejemplo, en un entorno hostil, la red puede priorizar la seguridad de actores clave; así, avanzando hacia una estructura más descentralizada. Es precisamente por este dinamismo intrínseco a las redes sociales que el estudio de la estructura de red debe ir acompañada con contexto en el que se encuentra incrustrada.
+Es probable que sea mejor considerar ambas configuraciones (centralizada y descentralizada) como polos opuestos de un continuo. Como tal, el nivel óptimo de centralización en dicho espectro cambiará con el tiempo y en función de las presiones ambientales [@Cunningham2016; @Everton2012]. Por ejemplo, en un entorno hostil, la red puede priorizar la seguridad de actores clave; así, avanzando hacia una estructura más descentralizada. Es precisamente por este dinamismo intrínseco  que el estudio de la estructura de red debe ir acompañado con contexto.
 
 ```{r 3-1-star, fig.cap="Red estrella"}
 g <- igraph::make_star(n = 5, mode = "undirected")
@@ -46,7 +46,7 @@ Estas proveen al analista contexto sobre la red en discusión. Aquí cubriremos:
 
 El tamaño se refiere a el número de actores en una red [@Everton2012]. Es importante pues afecta otras medidas topológicas de la red. Por ello, conocer el tamaño de una red es importante al interpretar medidas basadas en este valor, como densidad o diámetro [@Cunningham2016].
 
-Comúnmente denotamos el tamaño de un a red con la letra $N$. Por ejemplo, en las Figuras \@ref(fig:3-1-g5) y \@ref(fig:3-1-g10) $N$ es equivalente a 5 y 10 respectivamente. 
+Comúnmente denotamos el tamaño de una red con la letra $N$. Por ejemplo, en las Figuras \@ref(fig:3-1-g5) y \@ref(fig:3-1-g10) $N$ es equivalente a 5 y 10 respectivamente. 
 
 ```{r 3-1-g5, fig.cap="Grafo de red, tamaño = 5"}
 igraph::barabasi.game(n = 5, power = 0.5, directed = FALSE) %>%
@@ -58,7 +58,7 @@ igraph::barabasi.game(n = 10, power = 0.5, directed = FALSE) %>%
   my_igraph()
 ```
 
-En teoría, hay un límite practico a la cantidad de enlaces que puede mantener cada persona en la red, por ello, el tamaño habitualmente no es una de las medidas más interesantes sino un indicador de los límites de la red [@Valente2010]. Es por ello, que el analista debe considerar como establecer los límites para reflejar de manera adecuada el tamaño real de la red [@Cunningham2016].
+En teoría, hay un límite práctico a la cantidad de enlaces que puede mantener cada persona en la red, por ello, el tamaño habitualmente no es una de las medidas más interesantes sino un indicador de los límites de la red [@Valente2010]. El analista debe considerar como establecer los límites para reflejar de manera adecuada el tamaño real de la red [@Cunningham2016].
 
 ### Distancia Promedio
 
@@ -68,14 +68,14 @@ $$
 l_G = \frac{1}{N(N-1)}\sum\limits_{i \neq j}d(v_i,v_j)
 $$
 
-Examinemos esta definición, con la Figura \@ref(fig:3-1-circ). Supongamos que el objetivo del actor 1 es transferir información a los otros actores en la red de manera más eficiente. 
+Examinemos esta definición, con la Figura \@ref(fig:3-1-circ). Supongamos que el objetivo del actor 1 es transferir información a los otros actores en la red de la manera más eficiente. 
 
 ```{r 3-1-circ, fig.cap="Grafo circular"}
 igraph::make_ring(n = 5) %>%
   my_igraph()
 ```
 
-Si $d$ es la distancia entre un par de nodos, podemos expresar la distancia entre el nodo 1 los demás de la siguiente manera:
+Si $d$ es la distancia entre un par de nodos, podemos expresar la distancia entre el nodo 1 y los demás de la siguiente manera:
 
 $d(1, 2) = 1$
 
@@ -93,7 +93,7 @@ $$
 
 Al calcular la distancia promedio, podemos decir que en promedio todos los nodos en la Figura \@ref(fig:3-1-circ) se encuentran a 1.5 pasos entre ellos. Puesto que este es un promedio de distancias, podemos comparar este valor con el promedio de otra red.
 
-En términos prácticos, la distancia promedio es indicativa de la velocidad con la cual la información viaja a través de una red. Es decir, en una red compacta la información se debe difundir rápidamente; al contrario, en una red con una distancia promedio alta la difusión de información tomará lugar en un periodo de tiempo más amplio [@Everton2012]. Esta interpretación no es ley, sino una supoción comúnmente hecha por analistas. Es importante considerar que en ciertas situaciones las redes con distancia promedio pequeñas no gozan de difusión rápida puesto que algunos actores tienden a retener información de sus vecinos [@Cunningham2016]. Adicionalmente, se debe recalcar que la fórmula de distancia promedio se centra en eficiencia, es decir, distancias más cortas entre nodos. Es posible que, en una red oscura donde los nodos no conozcan a sus vecinos o a los vecinos de sus vecinos, un actor envié información a través de caminos con distancias mayores al promedio. Por lo tanto, la distancia promedio solo sugiere eficiencias con base a la estructura de una red. 
+En términos prácticos, la distancia promedio es indicativa de la velocidad con la cual la información puede viajar a través de una red. Es decir, en una red compacta la información se puede difundir rápidamente; al contrario, en una red con una distancia promedio alta la difusión de información tomará lugar en un periodo de tiempo más amplio [@Everton2012]. Esta interpretación no es ley, sino una suposición comúnmente hecha por analistas. Es importante considerar que en ciertas situaciones las redes con distancia promedio pequeñas no gozan de difusión rápida puesto que algunos actores tienden a retener información de sus vecinos [@Cunningham2016]. Adicionalmente, se debe recalcar que la fórmula de distancia promedio se centra en eficiencia, es decir, distancias más cortas entre nodos. Es posible que, en una red oscura donde los nodos no conozcan a sus vecinos o a los vecinos de sus vecinos, un actor envié información a través de caminos con distancias mayores al promedio. Por lo tanto, la distancia promedio solo sugiere eficiencias con base a la estructura de una red. 
 
 ### Diámetro
 
@@ -106,13 +106,13 @@ data.frame(from = c(1, 1, 2, 2, 3, 4),
   my_igraph()
 ```
 
-El diámetro del grafo es equivalente es $max d(i,j)$ = $d(1,5)$= 3.
+El diámetro del grafo es equivalente a $max d(i,j)$ = $d(1,5)$= 3.
 
 Esta medida es importante pues cuantifica cuán lejos se encuentran los nodos más distantes entre sí [@Wasserman1994]. Como con la distancia promedio, consideremos una red en la cual la información viaja a través de los vínculos entre actores. Suponiendo que los mensajes siguen las rutas más cortas, tomará tiempo para que un mensaje recurra toda la red cuando el diámetro es mayor. 
 
 ## Interconexión 
 
-En una red oscura, la interconexión entre los actores es crucial para la red como organismo dinámico. Por ejemplo, puesto que la seguridad de la organización es crucial, a menudo el reclutamiento de nuevos miembros toma lugar a través de los vínculos preexistentes de miembros de la red [@Cunningham2016]. Es por este aislamiento que las redes oscuras enfocadas en el anonimato tienden volverse cada vez más densas con vínculos entre miembros de la red y pocos enlaces al mundo exterior. Sin embargo, el cortar vínculos con el mundo exterior conlleva un costo al limitar el acceso a recursos (por ejemplo, materiales, logísticos, financieros, etc.). Es por ello, que algunos investigadores y analistas sugieren que los vínculos a actores externos a la red oscura son esenciales para acceder recursos y sobrevivir retos [@Uzzi1996]. 
+En una red oscura, la interconexión entre los actores es crucial para la red como organismo dinámico. Por ejemplo, puesto que la seguridad de la organización es crucial, a menudo el reclutamiento de nuevos miembros toma lugar a través de los vínculos preexistentes de miembros de la red [@Cunningham2016]. Es por este aislamiento que las redes oscuras enfocadas en el anonimato tienden a volverse cada vez más densas con vínculos entre miembros de la red y pocos enlaces al mundo exterior. Sin embargo, el cortar vínculos con el mundo exterior conlleva un costo al limitar el acceso a recursos (por ejemplo, materiales, logísticos, financieros, etc.). Es por ello, que algunos investigadores y analistas sugieren que los vínculos a actores externos a la red oscura son esenciales para acceder recursos y sobrevivir retos [@Uzzi1996]. 
 
 Esta dinámica entre acceso a recursos y seguridad, fuerza a las organizaciones y a los actores que las conforman a balancear aislamiento (por ejemplo, interconexión alta) con acceso a recursos exteriores (por ejemplo, interconexión moderada o baja). En esta sección, nos enfocamos en las medidas comúnmente utilizadas para medir este proceso, específicamente, densidad y grado medio.
 
@@ -121,10 +121,10 @@ Esta dinámica entre acceso a recursos y seguridad, fuerza a las organizaciones 
 La densidad ($d$) es el número de enlaces en un grafo dividido por el número total posible de enlaces en el mismo [@Cunningham2016]. En una red no dirigida, se define como:
 
 $$
-d = \frac{L}{n(n-1)/2}
+d = \frac{2L}{n(n-1)/2}
 $$
 
-Donde $L$ se refiere al número actual de enlaces y $n$ es el número de actores en la red. Para una red dirigida, no es necesario dividir el denominador entre dos, por lo que la ecuación es diferente:
+Donde $L$ se refiere al número actual de enlaces y $n$ es el número de actores en la red. Para una red dirigida, no es necesario multiplicar el numerador por dos, y la ecuación es diferente:
 
 $$
 d = \frac{L}{n(n-1)}
@@ -137,21 +137,21 @@ igraph::make_star(n = 4, mode = "undirected") %>%
   my_igraph()
 ```
 
-Pongamos esta herramienta en práctica; específicamente, con la Figura \@ref(fig:3-1-den) la cual podemos representar como matriz de adyacencia \@ref(eq:3-1-den).
+Pongamos esta herramienta en práctica; específicamente, con la Figura \@ref(fig:3-1-den) la cual podemos representar como matriz de adyacencia:
 
 $$
 \begin{matrix}
   & 1 & 2 & 3 & 4 \\
 1 & - & 1 & 1 & 1 \\
 2 & 1 & - & 0 & 0 \\
-3 & 1 & 0 & - & - \\
+3 & 1 & 0 & - & 0 \\
 4 & 1 & 0 & 0 & -
 (\#eq:3-1-den)
 \end{matrix}
 $$
 
 
-El número actual ($L$) de enlaces es seis y contamos con cuatro nodos en este gráfico. Entonces, la densidad de esta red es equivalente a $d = \frac{6}{3}$ = 0.5. Es decir, la interconexión de la red es 0.5 o solo la mitad de los actores están conectados.
+El número actual ($L$) de enlaces es tres y contamos con cuatro nodos en este gráfico. Entonces, la densidad de esta red es equivalente a $d =$ 0.5. Es decir, la interconexión de la red es 0.5 o solo la mitad de los actores están conectados.
 
 ### Grado Medio
 
@@ -189,7 +189,7 @@ g100 %>%
   )
 ```
 
-Es decir, aunque la densidad de estos gráficos es disímil podemos atribuir esta discrepancia a el número de nodos en cada red. Sin embargo, la medida más adecuada en esta situacion sería el grado medio, la cual como vemos nos permite comparar el nivel de interconexión entre redes de diferente tamaño. 
+Es decir, aunque la densidad de estos gráficos es disímil podemos atribuir esta discrepancia a el número de nodos en cada red. Sin embargo, la medida más adecuada en esta situación sería el grado medio, la cual como vemos nos permite comparar el nivel de interconexión entre redes de diferente tamaño. 
 
 ## Centralización
 
@@ -215,22 +215,9 @@ $C_D = \frac{(4-4)+(4-1)+(4-1)+(4-1)+(4-1)}{12}$
 
 $C_D = 1.0$
 
-En la red estrella la centralización de grado es 1.0 (ver \@ref(eq:3-1-grados)). Por consiguiente, de manera matemática asumimos que los nodos en este gráfico convergen alrededor de un actor central.
+En la red estrella la centralización de grado es 1.0. Por consiguiente, de manera matemática asumimos que los nodos en este gráfico convergen alrededor de un actor central.
 
-$$
-\begin{matrix}
-Nodo   & Grado \\
-1      & 4     \\
-2      & 1     \\
-3      & 1     \\
-4      & 1     \\
-5      & 1     \\
-(\#eq:3-1-grados)
-\end{matrix}
-$$
-
-Veamos que sucede al introducir vínculos adicionales al grafo. En la Figura \@ref(fig:3-1-star3) el actor uno retiene el mismo número de vínculos que le proveen contacto directo con todos los demás,  sin embargo, en esta ocasión los actores dos (2) y tres (3) tiene acceso mutuo. 
-
+Veamos que sucede al introducir vínculos adicionales al grafo. En la Figura \@ref(fig:3-1-star3) el actor uno retiene el mismo número de vínculos que le proveen contacto directo con todos los demás,  sin embargo, en esta ocasión los actores dos (2) y tres (3) tienen acceso mutuo. 
 
 ```{r 3-1-star3, fig.cap="Red estrella modificada"}
 g <- data.frame(from = c(1, 1, 1, 1, 2),
@@ -250,31 +237,20 @@ $C_D = \frac{(4-4)+(4-2)+(4-2)+(4-1)+(4-1)}{12}$
 
 $C_D = 0.833$
 
-El índice de centralización de grado es 0.833 (ver \@ref(eq:3-1-grados2)). Lo cual sugiere que la mayoría de los vínculos en la red se encuentran enlazados con un actor central. Sin embargo, al agregar vínculos en la periferia de la red vemos una reducción en la homogeneidad de los valores individuales, la cual reduce el índice grupal.
+El índice de centralización de grado es 0.833. Lo cual sugiere que la mayoría de los vínculos en la red se encuentran enlazados con un actor central. Sin embargo, al agregar vínculos en la periferia de la red vemos una reducción en la homogeneidad de los valores individuales, la cual reduce el índice grupal.
 
-$$
-\begin{matrix}
-Nodo   & Grado \\
-1      & 4     \\
-2      & 2     \\
-3      & 2     \\
-4      & 1     \\
-5      & 1     \\
-(\#eq:3-1-grados2)
-\end{matrix}
-$$
 Antes de concluir esta sección, es importante recalcar dos cosas. Primero, como se ha mencionado la centralización es un índice grupal generado a base de las medidas de centralidad para cada vértice. En los siguientes capítulos veremos múltiples medidas de centralidad que pueden servir como precursores para calcular una medida de centralización. En este capítulo solamente hemos utilizado la centralidad de grado como precursor, pero es importante tener en mente que es posible generar índices de centralización con medidas de centralidad como intermediación, cercanía, o eigenvector. Segundo, Gephi no tiene la capacidad de calcular centralización, sin embargo, otras plataformas de software (como ORA, UCInet, o igraph) tienen esta capacidad y complementan las funciones de Gephi. 
 
 
 ## Ejercicio Práctico
 
-En este ejericio consideramos varias métricas para examinar la topología de la red, por ejemplo: tamaño de la red, densidad, grado promedio, distancia promedio, diámetro y centralización. El tamaño es igual al número de actores en una red. La densidad es igual al número de enlaces dividido por el total de lazos posibles. Sin embargo, el número de enlaces posibles en una red está inversamente relacionado con el tamaño de la red (es decir, cuanto más grande es la red, menor es la densidad); por consiguiente, los investigadores usan otras medidas como el grado promedio para comparar redes de diferente tamaño. La distancia promedio de la ruta es la longitud promedio de todas las rutas más cortas (es decir, geodésicas) entre todos los actores en una red, y el diámetro es la geodésica más larga de una red. Finalmente, la centralización mide el grado en que una red se centra en un solo actor (o grupo de actores).
+En este ejercicio consideramos varias métricas para examinar la topología de la red, por ejemplo: tamaño de la red, densidad, grado medio, distancia promedio, y diámetro. El tamaño es igual al número de actores en una red. La densidad es igual al número de enlaces dividido por el total de lazos posibles. Sin embargo, el número de enlaces posibles en una red está inversamente relacionado con el tamaño de la red (es decir, cuanto más grande es la red, menor es la densidad); por consiguiente, los investigadores usan otras medidas como el grado promedio para comparar redes de diferente tamaño. La distancia promedio de la ruta es la longitud promedio de todas las rutas más cortas (es decir, geodésicas) entre todos los actores en una red, y el diámetro es la geodésica más larga de una red.
 
-Para este ejercicio utilizaremos un conjunto de datos con diez redes diferentes apiladas, que se encuentran ya cargadas en el archivo: [`Noordin.gephi`](https://github.com/cjcallag/arso/blob/main/data/topology/Noordin.gephi?raw=true). **Descargue y guarde el archivo, abra el archivo siguiendo los pasos que se muestran a continuación.**
+Para este ejercicio utilizaremos un conjunto de datos con diez redes diferentes apiladas, que se encuentran ya cargadas en el archivo: [`Noordin.gephi`](https://github.com/cjcallag/arso/blob/main/data/topology/Noordin.gephi?raw=true). [Descargue del sitio de web que acompaña este manual ](https://cjcallag.github.io/arso-materiales-educativos/).
 
 ### Antes de Empezar
 
-Para este ejercicio, deberá instalar el módulo *Clustering Coefficient* (ó coeficiente de agrupación) en Gephi. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo *MultimodeNetworks Transformation* en ejercicio práctico en el capitulo [Derivando Datos Modo-Uno de Modo-Dos]. 
+Para este ejercicio, deberá instalar el módulo *Clustering Coefficient* (o coeficiente de agrupación) en Gephi. Haga esto siguiendo los mismos pasos que utilizamos para descargar el módulo *MultimodeNetworks Transformation* en ejercicio práctico en el capítulo [Derivando Datos Modo-Uno de Modo-Dos]. 
 
 
 ### Topología de redes en Gephi
@@ -309,7 +285,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  2.	Comenzaremos por ver cómo encontrar el tamaño de una red. En la esquina superior derecha de la ventana *Descripción general*, debe ver una pestaña *Contexto* (cuadro rojo en la Figura \@ref(fig:3-1-1); si no se encuentra visible, seleccione la opción *Contexto* en el menú *Ventana*). En esta ventanilla vera el tamaño (número de nodos), cuántos lazos (aristas) tiene la red/subred y si los datos son dirigidos o no. **¿Cuál es el tamaño de "Noordin (Red apilada)" (en inglés “Noordin (Stacked Network)”)?** Cambie al espacio de trabajo "Red de amistad (en inglés “Friendship”). **¿Qué tamaño tiene? ¿Cuántas aristas hay?**
+  2.	Comenzaremos por ver cómo encontrar el tamaño de una red. En la esquina superior derecha de la ventana *Descripción general*, debe verá una pestaña *Contexto* (cuadro rojo en la Figura \@ref(fig:3-1-1); si no se encuentra visible, seleccione la opción *Contexto* en el menú *Ventana*). En esta ventanilla ver el tamaño (número de nodos), cuántos lazos (aristas) tiene la red/subred y si los datos son dirigidos o no. **¿Cuál es el tamaño de "Noordin (Red apilada)" (en inglés “Noordin (Stacked Network)”)?** Cambie al espacio de trabajo "Red de amistad (en inglés “Friendship”). **¿Qué tamaño tiene? ¿Cuántas aristas hay?**
 :::
 :::
 
@@ -328,7 +304,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  3.	Calcular la densidad de la red en Gephi es sencillo. Seleccione la pestaña *Estadísticas* que se encuentra debajo de la ventana *Contexto* (consulte la Figura \@ref(fig:3-1-2)) y haga clic en el botón *Ejecutar* junto a la opción *Densidad de grafo*. Cuando se le solicite, trate el gráfico como no dirigido. *¿Cuál es la densidad de la red apilada?* De clic en *Cerrar* para cerrar la ventanilla de reporte. Si desea volver a consultar la densidad, el resultado aparece junto a *Densidad de grafo*. Siempre puede volver a ver el reporte dando clic en el círculo con el *?* a la derecha de la opción *Ejecutar*. Repita el proceso para las redes de Amistad (en inglés "Frienship”) y Comunicaciones (en inglés “Comunications”). *¿Cuál es la densidad de la red de amistad? ¿Y la red de comunicaciones?*
+  3.	Calcular la densidad de la red en Gephi es sencillo. Seleccione la pestaña *Estadísticas* que se encuentra debajo de la ventana *Contexto* (consulte la Figura \@ref(fig:3-1-2)) y haga clic en el botón *Ejecutar* junto a la opción *Densidad de grafo*. Cuando se le solicite, trate el gráfico como no dirigido. *¿Cuál es la densidad de la red apilada?* De clic en *Cerrar* para cerrar la ventanilla de reporte. Si desea volver a consultar la densidad, el resultado aparece junto a *Densidad de grafo*. Siempre puede volver a ver el reporte dando clic en el círculo con el *?* a la derecha de la opción *Ejecutar*. Repita el proceso para las redes de Amistad (en inglés "Friendship”) y Comunicaciones (en inglés “Comunications”). **¿Cuál es la densidad de la red de amistad? ¿Y la red de comunicaciones?**
 :::
 :::
 
@@ -347,7 +323,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  4.	La densidad de la red es igual a el número de enlaces dividido por todos los lazos posibles. Sin embargo, los puntajes de densidad tienden a disminuir a medida que las redes sociales se hacen más grandes porque el número de enlaces posibles aumenta exponencialmente con cada actor adicional, pero el número de lazos que cada actor puede mantener permanece relativamente constante. Por esto, la densidad de la red se debe usar para comparar redes del mismo tamaño (que hacemos aquí). Una medida alternativa a la densidad es el grado medio puesto que esta no es sensible al tamaño de la red. Por consiguiente, podemos utilizar esta segunda medida para comparar redes de diferentes tamaños. Podemos estimar el grado promedio de la red apilada haciendo clic en "Ejecutar" junto a "Grado medio" en la ventana de “Estadísticas”.  En este caso, solo nos interesa la medida de grado promedio estándar en lugar de la medida de "Grado medio con pesos" porque no queremos incorporar los pesos de las conexiones. La puntuación aparecerá en la esquina superior izquierda de la ventana del informe (no se muestra). ¿Cuál es el grado promedio de la red apilada? El informe también produce un gráfico de "distribución de grados" que indica el número de actores en diferentes niveles de centralidad de grado. Si observa de cerca, verá que parece que hay un actor con un grado de centralidad de 130. Volveremos a este informe en un laboratorio posterior cuando veamos los puntajes de centralidad individuales. ¿Cuál es el grado medio de la red de amistad? ¿Comunicaciones? De las 10 redes individuales, ¿cuál tiene el grado medio más alto?
+  4.	La densidad de la red es igual a el número de enlaces dividido por todos los lazos posibles. Sin embargo, los puntajes de densidad tienden a disminuir a medida que las redes sociales se hacen más grandes porque el número de enlaces posibles aumenta exponencialmente con cada actor adicional, pero el número de lazos que cada actor puede mantener permanece relativamente constante. Por esto, la densidad de la red se debe usar para comparar redes del mismo tamaño (que hacemos aquí). Una medida alternativa a la densidad es el grado medio puesto que esta no es sensible al tamaño de la red. Por consiguiente, podemos utilizar esta segunda medida para comparar redes de diferentes tamaños. Podemos estimar el grado promedio de la red apilada haciendo clic en *Ejecutar* junto a *Grado medio* en la ventana de *Estadísticas*.  En este caso, solo nos interesa la medida de grado medio estándar en lugar de la medida de *Grado medio con pesos* porque no queremos incorporar los pesos de las conexiones. La puntuación aparecerá en la esquina superior izquierda de la ventana del informe (no se muestra). **¿Cuál es el grado medio de la red apilada?** El informe también produce un gráfico de *distribución de grados* que indica el número de actores en diferentes niveles de centralidad de grado. Si observa de cerca, verá que parece que hay un actor con un grado de centralidad de 130. Volveremos a este informe en un ejercicio posterior cuando veamos los puntajes de centralidad individuales. **¿Cuál es el grado medio de la red de amistad? ¿Comunicaciones? De las 10 redes individuales, ¿cuál tiene el grado medio más alto?**
 :::
 :::
 
@@ -364,7 +340,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  5.	Otra medida que podemos usar para capturar el nivel general de cohesión es el coeficiente de agrupación. Se estima identificando primero la red del ego para cada actor (es decir, los lazos de cada actor con otros actores vecinos o alteres y los lazos entre ellos), después calcular la densidad de esta misma (sin incluir el ego o los lazos del ego en el cálculo) , y luego tomando el promedio de todos los puntajes de densidad de la red del ego. Esta medida toma en cuenta el número de los vecinos de cada actor que están contados entre sí (también conocido como cierre triádico) y calcula el promedio de toda la red. Para obtener esta medida, en la pestaña *Estadísticas*, busque la sección denominada *Visión general de la red*. Haga clic en *Ejecutar* junto a *Clustering Coefficient*. Indique que desea utilizar el *Basic method* (método básico) y haga clic en *Aceptar*. El resultado aparecerá en la parte inferior de la ventana del informe después de las puntuaciones individuales, bajo *General C*. **¿Cuál es el coeficiente de agrupación de la red apilada? ¿La red de la amistad? ¿Red de comunicaciones? ¿Qué coeficiente de agrupamiento de red es más alto?**
+  5.	Otra medida que podemos usar para capturar el nivel general de cohesión es el coeficiente de agrupación. Se estima identificando primero la red del ego para cada actor (es decir, los lazos de cada actor con otros actores vecinos o alteres y los lazos entre ellos), después calcular la densidad de esta misma (sin incluir el ego o los lazos del ego en el cálculo), y luego tomando el promedio de todos los puntajes de densidad de la red del ego. Esta medida toma en cuenta el número de los vecinos de cada actor que están conectados entre sí (también conocido como cierre triádico) y calcula el promedio de toda la red. Para obtener esta medida, en la pestaña *Estadísticas*, busque la sección denominada *Visión general de la red*. Haga clic en *Ejecutar* junto a *Clustering Coefficient*. Indique que desea utilizar el *Basic method* (método básico) y haga clic en *Aceptar*. El resultado aparecerá en la parte inferior de la ventana del informe después de las puntuaciones individuales, bajo *General C*. **¿Cuál es el coeficiente de agrupación de la red apilada? ¿La red de la amistad? ¿Red de comunicaciones? ¿Qué coeficiente de agrupamiento de red es más alto?**
 :::
 :::
 
@@ -381,7 +357,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-6.	Ahora veremos cómo obtener la distancia promedio y el diámetro en una red. La primera medida captura la distancia promedio entre todos los pares de actores (conectados) en la red, y puede indicar la velocidad con que la información puede viajar a través de una red. En otras palabras, la información se ha de difundir mas eficazmente en una red de menor distancia promedio que en una red con una distancia promedio alta. El diámetro de la red se refiere a la geodésica más larga de una red (es decir, la ruta más corta entre todos los pares de actores) y podría indicar qué tan dispersa o extendida está una red. Por lo tanto, puede capturar el grado en que una red está centralizada o descentralizada. Sin embargo, debemos tener un poco de cuidado al interpretar el diámetro porque es, en parte, una función del tamaño de la red. Por ejemplo, las redes grandes probablemente tendrán diámetros mayores. Para calcular la distancia y el diámetro promedio de la ruta de la red apilada, regrese a la pestaña *Estadísticas* y busque la sección *Visión general de las aristas*. Allí, haga clic en el botón *Ejecutar* a la derecha de *Longitud media de camino*. En el cuadro de diálogo, seleccione la opción no dirigida, no se preocupe por normalizar la centralidad en este momento (lo cubriremos en la sección de centralidad) y haga clic en *Aceptar*. Esto abrirá un informe (Figura \@ref(fig:3-1-3)) que proporciona mucha información, parte de la cual no nos ocuparemos en este momento. En la parte superior izquierda del informe, en *Results* (Resultados), Gephi nos dice cuál es el diámetro (*diameter*) y la distancia promedio de la ruta (*Average Path length*) para la red Noordin apilada **¿Cuál es la distancia y el diámetro promedio de las redes de comunicaciones y amistad?**
+6.	Ahora veremos cómo obtener la distancia promedio y el diámetro en una red. La primera medida captura la distancia promedio entre todos los pares de actores (conectados) en la red, y puede indicar la velocidad con que la información puede viajar a través de una red. En otras palabras, la información se ha de difundir más eficazmente en una red de menor distancia promedio que en una red con una distancia promedio alta. El diámetro de la red se refiere a la geodésica más larga de una red (es decir, la ruta más corta entre todos los pares de actores) y podría indicar qué tan dispersa o extendida está una red. Por lo tanto, puede capturar el grado en que una red está centralizada o descentralizada. Sin embargo, debemos tener un poco de cuidado al interpretar el diámetro porque es, en parte, una función del tamaño de la red. Por ejemplo, las redes grandes probablemente tendrán diámetros mayores. Para calcular la distancia y el diámetro promedio de la ruta de la red apilada, regrese a la pestaña *Estadísticas* y busque la sección *Visión general de las aristas*. Allí, haga clic en el botón *Ejecutar* a la derecha de *Longitud media de camino*. En el cuadro de diálogo, seleccione la opción no dirigida, no se preocupe por normalizar la centralidad en este momento (lo cubriremos en la sección de centralidad) y haga clic en *Aceptar*. Esto abrirá un informe (Figura \@ref(fig:3-1-3)) que proporciona mucha información, parte de la cual no nos ocuparemos en este momento. En la parte superior izquierda del informe, en *Results* (Resultados), Gephi nos dice cuál es el diámetro (*diameter*) y la distancia promedio de la ruta (*Average Path length*) para la red Noordin apilada **¿Cuál es la distancia y el diámetro promedio de las redes de comunicaciones y amistad?**
 :::
 :::
 

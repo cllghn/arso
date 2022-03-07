@@ -37,9 +37,6 @@ eq:2-3-mat-op2
 eq:2-3-mat-op3
 eq:2-3-mat
 eq:2-3-el
-tab:2-3-el1
-tab:2-3-el2
-tab:2-3-el3
 eq:2-3-el4
 eq:2-3-nl1
 fig:2-3-koschade
@@ -123,9 +120,7 @@ fig:3-1-den
 eq:3-1-den
 fig:3-1-avg1
 fig:3-1-avg2
-eq:3-1-grados
 fig:3-1-star3
-eq:3-1-grados2
 fig:3-1-1
 fig:3-1-2
 fig:3-1-3
@@ -181,15 +176,6 @@ fig:4-1-mix
 fig:unnamed-chunk-2
 fig:4-3-grafo
 fig:unnamed-chunk-1
-fig:unnamed-chunk-3
-fig:unnamed-chunk-4
-fig:unnamed-chunk-5
-fig:unnamed-chunk-6
-fig:unnamed-chunk-7
-fig:unnamed-chunk-8
-fig:unnamed-chunk-9
-fig:unnamed-chunk-10
-fig:unnamed-chunk-11
 introduction
 conceptos-erróneos-y-diferencias
 suposiciones
@@ -204,7 +190,7 @@ actores-y-enlaces
 redes-sociales
 camino-y-distancia-de-caminos
 topología
-subgrupos-cluster-subredes
+subgrupos-clúster-subredes
 centralidad
 puentes-y-corredores
 funciones-y-posiciones
@@ -220,7 +206,7 @@ inicie-gephi
 vista-general
 apariencia
 contexto
-distribuición
+distribución
 estadísticas
 filtros
 grafo
@@ -254,7 +240,7 @@ proyección
 ejercicio-práctico-1
 antes-de-empezar-1
 importar-redes-de-modo-dos-en-gephi-utilizando-listas-de-aristas
-plegar-redes-de-modo-dos-en-gephi
+proyectar-redes-de-modo-dos-en-gephi
 múltiples-relaciones
 matrices-y-listas-de-aristas
 combinar
@@ -324,8 +310,8 @@ análisis-de-redes-oscuras
 por-qué-el-análisis-de-redes-oscuras
 conclusiones
 proceso-para-la-investigación-de-redes-sociales
-desarrollar-un-proyecto-investigativo-de-redes-sociales
-pregunatas-de-investigación
+desarrollar-un-proyecto-investigativo-de-arso
+preguntas-de-investigación
 limites
 codificar-relaciones-y-atributos
 relaciones
@@ -337,7 +323,7 @@ observación-directa
 recopilación-de-datos-de-archivo
 registros-propios
 conclusiones-1
-ejemplos-practicos
+ejemplos-prácticos
 informe-de-la-red-criminal-en-la-república-de-panamá
 libro-de-códigos
 relaciones-1
@@ -352,7 +338,7 @@ relaciones-2
 atributos-3
 mapa-de-red-1
 glosario-de-términos
-libro-de-códigos-2
+libros-de-códigos
 libro-de-códigos-de-muestra
 relaciones-3
 atributos-4

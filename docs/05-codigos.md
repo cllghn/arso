@@ -2,7 +2,7 @@
 output: html_document
 ---
 
-# Libro de Códigos
+# Libros de Códigos
 
 ## Libro de Códigos de Muestra
 
@@ -12,13 +12,13 @@ El propósito de este documento es establecer un libro de códigos para estudian
 
 #### Persona-a-persona (modo-uno) {-}
 
-Las siguientes definiciones son ejemplos de relaciones de modo-uno entre personas. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para adaptarlo a su investigación.
+Las siguientes definiciones son ejemplos de relaciones de modo-uno entre personas. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido a su investigación.
 
-  - **Amistad** (persona-a-persona): definida como dos personas que se declaran explícitamente como amigos, o que se conocen explícitamente como confidentes de confianza, en informes o en documentación de inteligencia. Los casos de relaciones familiares autoidentificables en las que dos o más personas se consideran familiares, pero que no están relacionadas por sangre, matrimonio o adopción, también se consideran un ejemplo de este tipo de relación.
+  - **Amistad** (persona-a-persona): definida como dos personas que se declaran explícitamente como amigos, o que se conocen explícitamente como confidentes, en informes o en documentación de inteligencia. Los casos de relaciones familiares auto identificables en las que dos o más personas se consideran familiares, pero que no están relacionadas por sangre, matrimonio o adopción, también se consideran un ejemplo de este tipo de relación.
 
   - **Asociado criminal** (persona-a-persona): definido como dos individuos que colaboran, ayudan o participan directamente en actividades ilícitas, incluidas acciones criminales fuera de línea y en línea, como compartir sustancias y / o transferir material ilegal.
 
-  - **Compañeros de clase** (persona-a-persona): dos personas que asisten, como estudiantes, a la misma institución académica, al mismo tiempo. Una institución académica se define como cualquier institución dedicada a proporcionar educación. Los ejemplos pueden incluir, entre otros, cursos de capacitación, escuelas primarias, escuelas intermedias, escuelas secundarias y colegios y universidades.
+  - **Compañeros de clase** (persona-a-persona): dos personas que asisten, como estudiantes, a la misma institución académica, al mismo tiempo. Una institución académica se define como cualquier institución dedicada a proporcionar educación. Los ejemplos pueden incluir, entre otros, cursos de capacitación, escuelas primarias, escuelas intermedias, escuelas secundarias y universidades.
 
   - **Comunicación** (persona-a-persona): definida como la transmisión directa, en persona, de mensajes o información entre individuos o mediante algún tipo de medio, como un teléfono celular o un correo electrónico.
 
@@ -32,15 +32,15 @@ Las siguientes definiciones son ejemplos de relaciones de modo-uno entre persona
 
 #### Persona-a-Evento (modo-dos) {-}
 
-Las siguientes definiciones son ejemplos de relaciones de modo-dos entre personas y eventos. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para adaptarlo a su investigación.
+Las siguientes definiciones son ejemplos de relaciones de modo-dos entre personas y eventos. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para su investigación.
 
   - **Evento criminal** (persona-a-evento): definido como la participación de una persona en un evento, reunión, suceso o incidente en el que el propósito, las metas o los resultados del evento relacionados con, o que resultaron en actividades criminales. Esta definición incluye personas que son testigos, perpetradores, co-arrestados y víctimas de incidentes criminales. Los ejemplos pueden incluir, entre otros, crímenes violentos, reuniones formales / informales y eventos de capacitación relacionados con actividades criminales o que resultaron en ellas.
 
   - **Evento no-criminal** (persona-a-evento): definido como la participación de una persona un evento, reunión, evento o incidente en el que el propósito del evento no se relaciona con actividades delictivas. Los ejemplos pueden incluir, entre otros, reuniones sociales, reuniones formales / informales, eventos comunitarios y eventos de capacitación que no están relacionados con actividades delictivas.
 
-#### Persona-a-Locación or Material (modo-dos) {-}
+#### Persona-a-Locación o Material (modo-dos) {-}
 
-Las siguientes definiciones son ejemplos de relaciones de modo-dos entre personas y locaciones or materiales. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para adaptarlo a su investigación.
+Las siguientes definiciones son ejemplos de relaciones de modo-dos entre personas y locaciones o materiales. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para su investigación.
 
   - **Evidencia** (persona-a-material): definida como la relación física o la asociación directa de un individuo con un elemento de evidencia, como la posesión o el control individual de narcóticos, armas, documentos, etc.
   
@@ -48,7 +48,7 @@ Las siguientes definiciones son ejemplos de relaciones de modo-dos entre persona
   
 #### Persona-a-Organización (modo-dos) {-}
 
-Las siguientes definiciones son ejemplos de relaciones de modo-dos entre personas y organizaciones. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para adaptarlo a su investigación.
+Las siguientes definiciones son ejemplos de relaciones de modo-dos entre personas y organizaciones. Estas solo deben tomarse como ejemplos, le recomendamos que adapte el contenido para su investigación.
 
   - **Afiliación con organizaciones ilegítimas** (persona-a-organización): definida como la propiedad, el empleo y / o la membresía de una persona en una organización ilegítima. Una organización ilegítima se define como un grupo u organización cuyos objetivos son de naturaleza criminal (terrorista), o que voluntariamente obtiene recursos materiales y / o no materiales a través de actividades delictivas.
   
@@ -84,11 +84,11 @@ Esta sección describe y define los atributos (es decir, las características) d
 
 ## Libro de Códigos de Noordin Top
 
-El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts, el Profesor Sean Everton y Dan Cunningham en Laboratorio CORE [@Roberts2014]. El libro de códigos corresponde a los datos de las redes de Nordin Top y sus colaboradores en el grupo terrorista Jemaah Islamiya. Estos datos se obtuvieron principalmente de dos informes de International Crisis Group (ICG): "Terrorism in Indonesia: Noordin’s Networks" [@ICG2006] e "Indonesia: Noordin Top’s Support Base" [@ICG2009]. Los dos informes del ICG sobre Noordin contienen datos valiosos de modo-uno y dos sobre una variedad de relaciones y afiliaciones (amistad, parentesco, reuniones, etc.) junto con datos de atributos importantes (educación, pertenencia al grupo, estado físico, etc.). Los datos fueron inicialmente estructurados y analizados por estudiantes de la Escuela de Postgrado Naval en el curso "Seguimiento y Disrupción de las Redes Oscuras" bajo la dirección del Profesor Sean Everton, Co-Director del Laboratorio CORE y la Profesora Nancy Roberts y luego expandidos y limpiados por la Facultad Asociada para Instrucción, Dan Cunningham. 
+El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts, el Profesor Sean Everton y Dan Cunningham en Laboratorio CORE [@Roberts2014]. El libro de códigos corresponde a los datos de las redes de Noordin Top y sus colaboradores en el grupo terrorista Jemaah Islamiya. Estos datos se obtuvieron principalmente de dos informes de International Crisis Group (ICG): "Terrorism in Indonesia: Noordin’s Networks" [@ICG2006] e "Indonesia: Noordin Top’s Support Base" [@ICG2009]. Los dos informes del ICG sobre Noordin contienen datos valiosos de modo-uno y dos sobre una variedad de relaciones y afiliaciones (amistad, parentesco, reuniones, etc.) junto con datos de atributos importantes (educación, pertenencia al grupo, estado físico, etc.). Los datos fueron inicialmente estructurados y analizados por estudiantes de la Escuela Naval de Post Grado en el curso "Seguimiento y Disrupción de las Redes Oscuras" bajo la dirección del Profesor Sean Everton, Co-Director del Laboratorio CORE y la Profesora Nancy Roberts y luego expandidos y limpiados por Dan Cunningham. 
 
 ### Relaciones
 
-  - **Afiliación Organizacional** (modo-dos 237 x 32): Una organización terrorista/insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas/insurgentes, que consiste en miembros voluntariamente afiliados. A los efectos de este ejercicio, las facciones se considerarán separados de su organización principal para evitar que se codifiquen vínculos redundantes. En otras palabras, la mayoría de las afiliaciones de nivel micro están codificadas, mientras que un individuo solo se codifica en la organización principal si no figura como afiliado a una organización secundaria. Las organizaciones afiliadas terroristas/insurgentes, también están codificadas en esta matriz.
+  - **Afiliación Organizacional** (modo-dos 237 x 32): Una organización terrorista/insurgente se define como un sistema administrativo y funcional, cuyo principal objetivo común es la conducta operativa de actividades terroristas/insurgentes, que consiste en miembros voluntariamente afiliados. Las facciones se considerarán separados de su organización principal para evitar que se codifiquen vínculos redundantes. En otras palabras, la mayoría de las afiliaciones de nivel micro están codificadas, mientras que un individuo solo se codifica en la organización principal si no figura como afiliado a una organización secundaria. Las organizaciones afiliadas terroristas/insurgentes, también están codificadas en esta matriz.
 
   - **Afiliación Educativa** (modo-dos 237 x 25): Las relaciones educativas se definen como escuelas donde las personas reciben educación formal, sirven como empleados (maestro, administrador, etc.) y/o participan en instrucción educativa o religiosa adicional en la institución.
   
@@ -107,7 +107,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
     - Desconocido: cualquier tipo de comunicación no definido pero referenciado entre miembros
     - Vídeos: para la fabricación de bombas y la formación para reclutar miembros externos
     
-  - **Lazos de parentesco** (modo-uno 237 x 237): El parentesco se define como cualquier vínculo familiar, como hermano, cuñado, sobrino, etc. El parentesco también incluirá los matrimonios actuales y los matrimonios pasados ​​debido a divorcios y/o muertes.
+  - **Lazos de parentesco** (modo-uno 237 x 237): El parentesco se define como cualquier vínculo familiar, como hermano, cuñado, sobrino, etc. El parentesco también incluirá los matrimonios actuales y los matrimonios pasados debido a divorcios y/o muertes.
   
   - **Eventos de Entrenamiento** (modo-dos 237 x 15): Participación en cualquier actividad específicamente designada para enseñar el conocimiento, las habilidades y las competencias del terrorismo y la insurgencia. El entrenamiento no incluye la participación en un acto patrocinado por terroristas o actividad muyahidín en lugares como Afganistán, Bosnia, Chechenia o Irak, a menos que la presencia de las personas fuera para participar en un campo de entrenamiento o base específicamente designado en una de estas áreas.
 
@@ -127,7 +127,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
   - **Tipo de financiación** (modo-dos 237 x 5): Las relaciones financieras se definen como la provisión de fondos (legales e ilegales) para respaldar, mantener y realizar operaciones para la red.
   
-  - **Operaciones** (modo-dos 237 x 14): Las relaciones operativas se definen como personas que participan  en la preparación, ejecución yo prestación de apoyo posoperatorio. La preparación debe relacionarse directamente con la operación y puede incluir objetivos reconocimiento, proporcionar refugio seguro para la preparación, contribuir al entrenamiento religioso y/o físico y participar en un robo donde las ganancias financian un ataque posterior. La prestación de apoyo posterior a la operación, como la ocultación de fugitivos y la eliminación de explosivos, también debe estar directamente relacionada con la operación.
+  - **Operaciones** (modo-dos 237 x 14): Las relaciones operativas se definen como personas que participan  en la preparación, ejecución yo prestación de apoyo posoperatorio. La preparación debe relacionarse directamente con la operación y puede incluir objetivos como reconocimiento, proporcionar refugio seguro para la preparación, contribuir al entrenamiento religioso y/o físico y participar en un robo donde las ganancias financian un ataque posterior. La prestación de apoyo posterior a la operación, como la ocultación de fugitivos y la eliminación de explosivos, también debe estar directamente relacionada con la operación.
   
   - **Amistad** (modo-uno 237 x 237): Las relaciones de amistad se definen como vínculos estrechos a través del afecto o la estima entre dos personas. Los lazos de amistad no se definen únicamente como reuniones y/o vínculos escolares.
   
@@ -143,14 +143,14 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 **Nota de autor:** La codificación en la hoja maestra diferirá considerablemente de la codificación basada únicamente en el informe del ICG. El primero utilizó información fuera del informe del ICG para determinar los plazos en los que las personas estaban afiliadas a una institución religiosa.
 :::
 
-  - **Lugar logistico** (modo-dos 237 x 35): Las relaciones logísticas se definen como un lugar clave dentro del archipiélago donde ocurrió la actividad logística. La actividad logística se define como proporcionar "casas seguras" para reunirse/esconderse, brindar apoyo material en términos de explosivos, proporcionar armamento o facilitar el transporte de personal o equipo.
+  - **Lugar logístico** (modo-dos 237 x 35): Las relaciones logísticas se definen como un lugar clave dentro del archipiélago donde ocurrió la actividad logística. La actividad logística se define como proporcionar "casas seguras" para reunirse/esconderse, brindar apoyo material en términos de explosivos, proporcionar armamento o facilitar el transporte de personal o equipo.
 
   - **Función logística** (modo-dos 237 x 4): Las funciones logísticas se definen como el apoyo a operaciones terroristas/insurgentes proporcionando materiales, armas, transporte y refugios.
   
-  - **Lazos de mentores: ideológicos, supervisorese y tecnológicos** (modo-uno 237 x 237): Las subredes ideológicas, de supervisión y técnicas identifican a las personas en la red de Noordin que poseen la autoridad para dar el "Cómo", el "Qué" y el "Por qué" al resto de la red. Sentimos que la autoridad religiosa, la habilidad técnica como la fabricación de bombas o la habilidad informática, y el liderazgo comprobado eran habilidades que no se podían transferir fácilmente y valdría la pena centrarse en interrumpir la red.
+  - **Lazos de mentores: ideológicos, supervisores y tecnológicos** (modo-uno 237 x 237): Las subredes ideológicas, de supervisión y técnicas identifican a las personas en la red de Noordin que poseen la autoridad para dar el "Cómo", el "Qué" y el "Por qué" al resto de la red. Sentimos que la autoridad religiosa, la habilidad técnica como la fabricación de bombas o la habilidad informática, y el liderazgo comprobado eran habilidades que no se podían transferir fácilmente y valdría la pena centrarse en interrumpir la red.
   
 :::{.infobox .note data-latex=""}
-**Nota de autor:** Estas redes son dirigidas y no deben ser simétricas. Además, los mentores están en las filas mientras que los mentoreados están en las columnas.
+**Nota de autor:** Estas redes son dirigidas y no deben ser simétricas. Además, los mentores están en las filas mientras que los aprendices están en las columnas.
 :::
 
   - **Rol** (modo-dos 237 x 16): Definido como el papel que asume un individuo en la red terrorista/insurgencia. Codificado como datos de dos modos (ver también datos de atributos de función principal a continuación) porque algunas personas cumplen más de una función. La presencia de un rol por parte de un individuo se codificó como 1 y la ausencia como 0.
@@ -164,7 +164,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
    - **Nivel de educación**: definido como el título más alto alcanzado, el nivel en el que se enseñó, estudió, participó o asistió. El siguiente es el esquema de códigos:
    
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 0           | Desconocido |
 | 1           | Educación Primaria |
@@ -178,7 +178,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
   - **Contacto con personas fuera de Indonesia:** definido como contacto con personas en diferentes países fuera de Indonesia.
   
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 0           | Desconocido |
 | 1           | Afganistán  |
@@ -200,7 +200,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
   - **Entrenamiento militar:** definido como el país donde un individuo recibió entrenamiento militar y alcanzó el estatus de veterano en la lucha en guerras insurgentes/convencionales conocidas.
   
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 0           | Desconocido |
 | 1           | Afganistán  |
@@ -217,7 +217,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
   - **Nacionalidad de la persona:** definida como país de nacimiento, ciudadanía o residencia.
 
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 1           | Afganistán  |
 | 2           | Australia   |
@@ -231,7 +231,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
   - **Estado actual según el artículo del ICG:** definido como la condición física del individuo.
   
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 0           | Muerto      |
 | 1           | Vivo        |
@@ -239,7 +239,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
   - **Rol (Original):** definido como el rol que asume un individuo en la red terrorista/insurgente.
   
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 0           | Sin información/poca claridad |
 | 1           | Estratega: Planificador de alto nivel de una red terrorista/insurgente |
@@ -251,13 +251,13 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 7           | Reclutador: Se dedica a identificar y reclutar nuevos miembros (para incluir bombarderos)   |
 | 8           | Mensajero /Intermediario: Facilita las comunicaciones entre miembros |
 | 9           | Propagandista: Desarrolló campañas de información|
-| 10          | Facilitador: Asistido en el funcionamiento de la red (especialmente con materiales y finanzas) |
+| 10          | Facilitador: Ha asistido en el funcionamiento de la red (especialmente con materiales y finanzas) |
 | 11          | Líder religioso: Se le proporcionó formación y apoyo religiosos |
 | 12          | Comandante/Líder táctico: A cargo de las operaciones a nivel local/táctico |
 
   - **Rol ampliado (primario y secundario):** Definido como el rol que asume un individuo en la red terrorista/insurgente (incluye roles primarios y secundarios).
   
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 1           | Fabricante de bombas |
 | 2           | Bombardero |
@@ -279,7 +279,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
   - **Función logística:** definida como la provisión de casas seguras, armas, transporte y/o material a la red operativa.
 
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 1           | Proporcionar una casa segura |
 | 2           | Suministro de armas |
@@ -294,7 +294,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
   - **Habilidades técnicas:** elegimos codificar los atributos técnicos en función de los conjuntos de habilidades explícitos mencionados en el informe del ICG. En contraste con un atributo como "rol", elegimos solo codificar las habilidades técnicas específicas que se enumeran a continuación y no consideramos cosas como "líder de celda" o "financiero" como un rol técnico. Básicamente, estábamos buscando habilidades relacionadas con la electrónica, fabricación de bombas, diseño de páginas web, etc. A continuación se muestra una lista de los roles y el número correspondiente que recibió cada individuo. En los casos en que alguien tenía múltiples habilidades técnicas, elegimos codificar la que es subjetivamente más relevante para las operaciones terroristas. Por ejemplo, Azhari Husin tiene experiencia en ingeniería mecánica pero también tiene entrenamiento en explosivos. Lo codificaríamos como "fabricación de bombas". Aquellos sin habilidades técnicas identificadas reciben un 0 en la matriz.
 
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 1           | Fabricación de bombas |
 | 2           | Propaganda (producción de videos y CD de video, revistas, diseño de páginas web, etc.) |
@@ -304,7 +304,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
   - **Afiliación de grupo principal:** definida como la afiliación de grupo principal de cada miembro de la red, en general.
 
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 0           | Ninguno (Noordin) |
 | 1           | Darul Islam (DI) |
@@ -313,16 +313,16 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 4           | Ring Banten Group (DI) |
 | 5           | Al-Qaeda |
 
-  - **Red de Noordin:** un individuo que se considera miembro del grupo de Noordin (Tanzim Qaedat al-Jihad - Organización para la base del Jihad), en lugar de simplemente estar vinculado. Igualmente, si el individuo participó en una operación dirigida por Noordin durante cualquier etapa. Finalmente, si él o ella se declara explícitamente como miembro del círculo íntimo de Noordin y/o está vinculado a Noordin por parentesco o amistad.
+  - **Red de Noordin:** un individuo que se considera miembro del grupo de Noordin (Tanzim Qaedat al-Yihad - Organización para la base del Yihad), en lugar de simplemente estar vinculado. Igualmente, si el individuo participó en una operación dirigida por Noordin durante cualquier etapa. Finalmente, si él o ella se declara explícitamente como miembro del círculo íntimo de Noordin y/o está vinculado a Noordin por parentesco o amistad.
 
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 0           | No es miembro |
 | 1           | Miembro |
 
   - **Original 79:** Definido como las 79 personas enumeradas en el apéndice del Informe del ICG de 2006, "Noordin’s Networks"
 
-| Código      | Description |
+| Código      | Descripción |
 | ----------- | ----------- |
 | 0           | No incluido en el Apéndice |
 | 1           | Incluido en el Apéndice |

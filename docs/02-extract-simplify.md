@@ -7,19 +7,19 @@ output: html_document
 
 # Extraer y Simplificar Redes
 
-En este último capítulo de técnicas de manipulación de datos, abarcaremos los temas de simplificación y extracción de subredes. @Everton2012 menciona que a menudo al trabajar con redes sociales grandes es difícil apreciar los patrones de interacciones por el volumen de información; por esto, los analistas utilizan un conjunto de técnicas para encoger la red o extraer subconjuntos de datos con características relevantes. El objetivo de este capítulo es presentarle herramientas comúnmente utilizadas para reimaginar redes con propósito de localizar patrones emergentes. Para mantener claridad, en esta sección tocaremos cada técnica de manera individual. Antes concluir, tendrá la oportunidad de practicar el uso de estas herramientas en Gephi.
+En este último capítulo de técnicas de manipulación de datos, abarcaremos los temas de simplificación y extracción de subredes. @Everton2012 menciona que a menudo al trabajar con redes sociales grandes es difícil apreciar los patrones de interacciones por el volumen de información; por esto, los analistas utilizan un conjunto de técnicas para encoger la red o extraer subconjuntos de datos con características relevantes. El objetivo de este capítulo es presentarle herramientas comúnmente utilizadas para reimaginar redes con propósito de localizar patrones emergentes. Para mantener claridad, en esta sección tocaremos cada técnica de manera individual. Antes de concluir, tendrá la oportunidad de practicar el uso de estas herramientas en Gephi.
 
 
 ## Extraer
 
-Extraer es una técnica utilizada para aislar porciones de una red con base a un conjunto de características. Estas pueden ser características de los nodos o las aristas. Por ejemplo, en una red de pandilleros tenemos miembros asociado por diferentes tipos de enlaces, algunos de los miembros se encuentran libres y vivos, vivos y en búsqueda, y encarcelados/detenidos. La Figura \@ref(fig:2-6-pandilleros) es una representación gráfica de este ejemplo. En ella los nodos libres y vivos están coloreados de negro, los vivos y en búsqueda en gris, y los encarcelados/detenidos en blanco. Por su parte los enlaces rojos son familiares, los verdes financieros, rosados amistosos y azul son de superior-subordinado.
+Extraer es una técnica utilizada para aislar porciones de una red con base a un conjunto de características. Estas pueden ser características de los nodos o las aristas. Por ejemplo, en una red de pandilleros tenemos miembros asociados por diferentes tipos de enlaces, algunos de los miembros se encuentran libres y vivos, vivos y en búsqueda, y encarcelados/detenidos. La Figura \@ref(fig:2-6-pandilleros) es una representación gráfica de este ejemplo. En ella los nodos libres y vivos están coloreados de negro, los vivos y en búsqueda en gris, y los encarcelados/detenidos en blanco. Por su parte los enlaces rojos son familiares, los verdes financieros, rosados amistosos y azul son de superior-subordinado.
 
 <div class="figure" style="text-align: center">
 <img src="02-extract-simplify_files/figure-html/2-6-pandilleros-1.png" alt="Red de Pandilleros" width="100%" />
 <p class="caption">(\#fig:2-6-pandilleros)Red de Pandilleros</p>
 </div>
 
-Podemos enfocarnos en las características de los nodos y extraer una subred con base a estos atributos. Por ejemplo, si el enfoque del análisis es localizar a los nodos vivos y libres más activos, es importante extraer de la red solo nodos libres o en búsqueda. La Figura \@ref(fig:2-6-vivos) sólo incluye nodos vivos y libres, por ello se han removido seis nodos de el conjunto de datos original.
+Podemos enfocarnos en las características de los nodos y extraer una subred con base a estos atributos. Por ejemplo, si el enfoque del análisis es localizar a los nodos vivos y libres más activos, es importante extraer de la red solo nodos libres o en búsqueda. La Figura \@ref(fig:2-6-vivos) sólo incluye nodos vivos y libres, por ello se han removido seis nodos del conjunto de datos original.
 
 <div class="figure" style="text-align: center">
 <img src="02-extract-simplify_files/figure-html/2-6-vivos-1.png" alt="Red de Pandilleros Vivos y Libres" width="100%" />
@@ -35,7 +35,7 @@ Similarmente, podemos extraer subredes con base en los patrones o tipos de relac
 
 ## Simplificar
 
-Simplificar, tambien llamado colapsar, es una estrategia que permite el aglomerar múltiples nodos con un atributo compartido a uno solo nodo. Como sugiere @Everton2012, esta estrategia es valiosa si el objetivo del análisis es examinar los patrones de enlaces entre tipos de nodos y no entre nodos individuales.  
+Simplificar, también llamado colapsar, es una estrategia que permite el aglomerar múltiples nodos con un atributo compartido a un solo nodo. Como sugiere @Everton2012, esta estrategia es valiosa si el objetivo del análisis es examinar los patrones de enlaces entre tipos de nodos y no entre nodos individuales.  
 
 Una vez más, retornemos a la red de pandilleros. Esta vez, los nodos han sido coloreados con base a la afiliación de cada miembro a pandillas, Figura \@ref(fig:2-6-pos).
 
@@ -47,10 +47,11 @@ Una vez más, retornemos a la red de pandilleros. Esta vez, los nodos han sido c
 Utilizando estas categorías, podemos colapsar la red. Por ejemplo, la Figura \@ref(fig:2-6-collapsed) es una representación de la red donde cada nodo representa una categoría. Cada vínculo entre estas categorías simboliza la presencia de una relación entre dos personas con afiliaciones a dicho grupo.
 
 <div class="figure" style="text-align: center">
-<img src="02-extract-simplify_files/figure-html/2-6-collapsed-1.png" alt="Pandilleros, Collapsados por Grupo Ilícito" width="100%" />
-<p class="caption">(\#fig:2-6-collapsed)Pandilleros, Collapsados por Grupo Ilícito</p>
+<img src="02-extract-simplify_files/figure-html/2-6-collapsed-1.png" alt="Pandilleros, Colapsados por Grupo Ilícito" width="100%" />
+<p class="caption">(\#fig:2-6-collapsed)Pandilleros, Colapsados por Grupo Ilícito</p>
 </div>
 
+\break
 
 ## Ejercicio Práctico
 
@@ -58,7 +59,7 @@ En este ejercicio, veremos técnicas para combinar datos relacionales con datos 
 
 ### Antes de empezar
 
-Para poder manipular los datos adecuadamente es necesario descargar e instalar un módulo adicional de software, *Grupos by partition* ó *Grupos por partición*. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo *MultimodeNetworks Transformation* en ejercicio práctico en el capitulo [Derivando Datos Modo-Uno de Modo-Dos]. 
+Para poder manipular los datos adecuadamente es necesario descargar e instalar un módulo adicional de software, *Grupos by partition* o *Grupos por partición*. Haga esto siguiendo los mismos pasos que utilizamos para descargar el módulo *MultimodeNetworks Transformation* en el ejercicio práctico del capítulo [Derivando Datos Modo-Uno de Modo-Dos]. 
 
 
 Recuerde que deberá reiniciar Gephi.
@@ -97,18 +98,18 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  2.	En la siguiente pantalla de importación (Figura \@ref(fig:2-6-importacion2)) vera que se ha detectado una serie de atributos: `Education Level`, `Contact with People`, `Current Status (ICG Article)`, `Military Training`, `Nationality`, `Noordin’s Network`, `Primary Group Affiliation`, y `Role`, junto con la identificación y etiqueta de cada nodo (actor) en la red. Gephi probablemente importará de manera predeterminada todos los atributos como *String* (caracteres de texto). Por lo tanto, usando los menus desplegables debajo de cada atributo, cámbielo de *String* a *Integer* (números enteros). Luego, de clic en *Terminar*.
+  2.	En la siguiente pantalla de importación (Figura \@ref(fig:2-6-importacion2)) verá que se ha detectado una serie de atributos: `Education Level`, `Contact with People`, `Current Status (ICG Article)`, `Military Training`, `Nationality`, `Noordin’s Network`, `Primary Group Affiliation`, y `Role`, junto con la identificación y etiqueta de cada nodo (actor) en la red. Gephi probablemente importará de manera predeterminada todos los atributos como *String* (caracteres de texto). Por lo tanto, usando los menús desplegables debajo de cada atributo, cámbielo de *String* a *Integer* (números enteros). Luego, de clic en *Terminar*.
 :::
 :::
 
 <div class="figure" style="text-align: center">
-<img src="images/02-07-01.png" alt="Cuadro de dialogo para importar un archivo CSV (1 de 2)" width="100%" />
-<p class="caption">(\#fig:2-6-importacion)Cuadro de dialogo para importar un archivo CSV (1 de 2)</p>
+<img src="images/02-07-01.png" alt="Cuadro de diálogo para importar un archivo CSV (1 de 2)" width="100%" />
+<p class="caption">(\#fig:2-6-importacion)Cuadro de diálogo para importar un archivo CSV (1 de 2)</p>
 </div>
 
 <div class="figure" style="text-align: center">
-<img src="images/02-07-02.png" alt="Cuadro de dialogo para importar un archivo CSV (2 de 2)" width="100%" />
-<p class="caption">(\#fig:2-6-importacion2)Cuadro de dialogo para importar un archivo CSV (2 de 2)</p>
+<img src="images/02-07-02.png" alt="Cuadro de diálogo para importar un archivo CSV (2 de 2)" width="100%" />
+<p class="caption">(\#fig:2-6-importacion2)Cuadro de diálogo para importar un archivo CSV (2 de 2)</p>
 </div>
 
 
@@ -124,7 +125,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  3.	A continuación, debería ver el *Informe de importación* de Gephi (Figure (Figura \@ref(fig:2-6-importacion3)). Aquí, indique que desea agregar los datos a un nuevo espacio de trabajo. No cambie ningún otro valor predeterminado de importación (como esta tabla no incluye aristas, ninguna de las otras opciones afectará el resultado). Haga clic en *Aceptar*.
+  3.	A continuación, deberá ver el *Informe de importación* de Gephi (Figura \@ref(fig:2-6-importacion3)). Aquí, indique que desea agregar los datos a un nuevo espacio de trabajo. No cambie ningún otro valor predeterminado de importación (como esta tabla no incluye aristas, ninguna de las otras opciones afectará el resultado). Haga clic en *Aceptar*.
 :::
 :::
 
@@ -147,13 +148,13 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  4.	Ahora importemos la lista de aristas correspondiente, [`Operational (Edge List).csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/simplifying/Operational%20(Edge%20List).csv), usando el comando *Archivo > Abrir*. Gephi debe detectar el formato del archivo correctamente, pero asegúrese que los separadores sean comas y que el archivo de importación sea reconocido como *Tabla de aristas* (Figura \@ref(fig:2-6-importacion4)). Luego haga clic en *Siguiente*. En e siguiente cuadro de diálogo, acepte todos los valores predeterminados de Gephi y haga clic en *Terminar*. 
+  4.	Ahora importemos la lista de aristas correspondiente, [`Operational (Edge List).csv`](https://raw.githubusercontent.com/cjcallag/arso/main/data/simplifying/Operational%20(Edge%20List).csv), usando el comando *Archivo > Abrir*. Gephi debe detectar el formato del archivo correctamente, pero asegúrese que los separadores sean comas y que el archivo de importación sea reconocido como *Tabla de aristas* (Figura \@ref(fig:2-6-importacion4)). Luego haga clic en *Siguiente*. En el siguiente cuadro de diálogo, acepte todos los valores predeterminados de Gephi y haga clic en *Terminar*. 
 :::
 :::
 
 <div class="figure" style="text-align: center">
-<img src="images/02-07-04.png" alt="Cuadro de dialogo para importar un archivo CSV" width="100%" />
-<p class="caption">(\#fig:2-6-importacion4)Cuadro de dialogo para importar un archivo CSV</p>
+<img src="images/02-07-04.png" alt="Cuadro de diálogo para importar un archivo CSV" width="100%" />
+<p class="caption">(\#fig:2-6-importacion4)Cuadro de diálogo para importar un archivo CSV</p>
 </div>
 
 :::{.row}
@@ -168,7 +169,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-5.	Una vez más, deberá ver el informe de importación de Gephi (Figure \@ref(fig:2-6-importacion5)). Aunque, es importante que le indique a Gephi que el grafo no es dirigido, que desea utilizar la estrategia para combinar aristas *Minimo* y que desea agregar los datos al lugar de trabajo existente. Note que el informe indica que solo hay 68 nodos, sin embargo, el reporte de importación de los atributos (Figura \@ref(fig:2-6-importacion3)) indico que hay 79. ¿Por qué? La respuesta es que la red contiene 11 nodos aislados, estos son, individuos que no tienen enlaces a otros en esta red. Haga clic en *Aceptar*. Antes de comenzar, guarde sus datos como archivo de Gephi.
+5.	Una vez más, deberá ver el informe de importación de Gephi (Figura \@ref(fig:2-6-importacion5)). Aunque, es importante que le indique a Gephi que el grafo no es dirigido, que desea utilizar la estrategia para combinar aristas *Mínimo* y que desea agregar los datos al lugar de trabajo existente. Note que el informe indica que solo hay 68 nodos, sin embargo, el reporte de importación de los atributos (Figura \@ref(fig:2-6-importacion3)) indicó que hay 79. ¿Por qué? La respuesta es que la red contiene 11 nodos aislados, estos son, individuos que no tienen enlaces a otros en esta red. Haga clic en *Aceptar*. Antes de comenzar, guarde sus datos como archivo de Gephi.
 :::
 :::
 
@@ -236,7 +237,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  3.	Ahora, ajustemos el tamaño de los nodos según el nivel educativo. En la pestaña *Apariencia*, haga clic en *Nodos*,  luego en el ícono de tamaño (a la derecha de la paleta de colores) y luego en *Ranking*. Usando el menú desplegable de atributos, seleccione `education level` y haga clic en *Aplicar*. El tamaño de los nodos ahora debe reflejar el nivel de educación. Los tamaños de nodo mínimo y máximo predeterminados de Gephi predeterminados constan de un rango arbitrario de valores. Si observa los valores de este atributo en la ventana *Laboratorio de datos*, verá que el nivel educativo va de 0 a 8. Para distinguir los nodos un poco mejor, ajusté el mínimo y el máximo de 3 a 27 (no usamos 0 como mínimo porque los nodos desaparecerán). Use las técnicas de visualización cubiertas en nuestros laboratorios anteriores. Este autor presenta un ejemplo en la Figura \@ref(fig:2-6-7) generado utilizando el diseño *Force Atlas* porque no empuja los aislados lejos del resto de la red. **¿Detecta algún patrón relacional asociado con los atributos de los nodos (por ejemplo, los actores con niveles de educación más altos se encuentran en el centro de la red)?** 
+  3.	Ahora, ajustemos el tamaño de los nodos según el nivel educativo. En la pestaña *Apariencia*, haga clic en *Nodos*,  luego en el ícono de tamaño (a la derecha de la paleta de colores) y luego en *Ranking*. Usando el menú desplegable de atributos, seleccione `education level` y haga clic en *Aplicar*. El tamaño de los nodos ahora debe reflejar el nivel de educación. Los tamaños de nodo mínimo y máximo predeterminados de Gephi constan de un rango arbitrario de valores. Si observa los valores de este atributo en la ventana *Laboratorio de datos*, verá que el nivel educativo va de 0 a 8. Para distinguir los nodos un poco mejor, ajuste el mínimo y el máximo de 3 a 27 (no usamos 0 como mínimo porque los nodos desaparecerán). Use las técnicas de visualización cubiertas en los ejercicios anteriores. Este autor presenta un ejemplo en la Figura \@ref(fig:2-6-7) generado utilizando el diseño *Force Atlas* porque no empuja los aislados lejos del resto de la red. **¿Detecta algún patrón relacional asociado con los atributos de los nodos (por ejemplo, los actores con niveles de educación más altos se encuentran en el centro de la red)?** 
 :::
 :::
 
@@ -278,7 +279,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  2. En la ventana *Descripción general*, seleccione el comando *Herramientas > Generate groups by partition*. Aparecerá un cuadro de diálogo que le preguntará si desea crear un nuevo espacio de trabajo o sobrescribir el actual. Elija *Crear*. Esto generará un nuevo espacio de trabajo donde los nodos han sido colapsados según el rol de cada nodo. Es importante tener en cuenta que este módulo contrae la red en base a la partición de nodos seleccionada en la ventana *Vista general*. Si hubiéramos querido colapsar la red basándose, por ejemplo, en el estado actual, entonces habríamos tenido que volver a colorear y revisualisar la red usando otra partición, siguiendo los comandos detallados en la seccion [Uso de atributos de nodo en visualizaciones de red].
+  2. En la ventana *Descripción general*, seleccione el comando *Herramientas > Generate groups by partition*. Aparecerá un cuadro de diálogo que le preguntará si desea crear un nuevo espacio de trabajo o sobrescribir el actual. Elija *Crear*. Esto generará un nuevo espacio de trabajo donde los nodos han sido colapsados según el rol de cada nodo. Es importante tener en cuenta que este módulo contrae la red en base a la partición de nodos seleccionada en la ventana *Vista general*. Si hubiéramos querido colapsar la red basándose, por ejemplo, en el estado actual, entonces habríamos tenido que volver a colorear y revisualisar la red usando otra partición, siguiendo los comandos detallados previamente.
 :::
 :::
 
@@ -296,7 +297,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  3.	Finalmente, necesitamos cambiar el nombre de las etiquetas para que correspondan con los diferentes roles. Cambie a la ventana *Laboratorio de datos*, seleccione la *Tabla de nodos* y verá que ahora solo hay 12 nodos correspondiendo a los grupos colapsados (por ejemplo, `Group of Jabir`). Al colapsar los nodos el nombre asociado con el grupo corresponde a uno de los actores que pertenecen a este subconjunto. Para modificar las etiquetas con los roles, vamos a tener que abrir la tabla original de atributos (`Attributes (Nodes Table).csv`) y la clave a continuación:
+  3.	Finalmente, necesitamos cambiar el nombre de las etiquetas para que correspondan con los diferentes roles. Cambie a la ventana *Laboratorio de datos*, seleccione la *Tabla de nodos* y verá que ahora solo hay 12 nodos correspondiendo a los grupos colapsados (por ejemplo, `Group of Jabir`). Al colapsar los nodos el nombre asociado con el grupo corresponde a uno de los actores que pertenecen a este subconjunto. Para modificar las etiquetas con los roles, vamos a tener que abrir la tabla original de atributos (`Attributes (Nodes Table).csv`) y utilizar la clave a continuación:
 :::
 :::
 
@@ -336,7 +337,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  4.	Ahora, cambie la Ventana *Vista general* y visualice la red. Los nodos probablemente variarán en tamaño, por lo que se recomienda modificar el tamaño utilizando los comandos *Nodos > Tamaño > Único* en esta secuencia. También use el algoritmo de diseño *Force Atlas* para editar el gráfico. Note que los pesos de las aristas reflejan en número de enlaces entre cada par de nodos, por lo que podemos reducir el grosor de estos. Además, agregue el tamaño de las etiquetas a su gusto (vea nuestra sugerencia en la Figura \@ref(fig:2-6-9)). Antes de pasar al siguiente paso, haga clic derecho en el nodo `propagandista` (o `propagandist`). Esta acción abrirá un cuadro de diálogo; allí, seleccione *Bloquear*. Hacer esto evita que el nodo se mueva al aplicar algoritmos de diseño adicionales.
+  4.	Ahora, cambie a la Ventana *Vista general* y visualice la red. Los nodos probablemente variarán en tamaño, por lo que se recomienda modificar el tamaño utilizando los comandos *Nodos > Tamaño > Único* en esta secuencia. También use el algoritmo de diseño *Force Atlas* para editar el gráfico. Note que los pesos de las aristas reflejan en número de enlaces entre cada par de nodos, por lo que podemos reducir el grosor de estos. Además, agregue el tamaño de las etiquetas a su gusto (vea nuestra sugerencia en la Figura \@ref(fig:2-6-9)). Antes de pasar al siguiente paso, haga clic derecho en el nodo `propagandista` (o `propagandist`). Esta acción abrirá un cuadro de diálogo; allí, seleccione *Bloquear*. Hacer esto evita que el nodo se mueva al aplicar algoritmos de diseño adicionales.
 :::
 :::
 
@@ -358,7 +359,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  5.	Experimenté con varios algoritmos de diseño, en mi grafico (Figura \@ref(fig:2-6-10)) vera un sociograma modificado con el algoritmo de diseño *OpenOrd*. Mirando el gráfico (que usted mismo puede producir en Gephi), **¿Qué sugieren los patrones entre los roles?** Tenga en cuenta que algunos de los nodos tienen vínculos consigo mismos (bucles). **¿Qué crees que indican estos patrones? ¿Por qué cree que el nodo “Recon and sureveillance” no se encuentra más cerca a los demás nodos?**
+  5.	Experimente con varios algoritmos de diseño, en nuestro gráfico (Figura \@ref(fig:2-6-10)) verá un sociograma modificado con el algoritmo de diseño *OpenOrd*. Mirando el gráfico (que usted mismo puede producir en Gephi), **¿Qué sugieren los patrones entre los roles?** Tenga en cuenta que algunos de los nodos tienen vínculos consigo mismos (bucles). **¿Qué crees que indican estos patrones? ¿Por qué cree que el nodo “Recon and sureveillance” no se encuentra más cerca a los demás nodos?**
 :::
 :::
 
@@ -388,7 +389,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  1.	Ahora, vamos a extraer un conjunto de red más grande. Para hacer esto, volvamos a la red original (sin colapsar), que probablemente se encuentra el primer espacio de trabajo. En la pestaña *Filtros* en el lado derecho de la ventana *Descripción general*, seleccione *Atributos*, luego *Partición* y luego *current status (icg articles)* a la sección *Consultas*. En el cuadro debajo de la sección *Consultas* - *Partition (current status (icg article)) Configuración* – deberá ver tres cuadros, etiquetados *2*, *1*, y *0*, que indican si el actor esta muerto `0`, vivo y libre `1`, o en la cárcel `2`. Aquí, extraeremos la red `Viva y libre` marcando la casilla *1*. Haga clic en *Filtrar* y luego use el botón *Exportar gráfico filtrado a un nuevo espacio de trabajo*, que utilizamos en el laboratorio anterior (cuadro rojo en la Figura \@ref(fig:2-6-11)).
+  1.	Ahora, vamos a extraer un conjunto de red más grande. Para hacer esto, volvamos a la red original (sin colapsar), que probablemente se encuentra en el primer espacio de trabajo. En la pestaña *Filtros* en el lado derecho de la ventana *Descripción general*, seleccione *Atributos*, luego *Partición* y luego *current status (icg articles)* en la sección *Consultas*. En el cuadro debajo de la sección *Consultas* - *Partición (current status (icg article)) Configuración* – deberá ver tres cuadros, etiquetados *2*, *1*, y *0*, que indican si el actor está muerto `0`, vivo y libre `1`, o en la cárcel `2`. Aquí, extraeremos la red `Viva y libre` marcando la casilla *1*. Haga clic en *Filtrar* y luego use el botón *Exportar gráfico filtrado a un nuevo espacio de trabajo*, que utilizamos en el ejercicio anterior (cuadro rojo en la Figura \@ref(fig:2-6-11)).
 :::
 :::
 
@@ -409,7 +410,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  2.	Cambie el nuevo espacio de trabajo y cámbiele el nombre (por ejemplo, `Red viva y libre`). Después de experimentar con algunos algoritmos de diseño, tamaño de nodo con base en el nivel educativo, tamaño de etiqueta y pesos de borde, produje el grafico en la Figura \@ref(fig:2-6-12). Tenga en cuenta que vez elegí no mostrar los nodos aislados. Los colores reflejan el rol.
+  2.	Cambie el nuevo espacio de trabajo y cámbiele el nombre (por ejemplo, `Red viva y libre`). Experimente con algunos algoritmos de diseño, tamaño de nodo con base en el nivel educativo, tamaño de etiqueta y pesos de borde, etc. Los colores reflejan el rol.
 :::
 :::
 
