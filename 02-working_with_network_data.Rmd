@@ -3,5 +3,5 @@ output: html_document
 bibliography: book.bib
 ---
 
-# (PART) ARSo: Tecnicas {-}
+# (PART) ARSo: Técnicas {-}
 

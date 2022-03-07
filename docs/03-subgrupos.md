@@ -25,11 +25,11 @@ Los nodos en un grafo desconectado se pueden dividir en dos o más subconjuntos 
 <p class="caption">(\#fig:3-2-weakcomp)Red con múltiples componentes débiles</p>
 </div>
 
-El detectar componentes débiles no solo sirve para colorear los grafos, de hecho, una de las aplicaciones más comunes es el aislar componentes. Por ejemplo, la densidad de el grafo en la Figura \@ref(fig:3-2-weakcomp) es 0.25. Este índice sugiere una red escarza, sin embargo, de manera visual podemos ver que algunos componentes son más densos que otros. El componente principal, aquel de mayor tamaño, aparenta ser más denso. Es por ello que podemos aislar este componente principal y al ejecutar la medida de densidad vemos un valor de 0.6. Este proceso nos permite enfocarnos en diferentes subconjuntos del grafo en nuestro análisis. 
+El detectar componentes débiles no solo sirve para colorear los grafos, de hecho, una de las aplicaciones más comunes es el aislar componentes. Por ejemplo, la densidad del grafo en la Figura \@ref(fig:3-2-weakcomp) es 0.25. Este índice sugiere una red escarza, sin embargo, de manera visual podemos ver que algunos componentes son más densos que otros. El componente principal, aquel de mayor tamaño, aparenta ser más denso. Es por ello que podemos aislar este componente principal y al ejecutar la medida de densidad nuevamente vemos un valor de 0.6. Este proceso nos permite enfocarnos en diferentes subconjuntos del grafo en nuestro análisis. 
 
 ### Componentes Fuertes
 
-Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley2010 define los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre sí y (B) el subconjunto no es parte de un conjunto mayor con la propiedad que los nodos pueden llegar a todos los demás. Por ejemplo, en la Figura \@ref(fig:3-2-strongcomp) el color de los nodos denota membresía a un subcomponente fuerte.
+Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley2010 definen los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre sí y (B) el subconjunto no es parte de un conjunto mayor con la propiedad que los nodos pueden llegar a todos los demás. Por ejemplo, en la Figura \@ref(fig:3-2-strongcomp) el color de los nodos denota membresía a un subcomponente fuerte.
 
 <div class="figure" style="text-align: center">
 <img src="03-subgrupos_files/figure-html/3-2-strongcomp-1.png" alt="Red con múltiples componentes fuertes" width="100%" />
@@ -38,11 +38,11 @@ Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley20
 
 Observe que en esta ocasión encontramos cuatro componentes fuertes, el primero se encuentra compuesto por un actor aislado {H}, el segundo es una diada reciproca {F, G}, el tercero es un solo actor {E}, y el cuarto sería el componente fuerte principal {A, B, C, D}. Es probable que se esté preguntando, ¿Por qué E no forma parte del componente fuerte principal? La razón la podemos encontrar en la definición de Easley y Kleinberg. Note que en el componente principal todos los nodos pueden alcanzarse entre sí, es decir, si cualquier nodo en el componente fuese a difundir alguna noticia a través de sus contactos esta información podría retornar al originador. Sin embargo, E se encuentra en un componente único puesto que no alcanza a otros nodos.
 
-Como puede ver, los componentes fuertes son mas restrictivos que los componentes débiles. Sin embargo, son útilices al trabajar con datos dirigidos puesto que permiten el análisis de subconjuntos donde todos los nodos pueden alcanzarse entre sí tomando en cuenta la direccionalidad de vínculos dirigidos y el flujo potencial de información y/o recursos.
+Como puede ver, los componentes fuertes son más restrictivos que los componentes débiles. Sin embargo, son útiles al trabajar con datos dirigidos puesto que permiten el análisis de subconjuntos donde todos los nodos pueden alcanzarse entre sí tomando en cuenta la direccionalidad de vínculos dirigidos y el flujo potencial de información y/o recursos.
 
 ## K-cores
 
-Otra forma de localizar subgrupos cohesivos en una red es basándose en grados nodales; específicamente, utilizando k-cores (o k-núcleos) que se definen en términos del grado mínimo. Donde *k*, en un subgrafo es el número mínimo de nodos adyacentes [@Wasserman1994] . Por ejemplo, la primer grafo en la Figura \@ref(fig:3-2-kcore) representa un grafo completo, es decir, 0-core. En este, vemos nodos aislados con cero enlaces, nodos pendientes con un solo vínculo y nodos con una variedad de grados de centralidad. Un 1-core incluye todos los nodos conectados al menos a una persona (ver Figura \@ref(fig:3-2-kcore)). Similarmente, un 2-core incluye nodos conectados al menos dos otros nodos (ver Figura \@ref(fig:3-2-kcore)). De igual manera podemos definir un 3-core como nodos con tres o más vínculos (ver Figura \@ref(fig:3-2-kcore)). Al aumentar *k* comenzamos a localizar el núcleo de actores más interconectados de la red, de igual manera el subconjunto restante aumentará en densidad [@Valente2010]. 
+Otra forma de localizar subgrupos cohesivos en una red es basándose en grados nodales; específicamente, utilizando k-cores (o k-núcleos) que se definen en términos del grado mínimo. Donde *k*, en un subgrafo es el número mínimo de nodos adyacentes [@Wasserman1994] . Por ejemplo, el primer grafo (red completa) en la Figura \@ref(fig:3-2-kcore) representa un grafo completo, es decir, 0-core. En este, vemos nodos aislados con cero enlaces, nodos pendientes con un solo vínculo y nodos con una variedad de grados de centralidad. Un 1-core incluye todos los nodos conectados al menos a una persona (ver Figura \@ref(fig:3-2-kcore)). Similarmente, un 2-core incluye nodos conectados al menos a dos otros nodos (ver Figura \@ref(fig:3-2-kcore)). De igual manera podemos definir un 3-core como nodos con tres o más vínculos (ver Figura \@ref(fig:3-2-kcore)). Al aumentar *k* comenzamos a localizar el núcleo de actores más interconectados de la red, de igual manera el subconjunto restante aumentará en densidad [@Valente2010]. 
 
 <img src="03-subgrupos_files/figure-html/unnamed-chunk-1-1.png" width="100%" style="display: block; margin: auto;" />
 
@@ -56,7 +56,7 @@ El remover nodos incrementando *k* es una estrategia comúnmente utilizada por a
 
 ## Girvan-Newman
 
-El algoritmo de Girvan y Newman [-@Newman2004] detecta subcomunidades enfocándose en remover vínculos intermediarios entre subconjuntos de nodos con el propósito de localizar subcomponentes. Por ejemplo, en la red \@ref(fig:3-2-bowtie) (izquierda) vemos dos triadas cerradas conectadas a través de un puente. En este gráfico los vínculos han sido dibujados de manera ponderada con base en la intermediación de cada enlace. El algoritmo de Girvan y Newman comienza por calcular la intermediación de los enlaces, remueve de manera sistemática aquellos con el mayor índice de intermediación y procede a recalcularla y remover enlaces con alto valor de manera iterativa. Supongamos que ejecutamos este algoritmos por un ciclo, entonces al remover el puente entre traídas se produce dos subconjuntos, mejor descritos como componentes débiles (ver, \@ref(fig:3-2-bowtie) (derecha)).   
+El algoritmo de Girvan y Newman [-@Newman2004] detecta subcomunidades enfocándose en remover vínculos intermediarios entre subconjuntos de nodos con el propósito de localizar subcomponentes. Por ejemplo, en la red \@ref(fig:3-2-bowtie) (izquierda) vemos dos tríadas cerradas conectadas a través de un puente. En este gráfico los vínculos han sido dibujados de manera ponderada con base en la intermediación de cada enlace. El algoritmo de Girvan y Newman comienza por calcular la intermediación de los enlaces, remueve de manera sistemática aquellos con el mayor índice de intermediación y procede a recalcularla y remover enlaces con alto valor de manera iterativa. Supongamos que ejecutamos este algoritmo por un ciclo, entonces al remover el puente entre tríadas se produce dos subconjuntos, mejor descritos como componentes débiles (ver, derecha).   
 
 <div class="figure" style="text-align: center">
 <img src="03-subgrupos_files/figure-html/3-2-bowtie-1.png" alt="Red hipotética (izquierda) y componentes débiles (derecha)" width="100%" />
@@ -96,7 +96,7 @@ $$
 
 Donde $A_{ij}$ es el peso del vínculo entre los nodos $i$ y $j$. $k_{i}$ y $k_{j}$ son los grados de cada nodo correspondiente. $\delta(c_i, c_j)$ o la delta Kronecker tiene un valor de 1.0 si ambos $i$ y $j$ corresponden a la misma partición, de otra manera el valor es 0.0. Por último, $m$ corresponde al número de vínculos en la red. 
 
-El siguiente es un ejemplo de cómo calcular la modularidad de una red a mano a se base en el [ejemplo de Matthew Joseph](https://www.researchgate.net/post/Can_anyone_provide_a_short_example_of_how_the_modularity_is_being_calculated_in_networks) en ResearchGate y [luego Abhishek Mishra]( https://medium.com/walmartglobaltech/demystifying-louvains-algorithm-and-its-implementation-in-gpu-9a07cdd3b010). Empecemos con nuestra pequeña red \@ref(fig:3-2-tie3) y su matriz de adyacencia \@ref(eq:3-2-tiemat).
+El siguiente es un ejemplo de cómo calcular la modularidad de una red a mano con base en el [ejemplo de Matthew Joseph](https://www.researchgate.net/post/Can_anyone_provide_a_short_example_of_how_the_modularity_is_being_calculated_in_networks) en ResearchGate y [luego Abhishek Mishra]( https://medium.com/walmartglobaltech/demystifying-louvains-algorithm-and-its-implementation-in-gpu-9a07cdd3b010). Empecemos con nuestra pequeña red \@ref(fig:3-2-tie3) y su matriz de adyacencia.
 
 <div class="figure" style="text-align: center">
 <img src="03-subgrupos_files/figure-html/3-2-tie3-1.png" alt="Red hipotética" width="100%" />
@@ -116,7 +116,7 @@ F & 0 & 0 & 0 & 1 & 1 & - \\
 \end{matrix}
 $$
 
-Como mencionamos previamente, la implementación del algoritmo Girvan-Newman comienza por remover el vínculo con la mayor intermediación, en este caso el puente entre los actores D y B. Aquí utilizaremos esta partición como punto de inicio, es decir, la primera partición contiene los nodos {A, B, C} y la segunda {D, E, F}. Igualmente, el número de enlaces en este grafo es $m$ = 7 y el grado de cada nodo es equivalente a:
+La implementación del algoritmo Girvan-Newman comienza por remover el vínculo con la mayor intermediación, en este caso el puente entre los actores D y B. Aquí utilizaremos esta partición como punto de inicio, es decir, la primera partición contiene los nodos {A, B, C} y la segunda {D, E, F}. Igualmente, el número de enlaces en este grafo es $m$ = 7 y el grado de cada nodo es equivalente a:
 
 $$
 \begin{matrix}
@@ -137,29 +137,29 @@ $$
 \small
 \begin{aligned}
 Q = \frac{1}{2 \times 7} (\\
-&\text{A a A: no connectados (0), mismo grupo (1)}\\
+&\text{A a A: no conectados (0), mismo grupo (1)}\\
 &(0 - \frac{2 \times 2}{(2 \times 7)}) \times 1 + && \\
-&\text{A a B: connectados (1), mismo grupo (1)} \\
+&\text{A a B: conectados (1), mismo grupo (1)} \\
 &(1 - \frac{2 \times 3}{(2 \times 7)}) \times 1 + && \\
-&\text{A a C: connectados (1), mismo grupo (1)} \\
+&\text{A a C: conectados (1), mismo grupo (1)} \\
 &(1 - \frac{2 \times 2}{(2 \times 7)}) \times 1 + && \\
-&\text{A a D: no connectados (0), otro grupo (0)} \\
+&\text{A a D: no conectados (0), otro grupo (0)} \\
 &(0 - \frac{2 \times 3}{(2 \times 7)}) \times 0 + && \\
-&\text{A a E: no connectados (0), otro grupo (0)} \\
+&\text{A a E: no conectados (0), otro grupo (0)} \\
 &(0 - \frac{2 \times 2}{(2 \times 7)}) \times 0 + && \\
-&\text{A a F: no connectados (0), otro grupo (0)} \\
+&\text{A a F: no conectados (0), otro grupo (0)} \\
 &(0 - \frac{2 \times 2}{(2 \times 7)}) \times 0 + && \\
-&\text{B a B: no connectados (0), mismo grupo (1)} \\
+&\text{B a B: no conectados (0), mismo grupo (1)} \\
 &(0 - \frac{3 \times 2}{(2 \times 7)}) \times 1 + && \\
-&\text{B a A: connectados (1), mismo grupo (1)} \\
+&\text{B a A: conectados (1), mismo grupo (1)} \\
 &(1 - \frac{3 \times 2}{(2 \times 7)}) \times 1 + && \\
-&\text{B a C: connectados (1), mismo grupo (1)} \\
+&\text{B a C: conectados (1), mismo grupo (1)} \\
 &(1 - \frac{3 \times 2}{(2 \times 7)}) \times 1 + && \\
-&\text{B a D: connectados (1), otro grupo (0)} \\
+&\text{B a D: conectados (1), otro grupo (0)} \\
 &(1 - \frac{3 \times 3}{(2 \times 7)}) \times 0 + && \\
-&\text{B a E: no connectados (0), otro grupo (0)} \\
+&\text{B a E: no conectados (0), otro grupo (0)} \\
 &(0 - \frac{3 \times 2}{(2 \times 7)}) \times 0 + && \\
-&\text{B a F: no connectados (0), otro grupo (0)} \\
+&\text{B a F: no conectados (0), otro grupo (0)} \\
 &(0 - \frac{3 \times 2}{(2 \times 7)}) \times 0 + && \\
 &...)\\
 \end{aligned}
@@ -183,7 +183,7 @@ Publicado originalmente en 2008, el método Louvain es un método de optimizaci�
 <p class="caption">(\#fig:3-2-process)Visualización de los pasos en el algoritmo</p>
 </div>
 
-La Figura \@ref(fig:3-2-process) es una representación gráfica de una sola ronda en el proceso. Sin embargo, en términos prácticos, el proceso resulta en particiones que denotan las subcomunidades a las que pertenece cada nodo. La red izquierda de la Figura \@ref(fig:3-2-bigone) consta de 100 nodos, a su derecha vemos las subcomunidades óptimas detectadas por el algoritmo de Louvain. Es importante recalcar que el objetivo del algoritmo es optimizar la modularidad y por consiguiente los grupos resultantes son una representación matemática de lo patrones de enlaces en el gráfico. Sin embargo, este tipo de herramienta analítica es útil en localizar comunidades cohesivas donde los miembros tienen normas, valores o aptitudes similares. Otra manera de pensar en esto es que los nodos dentro de cada grupo pueden seleccionarse a si mismos como parte del grupo o las presiones sociales del grupo pueden persuadir a los nuevos miembros para que adopten normas o valores del grupo [@Valente2010, 108].  
+La Figura \@ref(fig:3-2-process) es una representación gráfica de una sola ronda en el proceso. Sin embargo, en términos prácticos, el proceso resulta en particiones que denotan las subcomunidades a las que pertenece cada nodo. La red izquierda de la Figura \@ref(fig:3-2-bigone) consta de 100 nodos, a su derecha vemos las subcomunidades óptimas detectadas por el algoritmo de Louvain. Es importante recalcar que el objetivo del algoritmo es optimizar la modularidad y por consiguiente los grupos resultantes son una representación matemática de los patrones de enlaces en el gráfico. Sin embargo, este tipo de herramienta analítica es útil en localizar comunidades cohesivas donde los miembros tienen normas, valores o aptitudes similares. Otra manera de pensar en esto es que los nodos dentro de cada grupo pueden seleccionarse a sí mismos como parte del grupo o las presiones sociales del grupo pueden persuadir a los nuevos miembros para que adopten normas o valores del grupo [@Valente2010, 108].  
 
 <div class="figure" style="text-align: center">
 <img src="03-subgrupos_files/figure-html/3-2-bigone-1.png" alt="Red sin escala (izquierda) y red sin escala con particiones (derecha)" width="100%" />
@@ -193,13 +193,13 @@ La Figura \@ref(fig:3-2-process) es una representación gráfica de una sola ron
 
 ## Ejercicio Práctico
 
-Los científicos sociales generalmente asumen que "la interacción social es la base de la solidaridad, las normas compartidas, la identidad y el comportamiento colectivo, por lo que es probable que las personas que interactúan intensamente se consideren parte de un grupo social". Por lo tanto, una herramienta principal del análisis de redes sociales es identificar grupos densos de actores "entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos". Por lo general, se denominan "subgrupos cohesivos", "subredes" o "subgrupos". Una forma de agrupar a los actores se basa en atributos compartidos (por ejemplo, raza, género, etc.). Otro es utilizar el patrón de vínculos entre actores. 
+Los científicos sociales generalmente asumen que la interacción social es la base de la solidaridad, las normas compartidas, la identidad y el comportamiento colectivo, por lo que es probable que las personas que interactúan intensamente se consideren parte de un grupo social. Por lo tanto, una herramienta principal del análisis de redes sociales es identificar grupos densos de actores entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos. Por lo general, se denominan "subgrupos cohesivos", "subredes" o "subgrupos". Una forma de agrupar a los actores se basa en atributos compartidos (por ejemplo, raza, género, etc.). Otro es utilizar el patrón de vínculos entre actores. 
 
-En un mundo ideal, habría un solo algoritmo para identificar subgrupos cohesivos, pero este no es un mundo ideal, por lo que los analistas de redes sociales han desarrollado una variedad de algoritmos para identificar subredes. No los consideraremos todos aquí; simplemente hay demasiados. En cambio, nos centraremos en algunos. En Gephi consideraremos componentes, k-cores y algoritmos de detección de comunidades; y en snExplorer veremos brevemente los recuentos de componentes, k-núcleos y camarillas.
+En un mundo ideal, habría un solo algoritmo para identificar subgrupos cohesivos, pero este no es un mundo ideal, por lo que los analistas de redes sociales han desarrollado una variedad de algoritmos para identificar subredes. No los consideraremos todos aquí; simplemente hay demasiados. En cambio, nos centraremos en algunos. En Gephi consideraremos componentes, k-cores y algoritmos de detección de comunidades.
 
 ### Antes de Empezar
 
-Para este ejercicio vamos a necesitar el módulo *Newman-Girvan* clustering antes de comenzar Haga esto siguiendo los mismos pasos que utilizamos en para descargar el modulo *MultimodeNetworks Transformation* en ejercicio práctico en el capitulo Derivando Datos Modo-Uno de Modo-Dos. 
+Para este ejercicio vamos a necesitar el módulo *Newman-Girvan* clustering antes de comenzar Haga esto siguiendo los mismos pasos que utilizamos en para descargar el módulo *MultimodeNetworks Transformation* en ejercicio práctico en el capítulo Derivando Datos Modo-Uno de Modo-Dos. 
 
 ### Identificación de Subgrupos en Gephi
 
@@ -235,7 +235,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  2.	Para identificar componentes en Gephi, haga clic en *Ejecutar* junto a la función *Componentes conexos* en la pestaña *Estadísticas*. Aparecerá un cuadro de diálogo titulado *Parámetros de Componenetes Conectados* (no se muestra) que ofrece la opción de indicar si nuestros datos son *Dirigidos* o *No dirigidos*. Aquí, estamos trabajando con datos no dirigidos, así que elija esta opción y haga clic en *Aceptar*. Ahora deberá aparecer el informe *Connected Componenets Report* (Reporte de Componentes conectados) (Figura \@ref(fig:3-2-1)), que reporta los parámetros de la red, el número de componentes *Results* (Resultados) y un gráfico que indica el número y tamaño de cada uno de los componentes. Como puede ver, Gephi encontró 8 componentes, pero al comparar esta cifra con el gráfico de red, podemos ver que 7 de estos son nodos aislados. Igualmente podemos llegar a esta conclusión examinando el gráfico en el informe. Si observa verá que hay 7 componentes de tamaño 1 y un componente de un poco más grande que 60 (62 en realidad). Cierre la ventana del informe cuando haya terminado.
+  2.	Para identificar componentes en Gephi, haga clic en *Ejecutar* junto a la función *Componentes conexos* en la pestaña *Estadísticas*. Aparecerá un cuadro de diálogo titulado *Parámetros de Componentes Conectados* (no se muestra) que ofrece la opción de indicar si nuestros datos son *Dirigidos* o *No dirigidos*. Aquí, estamos trabajando con datos no dirigidos, así que elija esta opción y haga clic en *Aceptar*. Ahora deberá aparecer el informe *Connected Componenets Report* (Reporte de Componentes conectados) (Figura \@ref(fig:3-2-1)), que reporta los parámetros de la red, el número de componentes *Results* (Resultados) y un gráfico que indica el número y tamaño de cada uno de los componentes. Como puede ver, Gephi encontró 8 componentes, pero al comparar esta cifra con el gráfico de red, podemos ver que 7 de estos son nodos aislados. Igualmente podemos llegar a esta conclusión examinando el gráfico en el informe. Si observa verá que hay 7 componentes de tamaño 1 y un componente un poco más grande que 60 (62 en realidad). Cierre la ventana del informe cuando haya terminado.
 :::
 :::
 
@@ -277,7 +277,7 @@ a column separator for tex -->
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
 *[Vista general]*
 
-*Filtros > Atributos > Partición > Queries > Partition > Filter > Export filtered graph to a new workspace*
+*Filtros > Atributos > Partición > Consultas > Filtrar > Exportar el grafo filtrado en un nuevo espacio de trabajo*
 
 :::
 
@@ -287,7 +287,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  4.	No obstante, puede que algunas ocasiones sea útil identificar el componente principal. De hecho, no es raro que los investigadores extraigan el componente principal y lo analicen por separado. Por lo tanto, exportaremos el componente principal a un espacio de trabajo separado donde lo analizaremos por separado. Para hacer esto, en la pestaña *Filtros* a la derecha de la ventana *Vista general*, primero seleccione *Atributos* y luego *Partición*. A continuación, arrastre la partición *Component ID* a *Consultas*. En las opciones abajo, haga clic en el cuadro que tiene el mayor porcentaje de nodos (probablemente `0`), haga clic en *Filtrar* y luego use el botón *Exportar el grafo filtrado en un nuevo espacio de trabajo* (Figura \@ref(fig:3-2-3)). **¿Cuál es el tamaño del componente principal? ¿Cuál es su densidad? ¿Grado medio?**
+  4.	No obstante, puede que en algunas ocasiones sea útil identificar el componente principal. De hecho, no es raro que los investigadores extraigan el componente principal y lo analicen por separado. Por lo tanto, exportaremos el componente principal a un espacio de trabajo separado donde lo analizaremos. Para hacer esto, en la pestaña *Filtros* a la derecha de la ventana *Vista general*, primero seleccione *Atributos* y luego *Partición*. A continuación, arrastre la partición *Component ID* a *Consultas*. En las opciones abajo, haga clic en el cuadro que tiene el mayor porcentaje de nodos (probablemente `0`), seleccione *Filtrar* y luego use el botón *Exportar el grafo filtrado en un nuevo espacio de trabajo* (Figura \@ref(fig:3-2-3)). **¿Cuál es el tamaño del componente principal? ¿Cuál es su densidad? ¿Grado medio?**
 :::
 :::
 
@@ -326,7 +326,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  6.	Regrese a la pestaña *Alive Trust Network*. Una vez más usaremos un filtro para encontrar k-cores. Esta vez, arrastre la opción *K-core* que se encuentra sección de *Topología* en la pestaña *Filtro* a *Consultas*. Hacia la parte inferior de la pestaña *Filtros*, debería ver un cuadro *K-core Configuración* que estará predeterminado en *1*. Haga clic en el botón *Filtrar* y los aislados deberán desaparecer. Aumente la configuración a *2* y no debería haber ningún cambio. Eso es porque Gephi aparentemente cuenta los lazos dos veces, para reflejar las dos direcciones de un enlace aunque, en este caso, Gephi sabe (o debería saber) que se trata de una red no dirigida. Por lo tanto, el filtro de 1 y 2 capturan el primer núcleo (k = 1), 3 y 4 capturan el segundo núcleo (k =2), y así sucesivamente. Si sigue aumentando la configuración, todos los nodos desaparecen al llegar a quince, lo que significa que el núcleo k más alto de la red es el séptimo núcleo (14/2). Vea la Figura \@ref(fig:3-2-4). Exporte el 7-core a un nuevo espacio de trabajo. **¿Qué actores parecen ser los más centrales en la red del séptimo núcleo (k = 7)?**
+  6.	Regrese a la pestaña *Alive Trust Network*. Una vez más usaremos un filtro para encontrar k-cores. Esta vez, arrastre la opción *K-core* que se encuentra en la sección de *Topología* en la pestaña *Filtro* a *Consultas*. Hacia la parte inferior de la pestaña *Filtros*, deberá ver un cuadro *K-core Configuración* que estará predeterminado en *1*. Haga clic en el botón *Filtrar* y los aislados deberán desaparecer. Aumente la configuración a *2* y no debería haber ningún cambio. Eso es porque Gephi aparentemente cuenta los lazos dos veces, para reflejar las dos direcciones de un enlace aunque, en este caso, Gephi sabe (o debería saber) que se trata de una red no dirigida. Por lo tanto, el filtro de 1 y 2 capturan el primer núcleo (k = 1), 3 y 4 capturan el segundo núcleo (k =2), y así sucesivamente. Si sigue aumentando la configuración, todos los nodos desaparecen al llegar a quince, lo que significa que el núcleo k más alto de la red es el séptimo núcleo (14/2). Vea la Figura \@ref(fig:3-2-4). Exporte el 7-core a un nuevo espacio de trabajo. **¿Qué actores parecen ser los más centrales en la red del séptimo núcleo (k = 7)?**
 :::
 :::
 
@@ -348,7 +348,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  7.	Ahora consideremos otro método para identificar subgrupos: algoritmos de detección de comunidades. Consideraremos dos: Girvan-Newman y Louvain. El segundo estará implementado automaticamente en Gephi, pero Girvan-Newman no, por lo que deberá descargar e instalar el módulo Newman-Girvan Clustering, si aún no lo ha hecho. En la pestaña *Estadísticas* de Alive Trust Network, haga clic en el botón *Ejecutar* a un lado de función *Girvan-Newman Clustering*. Esto abrirá un cuadro de diálogo (no se muestra). Acepte sus valores predeterminados y haga clic en "*Aceptar*. Esto producirá un informe (no se muestra) que indica el número de comunidades que detectó y la modularidad. **¿Cuántas comunidades encontró el algoritmo?** 
+  7.	Ahora consideremos otro método para identificar subgrupos: algoritmos de detección de comunidades. Consideraremos dos: Girvan-Newman y Louvain. El segundo estará implementado automáticamente en Gephi, pero Girvan-Newman no, por lo que deberá descargar e instalar el módulo Newman-Girvan Clustering, si aún no lo ha hecho. En la pestaña *Estadísticas* de Alive Trust Network, haga clic en el botón *Ejecutar* a un lado de función *Girvan-Newman Clustering*. Esto abrirá un cuadro de diálogo (no se muestra). Acepte los valores predeterminados y haga clic en *Aceptar*. Esto producirá un informe (no se muestra) que indica el número de comunidades que detectó y la modularidad. **¿Cuántas comunidades encontró el algoritmo?** 
 :::
 :::
 
@@ -356,7 +356,7 @@ a column separator for tex -->
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
-*Apariencia > Nodos > Color > Partición > --Escoge un atributo > Cluter-ID > Aplicar*
+*Apariencia > Nodos > Color > Partición > --Escoge un atributo > Cluster-ID > Aplicar*
 :::
 
 :::{.col data-latex="{0.04\\textwidth}"}
@@ -365,7 +365,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  8.	Asimismo, coloree los nodos según la partición creada por el algoritmo (Cluter-ID). Note que el algoritmo Girvan-Newman ha asignado cada uno de los aislados a una comunidad separada. No todos los algoritmos de detección de comunidades tratan los aislamientos de esta manera, por lo que cuando compare los resultados de dos o más de ellos, tenga esto en cuenta.
+  8.	Asimismo, coloree los nodos según la partición creada por el algoritmo (Cluster-ID). Note que el algoritmo Girvan-Newman ha asignado cada uno de los aislados a una comunidad separada. No todos los algoritmos de detección de comunidades tratan los aislados de esta manera, por lo que cuando compare los resultados de dos o más de ellos, tenga esto en cuenta.
 :::
 :::
 
@@ -399,7 +399,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-10.	Coloree los nodos usando la partición creada por el algoritmo de Louvain (*Clase de modularidad*). Debido a que hay más de ~8 comunidades, deberá ajustar la paleta de colores como hicimos en laboratorios anteriores. **¿Louvain asigna a cada aislado en una comunidad separada?** 
+10.	Coloree los nodos usando la partición creada por el algoritmo de Louvain (*Clase de modularidad*). Debido a que hay más de ~8 comunidades, deberá ajustar la paleta de colores como hicimos en ejercicios anteriores. **¿Louvain asigna a cada aislado en una comunidad separada?** 
 :::
 :::
 
@@ -416,7 +416,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  11.	Ahora colapse la red usando la herramienta *Generate groups by partition* (Generar grupos por partición). Asegúrese de decirle a Gephi que cree un nuevo espacio de trabajo. Recuerde que los atributos son aspectos no relacionales de las redes. Pueden ser previamente dados (por ejemplo, rol, género, nacionalidad) o pueden ser generados por nuestro análisis de una red. Los algoritmos de agrupación, como los núcleos k y los de detección de comunicación, clasifican actores en varios subgrupos, y la partición de "pertenencia" del subgrupo es un atributo de actor.
+  11.	Ahora colapse la red usando la herramienta *Generate groups by partition* (Generar grupos por partición). Asegúrese de decirle a Gephi que cree un nuevo espacio de trabajo. Recuerde que los atributos son aspectos no relacionales de las redes. Pueden ser previamente dados (por ejemplo, rol, género, nacionalidad) o pueden ser generados por nuestro análisis de una red. Los algoritmos de agrupación, como los núcleos k y los de detección de comunidad, clasifican actores en varios subgrupos, y la partición de "pertenencia" del subgrupo es un atributo de actor.
 :::
 :::
 

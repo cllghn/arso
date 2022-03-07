@@ -11,16 +11,16 @@ output:
 
 > [El ARSo] es una colección de teorías y métodos que suponen que el comportamiento de los actores (por ejemplo, individuos, grupos u organizaciones) se ve profundamente afectado por sus vínculos con otros y las redes en las que están incrustados -- [@Everton2012]
 
-Como puede ver en el pasaje y en el capítulo previo, ARSo se basa en algoritmos gráficos y matemáticos complejos. Esto no quiere decir solamente “software”, puesto que las semillas de este campo de estudio empezaron a madurar mucho antes del desarrolló de computadoras modernas.
+Como puede ver en el pasaje y en el capítulo previo, ARSo utiliza algoritmos gráficos y matemáticos complejos. Esto no quiere decir solamente “software”, puesto que las semillas de este campo de estudio empezaron a madurar mucho antes del desarrollo de computadoras modernas.
 
 Hoy en día existen múltiples paquetes de software desarrollados para asistir a los analistas de ARSo en sus iniciativas laborales o académicas. Por consiguiente, sería ilógico presentarle métodos para trabajar con datos de redes sociales “a mano”. Cabe recalcar que el enfoque de este manual no es darle una presentación completa de las herramientas de software disponibles en este campo, para ello consulte [@Scott2011, Capítulo 38] o [@Cunningham2016, Apéndice 3]. Nuestro objetivo es mucho más limitado, presentarle métodos para grabar, manipular y visualizar datos de redes y asimismo presentarle la aplicación de herramienta de análisis en la plataforma de software Gephi.
 
 
 ## Gephi
 
-De acuerdo con los autores de Gephi, la plataforma es “una herramienta para analistas de datos y científicos interesados en explorar y comprender gráficos ... [Donde] el usuario interactúa con la representación, manipula las estructuras, formas y colores para revelar patrones ocultos. El objetivo es ayudar a los analistas de datos a formular hipótesis, descubrir patrones intuitivamente, aislar singularidades o fallas de estructura durante la recopilación de datos” [@gephi]. Para nuestros propósitos utilizaremos esta interfaz para complementar el material y facilitar nuestro análisis exploratorio. Antes de comenzar los siguientes capítulos, descargue gratuitamente la herramienta desde [el sitio web de Gephi.](https://gephi.org/)
+De acuerdo con los autores de Gephi, la plataforma es “una herramienta para analistas de datos y científicos interesados en explorar y comprender gráficos ... [Donde] el usuario interactúa con la representación, manipula las estructuras, formas y colores para revelar patrones ocultos. El objetivo es ayudar a los analistas de datos a formular hipótesis, descubrir patrones intuitivamente, aislar singularidades o fallas de estructura durante la recopilación de datos” [@gephi]. Para nuestros propósitos utilizaremos esta interfaz para complementar el material y facilitar nuestro análisis exploratorio. Antes de comenzar los siguientes capítulos, descargue gratuitamente la herramienta desde [el sitio web de Gephi (https://gephi.org/).](https://gephi.org/)
 
-Como todas las herramientas de software, esta tiene ventajas y desventajas. Es importante explicar por qué hemos elegido esta herramienta sobre algunas de las demás:
+Como todas las herramientas de software, esta tiene ventajas y desventajas. Es importante explicar por qué hemos elegido esta herramienta sobre las demás:
   
   1. Es una [herramienta de fuente abierta](https://github.com/gephi/gephi), por consiguiente, podemos descargar y utilizarla libre de costo. 
   2. Incluye una gran variedad de herramientas de visualización, algoritmos gráficos y matemáticos complejos, capacidades para ingerir y manipular varios formatos de datos y es extensible utilizando docenas de complementos creados por la comunidad abierta de usuarios que amplían las funcionalidades del software.
@@ -31,24 +31,24 @@ En las siguientes secciones continuaremos introduciendo este programa, sus inter
 
 ## Gephi Para Principiantes 
 
-Las siguientes subsecciones le brindaran una breve introducción a la plataforma Gephi y sus tres secciones principales. Esta no es la única vez que cubriremos algunos de los conceptos básicos de Gephi; como tal, esta sección está diseñada para ser una descripción general de alto nivel.
+Las siguientes subsecciones le brindarán una breve introducción a la plataforma Gephi y sus tres secciones principales. Esta no es la única vez que cubriremos algunos de los conceptos básicos de Gephi; como tal, esta sección está diseñada para ser una descripción general de alto nivel.
 
 ### Antes de Empezar
 
-Primero, descargue e instale el software en su computadora. Como se había mencionado previamente el software es gratuito y [distribuido abiertamente](https://gephi.org/users/download/). Gephi es una aplicación multiplataforma desarrollada en Java, por lo que requiere una instalación previa de Java, la cual puede obtener libremente [en línea](https://www.java.com/en/download/). Para computadoras Mac OS X, Java se incluye con la aplicación, por lo que no es necesario instalarlo por separado. En Windows y Linux, el sistema debe estar equipado con Java.
+Primero, descargue e instale el software en su computadora. Como se había mencionado previamente el software es gratuito y [distribuido abiertamente](https://gephi.org/users/download/). Gephi es una aplicación multiplataforma desarrollada en Java, por lo que requiere una instalación previa de Java, la cual puede obtener libremente [en línea (https://www.java.com/en/download/)](https://www.java.com/en/download/). Para computadoras Mac OS X, Java se incluye con la aplicación, por lo que no es necesario instalarlo por separado. En Windows y Linux, el sistema debe estar equipado con Java.
 
 Si bien no hay requisitos mínimos de hardware, el rendimiento es una función de la memoria. Además, se requiere una tarjeta gráfica compatible para ejecutar Gephi.
 
 ### Inicie Gephi
 
-Empiece por localizar y abrir el programa. Lo primero que vera es una ventanilla de Bienvenida, vea la Figura \@ref(fig:2-1-bienvenida). 
+Empiece por localizar y abrir el programa. Lo primero que verá es una ventanilla de Bienvenida, vea la Figura \@ref(fig:2-1-bienvenida). 
 
 <div class="figure" style="text-align: center">
 <img src="images/01-gephi.png" alt="Menú de Bienvenida en Gephi" width="100%" />
 <p class="caption">(\#fig:2-1-bienvenida)Menú de Bienvenida en Gephi</p>
 </div>
 
-Para esta breve instrucción al software, vamos a usar uno de los conjuntos de datos proporcionados por el software, `Les Misrables.gexf` [@Knuth1993]. Localice este en la parte inferior derecha de la ventanilla de bienvenida. Al seleccionar esta opción aparecerá una nueva ventanilla, subsecuentemente explicaremos más acerca de las opciones en este espacio, por ahora seleccione el botón *Aceptar*. ¡Listo! Con el conjunto de datos cargado (Figura Figura \@ref(fig:2-1-les-mis)), podemos empezar a explorar Gephi.
+Para esta breve instrucción al software, vamos a usar uno de los conjuntos de datos proporcionados por el software, `Les Misrables.gexf` [@Knuth1993]. Localice este en la parte inferior derecha de la ventanilla de bienvenida. Al seleccionar esta opción aparecerá una nueva ventanilla, subsecuentemente explicaremos más acerca de las opciones en este espacio, por ahora seleccione el botón *Aceptar*. ¡Listo! Con el conjunto de datos cargado (Figura \@ref(fig:2-1-les-mis)), podemos empezar a explorar Gephi.
 
 <div class="figure" style="text-align: center">
 <img src="images/01-lesmis.png" alt="Datos Les Misrables Cargados" width="100%" />
@@ -57,7 +57,7 @@ Para esta breve instrucción al software, vamos a usar uno de los conjuntos de d
 
 ### Vista General
 
-Esta es la ventana que utilizará más a menudo, ver Figura \@ref(fig:2-1-overview). Aquí podrá tomar diferentes acciones para manipular la aparencia sus gráficos, filtrar información y calcular medidas de red, arista o nodo.
+Esta es la ventana que utilizará más a menudo, ver Figura \@ref(fig:2-1-overview). Aquí podrá tomar diferentes acciones para manipular la apariencia sus gráficos, filtrar información y calcular medidas de red, arista o nodo.
 
 <div class="figure" style="text-align: center">
 <img src="images/01-overview.png" alt="Gephi: Vista General" width="100%" />
@@ -101,7 +101,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
- *Único* cambia los elementos de manera uniforme por color o tamaño seleccionado. Por consiguiente, para modificar el color de los nodos en gráfico, proceda a seleccionar *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. Si desea modificar el color de las aristas para que reflejen un valor único, seleccione *Aristas > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. En la Figura \@ref(fig:2-1-color-unique) los nodos han sido coloreados de negro (`#000000`) y las aristas de gris (`#adadad`). Note que Gephi define colores utilizando una combinación hexademicial de números y letras definida por su mezcla de rojo, verde y azul.
+ *Único* cambia los elementos de manera uniforme por color o tamaño seleccionado. Por consiguiente, para modificar el color de los nodos en el gráfico, proceda a seleccionar *Nodos > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. Si desea modificar el color de las aristas para que reflejen un valor único, seleccione *Aristas > Color > Único > Clic sostenido sobre el cuadro de color > Seleccionar color > Aplicar*. En la Figura \@ref(fig:2-1-color-unique) los nodos han sido coloreados de negro (`#000000`) y las aristas de gris (`#adadad`). Note que Gephi define colores utilizando una combinación hexadecimal de números y letras definida por su mezcla de rojo, verde y azul.
 :::
 :::
 
@@ -142,7 +142,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-La *Partición* cambia todos los elementos visibles utilizando valores de atributos categóricos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo categórico, `modularidad`, que representa el subgrupo al que pertenece cada nodo. Usando este atributo podemos cambiar el color de los nodos seleccionando *Nodos > Color > Partición > --Escoge un atributo > Modularity Class > Aplicar*. Una vez hecho, los colores de los nodos deberían permitirle entender qué nodos pertenecen a las misma comunidades. De manera similar, podríamos intentar cambiar los colores de las aristas basándonos en un atributo categórico; sin embargo, el conjunto de datos de ejemplo no incluye dicho tipo de variable.
+La *Partición* cambia todos los elementos visibles utilizando valores de atributos categóricos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo categórico, `modularidad`, que representa el subgrupo al que pertenece cada nodo. Usando este atributo podemos cambiar el color de los nodos seleccionando *Nodos > Color > Partición > --Escoge un atributo > Modularity Class > Aplicar*. Una vez hecho, los colores de los nodos deberían permitirle entender que nodos pertenecen a las mismas comunidades. De manera similar, podríamos intentar cambiar los colores de las aristas basándonos en un atributo categórico; sin embargo, el conjunto de datos de ejemplo no incluye dicho tipo de variable.
 :::
 :::
 
@@ -162,7 +162,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-El *Ranking* cambia todos los elementos visibles utilizando valores de atributos continuos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo continuo, `grado`, que representa el numero de enlaces que tiene cada nodo. Usando este atributo podemos cambiar el tamaño de los nodos seleccionando *Nodos > Tamaño > Ranking > --Escoge un atributo > Grado > Aplicar*. Ahora deberá ver que algunos nodos aparecen mucho más grandes que otros, esto se debe a que algunos tienen más conexiones. Más adelante en el manual ampliaremos el significado de esta medida y presentaremos otras. Quizás se este preguntando, ¿es posible cambiar el grosor de las aristas en función de una variable continua? La respuesta es sí, pero hacerlo requiere un menú diferente, por lo que abordaremos esta acción más adelante.
+El *Ranking* cambia todos los elementos visibles utilizando valores de atributos continuos. Por ejemplo, el conjunto de datos que seleccionamos tiene un atributo continuo, `grado`, que representa el número de enlaces que tiene cada nodo. Usando este atributo podemos cambiar el tamaño de los nodos seleccionando *Nodos > Tamaño > Ranking > --Escoge un atributo > Grado > Aplicar*. Ahora deberá ver que algunos nodos aparecen mucho más grandes que otros, esto se debe a que algunos tienen más conexiones. Más adelante en el manual ampliaremos el significado de esta medida y presentaremos otras. Quizás se este preguntando, ¿es posible cambiar el grosor de las aristas en función de una variable continua? La respuesta es sí, pero hacerlo requiere un menú diferente, por lo que abordaremos esta acción más adelante.
 :::
 :::
 
@@ -176,13 +176,13 @@ El *Ranking* cambia todos los elementos visibles utilizando valores de atributos
 
 Esta sección proporciona información sobre las propiedades básicas del gráfico; específicamente, el número de nodos y aristas y si el gráfico es dirigido o no.
 
-#### Distribuición
+#### Distribución
 
-ARSo depende en gran medida de la exploración de datos a través de buena visualización. Esta es una de las características clave de Gephi, contiene una buena cantidad de algoritmos de diseño de gráficos y los ejecuta rápido (todo dependiendo de la potencia de su procesador). La ventana *Distribuición* le permite al usuario seleccionar entre una serie de algoritmos de diseño de gráficos y modificar los parámetros preestablecidos según sea necesario. En esta sección exploraremos algunos de los algoritmos gráficos más notables incluidos con la instalación base de Gephi.
+ARSo depende en gran medida de la exploración de datos a través de buena visualización. Esta es una de las características clave de Gephi, contiene una buena cantidad de algoritmos de diseño de gráficos y los ejecuta rápido (todo dependiendo de la potencia de su procesador). La ventana *Distribución* le permite al usuario seleccionar entre una serie de algoritmos de diseño de gráficos y modificar los parámetros preestablecidos según sea necesario. En esta sección exploraremos algunos de los algoritmos gráficos más notables incluidos con la instalación base de Gephi.
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
-*Elije una distribuición > Force Atlas > Ejecutar*
+*Elije una distribución > Force Atlas > Ejecutar*
 :::
 
 :::{.col data-latex="{0.04\\textwidth}"}
@@ -191,7 +191,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-*Force Atlas* y *Force Atlas 2* son algoritmos de diseño dirigidos por fuerza, producidos por los desarrolladores de Gephi, que permiten visualizar efectivamente gráficos de tamaño pequeño a mediano [@Jacomy2011]. Estos son algoritmos continuos, es decir que le permiten al analista editar al gráfico mientras el algoritmo dibuja. Además de *Ejecutar* el algoritmo hay que seleccionar *Parar* cuando uno este satisfecho con el diseño. Veamos como funciona este algoritmo, para ello en la sección de *Distribución* seleccione *Elije una distribuición > Force Atlas > Ejecutar*. Después de un par de minutos, recuerde en dar clic sobre el botón *Parar*. Como puede ver, el algoritmo a contraído los nodos. Esta es una característica de los algoritmos dirigidos por fuerza donde los nodos vinculados se atraen entre sí y los nodos no vinculados se repelen.
+*Force Atlas* y *Force Atlas 2* son algoritmos de diseño dirigidos por fuerza, producidos por los desarrolladores de Gephi, que permiten visualizar efectivamente gráficos de tamaño pequeño a mediano [@Jacomy2011]. Estos son algoritmos continuos, es decir que le permiten al analista editar al gráfico mientras el algoritmo dibuja. Además de *Ejecutar* el algoritmo hay que seleccionar *Parar* cuando uno este satisfecho con el diseño. Veamos como funciona este algoritmo, para ello en la sección de *Distribución* seleccione *Elije una distribución > Force Atlas > Ejecutar*. Después de un par de minutos, recuerde en dar clic sobre el botón *Parar*. Como puede ver, el algoritmo a contraído los nodos. Esta es una característica de los algoritmos dirigidos por fuerza donde los nodos vinculados se atraen entre sí y los nodos no vinculados se repelen.
 :::
 :::
 
@@ -203,9 +203,9 @@ a column separator for tex -->
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
-*Elije una distribuición > Expansión  > Ejecutar*
+*Elije una distribución > Expansión  > Ejecutar*
 
-*Elije una distribuición > Contracción  > Ejecutar*
+*Elije una distribución > Contracción  > Ejecutar*
 :::
 
 :::{.col data-latex="{0.04\\textwidth}"}
@@ -216,7 +216,7 @@ a column separator for tex -->
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
 Uno de los algoritmos de diseño más útiles es *Expansión*, el cual aumenta el tamaño de la red pero mantiene la ubicación relativa de los nodos constante. El polo opuesto de esta opción es *Contracción*, que permite compactar la red manteniendo la ubicación relativa de los nodos. Ambas opciones son ejecutadas de manera instantánea, por consiguiente, no hay que detener el algoritmo.
 
-Por ejemplo, la Figura \@ref(fig:2-1-expansion) es una versión expandida de a Figura \@ref(fig:2-1-force-atlas). Podría decirse que es más fácil observar los patrones en este gráfico editado. Para expandir el gráfico seleccione *Elije una distribuición > Expansión  > Ejecutar*. De clic en *Ejecutar* un par de veces, si sobrepasa el punto deseado seleccione *Elije una distribuición > Contracción  > Ejecutar* para contraer el gráfico. 
+Por ejemplo, la Figura \@ref(fig:2-1-expansion) es una versión expandida de la Figura \@ref(fig:2-1-force-atlas). Podría decirse que es más fácil observar los patrones en este gráfico editado. Para expandir el gráfico seleccione *Elije una distribución > Expansión  > Ejecutar*. De clic en *Ejecutar* un par de veces, si sobrepasa el punto deseado seleccione *Elije una distribución > Contracción  > Ejecutar* para contraer el gráfico. 
 :::
 :::
 
@@ -229,7 +229,7 @@ Por ahora, solo cubriremos estas tres opciones de diseño. Más adelante utiliza
 
 #### Estadísticas
 
-Además de utilizar visualizaciones, los analistas de ARSo dependen a menudo de medidas estadísticas utilizadas para comprender las características estructurales de la red a fondo. Gephi proporciona una cantidad limitada, pero suficiente de medidas estadísticas al descargar el software. La pestaña de *Estadísticas* sirve como ubicación principal para encontrar las medidas. Localícela a mano derecha del *Grafo*, es posible que tenga que seleccionar la pestaña ya que comparte el mismo espacio con *Filtros*.
+Además de utilizar visualizaciones, los analistas de ARSo dependen a menudo de medidas estadísticas utilizadas para comprender las características estructurales de la red a fondo. Gephi proporciona una cantidad limitada, pero suficiente, de medidas estadísticas al descargar el software. La pestaña de *Estadísticas* sirve como ubicación principal para encontrar las medidas. Localícela a mano derecha del *Grafo*, es posible que tenga que seleccionar la pestaña ya que comparte el mismo espacio con *Filtros*.
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -244,7 +244,7 @@ a column separator for tex -->
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
 Para ejecutar una medida, seleccione el botón *Ejecutar* a un lado de dicha opción. En capítulos posteriores explicaremos la gran mayoría de las medidas presentes, por ahora, visitemos la medida de grado. Esta se refiere al número de aristas adjuntas al nodo. Para calcular esta medida, seleccione *Visión general de la red > Grado medio > Ejecutar*.
 
-Esta selección debe generar un informe HTML que muestre la distribución de grados del gráfico, consulte la Figura \@ref(fig:2-1-degree). Además de este reporte, esta acción agregará valores de centralidad de grado a cada nodo en la tabla de aristas situada en el *Laboratorio de Datos*. Proceda a cerrar este cuadro de diálogo, si desea volver a abrirlo repita los pasos previos. 
+Esta selección debe generar un informe HTML que muestra la distribución de grados del gráfico, consulte la Figura \@ref(fig:2-1-degree). Además de este reporte, esta acción agregará valores de centralidad de grado a cada nodo en la tabla de aristas situada en el *Laboratorio de Datos*. Proceda a cerrar este cuadro de diálogo, si desea volver a abrirlo repita los pasos previos. 
 :::
 :::
 
@@ -255,7 +255,7 @@ Esta selección debe generar un informe HTML que muestre la distribución de gra
 
 #### Filtros
 
-A menudo tendremos que modificar nuestros datos en Gephi, dentro de la *Vista General* encontrara la pestaña de *Filtros* a un costado del *Grafo*. Esta contiene una variedad de parámetros para filtrar los datos presentados con base a características (variables continuas o categóricas) de los nodos o las aristas. Puede aplicar uno o varios filtros a un gráfico para descubrir características ocultas o refinar la cantidad de información que se muestra en un grafo.
+A menudo tendremos que modificar nuestros datos en Gephi, dentro de la *Vista General* encontrará la pestaña de *Filtros* a un costado del *Grafo*. Esta contiene una variedad de parámetros para filtrar los datos presentados con base a características (variables continuas o categóricas) de los nodos o las aristas. Puede aplicar uno o varios filtros a un gráfico para descubrir características ocultas o refinar la cantidad de información que se muestra.
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -290,7 +290,7 @@ La última sección que cubriremos en esta introducción a la *Vista General* es
 </div>
 
 
-A continuación se presenta una lista de nombres de comandos y funciones en orden secuencial, ver Figura \@ref(fig:2-1-grafo):
+A continuación, se presenta una lista de nombres de comandos y funciones en orden secuencial, ver Figura \@ref(fig:2-1-grafo):
 
  1.	 *Selección directa* – elegir un nodo a la vez
  2.	 *Selección rectangular* – elegir uno o múltiples nodos en un área rectangular
@@ -308,10 +308,10 @@ A continuación se presenta una lista de nombres de comandos y funciones en orde
  15. *Reestablecer visibilidad de las etiquetas* - reestablecer la visibilidad de etiquetas
  16. *Color de fondo* – cambiar el color de fondo
  17. *Captura de pantalla* – capturar y guardar el gráfico en pantalla
- 18. *Mostar etiquetas de los nodos* – mostrar las etiquetas correspondientes de cada nodo
+ 18. *Mostrar etiquetas de los nodos* – mostrar las etiquetas correspondientes de cada nodo
  19. *Mostrar aristas* – encender o apagar las aristas 
  20. *Las aristas tienen el color del nodo origen*
- 21. *Mostar etiquetas de las aristas*
+ 21. *Mostrar etiquetas de las aristas*
  22. *Escala del peso de las aristas* – incrementar o disminuir el grosor de las aristas
  23. *Modo de tamaño* – seleccionar modo de tamaño para las etiquetas
  24. *Modo de color* – seleccionar modo de color para las etiquetas
@@ -324,7 +324,7 @@ A continuación se presenta una lista de nombres de comandos y funciones en orde
 
 ### Laboratorio de Datos
 
-El *Laboratorio de datos* contiene tablas de los datos de nodos (Figura \@ref(fig:2-1-data-lab) izquireda) y aristas (Figura \@ref(fig:2-1-data-lab) derecha). Estas tablas permiten a los analistas interactuar con la información y editar valores directamente o mediante la serie de comandos en la parte inferior de la pantalla (Figura \@ref(fig:2-1-data-lab) abajo). Esta es una descripción muy simplificada de las capacidades de esta sección, nos centraremos en las características clave de alto nivel.
+El *Laboratorio de datos* contiene tablas de los datos de nodos (Figura \@ref(fig:2-1-data-lab) izquierda) y aristas (Figura \@ref(fig:2-1-data-lab) derecha). Estas tablas permiten a los analistas interactuar con la información y editar valores directamente o mediante la serie de comandos en la parte inferior de la pantalla (Figura \@ref(fig:2-1-data-lab) abajo). Esta es una descripción muy simplificada de las capacidades de esta sección, nos centraremos en las características clave de alto nivel.
 
 <div class="figure" style="text-align: center">
 <img src="images/01-data_lab.png" alt="Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas" width="100%" />
@@ -387,13 +387,13 @@ Aquí nos centraremos en 4 secciones clave (indicadas en la Figura \@ref(fig:2-1
 
 ### Errores Comunes
 
-Es normal que los usuarios de este software se encuentren con problemas conocidos. Esta sección incluye una lista breve (y creciente) de problemas notificados que pueden crear un poco de confusión. Sin embargo, Gephi es un software de código abierto, por lo que puede encontrar errores desconocidos. Cuando esto suceda, [infórmelo a los desarrolladores](https://github.com/gephi/gephi/issues/new) después de leer las reglas de la comunidad e [investigar el problema](http://forum-gephi.org/).
+Es normal que los usuarios de este software se encuentren con problemas conocidos. Esta sección incluye una lista breve de problemas notificados que pueden crear un poco de confusión. Sin embargo, Gephi es un software de código abierto, por lo que puede encontrar errores desconocidos. Cuando esto suceda, [infórmelo a los desarrolladores](https://github.com/gephi/gephi/issues/new) después de leer las reglas de la comunidad e [investigar el problema](http://forum-gephi.org/).
 
 Esta es una lista de errores conocidos:
 
   - Intenta abrir Gephi pero se encuentra con el siguiente error: "Error: Cannot find Java 1.8 or higher": 
     1. Primero cheque que ha instalado Java 1.8 o posterior. Si no lo ha hecho, ese es el primer problema.
-    2. Si ha instalado Java, es probable (pero no necesario) que este viendo el error en una computadora con Windows. Vaya a la carpeta de Gephi (en Windows cheque `C:\Program Files (x86)\Gephi-0.9.1\bin\`), donde vera dos versiones probablemente tituladas `gephi.exe` y `gephi64.exe`. Intente abrir una a la vez. Una deberá funcionar, cree un atajo a este programa. 
+    2. Si ha instalado Java, es probable (pero no necesario) que vea el error en una computadora con Windows. Vaya a la carpeta de Gephi (en Windows cheque `C:\Program Files (x86)\Gephi-0.9.1\bin\`), donde verá dos versiones probablemente tituladas `gephi.exe` y `gephi64.exe`. Intente abrir una a la vez. Una deberá funcionar, cree un atajo a este programa. 
     
-  - Ha desaparecido el gráfico/ventanilla/pestaña: En Gephi hay una gran cantidad de pequeñas ventanas y pestañas y todo se puede mover, minimizar y cerrar. Si por accidente cierra una ventana, vaya a el menú Ventana, de clic an la opción *Restablecer Ventanas* que reestablecerá todas las pestañas de manera predeterminada. 
+  - Ha desaparecido el gráfico/ventanilla/pestaña: En Gephi hay una gran cantidad de pequeñas ventanas y pestañas y todo se puede mover, minimizar y cerrar. Si por accidente cierra una ventana, vaya a el menú Ventana, de clic en la opción *Restablecer Ventanas* que reestablecerá todas las pestañas de manera predeterminada. 
 
