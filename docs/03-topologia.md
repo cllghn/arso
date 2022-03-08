@@ -14,15 +14,23 @@ Ahora, en la Figura \@ref(fig:3-1-full) no encontramos una formación centrada a
 
 Es probable que sea mejor considerar ambas configuraciones (centralizada y descentralizada) como polos opuestos de un continuo. Como tal, el nivel óptimo de centralización en dicho espectro cambiará con el tiempo y en función de las presiones ambientales [@Cunningham2016; @Everton2012]. Por ejemplo, en un entorno hostil, la red puede priorizar la seguridad de actores clave; así, avanzando hacia una estructura más descentralizada. Es precisamente por este dinamismo intrínseco  que el estudio de la estructura de red debe ir acompañado con contexto.
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-star-1.png" alt="Red estrella" width="100%" />
-<p class="caption">(\#fig:3-1-star)Red estrella</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-full-1.png" alt="Red completa" width="100%" />
-<p class="caption">(\#fig:3-1-full)Red completa</p>
-</div>
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-star-1} 
+
+}
+
+\caption{Red estrella}(\#fig:3-1-star)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-full-1} 
+
+}
+
+\caption{Red completa}(\#fig:3-1-full)
+\end{figure}
 
 En este capítulo, examinaremos una serie de medidas que capturan características estructurales de la red completa. Comenzaremos con una serie de medidas básicas comúnmente utilizadas para describir una red como: tamaño, distancia y diámetro. Después, exploraremos dos dimensiones topológicas: interconexión y centralización. Esta discusión será complementada por una serie de medidas correspondientes. Finalmente, este capítulo concluirá con un ejercicio práctico en Gephi.
 
@@ -36,15 +44,23 @@ El tamaño se refiere a el número de actores en una red [@Everton2012]. Es impo
 
 Comúnmente denotamos el tamaño de una red con la letra $N$. Por ejemplo, en las Figuras \@ref(fig:3-1-g5) y \@ref(fig:3-1-g10) $N$ es equivalente a 5 y 10 respectivamente. 
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-g5-1.png" alt="Grafo de red, tamaño = 5" width="100%" />
-<p class="caption">(\#fig:3-1-g5)Grafo de red, tamaño = 5</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-g10-1.png" alt="Grafo de red, tamaño = 10" width="100%" />
-<p class="caption">(\#fig:3-1-g10)Grafo de red, tamaño = 10</p>
-</div>
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-g5-1} 
+
+}
+
+\caption{Grafo de red, tamaño = 5}(\#fig:3-1-g5)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-g10-1} 
+
+}
+
+\caption{Grafo de red, tamaño = 10}(\#fig:3-1-g10)
+\end{figure}
 
 En teoría, hay un límite práctico a la cantidad de enlaces que puede mantener cada persona en la red, por ello, el tamaño habitualmente no es una de las medidas más interesantes sino un indicador de los límites de la red [@Valente2010]. El analista debe considerar como establecer los límites para reflejar de manera adecuada el tamaño real de la red [@Cunningham2016].
 
@@ -58,10 +74,14 @@ $$
 
 Examinemos esta definición, con la Figura \@ref(fig:3-1-circ). Supongamos que el objetivo del actor 1 es transferir información a los otros actores en la red de la manera más eficiente. 
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-circ-1.png" alt="Grafo circular" width="100%" />
-<p class="caption">(\#fig:3-1-circ)Grafo circular</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-circ-1} 
+
+}
+
+\caption{Grafo circular}(\#fig:3-1-circ)
+\end{figure}
 
 Si $d$ es la distancia entre un par de nodos, podemos expresar la distancia entre el nodo 1 y los demás de la siguiente manera:
 
@@ -87,10 +107,14 @@ En términos prácticos, la distancia promedio es indicativa de la velocidad con
 
 La distancia geodésica mayor entre todos los nodos en un grafo [@Everton2012]. Formalmente, @Wasserman1994 definen esta medida como la máxima $d(i, j)$ o $maxd(i,j)$. Por ejemplo, podemos calcular las distancias geodésicas de la Figura \@ref(fig:3-1-diam):
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-diam-1.png" alt="Grafo ejemplo" width="100%" />
-<p class="caption">(\#fig:3-1-diam)Grafo ejemplo</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-diam-1} 
+
+}
+
+\caption{Grafo ejemplo}(\#fig:3-1-diam)
+\end{figure}
 
 El diámetro del grafo es equivalente a $max d(i,j)$ = $d(1,5)$= 3.
 
@@ -118,10 +142,14 @@ $$
 
 En términos prácticos, ambas ecuaciones producen puntuaciones de densidad de 0 a 1. Es decir, una red con una densidad de 0 es una en la que no existen vínculos entre los actores. Mientras que una red con una densidad de uno es un gráfico completamente conectado en el que todos los actores están vinculados entre sí.
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-den-1.png" alt="Grafo no dirigido" width="100%" />
-<p class="caption">(\#fig:3-1-den)Grafo no dirigido</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-den-1} 
+
+}
+
+\caption{Grafo no dirigido}(\#fig:3-1-den)
+\end{figure}
 
 Pongamos esta herramienta en práctica; específicamente, con la Figura \@ref(fig:3-1-den) la cual podemos representar como matriz de adyacencia:
 
@@ -152,15 +180,23 @@ $$
 
 Donde $N$ es el número de nodos y $E$ es el número de vínculos en la red. En términos prácticos, esta ecuación retorna un número promedio de vínculos para todos los actores en la red. Esto nos ayuda a comparar redes de diferentes tamaños. Por ejemplo, las redes \@ref(fig:3-1-avg1) y \@ref(fig:3-1-avg2) tienen un grado medio similar, de 1.98 y 1.99 respectivamente. La densidad es equivalente a 0.02 y a 0.01.
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-avg1-1.png" alt="Grafo sin escala de 100 nodos" width="100%" />
-<p class="caption">(\#fig:3-1-avg1)Grafo sin escala de 100 nodos</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-avg2-1.png" alt="Grafo sin escala de 200 nodos" width="100%" />
-<p class="caption">(\#fig:3-1-avg2)Grafo sin escala de 200 nodos</p>
-</div>
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-avg1-1} 
+
+}
+
+\caption{Grafo sin escala de 100 nodos}(\#fig:3-1-avg1)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-avg2-1} 
+
+}
+
+\caption{Grafo sin escala de 200 nodos}(\#fig:3-1-avg2)
+\end{figure}
 
 Es decir, aunque la densidad de estos gráficos es disímil podemos atribuir esta discrepancia a el número de nodos en cada red. Sin embargo, la medida más adecuada en esta situación sería el grado medio, la cual como vemos nos permite comparar el nivel de interconexión entre redes de diferente tamaño. 
 
@@ -192,10 +228,14 @@ En la red estrella la centralización de grado es 1.0. Por consiguiente, de mane
 
 Veamos que sucede al introducir vínculos adicionales al grafo. En la Figura \@ref(fig:3-1-star3) el actor uno retiene el mismo número de vínculos que le proveen contacto directo con todos los demás,  sin embargo, en esta ocasión los actores dos (2) y tres (3) tienen acceso mutuo. 
 
-<div class="figure" style="text-align: center">
-<img src="03-topologia_files/figure-html/3-1-star3-1.png" alt="Red estrella modificada" width="100%" />
-<p class="caption">(\#fig:3-1-star3)Red estrella modificada</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-topologia_files/figure-latex/3-1-star3-1} 
+
+}
+
+\caption{Red estrella modificada}(\#fig:3-1-star3)
+\end{figure}
 
 Recalculemos, la centralización de la red con base a la centralidad de grado:
 
@@ -257,10 +297,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-08-01.png" alt="Ventana de descripción general, ventanilla de contexto" width="100%" />
-<p class="caption">(\#fig:3-1-1)Ventana de descripción general, ventanilla de contexto</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-08-01} 
+
+}
+
+\caption{Ventana de descripción general, ventanilla de contexto}(\#fig:3-1-1)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -273,14 +317,18 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  3.	Calcular la densidad de la red en Gephi es sencillo. Seleccione la pestaña *Estadísticas* que se encuentra debajo de la ventana *Contexto* (consulte la Figura \@ref(fig:3-1-2)) y haga clic en el botón *Ejecutar* junto a la opción *Densidad de grafo*. Cuando se le solicite, trate el gráfico como no dirigido. *¿Cuál es la densidad de la red apilada?* De clic en *Cerrar* para cerrar la ventanilla de reporte. Si desea volver a consultar la densidad, el resultado aparece junto a *Densidad de grafo*. Siempre puede volver a ver el reporte dando clic en el círculo con el *?* a la derecha de la opción *Ejecutar*. Repita el proceso para las redes de Amistad (en inglés "Friendship”) y Comunicaciones (en inglés “Comunications”). **¿Cuál es la densidad de la red de amistad? ¿Y la red de comunicaciones?**
+  3.	Calcular la densidad de la red en Gephi es sencillo. Seleccione la pestaña *Estadísticas* que se encuentra debajo de la ventana *Contexto* (consulte la Figura \@ref(fig:3-1-2)) y haga clic en el botón *Ejecutar* junto a la opción *Densidad de grafo*. Cuando se le solicite, trate el gráfico como no dirigido. **¿Cuál es la densidad de la red apilada?** De clic en *Cerrar* para cerrar la ventanilla de reporte. Si desea volver a consultar la densidad, el resultado aparece junto a *Densidad de grafo*. Siempre puede volver a ver el reporte dando clic en el círculo con el *?* a la derecha de la opción *Ejecutar*. Repita el proceso para las redes de Amistad (en inglés "Friendship”) y Comunicaciones (en inglés “Comunications”). **¿Cuál es la densidad de la red de amistad? ¿Y la red de comunicaciones?**
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-08-02.png" alt="Ventana de descripción general, pestaña Estadísticas" width="100%" />
-<p class="caption">(\#fig:3-1-2)Ventana de descripción general, pestaña Estadísticas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-08-02} 
+
+}
+
+\caption{Ventana de descripción general, pestaña Estadísticas}(\#fig:3-1-2)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -331,7 +379,11 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-08-03.png" alt="Ventana de descripción general, pestaña Estadísticas" width="100%" />
-<p class="caption">(\#fig:3-1-3)Ventana de descripción general, pestaña Estadísticas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-08-03} 
+
+}
+
+\caption{Ventana de descripción general, pestaña Estadísticas}(\#fig:3-1-3)
+\end{figure}

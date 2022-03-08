@@ -16,29 +16,41 @@ Como en capítulos previos, comenzaremos por expandir a fondo los conceptos brev
 
 Un nodo, $n_{i}$ es punto de corte si el número de componentes en el grafo inicial es menor que el número de componentes en el subgrafo que resulta al remover dicho nodo [@Wasserman1994, 139]. Por ejemplo, en el grafo izquierdo de la Figura \@ref(fig:3-4-cutpoint) el nodo A es un punto de corte. ¿Por qué? Como dice la definición previa, al remover A se descompone el grafo en un número mayor de componentes (\@ref(fig:3-4-cutpoint) derecha).
 
-<div class="figure" style="text-align: center">
-<img src="03-puentesycorredores_files/figure-html/3-4-cutpoint-1.png" alt="Ejemplo de punto de corte" width="100%" />
-<p class="caption">(\#fig:3-4-cutpoint)Ejemplo de punto de corte</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-puentesycorredores_files/figure-latex/3-4-cutpoint-1} 
+
+}
+
+\caption{Ejemplo de punto de corte}(\#fig:3-4-cutpoint)
+\end{figure}
 
 El concepto de puntos de corte puede extenderse a un conjunto de nodos necesarios para mantener el grafo conexo, es decir un conjunto de corte [@Wasserman1994, 140]. De misma forma, el número de componentes en un grafo que contiene un conjunto de corte es menor que el que resulta al remover estos nodos. Por ejemplo, en la Figura \@ref(fig:3-4-cutset) el conjunto de corte {A, F} contiene dos nodos que al ser removidos incrementa el número de componentes en la red.
 
-<div class="figure" style="text-align: center">
-<img src="03-puentesycorredores_files/figure-html/3-4-cutset-1.png" alt="Ejemplo de conjunto de corte" width="100%" />
-<p class="caption">(\#fig:3-4-cutset)Ejemplo de conjunto de corte</p>
-</div>
+\begin{figure}
 
-Los puntos y conjuntos de corte son esenciales para las redes donde el flujo de recursos, información o materiales son cruciales para el objetivo de la organización. Por ejemplo, en una red de comunicación la información suele viajar a través de estos nodos entre partes distantes de la red. Por consiguiente, el remover estos intermediadores resulta en una ruptura de comunicación. Sin embargo, cabe recalcar que no todos los nodos en un punto o conjunto de corte son creados iguales. Por ejemplo, en la Figura \@ref(fig:3-4-cutset) el remover el nodo F solo desconecta al nodo G del grafo y crea dos componentes en el proceso. Similarmente, el remover el nodo A de manera individual genera dos componentes {B, C, D} y {E, F, G}. Sin embargo, se puede hacer un argumento que al remover A impactamos la red de mayor manera que al remover F. Es por ello, que los analistas de redes tienden a utilizar los puntos o conjuntos de corte juntos con otras medidas de intermediación para determinar nodos o combinaciones optimas para disrumpir una red de manera eficaz.
+{\centering \includegraphics[width=1\linewidth]{03-puentesycorredores_files/figure-latex/3-4-cutset-1} 
+
+}
+
+\caption{Ejemplo de conjunto de corte}(\#fig:3-4-cutset)
+\end{figure}
+
+Los puntos y conjuntos de corte son esenciales para las redes donde el flujo de recursos, información o materiales son cruciales para el objetivo de la organización. Por ejemplo, en una red de comunicación la información suele viajar a través de estos nodos entre partes distantes de la red. Por consiguiente, el remover estos intermediadores resulta en una ruptura de comunicación. Sin embargo, cabe recalcar que no todos los nodos en un punto o conjunto de corte son creados iguales. Por ejemplo, en la Figura \@ref(fig:3-4-cutset) el remover el nodo F solo desconecta al nodo G del grafo y crea dos componentes en el proceso. Similarmente, el remover el nodo A de manera individual genera dos componentes {B, C, D} y {E, F, G}. Sin embargo, se puede hacer un argumento que al remover A impactamos la red de mayor manera que al remover F. Es por ello, que los analistas de redes tienden a utilizar los puntos o conjuntos de corte juntos con otras medidas de intermediación para determinar nodos o combinaciones óptimas para disrumpir una red de manera eficaz.
 
 
 ## Bi-componentes y Puentes
 
 Un bi-componente es formalmente un componente sin punto de corte. Por lo tanto, estos son invulnerables a fragmentación en múltiples subestructuras al remover un solo punto de corte [@Everton2012, 265]. Por ejemplo, en la Figura \@ref(fig:3-4-bicomponents) encontramos tres bi-componentes: {A, B, C}, {D, E, F, G} y {F, H, I}. Note el traslapo entre componentes, por ejemplo, {D, E, F, G} y {F, H, I} comparten el nodo F, el cual es un punto de corte. De hecho, los nodos compartidos entre bi-componentes siempre son puntos de corte.
 
-<div class="figure" style="text-align: center">
-<img src="03-puentesycorredores_files/figure-html/3-4-bicomponents-1.png" alt="Análisis de bi-componentes" width="100%" />
-<p class="caption">(\#fig:3-4-bicomponents)Análisis de bi-componentes</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-puentesycorredores_files/figure-latex/3-4-bicomponents-1} 
+
+}
+
+\caption{Análisis de bi-componentes}(\#fig:3-4-bicomponents)
+\end{figure}
 
 A menudo, cuando los analistas hablan de bi-componentes se refieren a estructuras con tres o más nodos y sin un punto de corte [@Everton2012, 265]. Adicionalmente, de particular interés son los vínculos entre bi-componentes, como la relación en la Figura \@ref(fig:3-4-bicomponents) entre los nodos C y D en rojo. Para los enlaces existe una noción análoga al punto de corte, conocida como puentes. De acuerdo con @Wasserman1994 un puente es “una línea que hace que el grafo que contiene esta línea tenga menos componentes que el subgrafo que resulta una vez que se quita la línea (los nodos incidentes con la línea siguen estando en el subgrafo)” [@Wasserman1994, 140]. Otros autores definen los puentes como bi-componentes de dos nodos que al ser removidos desconectan la red [@Everton2012, 265]. Ambas definiciones capturan un punto clave, los puentes son enlaces claves que conectan regiones de la red, sin ellos el flujo efectivo de recursos, ideas o materiales es imposible.
 
@@ -56,10 +68,14 @@ La medida fue desarrollada por Girvan y Newman [-@Girvan2002] con el propósito 
 
 Por ejemplo, en la Figura \@ref(fig:3-4-edgebetween) los bordes han sido ponderados con base al índice de intermediación de cada enlace. En esta red los actores en cada subconjunto, {A, B, C, D} y {E, F, G, H}, se encuentran densamente interconectados internamente. Adicionalmente, el subconjunto {E, F, G, H} es adyacente a un nodo pendiente, I. El único camino entre estos subconjuntos consiste en el vínculo entre D y E. Por ello si un nodo en el subconjunto {A, B, C, D} desea compartir información con alguien en el subconjunto {E, F, G, H} o con I esta debe fluir a través del vínculo con mayor intermediación, es decir el camino más corto más a menudo. 
 
-<div class="figure" style="text-align: center">
-<img src="03-puentesycorredores_files/figure-html/3-4-edgebetween-1.png" alt="Representación esquemática de una red con dos comunidades densamente enlazadas entre sí por vínculos con alta intermediación." width="100%" />
-<p class="caption">(\#fig:3-4-edgebetween)Representación esquemática de una red con dos comunidades densamente enlazadas entre sí por vínculos con alta intermediación.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-puentesycorredores_files/figure-latex/3-4-edgebetween-1} 
+
+}
+
+\caption{Representación esquemática de una red con dos comunidades densamente enlazadas entre sí por vínculos con alta intermediación.}(\#fig:3-4-edgebetween)
+\end{figure}
 
 ::: {.infobox .note data-latex=""}
 Recuerde que el algoritmo de intermediación optimiza el flujo entre nodos seleccionando los caminos más cortos. Es decir que los vínculos conexos a pendientes tendrán un índice relativamente alto puesto que solo existe un camino para acceder dicho nodo. Por ejemplo, en la Figura \@ref(fig:3-4-edgebetween) el vínculo entre {E, F, G, H} y I es relativamente alto, aunque solo conecta un solo nodo al resto del grafo.
@@ -75,19 +91,27 @@ La teoría de los agujeros estructurales de Burt [-@Burt1992] propone que las pe
 
 Por ejemplo, en la Figura \@ref(fig:3-4-holes) el actor A se localiza entre tres agujeros estructurales, estos son los espacios abiertos entre los nodos {B, H, F}. Estos tres agujeros ponen a A en una posición de corretaje donde esta puede coordinar el intercambio de información, materiales o recursos entre {B, H, F}. Adicionalmente, A se encuentra conectado a una variedad de círculos sociales, por lo tanto, tiene mayor acceso a recursos, información o materiales de cada grupo. En contraste, los nodos en cada comunidad periferia ({B, C, D}, {H, I, J} y {F, E, G}) tienen menor acceso a información no redundante puesto que cada grupo se encuentra esencialmente aislado.
 
-<div class="figure" style="text-align: center">
-<img src="03-puentesycorredores_files/figure-html/3-4-holes-1.png" alt="Red social hipotética donde a se encuentra entre tres agujeros estructurales" width="100%" />
-<p class="caption">(\#fig:3-4-holes)Red social hipotética donde a se encuentra entre tres agujeros estructurales</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-puentesycorredores_files/figure-latex/3-4-holes-1} 
+
+}
+
+\caption{Red social hipotética donde A se encuentra entre tres agujeros estructurales}(\#fig:3-4-holes)
+\end{figure}
 
 
 Para construir un índice que captura las propiedades de los agujeros estructurales, Burt utiliza como base la red del ego para cada actor, es decir, las tríadas en las que se encuentra incrustado cada actor [@Cunningham2016, 181]. Para ilustrar este punto, examinemos la Figura \@ref(fig:3-4-triads) que contiene cuatro posibles configuraciones posibles de la misma tríada de actores ({A, B, C}). La primera tríada (1) es una cerrada o completa; por consiguiente, ningún nodo se localiza entre agujeros estructurales y por extensión goza de una posición de corretaje. Las otras tres tríadas (2 a 4), son abiertas y cada una contiene un agujero estructural y un nodo en posición de corredor. En esta Figura el ego, actor A, ha sido coloreado de rojo mientras que los alternos se encuentran en azul. Burt sostiene que los alternos no conectados ofrecen recursos diferentes al ego [@Burt1992]. Por lo tanto, desde la perspectiva del ego la configuración preferible es aquella que observamos en la segunda tríada (2), donde el ego se encuentra en una posición de corretaje.
 
 
-<div class="figure" style="text-align: center">
-<img src="03-puentesycorredores_files/figure-html/3-4-triads-1.png" alt="Cuatro tipos de tríadas" width="100%" />
-<p class="caption">(\#fig:3-4-triads)Cuatro tipos de tríadas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-puentesycorredores_files/figure-latex/3-4-triads-1} 
+
+}
+
+\caption{Cuatro tipos de tríadas}(\#fig:3-4-triads)
+\end{figure}
 
 El índice desarrollado para localizar nodos con poco grado de intermediación es la restricción. Esta mide cuantos alternos al ego tienen enlaces entre sí, lo cual determina el grado en que el ego invierte tiempo y energía en alternos que se conocen entre sí [@Borgatti2018]. Otra manera de pensar en restricción es pensar en la tríada cerrada ((1) en la Figura \@ref(fig:3-4-triads)). Esta es la tríada con la mayor restricción para el ego. Por lo tanto, las acciones y percepciones del ego son controladas por sus alternos. De manera opuesta, en una red del ego sin restricción ((2) en la Figura \@ref(fig:3-4-triads)) los alteres no están conectados entre sí, por ello estos no pueden coludir entre sí para influenciar las acciones o el acceso a recursos de ego [@Valente2010, 70]. 
 
@@ -103,10 +127,14 @@ Donde $p_{ij}$ representa la porción de los enlaces de $i$ compartidos con el a
 
 Pongamos en práctica esta fórmula con un ejemplo sencillo, proporcionado por [Ruqin Ren]( https://ruqinren.wordpress.com/2018/03/01/hand-calculation-of-burts-constraint-in-networks/). En la Figura \@ref(fig:3-4-practice) vemos una red de 5 nodos. Como práctica, calculemos la restricción del nodo A a mano. 
 
-<div class="figure" style="text-align: center">
-<img src="03-puentesycorredores_files/figure-html/3-4-practice-1.png" alt="Red pequeña" width="100%" />
-<p class="caption">(\#fig:3-4-practice)Red pequeña</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-puentesycorredores_files/figure-latex/3-4-practice-1} 
+
+}
+
+\caption{Red pequeña}(\#fig:3-4-practice)
+\end{figure}
 
 Primero, note que A se encuentra conectado a dos nodos adyacentes ({B, C}), por ello, calcularemos la restricción entre el ego A y cada nodo adyacente. Utilizaremos la centralidad grado (ver la tabla de grados) para determinar la porción de vínculos entre dos pares de nodos. Por ejemplo, la porción de vínculos entre el ego (A) y cada alterno ($p_{ij}$) es 0.5 puesto que A solo tiene un vínculo con B y C respectivamente, pero dos enlaces en total ($\frac{1}{2}$). 
 
@@ -147,10 +175,14 @@ En términos prácticos, el software calculará este índice de manera eficaz. S
 
 @Cunningham2016 proponen invertir el índice de restricción para generar un valor de “autonomía”, es decir, el antónimo matemático. La autonomía se calcula restando el índice de restricción para cada nodo del valor máximo teorético de restricción (1.125). El valor resultante indica un valor potencial de corretaje, donde puntajes altos reflejan un alto potencial. Por ejemplo, el índice de restricción para el nodo A es 0.953, por lo tanto, su autonomía sería equivalente a 0.172. En otras palabras, A no se encuentra en una posición de corretaje. Contrastemos esta observación con la autonomía del nodo C, el cual tiene un índice de restricción de 0.406. Por lo tanto, su autonomía es equivalente a 0.718. Como notará en la Figura \@ref(fig:3-4-practice), el nodo C se encuentra entre múltiples agujeros estructurales y su autonomía indica un potencial de corretaje moderadamente alto.
 
-<div class="figure" style="text-align: center">
-<img src="03-puentesycorredores_files/figure-html/3-4-autonomy-1.png" alt="Red con nodos dimensionados por autonomía" width="100%" />
-<p class="caption">(\#fig:3-4-autonomy)Red con nodos dimensionados por autonomía</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-puentesycorredores_files/figure-latex/3-4-autonomy-1} 
+
+}
+
+\caption{Red con nodos dimensionados por autonomía}(\#fig:3-4-autonomy)
+\end{figure}
 
 Puesto que la idea de autonomía es una medida más intuitiva que la restricción, muchos analistas tienden a utilizarla a menudo para diferenciar de manera visual o cuantitativa los nodos con un potencial de corretaje alto (vea Figura \@ref(fig:3-4-autonomy)). Sin embargo, ambos índices son valiosos en el contexto adecuado. 
 
@@ -181,10 +213,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-11-01.png" alt="Cuadro de diálogo Importación de Gephi " width="100%" />
-<p class="caption">(\#fig:3-4-1)Cuadro de diálogo Importación de Gephi </p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-11-01} 
+
+}
+
+\caption{Cuadro de diálogo Importación de Gephi }(\#fig:3-4-1)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -203,10 +239,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-11-02.png" alt="Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde" width="100%" />
-<p class="caption">(\#fig:3-4-2)Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-11-02} 
+
+}
+
+\caption{Red Huelga, Color = Strike Groups, Peso del borde = Intermediación de Borde}(\#fig:3-4-2)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -280,10 +320,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-11-03.png" alt="Red Huelga: puntos de corte, bi-componentes y centralidad de puente" width="100%" />
-<p class="caption">(\#fig:3-4-tres)Red Huelga: puntos de corte, bi-componentes y centralidad de puente</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-11-03} 
+
+}
+
+\caption{Red Huelga: puntos de corte, bi-componentes y centralidad de puente}(\#fig:3-4-tres)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -301,12 +345,20 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-11-04.png" alt="Red Huelga, puntos de corte, bi-componentes y corretaje" width="100%" />
-<p class="caption">(\#fig:3-4-cuatro)Red Huelga, puntos de corte, bi-componentes y corretaje</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="images/03-11-05.png" alt="Red Huelga: puntos de corte, bi-componentes y autonomía" width="100%" />
-<p class="caption">(\#fig:3-4-cinco)Red Huelga: puntos de corte, bi-componentes y autonomía</p>
-</div>
+{\centering \includegraphics[width=1\linewidth]{images/03-11-04} 
+
+}
+
+\caption{Red Huelga, puntos de corte, bi-componentes y corretaje}(\#fig:3-4-cuatro)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-11-05} 
+
+}
+
+\caption{Red Huelga: puntos de corte, bi-componentes y autonomía}(\#fig:3-4-cinco)
+\end{figure}

@@ -34,42 +34,31 @@ C_i^{deg} = \sum\limits_{j=1}^n x_{ij}
 $$
 Donde la medida se calcula para todos los nodos en un grafo. Es decir, el grado se define como la suma de los vínculos entre un nodo ($i$) hacia actores adyacentes ($x_{ij}$). Por ejemplo, el grado de centralidad de los nodos en la Figura \@ref(fig:3-3-degree) aparecen en la Tabla \@ref(tab:3-3-dscores). El nodo con mayor grado en este grafo es A puesto a que se encuentra enlazado con cuatro otros, D y E tienen un grado de centralidad de dos y finalmente C y B tienen un grado de uno.
 
-<div class="figure" style="text-align: center">
-<img src="03-centralidad_files/figure-html/3-3-degree-1.png" alt="Grafo no dirigido" width="100%" />
-<p class="caption">(\#fig:3-3-degree)Grafo no dirigido</p>
-</div>
+\begin{figure}
 
-<table class="table" style="margin-left: auto; margin-right: auto;">
-<caption>(\#tab:3-3-dscores)Tabla de índices, grado</caption>
- <thead>
-  <tr>
-   <th style="text-align:left;"> Nombre </th>
-   <th style="text-align:right;"> Grado </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;"> A </td>
-   <td style="text-align:right;"> 4 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> B </td>
-   <td style="text-align:right;"> 1 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> C </td>
-   <td style="text-align:right;"> 1 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> D </td>
-   <td style="text-align:right;"> 2 </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;"> E </td>
-   <td style="text-align:right;"> 2 </td>
-  </tr>
-</tbody>
-</table>
+{\centering \includegraphics[width=1\linewidth]{03-centralidad_files/figure-latex/3-3-degree-1} 
+
+}
+
+\caption{Grafo no dirigido}(\#fig:3-3-degree)
+\end{figure}
+
+\begin{table}
+
+\caption{(\#tab:3-3-dscores)Tabla de índices, grado}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X}
+\toprule
+Nombre & Grado\\
+\midrule
+\cellcolor{gray!6}{A} & \cellcolor{gray!6}{4}\\
+B & 1\\
+\cellcolor{gray!6}{C} & \cellcolor{gray!6}{1}\\
+D & 2\\
+\cellcolor{gray!6}{E} & \cellcolor{gray!6}{2}\\
+\bottomrule
+\end{tabu}
+\end{table}
 
 
 Existen múltiples maneras de calcular esta medida de manera programática. Sin embargo, el método más simple es multiplicar la matriz de adyacencia por un vector de unos, donde el largo del vector es correspondiente a el número de vértices en el grafo [@Meghanathan2016]. La siguiente operación ilustra como computar dicho índice.
@@ -100,12 +89,16 @@ Similarmente, los nodos con alto grado de centralidad tienden a ser más visible
 
 #### Centralidad de Eigenvector
 
-La centralidad de eigenvector, o centralidad de auto vector (“eigen” significa “propio”), puede ser descrita de múltiples maneras. Aquí la categorizamos como una medida basada en frecuencia de vínculos similar a la centralidad de grado, pero con una variación clave, en esta medida ponderamos el grado de cada nodo por la centralidad de los nodos adyacentes [@Borgatti2018]. Esta medida asume que los enlaces a actores altamente centrales son más importantes que los enlaces a nodos en la periferia [@Cunningham2016]. En otras palabras, es preferible tener conexiones a nodos bien conectados. Por ejemplo, en la Figura \@ref(fig:3-3-evexample) los nodos A y F tienen la misma centralidad de grado (2). Sin embargo, A se encuentra conectado a nodos quienes a su vez tienen un numero de enlaces limitado. En contraste, F se encuentra conectado a G y H los cuales son adyacentes a tres otros nodos. En este ejemplo, si el analista enfoca su análisis en centralidad de grado, que mide actividad directa, A y F son equivalentes. Sin embargo, si expandimos el enfoque del análisis para considerar la influencia indirecta, es aparente que F se encuentra en una posición superior al nodo A en base al alcance de sus conexiones indirectas.
+La centralidad de eigenvector, o centralidad de auto vector (“eigen” significa “propio”), puede ser descrita de múltiples maneras. Aquí la categorizamos como una medida basada en frecuencia de vínculos similar a la centralidad de grado, pero con una variación clave, en esta medida ponderamos el grado de cada nodo por la centralidad de los nodos adyacentes [@Borgatti2018]. Esta medida asume que los enlaces a actores altamente centrales son más importantes que los enlaces a nodos en la periferia [@Cunningham2016]. En otras palabras, es preferible tener conexiones a nodos bien conectados. Por ejemplo, en la Figura \@ref(fig:3-3-evexample) los nodos A y F tienen la misma centralidad de grado (2). Sin embargo, A se encuentra conectado a nodos quienes a su vez tienen un número de enlaces limitado. En contraste, F se encuentra conectado a G y H los cuales son adyacentes a tres otros nodos. En este ejemplo, si el analista enfoca su análisis en centralidad de grado, que mide actividad directa, A y F son equivalentes. Sin embargo, si expandimos el enfoque del análisis para considerar la influencia indirecta, es aparente que F se encuentra en una posición superior al nodo A en base al alcance de sus conexiones indirectas.
 
-<div class="figure" style="text-align: center">
-<img src="03-centralidad_files/figure-html/3-3-evexample-1.png" alt="Comparación de nodos (A y F) con el mismo grado" width="100%" />
-<p class="caption">(\#fig:3-3-evexample)Comparación de nodos (A y F) con el mismo grado</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-centralidad_files/figure-latex/3-3-evexample-1} 
+
+}
+
+\caption{Comparación de nodos (A y F) con el mismo grado}(\#fig:3-3-evexample)
+\end{figure}
 
 De manera formal, Bonacich [-@Bonacich1987] postula que la centralidad de eigenvector para cada nodo ($i$) corresponde a:
 
@@ -115,10 +108,14 @@ $$
 
 Donde $R$ corresponde a la matriz de adyacencia, la cual es usualmente (pero no obligatoriamente) simétrica y los elementos de la diagonal son iguales a cero. Además, $\lambda$ es la constante llamada eigenvalor requerido. Por convención, el eigenvalor más grande es preferido. Para determinar el eigenvalor principal de una red podemos emplear una serie de herramientas de software (Gephi calcula este valor en segundos) o el método de las potencias [@Meghanathan2016]. Las siguientes operaciones representan el proceso de calcular la centralidad de eigenvector para el gráfico en la Figura \@ref(fig:3-3-ev).  
 
-<div class="figure" style="text-align: center">
-<img src="03-centralidad_files/figure-html/3-3-ev-1.png" alt="Grafo no dirigido" width="100%" />
-<p class="caption">(\#fig:3-3-ev)Grafo no dirigido</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-centralidad_files/figure-latex/3-3-ev-1} 
+
+}
+
+\caption{Grafo no dirigido}(\#fig:3-3-ev)
+\end{figure}
 
 $$
 \begin{split}
@@ -319,10 +316,14 @@ Donde $d_{ij}$ es la distancia geodésica entre dos nodos. Adicionalmente, el n�
 
 Calcular esta medida es simple, el grafo \@ref(fig:3-3-clo) servirá como ejemplo. Comenzaremos por encontrar los caminos geodésicos entre todos los nodos, presentados en la siguiente matriz de distancias. El siguiente paso consiste en sumar las distancias para cada nodo. Finalmente, dividimos el número máximo teórico de cercanía ($N-1$) por la suma de las distancias de cada nodo. Por ejemplo, el nodo A tiene una distancia cumulativa de 15 y el valor teórico máximo de cercanía es 6. Por lo tanto, la cercanía normalizada del nodo A es equivalente a $\frac{6}{15} = 0.4$.
 
-<div class="figure" style="text-align: center">
-<img src="03-centralidad_files/figure-html/3-3-clo-1.png" alt="Grafo no dirigido" width="100%" />
-<p class="caption">(\#fig:3-3-clo)Grafo no dirigido</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-centralidad_files/figure-latex/3-3-clo-1} 
+
+}
+
+\caption{Grafo no dirigido}(\#fig:3-3-clo)
+\end{figure}
 
 $$
 \begin{matrix}
@@ -370,10 +371,14 @@ $$
 
 Pongamos esta ecuación en práctica. La Figura \@ref(fig:3-3-betw) incluye un grafo no dirigido. ¿Qué nodo tendrá la centralidad de intermediación más alta? En este ejemplo le presentamos el cálculo de la centralidad de intermediación de los vértices en el gráfico. Para esta operación el valor máximo es 6 (o $\frac{(5-1)(5-2)}{2}$). Los índices presentados han sido normalizados.
 
-<div class="figure" style="text-align: center">
-<img src="03-centralidad_files/figure-html/3-3-betw-1.png" alt="Grafo no dirigido simple." width="100%" />
-<p class="caption">(\#fig:3-3-betw)Grafo no dirigido simple.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-centralidad_files/figure-latex/3-3-betw-1} 
+
+}
+
+\caption{Grafo no dirigido simple.}(\#fig:3-3-betw)
+\end{figure}
 
 \break
 
@@ -427,10 +432,14 @@ Retornemos por un segundo a la idea de grados de centralidad, previamente defini
 
 Considere la Figura \@ref(fig:3-3-directed) que incluye un grafo dirigido. La dirección de la flecha indica el nodo que recibe un enlace, del otro lado de la flecha encontramos a aquel nodo que envía dicho arco. La interpretación del grado de entrada o salida depende del contexto del grafo. Por ejemplo, supongamos que los vínculos en la Figura \@ref(fig:3-3-directed) representan enlaces de confianza; es decir, cada nodo nomina a otros en la red en quien confía. En esta situación interpretaríamos a un nodo con alto grado de entrada como alguien confiable y un nodo con alto grado de salida como alguien confiado.
 
-<div class="figure" style="text-align: center">
-<img src="03-centralidad_files/figure-html/3-3-directed-1.png" alt="Datos dirigidos" width="100%" />
-<p class="caption">(\#fig:3-3-directed)Datos dirigidos</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-centralidad_files/figure-latex/3-3-directed-1} 
+
+}
+
+\caption{Datos dirigidos}(\#fig:3-3-directed)
+\end{figure}
 
 @Wasserman1994 definen el grado de entrada hacia un nodo $n_i$ como $d_I(n_i)$, donde el grado de entrada es igual al número de arcos que terminan en $n_i$ ($l_k = <n_j, n_i>$) para todos los arcos ($l_k\ \epsilon\ L$) y nodos ($n_j\ \epsilon\ N$) en el grafo ($G(N, L)$). Similarmente, el grado de salida de un nodo $d_O(n_i)$ es el número de nodos adyacentes desde $n_i$. Es decir, todos los enlaces que comienzan en $n_i$ ($l_k = <n_i, n_j>$) para todos los arcos ($l_k\ \epsilon\ L$) y nodos ($n_j\ \epsilon\ N$) en el grafo [@Wasserman1994]. En una matriz de adyacencia, la suma de las filas para cada nodo es equivalente a el grado de salida, y los totales de las columnas es igual al grado de entrada. Definimos estas ecuaciones como: 
 
@@ -459,7 +468,7 @@ d_I(n_i) & 1 & 2 & 2 & 3 & 0
 (\#eq:3-3-measures)
 $$
 
-Noté que algunos nodos no reciben ningún enlace, por ejemplo, E tiene un grado de entrada de cero $d_I(n_E) = 0$. Sin embargo, esta falta de vínculos hacia E no impacta de manera directa el número de enlaces que comienzan con E, $d_O(n_E) = 2$. El punto clave en interpretar estos índices es el contextualizar las medidas, es decir, hacerse la pregunta como analista: ¿Qué significa un alto grado de entrada o salida con las relaciones presentes?
+Note que algunos nodos no reciben ningún enlace, por ejemplo, E tiene un grado de entrada de cero $d_I(n_E) = 0$. Sin embargo, esta falta de vínculos hacia E no impacta de manera directa el número de enlaces que comienzan con E, $d_O(n_E) = 2$. El punto clave en interpretar estos índices es el contextualizar las medidas, es decir, hacerse la pregunta como analista: ¿Qué significa un alto grado de entrada o salida con las relaciones presentes?
 
 
 #### Centros de Actividad y Autoridades
@@ -472,10 +481,14 @@ Antes de proceder a calcular los índices, piense ¿En qué contextos sociales p
 
 En términos prácticos, el calcular los índices para cada nodo de centro de actividad y autoridad es relativamente simple. Observe la red \@ref(fig:3-3-directedg), los centros de actividad apuntan a las autoridades, esto sucede por la relación mutuamente reforzada donde un buen centro de actividad apunta a muchas buenas autoridades y del otro lado de la moneda una buena autoridad es aquel nodo que recibe múltiples vínculos de buenos centros de actividad [@Kleinberg1999].
 
-<div class="figure" style="text-align: center">
-<img src="03-centralidad_files/figure-html/3-3-directedg-1.png" alt="Grafo dirigido" width="100%" />
-<p class="caption">(\#fig:3-3-directedg)Grafo dirigido</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-centralidad_files/figure-latex/3-3-directedg-1} 
+
+}
+
+\caption{Grafo dirigido}(\#fig:3-3-directedg)
+\end{figure}
 
 Suponga que el nodo $i$ tiene un índice de autoridad de $a_i$ y de centro de actividad $h_i$ donde i es equivalente a $1:n$. Asuma que la autoridad y centro de actividad inicial de cada nodo $i$ será $a_{i}^0$ y $h_{i}^0$.  El método iterativo HITS actualizará los valores iniciales con las siguientes sumas:
 
@@ -655,7 +668,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  1.	Abra `alive_combined_network.gephi`, que puede descargar [del sitio que acompaña este manual](https://cjcallag.github.io/arso-materiales-educativos/). Los colores de los nodos de la red reflejan los subgrupos de acuerdo con el algoritmo de Louvain. Gephi implementa un puñado de medidas de centralidad. La medida más común de centralidad es el grado, que en una red no dirigida y binaria es simplemente un recuento del número de vínculos de cada actor (es decir, el número de vecinos). Los vínculos en una red son ponderados cuando los actores comparten múltiples entre sí, por un par de actores puede compartir más de un vínculo, como parentesco, religioso, escolar. Para la centralidad de grado, Gephi ofrece la opción de tomar en cuenta el peso de los vínculos o ignorarlo. Para calcular la centralidad de grado no ponderada, ubique la opción *Grado medio* en la pestaña *Estadísticas* y haga clic en *Ejecutar*. Esto genera un informe, que hemos visto antes, que le presenta la centralidad de grado medio y produce un gráfico que indica la distribución de los valores de grado.
+  1.	Abra `alive_combined_network.gephi`, que puede descargar [del sitio que acompaña este manual](https://cjcallag.github.io/arso-materiales-educativos/). Los colores de los nodos de la red reflejan los subgrupos de acuerdo con el algoritmo de Louvain. Gephi implementa un puñado de medidas de centralidad. La medida más común de centralidad es el grado, que en una red no dirigida y binaria es simplemente un recuento del número de vínculos de cada actor (es decir, el número de vecinos). Los vínculos en una red son ponderados cuando los actores comparten múltiples entre sí, pues un par de actores puede compartir más de un vínculo, como parentesco, religioso, escolar. Para la centralidad de grado, Gephi ofrece la opción de tomar en cuenta el peso de los vínculos o ignorarlo. Para calcular la centralidad de grado no ponderada, ubique la opción *Grado medio* en la pestaña *Estadísticas* y haga clic en *Ejecutar*. Esto genera un informe, que hemos visto antes, que le presenta la centralidad de grado medio y produce un gráfico que indica la distribución de los valores de grado.
 :::
 :::
 
@@ -677,10 +690,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-10-01.png" alt="Red combinada de nodos vivos, Laboratorio de datos" width="100%" />
-<p class="caption">(\#fig:3-3-1)Red combinada de nodos vivos, Laboratorio de datos</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-10-01} 
+
+}
+
+\caption{Red combinada de nodos vivos, Laboratorio de datos}(\#fig:3-3-1)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -697,10 +714,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-10-02.png" alt="Red combinada de nodos vivos, el tamaño refleja el grado de centralidad" width="100%" />
-<p class="caption">(\#fig:3-3-2)Red combinada de nodos vivos, el tamaño refleja el grado de centralidad</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-10-02} 
+
+}
+
+\caption{Red combinada de nodos vivos, el tamaño refleja el grado de centralidad}(\#fig:3-3-2)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -735,10 +756,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-10-03.png" alt="Diámetro de red/distancia promedio de camino" width="100%" />
-<p class="caption">(\#fig:3-3-3)Diámetro de red/distancia promedio de camino</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-10-03} 
+
+}
+
+\caption{Diámetro de red/distancia promedio de camino}(\#fig:3-3-3)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}

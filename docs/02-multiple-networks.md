@@ -59,61 +59,36 @@ $$
 
 El objetivo es analizar la combinación de estas relaciones de manera que podamos identificar los límites de la red. La Figura \@ref(fig:2-5-combined) es una representación de los datos descritos previamente en formato de sociomatriz. El grafo incluye dos tríadas cerradas que consisten de miembros familiares, los cuales se unen por una relación financiera. 
 
-<div class="figure" style="text-align: center">
-<img src="02-multiple-networks_files/figure-html/2-5-combined-1.png" alt="Múltiples Relaciones" width="100%" />
-<p class="caption">(\#fig:2-5-combined)Múltiples Relaciones</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-multiple-networks_files/figure-latex/2-5-combined-1} 
+
+}
+
+\caption{Múltiples Relaciones}(\#fig:2-5-combined)
+\end{figure}
 
 Como hemos mencionado previamente, el recopilar información en sociomatrices es laborioso e ineficiente. Por consiguiente, al recopilar múltiples tipos de relaciones es sugerible utilizar una lista de aristas, el formato básico de dos columnas puede ser expandido para incluir una columna clasificando el tipo de vínculo. Recuerde que en una lista de aristas cada fila representa un vínculo, por lo tanto, es posible apilar relaciones de la siguiente manera.
 
 \break
 
-<table class="table" style="margin-left: auto; margin-right: auto;">
- <thead>
-  <tr>
-   <th style="text-align:left;"> Origen </th>
-   <th style="text-align:left;"> Destino </th>
-   <th style="text-align:left;"> Relación </th>
-  </tr>
- </thead>
-<tbody>
-  <tr>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> A </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> B </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> Familiar </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> A </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> C </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> Familiar </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> B </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> C </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> Familiar </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> D </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> E </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> Familiar </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> D </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> F </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> Familiar </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> E </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> F </td>
-   <td style="text-align:left;font-weight: bold;color: red !important;"> Familiar </td>
-  </tr>
-  <tr>
-   <td style="text-align:left;font-weight: bold;color: #018571 !important;"> C </td>
-   <td style="text-align:left;font-weight: bold;color: #018571 !important;"> D </td>
-   <td style="text-align:left;font-weight: bold;color: #018571 !important;"> Financiera </td>
-  </tr>
-</tbody>
-</table>
+\begin{table}
+\centering
+\begin{tabular}[t]{lll}
+\toprule
+Origen & Destino & Relación\\
+\midrule
+\textcolor{red}{\textbf{\cellcolor{gray!6}{A}}} & \textcolor{red}{\textbf{\cellcolor{gray!6}{B}}} & \textcolor{red}{\textbf{\cellcolor{gray!6}{Familiar}}}\\
+\textcolor{red}{\textbf{A}} & \textcolor{red}{\textbf{C}} & \textcolor{red}{\textbf{Familiar}}\\
+\textcolor{red}{\textbf{\cellcolor{gray!6}{B}}} & \textcolor{red}{\textbf{\cellcolor{gray!6}{C}}} & \textcolor{red}{\textbf{\cellcolor{gray!6}{Familiar}}}\\
+\textcolor{red}{\textbf{D}} & \textcolor{red}{\textbf{E}} & \textcolor{red}{\textbf{Familiar}}\\
+\textcolor{red}{\textbf{\cellcolor{gray!6}{D}}} & \textcolor{red}{\textbf{\cellcolor{gray!6}{F}}} & \textcolor{red}{\textbf{\cellcolor{gray!6}{Familiar}}}\\
+\addlinespace
+\textcolor{red}{\textbf{E}} & \textcolor{red}{\textbf{F}} & \textcolor{red}{\textbf{Familiar}}\\
+\textcolor[HTML]{018571}{\textbf{\cellcolor{gray!6}{C}}} & \textcolor[HTML]{018571}{\textbf{\cellcolor{gray!6}{D}}} & \textcolor[HTML]{018571}{\textbf{\cellcolor{gray!6}{Financiera}}}\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 El incorporar múltiples relaciones en una sola lista con una variable categórica, permite la importación de datos de manera efectiva. Sin embargo, es común encontrar analistas que mantienen sus relaciones en múltiples archivos por propósitos de manipulación de datos. 
 
@@ -162,10 +137,14 @@ $$
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="02-multiple-networks_files/figure-html/2-5-apiladas-1.png" alt="Relaciones Apiladas" width="100%" />
-<p class="caption">(\#fig:2-5-apiladas)Relaciones Apiladas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-multiple-networks_files/figure-latex/2-5-apiladas-1} 
+
+}
+
+\caption{Relaciones Apiladas}(\#fig:2-5-apiladas)
+\end{figure}
 
 El objetivo de apilar es el poder agregar o remover datos al análisis con base en las necesidades del analista. Algunas plataformas de software tratan datos apilados como separados y por consiguiente calculan las medidas de cada matriz de manera independiente. Por ejemplo, el contar vínculos de las matrices  apiladas previamente produce dos valores diferentes. Es por ello, que usualmente el apilar relaciones solo se utiliza como una herramienta visual.
 
@@ -242,10 +221,14 @@ D & 0 & 0 & 1 & 0
 $$
 
 
-<div class="figure" style="text-align: center">
-<img src="02-multiple-networks_files/figure-html/2-5-agregadas-1.png" alt="Relaciones Agregadas" width="100%" />
-<p class="caption">(\#fig:2-5-agregadas)Relaciones Agregadas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-multiple-networks_files/figure-latex/2-5-agregadas-1} 
+
+}
+
+\caption{Relaciones Agregadas}(\#fig:2-5-agregadas)
+\end{figure}
 
 El agregar redes tiene ventajas y desventajas. Permite consolidar datos antes de ejecutar medidas. Sin embargo, al consolidarlos perdemos información acerca del tipo de vínculo. Por ejemplo, en la matriz producto anterior vemos algunos valores de “2”, los cuales corresponden a la presencia de vínculos precursores en ambas matrices. Para los vínculos con un valor de “1” es imposible determinar a qué categoría o matriz precursora pertenece dicho vínculo sin evaluar las entradas correspondientes. Por consiguiente, los analistas de redes tienden a agregar datos y retener los conjuntos precursores.
 
@@ -368,10 +351,14 @@ I & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & - \\
 \end{matrix}
 $$
 
-<div class="figure" style="text-align: center">
-<img src="02-multiple-networks_files/figure-html/2-5-recombinar-1.png" alt="Relaciones Recombinadas" width="100%" />
-<p class="caption">(\#fig:2-5-recombinar)Relaciones Recombinadas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-multiple-networks_files/figure-latex/2-5-recombinar-1} 
+
+}
+
+\caption{Relaciones Recombinadas}(\#fig:2-5-recombinar)
+\end{figure}
 
 Además de multiplicaciones de matriz, existen múltiples otras estrategias para recombinar relaciones. Sin embargo, esta discusión será continuada más adelante. Por ahora, solo nos enfocaremos en familiarizarlo con el concepto de recombinación. 
 
@@ -424,15 +411,23 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-06-01_aristas.png" alt="Importar lista de aristas" width="100%" />
-<p class="caption">(\#fig:2-5-aristas)Importar lista de aristas</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="images/02-06-02_reporte.png" alt="Reporte de Importación" width="100%" />
-<p class="caption">(\#fig:2-5-importacion)Reporte de Importación</p>
-</div>
+{\centering \includegraphics[width=1\linewidth]{images/02-06-01_aristas} 
+
+}
+
+\caption{Importar lista de aristas}(\#fig:2-5-aristas)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-06-02_reporte} 
+
+}
+
+\caption{Reporte de Importación}(\#fig:2-5-importacion)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -473,10 +468,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-06-03_apilada.png" alt="Red apilada de datos Monasterio de Sampson" width="100%" />
-<p class="caption">(\#fig:2-5-apilada)Red apilada de datos Monasterio de Sampson</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-06-03_apilada} 
+
+}
+
+\caption{Red apilada de datos Monasterio de Sampson}(\#fig:2-5-apilada)
+\end{figure}
 
 
 :::{.row}
@@ -517,10 +516,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-06-04_positivos.png" alt="Enlaces positivos de la red Monasterio de Sampson" width="100%" />
-<p class="caption">(\#fig:2-5-positivos)Enlaces positivos de la red Monasterio de Sampson</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-06-04_positivos} 
+
+}
+
+\caption{Enlaces positivos de la red Monasterio de Sampson}(\#fig:2-5-positivos)
+\end{figure}
 
 
 :::{.row}

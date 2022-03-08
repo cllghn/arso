@@ -66,7 +66,7 @@ g %>%
               sub         = "Grafo sin el conjunto de corte")
 ```
 
-Los puntos y conjuntos de corte son esenciales para las redes donde el flujo de recursos, información o materiales son cruciales para el objetivo de la organización. Por ejemplo, en una red de comunicación la información suele viajar a través de estos nodos entre partes distantes de la red. Por consiguiente, el remover estos intermediadores resulta en una ruptura de comunicación. Sin embargo, cabe recalcar que no todos los nodos en un punto o conjunto de corte son creados iguales. Por ejemplo, en la Figura \@ref(fig:3-4-cutset) el remover el nodo F solo desconecta al nodo G del grafo y crea dos componentes en el proceso. Similarmente, el remover el nodo A de manera individual genera dos componentes {B, C, D} y {E, F, G}. Sin embargo, se puede hacer un argumento que al remover A impactamos la red de mayor manera que al remover F. Es por ello, que los analistas de redes tienden a utilizar los puntos o conjuntos de corte juntos con otras medidas de intermediación para determinar nodos o combinaciones optimas para disrumpir una red de manera eficaz.
+Los puntos y conjuntos de corte son esenciales para las redes donde el flujo de recursos, información o materiales son cruciales para el objetivo de la organización. Por ejemplo, en una red de comunicación la información suele viajar a través de estos nodos entre partes distantes de la red. Por consiguiente, el remover estos intermediadores resulta en una ruptura de comunicación. Sin embargo, cabe recalcar que no todos los nodos en un punto o conjunto de corte son creados iguales. Por ejemplo, en la Figura \@ref(fig:3-4-cutset) el remover el nodo F solo desconecta al nodo G del grafo y crea dos componentes en el proceso. Similarmente, el remover el nodo A de manera individual genera dos componentes {B, C, D} y {E, F, G}. Sin embargo, se puede hacer un argumento que al remover A impactamos la red de mayor manera que al remover F. Es por ello, que los analistas de redes tienden a utilizar los puntos o conjuntos de corte juntos con otras medidas de intermediación para determinar nodos o combinaciones óptimas para disrumpir una red de manera eficaz.
 
 
 ## Bi-componentes y Puentes
@@ -130,7 +130,7 @@ La teoría de los agujeros estructurales de Burt [-@Burt1992] propone que las pe
 
 Por ejemplo, en la Figura \@ref(fig:3-4-holes) el actor A se localiza entre tres agujeros estructurales, estos son los espacios abiertos entre los nodos {B, H, F}. Estos tres agujeros ponen a A en una posición de corretaje donde esta puede coordinar el intercambio de información, materiales o recursos entre {B, H, F}. Adicionalmente, A se encuentra conectado a una variedad de círculos sociales, por lo tanto, tiene mayor acceso a recursos, información o materiales de cada grupo. En contraste, los nodos en cada comunidad periferia ({B, C, D}, {H, I, J} y {F, E, G}) tienen menor acceso a información no redundante puesto que cada grupo se encuentra esencialmente aislado.
 
-```{r 3-4-holes, fig.cap = "Red social hipotética donde a se encuentra entre tres agujeros estructurales"}
+```{r 3-4-holes, fig.cap = "Red social hipotética donde A se encuentra entre tres agujeros estructurales"}
 g <- data.frame(from = c("A", "A", "A", "B", "B", "C", "F", "F", "E", "H", "H", "I"),
                 to   = c("B", "F", "H", "C", "D", "D", "E", "G", "G", "I", "J", "J")) %>%
   graph_from_data_frame(directed = FALSE)

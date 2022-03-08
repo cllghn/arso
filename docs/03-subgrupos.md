@@ -20,10 +20,14 @@ Estos son la forma más simple de subgrupos cohesivos en ARSo. Representan subre
 
 Los nodos en un grafo desconectado se pueden dividir en dos o más subconjuntos de manera que no haya caminos entre los nodos en diferentes conjuntos [@Wasserman1994], estos subconjuntos del grafo se llaman componentes débiles. Localizar componentes débiles es apropiado para datos dirigidos o no dirigidos, puesto que el objetivo es localizar subconjuntos conectados. Tome por ejemplo la Figura \@ref(fig:3-2-weakcomp). En esta imagen, el color de los nodos denota el componente débil al que pertenecen. Como puede observar, encontramos tres componentes débiles en dicho gráfico, uno con cinco actores, una diada, y un aislado. 
 
-<div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/3-2-weakcomp-1.png" alt="Red con múltiples componentes débiles" width="100%" />
-<p class="caption">(\#fig:3-2-weakcomp)Red con múltiples componentes débiles</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-subgrupos_files/figure-latex/3-2-weakcomp-1} 
+
+}
+
+\caption{Red con múltiples componentes débiles}(\#fig:3-2-weakcomp)
+\end{figure}
 
 El detectar componentes débiles no solo sirve para colorear los grafos, de hecho, una de las aplicaciones más comunes es el aislar componentes. Por ejemplo, la densidad del grafo en la Figura \@ref(fig:3-2-weakcomp) es 0.25. Este índice sugiere una red escarza, sin embargo, de manera visual podemos ver que algunos componentes son más densos que otros. El componente principal, aquel de mayor tamaño, aparenta ser más denso. Es por ello que podemos aislar este componente principal y al ejecutar la medida de densidad nuevamente vemos un valor de 0.6. Este proceso nos permite enfocarnos en diferentes subconjuntos del grafo en nuestro análisis. 
 
@@ -31,10 +35,14 @@ El detectar componentes débiles no solo sirve para colorear los grafos, de hech
 
 Este tipo de subgrupo solo es adecuado cuando los datos son dirigidos. @Easley2010 definen los componentes fuertes en un grafo dirigido como subconjuntos de nodos en los cuales (A) que todos los nodos en el subconjunto pueden alcanzarse entre sí y (B) el subconjunto no es parte de un conjunto mayor con la propiedad que los nodos pueden llegar a todos los demás. Por ejemplo, en la Figura \@ref(fig:3-2-strongcomp) el color de los nodos denota membresía a un subcomponente fuerte.
 
-<div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/3-2-strongcomp-1.png" alt="Red con múltiples componentes fuertes" width="100%" />
-<p class="caption">(\#fig:3-2-strongcomp)Red con múltiples componentes fuertes</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-subgrupos_files/figure-latex/3-2-strongcomp-1} 
+
+}
+
+\caption{Red con múltiples componentes fuertes}(\#fig:3-2-strongcomp)
+\end{figure}
 
 Observe que en esta ocasión encontramos cuatro componentes fuertes, el primero se encuentra compuesto por un actor aislado {H}, el segundo es una diada reciproca {F, G}, el tercero es un solo actor {E}, y el cuarto sería el componente fuerte principal {A, B, C, D}. Es probable que se esté preguntando, ¿Por qué E no forma parte del componente fuerte principal? La razón la podemos encontrar en la definición de Easley y Kleinberg. Note que en el componente principal todos los nodos pueden alcanzarse entre sí, es decir, si cualquier nodo en el componente fuese a difundir alguna noticia a través de sus contactos esta información podría retornar al originador. Sin embargo, E se encuentra en un componente único puesto que no alcanza a otros nodos.
 
@@ -44,12 +52,17 @@ Como puede ver, los componentes fuertes son más restrictivos que los componente
 
 Otra forma de localizar subgrupos cohesivos en una red es basándose en grados nodales; específicamente, utilizando k-cores (o k-núcleos) que se definen en términos del grado mínimo. Donde *k*, en un subgrafo es el número mínimo de nodos adyacentes [@Wasserman1994] . Por ejemplo, el primer grafo (red completa) en la Figura \@ref(fig:3-2-kcore) representa un grafo completo, es decir, 0-core. En este, vemos nodos aislados con cero enlaces, nodos pendientes con un solo vínculo y nodos con una variedad de grados de centralidad. Un 1-core incluye todos los nodos conectados al menos a una persona (ver Figura \@ref(fig:3-2-kcore)). Similarmente, un 2-core incluye nodos conectados al menos a dos otros nodos (ver Figura \@ref(fig:3-2-kcore)). De igual manera podemos definir un 3-core como nodos con tres o más vínculos (ver Figura \@ref(fig:3-2-kcore)). Al aumentar *k* comenzamos a localizar el núcleo de actores más interconectados de la red, de igual manera el subconjunto restante aumentará en densidad [@Valente2010]. 
 
-<img src="03-subgrupos_files/figure-html/unnamed-chunk-1-1.png" width="100%" style="display: block; margin: auto;" />
 
-<div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/3-2-kcore-1.png" alt="Red completa y 1-, 2-, y 3-core" width="100%" />
-<p class="caption">(\#fig:3-2-kcore)Red completa y 1-, 2-, y 3-core</p>
-</div>
+\begin{center}\includegraphics[width=1\linewidth]{03-subgrupos_files/figure-latex/unnamed-chunk-1-1} \end{center}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-subgrupos_files/figure-latex/3-2-kcore-1} 
+
+}
+
+\caption{Red completa y 1-, 2-, y 3-core}(\#fig:3-2-kcore)
+\end{figure}
 
 
 El remover nodos incrementando *k* es una estrategia comúnmente utilizada por analistas de redes para describir la estructura de la red. Específicamente, para aislar el núcleo de la periferia, o los actores más activos de los actores con pocas conexiones. 
@@ -58,17 +71,25 @@ El remover nodos incrementando *k* es una estrategia comúnmente utilizada por a
 
 El algoritmo de Girvan y Newman [-@Newman2004] detecta subcomunidades enfocándose en remover vínculos intermediarios entre subconjuntos de nodos con el propósito de localizar subcomponentes. Por ejemplo, en la red \@ref(fig:3-2-bowtie) (izquierda) vemos dos tríadas cerradas conectadas a través de un puente. En este gráfico los vínculos han sido dibujados de manera ponderada con base en la intermediación de cada enlace. El algoritmo de Girvan y Newman comienza por calcular la intermediación de los enlaces, remueve de manera sistemática aquellos con el mayor índice de intermediación y procede a recalcularla y remover enlaces con alto valor de manera iterativa. Supongamos que ejecutamos este algoritmo por un ciclo, entonces al remover el puente entre tríadas se produce dos subconjuntos, mejor descritos como componentes débiles (ver, derecha).   
 
-<div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/3-2-bowtie-1.png" alt="Red hipotética (izquierda) y componentes débiles (derecha)" width="100%" />
-<p class="caption">(\#fig:3-2-bowtie)Red hipotética (izquierda) y componentes débiles (derecha)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-subgrupos_files/figure-latex/3-2-bowtie-1} 
+
+}
+
+\caption{Red hipotética (izquierda) y componentes débiles (derecha)}(\#fig:3-2-bowtie)
+\end{figure}
 
 En práctica, el algoritmo ejecuta este proceso y retorna un valor categórico correspondiente a la subcomunidad a la que pertenece cada nodo. Por lo tanto, el gráfico original no se ve afectado y el analista gana información sobre la comunidad Girvan-Newman correspondiente para cada nodo. Por ejemplo, la Figura \@ref(fig:3-2-gn) contiene la red previa con comunidades Girvan-Newman resaltadas.
 
-<div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/3-2-gn-1.png" alt="Comunidades Girvan-Newman y puentes resaltados." width="100%" />
-<p class="caption">(\#fig:3-2-gn)Comunidades Girvan-Newman y puentes resaltados.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-subgrupos_files/figure-latex/3-2-gn-1} 
+
+}
+
+\caption{Comunidades Girvan-Newman y puentes resaltados.}(\#fig:3-2-gn)
+\end{figure}
 
 El algoritmo de Girvan-Newman provee una forma de generar particiones de la red a grupos mutuamente exclusivos y un índice que mide la adecuación de estas particiones, de tal forma que el analista puede elegir entre estas particiones en busca de la más adecuada conforme a los datos de la red [@Valente2010, pp. 106]. Normalmente, la partición de la red que genera el índice de modularidad más alto es considerado el punto óptimo [@Everton2012].
 
@@ -98,10 +119,14 @@ Donde $A_{ij}$ es el peso del vínculo entre los nodos $i$ y $j$. $k_{i}$ y $k_{
 
 El siguiente es un ejemplo de cómo calcular la modularidad de una red a mano con base en el [ejemplo de Matthew Joseph](https://www.researchgate.net/post/Can_anyone_provide_a_short_example_of_how_the_modularity_is_being_calculated_in_networks) en ResearchGate y [luego Abhishek Mishra]( https://medium.com/walmartglobaltech/demystifying-louvains-algorithm-and-its-implementation-in-gpu-9a07cdd3b010). Empecemos con nuestra pequeña red \@ref(fig:3-2-tie3) y su matriz de adyacencia.
 
-<div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/3-2-tie3-1.png" alt="Red hipotética" width="100%" />
-<p class="caption">(\#fig:3-2-tie3)Red hipotética</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-subgrupos_files/figure-latex/3-2-tie3-1} 
+
+}
+
+\caption{Red hipotética}(\#fig:3-2-tie3)
+\end{figure}
 
 $$
 \begin{matrix}
@@ -178,17 +203,25 @@ La modularidad con los nodos {A,B,C} y {D, E, F} en particiones separadas es igu
 
 Publicado originalmente en 2008, el método Louvain es un método de optimización codicioso que intenta optimizar la modularidad de las particiones de la red. Esencialmente, la optimización se lleva a cabo en dos pasos. Primero, el método encuentra pequeñas comunidades locales optimizando la modularidad. Luego, agrega nodos que pertenecen a las comunidades identificadas y construye una nueva red con esos nodos colapsados. El proceso continúa hasta que se identifique la máxima modularidad y se produzca una jerarquía de comunidades [@Blondel2008].
 
-<div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/3-2-process-1.png" alt="Visualización de los pasos en el algoritmo" width="100%" />
-<p class="caption">(\#fig:3-2-process)Visualización de los pasos en el algoritmo</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-subgrupos_files/figure-latex/3-2-process-1} 
+
+}
+
+\caption{Visualización de los pasos en el algoritmo}(\#fig:3-2-process)
+\end{figure}
 
 La Figura \@ref(fig:3-2-process) es una representación gráfica de una sola ronda en el proceso. Sin embargo, en términos prácticos, el proceso resulta en particiones que denotan las subcomunidades a las que pertenece cada nodo. La red izquierda de la Figura \@ref(fig:3-2-bigone) consta de 100 nodos, a su derecha vemos las subcomunidades óptimas detectadas por el algoritmo de Louvain. Es importante recalcar que el objetivo del algoritmo es optimizar la modularidad y por consiguiente los grupos resultantes son una representación matemática de los patrones de enlaces en el gráfico. Sin embargo, este tipo de herramienta analítica es útil en localizar comunidades cohesivas donde los miembros tienen normas, valores o aptitudes similares. Otra manera de pensar en esto es que los nodos dentro de cada grupo pueden seleccionarse a sí mismos como parte del grupo o las presiones sociales del grupo pueden persuadir a los nuevos miembros para que adopten normas o valores del grupo [@Valente2010, 108].  
 
-<div class="figure" style="text-align: center">
-<img src="03-subgrupos_files/figure-html/3-2-bigone-1.png" alt="Red sin escala (izquierda) y red sin escala con particiones (derecha)" width="100%" />
-<p class="caption">(\#fig:3-2-bigone)Red sin escala (izquierda) y red sin escala con particiones (derecha)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{03-subgrupos_files/figure-latex/3-2-bigone-1} 
+
+}
+
+\caption{Red sin escala (izquierda) y red sin escala con particiones (derecha)}(\#fig:3-2-bigone)
+\end{figure}
 
 
 ## Ejercicio Práctico
@@ -199,7 +232,7 @@ En un mundo ideal, habría un solo algoritmo para identificar subgrupos cohesivo
 
 ### Antes de Empezar
 
-Para este ejercicio vamos a necesitar el módulo *Newman-Girvan* clustering antes de comenzar Haga esto siguiendo los mismos pasos que utilizamos en para descargar el módulo *MultimodeNetworks Transformation* en ejercicio práctico en el capítulo Derivando Datos Modo-Uno de Modo-Dos. 
+Para este ejercicio vamos a necesitar el módulo *Newman-Girvan* clustering antes de comenzar. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el módulo *MultimodeNetworks Transformation* en ejercicio práctico en el capítulo Derivando Datos Modo-Uno de Modo-Dos. 
 
 ### Identificación de Subgrupos en Gephi
 
@@ -239,15 +272,23 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-09-01.png" alt="Reporte de Componentes Conectados en Gephi" width="100%" />
-<p class="caption">(\#fig:3-2-1)Reporte de Componentes Conectados en Gephi</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="images/03-09-02.png" alt="Red de confianza con actores vivos, color por componente" width="100%" />
-<p class="caption">(\#fig:3-2-2)Red de confianza con actores vivos, color por componente</p>
-</div>
+{\centering \includegraphics[width=1\linewidth]{images/03-09-01} 
+
+}
+
+\caption{Reporte de Componentes Conectados en Gephi}(\#fig:3-2-1)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-09-02} 
+
+}
+
+\caption{Red de confianza con actores vivos, color por componente}(\#fig:3-2-2)
+\end{figure}
 
 
 :::{.row}
@@ -291,10 +332,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-09-03.png" alt="Red de confianza con actores vivos, componente principal" width="100%" />
-<p class="caption">(\#fig:3-2-3)Red de confianza con actores vivos, componente principal</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-09-03} 
+
+}
+
+\caption{Red de confianza con actores vivos, componente principal}(\#fig:3-2-3)
+\end{figure}
 
 
 :::{.row}
@@ -330,10 +375,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/03-09-04.png" alt="Red de confianza con actores vivos, 7-core" width="100%" />
-<p class="caption">(\#fig:3-2-4)Red de confianza con actores vivos, 7-core</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/03-09-04} 
+
+}
+
+\caption{Red de confianza con actores vivos, 7-core}(\#fig:3-2-4)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}

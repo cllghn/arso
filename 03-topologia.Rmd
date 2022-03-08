@@ -304,7 +304,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  3.	Calcular la densidad de la red en Gephi es sencillo. Seleccione la pestaña *Estadísticas* que se encuentra debajo de la ventana *Contexto* (consulte la Figura \@ref(fig:3-1-2)) y haga clic en el botón *Ejecutar* junto a la opción *Densidad de grafo*. Cuando se le solicite, trate el gráfico como no dirigido. *¿Cuál es la densidad de la red apilada?* De clic en *Cerrar* para cerrar la ventanilla de reporte. Si desea volver a consultar la densidad, el resultado aparece junto a *Densidad de grafo*. Siempre puede volver a ver el reporte dando clic en el círculo con el *?* a la derecha de la opción *Ejecutar*. Repita el proceso para las redes de Amistad (en inglés "Friendship”) y Comunicaciones (en inglés “Comunications”). **¿Cuál es la densidad de la red de amistad? ¿Y la red de comunicaciones?**
+  3.	Calcular la densidad de la red en Gephi es sencillo. Seleccione la pestaña *Estadísticas* que se encuentra debajo de la ventana *Contexto* (consulte la Figura \@ref(fig:3-1-2)) y haga clic en el botón *Ejecutar* junto a la opción *Densidad de grafo*. Cuando se le solicite, trate el gráfico como no dirigido. **¿Cuál es la densidad de la red apilada?** De clic en *Cerrar* para cerrar la ventanilla de reporte. Si desea volver a consultar la densidad, el resultado aparece junto a *Densidad de grafo*. Siempre puede volver a ver el reporte dando clic en el círculo con el *?* a la derecha de la opción *Ejecutar*. Repita el proceso para las redes de Amistad (en inglés "Friendship”) y Comunicaciones (en inglés “Comunications”). **¿Cuál es la densidad de la red de amistad? ¿Y la red de comunicaciones?**
 :::
 :::
 

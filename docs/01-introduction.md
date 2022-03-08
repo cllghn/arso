@@ -26,17 +26,25 @@ Finalmente, el ARSo a veces se confunde con el análisis de enlaces, una metodol
 
 \break
 
-<div class="figure" style="text-align: center">
-<img src="images/01-links.png" alt="Ejemplo de un análisis de enlaces" width="100%" />
-<p class="caption">(\#fig:1-links)Ejemplo de un análisis de enlaces</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-links} 
+
+}
+
+\caption{Ejemplo de un análisis de enlaces}(\#fig:1-links)
+\end{figure}
 
 En el ARSo, los actores tienen vínculos con objetos similares, lo que hace significativa la comparación directa del número de vínculos. Esto se ilustra en la Figura \@ref(fig:1-arso) donde en el panel de la izquierda, los individuos A y B tienen cada uno cinco vínculos con otros cinco individuos, mientras que en el derecho, tienen cinco vínculos con cinco escuelas diferentes. En ambos casos, los lazos de A son comparables a los de B porque son del mismo tipo de objeto. Aunque los analistas de redes sociales están interesados en más que el recuento de los lazos de los actores, otros algoritmos de análisis de redes sociales generalmente asumen que los lazos se dan entre tipos similares de objetos.
 
-<div class="figure" style="text-align: center">
-<img src="images/01-arso.png" alt="Ejemplo de diagramas de red" width="100%" />
-<p class="caption">(\#fig:1-arso)Ejemplo de diagramas de red</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-arso} 
+
+}
+
+\caption{Ejemplo de diagramas de red}(\#fig:1-arso)
+\end{figure}
 
 ## Suposiciones
 
@@ -61,10 +69,14 @@ Los individuos no son los únicos actores influenciados por otros actores. Por e
 
 Otra suposición es que los lazos (es decir, las relaciones) entre actores funcionan como conductos para el flujo de varios tipos de "bienes" materiales y no materiales, como información, sentimientos, recursos financieros, normas, enfermedades, opiniones y confianza. Quizás, el ejemplo más conocido de esto es el estudio de Granovetter -@Granovetter1973 sobre cómo las personas encuentran sus trabajos actuales. Granovetter descubrió que era mucho más probable que las personas utilizaran contactos personales en comparación a otros medios cuando se trataba de encontrar trabajo. De aquellos que encontraron su trabajo a través de contactos personales, la mayoría de esos contactos eran débiles (es decir, conocidos) en lugar de lazos fuertes (es decir, amigos cercanos). ¿Por qué? Porque es menos probable que nuestros lazos débiles se involucren socialmente entre sí que nuestros lazos fuertes. Por ello, el conjunto de personas que componen nuestra red de conocidos tiende a ser relativamente escaso, mientras que el grupo de personas que componen nuestra red de amigos cercanos tiende a ser denso. Considere el patrón de lazos sociales sugerido por este argumento (Figura \@ref(fig:1-strongweak)). La mayoría de las personas tendrán algunos amigos cercanos, la mayoría de los cuales se conocen entre sí. Probablemente también tengan varios conocidos, pocos de los cuales se conocen entre sí. Sin embargo, es probable que cada uno de estos conocidos tenga amigos cercanos propios, por lo que también es probable que estén integrados en sus propias redes altamente interconectadas, pero separadas de nuestro individuo original. Según Granovetter, los lazos débiles son importantes en términos de la estructura general de una red porque forman los puentes cruciales que unen a grupos de personas densamente unidas. De hecho, sin ellos, estos grupos no estarían conectados en absoluto.
 
-<div class="figure" style="text-align: center">
-<img src="01-introduction_files/figure-html/1-strongweak-1.png" alt="Lazos fuertes y débiles" width="100%" />
-<p class="caption">(\#fig:1-strongweak)Lazos fuertes y débiles</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{01-introduction_files/figure-latex/1-strongweak-1} 
+
+}
+
+\caption{Lazos fuertes y débiles}(\#fig:1-strongweak)
+\end{figure}
 
 Esto llevó a Granovetter a argumentar que "cualquier cosa que se difunda", ya sea información laboral, influencia, recursos, confianza, etc., "llegará a un mayor número de personas y viajará una mayor distancia […] cuando pasa por lazos débiles en lugar de fuertes ” [@Granovetter1973, 1366]. Debido a esto, es más probable que los actores con pocos lazos débiles “se limiten a las noticias provinciales y las opiniones de sus amigos cercanos” [@Granovetter1983, 2002]. Además, los grupos o comunidades cuyos miembros carecen de vínculos débiles encontrarán más dificultades para movilizarse por una causa. Por ejemplo, al comparar dos intentos de organización comunitaria, uno que tuvo éxito y otro que no, Granovetter [-@Granovetter1973, 1373-1376] argumentó que una diferencia crítica entre los dos era que el que no tuvo éxito carecía de los lazos débiles que necesitaba para unir sus diversos círculos sociales. 
 
@@ -98,16 +110,20 @@ Si bien las metodologías de redes sociales tienden a ser agnósticas en cuestio
 
 ### Actores y Enlaces
 
-Como se señaló anteriormente, los actores pueden tener diversas formas y tamaños (por ejemplo, individuos, grupos, organizaciones, denominaciones y naciones). Lo mismo puede decirse de los lazos. Pueden definirse en términos de tipo, fuerza y direccionalidad. Los tipos de vínculos incluyen, pero no se limitan a, vínculos de sentimiento (por ejemplo, amistad, conocido, agrado y desagrado), biología (por ejemplo, cónyuge, hermano, primo), afiliación compartida (por ejemplo, miembros de la misma iglesia, mezquita, sinagoga u organización ecuménica), comunicación (por ejemplo, llamadas telefónicas, correo electrónico, tweets), etc. Como se señaló previamente, los lazos pueden variar de fuertes a débiles. Sin embargo, la distinción entre un lazo fuerte y uno débil no siempre es obvio, ni tampoco lo es la distinción entre un lazo débil y los numerosos encuentros aleatorios y usualmente no repetidos que ocurren diariamente [@Azarian2005, 37]. Los lazos también pueden tener direccionalidad y capturar el flujo de recursos de un actor a otro, la comunicación entre actores (por ejemplo, el actor A puede enviar correos electrónicos repetidamente al actor B, pero B no corresponde), qué actores buscan consejo de otros actores [@Krackhardt1992], y así sucesivamente. Finalmente, la mayoría de los actores están conectados a otros por múltiples vínculos; de hecho, uno de los desafíos del ARSo es determinar qué vínculos deben modelarse.
+Como se señaló anteriormente, los actores pueden tener diversas formas y tamaños (por ejemplo, individuos, grupos, organizaciones, denominaciones y naciones). Lo mismo puede decirse de los lazos. Pueden definirse en términos de tipo, fuerza y direccionalidad. Los tipos de vínculos incluyen, pero no se limitan a, vínculos de sentimiento (por ejemplo, amistad, conocido, agrado y desagrado), biología (por ejemplo, cónyuge, hermano, primo), afiliación compartida (por ejemplo, miembros de la misma iglesia, mezquita, sinagoga u organización ecuménica), comunicación (por ejemplo, llamadas telefónicas, correo electrónico, tweets), etc. Como se señaló previamente, los lazos pueden variar de fuertes a débiles. Sin embargo, la distinción entre un lazo fuerte y uno débil no siempre es obvia, ni tampoco lo es la distinción entre un lazo débil y los numerosos encuentros aleatorios y usualmente no repetidos que ocurren diariamente [@Azarian2005, 37]. Los lazos también pueden tener direccionalidad y capturar el flujo de recursos de un actor a otro, la comunicación entre actores (por ejemplo, el actor A puede enviar correos electrónicos repetidamente al actor B, pero B no corresponde), qué actores buscan consejo de otros actores [@Krackhardt1992], y así sucesivamente. Finalmente, la mayoría de los actores están conectados a otros por múltiples vínculos; de hecho, uno de los desafíos del ARSo es determinar qué vínculos deben modelarse.
 
 ### Redes Sociales
 
 Una red social es simplemente "un conjunto finito o conjuntos de actores" ligados entre sí [@Wasserman1994, 20]. La Figura \@ref(fig:1-hypothetical) muestra una red social hipotética donde los círculos representan actores y las líneas representan vínculos o relaciones. Como ilustra, los actores a menudo se agrupan en subgrupos relativamente distintos. Además, algunos están incrustados en el centro de estos subgrupos, mientras que otros se encuentran más en la periferia, y a veces sirven como puentes entre subgrupos.
 
-<div class="figure" style="text-align: center">
-<img src="01-introduction_files/figure-html/1-hypothetical-1.png" alt="Red social hipotética" width="100%" />
-<p class="caption">(\#fig:1-hypothetical)Red social hipotética</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{01-introduction_files/figure-latex/1-hypothetical-1} 
+
+}
+
+\caption{Red social hipotética}(\#fig:1-hypothetical)
+\end{figure}
 
 
 ### Camino (y Distancia de Caminos)
@@ -128,10 +144,14 @@ Las redes densas suelen estar formadas por numerosos vínculos fuertes y muy poc
 
 Un enfoque significativo del ARSo es identificar subgrupos de actores “entre los cuales hay vínculos relativamente fuertes, directos, intensos y / o positivos” [@Wasserman1994, 249]. Al igual que la topología de la red, existen numerosos métodos para identificar grupos de actores. Sin embargo, todos asumen que los vínculos entre los miembros del subgrupo deberían ser más numerosos que los vínculos entre los miembros de otros grupos. La Figura \@ref(fig:1-subs) presenta un grafo donde usamos lo que se conoce como un algoritmo de detección de comunidad para identificar subgrupos dentro de la red. Aunque, aquí, probablemente no necesitábamos un algoritmo para identificar estos subgrupos, a menudo no es tan sencillo, por lo que los algoritmos de agrupación en clústeres pueden ser muy valiosos. Los algoritmos más comunes son componentes (débiles y fuertes), camarillas, núcleos k y algoritmos de detección de comunidades.
 
-<div class="figure" style="text-align: center">
-<img src="01-introduction_files/figure-html/1-subs-1.png" alt="Red hipotética con comunidades demarcadas" width="100%" />
-<p class="caption">(\#fig:1-subs)Red hipotética con comunidades demarcadas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{01-introduction_files/figure-latex/1-subs-1} 
+
+}
+
+\caption{Red hipotética con comunidades demarcadas}(\#fig:1-subs)
+\end{figure}
 
 
 ### Centralidad
@@ -148,10 +168,14 @@ La mayoría de las redes sociales contienen personas u organizaciones que son m�
 Los puentes son lazos que cubren las brechas en una red social, mientras que los corredores son actores que se sientan a un lado de esos puentes. En la Figura \@ref(fig:1-hypothetical) anterior, los bordes entre el actor Q y M o G y B podrían considerarse puentes, mientras que los cuatro actores serían considerados intermediarios. De hecho, si removemos uno o múltiples de los intermediarios de la red, esta se fragmentaría en redes separadas. En lugar de adivinar qué actores son intermediarios y qué vínculos son puentes, se han desarrollado numerosos algoritmos para detectarlos. En la Figura \@ref(fig:1-bb), el tamaño del nodo refleja la medida de huecos estructurales de Ron Burt [-@Burt1992], quizás la medida de intermediación más conocida, y el grosor de los lazos refleja la centralidad de intermediación de los bordes, que algunos utilizan para identificar puentes entre subgrupos. Cuanto más grande es el nodo, más potencial de intermediación posee, mientras que cuanto más grueso es el lazo, más probable es que sea un puente. Aquí podemos ver que los actores G y M tienen un potencial de intermediación considerable. El vínculo entre los actores B y G parece más crucial que entre M y Q. El actor L también está en una posición de intermediación, principalmente debido a su vínculo con el actor P.
 
 
-<div class="figure" style="text-align: center">
-<img src="01-introduction_files/figure-html/1-bb-1.png" alt="Red hipotética, bordes ponderados por intermediación y nodos dimensionados por autonomía. " width="100%" />
-<p class="caption">(\#fig:1-bb)Red hipotética, bordes ponderados por intermediación y nodos dimensionados por autonomía. </p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{01-introduction_files/figure-latex/1-bb-1} 
+
+}
+
+\caption{Red hipotética, bordes ponderados por intermediación y nodos dimensionados por autonomía. }(\#fig:1-bb)
+\end{figure}
 
 
 ### Funciones y Posiciones

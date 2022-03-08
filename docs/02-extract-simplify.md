@@ -14,24 +14,36 @@ En este último capítulo de técnicas de manipulación de datos, abarcaremos lo
 
 Extraer es una técnica utilizada para aislar porciones de una red con base a un conjunto de características. Estas pueden ser características de los nodos o las aristas. Por ejemplo, en una red de pandilleros tenemos miembros asociados por diferentes tipos de enlaces, algunos de los miembros se encuentran libres y vivos, vivos y en búsqueda, y encarcelados/detenidos. La Figura \@ref(fig:2-6-pandilleros) es una representación gráfica de este ejemplo. En ella los nodos libres y vivos están coloreados de negro, los vivos y en búsqueda en gris, y los encarcelados/detenidos en blanco. Por su parte los enlaces rojos son familiares, los verdes financieros, rosados amistosos y azul son de superior-subordinado.
 
-<div class="figure" style="text-align: center">
-<img src="02-extract-simplify_files/figure-html/2-6-pandilleros-1.png" alt="Red de Pandilleros" width="100%" />
-<p class="caption">(\#fig:2-6-pandilleros)Red de Pandilleros</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-extract-simplify_files/figure-latex/2-6-pandilleros-1} 
+
+}
+
+\caption{Red de Pandilleros}(\#fig:2-6-pandilleros)
+\end{figure}
 
 Podemos enfocarnos en las características de los nodos y extraer una subred con base a estos atributos. Por ejemplo, si el enfoque del análisis es localizar a los nodos vivos y libres más activos, es importante extraer de la red solo nodos libres o en búsqueda. La Figura \@ref(fig:2-6-vivos) sólo incluye nodos vivos y libres, por ello se han removido seis nodos del conjunto de datos original.
 
-<div class="figure" style="text-align: center">
-<img src="02-extract-simplify_files/figure-html/2-6-vivos-1.png" alt="Red de Pandilleros Vivos y Libres" width="100%" />
-<p class="caption">(\#fig:2-6-vivos)Red de Pandilleros Vivos y Libres</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-extract-simplify_files/figure-latex/2-6-vivos-1} 
+
+}
+
+\caption{Red de Pandilleros Vivos y Libres}(\#fig:2-6-vivos)
+\end{figure}
 
 Similarmente, podemos extraer subredes con base en los patrones o tipos de relaciones. Supongamos que el objetivo es aislar nodos enlazados únicamente por vínculos financieros, la Figura \@ref(fig:2-6-fin) representa la subred de nodos exclusivamente conectados por vínculos de finanzas. 
 
-<div class="figure" style="text-align: center">
-<img src="02-extract-simplify_files/figure-html/2-6-fin-1.png" alt="Red de Pandilleros con Lazos Financieros" width="100%" />
-<p class="caption">(\#fig:2-6-fin)Red de Pandilleros con Lazos Financieros</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-extract-simplify_files/figure-latex/2-6-fin-1} 
+
+}
+
+\caption{Red de Pandilleros con Lazos Financieros}(\#fig:2-6-fin)
+\end{figure}
 
 ## Simplificar
 
@@ -39,17 +51,25 @@ Simplificar, también llamado colapsar, es una estrategia que permite el aglomer
 
 Una vez más, retornemos a la red de pandilleros. Esta vez, los nodos han sido coloreados con base a la afiliación de cada miembro a pandillas, Figura \@ref(fig:2-6-pos).
 
-<div class="figure" style="text-align: center">
-<img src="02-extract-simplify_files/figure-html/2-6-pos-1.png" alt="Red de Pandilleros con Nodos Coloreados por Pandilla" width="100%" />
-<p class="caption">(\#fig:2-6-pos)Red de Pandilleros con Nodos Coloreados por Pandilla</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-extract-simplify_files/figure-latex/2-6-pos-1} 
+
+}
+
+\caption{Red de Pandilleros con Nodos Coloreados por Pandilla}(\#fig:2-6-pos)
+\end{figure}
 
 Utilizando estas categorías, podemos colapsar la red. Por ejemplo, la Figura \@ref(fig:2-6-collapsed) es una representación de la red donde cada nodo representa una categoría. Cada vínculo entre estas categorías simboliza la presencia de una relación entre dos personas con afiliaciones a dicho grupo.
 
-<div class="figure" style="text-align: center">
-<img src="02-extract-simplify_files/figure-html/2-6-collapsed-1.png" alt="Pandilleros, Colapsados por Grupo Ilícito" width="100%" />
-<p class="caption">(\#fig:2-6-collapsed)Pandilleros, Colapsados por Grupo Ilícito</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-extract-simplify_files/figure-latex/2-6-collapsed-1} 
+
+}
+
+\caption{Pandilleros, Colapsados por Grupo Ilícito}(\#fig:2-6-collapsed)
+\end{figure}
 
 \break
 
@@ -102,15 +122,23 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-01.png" alt="Cuadro de diálogo para importar un archivo CSV (1 de 2)" width="100%" />
-<p class="caption">(\#fig:2-6-importacion)Cuadro de diálogo para importar un archivo CSV (1 de 2)</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-02.png" alt="Cuadro de diálogo para importar un archivo CSV (2 de 2)" width="100%" />
-<p class="caption">(\#fig:2-6-importacion2)Cuadro de diálogo para importar un archivo CSV (2 de 2)</p>
-</div>
+{\centering \includegraphics[width=1\linewidth]{images/02-07-01} 
+
+}
+
+\caption{Cuadro de diálogo para importar un archivo CSV (1 de 2)}(\#fig:2-6-importacion)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-02} 
+
+}
+
+\caption{Cuadro de diálogo para importar un archivo CSV (2 de 2)}(\#fig:2-6-importacion2)
+\end{figure}
 
 
 :::{.row}
@@ -129,10 +157,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-03.png" alt="Informe de importación de Gephi" width="100%" />
-<p class="caption">(\#fig:2-6-importacion3)Informe de importación de Gephi</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-03} 
+
+}
+
+\caption{Informe de importación de Gephi}(\#fig:2-6-importacion3)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -152,10 +184,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-04.png" alt="Cuadro de diálogo para importar un archivo CSV" width="100%" />
-<p class="caption">(\#fig:2-6-importacion4)Cuadro de diálogo para importar un archivo CSV</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-04} 
+
+}
+
+\caption{Cuadro de diálogo para importar un archivo CSV}(\#fig:2-6-importacion4)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -173,10 +209,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-05.png" alt="Reporte de importación" width="100%" />
-<p class="caption">(\#fig:2-6-importacion5)Reporte de importación</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-05} 
+
+}
+
+\caption{Reporte de importación}(\#fig:2-6-importacion5)
+\end{figure}
 
 ### Uso de atributos de nodo en visualizaciones de red
 
@@ -218,10 +258,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-06.png" alt="Cuadro de diálogo 'Generar paleta'" width="100%" />
-<p class="caption">(\#fig:2-6-importacion6)Cuadro de diálogo 'Generar paleta'</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-06} 
+
+}
+
+\caption{Cuadro de diálogo 'Generar paleta'}(\#fig:2-6-importacion6)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -241,10 +285,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-07.png" alt="Red operacional de Noordin" width="100%" />
-<p class="caption">(\#fig:2-6-7)Red operacional de Noordin</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-07} 
+
+}
+
+\caption{Red operacional de Noordin}(\#fig:2-6-7)
+\end{figure}
 
 ### Simplificación (colapso / reducción) en Gephi
 
@@ -319,10 +367,14 @@ a column separator for tex -->
 
   En Excel observara que el rol de Jabir es `7`, y en la clave vemos que el rol `7` es el de `Recruiter` (o reclutador en español). En la columna de etiqueta (*Label*) en la tabla de nodos haga doble clic en la fila `Group by Jabir`, que abrirá un cuadro de texto. Allí, remplace la etiqueta con el rol (`Reclutador` o `Recruiter`) y luego repita este proceso para todos los grupos restantes. Cuando haya cambiado el nombre de todas las etiquetas, la red resultante tendrá un aspecto similar a la Figura \@ref(fig:2-6-8). 
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-08.png" alt="Nodos por rol" width="100%" />
-<p class="caption">(\#fig:2-6-8)Nodos por rol</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-08} 
+
+}
+
+\caption{Nodos por rol}(\#fig:2-6-8)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -341,10 +393,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-09.png" alt="Red colapsada por atributo de rol (diseño Force Atlas)" width="100%" />
-<p class="caption">(\#fig:2-6-9)Red colapsada por atributo de rol (diseño Force Atlas)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-09} 
+
+}
+
+\caption{Red colapsada por atributo de rol (diseño Force Atlas)}(\#fig:2-6-9)
+\end{figure}
 
 
 :::{.row}
@@ -364,10 +420,14 @@ a column separator for tex -->
 :::
 
   
-<div class="figure" style="text-align: center">
-<img src="images/02-07-10.png" alt="Red colapsada por el atributo de rol (diseño OpenOrd)" width="100%" />
-<p class="caption">(\#fig:2-6-10)Red colapsada por el atributo de rol (diseño OpenOrd)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-10} 
+
+}
+
+\caption{Red colapsada por el atributo de rol (diseño OpenOrd)}(\#fig:2-6-10)
+\end{figure}
 
 ### Extracción en Gephi
 
@@ -393,10 +453,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-11.png" alt="Red viva y libre filtrada" width="100%" />
-<p class="caption">(\#fig:2-6-11)Red viva y libre filtrada</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-11} 
+
+}
+
+\caption{Red viva y libre filtrada}(\#fig:2-6-11)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -414,7 +478,11 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-07-12.png" alt="Red viva y libre (sin aislados)" width="100%" />
-<p class="caption">(\#fig:2-6-12)Red viva y libre (sin aislados)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-07-12} 
+
+}
+
+\caption{Red viva y libre (sin aislados)}(\#fig:2-6-12)
+\end{figure}

@@ -14,10 +14,14 @@ En este capítulo volveremos a ver datos de modo-dos, donde el objetivo principa
 
 Para recapitular, las redes de modo-dos son aquellas que constan de dos grupos de nodos y donde los enlaces solo existen entre nodos de diferentes clases. A veces se les conoce como redes de afiliación, redes de membresía o incidencia [@Everton2012]. Imagínese una red modo-dos que conecta personas a eventos, por ejemplo, pandilleros conectados con pandillas u otros grupos ilícitos. Bajo la definición previa, los vínculos solo conectan pandilleros a organizaciones como en la Figura \@ref(fig:2-4-bip). 
 
-<div class="figure" style="text-align: center">
-<img src="02-twomode-to-one_files/figure-html/2-4-bip-1.png" alt="Gráfico Bipartita" width="100%" />
-<p class="caption">(\#fig:2-4-bip)Gráfico Bipartita</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-twomode-to-one_files/figure-latex/2-4-bip-1} 
+
+}
+
+\caption{Gráfico Bipartita}(\#fig:2-4-bip)
+\end{figure}
 
 ## Proyección
 
@@ -111,10 +115,14 @@ D & 0 & 0 & 1 & 0 \\
 (\#eq:2-4-proj1-clean)
 $$
 
-<div class="figure" style="text-align: center">
-<img src="02-twomode-to-one_files/figure-html/2-4-projected1-1.png" alt="Red proyectada, persona-a-persona" width="100%" />
-<p class="caption">(\#fig:2-4-projected1)Red proyectada, persona-a-persona</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-twomode-to-one_files/figure-latex/2-4-projected1-1} 
+
+}
+
+\caption{Red proyectada, persona-a-persona}(\#fig:2-4-projected1)
+\end{figure}
 
 Recuerde que el orden de las matrices en una multiplicación impacta el resultado.  Por ejemplo, si la primera matriz en la multiplicación es la transpuesta $M^T$, el producto de dicha operación sería $M^TxM$, ilustrado en la siguiente ecuación. 
 
@@ -162,10 +170,14 @@ $$
 
 Después de remover la diagonal, la matriz puede ser dibujada como grafo (ver Figura \@ref(fig:2-4-projected2)). En este gráfico el evento 2 (E2) tiene un grado de centralidad equivalente a dos, por lo cual asumimos que es el evento más popular o asistido por más personas que han asistido a otros eventos en la red. 
 
-<div class="figure" style="text-align: center">
-<img src="02-twomode-to-one_files/figure-html/2-4-projected2-1.png" alt="Red proyectada, evento-a-evento" width="100%" />
-<p class="caption">(\#fig:2-4-projected2)Red proyectada, evento-a-evento</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-twomode-to-one_files/figure-latex/2-4-projected2-1} 
+
+}
+
+\caption{Red proyectada, evento-a-evento}(\#fig:2-4-projected2)
+\end{figure}
 
 Como puede ver, ambos productos de la proyección de una red bipartita pueden ser analizados por sí mismos. En los siguientes capítulos de este manual presentamos una variedad de algoritmos analíticos diseñados para redes de modo-uno. Por consiguiente, antes de aplicar estas herramientas matemáticas, es crucial que el analista transforme sus datos a modo-uno. 
 
@@ -195,10 +207,14 @@ a column separator for tex -->
 :::
 :::
   
-<div class="figure" style="text-align: center">
-<img src="images/02-05-01_installed.png" alt="Plugins instalados" width="75%" />
-<p class="caption">(\#fig:2-4-instalados)Plugins instalados</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-01_installed} 
+
+}
+
+\caption{Plugins instalados}(\#fig:2-4-instalados)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -216,10 +232,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-05-02_available.png" alt="Plugins disponibles" width="75%" />
-<p class="caption">(\#fig:2-4-disponibles)Plugins disponibles</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-02_available} 
+
+}
+
+\caption{Plugins disponibles}(\#fig:2-4-disponibles)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -236,10 +256,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-05-03_pestana.png" alt="Pestaña MultiMode Projection" width="75%" />
-<p class="caption">(\#fig:2-4-multimode)Pestaña MultiMode Projection</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-03_pestana} 
+
+}
+
+\caption{Pestaña MultiMode Projection}(\#fig:2-4-multimode)
+\end{figure}
 
 ### Importar Redes de Modo-dos en Gephi Utilizando Listas de Aristas
 
@@ -258,10 +282,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-05-04_importar.png" alt="Cuadro de Diálogo: Importar Hoja de Cálculo" width="75%" />
-<p class="caption">(\#fig:2-4-importar)Cuadro de Diálogo: Importar Hoja de Cálculo</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-04_importar} 
+
+}
+
+\caption{Cuadro de Diálogo: Importar Hoja de Cálculo}(\#fig:2-4-importar)
+\end{figure}
  
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -278,10 +306,14 @@ a column separator for tex -->
 :::
 :::
   
-<div class="figure" style="text-align: center">
-<img src="images/02-05-04_nodos.png" alt="Informe de Importación para Lista de Nodos" width="75%" />
-<p class="caption">(\#fig:2-4-nodes)Informe de Importación para Lista de Nodos</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-04_nodos} 
+
+}
+
+\caption{Informe de Importación para Lista de Nodos}(\#fig:2-4-nodes)
+\end{figure}
  
  
 :::{.row}
@@ -317,10 +349,14 @@ a column separator for tex -->
 :::
 :::
   
-<div class="figure" style="text-align: center">
-<img src="images/02-05-06_aristas.png" alt="Informe de Importación para Lista de Aristas" width="75%" />
-<p class="caption">(\#fig:2-4-aristas)Informe de Importación para Lista de Aristas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-06_aristas} 
+
+}
+
+\caption{Informe de Importación para Lista de Aristas}(\#fig:2-4-aristas)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -340,10 +376,14 @@ a column separator for tex -->
 
   
 
-<div class="figure" style="text-align: center">
-<img src="images/02-05-07_bip_data.png" alt="Datos Bipartitas Desde Lista de Aristas" width="75%" />
-<p class="caption">(\#fig:2-4-bip-1)Datos Bipartitas Desde Lista de Aristas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-07_bip_data} 
+
+}
+
+\caption{Datos Bipartitas Desde Lista de Aristas}(\#fig:2-4-bip-1)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -422,10 +462,14 @@ a column separator for tex -->
 :::
 
 
-<div class="figure" style="text-align: center">
-<img src="images/02-05-09_bip_data_3.png" alt="Red Bipartita Filtrada, Partición = Person" width="75%" />
-<p class="caption">(\#fig:2-4-bip-3)Red Bipartita Filtrada, Partición = Person</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-09_bip_data_3} 
+
+}
+
+\caption{Red Bipartita Filtrada, Partición = Person}(\#fig:2-4-bip-3)
+\end{figure}
 
 
 :::{.row}
@@ -443,10 +487,14 @@ a column separator for tex -->
 :::
 :::
   
-<div class="figure" style="text-align: center">
-<img src="images/02-05-09_bip_data_4.png" alt="Enlaces de Persona-a-Persona" width="75%" />
-<p class="caption">(\#fig:2-4-bip-4)Enlaces de Persona-a-Persona</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-09_bip_data_4} 
+
+}
+
+\caption{Enlaces de Persona-a-Persona}(\#fig:2-4-bip-4)
+\end{figure}
 
 
 :::{.row}
@@ -484,7 +532,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  6.	Una vez más verá nuevos enlaces en el gráfico. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos *Evento*. Seleccione la pestaña *Filtros*, abra la carpeta *Atributos* y localice la opción “type” dentro de la sección *Partición*. Arrastre el filtro de *type* a la sección de *Consultas*. En respuesta a esta acción verá una nueva ventanilla al fondo de este panel (titulada *Partición (type) Configuración*), seleccione la opción *Event* y de clic en el botón *Filtrar*. Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón *Exportar el grafo filtrado en un nevo espacio de trabajo*.
+  6.	Una vez más verá nuevos enlaces en el gráfico. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos *Evento*. Seleccione la pestaña *Filtros*, abra la carpeta *Atributos* y localice la opción “type” dentro de la sección *Partición*. Arrastre el filtro de *type* a la sección de *Consultas*. En respuesta a esta acción verá una nueva ventanilla al fondo de este panel (titulada *Partición (type) Configuración*), seleccione la opción *Event* y de clic en el botón *Filtrar*. Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón *Exportar el grafo filtrado en un nuevo espacio de trabajo*.
 :::
 :::
 
@@ -507,7 +555,11 @@ a column separator for tex -->
 :::
 :::
   
-<div class="figure" style="text-align: center">
-<img src="images/02-05-09_bip_data_5.png" alt="Enlaces de Evento-a-Evento" width="75%" />
-<p class="caption">(\#fig:2-4-bip-5)Enlaces de Evento-a-Evento</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-05-09_bip_data_5} 
+
+}
+
+\caption{Enlaces de Evento-a-Evento}(\#fig:2-4-bip-5)
+\end{figure}

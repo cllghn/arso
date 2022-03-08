@@ -332,7 +332,7 @@ A la medida que se agregan atributos de nodo al gráfico, en esta tabla deberán
 Al igual que la tabla de nodos, la tabla de aristas incluye información clave del gráfico de red; específicamente, los datos relacionales. Esta información está codificada en siete columnas definidas a continuación:
 
   - `Origen` y `Destino`:  Todas las relaciones en un grafo vinculan un nodo inicial y un nodo final. Por ejemplo, si el nodo A está vinculado al nodo B, dibujaríamos un vínculo entre estos dos. Gephi codifica esto en dos columnas `Origen` y `Destino`, por lo que si A y B están conectados, pondríamos A en la columna `Origen` y B en la columna `Destino` o viceversa.
-  - `Tipo`: Denota el tipo de relación entre los nodos en las columnas `Origen` y `Destino`. Los valores pueden ser `Dirigida` o` No dirigida`. Si el tipo es `Dirigida` la relación es un arco o arista, de lo contrario, si es tipo es `No Dirigida` el vínculo es un borde.
+  - `Tipo`: Denota el tipo de relación entre los nodos en las columnas `Origen` y `Destino`. Los valores pueden ser `Dirigida` o `No dirigida`. Si el tipo es `Dirigida` la relación es un arco o arista, de lo contrario, si es tipo es `No Dirigida` el vínculo es un borde.
   - `Id`: Un identificador único para el vínculo. Usualmente asignado por Gephi al importar datos.
   - `Label`: Etiqueta del vínculo. 
   - `Interval`: Para vínculos en una secuencia, esta es la columna donde encontrará los valores cronológicos.

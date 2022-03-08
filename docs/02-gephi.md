@@ -43,26 +43,38 @@ Si bien no hay requisitos mínimos de hardware, el rendimiento es una función d
 
 Empiece por localizar y abrir el programa. Lo primero que verá es una ventanilla de Bienvenida, vea la Figura \@ref(fig:2-1-bienvenida). 
 
-<div class="figure" style="text-align: center">
-<img src="images/01-gephi.png" alt="Menú de Bienvenida en Gephi" width="100%" />
-<p class="caption">(\#fig:2-1-bienvenida)Menú de Bienvenida en Gephi</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-gephi} 
+
+}
+
+\caption{Menú de Bienvenida en Gephi}(\#fig:2-1-bienvenida)
+\end{figure}
 
 Para esta breve instrucción al software, vamos a usar uno de los conjuntos de datos proporcionados por el software, `Les Misrables.gexf` [@Knuth1993]. Localice este en la parte inferior derecha de la ventanilla de bienvenida. Al seleccionar esta opción aparecerá una nueva ventanilla, subsecuentemente explicaremos más acerca de las opciones en este espacio, por ahora seleccione el botón *Aceptar*. ¡Listo! Con el conjunto de datos cargado (Figura \@ref(fig:2-1-les-mis)), podemos empezar a explorar Gephi.
 
-<div class="figure" style="text-align: center">
-<img src="images/01-lesmis.png" alt="Datos Les Misrables Cargados" width="100%" />
-<p class="caption">(\#fig:2-1-les-mis)Datos Les Misrables Cargados</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-lesmis} 
+
+}
+
+\caption{Datos Les Misrables Cargados}(\#fig:2-1-les-mis)
+\end{figure}
 
 ### Vista General
 
 Esta es la ventana que utilizará más a menudo, ver Figura \@ref(fig:2-1-overview). Aquí podrá tomar diferentes acciones para manipular la apariencia sus gráficos, filtrar información y calcular medidas de red, arista o nodo.
 
-<div class="figure" style="text-align: center">
-<img src="images/01-overview.png" alt="Gephi: Vista General" width="100%" />
-<p class="caption">(\#fig:2-1-overview)Gephi: Vista General</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-overview} 
+
+}
+
+\caption{Gephi: Vista General}(\#fig:2-1-overview)
+\end{figure}
 
 La característica más obvia de esta ventana es el gráfico prominente en el centro; sin embargo, hay varias ventanillas relevantes; aquí, las cubriremos en orden alfabético.
 
@@ -81,10 +93,14 @@ El cuadro de apariencia le permite cambiar las características visuales de los 
     6. *Color de etiqueta*: Modificar el color de las etiquetas de las aristas
     7. *Tamaño de etiqueta*: Modificar el tamaño de las etiquetas de las aristas
 
-<div class="figure" style="text-align: center">
-<img src="images/01-apariencia.png" alt="Gephi: Apariencia" width="100%" />
-<p class="caption">(\#fig:2-1-apariencia)Gephi: Apariencia</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-apariencia} 
+
+}
+
+\caption{Gephi: Apariencia}(\#fig:2-1-apariencia)
+\end{figure}
 
 Cada sección contendrá de dos a tres pestañas: *Único*, *Partición* y *Ranking*. Veamos como funcionan utilizando el software:
 
@@ -105,10 +121,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-color_unique.png" alt="Nodos y Aristas con Colores Únicos" width="100%" />
-<p class="caption">(\#fig:2-1-color-unique)Nodos y Aristas con Colores Únicos</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-color_unique} 
+
+}
+
+\caption{Nodos y Aristas con Colores Únicos}(\#fig:2-1-color-unique)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -125,10 +145,14 @@ Para modificar el tamaño de los nodos, igualmente usaremos la opción *Único*.
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-size_unique.png" alt="Nodos con Tamaño Único" width="100%" />
-<p class="caption">(\#fig:2-1-size-unique)Nodos con Tamaño Único</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-size_unique} 
+
+}
+
+\caption{Nodos con Tamaño Único}(\#fig:2-1-size-unique)
+\end{figure}
 
 
 :::{.row}
@@ -146,10 +170,14 @@ La *Partición* cambia todos los elementos visibles utilizando valores de atribu
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-color_partition.png" alt="Nodos Coloreados por Atributos Categóricos." width="100%" />
-<p class="caption">(\#fig:2-1-color-partition)Nodos Coloreados por Atributos Categóricos.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-color_partition} 
+
+}
+
+\caption{Nodos Coloreados por Atributos Categóricos.}(\#fig:2-1-color-partition)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -166,10 +194,14 @@ El *Ranking* cambia todos los elementos visibles utilizando valores de atributos
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-size-ranking.png" alt="Nodos Dimensionados por Variable Continua." width="100%" />
-<p class="caption">(\#fig:2-1-size-ranking)Nodos Dimensionados por Variable Continua.</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-size-ranking} 
+
+}
+
+\caption{Nodos Dimensionados por Variable Continua.}(\#fig:2-1-size-ranking)
+\end{figure}
 
 
 #### Contexto
@@ -195,10 +227,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-force_atlas.PNG" alt="Gráfico dibujado con Force Atlas" width="100%" />
-<p class="caption">(\#fig:2-1-force-atlas)Gráfico dibujado con Force Atlas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-force_atlas} 
+
+}
+
+\caption{Gráfico dibujado con Force Atlas}(\#fig:2-1-force-atlas)
+\end{figure}
 
 
 :::{.row}
@@ -220,10 +256,14 @@ Por ejemplo, la Figura \@ref(fig:2-1-expansion) es una versión expandida de la 
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-expansion.PNG" alt="Gráfico dibujado con Force Atlas y Expandido" width="100%" />
-<p class="caption">(\#fig:2-1-expansion)Gráfico dibujado con Force Atlas y Expandido</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-expansion} 
+
+}
+
+\caption{Gráfico dibujado con Force Atlas y Expandido}(\#fig:2-1-expansion)
+\end{figure}
 
 Por ahora, solo cubriremos estas tres opciones de diseño. Más adelante utilizaremos algoritmos de diseño de manera orgánica. Le recomendamos que juegue con otras opciones, eche un vistazo a cómo se ven los gráficos resultantes, pero tenga en cuenta que algunos algoritmos no se detendrán por sí mismos, por lo que es posible que deba detenerlos manualmente.
 
@@ -248,10 +288,14 @@ Esta selección debe generar un informe HTML que muestra la distribución de gra
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-degree.PNG" alt="Ejecutando Estadística de Grado" width="100%" />
-<p class="caption">(\#fig:2-1-degree)Ejecutando Estadística de Grado</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-degree} 
+
+}
+
+\caption{Ejecutando Estadística de Grado}(\#fig:2-1-degree)
+\end{figure}
 
 #### Filtros
 
@@ -274,20 +318,28 @@ Si desea remover el filtro, presione el botón *Auto aplicar* en la parte inferi
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-filter.PNG" alt="Filtrando por Grado" width="100%" />
-<p class="caption">(\#fig:2-1-filter)Filtrando por Grado</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-filter} 
+
+}
+
+\caption{Filtrando por Grado}(\#fig:2-1-filter)
+\end{figure}
 
 #### Grafo
 
 La última sección que cubriremos en esta introducción a la *Vista General* es el *Grafo* y algunas de las funciones asociadas con esta ventana. En el lado izquierdo e inferior del panel, encontrará las herramientas básicas para interactuar manualmente con el gráfico y editar algunos de los atributos visuales. En esta breve introducción, los definiremos de manera general, pero no entraremos en demasiados detalles, ya que los usaremos más adelante en el manual según sea necesario.
 
 
-<div class="figure" style="text-align: center">
-<img src="images/01-grafo.png" alt="Ventanilla de Grafo" width="100%" />
-<p class="caption">(\#fig:2-1-grafo)Ventanilla de Grafo</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-grafo} 
+
+}
+
+\caption{Ventanilla de Grafo}(\#fig:2-1-grafo)
+\end{figure}
 
 
 A continuación, se presenta una lista de nombres de comandos y funciones en orden secuencial, ver Figura \@ref(fig:2-1-grafo):
@@ -326,19 +378,27 @@ A continuación, se presenta una lista de nombres de comandos y funciones en ord
 
 El *Laboratorio de datos* contiene tablas de los datos de nodos (Figura \@ref(fig:2-1-data-lab) izquierda) y aristas (Figura \@ref(fig:2-1-data-lab) derecha). Estas tablas permiten a los analistas interactuar con la información y editar valores directamente o mediante la serie de comandos en la parte inferior de la pantalla (Figura \@ref(fig:2-1-data-lab) abajo). Esta es una descripción muy simplificada de las capacidades de esta sección, nos centraremos en las características clave de alto nivel.
 
-<div class="figure" style="text-align: center">
-<img src="images/01-data_lab.png" alt="Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas" width="100%" />
-<p class="caption">(\#fig:2-1-data-lab)Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-data_lab} 
+
+}
+
+\caption{Laboratorio de datos, a la izquierda la Tabla de Nodos y a la derecha la Tabla de Aristas}(\#fig:2-1-data-lab)
+\end{figure}
 
 #### Tabla de Datos: Nodos
 
 La tabla de nodos contiene un identificador único para cada nodo en el gráfico (generalmente ubicado en la columna más a la izquierda nombrada `Id`). Además, note la columna `Label` directamente a la derecha, esta es digna de mención ya que sirve como receptáculo para las etiquetas de los nodos, es decir, los valores en esta columna aparecerán como etiqueta de nodos en el gráfico cuando se especifique. 
 
-<div class="figure" style="text-align: center">
-<img src="images/01-nodes_table.png" alt="Laboratorio de datos, Tabla de Nodos" width="100%" />
-<p class="caption">(\#fig:2-1-nodes-table)Laboratorio de datos, Tabla de Nodos</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-nodes_table} 
+
+}
+
+\caption{Laboratorio de datos, Tabla de Nodos}(\#fig:2-1-nodes-table)
+\end{figure}
 
 A la medida que se agregan atributos de nodo al gráfico, en esta tabla deberán aparecer nuevas columnas con estos valores. De manera similar, dentro de Gephi, los analistas a menudo ejecutan diferentes métricas a nivel nodo, estos valores se agregarán a cada registro (fila) en una nueva variable (columna).
 
@@ -347,25 +407,33 @@ A la medida que se agregan atributos de nodo al gráfico, en esta tabla deberán
 Al igual que la tabla de nodos, la tabla de aristas incluye información clave del gráfico de red; específicamente, los datos relacionales. Esta información está codificada en siete columnas definidas a continuación:
 
   - `Origen` y `Destino`:  Todas las relaciones en un grafo vinculan un nodo inicial y un nodo final. Por ejemplo, si el nodo A está vinculado al nodo B, dibujaríamos un vínculo entre estos dos. Gephi codifica esto en dos columnas `Origen` y `Destino`, por lo que si A y B están conectados, pondríamos A en la columna `Origen` y B en la columna `Destino` o viceversa.
-  - `Tipo`: Denota el tipo de relación entre los nodos en las columnas `Origen` y `Destino`. Los valores pueden ser `Dirigida` o` No dirigida`. Si el tipo es `Dirigida` la relación es un arco o arista, de lo contrario, si es tipo es `No Dirigida` el vínculo es un borde.
+  - `Tipo`: Denota el tipo de relación entre los nodos en las columnas `Origen` y `Destino`. Los valores pueden ser `Dirigida` o `No dirigida`. Si el tipo es `Dirigida` la relación es un arco o arista, de lo contrario, si es tipo es `No Dirigida` el vínculo es un borde.
   - `Id`: Un identificador único para el vínculo. Usualmente asignado por Gephi al importar datos.
   - `Label`: Etiqueta del vínculo. 
   - `Interval`: Para vínculos en una secuencia, esta es la columna donde encontrará los valores cronológicos.
   - `Weight`: Denota el peso para vínculos ponderados.
 
-<div class="figure" style="text-align: center">
-<img src="images/01-edges_table.png" alt="Laboratorio de datos, Tabla de Aristas" width="100%" />
-<p class="caption">(\#fig:2-1-edges-table)Laboratorio de datos, Tabla de Aristas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-edges_table} 
+
+}
+
+\caption{Laboratorio de datos, Tabla de Aristas}(\#fig:2-1-edges-table)
+\end{figure}
 
 #### Menú Inferior
 
 Esta última sección permite a los usuarios agregar, borrar o eliminar columnas, fusionar valores de varias columnas, copiar datos de una columna a otra, entre otras opciones. A lo largo de este manual, ampliaremos el uso de estos comandos según sea necesario.
 
-<div class="figure" style="text-align: center">
-<img src="images/01-lower_bar.png" alt="Laboratorio de datos, Opciones" width="100%" />
-<p class="caption">(\#fig:2-1-lower-bar)Laboratorio de datos, Opciones</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-lower_bar} 
+
+}
+
+\caption{Laboratorio de datos, Opciones}(\#fig:2-1-lower-bar)
+\end{figure}
 
 ### Previsualización
 
@@ -380,10 +448,14 @@ Aquí nos centraremos en 4 secciones clave (indicadas en la Figura \@ref(fig:2-1
   -	Opciones Adicionales (3) – Ajusta las propiedades para la previsualización, exporta el gráfico y aplica las ediciones de la sección *Parámetros*.
   -	Ventanilla de Previsualización (4) – Proporciona una vista del gráfico terminado.
 
-<div class="figure" style="text-align: center">
-<img src="images/01-preview.png" alt="Previsualización" width="100%" />
-<p class="caption">(\#fig:2-1-preview)Previsualización</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-preview} 
+
+}
+
+\caption{Previsualización}(\#fig:2-1-preview)
+\end{figure}
 
 ### Errores Comunes
 

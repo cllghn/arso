@@ -13,7 +13,8 @@ always_allow_html: yes
 
 # Introducción {-}
 
-<img src="images/core-esge.png" width="75%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.75\linewidth]{images/core-esge} \end{center}
 
 El objetivo de este manual es enseñarle los conceptos básicos del análisis de redes sociales (ARSo) y como estos métodos pueden ser utilizados para comprender dichas redes, asimismo crear estrategias para empoderar o socavarlas. Este proyecto cubre los puntos de vista de los autores sobre la introducción al estudio de las redes oscuras como elementos de análisis clave para todo analista de inteligencia y elementos operativos de fuerzas especiales. De tal manera que, los ejemplos prácticos y el marco teórico en que están integrados giran alrededor de las redes oscuras, definidas como redes encubiertas (o clandestinas) e ilegales [@Raab2003]. Este es un término que puede incluir redes terroristas, criminales e insurgentes. El término "oscura" busca capturar el hecho de que las redes oscuras son aquellas que, por definición, intentan permanecer encubiertas tras ocultar sus actividades de las autoridades [@Cunningham2016; @Everton2012].
 
@@ -28,7 +29,8 @@ El contenido de este manual fue diseñado conjuntamente entre el [Ambiente Comú
 
 El desarrollo de este manual fue posible gracias al patrocinio del [Programa de Becas de Defensa Regional (RDFP, por sus siglas en inglés)](https://samm.dsca.mil/glossary/combating-terrorism-fellowship-program-ctfp) de la [Agencia de Cooperación para la Seguridad de la Defensa (DSCA, por sus siglas en inglés)](hhttps://samm.dsca.mil/) con el propósito de apoyar el plan de estudios de ESGE-EPG.
 
-<img src="images/CTFP.jpg" width="50%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=0.5\linewidth]{images/CTFP} \end{center}
 
 
 ## Misión educativa {-}

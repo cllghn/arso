@@ -162,7 +162,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 
 ### Atributos
 
-   - **Nivel de educación**: definido como el título más alto alcanzado, el nivel en el que se enseñó, estudió, participó o asistió. El siguiente es el esquema de códigos:
+   - **Nivel de educación**: Definido como el título más alto alcanzado, el nivel en el que se enseñó, estudió, participó o asistió. El siguiente es el esquema de códigos:
    
 | Código      | Descripción |
 | ----------- | ----------- |
@@ -176,7 +176,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 7           | Maestría    |
 | 8           | Doctorado   |
 
-  - **Contacto con personas fuera de Indonesia:** definido como contacto con personas en diferentes países fuera de Indonesia.
+  - **Contacto con personas fuera de Indonesia:** Definido como contacto con personas en diferentes países fuera de Indonesia.
   
 | Código      | Descripción |
 | ----------- | ----------- |
@@ -198,7 +198,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 15          | Afganistán, Pakistán y Egipto |
 | 16          | Irak, Afganistán y Pakistán |
 
-  - **Entrenamiento militar:** definido como el país donde un individuo recibió entrenamiento militar y alcanzó el estatus de veterano en la lucha en guerras insurgentes/convencionales conocidas.
+  - **Entrenamiento militar:** Definido como el país donde un individuo recibió entrenamiento militar y alcanzó el estatus de veterano en la lucha en guerras insurgentes/convencionales conocidas.
   
 | Código      | Descripción |
 | ----------- | ----------- |
@@ -215,7 +215,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 10          | Indonesia y Filipinas |
 | 11          | Afganistán e Irak |
 
-  - **Nacionalidad de la persona:** definida como país de nacimiento, ciudadanía o residencia.
+  - **Nacionalidad de la persona:** Definida como país de nacimiento, ciudadanía o residencia.
 
 | Código      | Descripción |
 | ----------- | ----------- |
@@ -229,7 +229,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 8           | Jordania    |
 | 9           | Egipto      |
 
-  - **Estado actual según el artículo del ICG:** definido como la condición física del individuo.
+  - **Estado actual según el artículo del ICG:** Definido como la condición física del individuo.
   
 | Código      | Descripción |
 | ----------- | ----------- |
@@ -237,7 +237,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 1           | Vivo        |
 | 2           | Encarcelado |
 
-  - **Rol (Original):** definido como el rol que asume un individuo en la red terrorista/insurgente.
+  - **Rol (Original):** Definido como el rol que asume un individuo en la red terrorista/insurgente.
   
 | Código      | Descripción |
 | ----------- | ----------- |
@@ -277,7 +277,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 16          | Entrenador |
 | 99          | No hay datos |
 
-  - **Función logística:** definida como la provisión de casas seguras, armas, transporte y/o material a la red operativa.
+  - **Función logística:** Definida como la provisión de casas seguras, armas, transporte y/o material a la red operativa.
 
 | Código      | Descripción |
 | ----------- | ----------- |
@@ -292,7 +292,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 9           | Proporcionar refugio, transporte, material |
 | 10          | Proporcionar refugio, armas, material |
 
-  - **Habilidades técnicas:** elegimos codificar los atributos técnicos en función de los conjuntos de habilidades explícitos mencionados en el informe del ICG. En contraste con un atributo como "rol", elegimos solo codificar las habilidades técnicas específicas que se enumeran a continuación y no consideramos cosas como "líder de celda" o "financiero" como un rol técnico. Básicamente, estábamos buscando habilidades relacionadas con la electrónica, fabricación de bombas, diseño de páginas web, etc. A continuación se muestra una lista de los roles y el número correspondiente que recibió cada individuo. En los casos en que alguien tenía múltiples habilidades técnicas, elegimos codificar la que es subjetivamente más relevante para las operaciones terroristas. Por ejemplo, Azhari Husin tiene experiencia en ingeniería mecánica pero también tiene entrenamiento en explosivos. Lo codificaríamos como "fabricación de bombas". Aquellos sin habilidades técnicas identificadas reciben un 0 en la matriz.
+  - **Habilidades técnicas:** Elegimos codificar los atributos técnicos en función de los conjuntos de habilidades explícitos mencionados en el informe del ICG. En contraste con un atributo como "rol", elegimos solo codificar las habilidades técnicas específicas que se enumeran a continuación y no consideramos cosas como "líder de celda" o "financiero" como un rol técnico. Básicamente, estábamos buscando habilidades relacionadas con la electrónica, fabricación de bombas, diseño de páginas web, etc. A continuación se muestra una lista de los roles y el número correspondiente que recibió cada individuo. En los casos en que alguien tenía múltiples habilidades técnicas, elegimos codificar la que es subjetivamente más relevante para las operaciones terroristas. Por ejemplo, Azhari Husin tiene experiencia en ingeniería mecánica pero también tiene entrenamiento en explosivos. Lo codificaríamos como "fabricación de bombas". Aquellos sin habilidades técnicas identificadas reciben un 0 en la matriz.
 
 | Código      | Descripción |
 | ----------- | ----------- |
@@ -302,7 +302,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 4           | Otro conocimiento avanzado (ingeniería mecánica, agricultura, etc.) |
 | 5           | Instrucción religiosa |
 
-  - **Afiliación de grupo principal:** definida como la afiliación de grupo principal de cada miembro de la red, en general.
+  - **Afiliación de grupo principal:** Definida como la afiliación de grupo principal de cada miembro de la red, en general.
 
 | Código      | Descripción |
 | ----------- | ----------- |
@@ -313,7 +313,7 @@ El contenido de este libro de códigos es atribuido a la Profesora Nancy Roberts
 | 4           | Ring Banten Group (DI) |
 | 5           | Al-Qaeda |
 
-  - **Red de Noordin:** un individuo que se considera miembro del grupo de Noordin (Tanzim Qaedat al-Yihad - Organización para la base del Yihad), en lugar de simplemente estar vinculado. Igualmente, si el individuo participó en una operación dirigida por Noordin durante cualquier etapa. Finalmente, si él o ella se declara explícitamente como miembro del círculo íntimo de Noordin y/o está vinculado a Noordin por parentesco o amistad.
+  - **Red de Noordin:** Un individuo que se considera miembro del grupo de Noordin (Tanzim Qaedat al-Yihad - Organización para la base del Yihad), en lugar de simplemente estar vinculado. Igualmente, si el individuo participó en una operación dirigida por Noordin durante cualquier etapa. Finalmente, si él o ella se declara explícitamente como miembro del círculo íntimo de Noordin y/o está vinculado a Noordin por parentesco o amistad.
 
 | Código      | Descripción |
 | ----------- | ----------- |

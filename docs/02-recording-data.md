@@ -149,7 +149,7 @@ En términos prácticos, @Borgatti2018 presentan el siguiente ejemplo, $A$ es un
 Ya que hemos recalcado las ventajas de utilizar matrices, es esencial entender algunas de las desventajas clave:
 
   - Cada matriz representa un solo tipo de relación. Supongamos que el análisis requiere combinar relaciones familiares y financieras. Para esto, necesitaríamos recopilar dos matrices individuales antes de manipularlas. Además, el formato de matriz no permite el agregar metadatos sobre las relaciones, por ejemplo: procedencia de un dato, fecha en que ha ocurrido, entre otros.
-  - El mantener una o múltiples matrices requiere mantener todas las células. Por ejemplo, en una red de 100 nodos, el analista debe mantener 10,000 células (100 x 100) aun cuando la mayoría de estas estén vacías (sin relación).
+  - El mantener una o múltiples matrices requiere mantener todas las células. Por ejemplo, en una red de 100 nodos, el analista debe mantener 10,000 células (100 x 100) aún cuando la mayoría de estas estén vacías (sin relación).
   - Esta estructura no es la manera más eficiente de guardar datos en una computadora. Específicamente, cada 0 que representa la ausencia de una relación tiene un costo en forma de memoria.
 
 Como puede ver, las matrices (como todas las estructuras de recopilación de datos) tienen ventajas y desventajas. El álgebra de matrices es la base de la mayoría de los algoritmos utilizados por analistas de redes, por consiguiente, es esencial entender estas estructuras. Sin embargo, las desventajas mencionadas previamente son la razón por la cual los analistas de redes tienden a mantener sus datos relacionales en otros formatos más eficientes y permisibles. En la siguiente sección cubriremos uno de estos formatos llamado lista de aristas.
@@ -219,28 +219,46 @@ Las Tablas \@ref(tab:2-3-el1), \@ref(tab:2-3-el2) y \@ref(tab:2-3-el3) son ejemp
 
 \begin{samepage}
 
+\begin{table}
 
-Table: (\#tab:2-3-el1)Lista de Aristas Básica
+\caption{(\#tab:2-3-el1)Lista de Aristas Básica}
+\centering
+\begin{tabular}[t]{ll}
+\toprule
+Origen & Destino\\
+\midrule
+A & B\\
+B & C\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}
 
-|Origen |Destino |
-|:------|:-------|
-|A      |B       |
-|B      |C       |
+\caption{(\#tab:2-3-el2)Lista de Aristas Expandida}
+\centering
+\begin{tabular}[t]{lllllr}
+\toprule
+Origen & Destino & Relación & Tipo & Fecha & Peso\\
+\midrule
+A & B & Comunicación & No dirigido & 2020-11-03 & 5\\
+B & C & Financiera & Dirigido & 2020-11-03 & 10\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}
 
-Table: (\#tab:2-3-el2)Lista de Aristas Expandida
-
-|Origen |Destino |Relación     |Tipo        |Fecha      | Peso|
-|:------|:-------|:------------|:-----------|:----------|----:|
-|A      |B       |Comunicación |No dirigido |2020-11-03 |    5|
-|B      |C       |Financiera   |Dirigido    |2020-11-03 |   10|
-
-Table: (\#tab:2-3-el3)Lista de Aristas Expandida y Multimodo
-
-|Origen |Destino |Relación     |Tipo        |Fecha      | Peso|
-|:------|:-------|:------------|:-----------|:----------|----:|
-|A      |B       |Comunicación |No dirigido |2020-11-03 |    5|
-|B      |C       |Financiera   |Dirigido    |2020-11-03 |   10|
-|A      |1       |Afiliación   |No dirigido |2020-11-03 |    7|
+\caption{(\#tab:2-3-el3)Lista de Aristas Expandida y Multimodo}
+\centering
+\begin{tabular}[t]{lllllr}
+\toprule
+Origen & Destino & Relación & Tipo & Fecha & Peso\\
+\midrule
+A & B & Comunicación & No dirigido & 2020-11-03 & 5\\
+B & C & Financiera & Dirigido & 2020-11-03 & 10\\
+A & 1 & Afiliación & No dirigido & 2020-11-03 & 7\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \end{samepage} 
 \break
@@ -249,7 +267,7 @@ Table: (\#tab:2-3-el3)Lista de Aristas Expandida y Multimodo
 
 La lista de nodos, a diferencia de la lista de aristas, contiene los datos no relacionales de cada nodo en un sociograma. Por consiguiente, ambas listas son mantenidas de manera independiente. 
 
-Es decir, en una lista de aristas es probable que un nodo aparezca de manera repetida, puesto que es común que cada actor en una red este atado a múltiples otros. En contraste, en una lista de nodos es recomendable el tener un solo registro por actor. Por ejemplo, en la siguiente lista de aristas vemos cuatro nodos {A, B, C, D} conectados por tres diferentes tipos de relaciones. La lista de nodos correspondiente en la derecha incluye información de estos nodos como género y edad, estas son características no relacionales de aquellos nodos en la red. Aunque podemos repetir el registro de cada actor, no es necesario normalmente el software solo toma en cuenta un registro, normalmente el último en la lista. 
+Es decir, en una lista de aristas es probable que un nodo aparezca de manera repetida, puesto que es común que cada actor en una red este atado a múltiples otros. En contraste, en una lista de nodos es recomendable el tener un solo registro por actor. Por ejemplo, en la siguiente lista de aristas vemos cuatro nodos {A, B, C, D} conectados por tres diferentes tipos de relaciones. La lista de nodos correspondiente en la derecha incluye información de estos nodos como género y edad, estas son características no relacionales de aquellos nodos en la red. Aunque podemos repetir el registro de cada actor, no es necesario, normalmente el software solo toma en cuenta un registro. 
 
 Por su parte, Gephi es capaz de ingerir listas de nodos. Para ello, requiere que esta tabla contenga el nombre de columna `Id`. Esta variable representa la columna que el software tomará en cuenta como fuente de identificadores únicos para los nodos en una red. Por ejemplo, en la siguiente lista de nodos vemos entradas correspondientes a los identificadores de cada nodo en la lista de aristas.
 
@@ -301,10 +319,14 @@ El segundo propósito de esta actividad es presentarle algunas de las funciones 
 
 Localice el artículo de [Stuart Koschade](https://www.tandfonline.com/doi/full/10.1080/10576100600798418) titulado "A Social Network Analysis of Jemaah Islamiyah: The Applications to Counterterrorism and Intelligence". La única versión disponible es en inglés, por consiguiente, no es requerido que lea el texto. Utilizando Excel (u otro programa con hojas de cálculo) registre los datos de redes sociales que figuran en la Tabla 2 en el artículo de Koschade. Su matriz debe ser similar a la Figura \@ref(fig:2-3-koschade) a continuación. 
 
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig_1_Matrix_Excel.png" alt="Hoja de cálculo de Excel que muestra la matriz de datos en Koschade" width="100%" />
-<p class="caption">(\#fig:2-3-koschade)Hoja de cálculo de Excel que muestra la matriz de datos en Koschade</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-Fig_1_Matrix_Excel} 
+
+}
+
+\caption{Hoja de cálculo de Excel que muestra la matriz de datos en Koschade}(\#fig:2-3-koschade)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -321,10 +343,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig_2_General_View.png" alt="Ventana 'Vista general' en Gephi" width="100%" />
-<p class="caption">(\#fig:2-3-gv)Ventana 'Vista general' en Gephi</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-Fig_2_General_View} 
+
+}
+
+\caption{Ventana 'Vista general' en Gephi}(\#fig:2-3-gv)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -341,10 +367,14 @@ a column separator for tex -->
 :::
 :::
   
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig_3_Importing_Gephi.png" alt="Ventana de Importación en Gephi" width="100%" />
-<p class="caption">(\#fig:2-3-import)Ventana de Importación en Gephi</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-Fig_3_Importing_Gephi} 
+
+}
+
+\caption{Ventana de Importación en Gephi}(\#fig:2-3-import)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -359,14 +389,18 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  3. Gephi produce un *Informe de importación* (ver Figura \@ref(fig:2-3-import-report)), que proporciona varios tipos de información, por ejemplo, si ocurrió algún error durante la importación, numero de nodos (actores) en la red, la cantidad de bordes (aristas), etc. Ahora, necesitamos decirle a Gephi que esta es una red no dirigida utilizando el menú desplegable *Tipo de gráfico* (el tipo predeterminado es *Mixto*). A continuación, haga clic en el enlace *Más opciones…*, y luego en el menú desplegable *Estrategia para combinar aristas* seleccione *Mínimo*. Este último paso asegura que los pesos de los bordes no se dupliquen. Ahora, haga clic en *Aceptar*.
+  3. Gephi produce un *Informe de importación* (ver Figura \@ref(fig:2-3-import-report)), que proporciona varios tipos de información, por ejemplo, si ocurrió algún error durante la importación, número de nodos (actores) en la red, la cantidad de bordes (aristas), etc. Ahora, necesitamos decirle a Gephi que esta es una red no dirigida utilizando el menú desplegable *Tipo de gráfico* (el tipo predeterminado es *Mixto*). A continuación, haga clic en el enlace *Más opciones…*, y luego en el menú desplegable *Estrategia para combinar aristas* seleccione *Mínimo*. Este último paso asegura que los pesos de los bordes no se dupliquen. Ahora, haga clic en *Aceptar*.
 :::
 :::
   
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig_4_Importing_Report.png" alt="Reporte de Importación Gephi" width="100%" />
-<p class="caption">(\#fig:2-3-import-report)Reporte de Importación Gephi</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/02-Fig_4_Importing_Report} 
+
+}
+
+\caption{Reporte de Importación Gephi}(\#fig:2-3-import-report)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -383,10 +417,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig-5_apariencia.png" alt="Pestaña de Apariencia " width="50%" />
-<p class="caption">(\#fig:2-3-apariencia)Pestaña de Apariencia </p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{images/02-Fig-5_apariencia} 
+
+}
+
+\caption{Pestaña de Apariencia }(\#fig:2-3-apariencia)
+\end{figure}
 
 
 :::{.row}
@@ -404,10 +442,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig_6_Layout.png" alt="Pestaña de Diseño" width="50%" />
-<p class="caption">(\#fig:2-3-diseno)Pestaña de Diseño</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\linewidth]{images/02-Fig_6_Layout} 
+
+}
+
+\caption{Pestaña de Diseño}(\#fig:2-3-diseno)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -424,10 +466,14 @@ a column separator for tex -->
 :::
 :::  
   
-<div class="figure" style="text-align: center">
-<img src="images/01-botones_gephi.png" alt="Botones en Gephi" width="100%" />
-<p class="caption">(\#fig:2-3-botones)Botones en Gephi</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-botones_gephi} 
+
+}
+
+\caption{Botones en Gephi}(\#fig:2-3-botones)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -445,15 +491,23 @@ a column separator for tex -->
 :::
 :::  
 
-<div class="figure" style="text-align: center">
-<img src="images/01-botones_gephi2.png" alt="Pestaña de Controles Globales en Gephi" width="100%" />
-<p class="caption">(\#fig:2-3-globales)Pestaña de Controles Globales en Gephi</p>
-</div>
+\begin{figure}
 
-<div class="figure" style="text-align: center">
-<img src="images/01-botones_gephi3.png" alt="Pestaña de Control de Aristas" width="100%" />
-<p class="caption">(\#fig:2-3-globales2)Pestaña de Control de Aristas</p>
-</div>
+{\centering \includegraphics[width=1\linewidth]{images/01-botones_gephi2} 
+
+}
+
+\caption{Pestaña de Controles Globales en Gephi}(\#fig:2-3-globales)
+\end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-botones_gephi3} 
+
+}
+
+\caption{Pestaña de Control de Aristas}(\#fig:2-3-globales2)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -471,10 +525,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-botones_gephi4.png" alt="Panel de Control de Etiquetas en Gephi" width="100%" />
-<p class="caption">(\#fig:2-3-globales3)Panel de Control de Etiquetas en Gephi</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-botones_gephi4} 
+
+}
+
+\caption{Panel de Control de Etiquetas en Gephi}(\#fig:2-3-globales3)
+\end{figure}
 
 
 :::{.row}
@@ -511,10 +569,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig_10_Patek_Ego.png" alt="Red con Patek Resaltado" width="75%" />
-<p class="caption">(\#fig:2-3-ego)Red con Patek Resaltado</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-Fig_10_Patek_Ego} 
+
+}
+
+\caption{Red con Patek Resaltado}(\#fig:2-3-ego)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -529,14 +591,18 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  11.	Echemos un vistazo a los datos de la red. Para esto, seleccione el botón *Laboratorio de datos*. Notará que en la esquina superior izquierda hay una pestaña *Tabla de datos* con dos subpestañas , *Nodos* y *Aristas*. Haga clic primero en la pestaña *Nodos* y deberá ver una lista de los identificadores (`Id`) y etiquetas de los nodos (actores) en la red.
+  11.	Echemos un vistazo a los datos de la red. Para esto, seleccione el botón *Laboratorio de datos*. Notará que en la esquina superior izquierda hay una pestaña *Tabla de datos* con dos subpestañas, *Nodos* y *Aristas*. Haga clic primero en la pestaña *Nodos* y deberá ver una lista de los identificadores (`Id`) y etiquetas de los nodos (actores) en la red.
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig_11_Gephi_Edge_List.png" alt="Lista de Aristas en la Tabla de Datos" width="75%" />
-<p class="caption">(\#fig:2-3-edges-table)Lista de Aristas en la Tabla de Datos</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-Fig_11_Gephi_Edge_List} 
+
+}
+
+\caption{Lista de Aristas en la Tabla de Datos}(\#fig:2-3-edges-table)
+\end{figure}
 
 
 :::{.row}
@@ -573,10 +639,14 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig-12_preview.png" alt="Ventana de Previsualización" width="75%" />
-<p class="caption">(\#fig:2-3-preview)Ventana de Previsualización</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-Fig-12_preview} 
+
+}
+
+\caption{Ventana de Previsualización}(\#fig:2-3-preview)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -623,14 +693,18 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  4.	Por último, haga clic en el cuadro de opción de *Color* en la subsección de *Aristas*. Esto abrirá un cuadro de diálogo que permite elegir el color de los bordes. Elija la opción de color *Especifico* que abrirá una paleta de colores de la cual usted puede elegir su propio color al gusto. Una vez que haya seleccionado un color, no olvide darle clic a *Refrescar*. 
+  4.	Por último, haga clic en el cuadro de opción de *Color* en la subsección de *Aristas*. Esto abrirá un cuadro de diálogo que permite elegir el color de los bordes. Elija la opción de color *Específico* que abrirá una paleta de colores de la cual usted puede elegir su propio color al gusto. Una vez que haya seleccionado un color, no olvide darle clic a *Refrescar*. 
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/02-Fig-13_preview.png" alt="Ventana de Previsualización con Ajustes" width="75%" />
-<p class="caption">(\#fig:2-3-preview2)Ventana de Previsualización con Ajustes</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{images/02-Fig-13_preview} 
+
+}
+
+\caption{Ventana de Previsualización con Ajustes}(\#fig:2-3-preview2)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -666,10 +740,14 @@ a column separator for tex -->
 :::
 :::
   
-<div class="figure" style="text-align: center">
-<img src="images/01-impotacion.png" alt="Cuadro de Diálogo de Importación" width="100%" />
-<p class="caption">(\#fig:2-3-importacion)Cuadro de Diálogo de Importación</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-impotacion} 
+
+}
+
+\caption{Cuadro de Diálogo de Importación}(\#fig:2-3-importacion)
+\end{figure}
 
 :::{.row}
 :::{.lcolumn-20 data-latex="{0.18\\textwidth}"}
@@ -769,7 +847,11 @@ a column separator for tex -->
 :::
 :::
 
-<div class="figure" style="text-align: center">
-<img src="images/01-rol.png" alt="Red Koschade, Color de Nodos = Rol" width="100%" />
-<p class="caption">(\#fig:2-3-rol)Red Koschade, Color de Nodos = Rol</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/01-rol} 
+
+}
+
+\caption{Red Koschade, Color de Nodos = Rol}(\#fig:2-3-rol)
+\end{figure}

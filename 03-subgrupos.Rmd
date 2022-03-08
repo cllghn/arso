@@ -361,7 +361,7 @@ En un mundo ideal, habría un solo algoritmo para identificar subgrupos cohesivo
 
 ### Antes de Empezar
 
-Para este ejercicio vamos a necesitar el módulo *Newman-Girvan* clustering antes de comenzar Haga esto siguiendo los mismos pasos que utilizamos en para descargar el módulo *MultimodeNetworks Transformation* en ejercicio práctico en el capítulo Derivando Datos Modo-Uno de Modo-Dos. 
+Para este ejercicio vamos a necesitar el módulo *Newman-Girvan* clustering antes de comenzar. Haga esto siguiendo los mismos pasos que utilizamos en para descargar el módulo *MultimodeNetworks Transformation* en ejercicio práctico en el capítulo Derivando Datos Modo-Uno de Modo-Dos. 
 
 ### Identificación de Subgrupos en Gephi
 

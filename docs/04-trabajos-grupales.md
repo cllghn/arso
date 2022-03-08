@@ -15,7 +15,8 @@ La red identificada cuyo nombre es “Calor Calor”, la cual mantiene vínculos
 :::
 
 :::{.rcolumn-70}
-<img src="04-trabajos-grupales_files/figure-html/unnamed-chunk-1-1.png" width="100%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=1\linewidth]{04-trabajos-grupales_files/figure-latex/unnamed-chunk-1-1} \end{center}
 :::
 :::
 
@@ -90,10 +91,14 @@ El siguiente sociograma de red es el resultado de proyectar datos de dos modos y
 
 Los nodos se han sido coloreados de acuerdo con la función de cada persona dentro de la red. Los nodos morados son "operadores", los "líderes" son verdes y los "colaboradores" son rojos. Los datos registrados sugieren que la red Calor Calor está conectada por un conjunto de nodos con alta centralidad de intermediación. Estos nodos parecen formar el tejido conectivo central que une múltiples subconjuntos en la periferia.
 
-<div class="figure" style="text-align: center">
-<img src="04-trabajos-grupales_files/figure-html/unnamed-chunk-2-1.png" alt="Red Calor-Calor" width="100%" />
-<p class="caption">(\#fig:unnamed-chunk-2)Red Calor-Calor</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{04-trabajos-grupales_files/figure-latex/unnamed-chunk-2-1} 
+
+}
+
+\caption{Red Calor-Calor}(\#fig:unnamed-chunk-2)
+\end{figure}
 :::
 
 \newpage
@@ -109,7 +114,8 @@ El trabajo realizado por los integrantes del equipo incorpora datos de fuente ab
 :::
 
 :::{.rcolumn-70}
-<img src="04-trabajos-grupales_files/figure-html/unnamed-chunk-3-1.png" width="100%" style="display: block; margin: auto;" />
+
+\begin{center}\includegraphics[width=1\linewidth]{04-trabajos-grupales_files/figure-latex/unnamed-chunk-3-1} \end{center}
 :::
 :::
 
@@ -142,10 +148,14 @@ Al proyectar relaciones modo-dos y combinarlas con otros datos modo-uno se puede
 
 Al analizar la red de manera visual (ver Figura \@ref(fig:4-3-grafo)), determinamos que la red tiene subgrupos altamente densos (por ejemplo, la camarilla de A6, A5, A18, A16, A15, A14, y A17) lo cual sugiere mayor cohesión interna entre miembros de estos subconjuntos en comparación con otros fuera de estos subconjuntos. Estos subgrupos cohesivos, en este caso específicamente las camarillas, pueden ser utilizados para determinar grupos donde la probabilidad de desertar es relativamente baja, en comparación con miembros periféricos de la red. Sin embargo, algunos sugieren que una estrategia para atacar camarillas es la propagación de desinformación en la camarilla pues cada miembro de la misma tiene acceso a todos los demás miembros de este subconjunto [@Cunningham2016]. Como puede ver, la alta densidad interna de una camarilla es una espada de doble filo. Por un lado, asegura la comunicación directa entre actores miembros de la camarilla. Asimismo, si el enemigo fuese a remover a un miembro de la camarilla podría aprender mucho sobre los otros miembros de dicho subgrupo.
 
-<div class="figure" style="text-align: center">
-<img src="04-trabajos-grupales_files/figure-html/4-3-grafo-1.png" alt="Datos modo-uno agregados, nodos por intermediación" width="100%" />
-<p class="caption">(\#fig:4-3-grafo)Datos modo-uno agregados, nodos por intermediación</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{04-trabajos-grupales_files/figure-latex/4-3-grafo-1} 
+
+}
+
+\caption{Datos modo-uno agregados, nodos por intermediación}(\#fig:4-3-grafo)
+\end{figure}
 
 Además del enfoque en la estructura en la red, el análisis de dicha puede y a menudo tiende a centrarse en determinar actores clave para las operaciones de dicha organización. En la red  “Inkaslam” los analistas empezaron su análisis asumiendo la relevancia del líder y fundador denominado “A1”. Este ocupa la segunda posición en términos de centralidad de intermediación, después del actor “A6”. Al desagregar las relaciones utilizadas para generar la Figura \@ref(fig:4-3-grafo), vemos que “A6” es aquel con la mayoría de los vínculos financieros. 
 :::

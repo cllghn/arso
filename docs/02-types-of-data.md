@@ -20,10 +20,14 @@ Sin embargo, no todas las relaciones de modo-uno son equivalentes. En las siguie
 
 Las relaciones simétricas de modo-uno son aquellas que constan de un solo tipo de actor y donde no tomamos en cuenta la dirección de los enlaces. Por ejemplo, asumamos que la Figura \@ref(fig:2-2-undirected) representa relaciones familiares entre miembros de esta red. En este caso, la mutualidad entre actores es asumida y por consiguiente vemos un solo borde enlazando los nodos. Es decir, si asumimos que la persona A es familiar de la persona B, sería imposible que la persona B no sea familiar de la persona A.
 
-<div class="figure" style="text-align: center">
-<img src="02-types-of-data_files/figure-html/2-2-undirected-1.png" alt="Gráfico no dirigido" width="100%" />
-<p class="caption">(\#fig:2-2-undirected)Gráfico no dirigido</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-types-of-data_files/figure-latex/2-2-undirected-1} 
+
+}
+
+\caption{Gráfico no dirigido}(\#fig:2-2-undirected)
+\end{figure}
 
 @Everton2012 nos presenta ejemplos de vínculos modo-uno simétricos utilizados para mapear la red terrorista Jemaah Islamiyah en el primer apéndice de *Disrupting Dark Network*: 
 
@@ -59,10 +63,14 @@ Se estará preguntando, ¿cómo leemos la matriz? Centrémonos en un nodo a la v
 
 Estas también son relaciones entre un solo conjunto de actores; sin embargo, las redes asimétricas de modo-uno generalmente se refieren a bordes que van de un nodo a otro, pero que no siempre son recíprocos [@Borgatti2018; @Everton2012]. Por ejemplo, considere la Figura \@ref(fig:2-2-directed). Inicialmente notará que los vínculos tienen dirección, representada por una flecha. Observe que algunos de los vínculos no son recíprocos (por ejemplo, A envía un enlace no recíproco a C), mientras que otros son correspondidos (por ejemplo, A envía un enlace a B y este lo retorna).
 
-<div class="figure" style="text-align: center">
-<img src="02-types-of-data_files/figure-html/2-2-directed-1.png" alt="Gráfico dirigido" width="100%" />
-<p class="caption">(\#fig:2-2-directed)Gráfico dirigido</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-types-of-data_files/figure-latex/2-2-directed-1} 
+
+}
+
+\caption{Gráfico dirigido}(\#fig:2-2-directed)
+\end{figure}
 
 @Cunningham2016 sugieren que en situaciones donde es posible distinguir la dirección del enlace, es preferible construir matrices asimétricas de modo-uno. Por ejemplo, la siguiente matriz representa los datos de la Figura \@ref(fig:2-2-directed). Como con toda sociomatriz, comenzamos por listar todos los nodos posibles como filas y columnas {A, B, C, D, E, F}. Igualmente, la leemos de izquierda a derecha, comenzando con el nodo A, vemos que este envía lazos a los actores C y B, pero no a los demás {D, E, F}. En este caso, el actor A recibe un enlace de B pero no de C. Ahora, fíjese que ambos lados de la diagonal no so recíprocos, es decir contienen diferentes valores. Más aún, algunos nodos no envían ningún enlace solo reciben (como el actor D).
 
@@ -108,10 +116,14 @@ $$
 
 ¿Qué patrones puede ver en la matriz previa? Primero, note la simetría de la matriz, es decir que los datos son simétricos.  Al sumar las filas o columnas, notamos que el evento más asistido es el primer evento (E1) con tres personas. Adicionalmente, la persona con mayor asistencia a eventos son el actor D (2 eventos) y C (2 eventos). La Figura \@ref(fig:2-2-bips) es un sociograma de estos datos, en este las personas y eventos han sido dibujados con dos diferentes tipos de íconos para diferenciar entre las clases de nodos, sin embargo, esta diferenciación es puramente cosmética.
 
-<div class="figure" style="text-align: center">
-<img src="02-types-of-data_files/figure-html/2-2-bips-1.png" alt="Gráfico Bipartita" width="100%" />
-<p class="caption">(\#fig:2-2-bips)Gráfico Bipartita</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-types-of-data_files/figure-latex/2-2-bips-1} 
+
+}
+
+\caption{Gráfico Bipartita}(\#fig:2-2-bips)
+\end{figure}
 
 Probablemente el patrón más importante que podemos observar en la matriz y el sociograma de modo-dos es que los nodos solo están conectados *entre* clases. En este ejemplo, las personas solo pueden estar vinculadas con eventos y viceversa. Esta es la regla más importante de las redes modo-dos, solo se permiten conexiones entre nodos de diferentes conjuntos o particiones. Es por ello, que a menudo verán el termino bipartita que refiere a redes modo-dos.
 
@@ -170,10 +182,14 @@ $$
 
 La matriz de la izquierda es una sociomatriz simétrica de modo-uno, que contiene todas las relaciones entre el conjunto de nodos {A, B, C, D, E, F}. La matriz de la derecha contiene los atributos para el conjunto de nodos, específicamente, género y edad. La Figura \@ref(fig:2-2-attrs) combina estos datos, donde los nodos están coloreados por el atributo categórico (género) y dimensionados por las variables continuas (edad).
 
-<div class="figure" style="text-align: center">
-<img src="02-types-of-data_files/figure-html/2-2-attrs-1.png" alt="Gráfico no dirigido, con atributos" width="100%" />
-<p class="caption">(\#fig:2-2-attrs)Gráfico no dirigido, con atributos</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{02-types-of-data_files/figure-latex/2-2-attrs-1} 
+
+}
+
+\caption{Gráfico no dirigido, con atributos}(\#fig:2-2-attrs)
+\end{figure}
 
 :::{.infobox .note data-latex=""}
 Al recopilar atributos, solo es necesario tener una entrada por nodo. Además, si se trabaja con redes multimodales (por ejemplo, bipartitas), se pueden recopilar atributos para todas las categorías de nodos.

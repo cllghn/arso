@@ -485,7 +485,7 @@ a column separator for tex -->
 :::
 
 :::{.rcolumn-80 data-latex="{0.78\\textwidth}"}
-  6.	Una vez más verá nuevos enlaces en el gráfico. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos *Evento*. Seleccione la pestaña *Filtros*, abra la carpeta *Atributos* y localice la opción “type” dentro de la sección *Partición*. Arrastre el filtro de *type* a la sección de *Consultas*. En respuesta a esta acción verá una nueva ventanilla al fondo de este panel (titulada *Partición (type) Configuración*), seleccione la opción *Event* y de clic en el botón *Filtrar*. Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón *Exportar el grafo filtrado en un nevo espacio de trabajo*.
+  6.	Una vez más verá nuevos enlaces en el gráfico. Ahora agregaremos un filtro para extraer las relaciones de entre los nodos *Evento*. Seleccione la pestaña *Filtros*, abra la carpeta *Atributos* y localice la opción “type” dentro de la sección *Partición*. Arrastre el filtro de *type* a la sección de *Consultas*. En respuesta a esta acción verá una nueva ventanilla al fondo de este panel (titulada *Partición (type) Configuración*), seleccione la opción *Event* y de clic en el botón *Filtrar*. Ahora exporte este gráfico (y los datos filtrados) a un nuevo espacio de trabajo dando clic en el botón *Exportar el grafo filtrado en un nuevo espacio de trabajo*.
 :::
 :::
 

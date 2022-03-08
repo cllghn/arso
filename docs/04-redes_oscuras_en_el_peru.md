@@ -7,11 +7,11 @@ output: html_document
 
 # Redes Oscuras en el Perú
 
-Este proyecto de tener una doctrina propia, que se adapte a la realidad del Perú es un punto de vista de los autores sobre la introducción al estudio de las redes oscuras como elemento de análisis clave para todo analista de inteligencia y elementos operativos de Fuerzas Especiales, basados en el estudio analítico de la interacción de las redes sociales.
+Este proyecto de tener una doctrina propia, que se adapte a la realidad del Perú es un punto de vista de los autores sobre la introducción al estudio de las redes oscuras como elemento de análisis clave para todo analista de Inteligencia y elementos operativos de Fuerzas Especiales, basados en el estudio analítico de la interacción de las redes sociales.
  
 Este capítulo trata de definir lo que es una “red oscura”, palabras muy escuchadas en los trabajos de organización, redes y jerarquías, basada en la definición de guerra en red, de los Doctores Arquilla y Ronfeldt [-@Arquilla2001], así como en definiciones y postulados de Everton [-@Everton2012], Cunningham y col. [-@Cunningham2016], y de la Escuela Superior de Guerra del Ejército del Perú, Escuela de Post Grado (ESGE/EPG).
 
-En este capítulo único nos abocaremos, principalmente a definir lo que se denominan redes oscuras en el Perú, su organización, características y la metodología para degradarlas y neutralizarlas. Igualmente estudiaremos los métodos aplicados por los analistas de Inteligencia, de Fuerzas Especiales, de Asuntos Civiles y Operaciones Psicológicas en la identificación de redes oscuras.
+En este capítulo nos abocaremos, principalmente a definir lo que se denominan redes oscuras en el Perú, su organización, características y la metodología para degradarlas y neutralizarlas. Igualmente estudiaremos los métodos aplicados por los analistas de Inteligencia, de Fuerzas Especiales, de Asuntos Civiles y Operaciones Psicológicas en la identificación de redes oscuras.
 
 ## Análisis de Redes Oscuras
 
@@ -23,9 +23,9 @@ Este proceso de entendimiento de las redes oscuras, desde nuestra perspectiva, s
 
   - Las macro, meso, y microestructuras de la red (ver Capítulos 8, 9 y 10 de este manual);
   - Quienes forman parte de la red y donde se encuentran (periferia o centro); y
-  - Las distancias sociales entre nodos, las cuales proveen pistas sobre el potencial flujo de información, conocimiento u otros recursos compartidos entre nodos
+  - Las distancias sociales entre nodos, las cuales proveen pistas sobre el potencial flujo de información, conocimiento u otros recursos compartidos entre nodos.
  
-Como conjunto de teorías y métodos empíricos, el estudio de redes oscuras a través del ARSo se da por medio de la recolección y uso de conjuntos de datos de relaciones entre actores (llamados nodos o vértices). Este manual incluye ejercicios analíticos utilizando la red terrorista Noordin Top [@Roberts2014]. Este conjunto de datos contiene :
+Como conjunto de teorías y métodos empíricos, el estudio de redes oscuras a través del ARSo se da por medio de la recolección y uso de conjuntos de datos de relaciones entre actores (llamados nodos o vértices). Este manual incluye ejercicios analíticos utilizando la red terrorista Noordin Top [@Roberts2014]. Este conjunto de datos contiene:
 
   - Relaciones, divididas en dos modalidades:
     - Modo-Uno: relaciones entre el mismo conjunto de actores (persona a persona, organización a organización, grupo insurgente a grupo insurgente, etc.), estas pueden ser dirigidas o no dirigidas. En este conjunto de datos, los autores se centran en analizar el dominio humano. Por ello, las relaciones modo-uno han sido recopiladas de persona a persona. Por ejemplo, en la red de Noordin Top los autores incluyen lazos de comunicación, parentesco, compañerismo en clases, reclutamiento, amistad, mentorías, entre otros.  
@@ -41,14 +41,18 @@ Cabe preguntarse, ¿por qué es importante el análisis de las redes oscuras? En
 
 En términos prácticos, el análisis de redes oscuras nos permite de manera sistemática contestar preguntas sobre las redes ilícitas de interés. Por ejemplo, si el enfoque del analista es detectar nodos cruciales para la red.  Uno identificaría a los nodos centrales los cuales pueden representar actores muy activos en la red, los cabecillas de estas organizaciones, o miembros de alto valor. Con esta información a la mano, una estrategia para neutralizar la red podría centrarse en remover dichos nodos valiosos, continuar investigándoles, etc. Como menciona Everton [-@Everton2012], el enfoque en identificar y remover nodos de “alto valor” suele ser una estrategia atractiva y a plazo corto puede proporcionar satisfacción; sin embargo, el remover nodos centrales en una red estructurada alrededor de un puñado de actores importantes no es lo mismo que tomar la misma acción contra una red sin jerarquía [@Everton2012]. Por ello la estrategia del analista de redes dependerá del tipo de estructura de red.
 
-Puesto a que las propiedades de las organizaciones terroristas o del COT varían con base a el contexto social, histórico y geográfico de cada nación, el análisis de redes  es una herramienta interesante y necesaria para toda agencia de Inteligencia o Policial. Las conexiones entre nodos en una red social son mantenidas entre dos o más nodos, los nodos pueden ser personas, grupos, organizaciones, estados, etc. Traducido a términos relevantes al analista de Inteligencia , Fuerzas Especiales y Policiales podemos contextualizar los nodos como sujetos estratégicos. 
+Puesto a que las propiedades de las organizaciones terroristas o del COT varían con base a el contexto social, histórico y geográfico de cada nación, el análisis de redes  es una herramienta interesante y necesaria para toda agencia de Inteligencia o Policial. Las conexiones entre nodos en una red social son mantenidas entre dos o más nodos, los nodos pueden ser personas, grupos, organizaciones, estados, etc. Traducido a términos relevantes al analista de Inteligencia, Fuerzas Especiales y Policiales podemos contextualizar los nodos como sujetos estratégicos. 
 
 La estrategia del analista debe basarse en el contexto de la red, así como la estructura de esta. La Figura \@ref(fig:4-1-dimensions),  adaptada de una conferencia sobre Redes Sociales a cargo de la Doctora Nancy Roberts de la Escuela Naval de Post Grado, presenta la estructura de redes como polos opuestos [@Roberts2014a]. Esta dicotomía se basa en el estudio de organizaciones, la cual separa las jerarquías de las redes. Asimismo, compartimenta características, asociando las redes con estructuras sociales informales, igualitarias y de gobernanza compartida; igualmente, asume que las organizaciones jerárquicas son formales, estructuradas y con gobernanza centralizada [@Everton2012]. 
 
-<div class="figure" style="text-align: center">
-<img src="images/04-dimensions.png" alt="Dimensiones de Organizaciones" width="100%" />
-<p class="caption">(\#fig:4-1-dimensions)Dimensiones de Organizaciones</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{images/04-dimensions} 
+
+}
+
+\caption{Dimensiones de Organizaciones}(\#fig:4-1-dimensions)
+\end{figure}
 
 Al analizar redes oscuras es importante preguntarse si esta distinción es útil. Algunos [@Everton2012] argumentan que la distinción es apropiada en algunos contextos, pero desde la perspectiva del análisis de redes  esta división es inapropiada [@Everton2012]. Esto es puesto que tanto en las organizaciones jerárquicas como en las redes el análisis se basa en las relaciones entre actores, el entendimiento sobre las propiedades organizacionales de la red se determina por medidas estructurales que cuantifican la jerarquía o heterarquía de dicha red. En este manual, hemos explorado las medidas estructurales de las redes en el Capítulo “Topología”. 
 
@@ -56,7 +60,7 @@ En términos prácticos, un analista de redes  puede comenzar su exploración in
 
 > Dentro de Sendero Luminoso, teníamos comunistas y simpatizantes de acuerdo a su propia definición. Luego estos se subdividían en Dirigentes, Cuadros, Militantes, Combatientes y Masas, implícitamente ya adoptan una jerarquía a pesar de que siempre pregonaban que todos eran iguales...
     
-Podemos complementar las observaciones de Cap. de  Navío Devoto, con la definición de la guerra en red de Arquilla y Ronfeldt [-@Arquilla2001, página 6], que para ser exacto citaremos textualmente:
+Podemos complementar las observaciones de Cap. de  Navío Devoto, con la definición de la guerra en red de Arquilla y Ronfeldt [-@Arquilla2001, página 6], que para ser exactos citaremos textualmente:
 
 > El termino de guerra en red hace referencia a un modo emergente de conflicto (y de delincuencia) en el ámbito social, alejado de la guerra militar tradicional, en el que los protagonistas utilizan estructuras de organización en red y doctrinas, estrategias y tecnologías en relación con aquellas, acordes con la era de la información.
 
@@ -91,10 +95,14 @@ El ejemplo previo de Sendero Luminoso recalca una de las cualidades adicionales 
 
 En una red oscura, la composición estructural puede contener una mezcla de estas tipologías (Figura \@ref(fig:4-1-mix)). Por ejemplo, el núcleo de la red puede estar organizado como malla, pero en estrellas o cadenas en otras partes de la red como en los comandos operativos [@Arquilla2001]. Más aun, los actores generalmente están conectados entre sí de varias maneras, y estas conexiones pueden empujarlos en direcciones múltiples y a veces contradictorias [@Cunningham2016]. Por ejemplo, la mayoría de los individuos tienen lazos de intercambio, amistad y parentesco; las organizaciones criminales y terroristas generalmente, intercambian personal, armas, dinero, información y forman alianzas entre ellos. 
 
-<div class="figure" style="text-align: center">
-<img src="04-redes_oscuras_en_el_peru_files/figure-html/4-1-mix-1.png" alt="Red hipotética, mezcla de cadenas, estrellas y mallas" width="100%" />
-<p class="caption">(\#fig:4-1-mix)Red hipotética, mezcla de cadenas, estrellas y mallas</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{04-redes_oscuras_en_el_peru_files/figure-latex/4-1-mix-1} 
+
+}
+
+\caption{Red hipotética, mezcla de cadenas, estrellas y mallas}(\#fig:4-1-mix)
+\end{figure}
 
 En el Perú, el análisis de redes oscuras nos ha permitido mapear, degradar, y neutralizar redes criminales como la red criminal “Los cuellos blancos del Puerto”, la facción de Sendero Luminoso denominada Línea Oportunista de Derecha (LOD), entre otras (ver Capítulo “Ejemplos Prácticos” de este manual). El análisis de redes oscuras también se ha utilizado para verificar la convergencia que existe entre las organizaciones criminales y los partidos políticos, tema de alta importancia pues en los últimos años hemos presenciado en el mundo y especialmente en la región Sudamericana, el surgimiento de redes de actores, dedicados a limitar las acciones de fuerza de diversos gobiernos, así como activistas que reclaman la no contaminación del medio ambiente, la movilización en los conflictos sociales contra las asimetrías de poder, terroristas en convergencia con partidos políticos de ideología radical a fin de derrocar a un gobierno legítimamente constituido, organizándose en redes inmensas formadas por poblaciones interconectadas por múltiples canales, apoyándose en la internet, desde donde se han  coordinado y organizado [@Arquilla2001].
 

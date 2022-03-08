@@ -10,10 +10,14 @@ bibliography: book.bib
 
 **Actores** (*Actors*): Se refiere a todo tipo de entidades incluidas en la red, tales como: individuos, grupos, etc. Sinónimos incluyen *nodos* o *vértices*.
 
-<div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-1-1.png" alt="Actores" width="100%" />
-<p class="caption">(\#fig:unnamed-chunk-1)Actores</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{05-glossary_files/figure-latex/unnamed-chunk-1-1} 
+
+}
+
+\caption{Actores}(\#fig:unnamed-chunk-1)
+\end{figure}
 
 **Centralidad** (*Centrality*): Las medidas de centralidad dan una indicación aproximada del poder social de un actor en función de su posición dentro de la red. Un actor central puede ser alguien que tiene numerosos vínculos con otros actores (*grado de centralidad*), que está más cerca (en términos de distancia de ruta) a otros actores de la red (*centralidad de cercanía*), que se encuentra en el camino más corto entre dos actores en la red (*centralidad de intermediación*), o que tiene vínculos con actores altamente centrales (*centralidad de eigenvector*).
 
@@ -61,7 +65,11 @@ bibliography: book.bib
 
 **Vínculos** (*Ties*): La relación entre dos nodos. Un vínculo puede ser direccionado (llamado *arco*, por ejemplo: **<--** | **-->** | **<->**) o no direccionado (llamado *borde*, por ejemplo: **---**). 
 
-<div class="figure" style="text-align: center">
-<img src="05-glossary_files/figure-html/unnamed-chunk-2-1.png" alt="Red no dirigida (izquierda) y red dirigida (derecha)" width="100%" />
-<p class="caption">(\#fig:unnamed-chunk-2)Red no dirigida (izquierda) y red dirigida (derecha)</p>
-</div>
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{05-glossary_files/figure-latex/unnamed-chunk-2-1} 
+
+}
+
+\caption{Red no dirigida (izquierda) y red dirigida (derecha)}(\#fig:unnamed-chunk-2)
+\end{figure}

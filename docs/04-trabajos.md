@@ -76,7 +76,7 @@ Supongamos que un investigador de redes sociales está estudiando los lazos "fin
 
 #### Cuestionarios
 
-Para el analista de redes, como para otros investigadores trabajando en proyectos de ciencias sociales, el cuestionario suele contener preguntas sobre los lazos del actor, aquí un informante, a otros. Por ejemplo, un informante puede proporcionar datos sobre con quién se comunica o de quién busca información. @Wasserman1994 proporcionan un esquema de los tipos de preguntas que se pueden utilizar en un cuestionario, el sigiuente es un resumen de los puntos hechos por los autores:
+Para el analista de redes, como para otros investigadores trabajando en proyectos de ciencias sociales, el cuestionario suele contener preguntas sobre los lazos del actor, aquí un informante, a otros. Por ejemplo, un informante puede proporcionar datos sobre con quién se comunica o de quién busca información. @Wasserman1994 proporcionan un esquema de los tipos de preguntas que se pueden utilizar en un cuestionario, el siguiente es un resumen de los puntos hechos por los autores:
 
   - Un listado de personas para a evocar libremente: Cuando el investigador conoce los miembros de la red antes de desarrollar un cuestionario para capturar las relaciones entre estos mismos, se puede presentar un listado de los demás actores para que los informantes seleccionen. Ejemplos de este enfoque se pueden encontrar en el trabajo de David Krackhardt [-@Krackhardt1992; -@Krackhardt1994]. Alternativamente, el investigador puede no presentar un listado y solicitarle al informante que evoque libremente a otros actores con los que comparten un tipo particular de vínculo.
   - Elección libre con número fijo: El solicitar del informante un número específico de relaciones con otros actores en un cuestionario se conoce como elección fija. Este parámetro establece un número máximo de vínculos que un actor determinado puede tener en la red. Alternativamente, el no especificar un número de vínculos del informante se conoce como elección libre. Ambos enfoques tienen ventajas y desventajas, los investigadores interesados en esta forma de diseño de cuestionarios pueden consultar la literatura. 
@@ -90,7 +90,7 @@ Las entrevistas se utilizan para recopilar datos relacionales y pueden tener lug
 
 #### Observación Directa
 
-La observación de los actores es otra manera de recopilar datos valiosos de la red. Los métodos de observación son comúnmente una herramienta en estudios que incorporan redes de afiliación donde el investigador puede registar la asistencia a un evento o acontecimiento social que se estudia. 
+La observación de los actores es otra manera de recopilar datos valiosos de la red. Los métodos de observación son comúnmente una herramienta en estudios que incorporan redes de afiliación donde el investigador puede registrar la asistencia a un evento o acontecimiento social que se estudia. 
 
 #### Recopilación de datos de archivo
 
